@@ -1,19 +1,27 @@
-# Homepage Copy — Ken / Bob / Beacon voice
+# Homepage Copy — Beacon-style (Ken / Bob / Beacon voice)
 
 ## Hero
-**H1:** Governance that runs like engineering.
-**Subhead:** We help teams turn AI policy into evidence — with checklists, open tools, and a practitioner community.
+**Eyebrow:** Beacon-style · Standards · Evidence · Open source
+**H1:** From shadow AI to **verifiable evidence** — in one afternoon.
+**Lede:** Find every AI. Sign what matters. Hand the auditor a bundle. AiGovOps is the practitioner community making governance run like engineering.
+**Primary CTA:** Join the brief
+**Secondary CTA:** See the tools →
+
+## Standards chips
+NIST AI RMF · ISO/IEC 42001 · EU AI Act · SOC 2
 
 ## One-click actions
-- Join newsletter — Monthly brief
-- Attend events — Forums & summits
-- Read the blog — Field notes
-- Listen — Podcast
-- Use the tools — Open source
-- Contact us — Get in touch
+- Newsletter — Monthly brief
+- Events — Forums & summits
+- Blog — Field notes
+- Podcast — Listen
+- Tools — Open source
+- Contact — Get in touch
 
 ## What is AiGovOps?
-AiGovOps is governance, risk, and compliance for AI — implemented as code, telemetry, and operating practice. We move past intent statements to verifiable outcomes: signed receipts, audit trails, lifecycle controls, and human oversight you can demonstrate.
+Governance, risk, and compliance for AI — implemented as code, telemetry, and operating practice.
+
+We move past intent statements to verifiable outcomes: signed receipts, audit trails, lifecycle controls, and human oversight you can demonstrate.
 
 - Define harm before deployment
 - Make governance observable
@@ -26,20 +34,24 @@ AiGovOps is governance, risk, and compliance for AI — implemented as code, tel
 - **Ethics as code** — Ethical frameworks expressed as policy, tests, and CI checks.
 - **Compliance** — Map to NIST, ISO, EU AI Act. Hand auditors a bundle, not a binder.
 
+## Open-source tools
+Standards-aligned, evidence-first tooling you can run today.
+- **Beacon** (Flagship) — Find every AI, sign what matters, hand the auditor a bundle. View on GitHub →
+- **Studio** (Quickstart) — From shadow AI to a signed inventory in one afternoon. Get started →
+- **Control Plane** (Reference) — Checklists for model and agent controls. Read the docs →
+
 ## Programs
 - Discussion groups — After-hours practitioner forums.
 - Community — Slack and working groups.
 - Newsletter — Monthly operating brief.
 - Training & summits — Workshops and annual summit.
 
-## Open-source tools
-Standards-aligned, evidence-first tooling you can run today.
-- Beacon — find every AI, sign what matters, hand the auditor a bundle.
-- Quickstart paths for Studio and Control Plane.
-- Reference checklists for model and agent controls.
-
 ## Events
 Forums, workshops, and the annual AiGovOps Summit. See the calendar →
+
+## Newsletter
+**H2:** Get the monthly brief
+**Sub:** Operating notes for AI governance practitioners. No fluff.
 
 ## Founders
 **Ken Johnston** — Co-founder. Executive practitioner focused on accountability, harm definition, and lifecycle governance.
