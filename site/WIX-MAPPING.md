@@ -1,56 +1,71 @@
-# Wix Implementation Map
+# Wix Implementation Map (Beacon-style)
 
-Apply these changes block-by-block in the Wix Harmony editor for AiGovOps Foundation. The order mirrors the new `index.html`.
+Apply these changes block-by-block in the Wix Harmony editor for AiGovOps Foundation. Order mirrors the Beacon-style `index.html`.
+
+Live reference: https://bobrapp.github.io/aigovops-foundation-site-redesign-June2026-ken-and-bob/
 
 ## 1. Header / Nav
-- Keep logo + HOME / BLOG / EVENTS
-- Add a primary Contact button at the right
-- Make header sticky on scroll, compact height (~60px)
+- Light header, sticky, ~64px tall
+- Logo: ◆ AiGovOps Foundation (Foundation in muted weight)
+- Right nav: What · Pillars · Programs · Tools · Events + dark Contact button
 
-## 2. Hero (replace current uppercase mission block)
-- New H1: “Governance that runs like engineering.”
-- Subhead: “We help teams turn AI policy into evidence — with checklists, open tools, and a practitioner community.”
-- Remove the long uppercase paragraph; move that content into the About section lower on the page.
+## 2. Hero (replace current uppercase block)
+- Eyebrow: “Beacon-style · Standards · Evidence · Open source” (badge pill on “Beacon-style”)
+- H1: “From shadow AI to **verifiable evidence** — in one afternoon.” (highlight “verifiable evidence” in soft yellow)
+- Lede: “Find every AI. Sign what matters. Hand the auditor a bundle. AiGovOps is the practitioner community making governance run like engineering.”
+- Primary CTA (dark): Join the brief
+- Secondary CTA (ghost): See the tools →
+- Standards chips row: NIST AI RMF · ISO/IEC 42001 · EU AI Act · SOC 2
 
-## 3. Six one-click actions (NEW row below hero)
-Cards (4-col desktop, 2-col tablet, 1-col mobile):
-1. Join newsletter → #newsletter
-2. Attend events → /events
-3. Read the blog → /blog
-4. Listen (podcast) → podcast link
-5. Use the tools → #tools
-6. Contact us → #contact
+## 3. Six one-click action cards
+4-col desktop, 2-col tablet, 1-col mobile:
+1. Newsletter — Monthly brief
+2. Events — Forums & summits
+3. Blog — Field notes
+4. Podcast — Listen
+5. Tools — Open source
+6. Contact — Get in touch
 
-## 4. What is AiGovOps (compressed)
-- Replace current long “What we are about” intro with one short paragraph + 4-bullet checklist.
+## 4. What is AiGovOps (two-column)
+Left: short paragraph + lede. Right: 4-item check-card list.
 
 ## 5. Four pillars
-- Audit · Oversight · Ethics as code · Compliance
-- 4-card grid, one sentence each.
+Audit · Oversight · Ethics as code · Compliance (4 cards).
 
-## 6. Programs
-- Discussion groups · Community · Newsletter · Training & summits.
+## 6. Open-source tools (feature cards)
+- Beacon (Flagship tag)
+- Studio (Quickstart tag)
+- Control Plane (Reference tag)
 
-## 7. Open-source tools
-- Add Beacon link + short list of quickstart paths.
+## 7. Programs
+Discussion groups · Community · Newsletter · Training & summits.
 
 ## 8. Events
-- Short blurb + link to /events.
+Short blurb + link to /events.
 
-## 9. Newsletter signup
-- One field + Subscribe button.
+## 9. Newsletter
+“Get the monthly brief” + inline email + Subscribe.
 
 ## 10. Founders
-- Ken Johnston + Bob Rapp — one short bio each.
+Ken Johnston + Bob Rapp — one short bio each.
 
 ## 11. Contact
-- Name, Email, Message + Send.
+Name, Email, Message + Send.
 
 ## 12. Footer
-- 501(c)(3) line + minimal links.
+501(c)(3) line, light background.
 
 ## Mobile-specific Wix settings
-- Hide decorative background images on mobile
+- Hide hero gradient on mobile if it interferes
 - Stack all grids to 1 column at <760px
-- Ensure tap targets are ≥ 44px
-- Use Wix’s mobile editor to verify each section at 375px
+- Tap targets ≥ 44px
+- Verify each section in Wix mobile editor at 375px
+
+## Visual tokens (match the Beacon-style preview)
+- Brand blue: #2b59ff
+- Ink: #0b1020
+- Muted text: #5b6478
+- Line: #e6e9ef
+- Highlight (hero keyword): linear-gradient(120deg,#fff7c2,#ffe588)
+- Radius: 14px
+- Card shadow on hover: 0 14px 40px -22px rgba(43,89,255,.35)
