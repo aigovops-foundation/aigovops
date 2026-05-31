@@ -1,7 +1,6 @@
 # 002 — Upcoming Events: AiGovOps Founders Forum Meetup (June 4, 2026)
 
-- **Status:** planned
-- **Created:** 2026-05-30 17:00 PDT
+- **Status:** deferred (scaffold only; no edits applied yet — paused 2026-05-30 17:00 PDT to handle change 003 — Subscribe → Substack)- **Created:** 2026-05-30 17:00 PDT
 - **Author:** bobrapp
 - **Source:** Ken Johnston LinkedIn post, https://www.linkedin.com/feed/update/urn:li:activity:7466165088794669059/
 - **Targets:** redesign repo `index.html` (canonical) + Wix Harmony live site (mirrored)
