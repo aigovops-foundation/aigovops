@@ -1,7 +1,6 @@
 # 001 — Header / Nav
 
-- **Status:** planned
-- **Created:** 2026-05-30 17:00 PDT
+- **Status:** partially-applied (Step 1 of 6 done; paused 2026-05-30 17:00 PDT to handle change 002 — Upcoming Events)- **Created:** 2026-05-30 17:00 PDT
 - **Author:** bobrapp
 - **Spec:** ../../WIX-MAPPING.md § 1. Header / Nav
 - **Wix Site History timestamp (before edit):** _to be filled when BEFORE.png is captured_
