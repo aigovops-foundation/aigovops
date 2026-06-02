@@ -40,9 +40,9 @@
 <!-- HERO -->
 <section class="hero" id="main-content">
   <div class="container hero-content">
-    <p class="hero-eyebrow">From Intentions to Evidence</p>
+    <p class="hero-eyebrow">Policy as Code &nbsp;·&nbsp; Apache-2.0 &nbsp;·&nbsp; No SaaS Lock-In</p>
     <h1>AI Governance that Runs<br>Like Engineering.</h1>
-    <p class="hero-sub">We turn compliance frameworks into automated, auditable code — and build the community that ships it.</p>
+    <p class="hero-sub">Policy as code. Evidence that ships. Governance your auditor can verify with one command — and a community that builds it in the open.</p>
 
     <!-- ONE-CLICK ACTIONS -->
     <div class="action-grid">
@@ -137,6 +137,35 @@
   </div>
 </section>
 
+<!-- TOOLKIT TRILOGY -->
+<section class="toolkit-section">
+  <div class="container">
+    <p style="font-size:0.7rem;font-weight:700;font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:0.14em;color:var(--teal);margin-bottom:10px;">The Open-Source Toolkit</p>
+    <h2 style="color:var(--white);margin-bottom:6px;">Three tools. One verifiable evidence chain.</h2>
+    <p style="color:rgba(255,255,255,0.5);font-size:0.9rem;max-width:520px;">Umbrella compiles policy into code. Beacon discovers your AI and signs the evidence. Lantern reads the bundle for humans. All Apache-2.0. All under the AiGovOps Foundation.</p>
+    <div class="toolkit-grid">
+      <div class="toolkit-card">
+        <span class="toolkit-tag">☂️ Compiler</span>
+        <h3>Umbrella-GovOps</h3>
+        <p>Converts 40+ global frameworks — EU AI Act, NIST AI RMF, ISO/IEC 42001, Korea AI Basic Act — into executable YAML controls. One Unified Control ID. Every bundle cryptographically signed.</p>
+        <a href="https://bobrapp.github.io/umbrella-govops/" target="_blank" rel="noopener" class="toolkit-link">Get to Yes in 15 minutes <span class="toolkit-arrow">→</span></a>
+      </div>
+      <div class="toolkit-card">
+        <span class="toolkit-tag">🔦 Scanner + Signer</span>
+        <h3>AiGovOps Beacon</h3>
+        <p>Finds every AI on your network. Attests them against 23 audit frameworks. Produces a cryptographically signed bundle any auditor can re-verify with one command. OVERT 1.0 Protocol.</p>
+        <a href="https://bobrapp.github.io/aigovops-beacon/" target="_blank" rel="noopener" class="toolkit-link">See it sign — live <span class="toolkit-arrow">→</span></a>
+      </div>
+      <div class="toolkit-card">
+        <span class="toolkit-tag">🏮 Reader</span>
+        <h3>AiGovOps Lantern</h3>
+        <p>Reads the signed evidence bundle and translates it into plain language — for boards, regulators, and non-technical stakeholders who need to understand what was checked and why.</p>
+        <a href="https://github.com/bobrapp" target="_blank" rel="noopener" class="toolkit-link">Coming soon <span class="toolkit-arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- NEWSLETTER CTA -->
 <section class="section-dark newsletter-section">
   <div class="container narrow-center">
@@ -146,6 +175,20 @@
     <p class="fine-print">No spam. Unsubscribe any time.</p>
   </div>
 </section>
+
+<!-- COMPLIANCE BADGE STRIP -->
+<div class="badge-strip">
+  <div class="container badge-strip-inner">
+    <span class="badge-pill"><span class="dot"></span>Apache-2.0</span>
+    <span class="badge-pill"><span class="dot"></span>OVERT 1.0</span>
+    <span class="badge-pill"><span class="dot"></span>NIST AI RMF</span>
+    <span class="badge-pill"><span class="dot"></span>EU AI Act</span>
+    <span class="badge-pill"><span class="dot"></span>ISO/IEC 42001</span>
+    <span class="badge-pill"><span class="dot dot-amber"></span>UNESCO-Aligned</span>
+    <span class="badge-pill"><span class="dot dot-amber"></span>WCAG 2.2 AA · Target</span>
+    <span class="badge-pill"><span class="dot"></span>501(c)(3) Foundation</span>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer class="site-footer">
@@ -198,16 +241,17 @@
   </div>
   <div class="chat-messages" id="chatMessages" aria-live="polite" aria-atomic="false">
     <div class="chat-msg bot">
-      Hi! I can help you <strong>schedule a call</strong> with Ken or Bob, find our <strong>newsletter</strong>, upcoming <strong>events</strong>, or our open-source tools <strong>Beacon</strong> and <strong>Umbrella</strong>. What are you looking for?
+      <code class="cli">$ aigovops --help</code><br><br>
+      Ready. I can help with <strong>governance frameworks</strong>, <strong>scheduling a call</strong>, our <strong>newsletter</strong>, <strong>tools</strong> (Beacon, Umbrella), or the latest from <strong>Ken &amp; Bob</strong>. What are you working on?
     </div>
     <div class="chat-chips" id="chatChips">
+      <button class="chip" data-intent="frameworks">⚖️ Which frameworks apply?</button>
       <button class="chip" data-intent="meeting">📆 Schedule a Call</button>
       <button class="chip" data-intent="newsletter">📰 Newsletter</button>
-      <button class="chip" data-intent="ken">💡 Ken's posts</button>
-      <button class="chip" data-intent="bob">💡 Bob's posts</button>
-      <button class="chip" data-intent="opensource">💻 Open Source</button>
       <button class="chip" data-intent="beacon">🔦 Beacon</button>
       <button class="chip" data-intent="umbrella">☂️ Umbrella</button>
+      <button class="chip" data-intent="ken">💡 Ken's posts</button>
+      <button class="chip" data-intent="bob">💡 Bob's posts</button>
     </div>
   </div>
   <form class="chat-input-row" id="chatForm" autocomplete="off">

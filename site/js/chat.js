@@ -54,6 +54,11 @@ const RESOURCES = {
     label: 'Meet with an AiGovOps Foundation Volunteer',
     cta:   'Book a Meeting →',
   },
+  frameworks: {
+    url:   'https://bobrapp.github.io/umbrella-govops/',
+    label: 'Browse 40+ governance frameworks',
+    cta:   'Explore Frameworks →',
+  },
 };
 // ────────────────────────────────────────────────────────────────────────────
 
@@ -61,6 +66,7 @@ const RESOURCES = {
 // 'opensource' must come BEFORE 'beacon' and 'umbrella' so generic queries
 // show both tools rather than snapping to just one.
 const INTENT_RULES = [
+  { intent: 'frameworks',  keywords: ['framework', 'frameworks', 'nist', 'eu ai act', 'iso', '42001', 'gdpr', 'hipaa', 'compliance', 'regulation', 'regulatory', 'audit', 'applies', 'which law', 'what law', 'overt', 'umbrella framework'] },
   { intent: 'meeting',    keywords: ['meeting', 'meet', 'book', 'booking', 'schedule', 'volunteer', 'chat', 'talk', 'call', 'connect'] },
   { intent: 'newsletter', keywords: ['newsletter', 'substack', 'subscribe', 'email', 'updates', 'weekly', 'digest'] },
   { intent: 'event',      keywords: ['event', 'events', 'luma', 'meetup', 'attend', 'join', 'register', 'conference', 'summit', 'upcoming', 'next'] },
@@ -73,6 +79,7 @@ const INTENT_RULES = [
 ];
 
 const CHIP_LABELS = {
+  frameworks:  '⚖️ Which frameworks apply?',
   meeting:     '📆 Meet a Volunteer',
   newsletter:  '📰 Newsletter',
   event:       '📅 Next Event',
@@ -123,12 +130,51 @@ form.addEventListener('submit', e => {
   if (!text) return;
   addMsg(text, 'user');
   input.value = '';
+
+  // Framework agent: collect context then call AI
+  if (window._awaitingFrameworkContext) {
+    window._awaitingFrameworkContext = false;
+    setTimeout(() => runFrameworkAgent(text), 220);
+    return;
+  }
+
   const intent = classify(text);
   setTimeout(() => {
     if (intent) handleIntent(intent);
     else         addMsg(FALLBACK, 'bot', true);
   }, 220);
 });
+
+async function runFrameworkAgent(userContext) {
+  const thinking = document.createElement('div');
+  thinking.className = 'chat-msg bot';
+  thinking.innerHTML = '<code class="cli">scanning frameworks...</code>';
+  document.getElementById('chatMessages').appendChild(thinking);
+  document.getElementById('chatMessages').scrollTop = 9999;
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 600,
+        system: `You are the AiGovOps Foundation governance framework assistant. 
+Given a user's context (region, industry, AI use cases), identify the top 3-5 most applicable AI governance frameworks from this list: EU AI Act, NIST AI RMF, ISO/IEC 42001, GDPR, HIPAA, UK AI Act, CCPA, Colorado AI Act, Korea AI Basic Act, OVERT 1.0, UNESCO AI Ethics, WCAG 2.2.
+For each framework, give: framework name, why it applies in ONE sentence, and risk level (High/Medium/Low).
+Format as a compact HTML list using <strong> for names. End with one sentence pointing to Umbrella-GovOps to map these into code.
+Be direct and technical. Max 250 words. No preamble.`,
+        messages: [{ role: 'user', content: userContext }],
+      }),
+    });
+    const data = await res.json();
+    const reply = data.content?.filter(b => b.type === 'text').map(b => b.text).join('') || 'Unable to analyze frameworks right now.';
+    thinking.innerHTML = reply + `<br><br><a href="https://bobrapp.github.io/umbrella-govops/" target="_blank" rel="noopener" style="color:var(--teal);font-weight:700;">Map these to code with Umbrella →</a>`;
+  } catch {
+    thinking.innerHTML = 'Framework analysis unavailable right now. <a href="https://bobrapp.github.io/umbrella-govops/" target="_blank" rel="noopener" style="color:var(--teal);">Browse all 40+ frameworks on Umbrella →</a>';
+  }
+  document.getElementById('chatMessages').scrollTop = 9999;
+}
 
 function classify(text) {
   const lower = text.toLowerCase();
@@ -143,6 +189,19 @@ function classify(text) {
 }
 
 function handleIntent(intent) {
+  // Special case: frameworks → AI agent that identifies applicable frameworks
+  if (intent === 'frameworks') {
+    addMsg(
+      `<code class="cli">$ beacon --frameworks --interactive</code><br><br>` +
+      `Tell me a bit about your situation and I'll identify which AI governance frameworks apply to you — EU AI Act, NIST AI RMF, ISO/IEC 42001, HIPAA, GDPR, Korea AI Basic Act, and 30+ more.<br><br>` +
+      `<em>What country or region are you operating in? What industry?</em>`,
+      'bot'
+    );
+    // Set state to collect framework context and call the API
+    window._awaitingFrameworkContext = true;
+    return;
+  }
+
   // Special case: meeting → open scheduling agent modal
   if (intent === 'meeting') {
     addMsg(
