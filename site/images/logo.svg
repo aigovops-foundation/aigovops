@@ -1,34 +1,64 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <circle cx="100" cy="100" r="97" fill="#e1f5ee" stroke="#1d9e75" stroke-width="1.5"/>
-  <circle cx="100" cy="100" r="79" fill="none" stroke="#1d9e75" stroke-width="0.6" opacity="0.45"/>
-  <line x1="100" y1="15" x2="100" y2="6" stroke="#0f6e56" stroke-width="2" stroke-linecap="round"/>
-  <ellipse cx="100" cy="4" rx="8" ry="3.5" fill="none" stroke="#0f6e56" stroke-width="2"/>
-  <rect x="83" y="14" width="34" height="7" rx="2" fill="#085041"/>
-  <path d="M87 21 L79 39 L121 39 L113 21 Z" fill="#0f6e56"/>
-  <rect x="77" y="39" width="46" height="54" rx="1.5" fill="#1d9e75"/>
-  <line x1="89"  y1="39" x2="89"  y2="93" stroke="#085041" stroke-width="1.2" opacity="0.6"/>
-  <line x1="100" y1="39" x2="100" y2="93" stroke="#085041" stroke-width="1.2" opacity="0.6"/>
-  <line x1="111" y1="39" x2="111" y2="93" stroke="#085041" stroke-width="1.2" opacity="0.6"/>
-  <line x1="77"  y1="66" x2="123" y2="66" stroke="#085041" stroke-width="1.5" opacity="0.6"/>
-  <rect x="77" y="39" width="46" height="54" rx="1.5" fill="none" stroke="#085041" stroke-width="1.2"/>
-  <ellipse cx="100" cy="58" rx="7" ry="9"   fill="#5dcaa5" opacity="0.9"/>
-  <ellipse cx="100" cy="55" rx="4" ry="5.5" fill="#9fe1cb" opacity="0.95"/>
-  <ellipse cx="100" cy="53" rx="2" ry="3"   fill="#e1f5ee" opacity="0.9"/>
-  <line x1="100" y1="47" x2="100" y2="43" stroke="#9fe1cb" stroke-width="1.2" opacity="0.7"/>
-  <line x1="108" y1="50" x2="111" y2="47"  stroke="#9fe1cb" stroke-width="1"   opacity="0.55"/>
-  <line x1="92"  y1="50" x2="89"  y2="47"  stroke="#9fe1cb" stroke-width="1"   opacity="0.55"/>
-  <path d="M77 93 L83 111 L117 111 L123 93 Z" fill="#0f6e56"/>
-  <rect x="83" y="111" width="34" height="7" rx="2" fill="#085041"/>
-  <ellipse cx="100" cy="123" rx="5.5" ry="3" fill="#085041"/>
-  <line x1="100" y1="118" x2="100" y2="126" stroke="#085041" stroke-width="2" stroke-linecap="round"/>
   <defs>
-    <path id="ct" d="M 100,100 m -82,0 a 82,82 0 1,1 164,0 a 82,82 0 1,1 -164,0"/>
+    <clipPath id="oc"><circle cx="100" cy="100" r="96"/></clipPath>
+    <path id="tr" d="M100,100 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"/>
   </defs>
-  <text font-family="'Courier New', monospace" font-size="9.5" font-weight="600" fill="#0f6e56" letter-spacing="2.5" opacity="0.8">
-    <textPath href="#ct" startOffset="5%">AIGOVOPS FOUNDATION · LANTERN ·</textPath>
+
+  <!-- Dark background -->
+  <circle cx="100" cy="100" r="96" fill="#071a12"/>
+
+  <!-- Searchlight beam — baked at mid-sweep -->
+  <g clip-path="url(#oc)">
+    <polygon points="100,100 38,0 162,0" fill="#9fe1cb" opacity="0.10"/>
+    <polygon points="100,100 64,0 136,0" fill="#e1f5ee" opacity="0.08"/>
+  </g>
+
+  <!-- Outer ring -->
+  <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+  <!-- Inner ring -->
+  <circle cx="100" cy="100" r="79" fill="none" stroke="#1d9e75" stroke-width="0.5" opacity="0.35"/>
+
+  <!-- Tick marks -->
+  <line x1="100" y1="4"   x2="100" y2="11"  stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+  <line x1="100" y1="189" x2="100" y2="196" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+  <line x1="4"   y1="100" x2="11"  y2="100" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+  <line x1="189" y1="100" x2="196" y2="100" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Hanging wire and ring -->
+  <line x1="100" y1="18" x2="100" y2="10" stroke="#1d9e75" stroke-width="1.8" stroke-linecap="round"/>
+  <ellipse cx="100" cy="9" rx="7" ry="3" fill="none" stroke="#1d9e75" stroke-width="1.8"/>
+
+  <!-- Top cap -->
+  <rect x="84" y="17" width="32" height="6" rx="2" fill="#085041"/>
+
+  <!-- Upper taper -->
+  <path d="M88 23 L80 41 L120 41 L112 23 Z" fill="#0f6e56"/>
+
+  <!-- Glass body -->
+  <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+  <line x1="90"  y1="41" x2="90"  y2="93" stroke="#1d9e75" stroke-width="1"   opacity="0.5"/>
+  <line x1="100" y1="41" x2="100" y2="93" stroke="#1d9e75" stroke-width="1"   opacity="0.5"/>
+  <line x1="110" y1="41" x2="110" y2="93" stroke="#1d9e75" stroke-width="1"   opacity="0.5"/>
+  <line x1="78"  y1="67" x2="122" y2="67" stroke="#1d9e75" stroke-width="1.2" opacity="0.5"/>
+  <rect x="78" y="41" width="44" height="52" rx="1.5" fill="none" stroke="#1d9e75" stroke-width="1"/>
+
+  <!-- Flame -->
+  <ellipse cx="100" cy="60" rx="10" ry="12" fill="#1d9e75" opacity="0.3"/>
+  <ellipse cx="100" cy="60" rx="7"  ry="9"  fill="#5dcaa5" opacity="0.75"/>
+  <ellipse cx="100" cy="57" rx="4"  ry="6"  fill="#9fe1cb" opacity="0.95"/>
+  <ellipse cx="100" cy="55" rx="2"  ry="3"  fill="#e1f5ee" opacity="0.9"/>
+
+  <!-- Lower taper -->
+  <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+  <!-- Bottom cap -->
+  <rect x="84" y="111" width="32" height="6" rx="2" fill="#085041"/>
+  <!-- Finial -->
+  <ellipse cx="100" cy="121" rx="5" ry="2.5" fill="#085041"/>
+  <line x1="100" y1="117" x2="100" y2="124" stroke="#085041" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Circular text -->
+  <text font-family="'Courier New', monospace" font-size="9.5" font-weight="600"
+        fill="#1d9e75" letter-spacing="2.8" opacity="0.85">
+    <textPath href="#tr" startOffset="4%">AIGOVOPS FOUNDATION · LANTERN ·</textPath>
   </text>
-  <line x1="100" y1="3"   x2="100" y2="10"  stroke="#1d9e75" stroke-width="1.5" opacity="0.5"/>
-  <line x1="100" y1="190" x2="100" y2="197" stroke="#1d9e75" stroke-width="1.5" opacity="0.5"/>
-  <line x1="3"   y1="100" x2="10"  y2="100" stroke="#1d9e75" stroke-width="1.5" opacity="0.5"/>
-  <line x1="190" y1="100" x2="197" y2="100" stroke="#1d9e75" stroke-width="1.5" opacity="0.5"/>
 </svg>

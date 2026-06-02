@@ -29,8 +29,52 @@
 <!-- NAV -->
 <header class="site-header">
   <div class="container nav-inner">
-    <a href="index.html" class="logo-link">
-      <img src="images/logo.png" alt="AiGovOps Foundation" class="logo" />
+    <a href="index.html" class="logo-link" aria-label="AiGovOps Foundation home">
+      <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AiGovOps Foundation Lantern logo" style="height:38px;width:38px;flex-shrink:0">
+        <title>AiGovOps Foundation</title>
+        <defs>
+          <clipPath id="navClip"><circle cx="100" cy="100" r="96"/></clipPath>
+          <path id="navTr" d="M100,100 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"/>
+          <style>
+            @keyframes navSweep{0%{transform:rotate(-52deg);opacity:.9}45%{transform:rotate(52deg);opacity:.9}58%{transform:rotate(52deg);opacity:0}59%{transform:rotate(-52deg);opacity:0}72%{transform:rotate(-52deg);opacity:.9}100%{transform:rotate(-52deg);opacity:.9}}
+            @keyframes navSweep2{0%{transform:rotate(-36deg);opacity:.55}45%{transform:rotate(36deg);opacity:.55}58%{transform:rotate(36deg);opacity:0}59%{transform:rotate(-36deg);opacity:0}72%{transform:rotate(-36deg);opacity:.55}100%{transform:rotate(-36deg);opacity:.55}}
+            @keyframes navFlame{0%,100%{opacity:.95}50%{opacity:.55}}
+            @keyframes navSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+            .nb1{transform-origin:50% 100%;animation:navSweep 6s ease-in-out infinite}
+            .nb2{transform-origin:50% 100%;animation:navSweep2 6s ease-in-out infinite .18s}
+            .nfl{animation:navFlame 2.2s ease-in-out infinite}
+            .ntr{transform-origin:100px 100px;animation:navSpin 35s linear infinite}
+          </style>
+        </defs>
+        <circle cx="100" cy="100" r="96" fill="#071a12"/>
+        <g class="nb1" clip-path="url(#navClip)"><polygon points="100,100 35,0 165,0" fill="#9fe1cb" opacity=".11"/></g>
+        <g class="nb2" clip-path="url(#navClip)"><polygon points="100,100 62,0 138,0" fill="#e1f5ee" opacity=".09"/></g>
+        <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+        <circle cx="100" cy="100" r="79" fill="none" stroke="#1d9e75" stroke-width="0.5" opacity=".35"/>
+        <line x1="100" y1="4"   x2="100" y2="11"  stroke="#1d9e75" stroke-width="1.5" opacity=".6"/>
+        <line x1="100" y1="189" x2="100" y2="196" stroke="#1d9e75" stroke-width="1.5" opacity=".6"/>
+        <line x1="4"   y1="100" x2="11"  y2="100" stroke="#1d9e75" stroke-width="1.5" opacity=".6"/>
+        <line x1="189" y1="100" x2="196" y2="100" stroke="#1d9e75" stroke-width="1.5" opacity=".6"/>
+        <line x1="100" y1="18" x2="100" y2="10" stroke="#1d9e75" stroke-width="1.8" stroke-linecap="round"/>
+        <ellipse cx="100" cy="9" rx="7" ry="3" fill="none" stroke="#1d9e75" stroke-width="1.8"/>
+        <rect x="84" y="17" width="32" height="6" rx="2" fill="#085041"/>
+        <path d="M88 23 L80 41 L120 41 L112 23 Z" fill="#0f6e56"/>
+        <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+        <line x1="90"  y1="41" x2="90"  y2="93" stroke="#1d9e75" stroke-width="1" opacity=".5"/>
+        <line x1="100" y1="41" x2="100" y2="93" stroke="#1d9e75" stroke-width="1" opacity=".5"/>
+        <line x1="110" y1="41" x2="110" y2="93" stroke="#1d9e75" stroke-width="1" opacity=".5"/>
+        <line x1="78"  y1="67" x2="122" y2="67" stroke="#1d9e75" stroke-width="1.2" opacity=".5"/>
+        <rect x="78" y="41" width="44" height="52" rx="1.5" fill="none" stroke="#1d9e75" stroke-width="1"/>
+        <ellipse cx="100" cy="60" rx="10" ry="12" fill="#1d9e75" opacity=".3"/>
+        <ellipse cx="100" cy="60" rx="7"  ry="9"  fill="#5dcaa5" opacity=".75"/>
+        <ellipse class="nfl" cx="100" cy="57" rx="4" ry="6" fill="#9fe1cb" opacity=".95"/>
+        <ellipse cx="100" cy="55" rx="2" ry="3" fill="#e1f5ee" opacity=".9"/>
+        <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+        <rect x="84" y="111" width="32" height="6" rx="2" fill="#085041"/>
+        <ellipse cx="100" cy="121" rx="5" ry="2.5" fill="#085041"/>
+        <line x1="100" y1="117" x2="100" y2="124" stroke="#085041" stroke-width="2" stroke-linecap="round"/>
+        <g class="ntr"><text font-family="'Courier New',monospace" font-size="9.5" font-weight="600" fill="#1d9e75" letter-spacing="2.8" opacity=".8"><textPath href="#navTr" startOffset="4%">AIGOVOPS FOUNDATION · LANTERN ·</textPath></text></g>
+      </svg>
     </a>
     <nav class="main-nav">
       <a href="index.html" class="active" data-i18n="nav.home">Home</a>
