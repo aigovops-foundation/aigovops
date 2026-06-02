@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 """
-AiGovOps Foundation — LinkedIn Post Fetcher
-Fetches the 5 latest posts from Bob and Ken's rss.app LinkedIn feeds
+AiGovOps Foundation — LinkedIn Post Fetcher + NLP Quality Pipeline
+Fetches the 5 latest posts from Bob and Ken's rss.app LinkedIn feeds,
+runs a Claude Haiku quality pass (if ANTHROPIC_API_KEY is set),
 and writes data/linkedin-posts.json for the site to display.
 
 Run locally:   BOB_RSS="..." KEN_RSS="..." python3 scripts/fetch_posts.py
 Run via CI:    GitHub Actions reads secrets automatically.
+NLP pass:      Set ANTHROPIC_API_KEY secret to enable Haiku enrichment.
 """
 
 import urllib.request
+import urllib.error
 import xml.etree.ElementTree as ET
 import json
 import os
@@ -17,11 +20,13 @@ from datetime import datetime, timezone
 
 MAX_POSTS = 5
 
+
 def strip_html(text):
     """Remove HTML tags and collapse whitespace."""
     text = re.sub(r'<[^>]+>', ' ', text or '')
     text = re.sub(r'\s+', ' ', text).strip()
     return text
+
 
 def _first_sentence(text):
     """Extract the first meaningful sentence from plain text."""
@@ -35,6 +40,7 @@ def _first_sentence(text):
             return s[:120]
     return text[:120]
 
+
 def clean_title(title, summary=''):
     """Return a human-readable title; fall back to first real sentence if title is hashtag-only."""
     if not title:
@@ -46,6 +52,101 @@ def clean_title(title, summary=''):
     if len(core.split()) < 4:
         return _first_sentence(summary) or title
     return title
+
+
+def strip_urls(text):
+    """Remove URLs from summary text for cleaner card display."""
+    text = re.sub(r'https?://\S+', '', text or '')
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
+
+
+# ── Haiku NLP Quality Pipeline ────────────────────────────────────────────────
+
+def haiku_enrich_posts(posts, author_name):
+    """
+    Run a Claude Haiku pass over fetched posts to:
+      1. Extract a clean 1-sentence summary if current title/summary is weak
+      2. Detect language (for i18n layer)
+      3. Strip embedded URLs from summaries
+      4. Flag posts that are purely promotional vs. thought leadership
+
+    Degrades gracefully if ANTHROPIC_API_KEY is not set — returns posts unchanged.
+    Cost: ~$0.001 per full batch of 5 posts.
+    """
+    api_key = os.environ.get('ANTHROPIC_API_KEY', '').strip()
+    if not api_key:
+        print(f"  [{author_name}] ANTHROPIC_API_KEY not set — skipping Haiku NLP pass")
+        return posts
+
+    # Build compact prompt for all posts in one API call
+    posts_text = '\n'.join([
+        f'POST {i+1}:\nTitle: {p.get("title","")}\nSummary: {p.get("summary","")[:200]}'
+        for i, p in enumerate(posts)
+    ])
+
+    prompt = f"""Analyze these {len(posts)} LinkedIn posts from {author_name}. For each post return a JSON array with objects containing:
+- "idx": post number (1-based)
+- "clean_title": A clear, compelling title (max 100 chars). If the current title is hashtag-only or vague, extract a real headline from the summary. Otherwise keep the original.
+- "clean_summary": A clean 1-2 sentence summary (max 180 chars). Remove URLs, hashtags, emoji, and promotional language. Keep the insight.
+- "lang": 2-letter ISO language code of the post content (en, es, fr, de, etc.)
+- "type": "thought_leadership" | "announcement" | "promotional" | "personal"
+
+Return ONLY a JSON array. No markdown, no explanation.
+
+{posts_text}"""
+
+    try:
+        payload = json.dumps({
+            'model': 'claude-haiku-4-5-20251001',
+            'max_tokens': 800,
+            'system': 'You are a content quality analyzer. Return only valid JSON arrays.',
+            'messages': [{'role': 'user', 'content': prompt}]
+        }).encode('utf-8')
+
+        req = urllib.request.Request(
+            'https://api.anthropic.com/v1/messages',
+            data=payload,
+            headers={
+                'Content-Type': 'application/json',
+                'x-api-key': api_key,
+                'anthropic-version': '2023-06-01',
+            },
+            method='POST'
+        )
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            data = json.loads(resp.read())
+
+        # Extract text content from response
+        text = ''.join(
+            block.get('text', '')
+            for block in data.get('content', [])
+            if block.get('type') == 'text'
+        )
+
+        # Parse JSON — strip any markdown fences
+        text = re.sub(r'```json|```', '', text).strip()
+        enriched = json.loads(text)
+
+        # Apply enrichments back to posts
+        for item in enriched:
+            idx = item.get('idx', 0) - 1
+            if 0 <= idx < len(posts):
+                if item.get('clean_title') and len(item['clean_title'].strip()) > 10:
+                    posts[idx]['title'] = item['clean_title'].strip()
+                if item.get('clean_summary') and len(item['clean_summary'].strip()) > 20:
+                    posts[idx]['summary'] = item['clean_summary'].strip()
+                if item.get('lang'):
+                    posts[idx]['lang'] = item['lang']
+                if item.get('type'):
+                    posts[idx]['content_type'] = item['type']
+
+        print(f"  [{author_name}] Haiku NLP pass complete — {len(enriched)} posts enriched")
+        return posts
+
+    except Exception as exc:
+        print(f"  [{author_name}] Haiku NLP pass failed (non-fatal): {exc}")
+        return posts  # degrade gracefully
 
 def fetch_feed(url, author_name, max_items=MAX_POSTS):
     """Fetch an rss.app (or any RSS 2.0 / Atom) feed, return list of post dicts."""
@@ -182,6 +283,16 @@ def main():
     if not ken_posts and last_payload and last_payload.get('ken'):
         print("  [Ken Johnston] Feed failed — using last successful posts as fallback")
         ken_posts = last_payload['ken']
+
+    # Strip URLs from summaries (clean display)
+    for posts in [bob_posts, ken_posts]:
+        for p in posts:
+            p['summary'] = strip_urls(p.get('summary', ''))
+
+    # ── Haiku NLP Quality Pipeline (optional, requires ANTHROPIC_API_KEY) ──
+    print("Running NLP quality pass...")
+    bob_posts = haiku_enrich_posts(bob_posts, 'Bob Rapp')
+    ken_posts = haiku_enrich_posts(ken_posts, 'Ken Johnston')
 
     payload = {
         'updated': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),

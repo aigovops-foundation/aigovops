@@ -217,6 +217,33 @@ grep -q "encoding='utf-8'\|encoding=\"utf-8\"" "$REPO/scripts/fetch_posts.py" \
   || check "UTF-8 encoding specified in file write" "missing"
 
 echo ""
+echo "  [NLP Pipeline — language detection infrastructure]"
+grep -q "haiku_enrich_posts" "$REPO/scripts/fetch_posts.py" \
+  && check "Haiku NLP pipeline in fetch script" "ok" \
+  || check "Haiku NLP pipeline in fetch script" "missing"
+grep -q "'lang'" "$REPO/scripts/fetch_posts.py" \
+  && check "Language detection field in Haiku output" "ok" \
+  || check "Language detection field in Haiku output" "missing"
+grep -q "strip_urls" "$REPO/scripts/fetch_posts.py" \
+  && check "URL stripping applied to summaries" "ok" \
+  || check "URL stripping applied to summaries" "missing"
+grep -q "ANTHROPIC_API_KEY" "$REPO/.github/workflows/fetch-linkedin-posts.yml" \
+  && check "ANTHROPIC_API_KEY in fetch workflow" "ok" \
+  || check "ANTHROPIC_API_KEY in fetch workflow" "missing"
+# Verify posts JSON has no URL-contaminated summaries
+if [ -f "$REPO/data/linkedin-posts.json" ]; then
+  url_count=$(python3 -c "
+import json
+with open('$REPO/data/linkedin-posts.json') as f: d=json.load(f)
+posts=d.get('bob',[])+d.get('ken',[])
+print(sum(1 for p in posts if 'http' in p.get('summary','')))
+" 2>/dev/null || echo "0")
+  [ "$url_count" = "0" ] \
+    && check "Post summaries free of raw URLs" "ok" \
+    || check "Post summaries free of raw URLs" "$url_count posts have URLs in summary"
+fi
+
+echo ""
 echo "  ${PASS} passed, ${FAIL} failed"
 echo ""
 [ $FAIL -eq 0 ] && echo "  ✅  All i18n tests passed" || echo "  ❌  ${FAIL} test(s) failed"

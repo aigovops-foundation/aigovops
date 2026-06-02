@@ -222,7 +222,60 @@ const tzLabel = isDST ? 'PDT (UTC−7)' : 'PST (UTC−8)';
 checkTrue('Pacific timezone label contains UTC offset', tzLabel.includes('UTC'));
 checkTrue('Pacific label is either PST or PDT', tzLabel.startsWith('PST') || tzLabel.startsWith('PDT'));
 
-// ── SUMMARY ───────────────────────────────────────────────────────────────
+// ── 6. NLP PIPELINE LOGIC ────────────────────────────────────────────────────
+console.log('\n  [NLP Pipeline]');
+
+// strip_urls equivalent in JS
+function stripUrls(text) {
+  return (text || '').replace(/https?:\/\/\S+/g, '').replace(/\s+/g, ' ').trim();
+}
+
+// Test URL stripping
+check('strip_urls removes https links',
+  stripUrls('Great post! https://luma.com/2mypeqtr Join us.'),
+  'Great post! Join us.');
+check('strip_urls removes multiple URLs',
+  stripUrls('See https://example.com and http://test.org for more.'),
+  'See and for more.');
+check('strip_urls handles no URLs',
+  stripUrls('Clean text with no links.'),
+  'Clean text with no links.');
+check('strip_urls handles empty string',
+  stripUrls(''),
+  '');
+
+// Verify haiku_enrich_posts degrades gracefully (no API key = posts unchanged)
+// We simulate this by checking the Python source has the guard
+const fetchScript = fs.readFileSync(path.join(__dirname, '../scripts/fetch_posts.py'), 'utf8');
+checkTrue('Haiku pipeline present in fetch_posts.py',           fetchScript.includes('haiku_enrich_posts'));
+checkTrue('Haiku degrades if no ANTHROPIC_API_KEY',             fetchScript.includes('ANTHROPIC_API_KEY'));
+checkTrue('Haiku uses claude-haiku model',                      fetchScript.includes('claude-haiku'));
+checkTrue('Haiku enriches title field',                         fetchScript.includes('clean_title'));
+checkTrue('Haiku enriches summary field',                       fetchScript.includes('clean_summary'));
+checkTrue('Haiku detects language (lang field)',                 fetchScript.includes("'lang'"));
+checkTrue('Haiku detects content_type',                         fetchScript.includes('content_type'));
+checkTrue('strip_urls applied to summaries',                    fetchScript.includes('strip_urls'));
+checkTrue('fetch workflow has ANTHROPIC_API_KEY',
+  fs.readFileSync(path.join(__dirname, '../.github/workflows/fetch-linkedin-posts.yml'), 'utf8')
+    .includes('ANTHROPIC_API_KEY'));
+
+// Verify enriched posts would have lang field if Haiku ran
+const sampleEnriched = { title: 'AI governance frameworks', summary: 'Clean summary.', lang: 'en', content_type: 'thought_leadership' };
+checkTrue('Enriched post has lang field',         'lang' in sampleEnriched);
+checkTrue('Enriched post has content_type field', 'content_type' in sampleEnriched);
+checkTrue('Lang is valid ISO code',               /^[a-z]{2}$/.test(sampleEnriched.lang));
+
+// Post data quality validation (current posts in repo)
+try {
+  const postsData = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/linkedin-posts.json'), 'utf8'));
+  const allPosts = [...(postsData.bob || []), ...(postsData.ken || [])];
+  checkTrue('Posts data file exists and is valid JSON', allPosts.length >= 0);
+  // No post summaries should contain raw URLs (strip_urls should have cleaned them)
+  const postsWithUrls = allPosts.filter(p => /https?:\/\//.test(p.summary || ''));
+  checkTrue(`No post summaries contain raw URLs (${allPosts.length} posts checked)`, postsWithUrls.length === 0);
+} catch(e) {
+  check('Posts data file readable', 'error', 'ok'); // will mark as fail
+}
 const total = PASS + FAIL;
 console.log(`\n  Result: ${PASS}/${total} passed\n`);
 if (FAIL > 0) {

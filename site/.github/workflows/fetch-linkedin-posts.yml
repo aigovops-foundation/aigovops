@@ -20,6 +20,7 @@ jobs:
         env:
           BOB_RSS: ${{ secrets.BOB_LINKEDIN_RSS }}
           KEN_RSS: ${{ secrets.KEN_LINKEDIN_RSS }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python3 scripts/fetch_posts.py
 
       - name: Commit updated posts (if changed)
