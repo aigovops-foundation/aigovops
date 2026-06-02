@@ -40,7 +40,7 @@ const RESOURCES = {
     cta:   "Open Bob's LinkedIn →",
   },
   beacon: {
-    url:   'https://github.com/bobrapp/aigovops-beacon',
+    url:   'https://bobrapp.github.io/aigovops-beacon/',
     label: 'Beacon — open-source AI governance tool',
     cta:   'View Beacon on GitHub →',
   },
