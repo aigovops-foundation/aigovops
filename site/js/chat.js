@@ -7,7 +7,7 @@
  *   3. Ken Johnston's LinkedIn
  *   4. Bob Rapp's LinkedIn
  *   5. Beacon (GitHub)
- *   6. Lantern (GitHub)
+ *   6. Umbrella (GitHub Pages)
  *
  * Everything else gets a polite refusal pointing back to these six things.
  * Zero external API calls. Pure rule-based matching. Fully offline.
@@ -39,14 +39,14 @@ const RESOURCES = {
     cta:   "Open Bob's LinkedIn →",
   },
   beacon: {
-    url:   'https://github.com/aigovops/beacon',  // ← replace with actual repo URL
+    url:   'https://github.com/bobrapp/aigovops-beacon',
     label: 'Beacon — open-source AI governance tool',
     cta:   'View Beacon on GitHub →',
   },
-  lantern: {
-    url:   'https://github.com/aigovops/lantern', // ← replace with actual repo URL
-    label: 'Lantern — open-source AI governance tool',
-    cta:   'View Lantern on GitHub →',
+  umbrella: {
+    url:   'https://bobrapp.github.io/umbrella-govops/',
+    label: 'Umbrella — AI GovOps platform',
+    cta:   'Open Umbrella →',
   },
 };
 // ────────────────────────────────────────────────────────────────────────────
@@ -58,7 +58,7 @@ const INTENT_RULES = [
   { intent: 'ken',        keywords: ['ken', 'johnston', "ken's"] },
   { intent: 'bob',        keywords: ['bob', 'rapp', "bob's"] },
   { intent: 'beacon',     keywords: ['beacon', 'beakon'] },
-  { intent: 'lantern',    keywords: ['lantern', 'lanturn'] },
+  { intent: 'umbrella',   keywords: ['umbrella', 'umbrela', 'govops platform'] },
   { intent: 'linkedin',   keywords: ['linkedin', 'posts', 'thoughts', 'insights', 'founders'] },
 ];
 
@@ -68,7 +68,7 @@ const CHIP_LABELS = {
   ken:        "💡 Ken's posts",
   bob:        "💡 Bob's posts",
   beacon:     '🔦 Beacon',
-  lantern:    '🏮 Lantern',
+  umbrella:   '☂️ Umbrella',
 };
 
 const FALLBACK = `I can only help with these six things — tap one below or type a keyword like "newsletter", "event", "Ken", "Bob", "Beacon", or "Lantern".`;
