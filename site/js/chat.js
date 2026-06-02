@@ -19,12 +19,12 @@
 // Update these when URLs change. That's the only thing you should ever edit here.
 const RESOURCES = {
   newsletter: {
-    url:   'https://aigovopsfoundation.substack.com',
+    url:   'https://aigovops.substack.com/',
     label: 'AiGovOps Newsletter on Substack',
     cta:   'Subscribe on Substack →',
   },
   event: {
-    url:   'https://lu.ma/aigovops',      // ← replace with the current Luma event URL
+    url:   'https://luma.com/2mypeqtr',
     label: 'Upcoming AiGovOps Event on Luma',
     cta:   'View & Register on Luma →',
   },
