@@ -6,8 +6,9 @@
  *   2. Events (Luma)
  *   3. Ken Johnston's LinkedIn
  *   4. Bob Rapp's LinkedIn
- *   5. Beacon (GitHub)
- *   6. Umbrella (GitHub Pages)
+ *   5. Open Source tools (Beacon + Umbrella, shown together)
+ *   6. Beacon specifically (GitHub)
+ *   7. Umbrella specifically (GitHub Pages)
  *
  * Everything else gets a polite refusal pointing back to these six things.
  * Zero external API calls. Pure rule-based matching. Fully offline.
@@ -52,6 +53,8 @@ const RESOURCES = {
 // ────────────────────────────────────────────────────────────────────────────
 
 // Keyword → intent mapping (order matters: first match wins)
+// 'opensource' must come BEFORE 'beacon' and 'umbrella' so generic queries
+// show both tools rather than snapping to just one.
 const INTENT_RULES = [
   { intent: 'newsletter', keywords: ['newsletter', 'substack', 'subscribe', 'email', 'updates', 'weekly', 'digest'] },
   { intent: 'event',      keywords: ['event', 'events', 'luma', 'meetup', 'attend', 'join', 'register', 'conference', 'summit', 'upcoming', 'next'] },
@@ -59,19 +62,21 @@ const INTENT_RULES = [
   { intent: 'bob',        keywords: ['bob', 'rapp', "bob's"] },
   { intent: 'beacon',     keywords: ['beacon', 'beakon'] },
   { intent: 'umbrella',   keywords: ['umbrella', 'umbrela', 'govops platform'] },
+  { intent: 'opensource', keywords: ['open source', 'opensource', 'open-source', 'github', 'projects', 'repos', 'repository', 'repositories', 'contribute'] },
   { intent: 'linkedin',   keywords: ['linkedin', 'posts', 'thoughts', 'insights', 'founders'] },
 ];
 
 const CHIP_LABELS = {
-  newsletter: '📰 Newsletter',
-  event:      '📅 Next Event',
-  ken:        "💡 Ken's posts",
-  bob:        "💡 Bob's posts",
-  beacon:     '🔦 Beacon',
-  umbrella:   '☂️ Umbrella',
+  newsletter:  '📰 Newsletter',
+  event:       '📅 Next Event',
+  ken:         "💡 Ken's posts",
+  bob:         "💡 Bob's posts",
+  opensource:  '💻 Open Source',
+  beacon:      '🔦 Beacon',
+  umbrella:    '☂️ Umbrella',
 };
 
-const FALLBACK = `I can only help with these six things — tap one below or type a keyword like "newsletter", "event", "Ken", "Bob", "Beacon", or "Lantern".`;
+const FALLBACK = `I can only help with these seven things — tap one below or type a keyword like "newsletter", "event", "Ken", "Bob", "open source", "Beacon", or "Umbrella".`;
 
 // DOM refs
 const bubble   = document.getElementById('chatBubble');
@@ -131,6 +136,24 @@ function classify(text) {
 }
 
 function handleIntent(intent) {
+  // Special case: open source shows both Beacon and Umbrella
+  if (intent === 'opensource') {
+    const b = RESOURCES.beacon;
+    const u = RESOURCES.umbrella;
+    const btn = (url, cta) =>
+      `<a href="${url}" target="_blank" rel="noopener" style="display:inline-block;margin-top:6px;margin-right:6px;padding:8px 14px;background:#6c3de6;color:#fff;border-radius:8px;font-size:0.82rem;font-weight:700;text-decoration:none;">${cta}</a>`;
+    addMsg(
+      `We have two open-source tools:<br><br>` +
+      `<strong><a href="${b.url}" target="_blank" rel="noopener">${b.label}</a></strong><br>` +
+      btn(b.url, b.cta) +
+      `<br><br>` +
+      `<strong><a href="${u.url}" target="_blank" rel="noopener">${u.label}</a></strong><br>` +
+      btn(u.url, u.cta),
+      'bot'
+    );
+    return;
+  }
+
   const r = RESOURCES[intent];
   if (!r) return;
   addMsg(

@@ -8,7 +8,8 @@ const INTENT_RULES = [
   { intent: 'ken',        keywords: ['ken','johnston',"ken's"] },
   { intent: 'bob',        keywords: ['bob','rapp',"bob's"] },
   { intent: 'beacon',     keywords: ['beacon','beakon'] },
-  { intent: 'lantern',    keywords: ['lantern','lanturn'] },
+  { intent: 'umbrella',   keywords: ['umbrella','umbrela','govops platform'] },
+  { intent: 'opensource', keywords: ['open source','opensource','open-source','github','projects','repos','repository','repositories','contribute'] },
 ];
 
 function classify(text) {
@@ -20,28 +21,39 @@ function classify(text) {
 }
 
 const CASES = [
-  // ── Positive: should match a specific intent ──
-  { input: 'tell me about the newsletter',    expect: 'newsletter' },
-  { input: 'how do I subscribe on substack?', expect: 'newsletter' },
-  { input: 'sign me up for email updates',    expect: 'newsletter' },
-  { input: 'what events are coming up?',      expect: 'event'      },
-  { input: 'how do I register on luma?',      expect: 'event'      },
-  { input: 'is there an upcoming summit?',    expect: 'event'      },
-  { input: "Ken's latest thoughts",           expect: 'ken'        },
-  { input: 'show me Johnston linkedin posts', expect: 'ken'        },
-  { input: "what's bob been writing lately?", expect: 'bob'        },
-  { input: 'rapp on linkedin',                expect: 'bob'        },
-  { input: "tell me about beacon",            expect: 'beacon'     },
-  { input: 'beacon github repo',              expect: 'beacon'     },
-  { input: 'lantern open source tool',        expect: 'lantern'    },
-  { input: 'show me the lanturn project',     expect: 'lantern'    }, // typo tolerance
-  // ── Negative: should return null ──
-  { input: 'how do I fix my server?',         expect: null         },
-  { input: 'write me a poem about AI',        expect: null         },
-  { input: 'what is AI governance?',          expect: null         },
-  { input: 'help me debug my python code',    expect: null         },
-  { input: 'who founded the EU AI Act?',      expect: null         },
-  { input: 'thanks!',                         expect: null         },
+  // ── Newsletter ──
+  { input: 'tell me about the newsletter',      expect: 'newsletter' },
+  { input: 'how do I subscribe on substack?',   expect: 'newsletter' },
+  { input: 'sign me up for email updates',      expect: 'newsletter' },
+  // ── Events ──
+  { input: 'what events are coming up?',        expect: 'event'      },
+  { input: 'how do I register on luma?',        expect: 'event'      },
+  { input: 'is there an upcoming summit?',      expect: 'event'      },
+  // ── Ken ──
+  { input: "Ken's latest thoughts",             expect: 'ken'        },
+  { input: 'show me Johnston linkedin posts',   expect: 'ken'        },
+  // ── Bob ──
+  { input: "what's bob been writing lately?",   expect: 'bob'        },
+  { input: 'rapp on linkedin',                  expect: 'bob'        },
+  // ── Open Source (generic → shows both Beacon + Umbrella) ──
+  { input: 'do you have any open source tools?', expect: 'opensource' },
+  { input: 'where is your github?',              expect: 'opensource' },
+  { input: 'show me your projects',              expect: 'opensource' },
+  { input: 'I want to contribute to your code',  expect: 'opensource' },
+  { input: 'any open-source repos?',             expect: 'opensource' },
+  // ── Beacon (specific) ──
+  { input: 'tell me about beacon',              expect: 'beacon'     },
+  { input: 'beacon github repo',               expect: 'beacon'     },
+  // ── Umbrella (specific) ──
+  { input: 'what is umbrella?',                 expect: 'umbrella'   },
+  { input: 'show me the umbrella platform',     expect: 'umbrella'   },
+  // ── Negative: must return null ──
+  { input: 'how do I fix my server?',           expect: null         },
+  { input: 'write me a poem about AI',          expect: null         },
+  { input: 'what is AI governance?',            expect: null         },
+  { input: 'help me debug my python code',      expect: null         },
+  { input: 'who founded the EU AI Act?',        expect: null         },
+  { input: 'thanks!',                           expect: null         },
 ];
 
 let passed = 0, failed = 0;
