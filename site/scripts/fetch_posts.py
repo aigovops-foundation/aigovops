@@ -98,7 +98,7 @@ def fetch_feed(url, author_name, max_items=MAX_POSTS):
 
 def main():
     bob_url = os.environ.get('BOB_RSS', '').strip()
-    ken_url = os.environ.get('KEN_RSS', '').strip()
+    ken_url = os.environ.get('KEN_RSS', 'https://rss.app/feeds/g12M4qd70BrS5rcy.xml').strip()
 
     print("Fetching LinkedIn posts...")
     bob_posts = fetch_feed(bob_url, 'Bob Rapp')

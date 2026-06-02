@@ -25,7 +25,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 // ── LinkedIn Posts ─────────────────────────────────────────────────────────
 const LINKEDIN = {
   bob: { name: 'Bob Rapp',      url: 'https://www.linkedin.com/in/bobrapp/',      icon: '💡' },
-  ken: { name: 'Ken Johnston',  url: 'https://www.linkedin.com/in/rkjohnston/',  icon: '💡' },
+  ken: { name: 'Ken Johnston',  url: 'https://rss.app/feeds/g12M4qd70BrS5rcy.xml',  icon: '💡' },
 };
 
 function fmtDate(str) {

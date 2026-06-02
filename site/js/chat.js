@@ -30,7 +30,7 @@ const RESOURCES = {
     cta:   'View & Register on Luma →',
   },
   ken: {
-    url:   'https://www.linkedin.com/in/rkjohnston/',
+    url:   'https://rss.app/feeds/g12M4qd70BrS5rcy.xml',
     label: "Ken Johnston's LinkedIn posts",
     cta:   "Open Ken's LinkedIn →",
   },
