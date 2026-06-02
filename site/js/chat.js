@@ -49,6 +49,11 @@ const RESOURCES = {
     label: 'Umbrella — AI GovOps platform',
     cta:   'Open Umbrella →',
   },
+  meeting: {
+    url:   'https://outlook.office365.com/owa/calendar/Meetwithaaigovopsfoundationvolunteer@aigovops.community/bookings/',
+    label: 'Meet with an AiGovOps Foundation Volunteer',
+    cta:   'Book a Meeting →',
+  },
 };
 // ────────────────────────────────────────────────────────────────────────────
 
@@ -56,6 +61,7 @@ const RESOURCES = {
 // 'opensource' must come BEFORE 'beacon' and 'umbrella' so generic queries
 // show both tools rather than snapping to just one.
 const INTENT_RULES = [
+  { intent: 'meeting',    keywords: ['meeting', 'meet', 'book', 'booking', 'schedule', 'volunteer', 'chat', 'talk', 'call', 'connect'] },
   { intent: 'newsletter', keywords: ['newsletter', 'substack', 'subscribe', 'email', 'updates', 'weekly', 'digest'] },
   { intent: 'event',      keywords: ['event', 'events', 'luma', 'meetup', 'attend', 'join', 'register', 'conference', 'summit', 'upcoming', 'next'] },
   { intent: 'ken',        keywords: ['ken', 'johnston', "ken's"] },
@@ -67,6 +73,7 @@ const INTENT_RULES = [
 ];
 
 const CHIP_LABELS = {
+  meeting:     '📆 Meet a Volunteer',
   newsletter:  '📰 Newsletter',
   event:       '📅 Next Event',
   ken:         "💡 Ken's posts",
@@ -76,7 +83,7 @@ const CHIP_LABELS = {
   umbrella:    '☂️ Umbrella',
 };
 
-const FALLBACK = `I can only help with these seven things — tap one below or type a keyword like "newsletter", "event", "Ken", "Bob", "open source", "Beacon", or "Umbrella".`;
+const FALLBACK = `I can only help with these eight things — tap one below or type a keyword like "meeting", "newsletter", "event", "Ken", "Bob", "open source", "Beacon", or "Umbrella".`;
 
 // DOM refs
 const bubble   = document.getElementById('chatBubble');
