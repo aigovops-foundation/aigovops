@@ -3,7 +3,7 @@
 # Run: bash scripts/test-scale.sh [concurrency=50]
 # Example: bash scripts/test-scale.sh 100
 
-SITE="https://aigovops-foundation.com"
+SITE="https://www.aigovops-foundation.com"
 CONCURRENCY=${1:-50}
 URLS=("/" "/blog.html" "/events.html" "/css/style.css" "/js/chat.js" "/images/logo.png")
 PASS=0; FAIL=0; TOTAL_MS=0
@@ -12,11 +12,13 @@ echo ""
 echo "⚡  Scale Test — $CONCURRENCY concurrent requests to $SITE"
 echo ""
 
+ms_now() { python3 -c "import time; print(int(time.time()*1000))"; }
+
 run_one() {
   local url="$SITE$1"
-  local t0; t0=$(date +%s%3N 2>/dev/null || python3 -c "import time; print(int(time.time()*1000))")
+  local t0; t0=$(ms_now)
   local code; code=$(curl -sL -o /dev/null -w "%{http_code}" --max-time 10 "$url")
-  local t1; t1=$(date +%s%3N 2>/dev/null || python3 -c "import time; print(int(time.time()*1000))")
+  local t1; t1=$(ms_now)
   echo "$code $((t1 - t0)) $url"
 }
 

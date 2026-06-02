@@ -3,7 +3,7 @@
 # Run: bash scripts/test-chaos.sh
 # ⚠️  Requires a clean git working tree. All changes are reverted.
 
-SITE="https://aigovops-foundation.com"
+SITE="https://www.aigovops-foundation.com"
 REPO=~/aigovops-repo
 PASS=0; FAIL=0
 

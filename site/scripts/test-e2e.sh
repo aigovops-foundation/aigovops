@@ -2,15 +2,15 @@
 # AiGovOps — E2E Tests: live site validation
 # Run: bash scripts/test-e2e.sh
 
-SITE="https://aigovops-foundation.com"
+SITE="https://www.aigovops-foundation.com"
 PASS=0; FAIL=0
 
 check() {
   local label="$1" result="$2"
   if [ "$result" = "ok" ]; then
-    echo "  ✅  $label"; ((PASS++))
+    echo "  ✅  $label"; PASS=$((PASS+1))
   else
-    echo "  ❌  $label — $result"; ((FAIL++))
+    echo "  ❌  $label — $result"; FAIL=$((FAIL+1))
   fi
 }
 
@@ -47,8 +47,8 @@ echo "$body" | grep -q "action-grid\|action-card" \
   && check "One-click action grid present" "ok" \
   || check "One-click action grid present" "not found"
 
-# 11: CNAME correct
-cname_content=$(curl -sL "$SITE/../CNAME" 2>/dev/null || cat ~/aigovops-repo/CNAME 2>/dev/null)
+# 11: CNAME correct (check local file)
+cname_content=$(cat ~/aigovops-repo/CNAME 2>/dev/null)
 echo "$cname_content" | grep -q "aigovops-foundation.com" \
   && check "CNAME file correct" "ok" \
   || check "CNAME file correct" "content: $cname_content"
