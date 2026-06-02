@@ -1,6 +1,14 @@
 {
-  "updated": "2026-06-02T13:54:02Z",
+  "updated": "2026-06-02T18:41:50Z",
   "bob": [
+    {
+      "title": "Industry 4.0 thrives on efficiency, but safety is the foundation of \"Yes.\" We encode ISO safety standards directly into the factor...",
+      "link": "https://www.linkedin.com/posts/bobrapp_industry40-aigovernance-policyascode-activity-7467606368926023680-yBau",
+      "date": "Tue, 02 Jun 2026 16:01:40 GMT",
+      "summary": "Industry 4.0 thrives on efficiency, but safety is the foundation of \"Yes.\" We encode ISO safety standards directly into the factory floor. ✅ Ship Good AI / Enviar IA Buena: - [EN] Sync AI vision with robot stops via Safety-as-Code. - [ES] Sincronizar visión de IA con paradas de r",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Problem: AI projects often fail at the governance gap. Shadow agents and model drift are systemic risks, not just bugs. Solution:...",
       "link": "https://www.linkedin.com/posts/bobrapp_problem-ai-projects-often-fail-at-the-governance-activity-7467534962037280769-or1Q",
@@ -32,15 +40,48 @@
       "summary": "Shipping AI shouldn't be a leap of faith. The gap between policy and 'Git Push' is where risks like drift live. We need technical controls in CI/CD pipelines. Lanzar IA no debe ser un acto de fe. El riesgo vive en la brecha entre la política y el código. Necesitamos controles téc",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "Wonderful event - it will be amazing",
-      "link": "https://www.linkedin.com/posts/bobrapp_wonderful-event-it-will-be-amazing-activity-7467167298626355201-ODDd",
-      "date": "Mon, 01 Jun 2026 10:56:57 GMT",
-      "summary": "Wonderful event - it will be amazing",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
-  "ken": []
+  "ken": [
+    {
+      "title": "#devops #aigovops #devops #devsecops #seattletech #aigovernance",
+      "link": "https://www.linkedin.com/posts/rkjohnston_devops-aigovops-devops-activity-7467606972121661440-IeMu",
+      "date": "Tue, 02 Jun 2026 16:04:04 GMT",
+      "summary": "Governance debt is the silent killer of AI innovation. We’re fixing that. Registration link: https://luma.com/2mypeqtr Join us for the 1st AiGovOps Meetup: AI Governance Founders Forum. We’re gathering at the AI House in Seattle and streaming globally to bridge the gap between po",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "#msbuild #imaginecup",
+      "link": "https://www.linkedin.com/posts/donasarkar_msbuild-imaginecup-activity-7467387957575008256-KbN9",
+      "date": "Tue, 02 Jun 2026 01:33:46 GMT",
+      "summary": "Rehearsals done and we are ALL READY to see you all at #MSBuild bright and early-ish tomorrow Tuesday June 2nd! First up we will crown (well trophy I guess) this years #ImagineCup winner (and there is a fun surprise in there too 👀) Next up will be the Satya Nadella and friends ke",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Excited to see our President, Leigh Felton, tackling one of the most important questions in AI today: How do we know it's actually working? \n\nAs AI becomes embedded in organizational decision-making,… | AI for Job Security Foundation",
+      "link": "https://www.linkedin.com/posts/aiforjobsecurity_excited-to-see-our-president-leigh-felton-activity-7467369562393530368-P4Is",
+      "date": "Tue, 02 Jun 2026 00:20:41 GMT",
+      "summary": "Excited to see our President, Leigh Felton, tackling one of the most important questions in AI today: How do we know it's actually working? As AI becomes embedded in organizational decision-making, meaningful measurement is no longer optional. Looking forward to this important di",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "#hiaiw #findyourcity #aic",
+      "link": "https://www.linkedin.com/posts/aicollective_hiaiw-findyourcity-aic-activity-7467293880472973312-K6ba",
+      "date": "Mon, 01 Jun 2026 19:19:57 GMT",
+      "summary": "Humans in AI Week begins today!!!. It’s Monday, June 1st, and it’s time to celebrate. 🎉 AI is reshaping how we work, learn, create, and govern. Most of these decisions have been made by a remarkably small number of people. At AIC, we think everyone deserves a seat at that table. ",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "#weareford | Kathryn Buczkowski",
+      "link": "https://www.linkedin.com/posts/kebuczkow_weareford-activity-7467283228421283840-6ybc",
+      "date": "Mon, 01 Jun 2026 18:37:37 GMT",
+      "summary": "Happy to continue the Ford Motor Company family legacy that started with my Grandpa and my dad. #WeAreFord | 30 comments on LinkedIn",
+      "image": null,
+      "author": "Ken Johnston"
+    }
+  ]
 }
