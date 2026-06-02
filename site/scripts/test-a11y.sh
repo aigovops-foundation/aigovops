@@ -4,7 +4,7 @@
 #        keyboard nav markers, screen reader cues, form labels
 # Run: bash scripts/test-a11y.sh
 
-REPO=~/aigovops-repo
+REPO=$(git rev-parse --show-toplevel 2>/dev/null || echo ~/aigovops-repo)
 PASS=0; FAIL=0
 
 check() {

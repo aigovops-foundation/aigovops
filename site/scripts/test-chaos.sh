@@ -4,7 +4,7 @@
 # ⚠️  Requires a clean git working tree. All changes are reverted.
 
 SITE="https://www.aigovops-foundation.com"
-REPO=~/aigovops-repo
+REPO=$(git rev-parse --show-toplevel 2>/dev/null || echo ~/aigovops-repo)
 PASS=0; FAIL=0
 
 check() {

@@ -5,7 +5,7 @@
 #        chatbot multilingual keyword detection
 # Run: bash scripts/test-i18n.sh
 
-REPO=~/aigovops-repo
+REPO=$(git rev-parse --show-toplevel 2>/dev/null || echo ~/aigovops-repo)
 PASS=0; FAIL=0
 
 check() {
