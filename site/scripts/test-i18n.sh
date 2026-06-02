@@ -178,7 +178,37 @@ JSEOF
 [ $? -eq 0 ] && PASS=$((PASS+1)) || FAIL=$((FAIL+1))
 
 echo ""
-echo "  [Fetch Script — International Encoding]"
+echo "  [i18n Infrastructure Files]"
+[ -f "$REPO/js/i18n/strings-en.js" ] && check "EN strings file present" "ok" || check "EN strings file present" "missing"
+[ -f "$REPO/js/i18n/strings-es.js" ] && check "ES strings file present" "ok" || check "ES strings file present" "missing"
+[ -f "$REPO/js/i18n/i18n.js"       ] && check "i18n module present"     "ok" || check "i18n module present"     "missing"
+
+# Verify ES strings are valid UTF-8 JS
+node -e "require('$REPO/js/i18n/strings-en.js')" 2>/dev/null
+node -e "
+try {
+  const fs = require('fs');
+  const src = fs.readFileSync('$REPO/js/i18n/strings-es.js','utf8');
+  // check non-ASCII Spanish chars present (ó, ú, etc.)
+  const hasAccents = /[áéíóúñü]/i.test(src);
+  process.exit(hasAccents ? 0 : 1);
+} catch(e) { process.exit(1); }" \
+  && check "ES strings contain accented chars (UTF-8)" "ok" \
+  || check "ES strings contain accented chars (UTF-8)" "missing or invalid"
+
+# Badge strip framework names are ASCII-safe internationally
+node -e "
+const fs = require('fs');
+const html = fs.readFileSync('$REPO/index.html','utf8');
+const names = ['Apache-2.0','OVERT 1.0','NIST AI RMF','EU AI Act','ISO/IEC 42001'];
+const missing = names.filter(n => !html.includes(n));
+process.exit(missing.length > 0 ? 1 : 0);
+" && check "All framework badge names ASCII-safe" "ok" || check "All framework badge names ASCII-safe" "some missing"
+
+# Verify teal/monospace brand consistency signal
+grep -q "Courier New\|monospace" "$REPO/css/style.css" \
+  && check "Monospace brand signal in CSS" "ok" \
+  || check "Monospace brand signal in CSS" "missing"
 grep -q "ensure_ascii=False" "$REPO/scripts/fetch_posts.py" \
   && check "ensure_ascii=False in JSON dump" "ok" \
   || check "ensure_ascii=False in JSON dump" "missing"

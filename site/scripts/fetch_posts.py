@@ -126,9 +126,62 @@ def main():
     bob_url = os.environ.get('BOB_RSS', '').strip()
     ken_url = os.environ.get('KEN_RSS', 'https://rss.app/feeds/g12M4qd70BrS5rcy.xml').strip()
 
+    out_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'linkedin-posts.json')
+    os.makedirs(os.path.dirname(os.path.abspath(out_path)), exist_ok=True)
+
+    # Load last successful payload as fallback
+    last_payload = None
+    if os.path.exists(out_path):
+        try:
+            with open(out_path, encoding='utf-8') as f:
+                last_payload = json.load(f)
+        except Exception:
+            pass
+
+    # Staleness check — warn if last update > 48h ago
+    if last_payload and last_payload.get('updated'):
+        try:
+            last_updated = datetime.fromisoformat(last_payload['updated'].replace('Z', '+00:00'))
+            age_hours = (datetime.now(timezone.utc) - last_updated).total_seconds() / 3600
+            if age_hours > 48:
+                print(f"  ⚠️  WARNING: Posts data is {age_hours:.0f}h old (threshold: 48h)")
+        except Exception:
+            pass
+
     print("Fetching LinkedIn posts...")
-    bob_posts = fetch_feed(bob_url, 'Bob Rapp')
-    ken_posts = fetch_feed(ken_url, 'Ken Johnston')
+
+    # Retry logic with exponential backoff
+    def fetch_with_retry(url, name, retries=3):
+        for attempt in range(1, retries + 1):
+            result = fetch_feed(url, name)
+            if result:
+                return result
+            if attempt < retries:
+                wait = 2 ** attempt
+                print(f"  [{name}] Retry {attempt}/{retries-1} in {wait}s...")
+                import time; time.sleep(wait)
+        return []
+
+    bob_posts = fetch_with_retry(bob_url, 'Bob Rapp') if bob_url else []
+    ken_posts = fetch_with_retry(ken_url, 'Ken Johnston')
+
+    # If both fetches failed, keep last successful data
+    if not bob_posts and not ken_posts and last_payload:
+        print("  ⚠️  Both feeds failed — keeping last successful data")
+        last_payload['fetch_error'] = True
+        last_payload['fetch_attempted'] = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+        with open(out_path, 'w', encoding='utf-8') as f:
+            json.dump(last_payload, f, indent=2, ensure_ascii=False)
+        print("  Preserved last successful linkedin-posts.json")
+        return
+
+    # If one feed failed, use fallback for that person
+    if not bob_posts and last_payload and last_payload.get('bob'):
+        print("  [Bob Rapp] Feed failed — using last successful posts as fallback")
+        bob_posts = last_payload['bob']
+    if not ken_posts and last_payload and last_payload.get('ken'):
+        print("  [Ken Johnston] Feed failed — using last successful posts as fallback")
+        ken_posts = last_payload['ken']
 
     payload = {
         'updated': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
@@ -136,8 +189,6 @@ def main():
         'ken': ken_posts,
     }
 
-    out_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'linkedin-posts.json')
-    os.makedirs(os.path.dirname(os.path.abspath(out_path)), exist_ok=True)
     with open(out_path, 'w', encoding='utf-8') as f:
         json.dump(payload, f, indent=2, ensure_ascii=False)
 

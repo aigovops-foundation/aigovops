@@ -90,7 +90,7 @@ const CHIP_LABELS = {
   umbrella:    '☂️ Umbrella',
 };
 
-const FALLBACK = `I can only help with these eight things — tap one below or type a keyword like "meeting", "newsletter", "event", "Ken", "Bob", "open source", "Beacon", or "Umbrella".`;
+const FALLBACK = `I can help with nine things — tap a chip below or type: "frameworks", "meeting", "newsletter", "event", "Ken", "Bob", "open source", "Beacon", or "Umbrella".`;
 
 // DOM refs
 const bubble   = document.getElementById('chatBubble');

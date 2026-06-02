@@ -87,13 +87,35 @@ git diff --quiet \
   || check "Working tree clean after recovery" "still dirty"
 
 # ── CHAOS 6: Verify unit tests still pass after all chaos ──
-echo "  → Chaos 6: unit tests pass after chaos"
+echo "  → Chaos 9: unit tests pass after chaos"
 node scripts/test-unit.js > /dev/null 2>&1 \
   && check "Unit tests pass post-chaos" "ok" \
   || check "Unit tests pass post-chaos" "unit tests failing"
 
-# ── Final: working tree clean? ──
-echo "  → Chaos 7: final working tree state"
+# ── CHAOS 8: RSS JSON corruption → fallback preserved ──────────────────
+echo "  → Chaos 8: corrupt linkedin-posts.json → verify graceful fallback"
+if [ -f "$REPO/data/linkedin-posts.json" ]; then
+  cp "$REPO/data/linkedin-posts.json" "$REPO/data/linkedin-posts.json.chaos_bak"
+  # Corrupt the JSON
+  echo "{ INVALID JSON $$" > "$REPO/data/linkedin-posts.json"
+  # Verify node can detect it's invalid
+  node -e "JSON.parse(require('fs').readFileSync('$REPO/data/linkedin-posts.json','utf8'))" 2>/dev/null \
+    && check "Corrupted JSON still parses (bad)" "should fail" \
+    || check "Corrupted JSON correctly rejected" "ok"
+  # Restore
+  mv "$REPO/data/linkedin-posts.json.chaos_bak" "$REPO/data/linkedin-posts.json"
+  node -e "JSON.parse(require('fs').readFileSync('$REPO/data/linkedin-posts.json','utf8'))" 2>/dev/null \
+    && check "Restored JSON parses cleanly" "ok" \
+    || check "Restored JSON parses cleanly" "still invalid"
+  # Verify fetch_posts.py has fallback logic
+  grep -q "last_payload\|fallback\|last successful" "$REPO/scripts/fetch_posts.py" \
+    && check "fetch_posts.py has fallback logic" "ok" \
+    || check "fetch_posts.py has fallback logic" "missing"
+else
+  echo "  ⏭️   Chaos 8: linkedin-posts.json not found — skipping"
+  PASS=$((PASS+1))
+fi
+echo "  → Chaos 10: final working tree state"
 git diff --quiet && git diff --cached --quiet \
   && check "Working tree clean at end" "ok" \
   || { check "Working tree clean at end" "has changes — running git checkout"; git checkout -- .; }

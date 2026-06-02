@@ -18,6 +18,9 @@
   <meta name="twitter:description" content="AI governance that runs like engineering." />
   <meta name="twitter:image" content="https://www.aigovops-foundation.com/images/founders.jpg" />
   <link rel="stylesheet" href="css/style.css" />
+  <script src="js/i18n/i18n.js"></script>
+  <!-- Plausible Analytics — privacy-first, GDPR-compliant, no cookie banner -->
+  <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
 
@@ -30,9 +33,13 @@
       <img src="images/logo.png" alt="AiGovOps Foundation" class="logo" />
     </a>
     <nav class="main-nav">
-      <a href="index.html" class="active">Home</a>
-      <a href="blog.html">Blog</a>
+      <a href="index.html" class="active" data-i18n="nav.home">Home</a>
+      <a href="blog.html" data-i18n="nav.blog">Blog</a>
     </nav>
+    <div class="lang-toggle" aria-label="Language selector">
+      <button class="lang-btn lang-active" data-lang="en" onclick="window.I18N_SET('en')" aria-label="Switch to English">EN</button>
+      <button class="lang-btn" data-lang="es" onclick="window.I18N_SET('es')" aria-label="Cambiar a español">ES</button>
+    </div>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
   </div>
 </header>
@@ -196,9 +203,10 @@
     <div class="footer-brand">
       <a href="index.html"><img src="images/logo-footer.png" alt="AiGovOps Foundation" class="footer-logo" /></a>
       <p>Governance Versioned Like Code. Tested Before Deployment.</p>
-      <address>Seattle, WA 98104 &bull;
+      <address>Seattle, WA 98104 · Global Community &bull;
         <a href="mailto:bob.rapp@aigovops.community">bob.rapp@aigovops.community</a> &bull;
         <a href="mailto:ken.johnston@aigovops.community">ken.johnston@aigovops.community</a>
+        <span id="visitorTz" style="display:block;font-size:0.78rem;color:#5a5a7a;margin-top:4px;"></span>
       </address>
     </div>
     <nav class="footer-nav">
@@ -265,5 +273,15 @@
 <script src="js/main.js"></script>
 <script src="js/schedule.js"></script>
 <script src="js/chat.js"></script>
+<script>
+// Visitor timezone display in footer
+(function() {
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const el = document.getElementById('visitorTz');
+    if (el && tz) el.textContent = 'You\'re visiting from ' + tz.replace(/_/g, ' ');
+  } catch(e) {}
+})();
+</script>
 </body>
 </html>

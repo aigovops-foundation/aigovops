@@ -65,6 +65,19 @@ echo "$HOME" | grep -q "aria-label.*Open AiGovOps\|aria-label.*assistant" \
 echo "$HOME" | grep -q "main-content"      && check "main-content anchor present"      "ok" || check "main-content anchor present"     "not found"
 
 echo ""
+echo "  [Brand upgrade]"
+echo "$HOME" | grep -q "toolkit-section"   && check "Toolkit section present"          "ok" || check "Toolkit section present"           "not found"
+echo "$HOME" | grep -q "badge-strip"       && check "Compliance badge strip present"   "ok" || check "Compliance badge strip present"    "not found"
+echo "$HOME" | grep -q "badge-pill"        && check "Badge pills present"              "ok" || check "Badge pills present"               "not found"
+echo "$HOME" | grep -q "OVERT 1.0"         && check "OVERT 1.0 badge"                  "ok" || check "OVERT 1.0 badge"                   "not found"
+echo "$HOME" | grep -q "frameworks"        && check "Frameworks intent in chatbot"     "ok" || check "Frameworks intent in chatbot"      "not found"
+echo "$HOME" | grep -q "aigovops --help"   && check "CLI chatbot welcome"              "ok" || check "CLI chatbot welcome"               "not found"
+echo "$HOME" | grep -q "plausible.io"      && check "Plausible analytics present"      "ok" || check "Plausible analytics present"       "not found"
+echo "$HOME" | grep -q "lang-btn"          && check "Language toggle present"          "ok" || check "Language toggle present"           "not found"
+echo "$HOME" | grep -q "Global Community"  && check "Global Community in footer"       "ok" || check "Global Community in footer"        "not found"
+echo "$HOME" | grep -q "i18n.js"           && check "i18n script loaded"               "ok" || check "i18n script loaded"               "not found"
+
+echo ""
 
 # ── META / SEO ────────────────────────────────────────────────────────────
 echo "  [Meta & SEO]"

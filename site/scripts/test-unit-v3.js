@@ -24,6 +24,7 @@ console.log('\n🧪  Unit Tests v3 — full suite\n');
 // ── 1. INTENT CLASSIFIER ──────────────────────────────────────────────────
 console.log('  [Intent Classifier]');
 const INTENT_RULES = [
+  { intent: 'frameworks',  keywords: ['framework', 'frameworks', 'nist', 'eu ai act', 'iso', '42001', 'gdpr', 'hipaa', 'compliance', 'regulation', 'regulatory', 'audit', 'applies', 'which law', 'what law', 'overt', 'umbrella framework'] },
   { intent: 'meeting',    keywords: ['meeting','meet','book','booking','schedule','volunteer','chat','talk','call','connect'] },
   { intent: 'newsletter', keywords: ['newsletter','substack','subscribe','email','updates','weekly','digest'] },
   { intent: 'event',      keywords: ['event','events','luma','meetup','attend','join','register','conference','summit','upcoming','next'] },
@@ -74,12 +75,21 @@ const INTENT_CASES = [
   { i: 'I want to connect with someone',     e: 'meeting'    },
   { i: 'schedule a call with Ken',           e: 'meeting'    },
   { i: 'talk to someone from aigovops',      e: 'meeting'    },
+  // Frameworks (new)
+  { i: 'which frameworks apply to me?',      e: 'frameworks' },
+  { i: 'do I need to comply with NIST?',     e: 'frameworks' },
+  { i: 'what about the EU AI Act?',          e: 'frameworks' },
+  { i: 'ISO 42001 compliance',               e: 'frameworks' },
+  { i: 'what regulations apply?',            e: 'frameworks' },
+  { i: 'how do I prepare for an audit?',     e: 'frameworks' },
+  { i: 'is GDPR relevant to my AI?',         e: 'frameworks' },
   // Negatives
   { i: 'how do I fix my server?',            e: null         },
   { i: 'write me a poem about AI',           e: null         },
   { i: 'what is AI governance?',             e: null         },
   { i: 'help me debug my python code',       e: null         },
-  { i: 'who founded the EU AI Act?',         e: null         },
+  { i: 'who founded the EU AI Act?',         e: 'frameworks' }, // EU AI Act → frameworks intent
+  { i: 'who invented artificial intelligence?', e: null       },
   { i: 'thanks!',                            e: null         },
   { i: 'what time is it in Tokyo?',          e: null         },
 ];
@@ -118,6 +128,18 @@ checkTrue('index.html has skip-link',       indexHtml.includes('skip-link'));
 checkTrue('index.html has aria-live',       indexHtml.includes('aria-live'));
 checkTrue('index.html schedule.js loaded',  indexHtml.includes('schedule.js'));
 checkTrue('index.html main-content anchor', indexHtml.includes('id="main-content"'));
+checkTrue('index.html has frameworks intent chip', indexHtml.includes('data-intent="frameworks"') || indexHtml.includes('frameworks'));
+checkTrue('index.html has toolkit section',        indexHtml.includes('toolkit-section'));
+checkTrue('index.html has compliance badge strip', indexHtml.includes('badge-strip'));
+checkTrue('index.html has Plausible analytics',    indexHtml.includes('plausible.io'));
+checkTrue('index.html has i18n script',            indexHtml.includes('i18n.js'));
+checkTrue('index.html has lang toggle',            indexHtml.includes('lang-btn'));
+checkTrue('index.html has teal CSS variable',      fs.readFileSync(path.join(__dirname, '../css/style.css'), 'utf8').includes('--teal'));
+
+// FALLBACK text accuracy
+checkTrue('FALLBACK mentions frameworks',      chatJs.includes('frameworks'));
+checkTrue('FALLBACK says nine (not eight)',    chatJs.includes('nine') && !chatJs.match(/eight things/));
+checkTrue('Frameworks URL → umbrella-govops', chatJs.includes('umbrella-govops') || chatJs.includes('umbrella'));
 
 // ── 3. POST TITLE CLEANER ─────────────────────────────────────────────────
 console.log('\n  [Post Title Cleaner]');

@@ -20,7 +20,8 @@ a { color: inherit; text-decoration: none; }
   --purple: #6c3de6;
   --purple-dark: #4a1fb8;
   --purple-light: #ede9ff;
-  --teal: #1d9e75;
+  --teal: #1d9e75;           /* use on dark backgrounds — 5.69:1 on #0d0d1a ✅ */
+  --teal-accessible: #0f6e56; /* use on light/white backgrounds — 6.20:1 on #fff ✅ */
   --teal-dark: #0f6e56;
   --teal-light: #e1f5ee;
   --dark: #0d0d1a;
@@ -52,6 +53,11 @@ a { color: inherit; text-decoration: none; }
 .main-nav a { font-size: 0.9rem; font-weight: 500; color: var(--text); padding: 4px 0; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; }
 .main-nav a:hover, .main-nav a.active { color: var(--purple); border-bottom-color: var(--purple); }
 .nav-toggle { display: none; background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--text); }
+/* Language toggle */
+.lang-toggle { display: flex; gap: 2px; align-items: center; }
+.lang-btn { background: none; border: 1px solid var(--border); border-radius: 4px; padding: 3px 8px; font-size: 0.72rem; font-weight: 700; cursor: pointer; color: var(--muted); transition: all 0.15s; font-family: 'Courier New', monospace; letter-spacing: 0.05em; }
+.lang-btn:hover { border-color: var(--teal-accessible); color: var(--teal-accessible); }
+.lang-btn.lang-active { background: var(--teal-accessible); border-color: var(--teal-accessible); color: #fff; }
 
 /* ===== HERO ===== */
 .hero {

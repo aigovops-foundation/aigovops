@@ -110,7 +110,59 @@ check_html   "$REPO/css/style.css" "Updated muted color present"              'm
 check_absent "$REPO/css/style.css" "Old low-contrast hero sub absent (#c4c0e0)" '#c4c0e0'
 
 echo ""
-echo "  [blog.html]"
+echo "  [brand upgrade — toolkit & badges]"
+check_html "$REPO/index.html" "Toolkit section present"             'toolkit-section'
+check_html "$REPO/index.html" "Toolkit grid present"               'toolkit-grid'
+check_html "$REPO/index.html" "Beacon toolkit card (Scanner)"      'Scanner.*Signer\|aigovops-beacon'
+check_html "$REPO/index.html" "Umbrella toolkit card (Compiler)"   'Compiler\|umbrella-govops'
+check_html "$REPO/index.html" "Lantern toolkit card"               'Lantern'
+check_html "$REPO/index.html" "Toolkit links accessible"           'toolkit-link'
+check_html "$REPO/index.html" "Compliance badge strip present"     'badge-strip'
+check_html "$REPO/index.html" "Apache-2.0 badge"                   'Apache-2.0'
+check_html "$REPO/index.html" "OVERT 1.0 badge"                    'OVERT 1.0'
+check_html "$REPO/index.html" "NIST AI RMF badge"                  'NIST AI RMF'
+check_html "$REPO/index.html" "EU AI Act badge"                    'EU AI Act'
+
+echo ""
+echo "  [brand upgrade — CLI chatbot & teal]"
+check_html "$REPO/index.html" "CLI chatbot welcome present"        'aigovops --help'
+check_html "$REPO/index.html" "Frameworks chip in chatbot"         'data-intent="frameworks"'
+check_html "$REPO/css/style.css" "Teal CSS variable defined"       '\-\-teal:'
+check_html "$REPO/css/style.css" "Teal-accessible defined"         'teal-accessible'
+check_html "$REPO/css/style.css" "Monospace eyebrow CSS"           'Courier New.*eyebrow\|eyebrow.*Courier'
+# Verify teal #1d9e75 contrast: 5.69:1 on dark — passing WCAG AA
+python3 -c "
+def rl(h):
+    h=h.lstrip('#'); r,g,b=[int(h[i:i+2],16)/255 for i in(0,2,4)]
+    lin=lambda c: c/12.92 if c<=0.04045 else((c+0.055)/1.055)**2.4
+    r,g,b=lin(r),lin(g),lin(b); return 0.2126*r+0.7152*g+0.0722*b
+def cr(c1,c2): l1,l2=rl(c1),rl(c2); a,b=max(l1,l2),min(l1,l2); return(a+.05)/(b+.05)
+ratio=cr('#1d9e75','#0d0d1a')
+print('ok' if ratio>=4.5 else f'fail:{ratio:.2f}')
+" | grep -q "^ok$" \
+  && check "Teal (#1d9e75) on dark bg passes WCAG AA (≥4.5:1)" "ok" \
+  || check "Teal (#1d9e75) on dark bg passes WCAG AA (≥4.5:1)" "contrast below 4.5"
+
+echo ""
+echo "  [i18n infrastructure]"
+check_html "$REPO/index.html"      "i18n.js loaded"                    'i18n.js'
+check_html "$REPO/index.html"      "Lang toggle EN button"              'lang-btn.*en\|data-lang="en"'
+check_html "$REPO/index.html"      "Lang toggle ES button"              'lang-btn.*es\|data-lang="es"'
+check_html "$REPO/index.html"      "Lang toggle aria-label"             'aria-label="Language selector"'
+[ -f "$REPO/js/i18n/strings-en.js" ] && check "EN strings file exists"  "ok" || check "EN strings file exists"  "missing"
+[ -f "$REPO/js/i18n/strings-es.js" ] && check "ES strings file exists"  "ok" || check "ES strings file exists"  "missing"
+[ -f "$REPO/js/i18n/i18n.js"       ] && check "i18n module exists"      "ok" || check "i18n module exists"      "missing"
+
+echo ""
+echo "  [analytics]"
+check_html "$REPO/index.html"  "Plausible on index.html"  'plausible.io'
+check_html "$REPO/blog.html"   "Plausible on blog.html"   'plausible.io'
+check_html "$REPO/events.html" "Plausible on events.html" 'plausible.io'
+
+echo ""
+echo "  [footer global signal]"
+check_html "$REPO/index.html" "Global Community in footer"  'Global Community'
+check_html "$REPO/index.html" "Visitor timezone span"       'visitorTz'
 check_html "$REPO/blog.html"  "blog.html has HTML lang"            '<html lang="en"'
 check_html "$REPO/blog.html"  "blog.html has og:title"             'og:title'
 check_html "$REPO/blog.html"  "blog.html has favicon"              'favicon'
