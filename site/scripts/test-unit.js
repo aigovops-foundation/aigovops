@@ -9,6 +9,7 @@ const INTENT_RULES = [
   { intent: 'bob',        keywords: ['bob','rapp',"bob's"] },
   { intent: 'beacon',     keywords: ['beacon','beakon'] },
   { intent: 'umbrella',   keywords: ['umbrella','umbrela','govops platform'] },
+  { intent: 'meeting',    keywords: ['meeting','meet','book','booking','schedule','volunteer','chat','talk','call','connect'] },
   { intent: 'opensource', keywords: ['open source','opensource','open-source','github','projects','repos','repository','repositories','contribute'] },
 ];
 
@@ -47,6 +48,11 @@ const CASES = [
   // ── Umbrella (specific) ──
   { input: 'what is umbrella?',                 expect: 'umbrella'   },
   { input: 'show me the umbrella platform',     expect: 'umbrella'   },
+  // Meeting / booking
+  { input: 'I want to book a meeting',          expect: 'meeting'    },
+  { input: 'can I schedule a call?',            expect: 'meeting'    },
+  { input: 'how do I meet a volunteer?',        expect: 'meeting'    },
+  { input: 'I want to connect with someone',    expect: 'meeting'    },
   // ── Negative: must return null ──
   { input: 'how do I fix my server?',           expect: null         },
   { input: 'write me a poem about AI',          expect: null         },
