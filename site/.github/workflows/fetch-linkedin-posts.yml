@@ -1,0 +1,34 @@
+name: Fetch LinkedIn Posts
+
+on:
+  schedule:
+    - cron: '0 7 * * *'   # Every day at 7am UTC (midnight Pacific)
+  workflow_dispatch:        # Manual trigger from GitHub Actions tab
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write       # Needed to commit data/linkedin-posts.json back
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch posts from RSS feeds
+        env:
+          BOB_RSS: ${{ secrets.BOB_LINKEDIN_RSS }}
+          KEN_RSS: ${{ secrets.KEN_LINKEDIN_RSS }}
+        run: python3 scripts/fetch_posts.py
+
+      - name: Commit updated posts (if changed)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/linkedin-posts.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update LinkedIn posts [automated $(date -u +%Y-%m-%d)]"
+            git push
+          fi
