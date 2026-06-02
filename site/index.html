@@ -45,11 +45,11 @@
         <span class="action-hint">View &amp; Register on Luma</span>
       </a>
 
-      <a href="https://outlook.office365.com/owa/calendar/Meetwithaaigovopsfoundationvolunteer@aigovops.community/bookings/" target="_blank" rel="noopener" class="action-card action-meeting">
+      <button onclick="window.SCHEDULE && window.SCHEDULE.open()" class="action-card action-meeting" style="cursor:pointer;background:none;border:none;width:100%;text-align:left;">
         <span class="action-icon">📆</span>
-        <span class="action-label">Meet a Volunteer</span>
-        <span class="action-hint">Book time with our team</span>
-      </a>
+        <span class="action-label">Schedule a Call</span>
+        <span class="action-hint">with a Community Leader</span>
+      </button>
 
       <a href="https://bobrapp.github.io/aigovops-beacon/" target="_blank" rel="noopener" class="action-card action-beacon">
         <span class="action-icon">🔦</span>
@@ -183,9 +183,10 @@
   </div>
   <div class="chat-messages" id="chatMessages">
     <div class="chat-msg bot">
-      Hi! I can point you to our <strong>newsletter</strong>, <strong>Ken or Bob's LinkedIn</strong>, or our open-source tools <strong>Beacon</strong> and <strong>Umbrella</strong>. What are you looking for?
+      Hi! I can help you <strong>schedule a call</strong> with Ken or Bob, find our <strong>newsletter</strong>, upcoming <strong>events</strong>, or our open-source tools <strong>Beacon</strong> and <strong>Umbrella</strong>. What are you looking for?
     </div>
     <div class="chat-chips" id="chatChips">
+      <button class="chip" data-intent="meeting">📆 Schedule a Call</button>
       <button class="chip" data-intent="newsletter">📰 Newsletter</button>
       <button class="chip" data-intent="ken">💡 Ken's posts</button>
       <button class="chip" data-intent="bob">💡 Bob's posts</button>
@@ -203,6 +204,7 @@
 </div>
 
 <script src="js/main.js"></script>
+<script src="js/schedule.js"></script>
 <script src="js/chat.js"></script>
 </body>
 </html>

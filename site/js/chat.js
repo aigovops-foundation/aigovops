@@ -143,6 +143,18 @@ function classify(text) {
 }
 
 function handleIntent(intent) {
+  // Special case: meeting → open scheduling agent modal
+  if (intent === 'meeting') {
+    addMsg(
+      `Great! I'll open our scheduling assistant — it'll check availability and help you request a 25-minute call with Ken or Bob. 👇`,
+      'bot'
+    );
+    setTimeout(() => {
+      if (window.SCHEDULE) window.SCHEDULE.open();
+    }, 600);
+    return;
+  }
+
   // Special case: open source shows both Beacon and Umbrella
   if (intent === 'opensource') {
     const b = RESOURCES.beacon;
