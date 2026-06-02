@@ -1,0 +1,150 @@
+name: Cloud-Mary v3 — Automation Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 8 * * *'     # Daily at 8am UTC (1am Pacific)
+    - cron: '0 20 * * *'    # Daily at 8pm UTC (1pm Pacific)
+  workflow_dispatch:
+    inputs:
+      tiers:
+        description: 'Test tiers to run (space-separated: unit e2e a11y i18n scale chaos)'
+        required: false
+        default: 'unit a11y i18n chaos'
+      skip_network:
+        description: 'Skip network-dependent tests (e2e, scale)'
+        required: false
+        default: 'false'
+        type: choice
+        options: ['false', 'true']
+
+jobs:
+
+  # ── Tier 1: Unit + URL Integrity ─────────────────────────────────────────
+  unit:
+    name: 🧪 Unit Tests (v1 + v3)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run unit tests v1
+        run: node scripts/test-unit.js
+      - name: Run unit tests v3
+        run: node scripts/test-unit-v3.js
+
+  # ── Tier 2: Accessibility ─────────────────────────────────────────────────
+  a11y:
+    name: ♿ Accessibility Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run accessibility tests
+        run: bash scripts/test-a11y.sh
+
+  # ── Tier 3: Multilingual / i18n ───────────────────────────────────────────
+  i18n:
+    name: 🌍 Multilingual / i18n Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run i18n tests
+        run: bash scripts/test-i18n.sh
+
+  # ── Tier 4: E2E (live site — skipped on PR, runs on push + schedule) ──────
+  e2e:
+    name: 🌐 E2E Tests (live site)
+    runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Wait for Pages deploy
+        if: github.event_name == 'push'
+        run: sleep 90
+      - name: Run E2E v3 tests
+        run: bash scripts/test-e2e-v3.sh
+      - name: Validate posts data quality
+        run: |
+          python3 - << 'EOF'
+          import json, re, sys
+          with open('data/linkedin-posts.json') as f:
+              d = json.load(f)
+          errors = []
+          for person in ['bob', 'ken']:
+              for p in d.get(person, []):
+                  t = p.get('title', '')
+                  core = re.sub(r'[#@]\S+', '', t)
+                  core = re.sub(r'[^\w\s]', '', core).strip()
+                  if len(core.split()) < 4:
+                      errors.append(f"{person}: hashtag-only title: {t[:60]}")
+          if errors:
+              print(f"❌ {len(errors)} bad titles:")
+              for e in errors: print(f"  {e}")
+              sys.exit(1)
+          print(f"✅ All {sum(len(d.get(p,[])) for p in ['bob','ken'])} post titles are clean")
+          EOF
+
+  # ── Tier 5: Scale (live site — scheduled only) ────────────────────────────
+  scale:
+    name: ⚡ Scale Tests (50 concurrent)
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run scale tests v3
+        run: bash scripts/test-scale-v3.sh 50
+        continue-on-error: true  # scale failures are informational in CI
+      - name: Run scale tests v3 (high load)
+        run: bash scripts/test-scale-v3.sh 100
+        continue-on-error: true
+
+  # ── Tier 6: Chaos Monkey ──────────────────────────────────────────────────
+  chaos:
+    name: 🐒 Chaos Monkey
+    runs-on: ubuntu-latest
+    needs: unit   # only run chaos if unit tests pass
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run chaos tests
+        run: bash scripts/test-chaos.sh
+
+  # ── Summary Report ────────────────────────────────────────────────────────
+  report:
+    name: ☁️ Cloud-Mary Report
+    runs-on: ubuntu-latest
+    needs: [unit, a11y, i18n, chaos]
+    if: always()
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate summary
+        run: |
+          echo "# ☁️ Cloud-Mary v3 — Test Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Tier | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| 🧪 Unit Tests | ${{ needs.unit.result == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| ♿ Accessibility | ${{ needs.a11y.result == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| 🌍 Multilingual | ${{ needs.i18n.result == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| 🐒 Chaos Monkey | ${{ needs.chaos.result == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Commit: \`$(git log --oneline -1)\`" >> $GITHUB_STEP_SUMMARY
+          echo "Run at: $(date -u '+%Y-%m-%d %H:%M UTC')" >> $GITHUB_STEP_SUMMARY
