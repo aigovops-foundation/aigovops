@@ -49,6 +49,11 @@ const RESOURCES = {
     label: 'Lantern — AI governance compiler',
     cta:   'Open Lantern →',
   },
+  support: {
+    url:   'https://www.aigovops-foundation.com/support.html',
+    label: 'Support the AiGovOps Foundation',
+    cta:   'Fund the Standard →',
+  },
   meeting: {
     url:   'https://outlook.office365.com/owa/calendar/Meetwithaaigovopsfoundationvolunteer@aigovops.community/bookings/',
     label: 'Meet with an AiGovOps Foundation Volunteer',
@@ -66,6 +71,7 @@ const RESOURCES = {
 // 'opensource' must come BEFORE 'beacon' and 'lantern' so generic queries
 // show both tools rather than snapping to just one.
 const INTENT_RULES = [
+  { intent: 'support',     keywords: ['donate', 'donation', 'sponsor', 'support', 'fund', 'coffee', 'sustainer', 'partner', 'give'] },
   { intent: 'frameworks',  keywords: ['framework', 'frameworks', 'nist', 'eu ai act', 'iso', '42001', 'gdpr', 'hipaa', 'compliance', 'regulation', 'regulatory', 'audit', 'applies', 'which law', 'what law', 'overt', 'umbrella framework'] },
   { intent: 'meeting',    keywords: ['meeting', 'meet', 'book', 'booking', 'schedule', 'volunteer', 'chat', 'talk', 'call', 'connect'] },
   { intent: 'newsletter', keywords: ['newsletter', 'substack', 'subscribe', 'email', 'updates', 'weekly', 'digest'] },
@@ -80,7 +86,8 @@ const INTENT_RULES = [
 
 const CHIP_LABELS = {
   frameworks:  '⚖️ Which frameworks apply?',
-  meeting:     '📆 Meet a Volunteer',
+  meeting:     '📆 Schedule a Call',
+  support:     '💚 Support / Donate',
   newsletter:  '📰 Newsletter',
   event:       '📅 Next Event',
   ken:         "💡 Ken's posts",
@@ -90,7 +97,7 @@ const CHIP_LABELS = {
   umbrella:    '🏮 Lantern',
 };
 
-const FALLBACK = `I can help with nine things — tap a chip below or type: "frameworks", "meeting", "newsletter", "event", "Ken", "Bob", "open source", "Beacon", or "Lantern".`;
+const FALLBACK = `I can help with ten things — tap a chip below or type: "frameworks", "meeting", "support", "newsletter", "event", "Ken", "Bob", "open source", "Beacon", or "Lantern".`;
 
 // DOM refs
 const bubble   = document.getElementById('chatBubble');

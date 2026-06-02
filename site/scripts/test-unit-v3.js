@@ -24,6 +24,7 @@ console.log('\n🧪  Unit Tests v3 — full suite\n');
 // ── 1. INTENT CLASSIFIER ──────────────────────────────────────────────────
 console.log('  [Intent Classifier]');
 const INTENT_RULES = [
+  { intent: 'support',    keywords: ['donate','donation','sponsor','support','fund','coffee','sustainer','partner','give'] },
   { intent: 'frameworks',  keywords: ['framework', 'frameworks', 'nist', 'eu ai act', 'iso', '42001', 'gdpr', 'hipaa', 'compliance', 'regulation', 'regulatory', 'audit', 'applies', 'which law', 'what law', 'overt', 'umbrella framework'] },
   { intent: 'meeting',    keywords: ['meeting','meet','book','booking','schedule','volunteer','chat','talk','call','connect'] },
   { intent: 'newsletter', keywords: ['newsletter','substack','subscribe','email','updates','weekly','digest'] },
@@ -75,6 +76,11 @@ const INTENT_CASES = [
   { i: 'I want to connect with someone',     e: 'meeting'    },
   { i: 'schedule a call with Ken',           e: 'meeting'    },
   { i: 'talk to someone from aigovops',      e: 'meeting'    },
+  // Support / donate
+  { i: 'how can I donate?',                  e: 'support'    },
+  { i: 'I want to sponsor the foundation',   e: 'support'    },
+  { i: 'buy you a coffee',                   e: 'support'    },
+  { i: 'how do I contribute funding?',       e: 'support'    },
   // Frameworks (new)
   { i: 'which frameworks apply to me?',      e: 'frameworks' },
   { i: 'do I need to comply with NIST?',     e: 'frameworks' },
@@ -138,8 +144,9 @@ checkTrue('index.html has teal CSS variable',      fs.readFileSync(path.join(__d
 
 // FALLBACK text accuracy
 checkTrue('FALLBACK mentions frameworks',      chatJs.includes('frameworks'));
-checkTrue('FALLBACK says nine (not eight)',    chatJs.includes('nine') && !chatJs.match(/eight things/));
+checkTrue('FALLBACK says ten (not eight/nine)', chatJs.includes('ten') && !chatJs.match(/\beight things\b|\bnine things\b/));
 checkTrue('Frameworks URL → lantern/umbrella-govops', chatJs.includes('umbrella-govops') || chatJs.includes('lantern'));
+checkTrue('Support URL present in chat.js',   chatJs.includes('support.html'));
 
 // ── 3. POST TITLE CLEANER ─────────────────────────────────────────────────
 console.log('\n  [Post Title Cleaner]');

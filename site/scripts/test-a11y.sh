@@ -160,6 +160,19 @@ check_html "$REPO/blog.html"   "Plausible on blog.html"   'plausible.io'
 check_html "$REPO/events.html" "Plausible on events.html" 'plausible.io'
 
 echo ""
+echo "  [support.html]"
+[ -f "$REPO/support.html" ] && check "support.html exists" "ok" || check "support.html exists" "missing"
+check_html "$REPO/support.html" "GitHub Sponsors link"           'github.com/sponsors'
+check_html "$REPO/support.html" "Open Collective link"           'opencollective.com'
+check_html "$REPO/support.html" "Coffee amounts JS"              'coffeeAmounts'
+check_html "$REPO/support.html" "Three tiers present"            'Founding Steward'
+check_html "$REPO/support.html" "501c3 mention"                  '501(c)(3)'
+check_html "$REPO/support.html" "skip-link on support page"      'skip-link'
+check_html "$REPO/support.html" "Plausible on support.html"      'plausible.io'
+check_html "$REPO/support.html" "Support nav link in index"      'support.html'
+check_html "$REPO/index.html"   "Support in main nav"            'href="support.html"'
+
+echo ""
 echo "  [footer global signal]"
 check_html "$REPO/index.html" "Global Community in footer"  'Global Community'
 check_html "$REPO/index.html" "Visitor timezone span"       'visitorTz'
