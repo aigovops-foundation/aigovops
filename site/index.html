@@ -5,9 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home | AiGovOps Foundation</title>
   <meta name="description" content="AI governance that runs like engineering. From intentions to verifiable evidence." />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <meta property="og:title" content="AiGovOps Foundation — AI Governance that Runs Like Engineering" />
+  <meta property="og:description" content="We turn compliance frameworks into automated, auditable code — and build the community that ships it." />
+  <meta property="og:image" content="https://www.aigovops-foundation.com/images/founders.jpg" />
+  <meta property="og:url" content="https://www.aigovops-foundation.com/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AiGovOps Foundation" />
+  <meta name="twitter:description" content="AI governance that runs like engineering." />
+  <meta name="twitter:image" content="https://www.aigovops-foundation.com/images/founders.jpg" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- NAV -->
 <header class="site-header">
@@ -24,7 +38,7 @@
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="main-content">
   <div class="container hero-content">
     <p class="hero-eyebrow">From Intentions to Evidence</p>
     <h1>AI Governance that Runs<br>Like Engineering.</h1>
@@ -45,7 +59,7 @@
         <span class="action-hint">View &amp; Register on Luma</span>
       </a>
 
-      <button onclick="window.SCHEDULE && window.SCHEDULE.open()" class="action-card action-meeting" style="cursor:pointer;background:none;border:none;width:100%;text-align:left;">
+      <button onclick="window.SCHEDULE && window.SCHEDULE.open()" class="action-card action-meeting" aria-label="Schedule a call with a community leader" style="cursor:pointer;background:none;border:none;width:100%;text-align:left;">
         <span class="action-icon">📆</span>
         <span class="action-label">Schedule a Call</span>
         <span class="action-hint">with a Community Leader</span>
@@ -170,19 +184,19 @@
 </footer>
 
 <!-- CHATBOT -->
-<div class="chat-bubble" id="chatBubble" aria-label="Open assistant" role="button" tabindex="0">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26">
+<div class="chat-bubble" id="chatBubble" aria-label="Open AiGovOps assistant" role="button" tabindex="0">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="26" height="26" aria-hidden="true">
     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
   </svg>
-  <span class="chat-badge" id="chatBadge">1</span>
+  <span class="chat-badge" id="chatBadge" aria-label="1 unread message">1</span>
 </div>
 
 <div class="chat-window" id="chatWindow" role="dialog" aria-modal="true" aria-label="AiGovOps Assistant" hidden>
   <div class="chat-header">
     <span class="chat-title">AiGovOps Assistant</span>
-    <button class="chat-close" id="chatClose" aria-label="Close">&times;</button>
+    <button class="chat-close" id="chatClose" aria-label="Close assistant">&times;</button>
   </div>
-  <div class="chat-messages" id="chatMessages">
+  <div class="chat-messages" id="chatMessages" aria-live="polite" aria-atomic="false">
     <div class="chat-msg bot">
       Hi! I can help you <strong>schedule a call</strong> with Ken or Bob, find our <strong>newsletter</strong>, upcoming <strong>events</strong>, or our open-source tools <strong>Beacon</strong> and <strong>Umbrella</strong>. What are you looking for?
     </div>

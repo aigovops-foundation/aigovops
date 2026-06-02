@@ -19,13 +19,29 @@ const SCHEDULE = (() => {
     bob: { name: 'Bob Rapp',     email: 'bob.rapp@aigovops.community'     },
   };
 
-  // 25-min slots within 3–5pm window (local PST offset applied at render time)
+  // 25-min slots within 3–5pm window — UTC offset calculated at runtime
   const SLOT_OFFSETS = [
-    { label: '3:00 – 3:25 PM PST',  hour: 15, min: 0  },
-    { label: '3:30 – 3:55 PM PST',  hour: 15, min: 30 },
-    { label: '4:00 – 4:25 PM PST',  hour: 16, min: 0  },
-    { label: '4:30 – 4:55 PM PST',  hour: 16, min: 30 },
+    { label: '3:00 – 3:25 PM',  hour: 15, min: 0  },
+    { label: '3:30 – 3:55 PM',  hour: 15, min: 30 },
+    { label: '4:00 – 4:25 PM',  hour: 16, min: 0  },
+    { label: '4:30 – 4:55 PM',  hour: 16, min: 30 },
   ];
+
+  // Detect current Pacific offset (PST = UTC-8, PDT = UTC-7)
+  function getPacificLabel() {
+    // Jan 15 is always PST, Jul 15 is always PDT
+    const jan = new Date(new Date().getFullYear(), 0, 15);
+    const jul = new Date(new Date().getFullYear(), 6, 15);
+    const stdOffset = Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
+    const now = new Date();
+    const isDST = now.getTimezoneOffset() < stdOffset;
+    // Pacific is UTC-8 standard, UTC-7 DST
+    return isDST ? 'PDT (UTC−7)' : 'PST (UTC−8)';
+  }
+
+  function slotLabel(s) {
+    return `${s.label} ${getPacificLabel()}`;
+  }
 
   /* ── helpers ─────────────────────────────────────────────────────────── */
 
@@ -52,7 +68,7 @@ const SCHEDULE = (() => {
       SLOT_OFFSETS.map(s => ({
         day,
         dayLabel: fmtDay(day),
-        slotLabel: s.label,
+        slotLabel: slotLabel(s),
         hour: s.hour,
         min: s.min,
         id: `${day.toISOString().slice(0,10)}-${s.hour}-${s.min}`,

@@ -37,9 +37,11 @@ function fmtDate(str) {
 function renderPostCard(p) {
   const title = (p.title || p.summary || 'Read post').slice(0, 100);
   const summary = (p.summary || '').slice(0, 200);
-  return `<a class="post-card" href="${p.link}" target="_blank" rel="noopener">
-    <span class="post-title">${title}${title.length >= 100 ? '…' : ''}</span>
-    ${summary ? `<span class="post-summary">${summary}${summary.length >= 200 ? '…' : ''}</span>` : ''}
+  const truncTitle = title.length >= 100 ? title.slice(0, title.lastIndexOf(' ', 97)) + '…' : title;
+  const truncSummary = summary.length >= 200 ? summary.slice(0, summary.lastIndexOf(' ', 197)) + '… Read →' : summary;
+  return `<a class="post-card" href="${p.link}" target="_blank" rel="noopener" aria-label="${truncTitle.replace(/"/g,'&quot;')}, opens in new tab">
+    <span class="post-title">${truncTitle}</span>
+    ${truncSummary ? `<span class="post-summary">${truncSummary}</span>` : ''}
     <span class="post-date">${fmtDate(p.date)}</span>
   </a>`;
 }

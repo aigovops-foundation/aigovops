@@ -23,6 +23,30 @@ def strip_html(text):
     text = re.sub(r'\s+', ' ', text).strip()
     return text
 
+def _first_sentence(text):
+    """Extract the first meaningful sentence from plain text."""
+    if not text:
+        return ''
+    sentences = re.split(r'(?<=[.!?])\s+', text.strip())
+    for s in sentences:
+        s = s.strip()
+        words = [w for w in s.split() if not w.startswith(('#', '@', 'http'))]
+        if len(words) >= 5:
+            return s[:120]
+    return text[:120]
+
+def clean_title(title, summary=''):
+    """Return a human-readable title; fall back to first real sentence if title is hashtag-only."""
+    if not title:
+        return _first_sentence(summary)
+    core = re.sub(r'#\S+', '', title)
+    core = re.sub(r'@\S+', '', core)
+    core = re.sub(r'[^\w\s]', '', core)
+    core = re.sub(r'\s+', ' ', core).strip()
+    if len(core.split()) < 4:
+        return _first_sentence(summary) or title
+    return title
+
 def fetch_feed(url, author_name, max_items=MAX_POSTS):
     """Fetch an rss.app (or any RSS 2.0 / Atom) feed, return list of post dicts."""
     if not url:
@@ -52,6 +76,7 @@ def fetch_feed(url, author_name, max_items=MAX_POSTS):
                 date  = item.findtext('pubDate', '').strip()
                 desc  = item.findtext('description', '') or item.findtext('content:encoded', '')
                 summary = strip_html(desc)[:280]
+                title = clean_title(title, summary)
                 # Try to grab an image from media:thumbnail or enclosure
                 image = None
                 thumb = item.find('media:thumbnail', ns)
@@ -79,6 +104,7 @@ def fetch_feed(url, author_name, max_items=MAX_POSTS):
                 date    = entry.findtext('atom:updated', '', ns).strip()
                 summary = strip_html(entry.findtext('atom:summary', '', ns) or
                                      entry.findtext('atom:content', '', ns))[:280]
+                title = clean_title(title, summary)
                 posts.append({
                     'title':   title,
                     'link':    link,
