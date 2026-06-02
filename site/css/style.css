@@ -166,7 +166,7 @@ button[type="submit"]:hover, .btn:hover { background: var(--purple-dark); transf
 /* ===== FOOTER ===== */
 .site-footer { background: var(--dark); color: #a0a0b8; padding: 64px 0 0; }
 .footer-inner { display: grid; grid-template-columns: 1fr auto; gap: 64px; align-items: start; padding-bottom: 48px; }
-.footer-logo { height: 32px; width: auto; margin-bottom: 20px; filter: brightness(0) invert(1); opacity: 0.8; }
+.footer-logo { height: 40px; width: auto; margin-bottom: 20px; opacity: 0.9; }
 .footer-brand p { font-size: 0.9rem; line-height: 1.7; max-width: 380px; margin-bottom: 20px; }
 address { font-style: normal; font-size: 0.9rem; line-height: 1.8; }
 address a { color: #a0a0b8; transition: color 0.2s; }
