@@ -108,9 +108,21 @@ bubble.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' '
 closeBtn.addEventListener('click', closeChat);
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && !window_.hidden) closeChat(); });
 
+function track(event, props) {
+  try { if (window.plausible) window.plausible(event, { props }); } catch(e) {}
+}
+
 function openChat() {
   window_.hidden = false;
   badge.style.display = 'none';
+  track('Chatbot Open');
+  // Apply i18n to welcome message if available
+  if (window.I18N && window.I18N.chatbot) {
+    const welcome = messages.querySelector('.chat-msg.bot');
+    if (welcome) {
+      welcome.innerHTML = `<code class="cli">${window.I18N.chatbot.welcome}</code><br><br>${window.I18N.chatbot.ready}`;
+    }
+  }
   input.focus();
 }
 function closeChat() {
@@ -120,7 +132,10 @@ function closeChat() {
 
 // Chip clicks
 chips.querySelectorAll('.chip').forEach(chip => {
-  chip.addEventListener('click', () => handleIntent(chip.dataset.intent));
+  chip.addEventListener('click', () => {
+    track('Chatbot Chip', { intent: chip.dataset.intent });
+    handleIntent(chip.dataset.intent);
+  });
 });
 
 // Text input
@@ -191,6 +206,7 @@ function classify(text) {
 function handleIntent(intent) {
   // Special case: frameworks → AI agent that identifies applicable frameworks
   if (intent === 'frameworks') {
+    track('Frameworks Agent Start');
     addMsg(
       `<code class="cli">$ beacon --frameworks --interactive</code><br><br>` +
       `Tell me a bit about your situation and I'll identify which AI governance frameworks apply to you — EU AI Act, NIST AI RMF, ISO/IEC 42001, HIPAA, GDPR, Korea AI Basic Act, and 30+ more.<br><br>` +
@@ -204,6 +220,7 @@ function handleIntent(intent) {
 
   // Special case: meeting → open scheduling agent modal
   if (intent === 'meeting') {
+    track('Schedule Call Intent');
     addMsg(
       `Great! I'll open our scheduling assistant — it'll check availability and help you request a 25-minute call with Ken or Bob. 👇`,
       'bot'

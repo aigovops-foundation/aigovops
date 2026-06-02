@@ -44,6 +44,7 @@
             .nb2{transform-origin:50% 100%;animation:navSweep2 6s ease-in-out infinite .18s}
             .nfl{animation:navFlame 2.2s ease-in-out infinite}
             .ntr{transform-origin:100px 100px;animation:navSpin 35s linear infinite}
+            @media(prefers-reduced-motion:reduce){.nb1,.nb2,.nfl,.ntr{animation:none}.nb1{transform:rotate(0deg);opacity:.85}.nb2{transform:rotate(0deg);opacity:.5}}
           </style>
         </defs>
         <circle cx="100" cy="100" r="96" fill="#071a12"/>
@@ -91,9 +92,9 @@
 <!-- HERO -->
 <section class="hero" id="main-content">
   <div class="container hero-content">
-    <p class="hero-eyebrow">Policy as Code &nbsp;·&nbsp; Apache-2.0 &nbsp;·&nbsp; No SaaS Lock-In</p>
-    <h1>AI Governance that Runs<br>Like Engineering.</h1>
-    <p class="hero-sub">Policy as code. Evidence that ships. Governance your auditor can verify with one command — and a community that builds it in the open.</p>
+    <p class="hero-eyebrow" data-i18n="hero.eyebrow">Policy as Code &nbsp;·&nbsp; Apache-2.0 &nbsp;·&nbsp; No SaaS Lock-In</p>
+    <h1 data-i18n="hero.h1">AI Governance that Runs<br>Like Engineering.</h1>
+    <p class="hero-sub" data-i18n="hero.sub">Policy as code. Evidence that ships. Governance your auditor can verify with one command — and a community that builds it in the open.</p>
 
     <!-- ONE-CLICK ACTIONS -->
     <div class="action-grid">
@@ -135,7 +136,7 @@
 <!-- CORE PILLARS -->
 <section class="section-light pillars-section">
   <div class="container">
-    <h2 class="section-title">Our Core Pillars</h2>
+    <h2 class="section-title" data-i18n="pillars.title">Our Core Pillars</h2>
     <div class="pillars-grid">
       <div class="pillar-card">
         <span class="pillar-num">01</span>
@@ -166,7 +167,7 @@
   <div class="container founders-inner">
     <img src="images/founders.jpg" alt="Ken Johnston and Bob Rapp" class="founders-img" />
     <div class="founders-text">
-      <h2>About the Founders</h2>
+      <h2 data-i18n="founders.title">About the Founders</h2>
       <p><strong>Ken Johnston</strong> — AI and data leadership at Microsoft, Ford, and CEO of Autonomic.ai.</p>
       <p><strong>Bob Rapp</strong> — AI/ML at Vodafone, IBM Watson, GE Healthcare, Microsoft, and General Motors.</p>
       <p class="founders-mission">Together, advancing responsible AI governance for organizations navigating the evolving AI landscape.</p>
@@ -181,7 +182,7 @@
 <!-- LATEST FROM KEN & BOB -->
 <section class="section-light founders-posts-section">
   <div class="container">
-    <h2 class="section-title">Latest from Ken &amp; Bob</h2>
+    <h2 class="section-title" data-i18n="posts.title">Latest from Ken &amp; Bob</h2>
     <div class="founders-posts-grid" id="postsGrid">
       <!-- Populated by main.js from data/linkedin-posts.json; falls back to LinkedIn links -->
     </div>
@@ -220,9 +221,9 @@
 <!-- NEWSLETTER CTA -->
 <section class="section-dark newsletter-section">
   <div class="container narrow-center">
-    <h2>Stay ahead of AI governance.</h2>
-    <p>Insights on compliance automation, regulatory shifts, and community news — weekly on Substack.</p>
-    <a href="https://aigovops.substack.com/" target="_blank" rel="noopener" class="btn btn-primary btn-large">Subscribe on Substack →</a>
+    <h2 data-i18n="newsletter.title">Stay ahead of AI governance.</h2>
+    <p data-i18n="newsletter.sub">Insights on compliance automation, regulatory shifts, and community news — weekly on Substack.</p>
+    <a href="https://aigovops.substack.com/" target="_blank" rel="noopener" class="btn btn-primary btn-large" data-i18n="newsletter.cta">Subscribe on Substack →</a>
     <p class="fine-print">No spam. Unsubscribe any time.</p>
   </div>
 </section>
@@ -245,7 +246,39 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <a href="index.html"><img src="images/logo-footer.png" alt="AiGovOps Foundation" class="footer-logo" /></a>
+      <a href="index.html" aria-label="AiGovOps Foundation home">
+        <svg class="footer-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AiGovOps Foundation Lantern" style="height:38px;width:38px">
+          <title>AiGovOps Foundation</title>
+          <defs><path id="ftr" d="M100,100 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"/></defs>
+          <circle cx="100" cy="100" r="96" fill="#071a12"/>
+          <polygon points="100,100 42,0 158,0" fill="#9fe1cb" opacity="0.09"/>
+          <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+          <circle cx="100" cy="100" r="79" fill="none" stroke="#1d9e75" stroke-width="0.5" opacity="0.35"/>
+          <line x1="100" y1="4" x2="100" y2="11" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+          <line x1="100" y1="189" x2="100" y2="196" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+          <line x1="4" y1="100" x2="11" y2="100" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+          <line x1="189" y1="100" x2="196" y2="100" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+          <line x1="100" y1="18" x2="100" y2="10" stroke="#1d9e75" stroke-width="1.8" stroke-linecap="round"/>
+          <ellipse cx="100" cy="9" rx="7" ry="3" fill="none" stroke="#1d9e75" stroke-width="1.8"/>
+          <rect x="84" y="17" width="32" height="6" rx="2" fill="#085041"/>
+          <path d="M88 23 L80 41 L120 41 L112 23 Z" fill="#0f6e56"/>
+          <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+          <line x1="90" y1="41" x2="90" y2="93" stroke="#1d9e75" stroke-width="1" opacity="0.5"/>
+          <line x1="100" y1="41" x2="100" y2="93" stroke="#1d9e75" stroke-width="1" opacity="0.5"/>
+          <line x1="110" y1="41" x2="110" y2="93" stroke="#1d9e75" stroke-width="1" opacity="0.5"/>
+          <line x1="78" y1="67" x2="122" y2="67" stroke="#1d9e75" stroke-width="1.2" opacity="0.5"/>
+          <rect x="78" y="41" width="44" height="52" rx="1.5" fill="none" stroke="#1d9e75" stroke-width="1"/>
+          <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
+          <ellipse cx="100" cy="57" rx="4" ry="6" fill="#9fe1cb" opacity="0.95"/>
+          <ellipse cx="100" cy="55" rx="2" ry="3" fill="#e1f5ee" opacity="0.9"/>
+          <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+          <rect x="84" y="111" width="32" height="6" rx="2" fill="#085041"/>
+          <ellipse cx="100" cy="121" rx="5" ry="2.5" fill="#085041"/>
+          <text font-family="'Courier New',monospace" font-size="9.5" font-weight="600" fill="#1d9e75" letter-spacing="2.8" opacity="0.75">
+            <textPath href="#ftr" startOffset="4%">AIGOVOPS FOUNDATION · LANTERN ·</textPath>
+          </text>
+        </svg>
+      </a>
       <p>Governance Versioned Like Code. Tested Before Deployment.</p>
       <address>Seattle, WA 98104 · Global Community &bull;
         <a href="mailto:bob.rapp@aigovops.community">bob.rapp@aigovops.community</a> &bull;

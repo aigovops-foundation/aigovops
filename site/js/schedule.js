@@ -165,9 +165,14 @@ ${candidates.map(c => c.id).join('\n')}`;
     document.getElementById('schedInner').innerHTML = html;
   }
 
+  function track(event, props) {
+    try { if (window.plausible) window.plausible(event, { props }); } catch(e) {}
+  }
+
   /* ── Step 1: pick leader ─────────────────────────────────────────────── */
 
   function stepPickLeader() {
+    track('Schedule: Step 1 — Pick leader');
     setInner(`
       <div class="sched-step">
         <div class="sched-icon">📆</div>
@@ -190,7 +195,10 @@ ${candidates.map(c => c.id).join('\n')}`;
       </div>`);
 
     document.querySelectorAll('.sched-btn[data-leader]').forEach(btn => {
-      btn.addEventListener('click', () => stepContactInfo(btn.dataset.leader));
+      btn.addEventListener('click', () => {
+        track('Schedule: Leader selected', { leader: btn.dataset.leader });
+        stepContactInfo(btn.dataset.leader);
+      });
     });
   }
 
@@ -362,10 +370,10 @@ ${visitor.name}`);
         <button class="sched-secondary" id="sched-back">← Pick a different slot</button>
       </div>`);
 
+    const sendLink = document.getElementById('sched-send');
+    if (sendLink) sendLink.addEventListener('click', () => track('Schedule: Request sent', { leader: chosenKey }));
     document.getElementById('sched-back').addEventListener('click', () => stepPickLeader());
   }
-
-  /* ── public open() ───────────────────────────────────────────────────── */
 
   function open() {
     renderModal();

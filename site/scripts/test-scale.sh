@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# DEPRECATED — superseded by test-e2e-v3.sh / test-scale-v3.sh
+# Kept for reference only. Not called by cloud-mary.sh or automation-v3.yml.
+
 # AiGovOps — Scale Tests: concurrent load
 # Run: bash scripts/test-scale.sh [concurrency=50]
 # Example: bash scripts/test-scale.sh 100

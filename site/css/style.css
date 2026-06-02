@@ -323,6 +323,8 @@ address a:hover { color: var(--white); }
   .main-nav.open { display: flex; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background: var(--white); padding: 20px 24px; border-bottom: 1px solid var(--border); gap: 14px; z-index: 99; }
   .nav-toggle { display: block; }
   .nav-inner { position: relative; }
+  .lang-toggle { margin-left: auto; }
+  .lang-btn { padding: 2px 6px; font-size: 0.68rem; }
   .hero { padding: 52px 0 44px; }
   .action-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .pillars-section .pillars-grid { grid-template-columns: 1fr; }
