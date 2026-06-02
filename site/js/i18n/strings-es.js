@@ -11,7 +11,7 @@ window.I18N = {
   founders: { title: 'Sobre los Fundadores', mission: 'Juntos, avanzando en la gobernanza responsable de la IA para organizaciones que navegan el panorama evolutivo de la IA.' },
   posts: { title: 'Lo último de Ken y Bob' },
   newsletter: { title: 'Mantente al frente de la gobernanza de IA.', sub: 'Perspectivas sobre automatización de cumplimiento, cambios regulatorios y noticias de la comunidad — semanalmente en Substack.', cta: 'Suscribirse en Substack →' },
-  chatbot: { welcome: '$ aigovops --ayuda', ready: 'Listo. Puedo ayudarte con marcos de gobernanza, programar una llamada, nuestro boletín, herramientas (Beacon, Umbrella), o lo último de Ken y Bob. ¿En qué estás trabajando?' },
-  chips: { frameworks: '⚖️ ¿Qué marcos aplican?', meeting: '📆 Programar llamada', newsletter: '📰 Boletín', beacon: '🔦 Beacon', umbrella: '☂️ Umbrella' },
+  chatbot: { welcome: '$ aigovops --ayuda', ready: 'Listo. Puedo ayudarte con marcos de gobernanza, programar una llamada, nuestro boletín, herramientas (Beacon, Lantern), o lo último de Ken y Bob. ¿En qué estás trabajando?' },
+  chips: { frameworks: '⚖️ ¿Qué marcos aplican?', meeting: '📆 Programar llamada', newsletter: '📰 Boletín', beacon: '🔦 Beacon', umbrella: '🏮 Lantern' },
   footer: { tagline: 'Gobernanza versionada como código. Probada antes del despliegue.', global: 'Seattle, WA · Comunidad Global' },
 };

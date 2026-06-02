@@ -96,7 +96,7 @@ const INTENT_RULES = [
   { intent: 'ken',        keywords: ['ken','johnston',"ken's"] },
   { intent: 'bob',        keywords: ['bob','rapp',"bob's"] },
   { intent: 'beacon',     keywords: ['beacon','beakon'] },
-  { intent: 'umbrella',   keywords: ['umbrella','umbrela','govops platform'] },
+  { intent: 'umbrella',   keywords: ['lantern','umbrella','umbrela','govops platform'] },
   { intent: 'opensource', keywords: ['open source','opensource','open-source','github','projects','repos','repository','repositories','contribute'] },
 ];
 function classify(text) {
@@ -110,7 +110,8 @@ let pass = 0, fail = 0;
 const cases = [
   // Alternate spellings / typos common from non-English keyboards
   { i: 'beakon project',            e: 'beacon'     },   // common typo
-  { i: 'umbrela platform',          e: 'umbrella'   },   // common typo
+  { i: 'lantern platform',           e: 'umbrella'   },
+  { i: 'umbrela platform',          e: 'umbrella'   },   // legacy typo
   // Case variations
   { i: 'NEWSLETTER',                e: 'newsletter' },
   { i: 'Ken Johnston',              e: 'ken'        },

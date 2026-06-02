@@ -8,7 +8,7 @@ const INTENT_RULES = [
   { intent: 'ken',        keywords: ['ken','johnston',"ken's"] },
   { intent: 'bob',        keywords: ['bob','rapp',"bob's"] },
   { intent: 'beacon',     keywords: ['beacon','beakon'] },
-  { intent: 'umbrella',   keywords: ['umbrella','umbrela','govops platform'] },
+  { intent: 'umbrella',   keywords: ['lantern','umbrella','umbrela','govops platform'] },
   { intent: 'meeting',    keywords: ['meeting','meet','book','booking','schedule','volunteer','chat','talk','call','connect'] },
   { intent: 'opensource', keywords: ['open source','opensource','open-source','github','projects','repos','repository','repositories','contribute'] },
 ];
@@ -45,9 +45,9 @@ const CASES = [
   // ── Beacon (specific) ──
   { input: 'tell me about beacon',              expect: 'beacon'     },
   { input: 'beacon github repo',               expect: 'beacon'     },
-  // ── Umbrella (specific) ──
-  { input: 'what is umbrella?',                 expect: 'umbrella'   },
-  { input: 'show me the umbrella platform',     expect: 'umbrella'   },
+  // ── Lantern (specific, was Umbrella) ──
+  { input: 'what is lantern?',                 expect: 'umbrella'   },
+  { input: 'show me the lantern platform',     expect: 'umbrella'   },
   // Meeting / booking
   { input: 'I want to book a meeting',          expect: 'meeting'    },
   { input: 'can I schedule a call?',            expect: 'meeting'    },

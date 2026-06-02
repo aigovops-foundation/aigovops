@@ -6,9 +6,9 @@
  *   2. Events (Luma)
  *   3. Ken Johnston's LinkedIn
  *   4. Bob Rapp's LinkedIn
- *   5. Open Source tools (Beacon + Umbrella, shown together)
+ *   5. Open Source tools (Beacon + Lantern, shown together)
  *   6. Beacon specifically (GitHub)
- *   7. Umbrella specifically (GitHub Pages)
+ *   7. Lantern specifically (GitHub Pages)
  *
  * Everything else gets a polite refusal pointing back to these six things.
  * Zero external API calls. Pure rule-based matching. Fully offline.
@@ -46,8 +46,8 @@ const RESOURCES = {
   },
   umbrella: {
     url:   'https://bobrapp.github.io/umbrella-govops/',
-    label: 'Umbrella — AI GovOps platform',
-    cta:   'Open Umbrella →',
+    label: 'Lantern — AI governance compiler',
+    cta:   'Open Lantern →',
   },
   meeting: {
     url:   'https://outlook.office365.com/owa/calendar/Meetwithaaigovopsfoundationvolunteer@aigovops.community/bookings/',
@@ -63,7 +63,7 @@ const RESOURCES = {
 // ────────────────────────────────────────────────────────────────────────────
 
 // Keyword → intent mapping (order matters: first match wins)
-// 'opensource' must come BEFORE 'beacon' and 'umbrella' so generic queries
+// 'opensource' must come BEFORE 'beacon' and 'lantern' so generic queries
 // show both tools rather than snapping to just one.
 const INTENT_RULES = [
   { intent: 'frameworks',  keywords: ['framework', 'frameworks', 'nist', 'eu ai act', 'iso', '42001', 'gdpr', 'hipaa', 'compliance', 'regulation', 'regulatory', 'audit', 'applies', 'which law', 'what law', 'overt', 'umbrella framework'] },
@@ -73,7 +73,7 @@ const INTENT_RULES = [
   { intent: 'ken',        keywords: ['ken', 'johnston', "ken's"] },
   { intent: 'bob',        keywords: ['bob', 'rapp', "bob's"] },
   { intent: 'beacon',     keywords: ['beacon', 'beakon'] },
-  { intent: 'umbrella',   keywords: ['umbrella', 'umbrela', 'govops platform'] },
+  { intent: 'umbrella',   keywords: ['lantern', 'umbrella', 'umbrela', 'govops platform'] },
   { intent: 'opensource', keywords: ['open source', 'opensource', 'open-source', 'github', 'projects', 'repos', 'repository', 'repositories', 'contribute'] },
   { intent: 'linkedin',   keywords: ['linkedin', 'posts', 'thoughts', 'insights', 'founders'] },
 ];
@@ -87,10 +87,10 @@ const CHIP_LABELS = {
   bob:         "💡 Bob's posts",
   opensource:  '💻 Open Source',
   beacon:      '🔦 Beacon',
-  umbrella:    '☂️ Umbrella',
+  umbrella:    '🏮 Lantern',
 };
 
-const FALLBACK = `I can help with nine things — tap a chip below or type: "frameworks", "meeting", "newsletter", "event", "Ken", "Bob", "open source", "Beacon", or "Umbrella".`;
+const FALLBACK = `I can help with nine things — tap a chip below or type: "frameworks", "meeting", "newsletter", "event", "Ken", "Bob", "open source", "Beacon", or "Lantern".`;
 
 // DOM refs
 const bubble   = document.getElementById('chatBubble');
@@ -162,7 +162,7 @@ async function runFrameworkAgent(userContext) {
         system: `You are the AiGovOps Foundation governance framework assistant. 
 Given a user's context (region, industry, AI use cases), identify the top 3-5 most applicable AI governance frameworks from this list: EU AI Act, NIST AI RMF, ISO/IEC 42001, GDPR, HIPAA, UK AI Act, CCPA, Colorado AI Act, Korea AI Basic Act, OVERT 1.0, UNESCO AI Ethics, WCAG 2.2.
 For each framework, give: framework name, why it applies in ONE sentence, and risk level (High/Medium/Low).
-Format as a compact HTML list using <strong> for names. End with one sentence pointing to Umbrella-GovOps to map these into code.
+Format as a compact HTML list using <strong> for names. End with one sentence pointing to Lantern to map these into code.
 Be direct and technical. Max 250 words. No preamble.`,
         messages: [{ role: 'user', content: userContext }],
       }),
@@ -214,7 +214,7 @@ function handleIntent(intent) {
     return;
   }
 
-  // Special case: open source shows both Beacon and Umbrella
+  // Special case: open source shows both Beacon and Lantern
   if (intent === 'opensource') {
     const b = RESOURCES.beacon;
     const u = RESOURCES.umbrella;

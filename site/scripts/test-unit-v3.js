@@ -31,7 +31,7 @@ const INTENT_RULES = [
   { intent: 'ken',        keywords: ['ken','johnston',"ken's"] },
   { intent: 'bob',        keywords: ['bob','rapp',"bob's"] },
   { intent: 'beacon',     keywords: ['beacon','beakon'] },
-  { intent: 'umbrella',   keywords: ['umbrella','umbrela','govops platform'] },
+  { intent: 'umbrella',   keywords: ['lantern','umbrella','umbrela','govops platform'] },
   { intent: 'opensource', keywords: ['open source','opensource','open-source','github','projects','repos','repository','repositories','contribute'] },
 ];
 function classify(text) {
@@ -65,9 +65,9 @@ const INTENT_CASES = [
   // Beacon
   { i: 'tell me about beacon',               e: 'beacon'     },
   { i: 'beacon github repo',                 e: 'beacon'     },
-  // Umbrella
-  { i: 'what is umbrella?',                  e: 'umbrella'   },
-  { i: 'show me the umbrella platform',      e: 'umbrella'   },
+  // Lantern (was Umbrella)
+  { i: 'what is lantern?',                   e: 'umbrella'   },
+  { i: 'show me the lantern platform',       e: 'umbrella'   },
   // Meeting
   { i: 'I want to book a meeting',           e: 'meeting'    },
   { i: 'can I schedule a call?',             e: 'meeting'    },
@@ -139,7 +139,7 @@ checkTrue('index.html has teal CSS variable',      fs.readFileSync(path.join(__d
 // FALLBACK text accuracy
 checkTrue('FALLBACK mentions frameworks',      chatJs.includes('frameworks'));
 checkTrue('FALLBACK says nine (not eight)',    chatJs.includes('nine') && !chatJs.match(/eight things/));
-checkTrue('Frameworks URL → umbrella-govops', chatJs.includes('umbrella-govops') || chatJs.includes('umbrella'));
+checkTrue('Frameworks URL → lantern/umbrella-govops', chatJs.includes('umbrella-govops') || chatJs.includes('lantern'));
 
 // ── 3. POST TITLE CLEANER ─────────────────────────────────────────────────
 console.log('\n  [Post Title Cleaner]');
