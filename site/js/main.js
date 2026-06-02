@@ -14,64 +14,74 @@ if (toggle && nav) {
   });
 }
 
-// Smooth scroll for anchor links
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', (e) => {
     const target = document.querySelector(link.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   });
 });
 
-// ── LinkedIn Posts Loader ──────────────────────────────────────────────────
-(async function loadPosts() {
+// ── LinkedIn Posts ─────────────────────────────────────────────────────────
+const LINKEDIN = {
+  bob: { name: 'Bob Rapp',      url: 'https://www.linkedin.com/in/bobrapp/',      icon: '💡' },
+  ken: { name: 'Ken Johnston',  url: 'https://www.linkedin.com/in/kenjohnston/',  icon: '💡' },
+};
+
+function fmtDate(str) {
+  if (!str) return '';
+  try { return new Date(str).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }); }
+  catch { return str.slice(0, 16); }
+}
+
+function renderPostCard(p) {
+  const title = (p.title || p.summary || 'Read post').slice(0, 100);
+  const summary = (p.summary || '').slice(0, 200);
+  return `<a class="post-card" href="${p.link}" target="_blank" rel="noopener">
+    <span class="post-title">${title}${title.length >= 100 ? '…' : ''}</span>
+    ${summary ? `<span class="post-summary">${summary}${summary.length >= 200 ? '…' : ''}</span>` : ''}
+    <span class="post-date">${fmtDate(p.date)}</span>
+  </a>`;
+}
+
+function renderCol(person, posts) {
+  const p = LINKEDIN[person];
+  const profileBtn = `<a class="linkedin-profile-btn" href="${p.url}" target="_blank" rel="noopener">
+    ${p.icon} View all ${p.name.split(' ')[0]}'s posts →
+  </a>`;
+  if (!posts || posts.length === 0) {
+    return `<div class="founders-col">
+      <div class="founders-col-header">${p.name}</div>
+      ${profileBtn}
+    </div>`;
+  }
+  return `<div class="founders-col">
+    <div class="founders-col-header">${p.name}</div>
+    ${posts.map(renderPostCard).join('')}
+    ${profileBtn}
+  </div>`;
+}
+
+function loadPosts(data) {
   const grid = document.getElementById('postsGrid');
-  const meta = document.getElementById('postsMeta');
+  if (!grid) return;
+  grid.innerHTML = renderCol('bob', data.bob) + renderCol('ken', data.ken);
+}
+
+// Fetch with XMLHttpRequest (more compatible than fetch in some cached contexts)
+(function () {
+  const grid = document.getElementById('postsGrid');
   if (!grid) return;
 
-  try {
-    const res = await fetch('data/linkedin-posts.json');
-    if (!res.ok) throw new Error('not found');
-    const data = await res.json();
+  // Fallback: show LinkedIn buttons immediately, replace if data loads
+  grid.innerHTML = renderCol('bob', []) + renderCol('ken', []);
 
-    const hasBob = data.bob && data.bob.length > 0;
-    const hasKen = data.ken && data.ken.length > 0;
-
-    if (!hasBob && !hasKen) {
-      grid.innerHTML = '<div class="posts-loading">Posts coming soon — check back tomorrow.</div>';
-      return;
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', 'data/linkedin-posts.json?v=' + Date.now(), true);
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      try { loadPosts(JSON.parse(xhr.responseText)); } catch (e) { /* keep fallback */ }
     }
-
-    function fmtDate(str) {
-      if (!str) return '';
-      try { return new Date(str).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }); }
-      catch { return str.slice(0, 16); }
-    }
-
-    function renderCol(posts, name, profileUrl) {
-      if (!posts || posts.length === 0) return '';
-      const header = `<div class="posts-col-header">
-        <span>— ${name}</span>
-      </div>`;
-      const cards = posts.map(p => `
-        <div class="post-card">
-          <a href="${p.link}" target="_blank" rel="noopener">${p.title || p.summary.slice(0, 90) + '…'}</a>
-          ${p.summary ? `<p class="post-summary">${p.summary.slice(0, 180)}${p.summary.length > 180 ? '…' : ''}</p>` : ''}
-          <span class="post-date">${fmtDate(p.date)}</span>
-        </div>`).join('');
-      return `<div><div class="posts-col-header"><span>— ${name}</span></div>${cards}</div>`;
-    }
-
-    grid.innerHTML =
-      renderCol(data.bob, 'Bob Rapp', 'https://www.linkedin.com/in/bobrapp/') +
-      renderCol(data.ken, 'Ken Johnston', 'https://www.linkedin.com/in/kenjohnston/');
-
-    if (data.updated) {
-      meta.textContent = `Last updated ${fmtDate(data.updated)} · Updated daily`;
-    }
-  } catch (e) {
-    grid.innerHTML = '<div class="posts-loading">Posts loading shortly.</div>';
-  }
+  };
+  xhr.send();
 })();
