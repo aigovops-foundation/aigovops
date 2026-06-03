@@ -115,7 +115,7 @@ checkTrue('chat.js has ≥5 resource URLs', urlMatches.length >= 5);
 checkTrue('Ken LinkedIn URL correct (rkjohnston)', chatJs.includes('linkedin.com/in/rkjohnston/'));
 checkFalse('Old Ken URL absent (kenjohnston)', chatJs.includes('linkedin.com/in/kenjohnston/'));
 checkTrue('Beacon URL is GitHub Pages', chatJs.includes('bobrapp.github.io/aigovops-beacon/'));
-checkFalse('Beacon URL is not raw github.com', chatJs.includes('github.com/bobrapp/aigovops-beacon') && !chatJs.includes('github.io'));
+checkFalse('Beacon URL is not raw github.com', chatJs.includes('github.com/aigovops-foundation/aigovops-beacon') && !chatJs.includes('github.io'));
 checkTrue('Luma event URL present', chatJs.includes('luma.com/2mypeqtr'));
 checkTrue('Ken RSS URL correct in fetch script',
   fs.readFileSync(path.join(__dirname, '../scripts/fetch_posts.py'), 'utf8')
