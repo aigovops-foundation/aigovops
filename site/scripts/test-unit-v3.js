@@ -114,7 +114,8 @@ checkTrue('chat.js has ≥5 resource URLs', urlMatches.length >= 5);
 // Verify key URLs present and correct
 checkTrue('Ken intent routes to founder page', chatJs.includes('ken.html'));
 checkFalse('Old Ken LinkedIn removed from chat.js intent', chatJs.includes("url:   'https://www.linkedin.com/in/rkjohnston/'"));
-checkTrue('Beacon URL is GitHub Pages', chatJs.includes('bobrapp.github.io/aigovops-beacon/'));
+checkTrue('Beacon URL is GitHub Pages (aigovops-foundation org)', chatJs.includes('aigovops-foundation.github.io/aigovops-beacon/'));
+checkFalse('Old bobrapp Beacon URL absent from chat.js', chatJs.includes('bobrapp.github.io/aigovops-beacon/'));
 checkFalse('Beacon URL is not raw github.com', chatJs.includes('github.com/aigovops-foundation/aigovops-beacon') && !chatJs.includes('github.io'));
 checkTrue('Luma event URL present', chatJs.includes('luma.com/2mypeqtr'));
 checkTrue('Ken RSS URL correct in fetch script',

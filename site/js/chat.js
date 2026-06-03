@@ -40,12 +40,12 @@ const RESOURCES = {
     cta:   'View Bob\'s page →',
   },
   beacon: {
-    url:   'https://bobrapp.github.io/aigovops-beacon/',
+    url:   'https://aigovops-foundation.github.io/aigovops-beacon/',
     label: 'Beacon — AI scanner and evidence signer (live)',
     cta:   'Open Beacon →',
   },
   umbrella: {
-    url:   'https://bobrapp.github.io/umbrella-govops/',
+    url:   'https://aigovops-foundation.github.io/umbrella-govops/',
     label: 'Umbrella — AI governance compiler (live)',
     cta:   'Open Umbrella →',
   },
@@ -60,7 +60,7 @@ const RESOURCES = {
     cta:   'Book a Meeting →',
   },
   frameworks: {
-    url:   'https://bobrapp.github.io/umbrella-govops/',
+    url:   'https://aigovops-foundation.github.io/umbrella-govops/',
     label: 'Browse 40+ governance frameworks',
     cta:   'Explore Frameworks →',
   },
@@ -186,7 +186,7 @@ async function runFrameworkAgent(userContext) {
   document.getElementById('chatMessages').appendChild(thinking);
   document.getElementById('chatMessages').scrollTop = 9999;
 
-  const LANTERN_URL = 'https://bobrapp.github.io/umbrella-govops/';
+  const LANTERN_URL = 'https://aigovops-foundation.github.io/umbrella-govops/';
   const SYSTEM = `You are the AiGovOps Foundation governance framework assistant.
 Given a user's context (region, industry, AI use cases), identify the top 3-5 most applicable AI governance frameworks from: EU AI Act, NIST AI RMF, ISO/IEC 42001, GDPR, HIPAA, UK AI Act, CCPA, Colorado AI Act, Korea AI Basic Act, OVERT 1.0, UNESCO AI Ethics, WCAG 2.2.
 For each framework: name, why it applies in ONE sentence, risk level (High/Medium/Low).
