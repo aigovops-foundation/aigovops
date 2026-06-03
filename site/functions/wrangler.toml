@@ -1,0 +1,6 @@
+name = "aigovops-frameworks-agent"
+main = "frameworks-agent.js"
+compatibility_date = "2024-01-01"
+
+# Set secret via: wrangler secret put ANTHROPIC_API_KEY
+# Deploy via:     wrangler deploy

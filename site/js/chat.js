@@ -175,36 +175,52 @@ form.addEventListener('submit', e => {
 });
 
 async function runFrameworkAgent(userContext) {
-  // NOTE: This calls the Anthropic API directly from the browser.
-  // For production hardening, route through a serverless proxy (e.g. a Cloudflare Worker
-  // or Vercel Edge Function) so the API key stays server-side and isn't exposed to clients.
-  // Current setup is fine for a community/demo context.
+  // PROXY_URL: deploy functions/frameworks-agent.js as a Cloudflare Worker
+  // and set this to your worker URL (e.g. https://aigovops-frameworks-agent.workers.dev)
+  // Leave as empty string to fall back to direct browser-to-API (dev/demo only).
+  const PROXY_URL = '';
+
   const thinking = document.createElement('div');
   thinking.className = 'chat-msg bot';
   thinking.innerHTML = '<code class="cli">scanning frameworks...</code>';
   document.getElementById('chatMessages').appendChild(thinking);
   document.getElementById('chatMessages').scrollTop = 9999;
 
+  const LANTERN_URL = 'https://bobrapp.github.io/umbrella-govops/';
+  const SYSTEM = `You are the AiGovOps Foundation governance framework assistant.
+Given a user's context (region, industry, AI use cases), identify the top 3-5 most applicable AI governance frameworks from: EU AI Act, NIST AI RMF, ISO/IEC 42001, GDPR, HIPAA, UK AI Act, CCPA, Colorado AI Act, Korea AI Basic Act, OVERT 1.0, UNESCO AI Ethics, WCAG 2.2.
+For each framework: name, why it applies in ONE sentence, risk level (High/Medium/Low).
+Format as compact HTML using <strong> for names. End with one sentence pointing to Lantern to map into code.
+Be direct and technical. Max 250 words. No preamble.`;
+
   try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'claude-haiku-4-5-20251001',
-        max_tokens: 600,
-        system: `You are the AiGovOps Foundation governance framework assistant. 
-Given a user's context (region, industry, AI use cases), identify the top 3-5 most applicable AI governance frameworks from this list: EU AI Act, NIST AI RMF, ISO/IEC 42001, GDPR, HIPAA, UK AI Act, CCPA, Colorado AI Act, Korea AI Basic Act, OVERT 1.0, UNESCO AI Ethics, WCAG 2.2.
-For each framework, give: framework name, why it applies in ONE sentence, and risk level (High/Medium/Low).
-Format as a compact HTML list using <strong> for names. End with one sentence pointing to Lantern to map these into code.
-Be direct and technical. Max 250 words. No preamble.`,
-        messages: [{ role: 'user', content: userContext }],
-      }),
-    });
-    const data = await res.json();
-    const reply = data.content?.filter(b => b.type === 'text').map(b => b.text).join('') || 'Unable to analyze frameworks right now.';
-    thinking.innerHTML = reply + `<br><br><a href="https://bobrapp.github.io/umbrella-govops/" target="_blank" rel="noopener" style="color:var(--teal);font-weight:700;">Map these to code with Umbrella →</a>`;
+    let reply;
+    if (PROXY_URL) {
+      const res = await fetch(PROXY_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userContext }),
+      });
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      reply = data.reply;
+    } else {
+      const res = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model: 'claude-haiku-4-5-20251001',
+          max_tokens: 600,
+          system: SYSTEM,
+          messages: [{ role: 'user', content: userContext }],
+        }),
+      });
+      const data = await res.json();
+      reply = data.content?.filter(b => b.type === 'text').map(b => b.text).join('') || 'Unable to analyze frameworks right now.';
+    }
+    thinking.innerHTML = reply + `<br><br><a href="${LANTERN_URL}" target="_blank" rel="noopener" style="color:var(--teal);font-weight:700;">Map these to code with Lantern →</a>`;
   } catch {
-    thinking.innerHTML = 'Framework analysis unavailable right now. <a href="https://bobrapp.github.io/umbrella-govops/" target="_blank" rel="noopener" style="color:var(--teal);">Browse all 40+ frameworks on Umbrella →</a>';
+    thinking.innerHTML = `Framework analysis unavailable right now. <a href="${LANTERN_URL}" target="_blank" rel="noopener" style="color:var(--teal);">Browse all 40+ frameworks on Lantern →</a>`;
   }
   document.getElementById('chatMessages').scrollTop = 9999;
 }
