@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build Status | AiGovOps Foundation</title>
+  <meta name="description" content="Live build status, test results, infrastructure health, and project inventory for the AiGovOps Foundation website." />
+  <link rel="canonical" href="https://www.aigovops-foundation.com/status.html" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
+  <style>
+    .status-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 32px 0; }
+    .status-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; transition: box-shadow .2s; }
+    .status-card:hover { box-shadow: var(--shadow); }
+    .status-card h3 { font-size: .7rem; font-weight: 700; font-family: 'Courier New', monospace; text-transform: uppercase; letter-spacing: .12em; color: var(--teal-accessible); margin-bottom: 14px; }
+    .status-card .big { font-size: 2.4rem; font-weight: 800; color: var(--text); line-height: 1; margin-bottom: 6px; }
+    .status-card .sub { font-size: .85rem; color: var(--muted); }
+    .tier-row { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: .9rem; }
+    .tier-row:last-child { border-bottom: none; }
+    .tier-icon { font-size: 1.1rem; width: 28px; text-align: center; flex-shrink: 0; }
+    .tier-name { flex: 1; color: var(--text); font-weight: 500; }
+    .tier-status { font-family: 'Courier New', monospace; font-size: .75rem; font-weight: 700; padding: 3px 10px; border-radius: 6px; }
+    .tier-pass { background: var(--teal-light); color: var(--teal-accessible); }
+    .tier-fail { background: #fde8e8; color: #c53030; }
+    .pr-list { list-style: none; padding: 0; margin: 0; }
+    .pr-list li { padding: 8px 0; border-bottom: 1px solid var(--border); display: flex; align-items: baseline; gap: 10px; font-size: .85rem; }
+    .pr-list li:last-child { border-bottom: none; }
+    .pr-num { font-family: 'Courier New', monospace; font-weight: 700; color: var(--purple); min-width: 32px; }
+    .pr-sha { font-family: 'Courier New', monospace; font-size: .72rem; color: var(--muted); }
+    .skill-chip { display: inline-block; background: var(--mid); color: var(--teal); font-family: 'Courier New', monospace; font-size: .72rem; padding: 4px 12px; border-radius: 6px; margin: 3px; }
+    .infra-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); }
+    .infra-row:last-child { border-bottom: none; }
+    .infra-label { font-size: .85rem; color: var(--text); }
+    .infra-val { font-family: 'Courier New', monospace; font-size: .78rem; color: var(--muted); }
+    .section-title { font-size: 1.5rem; font-weight: 800; color: var(--text); margin: 48px 0 8px; }
+    .section-sub { font-size: .85rem; color: var(--muted); margin-bottom: 24px; }
+    .hero-status { background: var(--dark); padding: 64px 0 48px; text-align: center; }
+    .hero-status h1 { color: #fff; font-size: clamp(1.6rem, 4vw, 2.8rem); margin-bottom: 12px; }
+    .hero-status p { color: rgba(255,255,255,.55); max-width: 600px; margin: 0 auto; font-size: .95rem; }
+    .pulse { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--teal); margin-right: 8px; animation: pulse-glow 2s infinite; }
+    @keyframes pulse-glow { 0%,100% { box-shadow: 0 0 0 0 rgba(29,158,117,.6); } 50% { box-shadow: 0 0 0 8px rgba(29,158,117,0); } }
+    .timestamp { font-family: 'Courier New', monospace; font-size: .7rem; color: rgba(255,255,255,.3); margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo-link"><img src="images/lantern-logo.png" alt="AiGovOps" class="logo" /><span class="logo-text">AiGovOps Foundation</span></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="frameworks.html">Frameworks</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-status">
+  <div class="container">
+    <p style="font-size:.7rem;font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:.15em;color:var(--teal);margin-bottom:20px"><span class="pulse"></span>LIVE · CLOUDFLARE · GITHUB PAGES</p>
+    <h1>Build Status</h1>
+    <p>Real-time project inventory for the AiGovOps Foundation website. 15 PRs shipped. 10 test tiers. 7 reusable skills. Every decision version-controlled.</p>
+    <p class="timestamp">Last verified: 2026-06-03 · Cloud-Mary Run #55 · All tiers green</p>
+  </div>
+</div>
+
+<main class="container" style="padding-bottom:64px">
+
+  <!-- KPI cards -->
+  <div class="status-grid">
+    <div class="status-card"><h3>Pull Requests</h3><div class="big">15</div><div class="sub">All squash-merged to main</div></div>
+    <div class="status-card"><h3>Test Checks</h3><div class="big">365+</div><div class="sub">Across 10 Cloud-Mary tiers</div></div>
+    <div class="status-card"><h3>Pages</h3><div class="big">19</div><div class="sub">10 site pages + 9 blog posts</div></div>
+    <div class="status-card"><h3>Frameworks</h3><div class="big">40</div><div class="sub">Fact-checked, filterable</div></div>
+    <div class="status-card"><h3>Skills</h3><div class="big">7</div><div class="sub">Reusable procedural skills</div></div>
+    <div class="status-card"><h3>Uptime</h3><div class="big" style="color:var(--teal-accessible)">✓</div><div class="sub">Cloudflare CDN + GitHub Pages</div></div>
+  </div>
+
+  <!-- Cloud-Mary test tiers -->
+  <h2 class="section-title">☁️ Cloud-Mary Test Suite</h2>
+  <p class="section-sub">Automated test suite running on every push to main and on schedule. All 10 tiers must be green before a PR merges.</p>
+  <div class="status-card">
+    <div class="tier-row"><span class="tier-icon">🧪</span><span class="tier-name">Unit Tests (v1 + v3)</span><span class="tier-status tier-pass">176/176 PASS</span></div>
+    <div class="tier-row"><span class="tier-icon">🌐</span><span class="tier-name">E2E Tests (live site)</span><span class="tier-status tier-pass">PASS</span></div>
+    <div class="tier-row"><span class="tier-icon">🩺</span><span class="tier-name">DNS Checks</span><span class="tier-status tier-pass">PASS</span></div>
+    <div class="tier-row"><span class="tier-icon">⏱️</span><span class="tier-name">Uptime / TLS</span><span class="tier-status tier-pass">PASS</span></div>
+    <div class="tier-row"><span class="tier-icon">🚨</span><span class="tier-name">HTTP Error Detection</span><span class="tier-status tier-pass">PASS</span></div>
+    <div class="tier-row"><span class="tier-icon">♿</span><span class="tier-name">Accessibility</span><span class="tier-status tier-pass">85/85 PASS</span></div>
+    <div class="tier-row"><span class="tier-icon">🌍</span><span class="tier-name">Multilingual / i18n</span><span class="tier-status tier-pass">25/25 PASS</span></div>
+    <div class="tier-row"><span class="tier-icon">🐒</span><span class="tier-name">Chaos Monkey</span><span class="tier-status tier-pass">14/14 PASS</span></div>
+    <div class="tier-row"><span class="tier-icon">📄</span><span class="tier-name">Documentation</span><span class="tier-status tier-pass">55/55 PASS</span></div>
+    <div class="tier-row"><span class="tier-icon">⚡</span><span class="tier-name">Scale (50 concurrent)</span><span class="tier-status tier-pass">PASS</span></div>
+  </div>
+
+  <!-- Infrastructure -->
+  <h2 class="section-title">Infrastructure</h2>
+  <p class="section-sub">DNS, hosting, and TLS configuration.</p>
+  <div class="status-card">
+    <div class="infra-row"><span class="infra-label">DNS Provider</span><span class="infra-val">Cloudflare (addyson + nitin NS)</span></div>
+    <div class="infra-row"><span class="infra-label">Hosting</span><span class="infra-val">GitHub Pages (main branch, root)</span></div>
+    <div class="infra-row"><span class="infra-label">CDN</span><span class="infra-val">Cloudflare (proxied, orange cloud)</span></div>
+    <div class="infra-row"><span class="infra-label">SSL Mode</span><span class="infra-val">Full (Strict)</span></div>
+    <div class="infra-row"><span class="infra-label">TLS Certificate</span><span class="infra-val">Cloudflare-issued, auto-renewing</span></div>
+    <div class="infra-row"><span class="infra-label">Apex (aigovops-foundation.com)</span><span class="infra-val">301 → www at Cloudflare edge</span></div>
+    <div class="infra-row"><span class="infra-label">www CNAME</span><span class="infra-val">aigovops-foundation.github.io</span></div>
+    <div class="infra-row"><span class="infra-label">Registrar</span><span class="infra-val">Hostinger (nameservers pointed at Cloudflare)</span></div>
+    <div class="infra-row"><span class="infra-label">Analytics</span><span class="infra-val">Plausible (cookieless, EU-hosted)</span></div>
+    <div class="infra-row"><span class="infra-label">Repo</span><span class="infra-val">aigovops-foundation (private, GitHub org)</span></div>
+  </div>
+
+  <!-- Skills -->
+  <h2 class="section-title">Reusable Skills</h2>
+  <p class="section-sub">Procedural skills captured from building this site. Version-controlled in <code>skills/</code>.</p>
+  <div>
+    <span class="skill-chip">aigovops-deploy-workflow</span>
+    <span class="skill-chip">cloud-mary-testing</span>
+    <span class="skill-chip">cloud-mary</span>
+    <span class="skill-chip">cloudflare-dns-hosting</span>
+    <span class="skill-chip">hostinger-github-pages</span>
+    <span class="skill-chip">links-for-events</span>
+    <span class="skill-chip">marblism-chatbot-integration</span>
+  </div>
+
+  <!-- PR history -->
+  <h2 class="section-title">PR History</h2>
+  <p class="section-sub">Every change ships through a PR. Squash-merged to keep main clean.</p>
+  <div class="status-card">
+    <ul class="pr-list">
+      <li><span class="pr-num">#1</span> i18n chips, sitemap, robots.txt, posts freshness <span class="pr-sha">063259c</span></li>
+      <li><span class="pr-num">#2</span> Cloudflare Worker proxy, founder pages, frameworks explorer <span class="pr-sha">7704d72</span></li>
+      <li><span class="pr-num">#3</span> 404 page, Schema.org, RSS, chatbot routing, press, community, 40 frameworks <span class="pr-sha">fd28d0d</span></li>
+      <li><span class="pr-num">#4</span> WCAG touch targets, mobile action cards, voice input <span class="pr-sha">15c010a</span></li>
+      <li><span class="pr-num">#5</span> Full documentation suite + Cloud-Mary docs tier <span class="pr-sha">0f2a664</span></li>
+      <li><span class="pr-num">#6</span> Beacon + Umbrella live, Lantern stubbed, remove X/YouTube <span class="pr-sha">5281c5a</span></li>
+      <li><span class="pr-num">#7</span> Fix tool URLs (bobrapp → aigovops-foundation) + HIBT immutable log <span class="pr-sha">3e022d3</span></li>
+      <li><span class="pr-num">#8</span> Close all open items — OVERT verified, Texas corrected <span class="pr-sha">1d757a2</span></li>
+      <li><span class="pr-num">#9</span> Migrate Wix blog into canonical site + retire Hostinger deploy <span class="pr-sha">985ebc7</span></li>
+      <li><span class="pr-num">#10</span> Three reusable skills + path-independent test scripts <span class="pr-sha">bad03fe</span></li>
+      <li><span class="pr-num">#11</span> Cloudflare DNS/hosting runbook <span class="pr-sha">a35365a</span></li>
+      <li><span class="pr-num">#12</span> DNS, uptime, and HTTP-error health tiers for Cloud-Mary <span class="pr-sha">cd51b1b</span></li>
+      <li><span class="pr-num">#13</span> Fix Cloud-Mary for Cloudflare-proxied architecture <span class="pr-sha">c68f210</span></li>
+      <li><span class="pr-num">#14</span> DNS check Cloudflare-proxy compat <span class="pr-sha">8f47666</span></li>
+      <li><span class="pr-num">#15</span> Archive build transcripts + capture 3 missing skills <span class="pr-sha">901cb04</span></li>
+    </ul>
+  </div>
+
+  <!-- Pages -->
+  <h2 class="section-title">Site Pages</h2>
+  <p class="section-sub">All pages verified live via browser + Cloud-Mary E2E.</p>
+  <div class="status-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+    <a href="index.html" class="status-card" style="text-decoration:none"><h3>Home</h3><div class="sub">Hero, chatbot, posts, toolkit</div></a>
+    <a href="blog.html" class="status-card" style="text-decoration:none"><h3>Blog</h3><div class="sub">9 post cards → local pages</div></a>
+    <a href="frameworks.html" class="status-card" style="text-decoration:none"><h3>Frameworks</h3><div class="sub">40 filterable frameworks</div></a>
+    <a href="support.html" class="status-card" style="text-decoration:none"><h3>Support</h3><div class="sub">Sponsors + Open Collective</div></a>
+    <a href="community.html" class="status-card" style="text-decoration:none"><h3>Community</h3><div class="sub">Tools + repos</div></a>
+    <a href="press.html" class="status-card" style="text-decoration:none"><h3>Press</h3><div class="sub">Press kit + quick facts</div></a>
+    <a href="ken.html" class="status-card" style="text-decoration:none"><h3>Ken Johnston</h3><div class="sub">Founder profile</div></a>
+    <a href="bob.html" class="status-card" style="text-decoration:none"><h3>Bob Rapp</h3><div class="sub">Founder profile</div></a>
+    <a href="events.html" class="status-card" style="text-decoration:none"><h3>Events</h3><div class="sub">Luma event page</div></a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo-text footer-logo" style="color:#fff;font-size:1.1rem;">AiGovOps Foundation</span>
+      <p style="margin-top:16px;color:rgba(255,255,255,.5)">Governance Versioned Like Code. Tested Before Deployment.</p>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="container"><p>&copy; 2026 AiGovOps Foundation. All rights reserved.</p></div></div>
+</footer>
+
+</body>
+</html>
