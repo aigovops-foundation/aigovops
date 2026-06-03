@@ -302,6 +302,20 @@ checkTrue('TTS speechSynthesis in chat.js',                 chatJs.includes('spe
 checkTrue('VOICE_SPEAK hook in addMsg',                     chatJs.includes('VOICE_SPEAK'));
 checkTrue('Mobile nav enhancer in index.html',              indexHtml.includes('Mobile nav'));
 
+const communityHtml = fs.readFileSync(path.join(__dirname,'../community.html'), 'utf8');
+const supportHtml   = fs.readFileSync(path.join(__dirname,'../support.html'),   'utf8');
+const pressHtml     = fs.readFileSync(path.join(__dirname,'../press.html'),     'utf8');
+
+// ── PR #8: Open items closed ──────────────────────────────────────────────
+checkTrue('OVERT 1.0 links to overt.is (verified)',        fwHtml.includes('overt.is'));
+checkFalse('Old OVERT umbrella URL gone from frameworks',  fwHtml.includes("url: 'https://aigovops-foundation.github.io/umbrella-govops/'"));
+checkTrue('Texas entry updated to TRAIGA HB 149',         fwHtml.includes('Texas TRAIGA'));
+checkFalse('Old Texas HB 1709 name gone',                  fwHtml.includes("name: 'Texas AI Act (HB 1709)'"));
+checkFalse('Beacon star count removed from community',     communityHtml.includes('⭐ 3'));
+checkTrue('Support page has activation notice',           supportHtml.includes('activation in progress'));
+checkTrue('Press page has EIN pending placeholder',       pressHtml.includes('IRS EIN') || pressHtml.includes('EIN'));
+checkTrue('Cloudflare deploy instructions in wrangler',   fs.existsSync(path.join(__dirname,'../functions/wrangler.toml')) && fs.readFileSync(path.join(__dirname,'../functions/wrangler.toml'),'utf8').includes('wrangler deploy'));
+
 const total = PASS + FAIL;
 console.log(`\n  Result: ${PASS}/${total} passed\n`);
 if (FAIL > 0) {

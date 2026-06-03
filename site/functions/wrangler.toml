@@ -1,6 +1,18 @@
+# AiGovOps Frameworks Agent — Cloudflare Worker
+# ──────────────────────────────────────────────
+# DEPLOY STEPS (run from the functions/ directory):
+#
+#   1. npm install -g wrangler         # install Cloudflare CLI
+#   2. wrangler login                  # authenticate
+#   3. wrangler deploy                 # deploy the worker
+#   4. wrangler secret put ANTHROPIC_API_KEY   # set the API key
+#   5. Copy the worker URL from the deploy output
+#   6. Open js/chat.js and set: const PROXY_URL = 'https://your-worker.workers.dev'
+#
+# The worker is pre-built and ready — only deployment is pending.
+
 name = "aigovops-frameworks-agent"
 main = "frameworks-agent.js"
 compatibility_date = "2024-01-01"
 
 # Set secret via: wrangler secret put ANTHROPIC_API_KEY
-# Deploy via:     wrangler deploy

@@ -194,7 +194,7 @@ Each framework verified for category accuracy, status, and description correctne
 | 36 | Brazil LGPD | Mandatory, Brazil | ✅ | Lei Geral de Proteção de Dados, Aug 2020 |
 | 37 | India DPDP Act | Mandatory, India | ✅ | Digital Personal Data Protection Act, Aug 2023 |
 | 38 | NIST CSF 2.0 | Voluntary, Global | ✅ | Released Feb 2024 |
-| 39 | Texas AI Act (HB 1709) | Mandatory, US (TX) | ⚠️ UNCERTAIN | Bill status as of June 2026 unconfirmed — monitor |
+| 39 | Texas TRAIGA (HB 149) | Mandatory, US (TX) | ✅ CORRECTED | Original HB 1709 not enacted. HB 149 (TRAIGA) signed June 22 2025, in effect Jan 1 2026. frameworks.html updated. |
 | 40 | ISO/IEC 42006 | Certifiable, Global | ✅ | Requirements for AI audit/certification bodies |
 
 **Framework accuracy: 39/40 confirmed. 1 item (Texas HB 1709) requires monitoring.**
@@ -276,16 +276,25 @@ via RSS/JSON and displays them in the blog feed.
 
 ## SECTION 5 — OPEN ITEMS (as of 2026-06-03)
 
-| # | Item | Severity | Owner | Notes |
-|---|------|----------|-------|-------|
-| 1 | bobrapp.github.io tool URLs returning 404 | 🔴 Critical | Fixed in PR #7 | Both `beacon` and `umbrella-govops` fixed |
-| 2 | GitHub Sponsors profile not activated | 🟡 High | Bob/Ken | Enroll at github.com/sponsors |
-| 3 | Open Collective not created | 🟡 High | Bob/Ken | Create at opencollective.com/create |
-| 4 | Cloudflare Worker proxy not deployed | 🟡 Medium | Bob/Ken | `cd functions && wrangler deploy` |
-| 5 | 501(c)(3) IRS EIN not on press page | 🟡 Medium | Bob/Ken | Add when available |
-| 6 | OVERT 1.0 Glacis Technologies steward claim | 🟡 Medium | Bob/Ken | Not independently verified |
-| 7 | Texas HB 1709 bill status | 🟢 Low | Monitor | Check Texas legislature for final status |
-| 8 | Beacon "3 stars" claim in community.html | 🟢 Low | Future PR | Star counts are volatile — consider removing |
+| # | Item | Severity | Owner | Status |
+|---|------|----------|-------|--------|
+| 1 | bobrapp.github.io tool URLs returning 404 | 🔴 Critical | Fixed in PR #7 | ✅ **CLOSED** |
+| 2 | GitHub Sponsors profile not activated | 🟡 High | Bob/Ken | ⚠️ **PENDING** — "activation in progress" notice added to support.html (PR #8). Bob/Ken: enroll at github.com/sponsors |
+| 3 | Open Collective not created | 🟡 High | Bob/Ken | ⚠️ **PENDING** — same notice as #2. Bob/Ken: create at opencollective.com/create |
+| 4 | Cloudflare Worker proxy not deployed | 🟡 Medium | Bob/Ken | ⚠️ **PENDING** — deploy instructions added to `functions/wrangler.toml` and `js/chat.js` (PR #8). Worker is built; Bob/Ken run: `cd functions && wrangler deploy && wrangler secret put ANTHROPIC_API_KEY` |
+| 5 | 501(c)(3) IRS EIN not on press page | 🟡 Medium | Bob/Ken | ⚠️ **PENDING** — "Pending — contact bob.rapp@aigovops.community" placeholder added to press.html quick facts (PR #8) |
+| 6 | OVERT 1.0 Glacis Technologies steward claim | 🟡 Medium | Verified | ✅ **CLOSED** — Confirmed: OVERT 1.0 is maintained by Glacis Technologies, Inc., Seattle WA. Published 25 March 2026 at overt.is. frameworks.html entry updated with correct URL and description (PR #8) |
+| 7 | Texas HB 1709 bill status | 🟢 Low | Verified | ✅ **CLOSED** — HB 1709 was NOT enacted. The actual law is HB 149 (TRAIGA), signed by Governor Abbott 22 June 2025, in effect 1 January 2026. frameworks.html updated to "Texas TRAIGA (HB 149)" with correct URL and description (PR #8) |
+| 8 | Beacon "3 stars" claim in community.html | 🟢 Low | Fixed in PR #8 | ✅ **CLOSED** — Star count removed from repo card. Stars are volatile and shouldn't be in static HTML |
+
+### Items requiring Bob/Ken action (2, 3, 4, 5)
+
+These require accounts and credentials that only Bob and Ken hold:
+
+- **GitHub Sponsors:** Go to `github.com/sponsors` → "Get sponsored" → enroll `aigovops-foundation` org
+- **Open Collective:** Go to `opencollective.com/create` → apply as 501(c)(3) nonprofit
+- **Cloudflare Worker:** `cd functions && wrangler deploy && wrangler secret put ANTHROPIC_API_KEY` → copy worker URL → paste into `js/chat.js` `PROXY_URL` constant
+- **IRS EIN:** Add to `press.html` facts section once confirmed
 
 ---
 

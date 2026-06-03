@@ -175,9 +175,16 @@ form.addEventListener('submit', e => {
 });
 
 async function runFrameworkAgent(userContext) {
-  // PROXY_URL: deploy functions/frameworks-agent.js as a Cloudflare Worker
-  // and set this to your worker URL (e.g. https://aigovops-frameworks-agent.workers.dev)
-  // Leave as empty string to fall back to direct browser-to-API (dev/demo only).
+  // ── DEPLOY REQUIRED ────────────────────────────────────────────────────────
+  // The Cloudflare Worker proxy is built but not yet deployed.
+  // To go live:
+  //   1. cd functions
+  //   2. wrangler deploy
+  //   3. wrangler secret put ANTHROPIC_API_KEY
+  //   4. Set PROXY_URL below to your worker URL (e.g. https://aigovops-frameworks-agent.workers.dev)
+  // Until deployed, the agent falls back to direct browser→API (fine for community use,
+  // but the API key is not protected client-side in that mode).
+  // ─────────────────────────────────────────────────────────────────────────────
   const PROXY_URL = '';
 
   const thinking = document.createElement('div');
