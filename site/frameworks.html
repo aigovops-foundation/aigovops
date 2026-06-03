@@ -159,6 +159,7 @@
         <option value="medium">Medium</option>
         <option value="low">Low</option>
       </select>
+      <button id="clearFilters" onclick="clearAllFilters()" aria-label="Clear all filters" style="display:none;padding:7px 14px;border:1px solid var(--teal-accessible);border-radius:8px;font-size:.82rem;font-weight:600;color:var(--teal-accessible);background:transparent;cursor:pointer;white-space:nowrap;transition:all .15s;min-height:44px" onmouseover="this.style.background='var(--teal-light)'" onmouseout="this.style.background='transparent'">✕ Clear filters</button>
       <span class="fw-count" id="fwCount" aria-live="polite"></span>
     </div>
   </div>
@@ -283,10 +284,23 @@ function renderCards(frameworks) {
   count.textContent = `Showing ${frameworks.length} of ${FRAMEWORKS.length} frameworks`;
 }
 
+function clearAllFilters() {
+  document.getElementById('filterRegion').value   = '';
+  document.getElementById('filterIndustry').value = '';
+  document.getElementById('filterRisk').value     = '';
+  history.replaceState(null, '', window.location.pathname);
+  applyFilters();
+  if (window.plausible) plausible('Frameworks filters cleared');
+}
+
 function applyFilters() {
   const region   = document.getElementById('filterRegion').value;
   const industry = document.getElementById('filterIndustry').value;
   const risk     = document.getElementById('filterRisk').value;
+
+  // Show/hide clear button
+  const clearBtn = document.getElementById('clearFilters');
+  if (clearBtn) clearBtn.style.display = (region || industry || risk) ? 'block' : 'none';
 
   const filtered = FRAMEWORKS.filter(fw => {
     const regionMatch   = !region   || fw.regions.includes(region)    || fw.regions.includes('global');

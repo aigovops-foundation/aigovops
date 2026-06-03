@@ -301,6 +301,9 @@ function addMsg(html, role, showChips = false) {
   div.innerHTML = html;
   messages.appendChild(div);
 
+  // Speak bot responses aloud if voice is active
+  if (role === 'bot' && window.VOICE_SPEAK) window.VOICE_SPEAK(html);
+
   if (showChips) {
     const inline = document.createElement('div');
     inline.className = 'chat-chips chat-chips-inline';
@@ -316,3 +319,102 @@ function addMsg(html, role, showChips = false) {
 
   messages.scrollTop = messages.scrollHeight;
 }
+
+// ── Voice input (Web Speech API) ──────────────────────────────────────────
+(function initVoice() {
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const voiceBtn  = document.getElementById('voiceBtn');
+  const chatInput = document.getElementById('chatInput');
+  const voiceIcon = document.getElementById('voiceIcon');
+  if (!SpeechRecognition || !voiceBtn) return;
+
+  // Show the button — browser supports speech
+  voiceBtn.style.display = 'inline-flex';
+
+  const ICON_MIC  = '<rect x="9" y="1" width="6" height="11" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 19v4M8 23h8"/>';
+  const ICON_STOP = '<circle cx="12" cy="12" r="9" fill="currentColor" opacity=".15"/><rect x="9" y="9" width="6" height="6" rx="1"/>';
+
+  let recognition = null;
+  let listening   = false;
+
+  function startListening() {
+    recognition = new SpeechRecognition();
+    recognition.lang = document.documentElement.lang === 'es' ? 'es-ES' : 'en-US';
+    recognition.interimResults = true;
+    recognition.maxAlternatives = 1;
+
+    recognition.onstart = () => {
+      listening = true;
+      voiceBtn.setAttribute('aria-label', 'Stop voice input');
+      voiceBtn.style.color = '#e24b4a';
+      voiceIcon.innerHTML = ICON_STOP;
+      chatInput.placeholder = 'Listening…';
+      track('Voice input started');
+    };
+
+    recognition.onresult = (e) => {
+      const transcript = [...e.results].map(r => r[0].transcript).join('');
+      chatInput.value  = transcript;
+      chatInput.dispatchEvent(new Event('input', { bubbles: true }));
+    };
+
+    recognition.onend = () => {
+      listening = false;
+      voiceBtn.setAttribute('aria-label', 'Start voice input');
+      voiceBtn.style.color = '';
+      voiceIcon.innerHTML = ICON_MIC;
+      chatInput.placeholder = 'Type or tap above…';
+
+      // Auto-submit if we got text
+      const text = chatInput.value.trim();
+      if (text) {
+        setTimeout(() => {
+          document.getElementById('chatForm').dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+        }, 300);
+      }
+    };
+
+    recognition.onerror = (e) => {
+      listening = false;
+      voiceBtn.style.color = '';
+      voiceIcon.innerHTML = ICON_MIC;
+      chatInput.placeholder = 'Type or tap above…';
+      if (e.error !== 'no-speech' && e.error !== 'aborted') {
+        addMsg('bot', `Voice input error: ${e.error}. Try typing instead.`);
+      }
+    };
+
+    recognition.start();
+  }
+
+  function stopListening() {
+    if (recognition) recognition.stop();
+  }
+
+  voiceBtn.addEventListener('click', () => {
+    if (listening) { stopListening(); } else { startListening(); }
+  });
+
+  // Keyboard: Space/Enter on voice button
+  voiceBtn.addEventListener('keydown', (e) => {
+    if (e.key === ' ' || e.key === 'Enter') {
+      e.preventDefault();
+      if (listening) { stopListening(); } else { startListening(); }
+    }
+  });
+
+  // TTS — speak bot responses aloud if voice is active
+  function speakResponse(text) {
+    if (!window.speechSynthesis || !listening) return;
+    // Strip HTML tags for speech
+    const plain = text.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    if (!plain || plain.length < 3) return;
+    const utt = new SpeechSynthesisUtterance(plain.slice(0, 300));
+    utt.lang  = document.documentElement.lang === 'es' ? 'es-ES' : 'en-US';
+    utt.rate  = 0.95;
+    window.speechSynthesis.speak(utt);
+  }
+
+  // Expose so addMsg can call it
+  window.VOICE_SPEAK = speakResponse;
+})();

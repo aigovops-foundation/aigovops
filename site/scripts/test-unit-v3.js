@@ -283,6 +283,24 @@ try {
 } catch(e) {
   check('Posts data file readable', 'error', 'ok'); // will mark as fail
 }
+// ── PR #4: A11y, mobile, voice ──────────────────────────────────────────
+const cssContent = fs.readFileSync(path.join(__dirname,'../css/style.css'), 'utf8');
+const fwHtml     = fs.readFileSync(path.join(__dirname,'../frameworks.html'), 'utf8');
+
+checkTrue('Nav links min-height 44px (WCAG touch target)',  cssContent.includes('min-height: 44px'));
+checkTrue('Lang toggle min-width + min-height 44px',        cssContent.includes('min-width: 44px'));
+checkTrue('Action-grid last-child spans full width mobile', cssContent.includes('grid-column: 1 / -1'));
+checkTrue('Voice CSS pulse animation',                      cssContent.includes('voicePulse'));
+checkTrue('prefers-reduced-motion for voice',               cssContent.includes('voiceBtn'));
+checkTrue('Clear filters function in frameworks',           fwHtml.includes('clearAllFilters'));
+checkTrue('Clear filters visibility toggle',                fwHtml.includes("display = (region || industry || risk)"));
+checkTrue('Voice button in index.html',                     indexHtml.includes('voiceBtn'));
+checkTrue('Voice button has aria-label',                    indexHtml.includes('Start voice input'));
+checkTrue('Web Speech API in chat.js',                      chatJs.includes('SpeechRecognition'));
+checkTrue('TTS speechSynthesis in chat.js',                 chatJs.includes('speechSynthesis'));
+checkTrue('VOICE_SPEAK hook in addMsg',                     chatJs.includes('VOICE_SPEAK'));
+checkTrue('Mobile nav enhancer in index.html',              indexHtml.includes('Mobile nav'));
+
 const total = PASS + FAIL;
 console.log(`\n  Result: ${PASS}/${total} passed\n`);
 if (FAIL > 0) {
