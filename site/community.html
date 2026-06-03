@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community | AiGovOps Foundation</title>
+  <meta name="description" content="The AiGovOps Foundation community — contributors, sustainers, founding partners, and open-source projects." />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <meta property="og:title" content="Community | AiGovOps Foundation" />
+  <meta property="og:url" content="https://www.aigovops-foundation.com/community.html" />
+  <link rel="alternate" type="application/rss+xml" title="AiGovOps Foundation Feed" href="/feed.xml" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/i18n/i18n.js"></script>
+  <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
+  <style>
+    .comm-hero { background: linear-gradient(135deg, var(--dark) 0%, #0a2318 60%, #0d1a2e 100%); color: var(--white); padding: 60px 0 48px; text-align: center; }
+    .comm-hero .hero-eyebrow { color: var(--teal); font-family: 'Courier New', monospace; font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 12px; }
+    .comm-hero h1 { font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight: 700; margin-bottom: 12px; }
+    .comm-hero p { color: rgba(255,255,255,.6); font-size: .95rem; max-width: 500px; margin: 0 auto; }
+    .section { padding: 52px 0; }
+    .section + .section { border-top: 1px solid var(--border); }
+    .section h2 { margin-bottom: 8px; }
+    .section-sub { font-size: .85rem; color: var(--muted); margin-bottom: 28px; }
+    .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap: 12px; margin-bottom: 36px; }
+    .stat { background: var(--light); border-radius: 10px; padding: 16px 18px; text-align: center; }
+    .stat-n { font-size: 2rem; font-weight: 700; color: var(--teal); font-family: 'Courier New', monospace; }
+    .stat-l { font-size: .75rem; color: var(--muted); margin-top: 2px; }
+    .repo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+    .repo-card { border: .5px solid var(--border); border-radius: 12px; padding: 18px 20px; text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 6px; transition: border-color .15s, transform .15s; }
+    .repo-card:hover { border-color: var(--teal); transform: translateY(-2px); }
+    .repo-name { font-size: .9rem; font-weight: 700; color: var(--teal-accessible); font-family: 'Courier New', monospace; }
+    .repo-desc { font-size: .82rem; color: var(--muted); line-height: 1.5; }
+    .repo-meta { display: flex; gap: 12px; font-size: .75rem; color: var(--muted); margin-top: 4px; font-family: 'Courier New', monospace; }
+    .tier-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 16px; }
+    .tier-card { border: .5px solid var(--border); border-radius: 12px; padding: 20px; }
+    .tier-icon { font-size: 1.4rem; margin-bottom: 8px; }
+    .tier-name { font-size: .9rem; font-weight: 700; margin-bottom: 4px; }
+    .tier-desc { font-size: .82rem; color: var(--muted); line-height: 1.5; margin-bottom: 12px; }
+    .tier-cta { font-size: .8rem; color: var(--teal-accessible); font-weight: 600; text-decoration: none; }
+    .tier-cta:hover { color: var(--teal-dark); }
+    .ways-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 14px; }
+    .way { background: var(--light); border-radius: 10px; padding: 18px; }
+    .way-icon { font-size: 1.3rem; margin-bottom: 8px; }
+    .way-title { font-size: .88rem; font-weight: 700; margin-bottom: 4px; }
+    .way-desc { font-size: .8rem; color: var(--muted); line-height: 1.5; }
+    .join-banner { background: var(--dark); color: var(--white); padding: 52px 0; text-align: center; }
+    .join-banner h2 { color: var(--white); margin-bottom: 10px; }
+    .join-banner p { color: rgba(255,255,255,.6); margin-bottom: 28px; font-size: .95rem; max-width: 460px; margin-left: auto; margin-right: auto; }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo-link" aria-label="AiGovOps Foundation home">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="height:38px;width:38px;flex-shrink:0">
+        <title>AiGovOps Foundation</title>
+        <circle cx="100" cy="100" r="96" fill="#071a12"/>
+        <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+        <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+        <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
+        <ellipse cx="100" cy="57" rx="4" ry="6" fill="#9fe1cb" opacity="0.95"/>
+        <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+      </svg>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="frameworks.html">Frameworks</a>
+      <a href="support.html">Support</a>
+    </nav>
+    <div class="lang-toggle" aria-label="Language selector">
+      <button class="lang-btn lang-active" data-lang="en" onclick="window.I18N_SET('en')">EN</button>
+      <button class="lang-btn" data-lang="es" onclick="window.I18N_SET('es')">ES</button>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="comm-hero">
+    <div class="container">
+      <p class="hero-eyebrow">Open source · Apache-2.0 · Global</p>
+      <h1>The Community</h1>
+      <p>Practitioners, engineers, and compliance professionals building the open standard for AI governance together.</p>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--white)">
+    <div class="container">
+      <h2>By the numbers</h2>
+      <p class="section-sub">Updated live from GitHub.</p>
+      <div class="stat-row" id="ghStats">
+        <div class="stat"><div class="stat-n" id="stat-repos">14</div><div class="stat-l">Org repos</div></div>
+        <div class="stat"><div class="stat-n" id="stat-stars">3+</div><div class="stat-l">GitHub stars</div></div>
+        <div class="stat"><div class="stat-n">20+</div><div class="stat-l">Frameworks mapped</div></div>
+        <div class="stat"><div class="stat-n">2</div><div class="stat-l">Founding leaders</div></div>
+        <div class="stat"><div class="stat-n">501c3</div><div class="stat-l">Nonprofit status</div></div>
+        <div class="stat"><div class="stat-n">∞</div><div class="stat-l">Open source · forever</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--light)">
+    <div class="container">
+      <h2>Open-source repositories</h2>
+      <p class="section-sub">All projects live under the <a href="https://github.com/aigovops-foundation" target="_blank" rel="noopener" style="color:var(--teal-accessible)">aigovops-foundation</a> GitHub org under Apache-2.0.</p>
+      <div class="repo-grid" id="repoGrid">
+        <a class="repo-card" href="https://github.com/aigovops-foundation/aigovops-beacon" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Community: Repo click',{props:{repo:'beacon'}})">
+          <div class="repo-name">aigovops-beacon</div>
+          <div class="repo-desc">AI scanner and cryptographic evidence signer. Produces OVERT 1.0 compliant bundles verifiable with one command.</div>
+          <div class="repo-meta"><span>⭐ 3</span><span>Apache-2.0</span><span>Python</span></div>
+        </a>
+        <a class="repo-card" href="https://github.com/aigovops-foundation/umbrella-govops" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Community: Repo click',{props:{repo:'lantern'}})">
+          <div class="repo-name">umbrella-govops (Lantern)</div>
+          <div class="repo-desc">AI governance compiler. Reads Beacon evidence bundles and generates human-readable compliance reports.</div>
+          <div class="repo-meta"><span>⭐ 0</span><span>Apache-2.0</span><span>Python</span></div>
+        </a>
+        <a class="repo-card" href="https://github.com/aigovops-foundation/aigovops-lantern" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Community: Repo click',{props:{repo:'aigovops-lantern'}})">
+          <div class="repo-name">aigovops-lantern</div>
+          <div class="repo-desc">Lantern CLI — human-carried companion to Beacon. Reads, diffs, and explains governance evidence bundles.</div>
+          <div class="repo-meta"><span>⭐ 0</span><span>Apache-2.0</span><span>Python</span></div>
+        </a>
+        <a class="repo-card" href="https://github.com/aigovops-foundation/openclaw-installer" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Community: Repo click',{props:{repo:'openclaw'}})">
+          <div class="repo-name">openclaw-installer</div>
+          <div class="repo-desc">Policy-as-code installer and bootstrap toolkit for the AiGovOps toolchain.</div>
+          <div class="repo-meta"><span>Apache-2.0</span><span>Shell</span></div>
+        </a>
+        <a class="repo-card" href="https://github.com/aigovops-foundation/aigovops-prompt-studio" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Community: Repo click',{props:{repo:'prompt-studio'}})">
+          <div class="repo-name">aigovops-prompt-studio</div>
+          <div class="repo-desc">Prompt engineering studio for AI governance workflows and policy-as-code generation.</div>
+          <div class="repo-meta"><span>Apache-2.0</span></div>
+        </a>
+        <a class="repo-card" href="https://github.com/aigovops-foundation" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Community: View all repos')">
+          <div class="repo-name">+ 9 more repos →</div>
+          <div class="repo-desc">View all 14 repositories on the aigovops-foundation GitHub org.</div>
+          <div class="repo-meta"><span>github.com/aigovops-foundation</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--white)">
+    <div class="container">
+      <h2>Support tiers</h2>
+      <p class="section-sub">Sustainers keep the infrastructure running. <a href="support.html" style="color:var(--teal-accessible)">See all support options →</a></p>
+      <div class="tier-cards">
+        <div class="tier-card">
+          <div class="tier-icon">🌱</div>
+          <div class="tier-name">Contributor — $50</div>
+          <div class="tier-desc">Your name in the GitHub contributors file. Early framework access.</div>
+          <a href="support.html" class="tier-cta">Become a contributor →</a>
+        </div>
+        <div class="tier-card" style="border-color:var(--teal)">
+          <div class="tier-icon">🔦</div>
+          <div class="tier-name">Sustainer — $1,000</div>
+          <div class="tier-desc">Logo in Beacon + Lantern README, priority issue triage, quarterly briefing.</div>
+          <a href="support.html" class="tier-cta">Become a sustainer →</a>
+        </div>
+        <div class="tier-card">
+          <div class="tier-icon">🏛️</div>
+          <div class="tier-name">Founding Steward — $10,000</div>
+          <div class="tier-desc">OVERT 1.0 protocol attribution, roadmap seat, direct advisory access.</div>
+          <a href="support.html" class="tier-cta">Become a founding partner →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--light)">
+    <div class="container">
+      <h2>Ways to contribute</h2>
+      <p class="section-sub">Every contribution — code, documentation, feedback, or funding — matters.</p>
+      <div class="ways-grid">
+        <div class="way"><div class="way-icon">💻</div><div class="way-title">Write code</div><div class="way-desc">Pick an open issue on Beacon, Lantern, or any foundation repo. First-time contributors welcome.</div></div>
+        <div class="way"><div class="way-icon">📖</div><div class="way-title">Improve docs</div><div class="way-desc">Documentation is governance. Help make the OVERT 1.0 spec and tool guides clearer for new practitioners.</div></div>
+        <div class="way"><div class="way-icon">⚖️</div><div class="way-title">Map frameworks</div><div class="way-desc">Know a regulation not in our frameworks explorer? Open a PR to add it — 40+ frameworks and growing.</div></div>
+        <div class="way"><div class="way-icon">🌍</div><div class="way-title">Translate</div><div class="way-desc">The site has EN/ES i18n support. Help extend to additional languages — especially for underserved markets.</div></div>
+        <div class="way"><div class="way-icon">📣</div><div class="way-title">Spread the word</div><div class="way-desc">Star the repos on GitHub, share the newsletter, or cite OVERT 1.0 in your own governance work.</div></div>
+        <div class="way"><div class="way-icon">💚</div><div class="way-title">Fund the standard</div><div class="way-desc">GitHub Sponsors and Open Collective. Even a coffee keeps the CI running.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="join-banner">
+    <div class="container">
+      <h2>Ready to get involved?</h2>
+      <p>The best way to start is to open an issue, submit a PR, or schedule a call with Ken or Bob.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a href="https://github.com/aigovops-foundation" target="_blank" rel="noopener" class="btn btn-primary btn-large" onclick="if(window.plausible)plausible('Community: GitHub org click')">💻 View on GitHub →</a>
+        <a href="support.html" class="btn btn-large" style="background:rgba(255,255,255,.1);color:#fff;border:2px solid rgba(255,255,255,.25)" onclick="if(window.plausible)plausible('Community: Support click')">💚 Support the foundation</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="badge-strip">
+  <div class="container badge-strip-inner">
+    <span class="badge-pill"><span class="dot"></span>Apache-2.0</span>
+    <span class="badge-pill"><span class="dot"></span>OVERT 1.0</span>
+    <span class="badge-pill"><span class="dot"></span>501(c)(3) Foundation</span>
+    <span class="badge-pill"><span class="dot"></span>Open Community</span>
+  </div>
+</div>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" aria-label="AiGovOps Foundation home">
+        <svg style="height:32px;width:32px" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="96" fill="#071a12"/>
+          <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+          <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+          <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
+          <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+        </svg>
+      </a>
+      <p>Governance Versioned Like Code. Tested Before Deployment.</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="frameworks.html">Frameworks</a>
+      <a href="community.html">Community</a>
+      <a href="support.html">Support</a>
+      <a href="press.html">Press</a>
+      <a href="ken.html">Ken Johnston</a>
+      <a href="bob.html">Bob Rapp</a>
+      <a href="/feed.xml">RSS</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <div class="container"><p>© 2026 AiGovOps Foundation — 501(c)(3) Nonprofit</p></div>
+  </div>
+</footer>
+<script>
+const t = document.querySelector('.nav-toggle'), n = document.querySelector('.main-nav');
+if (t && n) t.addEventListener('click', () => { const o = n.classList.toggle('open'); t.setAttribute('aria-expanded', o); });
+</script>
+</body>
+</html>

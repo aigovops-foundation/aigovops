@@ -305,6 +305,71 @@ def main():
 
     print(f"Wrote data/linkedin-posts.json  (Bob: {len(bob_posts)}, Ken: {len(ken_posts)})")
 
+    # ── Regenerate RSS feed ───────────────────────────────────────────────
+    rss_path = Path(__file__).parent.parent / 'feed.xml'
+    _regenerate_rss(payload, rss_path)
+    print(f"Wrote feed.xml")
+
+
+def _rss_escape(s):
+    return (s or '').replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+
+
+def _regenerate_rss(data, rss_path):
+    from email.utils import formatdate
+    import calendar
+
+    def to_rfc2822(iso):
+        try:
+            from datetime import datetime, timezone
+            dt = datetime.fromisoformat(iso.replace('Z', '+00:00'))
+            return formatdate(calendar.timegm(dt.timetuple()), usegmt=True)
+        except Exception:
+            return formatdate(usegmt=True)
+
+    all_posts = []
+    for p in (data.get('ken') or []):
+        all_posts.append((p, 'ken.johnston@aigovops.community (Ken Johnston)'))
+    for p in (data.get('bob') or []):
+        all_posts.append((p, 'bob.rapp@aigovops.community (Bob Rapp)'))
+    all_posts.sort(key=lambda x: x[0].get('date', ''), reverse=True)
+
+    build_date = to_rfc2822(data.get('updated', ''))
+    items_xml  = ''
+    for post, author in all_posts:
+        title   = _rss_escape((post.get('title') or post.get('summary', ''))[:100])
+        summary = _rss_escape((post.get('summary') or '')[:300])
+        link    = _rss_escape(post.get('link', ''))
+        pub     = to_rfc2822(post.get('date', ''))
+        items_xml += f"""    <item>
+      <title>{title}</title>
+      <link>{link}</link>
+      <description>{summary}</description>
+      <author>{author}</author>
+      <pubDate>{pub}</pubDate>
+      <guid isPermaLink="true">{link}</guid>
+    </item>\n"""
+
+    rss = f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AiGovOps Foundation — Latest from Ken &amp; Bob</title>
+    <link>https://www.aigovops-foundation.com</link>
+    <description>The latest posts from Ken Johnston and Bob Rapp on AI governance, policy-as-code, and open-source compliance tooling.</description>
+    <language>en-us</language>
+    <lastBuildDate>{build_date}</lastBuildDate>
+    <atom:link href="https://www.aigovops-foundation.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://www.aigovops-foundation.com/images/logo.png</url>
+      <title>AiGovOps Foundation</title>
+      <link>https://www.aigovops-foundation.com</link>
+    </image>
+{items_xml}  </channel>
+</rss>"""
+
+    with open(rss_path, 'w', encoding='utf-8') as f:
+        f.write(rss)
+
 
 if __name__ == '__main__':
     main()

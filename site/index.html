@@ -21,6 +21,56 @@
   <script src="js/i18n/i18n.js"></script>
   <!-- Plausible Analytics — privacy-first, GDPR-compliant, no cookie banner -->
   <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.aigovops-foundation.com/#organization",
+      "name": "AiGovOps Foundation",
+      "url": "https://www.aigovops-foundation.com",
+      "logo": "https://www.aigovops-foundation.com/images/logo.png",
+      "description": "Open-source AI governance foundation. Policy as code. Evidence that ships. Governance your auditor can verify with one command.",
+      "foundingDate": "2026",
+      "founder": [
+        {
+          "@type": "Person",
+          "name": "Ken Johnston",
+          "url": "https://www.aigovops-foundation.com/ken.html"
+        },
+        {
+          "@type": "Person",
+          "name": "Bob Rapp",
+          "url": "https://www.aigovops-foundation.com/bob.html"
+        }
+      ],
+      "sameAs": [
+        "https://github.com/aigovops-foundation",
+        "https://aigovops.substack.com/",
+        "https://www.linkedin.com/in/rkjohnston/",
+        "https://www.linkedin.com/in/bobrapp/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "bob.rapp@aigovops.community",
+        "contactType": "general"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.aigovops-foundation.com/#website",
+      "url": "https://www.aigovops-foundation.com",
+      "name": "AiGovOps Foundation",
+      "publisher": {
+        "@id": "https://www.aigovops-foundation.com/#organization"
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="alternate" type="application/rss+xml" title="AiGovOps Foundation Feed" href="/feed.xml" />
 </head>
 <body>
 
@@ -227,7 +277,14 @@
   <div class="container narrow-center">
     <h2 data-i18n="newsletter.title">Stay ahead of AI governance.</h2>
     <p data-i18n="newsletter.sub">Insights on compliance automation, regulatory shifts, and community news — weekly on Substack.</p>
-    <a href="https://aigovops.substack.com/" target="_blank" rel="noopener" class="btn btn-primary btn-large" data-i18n="newsletter.cta">Subscribe on Substack →</a>
+    <form id="newsletterForm" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:14px" onsubmit="handleNewsletterSubmit(event)">
+      <input type="email" id="newsletterEmail" placeholder="you@company.com" required
+        style="padding:12px 16px;border:1.5px solid rgba(255,255,255,.25);border-radius:8px;background:rgba(255,255,255,.1);color:#fff;font-size:.9rem;width:280px;outline:none"
+        aria-label="Email address for newsletter" />
+      <button type="submit" class="btn btn-primary btn-large" style="white-space:nowrap">Subscribe →</button>
+    </form>
+    <p id="newsletterMsg" style="font-size:.82rem;color:rgba(255,255,255,.5);min-height:18px" aria-live="polite"></p>
+    <a href="https://aigovops.substack.com/" target="_blank" rel="noopener" style="font-size:.8rem;color:rgba(255,255,255,.4);text-decoration:underline" data-i18n="newsletter.cta">Or read the archive on Substack →</a>
     <p class="fine-print">No spam. Unsubscribe any time.</p>
   </div>
 </section>
@@ -293,12 +350,12 @@
     <nav class="footer-nav">
       <a href="blog.html">Blog</a>
       <a href="frameworks.html">Frameworks</a>
+      <a href="community.html">Community</a>
       <a href="support.html">Support</a>
+      <a href="press.html">Press</a>
       <a href="ken.html">Ken Johnston</a>
       <a href="bob.html">Bob Rapp</a>
-      <a href="https://aigovops.substack.com/" target="_blank" rel="noopener">Newsletter</a>
-      <a href="https://bobrapp.github.io/aigovops-beacon/" target="_blank" rel="noopener">Beacon</a>
-      <a href="https://bobrapp.github.io/umbrella-govops/" target="_blank" rel="noopener">Umbrella</a>
+      <a href="/feed.xml">RSS</a>
     </nav>
     <div class="footer-social">
       <a href="https://www.linkedin.com/company/aigovops-foundation" target="_blank" rel="noopener" aria-label="LinkedIn">
@@ -359,6 +416,19 @@
 <script src="js/schedule.js"></script>
 <script src="js/chat.js"></script>
 <script>
+// Newsletter inline form handler
+function handleNewsletterSubmit(e) {
+  e.preventDefault();
+  const email = document.getElementById('newsletterEmail').value.trim();
+  const msg   = document.getElementById('newsletterMsg');
+  if (!email) return;
+  const url = 'https://aigovops.substack.com/subscribe?email=' + encodeURIComponent(email);
+  window.open(url, '_blank', 'noopener');
+  msg.textContent = 'Opening Substack — confirm your subscription there ✓';
+  msg.style.color = 'rgba(255,255,255,.7)';
+  if (window.plausible) plausible('Newsletter signup', { props: { source: 'homepage-inline' } });
+}
+
 // Visitor timezone display in footer
 (function() {
   try {

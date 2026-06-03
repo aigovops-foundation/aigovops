@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page not found | AiGovOps Foundation</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/i18n/i18n.js"></script>
+  <style>
+    .err-page { min-height: calc(100vh - 64px); display: flex; align-items: center; justify-content: center; text-align: center; background: var(--light); }
+    .err-inner { max-width: 520px; padding: 40px 24px; }
+    .err-code { font-size: 5rem; font-weight: 700; color: var(--teal); font-family: 'Courier New', monospace; line-height: 1; margin-bottom: 8px; }
+    .err-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; }
+    .err-desc { color: var(--muted); font-size: .9rem; line-height: 1.6; margin-bottom: 32px; }
+    .err-links { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    .err-links a { padding: 10px 20px; border-radius: 8px; font-size: .85rem; font-weight: 600; text-decoration: none; transition: all .15s; }
+    .err-links .primary { background: var(--teal); color: var(--white); }
+    .err-links .primary:hover { background: var(--teal-dark); }
+    .err-links .outline { border: 1.5px solid var(--teal-accessible); color: var(--teal-accessible); }
+    .err-links .outline:hover { background: var(--teal-light); }
+    .err-quick { margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--border); }
+    .err-quick p { font-size: .8rem; color: var(--muted); margin-bottom: 10px; font-family: 'Courier New', monospace; text-transform: uppercase; letter-spacing: .1em; }
+    .err-quick-links { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+    .err-quick-links a { font-size: .82rem; color: var(--teal-accessible); text-decoration: none; padding: 4px 12px; border-radius: 20px; background: var(--teal-light); }
+    .err-quick-links a:hover { background: var(--teal); color: var(--white); }
+  </style>
+  <link rel="alternate" type="application/rss+xml" title="AiGovOps Foundation Feed" href="/feed.xml" />
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo-link" aria-label="AiGovOps Foundation home">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="height:38px;width:38px;flex-shrink:0" role="img" aria-label="AiGovOps Foundation">
+        <title>AiGovOps Foundation</title>
+        <circle cx="100" cy="100" r="96" fill="#071a12"/>
+        <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+        <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+        <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
+        <ellipse cx="100" cy="57" rx="4" ry="6" fill="#9fe1cb" opacity="0.95"/>
+        <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+      </svg>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="frameworks.html">Frameworks</a>
+      <a href="support.html">Support</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="err-page">
+    <div class="err-inner">
+      <div class="err-code">404</div>
+      <h1 class="err-title">Policy not found</h1>
+      <p class="err-desc">This page doesn't exist — or it may have moved. Even well-governed systems have a few broken links.</p>
+      <div class="err-links">
+        <a href="index.html" class="primary">← Back to homepage</a>
+        <a href="frameworks.html" class="outline">Browse frameworks</a>
+      </div>
+      <div class="err-quick">
+        <p>Quick links</p>
+        <div class="err-quick-links">
+          <a href="blog.html">Blog</a>
+          <a href="ken.html">Ken Johnston</a>
+          <a href="bob.html">Bob Rapp</a>
+          <a href="support.html">Support us</a>
+          <a href="https://bobrapp.github.io/aigovops-beacon/" target="_blank" rel="noopener">Beacon</a>
+          <a href="https://bobrapp.github.io/umbrella-govops/" target="_blank" rel="noopener">Lantern</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" aria-label="AiGovOps Foundation home">
+        <svg style="height:32px;width:32px" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="96" fill="#071a12"/>
+          <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+          <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+          <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
+          <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+        </svg>
+      </a>
+      <p>Governance Versioned Like Code. Tested Before Deployment.</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="frameworks.html">Frameworks</a>
+      <a href="support.html">Support</a>
+      <a href="ken.html">Ken Johnston</a>
+      <a href="bob.html">Bob Rapp</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <div class="container"><p>© 2026 AiGovOps Foundation — 501(c)(3) Nonprofit</p></div>
+  </div>
+</footer>
+<script>
+const t = document.querySelector('.nav-toggle'), n = document.querySelector('.main-nav');
+if (t && n) t.addEventListener('click', () => { const o = n.classList.toggle('open'); t.setAttribute('aria-expanded', o); });
+</script>
+</body>
+</html>

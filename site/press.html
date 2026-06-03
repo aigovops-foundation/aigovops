@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Press Kit | AiGovOps Foundation</title>
+  <meta name="description" content="AiGovOps Foundation press kit — logo downloads, boilerplate copy, founder bios, and media contact." />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <meta property="og:title" content="Press Kit | AiGovOps Foundation" />
+  <meta property="og:url" content="https://www.aigovops-foundation.com/press.html" />
+  <link rel="alternate" type="application/rss+xml" title="AiGovOps Foundation Feed" href="/feed.xml" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/i18n/i18n.js"></script>
+  <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
+  <style>
+    .press-hero { background: var(--light); padding: 56px 0 44px; border-bottom: 1px solid var(--border); }
+    .press-hero .hero-eyebrow { font-size:.72rem;font-weight:600;font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:.14em;color:var(--teal-accessible);margin-bottom:10px; }
+    .section { padding: 48px 0; }
+    .section h2 { margin-bottom: 24px; }
+    .section + .section { border-top: 1px solid var(--border); }
+    .press-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+    .press-asset { border: .5px solid var(--border); border-radius: 12px; padding: 20px; text-align: center; display: flex; flex-direction: column; gap: 10px; align-items: center; }
+    .press-asset-preview { width: 80px; height: 80px; border-radius: 10px; object-fit: contain; background: var(--light); padding: 8px; }
+    .press-asset-name { font-size: .82rem; font-weight: 600; color: var(--text); }
+    .press-asset-desc { font-size: .75rem; color: var(--muted); }
+    .press-asset a { font-size: .78rem; color: var(--teal-accessible); font-weight: 600; text-decoration: none; }
+    .press-asset a:hover { color: var(--teal-dark); }
+    .boilerplate { background: var(--light); border-left: 3px solid var(--teal); border-radius: 0 8px 8px 0; padding: 20px 24px; font-size: .88rem; line-height: 1.7; color: var(--text); }
+    .copy-btn { display: inline-block; margin-top: 10px; font-size: .75rem; font-weight: 600; font-family: 'Courier New',monospace; padding: 5px 14px; border: 1px solid var(--teal-accessible); border-radius: 20px; color: var(--teal-accessible); cursor: pointer; background: transparent; transition: all .15s; }
+    .copy-btn:hover { background: var(--teal); color: var(--white); border-color: var(--teal); }
+    .facts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+    .fact { background: var(--light); border-radius: 10px; padding: 16px 18px; }
+    .fact-label { font-size: .72rem; font-weight: 600; font-family: 'Courier New',monospace; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin-bottom: 4px; }
+    .fact-value { font-size: .95rem; font-weight: 700; color: var(--text); }
+    .bios-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .bio-card { border: .5px solid var(--border); border-radius: 12px; padding: 20px; }
+    .bio-name { font-weight: 700; margin-bottom: 4px; }
+    .bio-title { font-size: .78rem; color: var(--muted); margin-bottom: 10px; }
+    .bio-text { font-size: .82rem; color: var(--text); line-height: 1.6; }
+    .contact-card { background: var(--dark); color: var(--white); border-radius: 12px; padding: 28px 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+    .contact-card h3 { color: var(--white); margin-bottom: 6px; }
+    .contact-card p { color: rgba(255,255,255,.6); font-size: .88rem; }
+    @media(max-width:600px){ .bios-grid{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo-link" aria-label="AiGovOps Foundation home">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="height:38px;width:38px;flex-shrink:0">
+        <title>AiGovOps Foundation</title>
+        <circle cx="100" cy="100" r="96" fill="#071a12"/>
+        <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+        <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+        <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
+        <ellipse cx="100" cy="57" rx="4" ry="6" fill="#9fe1cb" opacity="0.95"/>
+        <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+      </svg>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="frameworks.html">Frameworks</a>
+      <a href="support.html">Support</a>
+    </nav>
+    <div class="lang-toggle" aria-label="Language selector">
+      <button class="lang-btn lang-active" data-lang="en" onclick="window.I18N_SET('en')">EN</button>
+      <button class="lang-btn" data-lang="es" onclick="window.I18N_SET('es')">ES</button>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="press-hero">
+    <div class="container">
+      <p class="hero-eyebrow">Media resources</p>
+      <h1>Press Kit</h1>
+      <p style="color:var(--muted);max-width:520px;line-height:1.6">Everything journalists, conference organisers, and partners need — logos, boilerplate, founder bios, and media contact.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Quick facts</h2>
+      <div class="facts-grid">
+        <div class="fact"><div class="fact-label">Founded</div><div class="fact-value">2026</div></div>
+        <div class="fact"><div class="fact-label">Type</div><div class="fact-value">501(c)(3) Nonprofit</div></div>
+        <div class="fact"><div class="fact-label">Headquarters</div><div class="fact-value">Seattle, WA · Global</div></div>
+        <div class="fact"><div class="fact-label">Licence</div><div class="fact-value">Apache-2.0</div></div>
+        <div class="fact"><div class="fact-label">Standard</div><div class="fact-value">OVERT 1.0</div></div>
+        <div class="fact"><div class="fact-label">Tools</div><div class="fact-value">Beacon · Lantern</div></div>
+        <div class="fact"><div class="fact-label">Frameworks covered</div><div class="fact-value">40+</div></div>
+        <div class="fact"><div class="fact-label">Website</div><div class="fact-value">aigovops-foundation.com</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Logo downloads</h2>
+      <p style="font-size:.85rem;color:var(--muted);margin-bottom:20px">All logos are licensed Apache-2.0. Use freely with attribution.</p>
+      <div class="press-grid">
+        <div class="press-asset">
+          <img src="images/logo.png" alt="AiGovOps Foundation logo" class="press-asset-preview" />
+          <div class="press-asset-name">Logo — PNG</div>
+          <div class="press-asset-desc">512 × 512 · transparent bg</div>
+          <a href="images/logo.png" download onclick="if(window.plausible)plausible('Press: Logo PNG download')">↓ Download PNG</a>
+        </div>
+        <div class="press-asset">
+          <img src="images/logo.svg" alt="AiGovOps Foundation SVG logo" class="press-asset-preview" />
+          <div class="press-asset-name">Logo — SVG</div>
+          <div class="press-asset-desc">Vector · scalable</div>
+          <a href="images/logo.svg" download onclick="if(window.plausible)plausible('Press: Logo SVG download')">↓ Download SVG</a>
+        </div>
+        <div class="press-asset">
+          <img src="images/og-logo.png" alt="OG logo" class="press-asset-preview" />
+          <div class="press-asset-name">Social / OG</div>
+          <div class="press-asset-desc">1200 × 630 · for social cards</div>
+          <a href="images/og-logo.png" download onclick="if(window.plausible)plausible('Press: OG logo download')">↓ Download PNG</a>
+        </div>
+        <div class="press-asset">
+          <img src="images/founders.jpg" alt="Ken Johnston and Bob Rapp" class="press-asset-preview" style="border-radius:8px" />
+          <div class="press-asset-name">Founders photo</div>
+          <div class="press-asset-desc">Ken Johnston &amp; Bob Rapp</div>
+          <a href="images/founders.jpg" download onclick="if(window.plausible)plausible('Press: Founders photo download')">↓ Download JPG</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Boilerplate copy</h2>
+      <p style="font-size:.85rem;color:var(--muted);margin-bottom:16px">Use as-is or adapt. Please link to <code>aigovops-foundation.com</code>.</p>
+
+      <p style="font-size:.82rem;font-weight:600;color:var(--muted);margin-bottom:6px;font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:.08em">Short (50 words)</p>
+      <div class="boilerplate" id="boiler-short">The AiGovOps Foundation is a 501(c)(3) open-source nonprofit that builds AI governance tooling for practitioners. Its flagship products — Beacon and Lantern — implement the OVERT 1.0 cryptographic evidence standard, turning regulatory compliance into testable, versioned code under an Apache-2.0 licence.</div>
+      <button class="copy-btn" onclick="copyBoiler('boiler-short')">Copy to clipboard</button>
+
+      <p style="font-size:.82rem;font-weight:600;color:var(--muted);margin:20px 0 6px;font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:.08em">Long (100 words)</p>
+      <div class="boilerplate" id="boiler-long">The AiGovOps Foundation is a 501(c)(3) open-source nonprofit co-founded by Ken Johnston (CEO of Autonomic.ai, former Microsoft and Ford) and Bob Rapp (formerly Vodafone, IBM Watson, GE Healthcare, Microsoft, and General Motors). The Foundation builds free, verifiable AI governance tooling under Apache-2.0: Beacon signs AI evidence bundles cryptographically; Lantern compiles governance policy into executable YAML controls. Both implement OVERT 1.0, the Foundation's open cryptographic evidence standard. Coverage spans 40+ global frameworks including the EU AI Act, NIST AI RMF, ISO/IEC 42001, GDPR, and HIPAA. The Foundation's mission: make AI governance as rigorous and auditable as production engineering.</div>
+      <button class="copy-btn" onclick="copyBoiler('boiler-long')">Copy to clipboard</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Founder bios</h2>
+      <div class="bios-grid">
+        <div class="bio-card">
+          <div class="bio-name">Ken Johnston</div>
+          <div class="bio-title">Co-founder · AiGovOps Foundation · CEO, Autonomic.ai</div>
+          <div class="bio-text">Ken Johnston brings decades of experience in AI, data strategy, and product leadership from Microsoft and Ford's Autonomic platform. He co-founded the AiGovOps Foundation to build open-source governance tooling for practitioners deploying AI at enterprise scale.</div>
+          <a href="ken.html" style="font-size:.78rem;color:var(--teal-accessible);font-weight:600;text-decoration:none;display:inline-block;margin-top:8px">Full bio →</a>
+        </div>
+        <div class="bio-card">
+          <div class="bio-name">Bob Rapp</div>
+          <div class="bio-title">Co-founder · AiGovOps Foundation · Former Vodafone, IBM Watson, GE Healthcare</div>
+          <div class="bio-text">Bob Rapp has spent his career deploying AI in regulated industries — healthcare, automotive, and telecom. He co-founded the AiGovOps Foundation and leads development of Beacon and the OVERT 1.0 cryptographic evidence protocol.</div>
+          <a href="bob.html" style="font-size:.78rem;color:var(--teal-accessible);font-weight:600;text-decoration:none;display:inline-block;margin-top:8px">Full bio →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Media contact</h2>
+      <div class="contact-card">
+        <div>
+          <h3>Press enquiries</h3>
+          <p>For interview requests, fact-checking, and media partnerships.</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="mailto:bob.rapp@aigovops.community?subject=Press enquiry — AiGovOps Foundation" class="btn btn-primary" onclick="if(window.plausible)plausible('Press: Media contact click')">✉️ Email Bob Rapp</a>
+          <a href="mailto:ken.johnston@aigovops.community?subject=Press enquiry — AiGovOps Foundation" class="btn" style="background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.3)" onclick="if(window.plausible)plausible('Press: Ken contact click')">✉️ Email Ken Johnston</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="badge-strip">
+  <div class="container badge-strip-inner">
+    <span class="badge-pill"><span class="dot"></span>Apache-2.0</span>
+    <span class="badge-pill"><span class="dot"></span>OVERT 1.0</span>
+    <span class="badge-pill"><span class="dot"></span>501(c)(3) Foundation</span>
+  </div>
+</div>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" aria-label="AiGovOps Foundation home">
+        <svg style="height:32px;width:32px" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="96" fill="#071a12"/>
+          <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+          <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+          <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
+          <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+        </svg>
+      </a>
+      <p>Governance Versioned Like Code. Tested Before Deployment.</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="frameworks.html">Frameworks</a>
+      <a href="support.html">Support</a>
+      <a href="ken.html">Ken Johnston</a>
+      <a href="bob.html">Bob Rapp</a>
+      <a href="press.html">Press</a>
+      <a href="/feed.xml">RSS</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <div class="container"><p>© 2026 AiGovOps Foundation — 501(c)(3) Nonprofit</p></div>
+  </div>
+</footer>
+<script>
+function copyBoiler(id) {
+  const el = document.getElementById(id);
+  navigator.clipboard.writeText(el.textContent.trim()).then(() => {
+    const btn = el.nextElementSibling;
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy to clipboard', 2000);
+  });
+  if (window.plausible) plausible('Press: Boilerplate copied', { props: { version: id } });
+}
+const t = document.querySelector('.nav-toggle'), n = document.querySelector('.main-nav');
+if (t && n) t.addEventListener('click', () => { const o = n.classList.toggle('open'); t.setAttribute('aria-expanded', o); });
+</script>
+</body>
+</html>

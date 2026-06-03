@@ -53,6 +53,45 @@
 
     @media (max-width: 600px) { .fw-grid { grid-template-columns: 1fr; } }
   </style>
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "AI Governance Frameworks",
+  "description": "Comprehensive list of AI governance frameworks, regulations, and standards including EU AI Act, NIST AI RMF, ISO/IEC 42001, and more.",
+  "url": "https://www.aigovops-foundation.com/frameworks.html",
+  "numberOfItems": 40,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "EU AI Act"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "NIST AI RMF"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ISO/IEC 42001"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "GDPR"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "OVERT 1.0"
+    }
+  ]
+}
+  </script>
+  <link rel="alternate" type="application/rss+xml" title="AiGovOps Foundation Feed" href="/feed.xml" />
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -86,7 +125,7 @@
 <main id="main-content">
   <section class="fw-hero">
     <div class="container">
-      <p class="hero-eyebrow">40+ Global Frameworks · Updated 2026</p>
+      <p class="hero-eyebrow">40 Global Frameworks · Updated 2026</p>
       <h1>Which AI governance frameworks apply to you?</h1>
       <p>Filter by region and industry to find the regulations and standards your organization needs to comply with — then map them to code with Lantern.</p>
     </div>
@@ -203,6 +242,27 @@ const FRAMEWORKS = [
   { name: 'ISO 26262 (Functional Safety)', risk: 'high', regions: ['global'], industries: ['automotive'], desc: 'International standard for functional safety of road vehicles. AI components in safety systems must meet ASIL integrity levels.', tags: ['Mandatory', 'Global', 'Safety'], url: 'https://www.iso.org/standard/68383.html' },
   { name: 'EEOC AI Guidance', risk: 'medium', regions: ['us'], industries: ['hr'], desc: 'US Equal Employment Opportunity Commission guidance on AI in hiring. Disparate impact doctrine applies to algorithmic screening tools.', tags: ['Guidance', 'US', 'Employment'], url: 'https://www.eeoc.gov/laws/guidance/questions-and-answers-clarify-and-provide-common-interpretation-uniform-guidelines' },
   { name: 'OpenSSF Best Practices', risk: 'low', regions: ['global'], industries: ['tech'], desc: 'Open Source Security Foundation best practices badge. Increasingly expected for AI/ML open source projects claiming enterprise-readiness.', tags: ['Voluntary', 'Global', 'Open source'], url: 'https://bestpractices.coreinfrastructure.org/' },
+  { name: "Illinois BIPA", risk: "high", regions: ["us"], industries: ["hr", "tech"], desc: "Illinois Biometric Information Privacy Act \u2014 strict consent requirements for AI systems using facial recognition or biometric data.", tags: ["Mandatory", "US (IL)", "Biometrics"], url: "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=3004" },
+  { name: "NY Local Law 144", risk: "high", regions: ["us"], industries: ["hr"], desc: "New York City law requiring bias audits of automated employment decision tools used in hiring and promotion.", tags: ["Mandatory", "US (NYC)", "Employment AI"], url: "https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page" },
+  { name: "Canada AIDA", risk: "medium", regions: ["global"], industries: [], desc: "Artificial Intelligence and Data Act \u2014 proposed Canadian federal law requiring impact assessments for high-impact AI systems.", tags: ["Emerging", "Canada", "Impact assessment"], url: "https://ised-isde.canada.ca/site/innovation-better-canada/en/artificial-intelligence-and-data-act" },
+  { name: "China AI Regulations", risk: "high", regions: ["apac"], industries: [], desc: "Suite of Chinese AI regulations covering generative AI, recommendation algorithms \u2014 mandatory security assessments for China deployment.", tags: ["Mandatory", "China", "Generative AI"], url: "https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm" },
+  { name: "Japan AI Guidelines", risk: "low", regions: ["apac"], industries: [], desc: "Japan METI AI governance guidelines \u2014 principles-based, covering transparency, safety, fairness, and accountability for AI developers.", tags: ["Guidance", "Japan", "Principles-based"], url: "https://www.meti.go.jp/press/2024/04/20240419004/20240419004.html" },
+  { name: "Singapore AI Verify", risk: "low", regions: ["apac"], industries: [], desc: "Singapore IMDA AI governance testing framework and toolkit. Voluntary but widely adopted across ASEAN financial and public sector.", tags: ["Voluntary", "Singapore", "Testing"], url: "https://aiverifyfoundation.sg/" },
+  { name: "Australia AI Ethics Framework", risk: "low", regions: ["global"], industries: [], desc: "Australia DISR voluntary AI ethics framework \u2014 8 principles covering human rights, privacy, fairness, and explainability.", tags: ["Voluntary", "Australia", "Ethics"], url: "https://www.industry.gov.au/publications/australias-artificial-intelligence-ethics-framework" },
+  { name: "OECD AI Principles", risk: "low", regions: ["global"], industries: [], desc: "First intergovernmental AI policy standard, adopted by 47 countries. Foundational reference for EU AI Act and NIST AI RMF.", tags: ["Non-binding", "Global", "Reference standard"], url: "https://oecd.ai/en/ai-principles" },
+  { name: "G7 Hiroshima AI Process", risk: "low", regions: ["global"], industries: [], desc: "G7 Guiding Principles for Advanced AI \u2014 11 principles covering transparency, safety, accountability for enterprise responsible AI.", tags: ["Non-binding", "Global", "G7"], url: "https://www.g7hiroshima.go.jp/en/documents/" },
+  { name: "PCI DSS v4.0 (AI scope)", risk: "high", regions: ["global"], industries: ["finance"], desc: "Payment Card Industry Data Security Standard \u2014 AI systems in payment processing must meet cardholder data protection requirements.", tags: ["Mandatory", "Global", "Payments"], url: "https://www.pcisecuritystandards.org/document_library/" },
+  { name: "SOC 2 Type II (AI scope)", risk: "medium", regions: ["global"], industries: ["tech"], desc: "AICPA Trust Services Criteria \u2014 AI SaaS providers seeking enterprise customers typically need SOC 2 Type II certification.", tags: ["Certifiable", "Global", "SaaS"], url: "https://www.aicpa.org/resources/landing/system-and-organization-controls-soc-suite-of-services" },
+  { name: "FTC AI Guidance", risk: "medium", regions: ["us"], industries: ["tech"], desc: "US FTC enforcement guidance on AI fairness, transparency, and deceptive practices \u2014 enforcement risk for consumer-facing AI products.", tags: ["Enforcement", "US", "Consumer AI"], url: "https://www.ftc.gov/business-guidance/blog/2023/02/keep-your-ai-claims-in-check" },
+  { name: "ISO/IEC 24028 (Trustworthiness)", risk: "medium", regions: ["global"], industries: [], desc: "Overview of trustworthiness in AI \u2014 covers accuracy, robustness, reliability. Referenced in EU AI Act conformity assessments.", tags: ["Reference", "Global", "Trustworthiness"], url: "https://www.iso.org/standard/77608.html" },
+  { name: "IEEE 7000 Series", risk: "low", regions: ["global"], industries: ["tech"], desc: "IEEE standards for ethically aligned AI design covering transparency (7001), privacy (7002), and bias (7003).", tags: ["Voluntary", "Global", "Engineering"], url: "https://standards.ieee.org/initiatives/artificial-intelligence-systems/" },
+  { name: "EU AI Pact (voluntary)", risk: "low", regions: ["eu"], industries: [], desc: "Voluntary early-adoption pledge for the EU AI Act \u2014 companies committing to implement key obligations ahead of official deadlines.", tags: ["Voluntary", "EU", "Early adoption"], url: "https://digital-strategy.ec.europa.eu/en/policies/ai-pact" },
+  { name: "Brazil LGPD (AI scope)", risk: "medium", regions: ["global"], industries: [], desc: "Brazil's data protection law with AI implications \u2014 automated decision-making rights and cross-border transfer rules.", tags: ["Mandatory", "Brazil", "Data protection"], url: "https://www.gov.br/secretariageral/pt-br/lgpd" },
+  { name: "India DPDP Act (AI scope)", risk: "medium", regions: ["apac"], industries: [], desc: "India's Digital Personal Data Protection Act \u2014 AI systems processing Indian citizens' data must comply with consent and purpose limitation rules.", tags: ["Mandatory", "India", "Data protection"], url: "https://www.meity.gov.in/writereaddata/files/Digital%20Personal%20Data%20Protection%20Act%202023.pdf" },
+  { name: "NIST CSF 2.0 (AI scope)", risk: "medium", regions: ["us", "global"], industries: [], desc: "NIST Cybersecurity Framework 2.0 \u2014 AI systems in critical infrastructure must address AI model supply chain and adversarial attack risks.", tags: ["Voluntary", "Global", "Cybersecurity"], url: "https://www.nist.gov/cyberframework" },
+  { name: "Texas AI Act (HB 1709)", risk: "medium", regions: ["us"], industries: [], desc: "Texas HB 1709 \u2014 risk assessment and bias evaluation requirements for high-risk AI deployed by businesses operating in Texas.", tags: ["Mandatory", "US (TX)", "Risk assessment"], url: "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB1709" },
+  { name: "ISO/IEC 42006 (AI auditing)", risk: "medium", regions: ["global"], industries: [], desc: "Requirements for bodies providing audit and certification of AI management systems under ISO 42001 \u2014 defines competence criteria for AI auditors.", tags: ["Certifiable", "Global", "Audit"], url: "https://www.iso.org/standard/44546.html" },
+
 ];
 
 // ── Render and filter ────────────────────────────────────────────────────────

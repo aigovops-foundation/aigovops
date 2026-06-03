@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>AiGovOps Foundation — Latest from Ken &amp; Bob</title>
+    <link>https://www.aigovops-foundation.com</link>
+    <description>The latest posts from Ken Johnston and Bob Rapp on AI governance, policy-as-code, and open-source compliance tooling.</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Jun 2026 20:29:35 +0000</lastBuildDate>
+    <atom:link href="https://www.aigovops-foundation.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://www.aigovops-foundation.com/images/logo.png</url>
+      <title>AiGovOps Foundation</title>
+      <link>https://www.aigovops-foundation.com</link>
+    </image>
+    <item>
+      <title>Countdown to June 4th: 2 Days to go!</title>
+      <link>https://www.linkedin.com/posts/rkjohnston_devops-aigovops-devops-activity-7467655570754306052-_4fd</link>
+      <description>Countdown to June 4th: 2 Days to go! 🚀 Seattle's AI House is getting ready to host a different kind of conversation. We’re moving beyond the high-level policy debates and getting into the weeds of operationalizing trust. Governance debt is the silent killer of AI innovation, and</description>
+      <author>ken.johnston@aigovops.community (Ken Johnston)</author>
+      <pubDate>Wed, 03 Jun 2026 01:39:18 +0000</pubDate>
+      <guid isPermaLink="true">https://www.linkedin.com/posts/rkjohnston_devops-aigovops-devops-activity-7467655570754306052-_4fd</guid>
+    </item>
+    <item>
+      <title>Governance debt is the silent killer of AI innovation.</title>
+      <link>https://www.linkedin.com/posts/rkjohnston_devops-aigovops-devops-activity-7467606972121661440-IeMu</link>
+      <description>Governance debt is the silent killer of AI innovation. We’re fixing that. Registration link: Join us for the 1st AiGovOps Meetup: AI Governance Founders Forum. We’re gathering at the AI House in Seattle and streaming globally to bridge the gap between po</description>
+      <author>ken.johnston@aigovops.community (Ken Johnston)</author>
+      <pubDate>Wed, 03 Jun 2026 01:39:18 +0000</pubDate>
+      <guid isPermaLink="true">https://www.linkedin.com/posts/rkjohnston_devops-aigovops-devops-activity-7467606972121661440-IeMu</guid>
+    </item>
+    <item>
+      <title>Industry 4.0 thrives on efficiency, but safety is the foundation of "Yes." We encode ISO safety standards directly into the factor...</title>
+      <link>https://www.linkedin.com/posts/bobrapp_industry40-aigovernance-policyascode-activity-7467606368926023680-yBau</link>
+      <description>Industry 4.0 thrives on efficiency, but safety is the foundation of "Yes." We encode ISO safety standards directly into the factory floor. ✅ Ship Good AI / Enviar IA Buena: - [EN] Sync AI vision with robot stops via Safety-as-Code. - [ES] Sincronizar visión de IA con paradas de r</description>
+      <author>bob.rapp@aigovops.community (Bob Rapp)</author>
+      <pubDate>Wed, 03 Jun 2026 01:39:18 +0000</pubDate>
+      <guid isPermaLink="true">https://www.linkedin.com/posts/bobrapp_industry40-aigovernance-policyascode-activity-7467606368926023680-yBau</guid>
+    </item>
+    <item>
+      <title>Problem: AI projects often fail at the governance gap. Shadow agents and model drift are systemic risks, not just bugs. Solution:...</title>
+      <link>https://www.linkedin.com/posts/bobrapp_problem-ai-projects-often-fail-at-the-governance-activity-7467534962037280769-or1Q</link>
+      <description>Problem: AI projects often fail at the governance gap. Shadow agents and model drift are systemic risks, not just bugs. Solution: Ship "Safe AI as Code" using our Three-Yes Test: Is it transparent, controllable, and pro-human? Summary: Automate your governance. [Español] Problema</description>
+      <author>bob.rapp@aigovops.community (Bob Rapp)</author>
+      <pubDate>Wed, 03 Jun 2026 01:39:18 +0000</pubDate>
+      <guid isPermaLink="true">https://www.linkedin.com/posts/bobrapp_problem-ai-projects-often-fail-at-the-governance-activity-7467534962037280769-or1Q</guid>
+    </item>
+    <item>
+      <title>Rehearsals done and we are ALL READY to see you all at #MSBuild bright and early-ish tomorrow Tuesday June 2nd!</title>
+      <link>https://www.linkedin.com/posts/donasarkar_msbuild-imaginecup-activity-7467387957575008256-KbN9</link>
+      <description>Rehearsals done and we are ALL READY to see you all at #MSBuild bright and early-ish tomorrow Tuesday June 2nd! First up we will crown (well trophy I guess) this years #ImagineCup winner (and there is a fun surprise in there too 👀) Next up will be the Satya Nadella and friends ke</description>
+      <author>ken.johnston@aigovops.community (Ken Johnston)</author>
+      <pubDate>Wed, 03 Jun 2026 01:39:18 +0000</pubDate>
+      <guid isPermaLink="true">https://www.linkedin.com/posts/donasarkar_msbuild-imaginecup-activity-7467387957575008256-KbN9</guid>
+    </item>
+    <item>
+      <title>Excited to see our President, Leigh Felton, tackling one of the most important questions in AI today: How do we know it's actually working? 
+
+As AI becomes embedded in organizational decision-making,… | AI for Job Security Foundation</title>
+      <link>https://www.linkedin.com/posts/aiforjobsecurity_excited-to-see-our-president-leigh-felton-activity-7467369562393530368-P4Is</link>
+      <description>Excited to see our President, Leigh Felton, tackling one of the most important questions in AI today: How do we know it's actually working? As AI becomes embedded in organizational decision-making, meaningful measurement is no longer optional. Looking forward to this important di</description>
+      <author>ken.johnston@aigovops.community (Ken Johnston)</author>
+      <pubDate>Wed, 03 Jun 2026 01:39:18 +0000</pubDate>
+      <guid isPermaLink="true">https://www.linkedin.com/posts/aiforjobsecurity_excited-to-see-our-president-leigh-felton-activity-7467369562393530368-P4Is</guid>
+    </item>
+    <item>
+      <title>Getting to Yes: The Power of 10,000+ Governance Experts 🤝 Problem: Building AI policy from scratch is slow and risky. Solutions: A...</title>
+      <link>https://www.linkedin.com/posts/bobrapp_policyascode-pol%C3%ADticacomoc%C3%B3digo-aigovops-activity-7467364810335293440-yB1-</link>
+      <description>Getting to Yes: The Power of 10,000+ Governance Experts 🤝 Problem: Building AI policy from scratch is slow and risky. Solutions: Access 500+ curated frameworks shared by 10,000+ experts. Summary: Define the future of #PolicyAsCode. Ship Good AI: - Use peer-reviewed templates. - M</description>
+      <author>bob.rapp@aigovops.community (Bob Rapp)</author>
+      <pubDate>Wed, 03 Jun 2026 01:39:18 +0000</pubDate>
+      <guid isPermaLink="true">https://www.linkedin.com/posts/bobrapp_policyascode-pol%C3%ADticacomoc%C3%B3digo-aigovops-activity-7467364810335293440-yB1-</guid>
+    </item>
+    <item>
+      <title>Humans in AI Week begins today!!!.</title>
+      <link>https://www.linkedin.com/posts/aicollective_hiaiw-findyourcity-aic-activity-7467293880472973312-K6ba</link>
+      <description>Humans in AI Week begins today!!!. It’s Monday, June 1st, and it’s time to celebrate. 🎉 AI is reshaping how we work, learn, create, and govern. Most of these decisions have been made by a remarkably small number of people. At AIC, we think everyone deserves a seat at that table.</description>
+      <author>ken.johnston@aigovops.community (Ken Johnston)</author>
+      <pubDate>Wed, 03 Jun 2026 01:39:18 +0000</pubDate>
+      <guid isPermaLink="true">https://www.linkedin.com/posts/aicollective_hiaiw-findyourcity-aic-activity-7467293880472973312-K6ba</guid>
+    </item>
+    <item>
+      <title>Getting to Yes: Policy-as-Code for Aerospace &amp; Space Tech 🚀 Orbital safety requires precision that manual oversight can't match. "...</title>
+      <link>https://www.linkedin.com/posts/bobrapp_getting-to-yes-policy-as-code-for-aerospace-activity-7467243738143092737-UVb5</link>
+      <description>Getting to Yes: Policy-as-Code for Aerospace &amp; Space Tech 🚀 Orbital safety requires precision that manual oversight can't match. "Yes" to exploration means encoding the Artemis Accords into flight logic. ✅ SHIP GOOD AI / ENVIAR IA BUENA: • [EN] Automate real-time Debris Avoidance</description>
+      <author>bob.rapp@aigovops.community (Bob Rapp)</author>
+      <pubDate>Wed, 03 Jun 2026 01:39:18 +0000</pubDate>
+      <guid isPermaLink="true">https://www.linkedin.com/posts/bobrapp_getting-to-yes-policy-as-code-for-aerospace-activity-7467243738143092737-UVb5</guid>
+    </item>
+    <item>
+      <title>Shipping AI shouldn't be a leap of faith. The gap between policy and 'Git Push' is where risks like drift live. We need technical...</title>
+      <link>https://www.linkedin.com/posts/bobrapp_aigovops-responsibleai-aigovernance-activity-7467172465597804544-oHo8</link>
+      <description>Shipping AI shouldn't be a leap of faith. The gap between policy and 'Git Push' is where risks like drift live. We need technical controls in CI/CD pipelines. Lanzar IA no debe ser un acto de fe. El riesgo vive en la brecha entre la política y el código. Necesitamos controles téc</description>
+      <author>bob.rapp@aigovops.community (Bob Rapp)</author>
+      <pubDate>Wed, 03 Jun 2026 01:39:18 +0000</pubDate>
+      <guid isPermaLink="true">https://www.linkedin.com/posts/bobrapp_aigovops-responsibleai-aigovernance-activity-7467172465597804544-oHo8</guid>
+    </item>
+  </channel>
+</rss>
