@@ -115,6 +115,33 @@ jobs:
           print(f"✅ All {sum(len(d.get(p,[])) for p in ['bob','ken'])} post titles are clean")
           EOF
 
+  # ── Tier 2b: Infra health — DNS, uptime, HTTP errors (live site) ──────────
+  infra-health:
+    name: 🩺 Infra Health (DNS / uptime / errors)
+    runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Wait for Pages CDN to propagate
+        if: github.event_name == 'push'
+        run: |
+          for i in $(seq 1 18); do
+            code=$(curl -sL -o /dev/null -w "%{http_code}" --max-time 10 https://www.aigovops-foundation.com/ || echo 000)
+            echo "Attempt $i: HTTP $code"
+            [ "$code" = "200" ] && break
+            sleep 10
+          done
+          sleep 20
+      - name: DNS checks
+        run: bash scripts/test-dns.sh || { echo "DNS failed once — retrying in 30s (propagation)"; sleep 30; bash scripts/test-dns.sh; }
+      - name: Uptime / TLS checks
+        run: bash scripts/test-uptime.sh
+      - name: HTTP error-detection checks
+        run: bash scripts/test-errors.sh
+
   # ── Tier 5: Scale (live site — scheduled only) ────────────────────────────
   scale:
     name: ⚡ Scale Tests (50 concurrent)

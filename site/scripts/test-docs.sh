@@ -25,7 +25,7 @@ check_file() {
 
 check_contains() {
   local path="$REPO/$1" desc="$2" needle="$3"
-  if [ -f "$path" ] && grep -q "$needle" "$path"; then
+  if [ -f "$path" ] && grep -qF -- "$needle" "$path"; then
     check "$desc" "ok"
   else
     check "$desc" "pattern '$needle' not found in $1"
@@ -99,6 +99,17 @@ check_contains "skills/marblism-chatbot-integration/SKILL.md" "Marblism skill wa
 check_file "skills/cloudflare-dns-hosting/SKILL.md"                 "Cloudflare DNS skill"
 check_file "docs/infrastructure/CLOUDFLARE-RUNBOOK.md"             "Cloudflare runbook doc"
 check_contains "skills/cloudflare-dns-hosting/SKILL.md" "Cloudflare skill warns Full Strict not Flexible" "Full (Strict)"
+echo ""
+echo "  [Network-health tiers]"
+check_file "scripts/lib/health-checks.sh"                          "Health-check library"
+check_file "scripts/test-dns.sh"                                   "DNS test tier"
+check_file "scripts/test-uptime.sh"                                "Uptime test tier"
+check_file "scripts/test-errors.sh"                                "Error-detection test tier"
+check_contains "scripts/cloud-mary.sh" "Orchestrator has --dns flag"    "--dns)"
+check_contains "scripts/cloud-mary.sh" "Orchestrator has --uptime flag" "--uptime)"
+check_contains "scripts/cloud-mary.sh" "Orchestrator has --errors flag" "--errors)"
+check_contains "scripts/lib/health-checks.sh" "Lib detects redirect loops" "error_no_redirect_loop"
+check_contains "scripts/lib/health-checks.sh" "Lib validates TLS cert"     "uptime_tls_valid"
 
 echo ""
 echo "  ${PASS} passed, ${FAIL} failed"

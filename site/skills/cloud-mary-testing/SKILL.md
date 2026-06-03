@@ -39,6 +39,9 @@ run for real in GitHub Actions.
 | `--chaos` | `test-chaos.sh` | Malformed URLs, deleted CNAME, JS syntax errors, JSON corruption, dirty-tree detection |
 | `--docs` | `test-docs.sh` | All required docs exist + key sections present |
 | `--e2e` | `test-e2e-v3.sh` | Live-site HTTP checks (skips if egress blocked) |
+| `--dns` | `test-dns.sh` | Live DNS: resolution, apex→GitHub IPs, www CNAME, stale-record detection (via DNS-over-HTTPS) |
+| `--uptime` | `test-uptime.sh` | Reachability, TLS cert validity (catches the apex cert error), response latency |
+| `--errors` | `test-errors.sh` | 5xx detection, redirect loops (catches Cloudflare-Flexible bug), real 404 behaviour, soft-404 content |
 | `--scale` | `test-scale-v3.sh` | 50 concurrent requests, response time, error rate |
 
 ## CRITICAL gotchas (these caused real failures)
@@ -95,3 +98,27 @@ in the target file.
   `report` job's `needs:` list and summary table.
 
 ## After extending: always re-run the full suite to confirm green before committing.
+
+## Network-health tiers (DNS / uptime / errors)
+These three tiers (`--dns`, `--uptime`, `--errors`) check the LIVE site and share a
+helper library at `scripts/lib/health-checks.sh` (pure curl + DNS-over-HTTPS, no extra
+deps). Like `--e2e` and `--scale`, they are network-dependent: they SKIP under
+`--skip-network` and cannot produce real results in the sandbox (egress proxy blocks
+DoH and returns 403), so they are NOT part of the local default gate
+(`--unit --a11y --i18n --chaos --docs`). They run for real in GitHub Actions via the
+`infra-health` job.
+
+What each catches that content tests don't:
+- **dns** — domain stopped resolving; apex not pointing at GitHub's IPs; www CNAME
+  drifted off `aigovops-foundation.github.io`; a stale host (e.g. `bobrapp.github.io`)
+  still in a record.
+- **uptime** — site unreachable; **TLS cert invalid/unprovisioned** (the exact apex
+  failure mode we hit); latency regressions.
+- **errors** — 5xx server errors; **redirect loops** (the Cloudflare SSL=Flexible bug);
+  missing pages returning the wrong status; soft-404s (200 status but error content,
+  e.g. GitHub's "There isn't a GitHub Pages site here" placeholder).
+
+To add a new network check: add a function to `scripts/lib/health-checks.sh` (it must
+print via `_hc_check LABEL RESULT` and use the caller's PASS/FAIL counters), then call
+it from the relevant `test-{dns,uptime,errors}.sh` and, if useful, the E2E script.
+The library is sourced by all of them, so one helper is reusable everywhere.

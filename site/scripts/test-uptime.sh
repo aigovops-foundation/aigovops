@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# Cloud-Mary uptime tier — reachability, TLS validity, latency on key URLs.
+REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+source "$REPO/scripts/lib/health-checks.sh"
+PASS=0; FAIL=0
+SITE="${SITE_URL:-https://www.aigovops-foundation.com}"
+APEX="${APEX_URL:-https://aigovops-foundation.com}"
+MAXMS="${MAX_LATENCY_MS:-3000}"
+echo ""
+echo "⏱️   Uptime / Reachability Tests"
+echo ""
+echo "  [Reachability]"
+uptime_reachable "$SITE/"
+uptime_reachable "$SITE/frameworks.html"
+uptime_reachable "$SITE/blog.html"
+echo ""
+echo "  [TLS certificate validity]"
+uptime_tls_valid "$SITE/"
+uptime_tls_valid "$APEX/"
+echo ""
+echo "  [Latency]"
+uptime_latency "$SITE/" "$MAXMS"
+echo ""
+echo "  ${PASS} passed, ${FAIL} failed"
+echo ""
+[ $FAIL -eq 0 ] && echo "  ✅  All uptime tests passed" || echo "  ❌  ${FAIL} uptime test(s) failed"
+echo ""
+exit $((FAIL > 0 ? 1 : 0))

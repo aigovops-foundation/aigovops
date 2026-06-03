@@ -34,6 +34,9 @@ http_code() { curl -sL -o /dev/null -w "%{http_code}" --max-time 15 "$1"; }
 body()      { curl -sL --max-time 15 "$1"; }
 headers()   { curl -sLI --max-time 15 "$1"; }
 
+# DNS / uptime / error helpers (dns_resolves, uptime_tls_valid, error_no_5xx, …)
+source "$REPO/scripts/lib/health-checks.sh"
+
 echo ""
 echo "🌐  E2E Tests v3 — $SITE"
 echo ""
@@ -152,6 +155,33 @@ cname=$(cat $REPO/CNAME 2>/dev/null)
 echo "$cname" | grep -q "aigovops-foundation.com" && check "CNAME correct" "ok" || check "CNAME correct" "$cname"
 server=$(headers "$SITE/" | grep -i "^server:" | head -1 | tr -d '\r')
 echo "$server" | grep -qi "github" && check "Served by GitHub Pages" "ok" || check "Served by GitHub Pages" "$server"
+
+echo ""
+
+# ── DNS RESOLUTION ─────────────────────────────────────────────────────────
+echo "  [DNS resolution]"
+APEX_BARE="${SITE#https://www.}"
+dns_resolves "$APEX_BARE"
+dns_resolves "www.$APEX_BARE"
+dns_cname_target "www.$APEX_BARE" "github.io"
+dns_not_stale "www.$APEX_BARE" "bobrapp.github.io"
+
+echo ""
+
+# ── UPTIME / TLS ───────────────────────────────────────────────────────────
+echo "  [Uptime & TLS]"
+uptime_reachable "$SITE/"
+uptime_tls_valid "$SITE/"
+uptime_latency "$SITE/" 4000
+
+echo ""
+
+# ── HTTP ERROR DETECTION ───────────────────────────────────────────────────
+echo "  [Error detection]"
+error_no_5xx "$SITE/"
+error_no_redirect_loop "$SITE/"
+error_expect_code "$SITE/this-page-does-not-exist-xyz.html" "404"
+error_soft_404 "$SITE/" "There isn't a GitHub Pages site here"
 
 echo ""
 echo "  ${PASS} passed, ${FAIL} failed"

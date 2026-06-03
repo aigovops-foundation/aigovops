@@ -17,6 +17,9 @@ for arg in "$@"; do
   case $arg in
     --unit)         TIERS+=("unit");  RUN_ALL=false ;;
     --e2e)          TIERS+=("e2e");   RUN_ALL=false ;;
+    --dns)          TIERS+=("dns");    RUN_ALL=false ;;
+    --uptime)       TIERS+=("uptime"); RUN_ALL=false ;;
+    --errors)       TIERS+=("errors"); RUN_ALL=false ;;
     --a11y)         TIERS+=("a11y");  RUN_ALL=false ;;
     --i18n)         TIERS+=("i18n");  RUN_ALL=false ;;
     --scale)        TIERS+=("scale"); RUN_ALL=false ;;
@@ -25,7 +28,7 @@ for arg in "$@"; do
     --skip-network) SKIP_NETWORK=true ;;
   esac
 done
-[ "$RUN_ALL" = "true" ] && TIERS=("unit" "e2e" "a11y" "i18n" "scale" "chaos" "docs")
+[ "$RUN_ALL" = "true" ] && TIERS=("unit" "e2e" "dns" "uptime" "errors" "a11y" "i18n" "scale" "chaos" "docs")
 
 cd "$REPO" || { echo "❌ Cannot cd to $REPO"; exit 1; }
 
@@ -98,6 +101,33 @@ if [[ " ${TIERS[*]} " =~ " e2e " ]]; then
   fi
 fi
 
+# ── Tier 2b: DNS Tests (network) ───────────────────────────────────────────
+if [[ " ${TIERS[*]} " =~ " dns " ]]; then
+  if [ "$SKIP_NETWORK" = "true" ]; then
+    skip_tier "dns" "🌐  DNS Tests" "--skip-network flag set"
+  else
+    run_tier "dns" "bash scripts/test-dns.sh" "🌐  DNS Tests"
+  fi
+fi
+
+# ── Tier 2c: Uptime / Reachability Tests (network) ─────────────────────────
+if [[ " ${TIERS[*]} " =~ " uptime " ]]; then
+  if [ "$SKIP_NETWORK" = "true" ]; then
+    skip_tier "uptime" "⏱️   Uptime Tests" "--skip-network flag set"
+  else
+    run_tier "uptime" "bash scripts/test-uptime.sh" "⏱️   Uptime / Reachability Tests"
+  fi
+fi
+
+# ── Tier 2d: HTTP Error Detection Tests (network) ──────────────────────────
+if [[ " ${TIERS[*]} " =~ " errors " ]]; then
+  if [ "$SKIP_NETWORK" = "true" ]; then
+    skip_tier "errors" "🚨  Error Tests" "--skip-network flag set"
+  else
+    run_tier "errors" "bash scripts/test-errors.sh" "🚨  HTTP Error Detection Tests"
+  fi
+fi
+
 # ── Tier 3: Accessibility Tests ────────────────────────────────────────────
 if [[ " ${TIERS[*]} " =~ " a11y " ]]; then
   run_tier "a11y" \
@@ -151,6 +181,9 @@ echo ""
 TIER_LABELS=(
   "unit:🧪  Unit Tests"
   "e2e:🌐  E2E Tests"
+  "dns:🌐  DNS Tests"
+  "uptime:⏱️   Uptime Tests"
+  "errors:🚨  Error Tests"
   "a11y:♿  Accessibility"
   "i18n:🌍  Multilingual"
   "scale:⚡  Scale Tests"
