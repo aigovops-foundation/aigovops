@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 # DEPRECATED — superseded by test-e2e-v3.sh / test-scale-v3.sh
 # Kept for reference only. Not called by cloud-mary.sh or automation-v3.yml.
 
@@ -51,7 +52,7 @@ echo "$body" | grep -q "action-grid\|action-card" \
   || check "One-click action grid present" "not found"
 
 # 11: CNAME correct (check local file)
-cname_content=$(cat ~/aigovops-repo/CNAME 2>/dev/null)
+cname_content=$(cat $REPO/CNAME 2>/dev/null)
 echo "$cname_content" | grep -q "aigovops-foundation.com" \
   && check "CNAME file correct" "ok" \
   || check "CNAME file correct" "content: $cname_content"

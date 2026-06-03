@@ -7,7 +7,7 @@
 # ║         --skip-network  (skip tests requiring live site)         ║
 # ╚══════════════════════════════════════════════════════════════════╝
 
-REPO=~/aigovops-repo
+REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 SKIP_NETWORK=false
 RUN_ALL=true
 TIERS=()

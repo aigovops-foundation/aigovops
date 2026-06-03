@@ -5,6 +5,7 @@
 # Run: bash scripts/test-e2e-v3.sh
 
 SITE="https://www.aigovops-foundation.com"
+REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 PASS=0; FAIL=0; SKIP=0
 
 # Pre-flight: check if we can reach the site at all
@@ -106,15 +107,15 @@ echo ""
 # ── POSTS DATA ────────────────────────────────────────────────────────────
 echo "  [Posts Data]"
 POSTS="$HOME/../data/linkedin-posts.json"  # local check
-if [ -f ~/aigovops-repo/data/linkedin-posts.json ]; then
-  bob_count=$(python3 -c "import json; d=json.load(open('$HOME/../../../aigovops-repo/data/linkedin-posts.json' 2>/dev/null or '/root/aigovops-repo/data/linkedin-posts.json')); print(len(d.get('bob',[])))" 2>/dev/null || echo 0)
-  ken_count=$(python3 -c "import json; d=json.load(open('/root/aigovops-repo/data/linkedin-posts.json')); print(len(d.get('ken',[])))" 2>/dev/null || echo 0)
+if [ -f $REPO/data/linkedin-posts.json ]; then
+  bob_count=$(python3 -c "import json; d=json.load(open('$REPO/data/linkedin-posts.json')); print(len(d.get('bob',[])))" 2>/dev/null || echo 0)
+  ken_count=$(python3 -c "import json; d=json.load(open('$REPO/data/linkedin-posts.json')); print(len(d.get('ken',[])))" 2>/dev/null || echo 0)
   [ "$bob_count" -gt 0 ] && check "Bob has posts ($bob_count)" "ok" || check "Bob has posts" "0 posts"
   [ "$ken_count" -gt 0 ] && check "Ken has posts ($ken_count)" "ok" || check "Ken has posts" "0 posts"
   # Check no hashtag-only titles remain
   hashtag_titles=$(python3 -c "
 import json, re
-d = json.load(open('/root/aigovops-repo/data/linkedin-posts.json'))
+d = json.load(open('$REPO/data/linkedin-posts.json'))
 bad = []
 for person in ['bob','ken']:
   for p in d.get(person,[]):
@@ -147,7 +148,7 @@ echo ""
 
 # ── CNAME / DNS ───────────────────────────────────────────────────────────
 echo "  [DNS & Hosting]"
-cname=$(cat ~/aigovops-repo/CNAME 2>/dev/null)
+cname=$(cat $REPO/CNAME 2>/dev/null)
 echo "$cname" | grep -q "aigovops-foundation.com" && check "CNAME correct" "ok" || check "CNAME correct" "$cname"
 server=$(headers "$SITE/" | grep -i "^server:" | head -1 | tr -d '\r')
 echo "$server" | grep -qi "github" && check "Served by GitHub Pages" "ok" || check "Served by GitHub Pages" "$server"
