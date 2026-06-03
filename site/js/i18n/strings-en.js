@@ -12,6 +12,6 @@ window.I18N = {
   posts: { title: 'Latest from Ken & Bob' },
   newsletter: { title: 'Stay ahead of AI governance.', sub: 'Insights on compliance automation, regulatory shifts, and community news — weekly on Substack.', cta: 'Subscribe on Substack →' },
   chatbot: { welcome: '$ aigovops --help', ready: 'Ready. I can help with governance frameworks, scheduling a call, our newsletter, tools (Beacon, Lantern), or the latest from Ken & Bob. What are you working on?' },
-  chips: { frameworks: '⚖️ Which frameworks apply?', meeting: '📆 Schedule a Call', newsletter: '📰 Newsletter', beacon: '🔦 Beacon', umbrella: '🏮 Lantern' },
+  chips: { frameworks: '⚖️ Which frameworks apply?', meeting: '📆 Schedule a Call', support: '💚 Support / Donate', newsletter: '📰 Newsletter', event: '📅 Next Event', ken: "💡 Ken's posts", bob: "💡 Bob's posts", opensource: '💻 Open Source', beacon: '🔦 Beacon', umbrella: '🏮 Lantern' },
   footer: { tagline: 'Governance Versioned Like Code. Tested Before Deployment.', global: 'Seattle, WA · Global Community' },
 };

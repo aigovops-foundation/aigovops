@@ -45,6 +45,7 @@
             .nfl{animation:navFlame 2.2s ease-in-out infinite}
             .ntr{transform-origin:100px 100px;animation:navSpin 35s linear infinite}
             @media(prefers-reduced-motion:reduce){.nb1,.nb2,.nfl,.ntr{animation:none}.nb1{transform:rotate(0deg);opacity:.85}.nb2{transform:rotate(0deg);opacity:.5}}
+            @media(max-width:600px){.nb1,.nb2{animation-duration:8s}.ntr{animation:none}}
           </style>
         </defs>
         <circle cx="100" cy="100" r="96" fill="#071a12"/>
@@ -184,6 +185,7 @@
 <section class="section-light founders-posts-section">
   <div class="container">
     <h2 class="section-title" data-i18n="posts.title">Latest from Ken &amp; Bob</h2>
+    <p id="postsUpdated" style="font-size:.75rem;font-family:'Courier New',monospace;color:var(--muted);margin-bottom:24px;letter-spacing:.04em" aria-live="polite"></p>
     <div class="founders-posts-grid" id="postsGrid">
       <!-- Populated by main.js from data/linkedin-posts.json; falls back to LinkedIn links -->
     </div>
@@ -212,7 +214,7 @@
       <div class="toolkit-card">
         <span class="toolkit-tag">🏮 Human-Readable Reports</span>
         <h3>Lantern Reports</h3>
-        <p>Reads the signed evidence bundle and translates it into plain language — for boards, regulators, and non-technical stakeholders. Built into Lantern alongside the compiler.</p>
+        <p>Reads Beacon's signed evidence bundle and translates it into plain language — for boards, regulators, and non-technical stakeholders. The same tool as Lantern (formerly Umbrella), built into the governance compiler.</p>
         <a href="https://github.com/aigovops-foundation/aigovops-lantern" target="_blank" rel="noopener" class="toolkit-link">Explore Lantern <span class="toolkit-arrow">→</span></a>
       </div>
     </div>

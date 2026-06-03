@@ -68,6 +68,19 @@ function loadPosts(data) {
   const grid = document.getElementById('postsGrid');
   if (!grid) return;
   grid.innerHTML = renderCol('bob', data.bob) + renderCol('ken', data.ken);
+  // Show last-updated timestamp so visitors know how fresh the feed is
+  if (data.updated) {
+    const ts = document.getElementById('postsUpdated');
+    if (ts) {
+      try {
+        const d = new Date(data.updated);
+        const age = Math.round((Date.now() - d) / 3600000);
+        const label = age < 1 ? 'just now' : age < 24 ? `${age}h ago` : `${Math.round(age/24)}d ago`;
+        ts.textContent = `Updated ${label}`;
+        ts.title = d.toLocaleString();
+      } catch(e) {}
+    }
+  }
 }
 
 // Fetch with XMLHttpRequest (more compatible than fetch in some cached contexts)

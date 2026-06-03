@@ -14,6 +14,7 @@
 
 const SCHEDULE = (() => {
 
+  // ── CONFIG — update here if contact details change ────────────────────────
   const LEADERS = {
     ken: { name: 'Ken Johnston', email: 'ken.johnston@aigovops.community' },
     bob: { name: 'Bob Rapp',     email: 'bob.rapp@aigovops.community'     },

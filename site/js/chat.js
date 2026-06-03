@@ -123,12 +123,19 @@ function openChat() {
   window_.hidden = false;
   badge.style.display = 'none';
   track('Chatbot Open');
-  // Apply i18n to welcome message if available
+  // Apply i18n to welcome message and chip labels if available
   if (window.I18N && window.I18N.chatbot) {
     const welcome = messages.querySelector('.chat-msg.bot');
     if (welcome) {
       welcome.innerHTML = `<code class="cli">${window.I18N.chatbot.welcome}</code><br><br>${window.I18N.chatbot.ready}`;
     }
+  }
+  // Re-render chips with i18n labels if available
+  if (window.I18N && window.I18N.chips) {
+    chips.querySelectorAll('.chip').forEach(chip => {
+      const intent = chip.dataset.intent;
+      if (window.I18N.chips[intent]) chip.textContent = window.I18N.chips[intent];
+    });
   }
   input.focus();
 }
@@ -168,6 +175,10 @@ form.addEventListener('submit', e => {
 });
 
 async function runFrameworkAgent(userContext) {
+  // NOTE: This calls the Anthropic API directly from the browser.
+  // For production hardening, route through a serverless proxy (e.g. a Cloudflare Worker
+  // or Vercel Edge Function) so the API key stays server-side and isn't exposed to clients.
+  // Current setup is fine for a community/demo context.
   const thinking = document.createElement('div');
   thinking.className = 'chat-msg bot';
   thinking.innerHTML = '<code class="cli">scanning frameworks...</code>';
