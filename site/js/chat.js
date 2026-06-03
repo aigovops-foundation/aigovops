@@ -41,13 +41,13 @@ const RESOURCES = {
   },
   beacon: {
     url:   'https://bobrapp.github.io/aigovops-beacon/',
-    label: 'Beacon — open-source AI governance tool',
-    cta:   'View Beacon on GitHub →',
+    label: 'Beacon — AI scanner and evidence signer (live)',
+    cta:   'Open Beacon →',
   },
   umbrella: {
     url:   'https://bobrapp.github.io/umbrella-govops/',
-    label: 'Lantern — AI governance compiler',
-    cta:   'Open Lantern →',
+    label: 'Umbrella — AI governance compiler (live)',
+    cta:   'Open Umbrella →',
   },
   support: {
     url:   'https://www.aigovops-foundation.com/support.html',
@@ -272,12 +272,14 @@ function handleIntent(intent) {
     const btn = (url, cta) =>
       `<a href="${url}" target="_blank" rel="noopener" style="display:inline-block;margin-top:6px;margin-right:6px;padding:8px 14px;background:#6c3de6;color:#fff;border-radius:8px;font-size:0.82rem;font-weight:700;text-decoration:none;">${cta}</a>`;
     addMsg(
-      `We have two open-source tools:<br><br>` +
+      `We have two live open-source tools — and one coming soon:<br><br>` +
       `<strong><a href="${b.url}" target="_blank" rel="noopener">${b.label}</a></strong><br>` +
       btn(b.url, b.cta) +
       `<br><br>` +
       `<strong><a href="${u.url}" target="_blank" rel="noopener">${u.label}</a></strong><br>` +
-      btn(u.url, u.cta),
+      btn(u.url, u.cta) +
+      `<br><br>` +
+      `<span style="opacity:0.65">🚧 <strong>Lantern CLI</strong> — next-gen human-carried companion to Beacon. <a href="https://github.com/aigovops-foundation/aigovops-lantern" target="_blank" rel="noopener" style="color:var(--teal)">Follow on GitHub →</a></span>`,
       'bot'
     );
     return;
