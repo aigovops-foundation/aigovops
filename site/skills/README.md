@@ -12,6 +12,7 @@ right home for things that go stale. Skills describe *how*, not *what's true tod
 | `aigovops-deploy-workflow` | Shipping any change: branch → Cloud-Mary → commit → PR → squash-merge → sync |
 | `cloud-mary-testing` | Running or extending the test suite; debugging a failing tier |
 | `marblism-chatbot-integration` | Connecting a backend (Marblism) to the homepage chatbot safely |
+| `cloudflare-dns-hosting` | Moving DNS to Cloudflare; fixing apex cert errors; adding/redirecting more domains |
 
 ## Installing into the live skill path
 These files are version-controlled here in the repo. To make them auto-load in a

@@ -96,6 +96,9 @@ check_file "skills/cloud-mary-testing/SKILL.md"                     "Cloud-Mary 
 check_file "skills/marblism-chatbot-integration/SKILL.md"           "Marblism integration skill"
 check_contains "skills/aigovops-deploy-workflow/SKILL.md"  "Deploy skill has frontmatter name"  "name: aigovops-deploy-workflow"
 check_contains "skills/marblism-chatbot-integration/SKILL.md" "Marblism skill warns on client keys" "never appear in client"
+check_file "skills/cloudflare-dns-hosting/SKILL.md"                 "Cloudflare DNS skill"
+check_file "docs/infrastructure/CLOUDFLARE-RUNBOOK.md"             "Cloudflare runbook doc"
+check_contains "skills/cloudflare-dns-hosting/SKILL.md" "Cloudflare skill warns Full Strict not Flexible" "Full (Strict)"
 
 echo ""
 echo "  ${PASS} passed, ${FAIL} failed"
