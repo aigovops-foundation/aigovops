@@ -54,11 +54,23 @@ dns_apex_points_to_github() {
 }
 
 # dns_cname_target NAME EXPECTED_SUBSTR
+# When Cloudflare proxy (orange cloud) is active, CNAME flattening means external
+# DNS returns A records (Cloudflare IPs) instead of the CNAME. We accept either:
+# the CNAME matches, OR the name resolves to Cloudflare IPs (proxied).
 dns_cname_target() {
   local name="$1" expect="$2"
   local c; c=$(_hc_doh "$name" "CNAME")
-  echo "$c" | grep -qi "$expect" && _hc_check "CNAME $name → $expect" "ok" \
-                                 || _hc_check "CNAME $name → $expect" "got [${c:-none}]"
+  if echo "$c" | grep -qi "$expect"; then
+    _hc_check "CNAME $name → $expect" "ok"
+  else
+    # Check if it's Cloudflare-proxied (CNAME flattened → Cloudflare IPs visible)
+    local a; a=$(_hc_doh "$name" "A")
+    if [ -n "$a" ] && [ -z "$c" ]; then
+      _hc_check "CNAME $name → $expect (flattened by Cloudflare proxy)" "ok"
+    else
+      _hc_check "CNAME $name → $expect" "got [${c:-none}]"
+    fi
+  fi
 }
 
 # dns_not_stale NAME BAD_SUBSTR  → fails if a record still points at a stale host

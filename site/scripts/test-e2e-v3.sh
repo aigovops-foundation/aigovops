@@ -154,7 +154,8 @@ echo "  [DNS & Hosting]"
 cname=$(cat $REPO/CNAME 2>/dev/null)
 echo "$cname" | grep -q "aigovops-foundation.com" && check "CNAME correct" "ok" || check "CNAME correct" "$cname"
 server=$(headers "$SITE/" | grep -i "^server:" | head -1 | tr -d '\r')
-echo "$server" | grep -qi "github" && check "Served by GitHub Pages" "ok" || check "Served by GitHub Pages" "$server"
+# With Cloudflare in front, server header is 'cloudflare'; without, it's 'GitHub.com'
+echo "$server" | grep -qiE "github|cloudflare" && check "Served by GitHub Pages or Cloudflare CDN" "ok" || check "Served by GitHub Pages or Cloudflare CDN" "$server"
 
 echo ""
 
