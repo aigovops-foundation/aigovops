@@ -3,7 +3,7 @@
 # ║  Cloud-Mary v3 — AiGovOps Foundation Test Orchestrator          ║
 # ║  Runs all test tiers and produces a unified pass/fail report     ║
 # ║  Run: bash scripts/cloud-mary.sh                                 ║
-# ║  Flags: --unit  --e2e  --a11y  --i18n  --scale  --chaos          ║
+# ║  Flags: --unit  --e2e  --a11y  --i18n  --scale  --chaos  --docs  ║
 # ║         --skip-network  (skip tests requiring live site)         ║
 # ╚══════════════════════════════════════════════════════════════════╝
 
@@ -21,10 +21,11 @@ for arg in "$@"; do
     --i18n)         TIERS+=("i18n");  RUN_ALL=false ;;
     --scale)        TIERS+=("scale"); RUN_ALL=false ;;
     --chaos)        TIERS+=("chaos"); RUN_ALL=false ;;
+    --docs)         TIERS+=("docs");  RUN_ALL=false ;;
     --skip-network) SKIP_NETWORK=true ;;
   esac
 done
-[ "$RUN_ALL" = "true" ] && TIERS=("unit" "e2e" "a11y" "i18n" "scale" "chaos")
+[ "$RUN_ALL" = "true" ] && TIERS=("unit" "e2e" "a11y" "i18n" "scale" "chaos" "docs")
 
 cd "$REPO" || { echo "❌ Cannot cd to $REPO"; exit 1; }
 
@@ -133,6 +134,13 @@ if [[ " ${TIERS[*]} " =~ " chaos " ]]; then
   fi
 fi
 
+
+if [[ " ${TIERS[*]} " =~ " docs " ]]; then
+  run_tier "docs" \
+    "bash scripts/test-docs.sh" \
+    "📄  Documentation"
+fi
+
 # ── Summary Report ─────────────────────────────────────────────────────────
 echo ""
 echo -e "${BOLD}╔══════════════════════════════════════════════╗${RESET}"
@@ -147,6 +155,7 @@ TIER_LABELS=(
   "i18n:🌍  Multilingual"
   "scale:⚡  Scale Tests"
   "chaos:🐒  Chaos Monkey"
+  "docs:📄  Documentation"
 )
 
 for entry in "${TIER_LABELS[@]}"; do
