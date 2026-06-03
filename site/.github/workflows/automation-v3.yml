@@ -74,11 +74,24 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Wait for Pages deploy
+      - name: Wait for Pages CDN to propagate
         if: github.event_name == 'push'
-        run: sleep 90
-      - name: Run E2E v3 tests
-        run: bash scripts/test-e2e-v3.sh
+        run: |
+          # Poll the live site until it responds 200, up to ~3 min, then give
+          # the CDN a short grace period so the E2E checks see fresh content.
+          for i in $(seq 1 18); do
+            code=$(curl -sL -o /dev/null -w "%{http_code}" --max-time 10 https://www.aigovops-foundation.com/ || echo 000)
+            echo "Attempt $i: HTTP $code"
+            [ "$code" = "200" ] && break
+            sleep 10
+          done
+          echo "Grace period for CDN edge propagation..."
+          sleep 30
+      - name: Run E2E v3 tests (with one retry)
+        run: |
+          # The CDN can serve a stale edge node briefly after deploy; retry once
+          # before failing so transient propagation lag doesn't red-flag main.
+          bash scripts/test-e2e-v3.sh || { echo "E2E failed once — waiting 45s and retrying..."; sleep 45; bash scripts/test-e2e-v3.sh; }
       - name: Validate posts data quality
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

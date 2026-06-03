@@ -316,6 +316,28 @@ checkTrue('Support page has activation notice',           supportHtml.includes('
 checkTrue('Press page has EIN pending placeholder',       pressHtml.includes('IRS EIN') || pressHtml.includes('EIN'));
 checkTrue('Cloudflare deploy instructions in wrangler',   fs.existsSync(path.join(__dirname,'../functions/wrangler.toml')) && fs.readFileSync(path.join(__dirname,'../functions/wrangler.toml'),'utf8').includes('wrangler deploy'));
 
+// ── PR #9: Wix blog content migration ──────────────────────────────────────
+const blogHtml = fs.readFileSync(path.join(__dirname,'../blog.html'), 'utf8');
+const POST_SLUGS = ['what-is-aigovops','nist-ai-rmf-vs-real-world','eu-ai-act-90-day-roadmap',
+  'healthcare-ai-governance-spring-2026','agentic-frontiers-retrospective','agentic-hell',
+  'flow-to-trust-loop','stop-writing-for-humans','no-more-anonymous-ghosts'];
+
+POST_SLUGS.forEach(slug => {
+  const p = path.join(__dirname, '../blog/' + slug + '.html');
+  checkTrue('Blog page exists: ' + slug, fs.existsSync(p));
+  if (fs.existsSync(p)) {
+    const html = fs.readFileSync(p, 'utf8');
+    checkTrue('  ' + slug + ' has canonical tag', html.includes('rel="canonical"'));
+    checkTrue('  ' + slug + ' has BlogPosting schema', html.includes('BlogPosting'));
+    checkTrue('  ' + slug + ' links to full article', html.includes('aigovopsfoundation.org/post'));
+  }
+  checkTrue('blog.html links to ' + slug, blogHtml.includes('blog/' + slug + '.html'));
+});
+checkFalse('blog.html has no external Wix post links', blogHtml.includes('aigovopsfoundation.org/post'));
+checkTrue('sitemap includes blog posts', fs.readFileSync(path.join(__dirname,'../sitemap.xml'),'utf8').includes('blog/what-is-aigovops.html'));
+checkFalse('deploy.yml retired (not active)', fs.existsSync(path.join(__dirname,'../.github/workflows/deploy.yml')));
+checkTrue('deploy.yml.disabled preserved', fs.existsSync(path.join(__dirname,'../.github/workflows/deploy.yml.disabled')));
+
 const total = PASS + FAIL;
 console.log(`\n  Result: ${PASS}/${total} passed\n`);
 if (FAIL > 0) {

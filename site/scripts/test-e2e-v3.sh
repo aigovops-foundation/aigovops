@@ -131,6 +131,21 @@ fi
 echo ""
 
 # ── CNAME / DNS ───────────────────────────────────────────────────────────
+echo "  [Blog migration]"
+HOMECONTENT=$(body "$SITE/blog.html")
+echo "$HOMECONTENT" | grep -q "blog/what-is-aigovops.html\|blog/nist-ai-rmf" && check "Blog cards link to local pages" "ok" || check "Blog cards link to local pages" "not found"
+echo "$HOMECONTENT" | grep -q "aigovopsfoundation.org/post" && check "No external Wix post links on blog.html" "external links remain" || check "No external Wix post links on blog.html" "ok"
+for slug in "what-is-aigovops" "nist-ai-rmf-vs-real-world" "no-more-anonymous-ghosts"; do
+  code=$(http_code "$SITE/blog/$slug.html")
+  [ "$code" = "200" ] && check "blog/$slug.html → 200" "ok" || check "blog/$slug.html → 200" "HTTP $code"
+done
+POST1=$(body "$SITE/blog/what-is-aigovops.html")
+echo "$POST1" | grep -q 'rel="canonical"' && check "Post page has canonical tag" "ok" || check "Post page has canonical tag" "not found"
+echo "$POST1" | grep -q 'BlogPosting' && check "Post page has Schema.org Article" "ok" || check "Post page has Schema.org Article" "not found"
+
+echo ""
+
+# ── CNAME / DNS ───────────────────────────────────────────────────────────
 echo "  [DNS & Hosting]"
 cname=$(cat ~/aigovops-repo/CNAME 2>/dev/null)
 echo "$cname" | grep -q "aigovops-foundation.com" && check "CNAME correct" "ok" || check "CNAME correct" "$cname"
