@@ -110,6 +110,11 @@ check_contains "scripts/cloud-mary.sh" "Orchestrator has --uptime flag" "--uptim
 check_contains "scripts/cloud-mary.sh" "Orchestrator has --errors flag" "--errors)"
 check_contains "scripts/lib/health-checks.sh" "Lib detects redirect loops" "error_no_redirect_loop"
 check_contains "scripts/lib/health-checks.sh" "Lib validates TLS cert"     "uptime_tls_valid"
+check_file "skills/cloud-mary/SKILL.md"                             "Cloud-Mary runner skill"
+check_file "skills/hostinger-github-pages/SKILL.md"                  "Hostinger-GitHub Pages skill"
+check_file "skills/links-for-events/SKILL.md"                        "Links-for-events skill"
+check_file "transcripts/README.md"                                   "Transcripts README"
+check_file "transcripts/journal.txt"                                 "Transcripts journal"
 
 echo ""
 echo "  ${PASS} passed, ${FAIL} failed"
