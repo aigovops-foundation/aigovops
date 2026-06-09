@@ -83,5 +83,7 @@
       "image": null,
       "author": "Ken Johnston"
     }
-  ]
+  ],
+  "fetch_error": true,
+  "fetch_attempted": "2026-06-09T20:56:34Z"
 }
