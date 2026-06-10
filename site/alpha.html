@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alpha · what we are building next | AiGovOps Foundation</title>
+  <meta name="description" content="Alpha — ideation-stage projects from the AiGovOps Foundation. Currently in the lab: the AiGovOps Library, a governance-as-code product where members propose, stewards approve, and every decision becomes a Beacon-signed receipt." />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <meta property="og:title" content="Support the AiGovOps Foundation" />
+  <meta property="og:description" content="Fund the open-source AI governance standard. Keep policy-as-code free, verifiable, and global." />
+  <meta property="og:image" content="https://www.aigovops-foundation.com/images/founders.jpg" />
+  <meta property="og:url" content="https://www.aigovops-foundation.com/support.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/i18n/i18n.js"></script>
+  <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
+  <style>
+    /* ── Support page specific ── */
+    .support-hero { background: linear-gradient(135deg, var(--dark) 0%, #0a2318 55%, #0d1a2e 100%); color: var(--white); padding: 72px 0 56px; text-align: center; }
+    .support-hero .hero-eyebrow { color: var(--teal); font-family: 'Courier New', monospace; font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .16em; margin-bottom: 14px; }
+    .support-hero h1 { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 700; margin-bottom: 16px; }
+    .support-hero p { font-size: 1.05rem; color: #d4d0f0; max-width: 560px; margin: 0 auto 36px; line-height: 1.6; }
+
+    /* Coffee banner */
+    .coffee-banner { background: var(--teal-light); border-top: 3px solid var(--teal); padding: 28px 0; text-align: center; }
+    .coffee-banner p { font-size: .95rem; color: #0a3d2a; max-width: 640px; margin: 0 auto 16px; line-height: 1.6; }
+    .coffee-amounts { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 4px; }
+    .coffee-pill { background: var(--white); border: 1.5px solid var(--teal); color: var(--teal-dark); border-radius: 24px; padding: 6px 16px; font-size: .82rem; font-weight: 700; font-family: 'Courier New', monospace; cursor: pointer; transition: all .15s; }
+    .coffee-pill:hover { background: var(--teal); color: var(--white); }
+    .coffee-link { display: inline-block; margin-top: 12px; font-size: .82rem; color: var(--teal-dark); font-weight: 600; text-decoration: underline; }
+
+    /* Tier grid */
+    .tiers-section { background: var(--white); padding: 64px 0; }
+    .tiers-section h2 { text-align: center; margin-bottom: 8px; }
+    .tiers-section .section-sub { text-align: center; color: var(--muted); font-size: .9rem; margin-bottom: 48px; }
+    .tiers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .tier-card { border: 1.5px solid var(--border); border-radius: 16px; padding: 32px 28px; display: flex; flex-direction: column; gap: 12px; position: relative; transition: transform .18s, border-color .18s; }
+    .tier-card:hover { transform: translateY(-4px); border-color: var(--teal); }
+    .tier-card.featured { border-color: var(--teal); background: #f0fbf7; }
+    .tier-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--teal); color: var(--white); font-size: .72rem; font-weight: 700; font-family: 'Courier New', monospace; letter-spacing: .1em; text-transform: uppercase; padding: 4px 14px; border-radius: 20px; white-space: nowrap; }
+    .tier-icon { font-size: 1.8rem; }
+    .tier-name { font-size: 1rem; font-weight: 700; color: var(--text); }
+    .tier-amount { font-size: 2rem; font-weight: 700; color: var(--teal-dark); line-height: 1; }
+    .tier-amount span { font-size: .85rem; font-weight: 400; color: var(--muted); }
+    .tier-desc { font-size: .85rem; color: var(--muted); line-height: 1.5; }
+    .tier-perks { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 7px; }
+    .tier-perks li { font-size: .84rem; color: var(--text); display: flex; align-items: flex-start; gap: 8px; line-height: 1.4; }
+    .tier-perks li::before { content: '✓'; color: var(--teal); font-weight: 700; flex-shrink: 0; }
+    .tier-actions { margin-top: auto; display: flex; flex-direction: column; gap: 8px; }
+    .btn-teal { background: var(--teal); color: var(--white); border: none; border-radius: 8px; padding: 12px 20px; font-size: .88rem; font-weight: 600; cursor: pointer; text-align: center; text-decoration: none; display: block; transition: background .15s; }
+    .btn-teal:hover { background: var(--teal-dark); }
+    .btn-teal-outline { background: transparent; color: var(--teal-dark); border: 1.5px solid var(--teal); border-radius: 8px; padding: 10px 20px; font-size: .82rem; font-weight: 600; cursor: pointer; text-align: center; text-decoration: none; display: block; transition: all .15s; }
+    .btn-teal-outline:hover { background: var(--teal-light); }
+
+    /* Impact section */
+    .impact-section { background: var(--dark); color: var(--white); padding: 56px 0; }
+    .impact-section h2 { color: var(--white); text-align: center; margin-bottom: 8px; }
+    .impact-sub { text-align: center; color: rgba(255,255,255,.5); font-size: .9rem; margin-bottom: 40px; }
+    .impact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .impact-card { border: 1px solid rgba(255,255,255,.1); border-radius: 12px; padding: 20px 16px; text-align: center; }
+    .impact-amount { font-size: 1.3rem; font-weight: 700; color: var(--teal); font-family: 'Courier New', monospace; margin-bottom: 6px; }
+    .impact-label { font-size: .8rem; color: rgba(255,255,255,.55); line-height: 1.4; }
+
+    /* Transparency */
+    .transparency-section { background: var(--light); padding: 52px 0; }
+    .transparency-section h2 { text-align: center; margin-bottom: 8px; }
+    .transparency-sub { text-align: center; color: var(--muted); font-size: .9rem; margin-bottom: 36px; }
+    .transparency-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .transparency-item { background: var(--white); border-radius: 10px; padding: 18px 20px; border: .5px solid var(--border); }
+    .transparency-item h4 { font-size: .9rem; font-weight: 700; margin-bottom: 6px; color: var(--text); }
+    .transparency-item p { font-size: .82rem; color: var(--muted); line-height: 1.5; }
+
+    /* FAQ */
+    .faq-section { background: var(--white); padding: 52px 0; }
+    .faq-section h2 { text-align: center; margin-bottom: 36px; }
+    .faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 860px; margin: 0 auto; }
+    .faq-item { border: .5px solid var(--border); border-radius: 10px; padding: 18px 20px; }
+    .faq-item h4 { font-size: .9rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .faq-item p { font-size: .82rem; color: var(--muted); line-height: 1.5; }
+
+    /* Responsive */
+    @media (max-width: 900px) { .tiers-grid { grid-template-columns: 1fr; } .impact-grid { grid-template-columns: repeat(2,1fr); } .transparency-grid { grid-template-columns: 1fr; } .faq-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .impact-grid { grid-template-columns: 1fr 1fr; } }
+  </style>
+  <link rel="alternate" type="application/rss+xml" title="AiGovOps Foundation Feed" href="/feed.xml" />
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- NAV -->
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo-link" aria-label="AiGovOps Foundation home">
+      <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AiGovOps Foundation Lantern logo" style="height:38px;width:38px;flex-shrink:0">
+        <title>AiGovOps Foundation</title>
+        <circle cx="100" cy="100" r="96" fill="#071a12"/>
+        <polygon points="100,100 42,0 158,0" fill="#9fe1cb" opacity="0.09"/>
+        <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+        <circle cx="100" cy="100" r="79" fill="none" stroke="#1d9e75" stroke-width="0.5" opacity="0.35"/>
+        <line x1="100" y1="4" x2="100" y2="11" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+        <line x1="100" y1="189" x2="100" y2="196" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+        <line x1="4" y1="100" x2="11" y2="100" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+        <line x1="189" y1="100" x2="196" y2="100" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+        <line x1="100" y1="18" x2="100" y2="10" stroke="#1d9e75" stroke-width="1.8" stroke-linecap="round"/>
+        <ellipse cx="100" cy="9" rx="7" ry="3" fill="none" stroke="#1d9e75" stroke-width="1.8"/>
+        <rect x="84" y="17" width="32" height="6" rx="2" fill="#085041"/>
+        <path d="M88 23 L80 41 L120 41 L112 23 Z" fill="#0f6e56"/>
+        <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+        <line x1="90" y1="41" x2="90" y2="93" stroke="#1d9e75" stroke-width="1" opacity="0.5"/>
+        <line x1="100" y1="41" x2="100" y2="93" stroke="#1d9e75" stroke-width="1" opacity="0.5"/>
+        <line x1="110" y1="41" x2="110" y2="93" stroke="#1d9e75" stroke-width="1" opacity="0.5"/>
+        <line x1="78" y1="67" x2="122" y2="67" stroke="#1d9e75" stroke-width="1.2" opacity="0.5"/>
+        <rect x="78" y="41" width="44" height="52" rx="1.5" fill="none" stroke="#1d9e75" stroke-width="1"/>
+        <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
+        <ellipse cx="100" cy="57" rx="4" ry="6" fill="#9fe1cb" opacity="0.95"/>
+        <ellipse cx="100" cy="55" rx="2" ry="3" fill="#e1f5ee" opacity="0.9"/>
+        <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+        <rect x="84" y="111" width="32" height="6" rx="2" fill="#085041"/>
+        <ellipse cx="100" cy="121" rx="5" ry="2.5" fill="#085041"/>
+      </svg>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="blog.html" data-i18n="nav.blog">Blog</a>
+      <a href="support.html" class="active" style="color:var(--teal-accessible);border-bottom-color:var(--teal-accessible)">Support</a>
+    </nav>
+    <div class="lang-toggle" aria-label="Language selector">
+      <button class="lang-btn lang-active" data-lang="en" onclick="window.I18N_SET('en')" aria-label="Switch to English">EN</button>
+      <button class="lang-btn" data-lang="es" onclick="window.I18N_SET('es')" aria-label="Cambiar a español">ES</button>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="support-hero" id="main-content">
+  <div class="container">
+    <p class="hero-eyebrow">🧪 Alpha · in active ideation</p>
+    <h1>What we&rsquo;re building next.</h1>
+    <p>The Foundation runs a small lab of ideation-stage projects — early, real, and changing fast. What lives here is closer to a working sketch than a finished product. Things break, names change, the gates aren&rsquo;t always polished. That&rsquo;s the point.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px">
+      <a href="https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/" target="_blank" rel="noopener" class="btn btn-primary btn-large" onclick="if(window.plausible)plausible('Alpha: open Library')">
+        🏛️ Open the Library
+      </a>
+      <a href="https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/gates.html" target="_blank" rel="noopener" class="btn btn-large" style="background:rgba(255,255,255,.12);color:#fff;border:2px solid rgba(255,255,255,.3)" onclick="if(window.plausible)plausible('Alpha: watch gates demo')">
+        🎬 Watch the live gates demo
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- LIBRARY CARD -->
+<section style="padding:80px 24px;background:#fff">
+  <div class="container" style="max-width:880px">
+    <p style="text-transform:uppercase;letter-spacing:2px;color:#888;font-size:.78rem;margin:0 0 8px">Current alpha · 1 project</p>
+    <h2 style="font-size:2rem;margin:0 0 16px">The AiGovOps Library</h2>
+    <p style="font-size:1.1rem;line-height:1.6;color:#333">A governance-as-code product. <strong>Members propose, stewards approve, every decision becomes a Beacon-signed receipt.</strong> Nine seats (Legal, Product Security, AI Governance, IT Security, Insurance, Safety, DevSecOps, FinOps, Public Policy) walk a real scenario through nine gates in front of a live, tamper-evident ledger. The verdicts are honest — including the ones that come back as &ldquo;not yet.&rdquo;</p>
+    <ul style="font-size:1rem;line-height:1.9;color:#333;margin:24px 0 32px;padding-left:22px">
+      <li><strong>Gate law:</strong> 1 = Yes (earned, with evidence). 0 = No. ? = Maybe (held only with owner + ETA).</li>
+      <li><strong>Identity:</strong> real GitHub OAuth. Stewards hold the gate; non-stewards see a 403 on convene.</li>
+      <li><strong>Ledger:</strong> Ed25519 Beacon signatures on every accepted decision; verifiable from <code>/status</code>.</li>
+      <li><strong>Durability:</strong> two-layer architecture — always-up CDN hub, Fly-backed dynamic core. See the <a href="https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/durability-plan.html" target="_blank" rel="noopener">durability plan</a>.</li>
+    </ul>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a href="https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/" target="_blank" rel="noopener" class="btn btn-primary" onclick="if(window.plausible)plausible('Alpha: Library hub')">Enter the Library &rarr;</a>
+      <a href="https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/gates.html" target="_blank" rel="noopener" class="btn" style="background:#f2f2f2;color:#222;border:1px solid #ddd" onclick="if(window.plausible)plausible('Alpha: gates demo')">Live gates demo &rarr;</a>
+      <a href="https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/tour.html" target="_blank" rel="noopener" class="btn" style="background:#f2f2f2;color:#222;border:1px solid #ddd" onclick="if(window.plausible)plausible('Alpha: tour')">Take the tour &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT-ALPHA-MEANS -->
+<section style="padding:64px 24px;background:#f8f7f4">
+  <div class="container" style="max-width:880px">
+    <h2 style="font-size:1.5rem;margin:0 0 16px">What &ldquo;alpha&rdquo; means here</h2>
+    <p style="font-size:1rem;line-height:1.7;color:#444">Alpha means we&rsquo;re shipping it openly while it&rsquo;s still being shaped. You can read the code, run the demo, sign the ledger, file the bug. What you can&rsquo;t do yet is treat it as production. URLs may move, schemas may change, and the steward roster is small. If something breaks or makes you say &ldquo;wait, why?&rdquo;, that&rsquo;s a signal we want — email the team or open an issue.</p>
+    <p style="font-size:1rem;line-height:1.7;color:#444;margin-top:14px">More alpha experiments are coming. This page will grow.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" aria-label="AiGovOps Foundation home">
+        <svg class="footer-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="height:38px;width:38px">
+          <title>AiGovOps Foundation</title>
+          <circle cx="100" cy="100" r="96" fill="#071a12"/>
+          <polygon points="100,100 42,0 158,0" fill="#9fe1cb" opacity="0.09"/>
+          <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+          <circle cx="100" cy="100" r="79" fill="none" stroke="#1d9e75" stroke-width="0.5" opacity="0.35"/>
+          <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
+          <ellipse cx="100" cy="57" rx="4" ry="6" fill="#9fe1cb" opacity="0.95"/>
+          <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+          <rect x="78" y="41" width="44" height="52" rx="1.5" fill="none" stroke="#1d9e75" stroke-width="1"/>
+          <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+        </svg>
+      </a>
+      <p>Governance Versioned Like Code. Tested Before Deployment.</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="frameworks.html">Frameworks</a>
+      <a href="alpha.html" data-i18n="nav.alpha">Alpha <span aria-hidden="true">α</span></a>
+      <a href="support.html">Support</a>
+      <a href="ken.html">Ken Johnston</a>
+      <a href="bob.html">Bob Rapp</a>
+      <a href="https://aigovops.substack.com/" target="_blank" rel="noopener">Newsletter</a>
+      <a href="https://aigovops-foundation.github.io/aigovops-beacon/" target="_blank" rel="noopener">Beacon</a>
+      <a href="https://aigovops-foundation.github.io/umbrella-govops/" target="_blank" rel="noopener">Lantern</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+      <p>© 2026 AiGovOps Foundation — 501(c)(3) Nonprofit</p>
+      <address style="font-style:normal;font-size:.8rem;color:#5a5a7a">
+        Seattle, WA · Global Community &bull;
+        <a href="mailto:bob.rapp@aigovops.community" style="color:#5a5a7a">bob.rapp@aigovops.community</a> &bull;
+        <a href="mailto:ken.johnston@aigovops.community" style="color:#5a5a7a">ken.johnston@aigovops.community</a>
+      </address>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── Coffee amounts by locale ─────────────────────────────────────────────
+(function() {
+  const locale = navigator.language || 'en-US';
+  const currency = (function() {
+    try {
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+      const map = {
+        'America': 'USD', 'Europe/London': 'GBP', 'Europe': 'EUR',
+        'Asia/Tokyo': 'JPY', 'Asia/Seoul': 'KRW', 'Asia/Shanghai': 'CNY',
+        'Asia/Kolkata': 'INR', 'Asia/Singapore': 'SGD', 'Australia': 'AUD',
+        'America/Sao_Paulo': 'BRL', 'America/Toronto': 'CAD', 'America/Vancouver': 'CAD',
+      };
+      for (const [k, v] of Object.entries(map)) {
+        if (tz.startsWith(k)) return v;
+      }
+    } catch(e) {}
+    return 'USD';
+  })();
+
+  // Coffee equivalent amounts per currency (roughly $5, $10, $20 USD)
+  const amounts = {
+    USD: [{ label: '$5',    amt: 5   }, { label: '$10',   amt: 10  }, { label: '$20',   amt: 20  }],
+    GBP: [{ label: '£4',   amt: 4   }, { label: '£8',    amt: 8   }, { label: '£16',   amt: 16  }],
+    EUR: [{ label: '€5',   amt: 5   }, { label: '€10',   amt: 10  }, { label: '€18',   amt: 18  }],
+    JPY: [{ label: '¥750', amt: 750 }, { label: '¥1500', amt: 1500}, { label: '¥3000', amt: 3000}],
+    KRW: [{ label: '₩7000',amt: 7000}, { label: '₩14000',amt:14000}, { label: '₩28000',amt:28000}],
+    CNY: [{ label: '¥35',  amt: 35  }, { label: '¥70',   amt: 70  }, { label: '¥140',  amt: 140 }],
+    INR: [{ label: '₹420', amt: 420 }, { label: '₹840',  amt: 840 }, { label: '₹1680', amt: 1680}],
+    SGD: [{ label: 'S$7',  amt: 7   }, { label: 'S$14',  amt: 14  }, { label: 'S$28',  amt: 28  }],
+    AUD: [{ label: 'A$8',  amt: 8   }, { label: 'A$16',  amt: 16  }, { label: 'A$30',  amt: 30  }],
+    BRL: [{ label: 'R$26', amt: 26  }, { label: 'R$52',  amt: 52  }, { label: 'R$100', amt: 100 }],
+    CAD: [{ label: 'C$7',  amt: 7   }, { label: 'C$14',  amt: 14  }, { label: 'C$26',  amt: 26  }],
+  };
+
+  const list = amounts[currency] || amounts['USD'];
+  const container = document.getElementById('coffeeAmounts');
+  if (!container) return;
+
+  list.forEach(item => {
+    const btn = document.createElement('a');
+    btn.href = `https://opencollective.com/aigovops-foundation/donate?amount=${item.amt}&interval=onetime`;
+    btn.target = '_blank';
+    btn.rel = 'noopener';
+    btn.className = 'coffee-pill';
+    btn.textContent = `☕ ${item.label}`;
+    btn.setAttribute('aria-label', `Donate ${item.label} — about the price of a coffee`);
+    btn.addEventListener('click', () => { try { if(window.plausible) window.plausible('Support: Coffee amount', {props:{amount:item.label,currency}}); } catch(e){} });
+    container.appendChild(btn);
+  });
+
+  // Show detected currency
+  const note = document.createElement('p');
+  note.style.cssText = 'font-size:.75rem;color:#0a3d2a;opacity:.7;margin-top:8px';
+  note.textContent = `Showing ${currency} amounts based on your location.`;
+  container.after(note);
+})();
+
+// ── Mobile nav toggle ───────────────────────────────────────────────────
+const navToggle = document.querySelector('.nav-toggle');
+const mainNav = document.querySelector('.main-nav');
+if (navToggle && mainNav) {
+  navToggle.addEventListener('click', () => {
+    const open = mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open);
+  });
+}
+</script>
+
+</body>
+</html>

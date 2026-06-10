@@ -64,6 +64,7 @@ const RESOURCES = {
     label: 'Browse 40+ governance frameworks',
     cta:   'Explore Frameworks →',
   },
+  alpha: { url: 'alpha.html', label: 'Alpha · the Library', cta: '🧪 Enter the lab' },
 };
 // ────────────────────────────────────────────────────────────────────────────
 
@@ -82,6 +83,7 @@ const INTENT_RULES = [
   { intent: 'umbrella',   keywords: ['lantern', 'umbrella', 'umbrela', 'govops platform'] },
   { intent: 'opensource', keywords: ['open source', 'opensource', 'open-source', 'github', 'projects', 'repos', 'repository', 'repositories', 'contribute'] },
   { intent: 'linkedin',   keywords: ['linkedin', 'posts', 'thoughts', 'insights', 'founders'] },
+  { intent: 'alpha',      keywords: ['alpha', 'lab', 'ideation', 'library', 'the library', 'gates', 'governance lab', 'beacon ledger'] },
 ];
 
 const CHIP_LABELS = {
@@ -95,9 +97,10 @@ const CHIP_LABELS = {
   opensource:  '💻 Open Source',
   beacon:      '🔦 Beacon',
   umbrella:    '🏮 Lantern',
+  alpha:       '🧪 Alpha · the Library',
 };
 
-const FALLBACK = `I can help with ten things — tap a chip below or type: "frameworks", "meeting", "support", "newsletter", "event", "Ken", "Bob", "open source", "Beacon", or "Lantern".`;
+const FALLBACK = `I can help with ten things — tap a chip below or type: "frameworks", "meeting", "support", "newsletter", "event", "Ken", "Bob", "open source", "Beacon", or "Lantern", or "Alpha".`;
 
 // DOM refs
 const bubble   = document.getElementById('chatBubble');
