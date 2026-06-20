@@ -1,0 +1,52 @@
+name: Vendor correction or addition
+description: Suggest a fix, update, or new vendor for the 2026 AI-governance catalog.
+title: "[vendor] "
+labels: ["vendor-correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep the catalog honest. **Neutrality is governed** here: ranking can't be bought and gaps aren't hidden. Please cite a public source for any claim so we can verify it neutrally.
+  - type: input
+    id: vendor
+    attributes:
+      label: Vendor name
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Compliance & AI GRC (grc)
+        - Policy-as-code & Gates (policy)
+        - Runtime guardrails & observability (runtime)
+        - Code shipping & supply chain (ship)
+        - OT / IIoT (ot)
+        - New / unsure
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of change?
+      options:
+        - Correction to an existing entry
+        - New vendor to add
+        - Remove / merged (M&A)
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: The correction
+      description: What should change — and what is this vendor genuinely best at vs. its honest gap?
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Public source (URL)
+      description: Docs, pricing page, press release, or filing — so the change can be verified neutrally.
+    validations:
+      required: true

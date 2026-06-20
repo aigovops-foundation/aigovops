@@ -3,6 +3,13 @@
  * Neutral + gap-aware: pricing/oss are public-signal estimates (mostly custom-quoted enterprise);
  * several entries reflect recent M&A. The OT/IIoT category is honestly NOT AI-model governance —
  * it is the unfilled manufacturing gap. Source: docs/vendor-guide.html + 2025-2026 vendor research. */
+const VENDOR_META = {
+  lastReviewed: "2026-06-19",          // ISO date of the last catalog audit
+  reviewedBy:   "aigovops-agent-vendor-rfi",
+  cadenceDays:  90,                    // re-audit at least quarterly (enforced by .github/workflows/freshness.yml)
+  source:       "docs/vendor-guide.html",
+  note:         "Corrections welcome — open a vendor-correction issue. Ranking can't be bought; gaps aren't hidden."
+};
 const VENDOR_CATEGORIES = [
   {id:"grc",     label:"Compliance & AI GRC",        layer:"Audit & Policy",         note:"Audit, policy/obligation libraries, regulatory mapping, dashboards."},
   {id:"policy",  label:"Policy-as-code & Gates",     layer:"Gates & Controls",       note:"CI/CD + K8s + IaC enforcement and AI-agent tool control."},

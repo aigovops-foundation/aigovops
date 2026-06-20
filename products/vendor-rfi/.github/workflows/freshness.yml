@@ -1,0 +1,47 @@
+name: Catalog freshness audit
+# Deterministic, version-controlled maintenance loop: if the vendor catalog has not been
+# re-audited within VENDOR_META.cadenceDays, open a tracking issue for aigovops-agent-vendor-rfi.
+on:
+  schedule:
+    - cron: "0 9 1 */3 *"   # 09:00 UTC, 1st of every 3rd month (quarterly)
+  workflow_dispatch: {}
+permissions:
+  issues: write
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check catalog age vs cadence
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const js = fs.readFileSync('vendors-data.js', 'utf8');
+            const reviewed = (js.match(/lastReviewed:\s*"([^"]+)"/) || [])[1];
+            const cadence  = parseInt((js.match(/cadenceDays:\s*(\d+)/) || [])[1] || '90', 10);
+            if (!reviewed) { core.setFailed('VENDOR_META.lastReviewed not found'); return; }
+            const ageDays = Math.floor((Date.now() - Date.parse(reviewed + 'T00:00:00Z')) / 86400000);
+            core.info(`Catalog last reviewed ${reviewed} — ${ageDays} days ago (cadence ${cadence}).`);
+            if (ageDays < cadence) { core.info('Fresh — no action.'); return; }
+            const { data: open } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo, state: 'open', labels: 'vendor-audit' });
+            if (open.length) { core.info('Audit issue already open — skipping.'); return; }
+            await github.rest.issues.create({
+              owner: context.repo.owner, repo: context.repo.repo,
+              title: `Quarterly vendor catalog audit due (last reviewed ${reviewed})`,
+              labels: ['vendor-audit'],
+              body: [
+                `The catalog was last reviewed **${reviewed}** (${ageDays} days ago; cadence ${cadence} days).`,
+                '',
+                '`aigovops-agent-vendor-rfi` audit checklist:',
+                '- [ ] Re-check each category vs `docs/vendor-guide.html` and public sources',
+                '- [ ] Fold in M&A / renames / new entrants',
+                '- [ ] Update `VENDOR_META.lastReviewed` in `vendors-data.js`',
+                '- [ ] Regenerate doc pages + run the link/responsive checks',
+                '',
+                "Neutrality is governed: ranking can't be bought, gaps aren't hidden."
+              ].join('\n')
+            });
+            core.info('Opened audit issue.');
