@@ -12,3 +12,5 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Site integrity (vendor-data schema + HTML link integrity)
         run: node scripts/check-site.js
+      - name: Brand tokens match the canonical (tokens.css single-source)
+        run: bash scripts/check-tokens.sh tokens.css
