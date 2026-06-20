@@ -42,10 +42,14 @@
     .stack{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
     .stack .card strong{color:var(--primary)} .small{font-size:14px}
     @media (max-width:900px){.grid,.stack{grid-template-columns:1fr}}
-  </style>
+  
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
+.skip-link{position:absolute;left:-9999px;top:0;background:#14b393;color:#0e141b;padding:10px 16px;border-radius:0 0 8px 0;z-index:1000;font-weight:700;text-decoration:none}.skip-link:focus{left:0}
+</style>
 </head>
 <body>
-  <div class="wrap">
+<a class="skip-link" href="#main">Skip to main content</a>
+  <div class="wrap" id="main" role="main">
     <section class="hero">
       <div class="eyebrow">AiGovOps Foundation · Beacon × Umbrella</div>
       <h1>Open-source vendor RFI for AI governance that runs like engineering.</h1>

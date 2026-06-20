@@ -64,9 +64,13 @@ h2{font-size:1.5rem;margin:0 0 .4rem}
 pre{font-family:var(--mono);font-size:12px;white-space:pre-wrap;word-break:break-word;background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:14px;max-height:360px;overflow:auto;margin-top:12px}
 .note{font-size:13px;color:var(--muted)}.warn{color:var(--warn)}
 @media (max-width:760px){.objectives,.layers{grid-template-columns:1fr}}
+
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
+.skip-link{position:absolute;left:-9999px;top:0;background:#14b393;color:#0e141b;padding:10px 16px;border-radius:0 0 8px 0;z-index:1000;font-weight:700;text-decoration:none}.skip-link:focus{left:0}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <div class="topbar"><div class="inner">
   <span class="eyebrow">AiGovOps Foundation · Beacon × Umbrella</span>
   <nav class="nav">
@@ -76,7 +80,7 @@ pre{font-family:var(--mono);font-size:12px;white-space:pre-wrap;word-break:break
     <a href="./docs/vendor-guide.html">Vendor guide</a>
   </nav>
 </div></div>
-<div class="wrap">
+<div class="wrap" id="main" role="main">
   <span class="step">Audit training · self-paced</span>
   <h1>Train an AI-governance vendor audit — like engineering.</h1>
   <p class="lede">A hands-on module for auditors, procurement, and engineering leads: learn the AIGovOps governance stack, test your understanding, run a self-audit against the Foundation's checklist, and generate an unsigned Beacon-style training receipt you can keep as evidence.</p>

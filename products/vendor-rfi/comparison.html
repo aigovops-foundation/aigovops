@@ -74,9 +74,13 @@ tr:hover td{background:rgba(20,179,147,.04)}
   td.name::before{display:none}
   td>*{text-align:right}
 }
+
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
+.skip-link{position:absolute;left:-9999px;top:0;background:#14b393;color:#0e141b;padding:10px 16px;border-radius:0 0 8px 0;z-index:1000;font-weight:700;text-decoration:none}.skip-link:focus{left:0}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <div class="topbar"><div class="inner">
   <span class="eyebrow">AiGovOps Foundation · Beacon × Umbrella</span>
   <nav class="nav">
@@ -86,7 +90,7 @@ tr:hover td{background:rgba(20,179,147,.04)}
     <a href="./docs/vendor-guide.html">Vendor guide</a>
   </nav>
 </div></div>
-<div class="wrap">
+<div class="wrap" id="main" role="main">
   <span class="eyebrow">Market surface · 2026</span>
   <h1>AI-governance vendor comparison — side by side</h1>
   <p class="lede"><span class="count" id="total"></span> vendors across five categories, researched June 2026. Neutral and gap-aware: open-source and pricing are public signals (most enterprise terms are custom-quoted), and several entries reflect recent M&A. The OT/IIoT row is honest — those are OT-security tools, <strong>not</strong> AI-model governance. Sourced from the <a href="./docs/vendor-guide.html">vendor guide</a>.</p>

@@ -1,0 +1,4 @@
+# Code owners for the AIGovOps Vendor RFI.
+# A review is requested automatically on every PR (branch protection requires it on the canonical repo).
+# Add Ken Johnston's GitHub handle here when available.
+* @bobrapp

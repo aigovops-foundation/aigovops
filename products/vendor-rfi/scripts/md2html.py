@@ -17,6 +17,13 @@ SHELL = """<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title} — AIGovOps Vendor RFI</title>
+<link rel="canonical" href="{canonical}">
+<meta name="description" content="{title} — part of the AIGovOps open-source Vendor RFI.">
+<meta property="og:title" content="{title} — AIGovOps Vendor RFI">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{canonical}">
+<meta property="og:image" content="https://aigovops-foundation.github.io/aigovops-vendor-rfi/assets/og-vendor-rfi.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -143,7 +150,8 @@ def render(md):
 def main():
     src, title, dst = sys.argv[1], sys.argv[2], sys.argv[3]
     body = render(open(src, encoding="utf-8").read())
-    open(dst, "w", encoding="utf-8").write(SHELL.format(title=html.escape(title), body=body))
+    canonical = "https://aigovops-foundation.github.io/aigovops-vendor-rfi/" + dst.replace("\\", "/")
+    open(dst, "w", encoding="utf-8").write(SHELL.format(title=html.escape(title), canonical=canonical, body=body))
     print(f"wrote {dst}  ({len(body)} chars of body)")
 
 
