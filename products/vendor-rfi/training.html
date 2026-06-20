@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AIGovOps Vendor RFI — Audit Training</title>
+<meta name="description" content="An interactive audit training tool for AI governance vendor selection: learn the AIGovOps stack, take a knowledge check, run a self-audit, and generate a Beacon-style training receipt." />
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* AIGovOps "deep ocean governance" brand — shared with Beacon & Umbrella */
+:root{--bg:#0e141b;--surface:#141c24;--surface2:#192330;--border:#2a333c;--text:#e2e7e9;--muted:#7e919a;
+  --primary:#14b393;--primary2:#0f8e74;--blue:#5591c7;--warn:#faaf2e;--gap:#d74242;--radius:14px;
+  --font:'Satoshi','General Sans',system-ui,Segoe UI,Roboto,Arial,sans-serif;
+  --mono:'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,monospace}
+*{box-sizing:border-box}body{margin:0;font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--primary)}
+.topbar{border-top:3px solid var(--primary);border-bottom:1px solid var(--border);padding:16px 20px}
+.topbar .inner{max-width:920px;margin:0 auto;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.eyebrow{font-family:var(--mono);text-transform:uppercase;letter-spacing:.16em;font-size:11px;color:var(--primary);font-weight:500}
+.nav a{color:var(--muted);text-decoration:none;font-weight:700;font-size:14px;margin-left:16px}.nav a:hover{color:var(--primary)}
+.wrap{max-width:920px;margin:0 auto;padding:30px 20px 90px}
+h1{font-size:clamp(2rem,4vw,3rem);line-height:1.06;letter-spacing:-.01em;margin:.4rem 0 .6rem}
+.lede{color:var(--muted);max-width:70ch;font-size:1.05rem}
+h2{font-size:1.5rem;margin:0 0 .4rem}
+.section{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin:22px 0}
+.step{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--primary)}
+.objectives{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}
+.objectives li{list-style:none;background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;font-size:14px}
+.layers{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
+.layer{background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:16px}
+.layer h3{margin:0 0 4px;font-size:1.05rem}.layer .fn{color:var(--muted);font-size:14px;margin:0 0 8px}
+.layer .true{font-size:13px;color:var(--text)}.layer .true b{color:var(--primary);font-weight:600}
+.q{border-top:1px solid var(--border);padding:18px 0}.q:first-of-type{border-top:0}
+.q .stem{font-weight:600;margin-bottom:10px}.q .opt{display:block;padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:var(--surface2);margin:7px 0;cursor:pointer;font-size:14px}
+.q .opt input{margin-right:9px}
+.q.correct .opt.chosen{border-color:var(--primary);background:color-mix(in srgb,var(--primary) 14%,var(--surface2))}
+.q.wrong .opt.chosen{border-color:var(--gap);background:color-mix(in srgb,var(--gap) 14%,var(--surface2))}
+.q .opt.answer{border-color:var(--primary)}
+.q .exp{display:none;margin-top:8px;font-size:13px;color:var(--muted);border-left:3px solid var(--primary);padding-left:10px}
+.q.graded .exp{display:block}
+.check{display:flex;align-items:flex-start;gap:10px;padding:11px 12px;border:1px solid var(--border);border-radius:10px;background:var(--surface2);margin:8px 0;font-size:14px;cursor:pointer}
+.check input{margin-top:.2rem}
+.btn{display:inline-block;padding:11px 18px;border-radius:11px;border:1px solid var(--border);background:var(--surface2);color:var(--text);font-family:var(--font);font-weight:700;cursor:pointer;text-decoration:none}
+.btn:hover{border-color:var(--primary)} .btn.primary{background:var(--primary);color:#06231d;border-color:var(--primary)}.btn.primary:hover{background:var(--primary2)}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:14px}
+.badge{font-family:var(--mono);font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;background:color-mix(in srgb,var(--primary) 14%,var(--surface));color:var(--primary)}
+.meter{height:10px;border-radius:999px;background:var(--surface2);border:1px solid var(--border);overflow:hidden;margin:12px 0 4px}
+.meter > i{display:block;height:100%;background:var(--primary);width:0;transition:width .25s}
+pre{font-family:var(--mono);font-size:12px;white-space:pre-wrap;word-break:break-word;background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:14px;max-height:360px;overflow:auto;margin-top:12px}
+.note{font-size:13px;color:var(--muted)}.warn{color:var(--warn)}
+@media (max-width:760px){.objectives,.layers{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="inner">
+  <span class="eyebrow">AiGovOps Foundation · Beacon × Umbrella</span>
+  <nav class="nav">
+    <a href="./index.html">Overview</a>
+    <a href="./vendor-rfi-advisor.html">Advisor</a>
+    <a href="./comparison.html">Comparison</a>
+    <a href="./docs/vendor-guide.html">Vendor guide</a>
+  </nav>
+</div></div>
+<div class="wrap">
+  <span class="step">Audit training · self-paced</span>
+  <h1>Train an AI-governance vendor audit — like engineering.</h1>
+  <p class="lede">A hands-on module for auditors, procurement, and engineering leads: learn the AIGovOps governance stack, test your understanding, run a self-audit against the Foundation's checklist, and generate an unsigned Beacon-style training receipt you can keep as evidence.</p>
+  <ul class="objectives" id="objectives"></ul>
+
+  <section class="section">
+    <span class="step">Lesson 1</span>
+    <h2>The governance stack — and what "true" means at each layer</h2>
+    <p class="note">From audit discovery to shipping code, governance is executable and verifiable — not a PDF. Each layer has a definition of done ("true").</p>
+    <div class="layers" id="layers"></div>
+  </section>
+
+  <section class="section">
+    <span class="step">Lesson 2</span>
+    <h2>Knowledge check</h2>
+    <p class="note">Answer all questions, then grade. Each answer explains the reasoning. Drawn from the Fortune 100 Manufacturing vendor guide.</p>
+    <div id="quiz"></div>
+    <div class="row">
+      <button class="btn primary" id="gradeBtn">Grade answers</button>
+      <button class="btn" id="resetQuizBtn">Reset</button>
+      <span class="badge" id="score">Not graded</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <span class="step">Lesson 3</span>
+    <h2>Self-audit — AIGovOps Foundation alignment checklist</h2>
+    <p class="note">Tick the practices your (or your client's) program already does. This drives your readiness score and the training receipt.</p>
+    <div id="checklist"></div>
+    <div class="meter"><i id="readyBar"></i></div>
+    <div class="note"><span id="readyPct">0%</span> readiness — <span id="readyCount">0 / 10</span> practices in place</div>
+  </section>
+
+  <section class="section">
+    <span class="step">Evidence</span>
+    <h2>Training completion receipt <span class="warn" style="font-size:13px">(UNSIGNED PREVIEW)</span></h2>
+    <p class="note">A deterministic, canonical record of this training session with a SHA-256 hash — the same shape Beacon would later sign (Ed25519 + JCS). Not an attestation by itself.</p>
+    <div class="row">
+      <button class="btn primary" id="receiptBtn">Generate receipt</button>
+      <button class="btn" id="downloadBtn">Download JSON</button>
+      <span class="badge" id="hashLine">SHA-256 pending</span>
+    </div>
+    <pre id="receipt">{}</pre>
+  </section>
+</div>
+<script>
+const OBJECTIVES=[
+  "Name the 7 AIGovOps stack layers and what \"true\" means at each",
+  "Map the reference vendors to the layers they cover",
+  "Identify the gaps no single vendor solves (esp. OT/IIoT)",
+  "Run a self-audit against the Foundation alignment checklist",
+  "Produce a verifiable, canonical evidence receipt",
+  "Apply it hands-on in the Vendor RFI advisor"
+];
+const LAYERS=[
+  {n:"Audit",fn:"AI inventory discovery + attestation against frameworks (NIST AI RMF, ISO 42001, EU AI Act).",t:"Cryptographically signed audit bundles any auditor can <b>re-verify</b>."},
+  {n:"Policy",fn:"Version-controlled Rego / declarative policies in Git, peer-reviewed Decision Cards.",t:"Policy drift flagged instantly; every policy <b>traceable to a control</b>."},
+  {n:"Gates & Controls",fn:"CI/CD + admission control — block unauthorized model deployments.",t:"Governance runs at <b>commit time</b>, not after launch."},
+  {n:"Dashboards & Oversight",fn:"Unified visibility across models, vendors, agents, environments.",t:"Real-time state; <b>no anonymous ghost agents</b>."},
+  {n:"Model Behavior & Insights",fn:"Drift, fairness, hallucination, explainability scoring.",t:"Model cards as <b>versioned artifacts</b>, not docs."},
+  {n:"Guardrails",fn:"Runtime interception of prompts / responses / tool calls.",t:"<b>&lt;100ms</b> enforcement at the execution layer."},
+  {n:"Shipping the Code",fn:"DevSecOps + GitOps with policy gates baked into the SDLC.",t:"Security & governance are <b>properties of the code</b>."}
+];
+const QUIZ=[
+  {q:"Which two-vendor pairing is the compliance control plane (audit, policy library, GRC dashboard)?",o:["Styra + OPA","Credo AI + IBM watsonx.governance","Fiddler AI + NeMo Guardrails","Snyk + Wiz"],a:1,e:"Credo AI's Policy Packs are embedded as Compliance Accelerators inside IBM watsonx.governance — the compliance + dashboard + model-lifecycle layer."},
+  {q:"What declarative language is the AIGovOps reference for policy-as-code?",o:["YAML","Rego (Open Policy Agent)","Python","HCL only"],a:1,e:"Rego is OPA's DSL — the standard for governance-as-code. The GOPAL library encodes EU AI Act / NIST AI RMF as versioned Rego."},
+  {q:"At which layer does Fiddler AI primarily operate?",o:["Audit & policy library","Runtime guardrails + model & agent observability","CI/CD policy gates","Code & dependency scanning"],a:1,e:"Fiddler intercepts prompts/responses at runtime and gives agentic observability. It needs upstream policy from OPA/Credo."},
+  {q:"What does \"true\" mean at the Audit layer?",o:["A PDF compliance report","A dashboard screenshot","Cryptographically signed audit bundles any auditor can re-verify","A signed email approval"],a:2,e:"Beacon-style signed bundles — re-verifiable evidence, not screenshots or claims."},
+  {q:"Which gap does NO single vendor in the stack fully solve for a manufacturer?",o:["Policy authoring","Runtime guardrails","OT/IIoT governance (SCADA / DCS / PLC)","Compliance dashboards"],a:2,e:"None of the three have mature SCADA/DCS/historian connectors — OT governance needs custom integration."},
+  {q:"Complete the enforcement hierarchy: Credo AI governs what is ___, OPA/Styra governs what is ___, Fiddler governs what ___.",o:["executed / approved / deploys","approved / deployed / executes at runtime","deployed / executes / approves","shipped / approved / monitors"],a:1,e:"Credo = what's approved; OPA/Styra = what's deployed (CI/CD + admission); Fiddler = what executes at runtime."},
+  {q:"Guardrail enforcement latency target at the execution layer?",o:["< 1 second","< 500 ms","< 100 ms","< 10 seconds"],a:2,e:"<100ms, in-environment — Fiddler's Centor Models run inside the customer VPC with no data exposure."},
+  {q:"Which frameworks does the compliance layer map AI obligations to?",o:["Only GDPR","NIST AI RMF, ISO/IEC 42001, EU AI Act","PCI-DSS only","SOC 2 only"],a:1,e:"Credo / watsonx.governance map obligations to NIST AI RMF, ISO 42001, and the EU AI Act (plus GDPR/CCPA)."}
+];
+const CHECKLIST=[
+  "Map all policies to Git audit logs — every policy change is a versioned commit",
+  "Peer-review every Decision Card before deployment",
+  "Integrate governance checks into dev pipelines (CI gate, not post-hoc)",
+  "Link every model to a policy card in the AI inventory",
+  "Monitor for drift continuously in production",
+  "Version all Decision Cards as first-class CI/CD artifacts",
+  "Automate NIST AI RMF validation checks",
+  "Block unauthorized model deployments at the infrastructure layer",
+  "Flag policy drift instantly with automated alerts",
+  "Produce cryptographically signed audit bundles for each model deployment"
+];
+
+const $=id=>document.getElementById(id);
+$('objectives').innerHTML=OBJECTIVES.map(o=>`<li>✓ ${o}</li>`).join('');
+$('layers').innerHTML=LAYERS.map((l,i)=>`<div class="layer"><h3>${i+1}. ${l.n}</h3><p class="fn">${l.fn}</p><div class="true">True: ${l.t}</div></div>`).join('');
+
+let graded=false;
+$('quiz').innerHTML=QUIZ.map((item,qi)=>`<div class="q" id="q${qi}"><div class="stem">${qi+1}. ${item.q}</div>${item.o.map((opt,oi)=>`<label class="opt" data-q="${qi}" data-o="${oi}"><input type="radio" name="q${qi}">${opt}</label>`).join('')}<div class="exp">${item.e}</div></div>`).join('');
+$('quiz').querySelectorAll('.opt').forEach(l=>l.addEventListener('click',()=>{ if(graded) return; const qi=l.dataset.q; document.querySelectorAll(`.opt[data-q="${qi}"]`).forEach(x=>x.classList.remove('chosen')); l.classList.add('chosen'); }));
+
+let quizScore=null;
+function grade(){ graded=true; let s=0; QUIZ.forEach((item,qi)=>{ const q=$('q'+qi); const chosen=q.querySelector('.opt.chosen'); const ci=chosen?+chosen.dataset.o:-1; q.classList.add('graded'); q.querySelectorAll('.opt')[item.a].classList.add('answer'); if(ci===item.a){s++;q.classList.add('correct');} else {q.classList.add('wrong');} }); quizScore=s; $('score').textContent=`Score ${s} / ${QUIZ.length}` + (s>=6?' · pass':''); refreshReceipt(); }
+function resetQuiz(){ graded=false; quizScore=null; QUIZ.forEach((_,qi)=>{const q=$('q'+qi);q.className='q';q.querySelectorAll('.opt').forEach(o=>o.classList.remove('chosen','answer'));q.querySelectorAll('input').forEach(i=>i.checked=false);}); $('score').textContent='Not graded'; refreshReceipt(); }
+$('gradeBtn').onclick=grade; $('resetQuizBtn').onclick=resetQuiz;
+
+$('checklist').innerHTML=CHECKLIST.map((c,i)=>`<label class="check"><input type="checkbox" data-i="${i}">${c}</label>`).join('');
+function checkCount(){ return $('checklist').querySelectorAll('input:checked').length; }
+function refreshReady(){ const n=checkCount(); const pct=Math.round(n/CHECKLIST.length*100); $('readyBar').style.width=pct+'%'; $('readyPct').textContent=pct+'%'; $('readyCount').textContent=`${n} / ${CHECKLIST.length}`; refreshReceipt(); }
+$('checklist').addEventListener('change',refreshReady);
+
+function canonical(o){ if(Array.isArray(o)) return '['+o.map(canonical).join(',')+']'; if(o&&typeof o==='object') return '{'+Object.keys(o).sort().map(k=>JSON.stringify(k)+':'+canonical(o[k])).join(',')+'}'; return JSON.stringify(o); }
+async function sha256(t){ const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(t)); return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join(''); }
+let lastReceipt=null;
+async function refreshReceipt(){
+  const n=checkCount();
+  const rec={schema:'aigovops.audit-training.receipt.v1',module:'vendor-rfi-audit-training',generated_at:new Date().toISOString(),
+    knowledge_check:{score:quizScore,total:QUIZ.length,passed:quizScore!==null&&quizScore>=6},
+    self_audit:{practices_in_place:n,total:CHECKLIST.length,readiness_pct:Math.round(n/CHECKLIST.length*100)},
+    completed:quizScore!==null&&quizScore>=6&&n>=8,
+    notes:{signing:'unsigned preview only',future:'Beacon Ed25519 + JCS attestation'}};
+  const canon=canonical(rec); const hash=await sha256(canon);
+  $('receipt').textContent=JSON.stringify({receipt:rec,evidence_sha256:hash,signature:null},null,2);
+  $('hashLine').textContent='SHA-256 '+hash.slice(0,16)+'…';
+  lastReceipt={rec,hash};
+}
+$('receiptBtn').onclick=refreshReceipt;
+$('downloadBtn').onclick=()=>{ if(!lastReceipt) return; const blob=new Blob([JSON.stringify({receipt:lastReceipt.rec,evidence_sha256:lastReceipt.hash,signature:null},null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='aigovops-training-receipt.json'; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),1000); };
+refreshReady(); refreshReceipt();
+</script>
+</body>
+</html>

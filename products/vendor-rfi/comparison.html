@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AIGovOps Vendor RFI — 2026 vendor comparison</title>
+<meta name="description" content="A side-by-side comparison of 2026 AI-governance vendors across five categories: compliance/GRC, policy-as-code, runtime guardrails, code shipping, and OT/IIoT." />
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e141b;--surface:#141c24;--surface2:#192330;--border:#2a333c;--text:#e2e7e9;--muted:#7e919a;
+  --primary:#14b393;--primary2:#0f8e74;--warn:#faaf2e;--gap:#d74242;--radius:12px;
+  --font:'Satoshi','General Sans',system-ui,Segoe UI,Roboto,Arial,sans-serif;
+  --mono:'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,monospace}
+*{box-sizing:border-box}body{margin:0;font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.55}
+a{color:var(--primary)}
+.topbar{border-top:3px solid var(--primary);border-bottom:1px solid var(--border);padding:16px 20px;position:sticky;top:0;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);z-index:5}
+.topbar .inner{max-width:1180px;margin:0 auto;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.eyebrow{font-family:var(--mono);text-transform:uppercase;letter-spacing:.16em;font-size:11px;color:var(--primary);font-weight:500}
+.nav a{color:var(--muted);text-decoration:none;font-weight:700;font-size:14px;margin-left:16px}.nav a:hover{color:var(--primary)}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 20px 90px}
+h1{font-size:clamp(1.9rem,3.6vw,2.8rem);line-height:1.06;letter-spacing:-.01em;margin:.3rem 0 .5rem}
+.lede{color:var(--muted);max-width:80ch}
+.controls{display:grid;grid-template-columns:1fr;gap:12px;margin:18px 0 8px}
+.searchrow{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+#search{flex:1 1 280px;min-width:220px;padding:12px 14px;border-radius:10px;border:1px solid var(--border);background:var(--surface2);color:var(--text);font:inherit}
+.results{font-family:var(--mono);font-size:12px;color:var(--muted);white-space:nowrap}
+#chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font-size:13px;font-weight:700;padding:9px 14px;border-radius:999px;border:1px solid var(--border);background:var(--surface2);color:var(--muted);cursor:pointer;text-decoration:none}
+.chip:hover,.chip.on{border-color:var(--primary);color:var(--primary)}
+.cat{margin:30px 0 0}
+.cat h2{font-size:1.4rem;margin:0 0 2px}.cat .note{color:var(--muted);font-size:14px;margin:0 0 12px}
+.cat.ot .note{color:var(--warn)}
+.tablewrap{overflow-x:auto;border:1px solid var(--border);border-radius:var(--radius)}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:880px}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+th{background:var(--surface);color:var(--muted);font-weight:600;white-space:nowrap}
+@media (min-width:1081px){th{position:sticky;top:0}}
+td.name{font-weight:700;color:#fff;white-space:nowrap}
+tr:hover td{background:rgba(20,179,147,.04)}
+.oss{font-family:var(--mono);font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.oss.yes{background:color-mix(in srgb,var(--primary) 16%,var(--surface));color:var(--primary)}
+.oss.partial{background:color-mix(in srgb,var(--warn) 16%,var(--surface));color:var(--warn)}
+.oss.no{background:var(--surface2);color:var(--muted)}
+.fw{font-family:var(--mono);font-size:13px;color:#9fb0bd}
+.count{font-family:var(--mono);font-size:12px;color:var(--primary)}
+.empty{color:var(--muted);padding:14px;font-size:14px}
+.foot{margin-top:30px;color:var(--muted);font-size:13px;border-top:1px solid var(--border);padding-top:14px}
+/* Phones: restack each row as a labelled card instead of a wide horizontal scroll. */
+@media (max-width:760px){
+  .tablewrap{border:0;overflow:visible}
+  table{min-width:0;display:block}
+  thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}  /* keep header for a11y, hide visually */
+  tbody{display:block}
+  tr{display:block;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:6px 12px;margin-bottom:10px}
+  td{display:flex;justify-content:space-between;gap:16px;align-items:baseline;border:0;border-bottom:1px solid var(--border);padding:9px 0}
+  td:last-child{border-bottom:0}
+  td::before{content:attr(data-label);color:var(--muted);font-size:12px;font-weight:600;flex:0 0 92px}
+  td.name{font-size:1.05rem;padding-top:4px}
+  td.name::before{display:none}
+  td>*{text-align:right}
+}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="inner">
+  <span class="eyebrow">AiGovOps Foundation · Beacon × Umbrella</span>
+  <nav class="nav">
+    <a href="./index.html">Overview</a>
+    <a href="./training.html">Training</a>
+    <a href="./vendor-rfi-advisor.html">Advisor</a>
+    <a href="./docs/vendor-guide.html">Vendor guide</a>
+  </nav>
+</div></div>
+<div class="wrap">
+  <span class="eyebrow">Market surface · 2026</span>
+  <h1>AI-governance vendor comparison — side by side</h1>
+  <p class="lede"><span class="count" id="total"></span> vendors across five categories, researched June 2026. Neutral and gap-aware: open-source and pricing are public signals (most enterprise terms are custom-quoted), and several entries reflect recent M&A. The OT/IIoT row is honest — those are OT-security tools, <strong>not</strong> AI-model governance. Sourced from the <a href="./docs/vendor-guide.html">vendor guide</a>.</p>
+  <div class="controls">
+    <div class="searchrow">
+      <input id="search" type="search" placeholder="Search vendors, capabilities, frameworks…" aria-label="Search vendors">
+      <span class="results" id="results" aria-live="polite"></span>
+    </div>
+    <div id="chips"></div>
+  </div>
+  <div id="cats"></div>
+  <p class="foot">Generated by <code>aigovops-agent-vendor-rfi</code>. Inclusion is not endorsement; ranking can't be bought and gaps aren't hidden (see the <a href="./docs/vendor-sponsorship.html">sponsorship model</a>). Have a correction? Open an issue.</p>
+</div>
+<script src="./vendors-data.js"></script>
+<script>
+const $=s=>document.querySelector(s);
+$('#total').textContent=VENDORS.length;
+let activeCat=null, query="";
+const ossLabel={yes:"Open source",partial:"Partial OSS",no:"Proprietary"};
+$('#chips').innerHTML=`<a class="chip on" data-cat="">All</a>`+VENDOR_CATEGORIES.map(c=>`<a class="chip" data-cat="${c.id}">${c.label}</a>`).join('');
+$('#chips').addEventListener('click',e=>{const c=e.target.closest('.chip'); if(!c)return; activeCat=c.dataset.cat||null; document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x===c)); render();});
+$('#search').addEventListener('input',e=>{query=e.target.value.trim().toLowerCase(); render();});
+function match(v){ if(activeCat&&v.cat!==activeCat) return false; if(!query) return true; return (v.name+' '+v.best+' '+v.gap+' '+v.frameworks+' '+v.tags.join(' ')).toLowerCase().includes(query); }
+function render(){
+  const root=$('#cats'); root.innerHTML=''; let total=0;
+  VENDOR_CATEGORIES.forEach(c=>{
+    const rows=VENDORS.filter(v=>v.cat===c.id && match(v));
+    if(activeCat&&activeCat!==c.id) return;
+    total+=rows.length;
+    if(!rows.length && (query||activeCat)) return;
+    const sec=document.createElement('section'); sec.className='cat'+(c.id==='ot'?' ot':'');
+    sec.innerHTML=`<h2>${c.label} <span class="count">(${rows.length})</span></h2><p class="note">${c.note}</p>`+
+      (rows.length?`<div class="tablewrap"><table><thead><tr><th>Vendor</th><th>Best at</th><th>Key gap</th><th>Open source</th><th>Pricing signal</th><th>Frameworks</th></tr></thead><tbody>`+
+      rows.map(v=>`<tr><td class="name" data-label="Vendor">${v.name}</td><td data-label="Best at">${v.best}</td><td data-label="Key gap">${v.gap}</td><td data-label="Open source"><span class="oss ${v.oss}">${ossLabel[v.oss]}</span></td><td data-label="Pricing">${v.pricing}</td><td class="fw" data-label="Frameworks">${v.frameworks}</td></tr>`).join('')+
+      `</tbody></table></div>`:`<p class="empty">No matches in this category.</p>`);
+    root.appendChild(sec);
+  });
+  $('#results').textContent = (query||activeCat) ? `${total} of ${VENDORS.length} match` : `${VENDORS.length} vendors`;
+  if(!root.children.length) root.innerHTML='<p class="empty">No vendors match your search.</p>';
+}
+render();
+</script>
+</body>
+</html>

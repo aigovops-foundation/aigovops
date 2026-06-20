@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auditor Value — AIGovOps Vendor RFI</title>
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* AIGovOps "deep ocean governance" brand — shared with Beacon & Umbrella */
+:root{--bg:#0e141b;--surface:#141c24;--surface2:#192330;--border:#2a333c;--text:#e2e7e9;--muted:#7e919a;
+  --primary:#14b393;--primary2:#0f8e74;--radius:12px;
+  --font:'Satoshi','General Sans',system-ui,Segoe UI,Roboto,Arial,sans-serif;
+  --mono:'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,monospace}
+*{box-sizing:border-box}body{margin:0;font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.65}
+.topbar{border-top:3px solid var(--primary);border-bottom:1px solid var(--border);padding:16px 20px}
+.topbar .inner{max-width:860px;margin:0 auto;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.eyebrow{font-family:var(--mono);text-transform:uppercase;letter-spacing:.16em;font-size:11px;color:var(--primary);font-weight:500}
+.back{color:var(--primary);text-decoration:none;font-weight:700;font-size:14px}
+.doc{max-width:860px;margin:0 auto;padding:28px 20px 80px}
+.doc h1{font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.1;letter-spacing:-.01em;margin:.4em 0 .5em}
+.doc h2{font-size:1.5rem;margin:1.8em 0 .5em;padding-bottom:.3em;border-bottom:1px solid var(--border)}
+.doc h3{font-size:1.2rem;margin:1.5em 0 .4em;color:var(--primary)}
+.doc h4{font-size:1.02rem;margin:1.2em 0 .3em;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.doc p{margin:.7em 0}.doc a{color:var(--primary)}
+.doc strong{color:#fff}
+.doc ul,.doc ol{margin:.6em 0;padding-left:1.4em}.doc li{margin:.3em 0}
+.doc li.task{list-style:none;margin-left:-1.2em}
+.doc blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid var(--primary);background:var(--surface);color:var(--muted);border-radius:0 8px 8px 0}
+.doc hr{border:0;border-top:1px solid var(--border);margin:2em 0}
+.doc code{font-family:var(--mono);font-size:.88em;background:var(--surface2);border:1px solid var(--border);border-radius:5px;padding:.08em .35em}
+.doc pre{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;overflow:auto}
+.doc pre code{background:none;border:0;padding:0}
+.doc sup{color:var(--primary);font-size:.7em;font-weight:700}
+.doc table{width:100%;border-collapse:collapse;margin:1.2em 0;font-size:.94rem;display:block;overflow-x:auto}
+.doc th,.doc td{text-align:left;padding:.6em .8em;border:1px solid var(--border);vertical-align:top}
+.doc th{background:var(--surface);color:var(--muted);font-weight:600;white-space:nowrap}
+.doc tr:nth-child(even) td{background:rgba(255,255,255,.015)}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="inner">
+  <span class="eyebrow">AiGovOps Foundation · Beacon × Umbrella</span>
+  <a class="back" href="../index.html">↩ Overview</a>
+</div></div>
+<article class="doc">
+<h1>Auditor Value Model</h1>
+<p>This document defines what AIGovOps vendor evaluation gives an auditor. The goal is to move from "vendor comparison opinion" to <strong>evidence-oriented vendor decisions</strong> that are versioned, testable, observable, and auditable by default.</p>
+<h2>What auditors get</h2>
+<ul><li>Structured decision records: each stack choice is recorded with rationale, profile inputs, and date.</li><li>Canonical exports: deterministic JSON/YAML so two runs of the same inputs produce identical bytes.</li><li>Hash preview: SHA-256 over the canonical record, ready for Beacon Ed25519 + JCS signing.</li><li>Cross-functional traceability: links risk profile to layer, vendor, and control owner.</li><li>Explicit gap visibility: gaps (e.g. OT/IIoT) are first-class, never hidden behind a single score.</li></ul>
+<h2>Why no single score</h2>
+<p>A synthetic 1-100 score collapses independent risks into one number an auditor cannot reconstruct. Instead each layer carries a status: Ready, Integrate, or Gap. Auditors can verify each status against evidence rather than trusting a weighting they cannot inspect.</p>
+<h2>Evidence record fields</h2>
+<table><thead><tr><th>Field</th><th>Purpose</th></tr></thead><tbody><tr><td>schema</td><td>Versioned record format (aigovops.vendor-rfi/v0.1)</td></tr><tr><td>generated</td><td>ISO-8601 timestamp</td></tr><tr><td>profile</td><td>Risk inputs (regulated, OT, in-VPC)</td></tr><tr><td>stack</td><td>Per-layer vendors and status</td></tr><tr><td>evidence_sha256</td><td>Hash of canonical record</td></tr><tr><td>signature</td><td>Null until signed by Beacon</td></tr></tbody></table>
+</article>
+</body>
+</html>
