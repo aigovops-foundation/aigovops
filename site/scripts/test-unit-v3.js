@@ -338,6 +338,20 @@ checkTrue('sitemap includes blog posts', fs.readFileSync(path.join(__dirname,'..
 checkFalse('deploy.yml retired (not active)', fs.existsSync(path.join(__dirname,'../.github/workflows/deploy.yml')));
 checkTrue('deploy.yml.disabled preserved', fs.existsSync(path.join(__dirname,'../.github/workflows/deploy.yml.disabled')));
 
+// ── Alpha: Vendor RFI integration (project 2 of 2) ────────────────────────
+console.log('\n  [Alpha — Vendor RFI]');
+const alphaHtml = fs.readFileSync(path.join(__dirname, '../alpha.html'), 'utf8');
+const RFI = 'https://aigovops-foundation.github.io/aigovops-vendor-rfi';
+checkTrue('alpha.html has the Vendor RFI section',          alphaHtml.includes('Vendor RFI'));
+checkTrue('alpha links to the Vendor RFI hub',             alphaHtml.includes(`${RFI}/`));
+checkTrue('alpha links to audit training',                 alphaHtml.includes(`${RFI}/training.html`));
+checkTrue('alpha links to the 50-vendor comparison',       alphaHtml.includes(`${RFI}/comparison.html`));
+checkTrue('Vendor RFI links open in a new tab safely',     alphaHtml.includes(`href="${RFI}/" target="_blank" rel="noopener"`));
+checkTrue('alpha shows two projects (Library + RFI)',      alphaHtml.includes('project 1 of 2') && alphaHtml.includes('project 2 of 2'));
+checkTrue('Vendor RFI credits its governing agent',        alphaHtml.includes('aigovops-agent-vendor-rfi'));
+checkFalse('Alpha uses the canonical org copy (no personal fork URL)', alphaHtml.includes('bobrapp.github.io/aigov'));
+checkFalse('Alpha does not relink the retired /vendor-rfi-alpha bundle', alphaHtml.includes('/vendor-rfi-alpha/'));
+
 const total = PASS + FAIL;
 console.log(`\n  Result: ${PASS}/${total} passed\n`);
 if (FAIL > 0) {
