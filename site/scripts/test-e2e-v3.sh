@@ -185,6 +185,23 @@ error_expect_code "$SITE/this-page-does-not-exist-xyz.html" "404"
 error_soft_404 "$SITE/" "There isn't a GitHub Pages site here"
 
 echo ""
+
+# ── ALPHA — VENDOR RFI INTEGRATION ─────────────────────────────────────────
+echo "  [Alpha — Vendor RFI]"
+ALPHA=$(body "$SITE/alpha.html")
+echo "$ALPHA" | grep -q "aigovops-vendor-rfi" \
+  && check "alpha page links the Vendor RFI" "ok" \
+  || check "alpha page links the Vendor RFI" "link missing"
+echo "$ALPHA" | grep -q "project 2 of 2" \
+  && check "alpha shows Vendor RFI as project 2 of 2" "ok" \
+  || check "alpha shows Vendor RFI as project 2 of 2" "label missing"
+RFI="https://aigovops-foundation.github.io/aigovops-vendor-rfi"
+for p in "/" "/training.html" "/comparison.html"; do
+  code=$(http_code "$RFI$p")
+  [ "$code" = "200" ] && check "Vendor RFI $p → 200" "ok" || check "Vendor RFI $p → 200" "HTTP $code"
+done
+
+echo ""
 echo "  ${PASS} passed, ${FAIL} failed"
 echo ""
 [ $FAIL -eq 0 ] && echo "  ✅  All E2E v3 tests passed" || echo "  ❌  ${FAIL} test(s) failed"
