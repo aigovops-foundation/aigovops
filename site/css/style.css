@@ -1,3 +1,5 @@
+@import url("tokens.css");   /* AiGovOps brand tokens — single source of truth */
+
 /* ===== SKIP LINK (accessibility) ===== */
 .skip-link {
   position: absolute; top: -100px; left: 16px; z-index: 9999;
@@ -17,20 +19,20 @@ a { color: inherit; text-decoration: none; }
 
 /* ===== VARIABLES ===== */
 :root {
-  --purple: #6c3de6;
-  --purple-dark: #4a1fb8;
-  --purple-light: #ede9ff;
-  --teal: #1d9e75;           /* use on dark backgrounds — 5.69:1 on #0d0d1a ✅ */
-  --teal-accessible: #0f6e56; /* use on light/white backgrounds — 6.20:1 on #fff ✅ */
-  --teal-dark: #0f6e56;
-  --teal-light: #e1f5ee;
-  --dark: #0d0d1a;
-  --mid: #1e1e3a;
-  --light: #f8f7ff;
-  --white: #ffffff;
-  --text: #2d2d4e;
-  --muted: #72728e;
-  --border: #e0ddf5;
+  --purple: var(--aigov-purple, #6c3de6);
+  --purple-dark: var(--aigov-purple-strong, #4a1fb8);
+  --purple-light: var(--aigov-purple-wash, #ede9ff);
+  --teal: var(--aigov-teal, #1d9e75);           /* on dark backgrounds — 5.69:1 on #0d0d1a ✅ */
+  --teal-accessible: var(--aigov-teal-strong, #0f6e56); /* on light/white — 6.20:1 on #fff ✅ */
+  --teal-dark: var(--aigov-teal-strong, #0f6e56);
+  --teal-light: var(--aigov-teal-wash, #e1f5ee);
+  --dark: var(--aigov-navy, #0d0d1a);
+  --mid: var(--aigov-navy-2, #1e1e3a);
+  --light: var(--aigov-wash, #f8f7ff);
+  --white: var(--aigov-surface, #ffffff);
+  --text: var(--aigov-text, #2d2d4e);
+  --muted: var(--aigov-muted, #72728e);
+  --border: var(--aigov-border, #e0ddf5);
   --radius: 12px;
   --shadow: 0 4px 24px rgba(108,61,230,0.10);
   --container: 1100px;
