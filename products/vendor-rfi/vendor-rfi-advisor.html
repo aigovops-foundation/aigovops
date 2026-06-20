@@ -18,15 +18,16 @@
   <meta name="description" content="Beacon and Umbrella aligned vendor RFI advisor for policy as code, guardrails, runtime observability, and evidence-oriented stack design." />
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
-  <style>
+  <link rel="stylesheet" href="tokens.css">
+<style>
     :root,[data-theme="light"]{
       --text-xs:clamp(.75rem,.7rem + .25vw,.875rem);--text-sm:clamp(.875rem,.8rem + .35vw,1rem);--text-base:clamp(1rem,.95rem + .25vw,1.125rem);--text-lg:clamp(1.125rem,1rem + .75vw,1.5rem);--text-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);
       --space-1:.25rem;--space-2:.5rem;--space-3:.75rem;--space-4:1rem;--space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--space-16:4rem;
-      --color-bg:#f7f6f2;--color-surface:#f9f8f5;--color-surface-2:#fbfbf9;--color-surface-offset:#f3f0ec;--color-border:#d4d1ca;--color-divider:#dcd9d5;--color-text:#28251d;--color-text-muted:#66645f;--color-text-faint:#9a9892;--color-text-inverse:#f9f8f4;--color-primary:#01696f;--color-primary-hover:#0c4e54;--color-blue:#006494;--color-success:#437a22;--color-warning:#964219;--color-purple:#7a39bb;--radius-sm:.375rem;--radius-md:.5rem;--radius-lg:.75rem;--radius-xl:1rem;--shadow-sm:0 1px 2px rgba(0,0,0,.06);--shadow-md:0 8px 28px rgba(0,0,0,.08);--font-body:'Satoshi',sans-serif;
+      --color-bg:#f7f6f2;--color-surface:#f9f8f5;--color-surface-2:#fbfbf9;--color-surface-offset:#f3f0ec;--color-border:#d4d1ca;--color-divider:#dcd9d5;--color-text:#28251d;--color-text-muted:#66645f;--color-text-faint:#9a9892;--color-text-inverse:#f9f8f4;--color-primary:var(--aigov-teal-strong,#0f6e56);--color-primary-hover:var(--aigov-teal-deep,#0b5743);--color-blue:#006494;--color-success:#437a22;--color-warning:#964219;--color-purple:#7a39bb;--radius-sm:.375rem;--radius-md:.5rem;--radius-lg:.75rem;--radius-xl:1rem;--shadow-sm:0 1px 2px rgba(0,0,0,.06);--shadow-md:0 8px 28px rgba(0,0,0,.08);--font-body:'Satoshi',sans-serif;
     }
     /* AIGovOps "deep ocean governance" dark theme — Beacon/Umbrella brand (default) */
     [data-theme="dark"]{
-      --color-bg:#0e141b;--color-surface:#141c24;--color-surface-2:#192330;--color-surface-offset:#1b2735;--color-border:#2a333c;--color-divider:#222b36;--color-text:#e2e7e9;--color-text-muted:#7e919a;--color-text-faint:#5d6b78;--color-text-inverse:#06231d;--color-primary:#14b393;--color-primary-hover:#0f8e74;--color-blue:#5591c7;--color-success:#3fae86;--color-warning:#faaf2e;--color-purple:#a86fdf;--shadow-sm:0 1px 2px rgba(0,0,0,.4);--shadow-md:0 8px 28px rgba(0,0,0,.45);
+      --color-bg:#0e141b;--color-surface:#141c24;--color-surface-2:#192330;--color-surface-offset:#1b2735;--color-border:#2a333c;--color-divider:#222b36;--color-text:#e2e7e9;--color-text-muted:#7e919a;--color-text-faint:#5d6b78;--color-text-inverse:#06231d;--color-primary:var(--aigov-teal-bright,#14b393);--color-primary-hover:var(--aigov-teal-bright-2,#0f8e74);--color-blue:#5591c7;--color-success:#3fae86;--color-warning:#faaf2e;--color-purple:#a86fdf;--shadow-sm:0 1px 2px rgba(0,0,0,.4);--shadow-md:0 8px 28px rgba(0,0,0,.45);
     }
     *,:before,:after{box-sizing:border-box} html,body{margin:0;padding:0} body{font-family:var(--font-body);font-size:var(--text-base);line-height:1.55;background:var(--color-bg);color:var(--color-text)}
     a,button,input,select,textarea{font:inherit} button{cursor:pointer} .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}

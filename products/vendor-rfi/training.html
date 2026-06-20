@@ -21,10 +21,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
 <style>
 /* AIGovOps "deep ocean governance" brand — shared with Beacon & Umbrella */
-:root{--bg:#0e141b;--surface:#141c24;--surface2:#192330;--border:#2a333c;--text:#e2e7e9;--muted:#7e919a;
-  --primary:#14b393;--primary2:#0f8e74;--blue:#5591c7;--warn:#faaf2e;--gap:#d74242;--radius:14px;
+:root{--bg:var(--aigov-ocean-bg,#0e141b);--surface:var(--aigov-ocean-surface,#141c24);--surface2:var(--aigov-ocean-surface2,#192330);--border:var(--aigov-ocean-border,#2a333c);--text:var(--aigov-ocean-text,#e2e7e9);--muted:var(--aigov-ocean-muted,#7e919a);
+  --primary:var(--aigov-teal-bright,#14b393);--primary2:var(--aigov-teal-bright-2,#0f8e74);--blue:#5591c7;--warn:var(--aigov-warn-bright,#faaf2e);--gap:var(--aigov-danger-bright,#d74242);--radius:14px;
   --font:'Satoshi','General Sans',system-ui,Segoe UI,Roboto,Arial,sans-serif;
   --mono:'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,monospace}
 *{box-sizing:border-box}body{margin:0;font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6}

@@ -1,0 +1,64 @@
+/* AiGovOps brand tokens — the single source of truth for the whole surface (site · Vendor RFI ·
+ * Omni control-room). Each surface maps its own semantic vars to these `--aigov-*` primitives, with
+ * the current hex as a CSS fallback, so adopting this file is zero visual change — but a brand change
+ * is now ONE edit here. This file is canonical in the foundation-site repo; the Vendor RFI and the
+ * Omni control-room vendor an identical copy (kept in sync; tokens change rarely).
+ *
+ * Light surfaces (site, control-room) and the deep-ocean dark tool (Vendor RFI / Beacon) share one
+ * brand identity — the teal, the navy, the type, the scale — but keep distinct semantic palettes.
+ */
+:root {
+  /* ── Brand: teal (the AiGovOps accent) ───────────────────────────────── */
+  --aigov-teal:          #1d9e75;   /* on dark backgrounds (≥5.69:1 on #0d0d1a) */
+  --aigov-teal-strong:   #0f6e56;   /* AA text/hover on light (6.20:1 on #fff) */
+  --aigov-teal-deep:     #0b5743;
+  --aigov-teal-bright:   #14b393;   /* accent on the deep-ocean dark tool */
+  --aigov-teal-bright-2: #0f8e74;
+  --aigov-teal-wash:     #e1f5ee;
+
+  /* ── Brand: purple (secondary) ───────────────────────────────────────── */
+  --aigov-purple:        #6c3de6;
+  --aigov-purple-strong: #4a1fb8;
+  --aigov-purple-wash:   #ede9ff;
+
+  /* ── Ground / navy ───────────────────────────────────────────────────── */
+  --aigov-navy:          #0d0d1a;   /* darkest brand ground (site hero) */
+  --aigov-navy-2:        #1e1e3a;
+  --aigov-control-navy:  #0c1430;   /* control-room darkest text */
+  --aigov-control-ink:   #1a1f36;
+
+  /* ── Neutrals (light surfaces) ───────────────────────────────────────── */
+  --aigov-text:          #2d2d4e;
+  --aigov-muted:         #72728e;
+  --aigov-muted-2:       #5b6280;
+  --aigov-surface:       #ffffff;
+  --aigov-wash:          #f8f7ff;
+  --aigov-wash-2:        #f7f8fc;
+  --aigov-rule:          #e7e9f2;
+  --aigov-border:        #e0ddf5;
+
+  /* ── Deep-ocean (the dark tool: Vendor RFI / Beacon) ─────────────────── */
+  --aigov-ocean-bg:       #0e141b;
+  --aigov-ocean-surface:  #141c24;
+  --aigov-ocean-surface2: #192330;
+  --aigov-ocean-border:   #2a333c;
+  --aigov-ocean-text:     #e2e7e9;
+  --aigov-ocean-muted:    #7e919a;
+
+  /* ── Semantic ────────────────────────────────────────────────────────── */
+  --aigov-warn:          #854f0b;   /* AA amber text on light */
+  --aigov-warn-bright:   #faaf2e;   /* amber on dark */
+  --aigov-warn-wash:     #faecd0;
+  --aigov-danger:        #b4232a;
+  --aigov-danger-bright: #d74242;
+
+  /* ── Type ────────────────────────────────────────────────────────────── */
+  --aigov-font: 'Satoshi','General Sans',system-ui,Segoe UI,Roboto,Arial,sans-serif;
+  --aigov-mono: 'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  /* ── Layout ──────────────────────────────────────────────────────────── */
+  --aigov-r-sm:   8px;
+  --aigov-r:      12px;
+  --aigov-r-lg:   14px;
+  --aigov-r-pill: 999px;
+}
