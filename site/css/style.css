@@ -418,3 +418,8 @@ address a:hover { color: var(--white); }
 #voiceBtn[aria-label="Stop voice input"] { animation: voicePulse 1.4s ease-in-out infinite; }
 @keyframes voicePulse { 0%,100%{opacity:1} 50%{opacity:.45} }
 @media (prefers-reduced-motion: reduce) { #voiceBtn { animation: none !important; } }
+
+/* Disabled for testing (June 2026): the EN/ES toggle is non-functional, and the blog isn't live yet.
+   Hidden site-wide here (one place) — re-enable by removing this block. */
+.lang-toggle { display: none !important; }
+a[href="blog.html"], a[href="/blog.html"] { display: none !important; }
