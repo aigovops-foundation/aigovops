@@ -53,7 +53,7 @@
 - **GitHub Pages root** (`/`, `/centerpiece.html`, `/breakouts.html`, `/minicamps.html`, `/tools.html`, `/hint-logs.html`, `/pledge.html`, `/resources.html`, `/about.html`, `/lab-tools.html`) — all 200
 - **Tool pages** — all 16 (`/tools/<slug>.html`) return 200
 - **Downloads on `main`** — one-pagers PDF, mini-camps booklet PDF, Spanish pledge PDF, hint-logs spec PDF, trailer script MD all 200
-- **Citations (verified)** — Guardian (MIT critical thinking), Cornell Scientific Inquirer, Senate (Blunt Rochester), Google Blog (Gemini Deep Think), AIMS Collaboratory, AIGovOps Foundation site
+- **Citations (verified)** — Guardian (MIT critical thinking), Cornell Scientific Inquirer, Senate (Blunt Rochester), Google Blog (Gemini Deep Think), AIMS Collaboratory, AiGovOps Foundation site
 - **Tool homepages** — ChatGPT, Claude, Gemini, Perplexity (Comet), Gamma, NotebookLM, Khanmigo, Magic School, Glean, Microsoft Copilot, Wispr Flow, Granola — all reachable for real users
 
 ---

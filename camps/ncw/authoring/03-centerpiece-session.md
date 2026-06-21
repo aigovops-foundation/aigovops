@@ -2,7 +2,7 @@
 ## A 60-Minute Plenary for All 300 Attendees
 *The most important session of the day · everyone in the room · runs once · ideally the 1:00 PM keynote slot or as a special plenary*
 
-**Co-presented by:** Ken Johnston & Bob Rapp (AIGovOps Foundation)
+**Co-presented by:** Ken Johnston & Bob Rapp (AiGovOps Foundation)
 **The frame:** This isn't a breakout — this is the room. Educators, SMB owners, nonprofit leaders, and community members **together**, because every one of them is downstream of how AI lands in NCW classrooms.
 
 ---
@@ -11,7 +11,7 @@
 
 1. **What does AI as a real partner in education actually look like — and what's the evidence?**
 2. **What are the bad versions we have to prevent — and what's actually happening right now?**
-3. **What does responsible AI in education look like when you bring the AIGovOps Foundation lens, plus the newest tools — Deep Think and the Model Council — into the room?**
+3. **What does responsible AI in education look like when you bring the AiGovOps Foundation lens, plus the newest tools — Deep Think and the Model Council — into the room?**
 
 If they leave with answers to those three, the day worked.
 
@@ -24,7 +24,7 @@ If they leave with answers to those three, the day worked.
 | 0-5 | **The two futures, in two scenes** | Hook with a vivid before/after |
 | 5-15 | **The evidence — both sides** | Hard numbers, both wins and harms |
 | 15-30 | **LIVE: Deep Think + Model Council on a real NCW classroom question** | The most memorable 15 minutes of the day |
-| 30-40 | **The AIGovOps Foundation lens on education** | Ken & Bob co-present: governance that runs like engineering |
+| 30-40 | **The AiGovOps Foundation lens on education** | Ken & Bob co-present: governance that runs like engineering |
 | 40-50 | **What good looks like — a 7-point AI partnership pledge for NCW** | The room writes it together |
 | 50-58 | **Q&A — moderated, hard questions welcome** | Trust through transparency |
 | 58-60 | **The call to action + dot move** | Close strong |
@@ -152,7 +152,7 @@ Read the synthesis aloud. **The room will visibly lean forward.** This is the mo
 
 ### Step 4 — The punchline (1 min)
 Bob speaks:
-> *"What you just watched is what the AIGovOps Foundation calls 'AI you can trust' — not because any single model is perfect, but because you didn't trust any single model. You triangulated. You made them show their work. You kept a human at the chair. That's the **two-eyes rule** with a third opinion. That's what partnership looks like."*
+> *"What you just watched is what the AiGovOps Foundation calls 'AI you can trust' — not because any single model is perfect, but because you didn't trust any single model. You triangulated. You made them show their work. You kept a human at the chair. That's the **two-eyes rule** with a third opinion. That's what partnership looks like."*
 
 ### Why this demo lands
 - It's a **real question** about a **real student** that **real teachers** in the room actually have.
@@ -162,7 +162,7 @@ Bob speaks:
 
 ---
 
-## 30-40 · The AIGovOps Foundation Lens on Education
+## 30-40 · The AiGovOps Foundation Lens on Education
 
 Ken and Bob, switching back and forth. One slide.
 
@@ -298,7 +298,7 @@ If the keynote slot is already booked, run this at **8:30-9:30 AM as the opening
 1. **The 7-Point Pledge** — full-color, 1-page, both sides (English + Spanish for NCW community)
 2. **The "Two Futures" handout** — Maria's story + Jake's story, with the data behind each
 3. **The Deep Think + Model Council quick-start card** — how to use each one tomorrow morning
-4. **The AIGovOps Foundation Free Toolkit one-pager** — Beacon, Umbrella, Lantern, with QR codes
+4. **The AiGovOps Foundation Free Toolkit one-pager** — Beacon, Umbrella, Lantern, with QR codes
 
 ---
 
@@ -317,4 +317,4 @@ The plenary creates the shared vocabulary. The breakouts let people practice it.
 
 ---
 
-*Centerpiece Session v1 · NCW AI Expo 2026 · Ken Johnston + Bob Rapp · AIGovOps Foundation*
+*Centerpiece Session v1 · NCW AI Expo 2026 · Ken Johnston + Bob Rapp · AiGovOps Foundation*

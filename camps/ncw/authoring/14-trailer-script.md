@@ -1,6 +1,6 @@
 # NCW AI Use Case Showdown — 90-Second Trailer Script & Storyboard
 **AI Expo 2026 · August 11 · Wenatchee Convention Center**
-*Production document v1.0 · AIGovOps Foundation × NCW Tech Alliance*
+*Production document v1.0 · AiGovOps Foundation × NCW Tech Alliance*
 
 ---
 
@@ -160,7 +160,7 @@
 ---
 
 ### SHOT 12 — `1:12–1:30`
-**Visual:** Final card — clean, dark background (deep green or midnight blue). The NCW Tech Alliance + AIGovOps Foundation logos. Then the key details animate in one line at a time:
+**Visual:** Final card — clean, dark background (deep green or midnight blue). The NCW Tech Alliance + AiGovOps Foundation logos. Then the key details animate in one line at a time:
 - `NCW AI USE CASE SHOWDOWN`
 - `August 11, 2026`
 - `Wenatchee Convention Center`
@@ -288,7 +288,7 @@ Style: Driving momentum track — building percussion, light synth undertone, re
 
 3. **Ken Johnston + Bob Rapp LinkedIn profiles** — post as a native video upload (not a YouTube link — native video gets 3–5x more reach in the LinkedIn algorithm). Post separately from each account, 24–48 hours apart, to double the organic window.
 
-4. **AIGovOps Substack header / welcome post** — embed as the header video of the pre-Expo edition. The Substack audience is already aligned; the trailer converts them from readers to registrants/applicants.
+4. **AiGovOps Substack header / welcome post** — embed as the header video of the pre-Expo edition. The Substack audience is already aligned; the trailer converts them from readers to registrants/applicants.
 
 5. **AI Expo Eventbrite page** — embed in the event description as the primary hero media. Eventbrite supports video embeds via YouTube URL; upload the trailer to a dedicated YouTube channel first, then embed. This also seeds the YouTube SEO for "NCW AI Expo 2026" searches.
 
@@ -297,5 +297,5 @@ Style: Driving momentum track — building percussion, light synth undertone, re
 ---
 
 *Trailer script v1.0 · NCW AI Use Case Showdown · AI Expo 2026*
-*AIGovOps Foundation × NCW Tech Alliance · Ken Johnston + Bob Rapp*
+*AiGovOps Foundation × NCW Tech Alliance · Ken Johnston + Bob Rapp*
 *Produced for ElevenLabs voice generation + Gamma visual frame generation*

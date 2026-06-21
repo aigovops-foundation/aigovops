@@ -1,6 +1,6 @@
 # This Morning in Wenatchee, We're Choosing Which Future We Want
 
-*By Ken Johnston and Bob Rapp, AIGovOps Foundation · August 11, 2026*
+*By Ken Johnston and Bob Rapp, AiGovOps Foundation · August 11, 2026*
 
 ---
 
@@ -24,7 +24,7 @@ Bob grew up about an hour south of here. Ellensburg. Central Washington. The kin
 
 This region does not need to wait for Seattle to figure this out. And it does not need to wait for Washington DC, which — based on the last few weeks — is going to be busy arguing about it for a while longer.
 
-We founded the [AIGovOps Foundation](https://www.aigovops-foundation.com) on a simple idea: governance that runs like engineering. Practical. Testable. Open source. No enterprise jargon, no SaaS lock-in. Apache-2.0 license — free, because the communities that need governance tools most are usually the ones who can't afford to buy them. Rural districts. Small nonprofits. First-generation business owners. NCW.
+We founded the [AiGovOps Foundation](https://www.aigovops-foundation.com) on a simple idea: governance that runs like engineering. Practical. Testable. Open source. No enterprise jargon, no SaaS lock-in. Apache-2.0 license — free, because the communities that need governance tools most are usually the ones who can't afford to buy them. Rural districts. Small nonprofits. First-generation business owners. NCW.
 
 Today, at the [NCW Tech Alliance AI Expo](https://www.ncwtech.org), we're bringing that work to this region with a thesis we want to say plainly: **AI is not the problem, and it is not the savior. It is a partner. The difference between those two outcomes is entirely in how we govern it.**
 
@@ -113,7 +113,7 @@ That is exactly why it matters.
 
 If a community here — with real orchards and real school budget pressures and real teachers who went into education to teach, not to manage chatbots — can develop a practical, human-centered AI partnership framework, then that framework works everywhere. It works in Yakima. It works in Spokane. It works in rural Georgia and rural Ohio and every other community that is watching the news from NYC and thinking: we can't afford to get this wrong, and we definitely can't afford to ban our way out of it.
 
-The tools we're using today are the same tools available to any teacher or business owner in the country. [Gemini](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/). [Perplexity Model Council](https://www.linkedin.com/posts/perplexity-ai_introducing-model-council-in-perplexity-activity-7425210595890769921-qRdh). Gamma. NotebookLM. The [AIGovOps Foundation's Beacon, Umbrella, and Lantern tools](https://www.aigovops-foundation.com) — which find every AI tool in your environment, translate 40+ governance frameworks into executable controls, and produce a one-page parent-facing report. All of it Apache-2.0. All of it free.
+The tools we're using today are the same tools available to any teacher or business owner in the country. [Gemini](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/). [Perplexity Model Council](https://www.linkedin.com/posts/perplexity-ai_introducing-model-council-in-perplexity-activity-7425210595890769921-qRdh). Gamma. NotebookLM. The [AiGovOps Foundation's Beacon, Umbrella, and Lantern tools](https://www.aigovops-foundation.com) — which find every AI tool in your environment, translate 40+ governance frameworks into executable controls, and produce a one-page parent-facing report. All of it Apache-2.0. All of it free.
 
 For an NCW school district, that means: Beacon scans your Google Workspace for AI tools. Umbrella tells you which COPPA and FERPA controls each one needs. Lantern answers the parent who walks into your office and asks "what AI is my kid using and what data does it have?" — in under 60 seconds.
 
@@ -131,7 +131,7 @@ You don't have to be in Wenatchee today for this to matter to you.
 
 **Sign the NCW AI Partnership Pledge** at [aigovops-foundation.com/ncw](https://www.aigovops-foundation.com). It takes two minutes. The badge is yours. The commitment is real.
 
-**Get the free AIGovOps Foundation toolkit** — Beacon, Umbrella, and Lantern — at [aigovops-foundation.com](https://www.aigovops-foundation.com). Apache-2.0. No account required. Works for a two-person nonprofit or a 10,000-student school district. If you want help standing it up, we're here.
+**Get the free AiGovOps Foundation toolkit** — Beacon, Umbrella, and Lantern — at [aigovops-foundation.com](https://www.aigovops-foundation.com). Apache-2.0. No account required. Works for a two-person nonprofit or a 10,000-student school district. If you want help standing it up, we're here.
 
 **Join the AI in Action follow-up series** from [NCW Tech Alliance](https://www.ncwtech.org) — a set of monthly community sessions that take today's work and keep it moving. The sessions are free, they're regional, and they're built on the same show-and-tell discipline we're using today: you leave with something that works, every time.
 
@@ -143,6 +143,6 @@ Today, in a convention center in Wenatchee, three hundred people are making thos
 
 We hope you'll join us.
 
-*— Ken Johnston and Bob Rapp, AIGovOps Foundation*
+*— Ken Johnston and Bob Rapp, AiGovOps Foundation*
 
 *[aigovops-foundation.com](https://www.aigovops-foundation.com) · Apache-2.0 · no SaaS lock-in · built for communities like this one*

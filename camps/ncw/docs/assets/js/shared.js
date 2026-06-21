@@ -93,7 +93,7 @@
           <div class="grid md:grid-cols-4 gap-10">
             <div class="md:col-span-1">
               <div class="flex items-center gap-2.5 mb-3">${LOGO}
-                <span class="font-serif font-700 text-lg leading-tight">AIGovOps<br>Foundation</span></div>
+                <span class="font-serif font-700 text-lg leading-tight">AiGovOps<br>Foundation</span></div>
               <p class="text-cream/60 text-sm leading-relaxed">A 501(c)(3) nonprofit. Apache-2.0. Empowering rural and small communities through better AI access and impact.</p>
               <p class="mt-4 font-serif font-600 text-signal text-[15px]">× NCW Tech Alliance</p>
             </div>

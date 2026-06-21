@@ -59,7 +59,7 @@ Los prompts se guardan. Las respuestas se guardan. Las ediciones se guardan. Par
 [Evaluaciones de J-PAL y la revisión sistemática de npj Science of Learning 2025](https://etcjournal.com/2026/06/02/ai-and-the-promise-of-educational-equity/): la tutoría con IA muestra mejoras consistentes para estudiantes de bajos ingresos y poblaciones diversas. Las ganancias más grandes se dieron en matemáticas y ciencias — las materias donde más batallaban los estudiantes. *(Stanford GSE, ensayo clínico de seis meses con 10,000 estudiantes en 200 escuelas de EE. UU.: +34% en calificaciones con tutores de IA.)*
 
 **Por qué el #3 (gobernar como obra seria):**
-El [Marco de Gestión de Riesgos de IA del NIST](https://www.nist.gov/itl/ai-risk-management-framework) es la metodología que usa el gobierno federal para evaluar los riesgos de la IA. La Fundación AIGovOps lo traduce — junto con más de 40 marcos internacionales — en herramientas prácticas que cualquier organización puede usar de forma gratuita.
+El [Marco de Gestión de Riesgos de IA del NIST](https://www.nist.gov/itl/ai-risk-management-framework) es la metodología que usa el gobierno federal para evaluar los riesgos de la IA. La Fundación AiGovOps lo traduce — junto con más de 40 marcos internacionales — en herramientas prácticas que cualquier organización puede usar de forma gratuita.
 
 **Por qué el #4 (proteger el pensamiento crítico):**
 [Cornell, estudio con 95,000 estudiantes, 2026](https://scientificinquirer.com/2026/05/26/widespread-ai-misuse-by-college-students-signals-need-to-rethink-assessment/): 1 de cada 3 estudiantes universitarios usa IA generativa regularmente para sus tareas; el 9% admite hacer trampa abiertamente. Lo que necesitamos son nuevas formas de evaluar, no más prohibiciones.
@@ -79,7 +79,7 @@ La [investigación del GAO del Senado, junio de 2026](https://www.bluntrochester
 |---|---|
 | Firme la Promesa | aigovops-foundation.com/ncw-pledge |
 | Obtenga el kit gratuito de la Fundación (Beacon, Umbrella, Lantern) | aigovops-foundation.com |
-| Únase a la comunidad AIGovOps | community.aigovopsfoundation.org |
+| Únase a la comunidad AiGovOps | community.aigovopsfoundation.org |
 | Serie de seguimiento IA en Acción de NCW | ncwtech.org/ai-in-action |
 | Participe en el Concurso de Casos de Uso de IA | ncwtech.org |
 
@@ -180,8 +180,8 @@ La maestra de María guarda los prompts, las respuestas de la IA y sus correccio
 ```
 
 > **La historia que contemos sobre la IA en el Norte Central de Washington será la historia que nosotros escribimos — juntos.**
-> *— Ken Johnston y Bob Rapp, Fundación AIGovOps*
+> *— Ken Johnston y Bob Rapp, Fundación AiGovOps*
 
 ---
 
-*Promesa + Dos Futuros · versión 1 · NCW AI Expo 2026 · Fundación AIGovOps × NCW Tech Alliance*
+*Promesa + Dos Futuros · versión 1 · NCW AI Expo 2026 · Fundación AiGovOps × NCW Tech Alliance*

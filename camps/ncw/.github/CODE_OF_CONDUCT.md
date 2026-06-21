@@ -8,4 +8,4 @@ In short:
 - We empower disadvantaged, rural, and small communities. Behavior that excludes or demeans them — or anyone — is not welcome here.
 - Report concerns to: **ken.johnston@aigovops.community** (Ken Johnston, co-founder).
 
-This project is part of the AIGovOps Foundation, a 501(c)(3) nonprofit.
+This project is part of the AiGovOps Foundation, a 501(c)(3) nonprofit.

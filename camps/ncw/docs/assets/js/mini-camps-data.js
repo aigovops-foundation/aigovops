@@ -1,6 +1,6 @@
 /* ============================================================
    NCW Mini-Camps data — Five scenarios × seven voices.
-   Source: ncw_mini_camps.md (AIGovOps Foundation × NCW Tech Alliance)
+   Source: ncw_mini_camps.md (AiGovOps Foundation × NCW Tech Alliance)
    "Human in the driver's seat. AI does the painful work. Truth-grounded. Always."
    ============================================================ */
 window.SCENARIOS = {

@@ -26,7 +26,7 @@ A plain DNS CNAME from `ncw.aigovops-foundation.com` pointing at `ncwaigovopsfou
 | 3 | **Contact Perplexity support** | Low (ask only) | Included with existing plan | ✅ (if supported) | ✅ If granted |
 | 4 | **Redirect/link from main site** | Very low | None | N/A | ❌ URL stays pplx.app |
 
-**Recommended path: Option B — Cloudflare Worker.** If your domain is already managed through Cloudflare (likely for an org like AIGovOps Foundation), this is a 15-minute operation: create one Worker, attach the subdomain. No separate hosting account needed. If your DNS is not on Cloudflare, Option C (Vercel) is equally straightforward and takes about the same time.
+**Recommended path: Option B — Cloudflare Worker.** If your domain is already managed through Cloudflare (likely for an org like AiGovOps Foundation), this is a 15-minute operation: create one Worker, attach the subdomain. No separate hosting account needed. If your DNS is not on Cloudflare, Option C (Vercel) is equally straightforward and takes about the same time.
 
 ---
 
@@ -355,7 +355,7 @@ Could you confirm:
 Thank you.
 
 [Your name]  
-AIGovOps Foundation
+AiGovOps Foundation
 
 ---
 

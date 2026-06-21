@@ -9,7 +9,7 @@
 - 21 clickable source hyperlinks; metadata Title/Author set (Author = "Perplexity Computer").
 
 ## Page sequence
-1. **Front cover** — "Five Scenarios · Seven Voices · One Principle" + tagline "Human in the driver's seat. AI does the painful work." + AIGovOps × NCW Tech Alliance.
+1. **Front cover** — "Five Scenarios · Seven Voices · One Principle" + tagline "Human in the driver's seat. AI does the painful work." + AiGovOps × NCW Tech Alliance.
 2. **Inside cover (The Frame)** — framing intro with the side-by-side "What the human keeps" vs "AI does the painful work" table + the three habits.
 3. **The Five Scenarios at a Glance** — overview table.
 4–7. **Scenario 1 — Gifted Student (green):** opener + 4th / 8th / 12th grader camps.
@@ -19,7 +19,7 @@
 17–20. **Scenario 5 — Community Leader (purple):** opener + Community Leader + Local Government Leader camps.
 (Longest camps — the two 12th-grade protocols, the Teacher and Administrator camps — flow onto a second page.)
 - **Workbook pages (×3):** Pick Your Camp / Write Your One Rule / Keep the Receipts (lined note pages; also serve as the saddle-stitch pad to 32 pp).
-32. **Back cover** — the unifying Who / What AI does / What stays 100% human matrix (color-coded borders) + Pledge URL (aigovops-foundation.com/ncw-pledge) + AIGovOps Foundation × NCW Tech Alliance branding.
+32. **Back cover** — the unifying Who / What AI does / What stays 100% human matrix (color-coded borders) + Pledge URL (aigovops-foundation.com/ncw-pledge) + AiGovOps Foundation × NCW Tech Alliance branding.
 
 ## Design choices
 - **Color-tabbed sections** via stepped edge tabs that bleed off the right trim: green = gifted student, blue = challenged student, yellow = teacher/admin, orange = SMB owner, purple = community leader. The tab steps down the page edge per scenario so a closed booklet shows a color index. The same accent color drives each camp's badge, step-number circles, callout box, and accent rules.

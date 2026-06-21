@@ -1,5 +1,5 @@
 # NCW AI Partnership Pledge — 5-Email Post-Event Drip Sequence
-**From:** Ken Johnston & Bob Rapp, AIGovOps Foundation
+**From:** Ken Johnston & Bob Rapp, AiGovOps Foundation
 **To:** Everyone who signed the NCW AI Partnership Pledge at AI Expo 2026, Wenatchee (August 11, 2026)
 **Written for:** ConvertKit / Mailchimp / Loops / Substack
 
@@ -29,7 +29,7 @@
 
 ## Email 1 — Day 1 (August 12, morning after)
 
-**From:** Ken Johnston & Bob Rapp, AIGovOps Foundation <ncw@aigovops-foundation.com>
+**From:** Ken Johnston & Bob Rapp, AiGovOps Foundation <ncw@aigovops-foundation.com>
 **To:** {{NAME}}
 **Subject:** You signed it. Here's what comes next.
 
@@ -63,7 +63,7 @@ To help:
 
 We'll check in on Thursday.
 
-— Ken & Bob, AIGovOps Foundation
+— Ken & Bob, AiGovOps Foundation
 
 ---
 
@@ -75,7 +75,7 @@ We'll check in on Thursday.
 
 ## Email 2 — Day 4 (August 15)
 
-**From:** Ken Johnston & Bob Rapp, AIGovOps Foundation <ncw@aigovops-foundation.com>
+**From:** Ken Johnston & Bob Rapp, AiGovOps Foundation <ncw@aigovops-foundation.com>
 **To:** {{NAME}}
 **Subject:** Did you do the thing?
 
@@ -125,7 +125,7 @@ Not rhetorically. We're tracking this. Every answer helps us make the next versi
 
 ## Email 3 — Day 10 (August 21)
 
-**From:** Ken Johnston & Bob Rapp, AIGovOps Foundation <ncw@aigovops-foundation.com>
+**From:** Ken Johnston & Bob Rapp, AiGovOps Foundation <ncw@aigovops-foundation.com>
 **To:** {{NAME}}
 **Subject:** What other NCW signers are doing (10 days in)
 
@@ -183,7 +183,7 @@ The community is on Circle. Free to join. We're there most days. The best conver
 
 ## Email 4 — Day 18 (August 29)
 
-**From:** Ken Johnston & Bob Rapp, AIGovOps Foundation <ncw@aigovops-foundation.com>
+**From:** Ken Johnston & Bob Rapp, AiGovOps Foundation <ncw@aigovops-foundation.com>
 **To:** {{NAME}}
 **Subject:** Ready for the next hard thing?
 
@@ -207,7 +207,7 @@ Here's what we recommend, matched to where you are:
 
 **NCESD + aiEDU follow-up workshops.** The North Central Educational Service District and aiEDU.org have upcoming sessions designed for exactly this moment — the "I've tried a few things, now I need a system" step. These are free or low-cost, region-specific, and built for educators, not IT teams. [ncwtech.org/ai-in-action] for the full schedule.
 
-Also: the AIGovOps Foundation's **Beacon tool** (Apache-2.0, free) can scan your Google Workspace and identify every AI tool in use across your school or district — with FERPA and COPPA review status for each one. If you want help standing it up, reply to this email. We will help you personally. [aigovops-foundation.com]
+Also: the AiGovOps Foundation's **Beacon tool** (Apache-2.0, free) can scan your Google Workspace and identify every AI tool in use across your school or district — with FERPA and COPPA review status for each one. If you want help standing it up, reply to this email. We will help you personally. [aigovops-foundation.com]
 
 ---
 
@@ -229,7 +229,7 @@ NCW could be the first region in Washington State where every city government ha
 
 **If {{ROLE}} = student or parent:**
 
-**The AIGovOps Foundation Beacon tool (free)** can help you understand what AI tools your school is using and what student data they touch. If your district won't answer that question directly, Beacon is a tool you can bring to the conversation. [aigovops-foundation.com]
+**The AiGovOps Foundation Beacon tool (free)** can help you understand what AI tools your school is using and what student data they touch. If your district won't answer that question directly, Beacon is a tool you can bring to the conversation. [aigovops-foundation.com]
 
 Also: the AI Bill of Rights for Education says a qualified human must make final evaluative decisions about a student's work. If you have a specific concern about AI grading or discipline in your school, reply to this email. We'll help you navigate it.
 
@@ -256,7 +256,7 @@ If no — that's the work. And we'll help you do it.
 
 ## Email 5 — Day 30 (September 10)
 
-**From:** Ken Johnston & Bob Rapp, AIGovOps Foundation <ncw@aigovops-foundation.com>
+**From:** Ken Johnston & Bob Rapp, AiGovOps Foundation <ncw@aigovops-foundation.com>
 **To:** {{NAME}}
 **Subject:** 30 days in — what changed?
 
@@ -284,7 +284,7 @@ We're collecting every response. They will directly inform **Pledge v2.0** — t
 
 The NCW Tech Alliance is launching the **AI in Action follow-up series** this fall — free, monthly, regional sessions that take the work from the Expo and keep it moving. Each session follows the same discipline as the Expo: you arrive, you try something, you leave with something that works. Dates and registration at [ncwtech.org/ai-in-action].
 
-The AIGovOps Foundation is also running regional office hours for NCW signers. Thirty minutes with Ken or Bob, free, to work through whatever is stuck — your AI inventory, your classroom policy, your municipal ordinance draft, your Beacon setup. Book at [aigovops-foundation.com/office-hours] *(Note: update URL when booking link is live.)*
+The AiGovOps Foundation is also running regional office hours for NCW signers. Thirty minutes with Ken or Bob, free, to work through whatever is stuck — your AI inventory, your classroom policy, your municipal ordinance draft, your Beacon setup. Book at [aigovops-foundation.com/office-hours] *(Note: update URL when booking link is live.)*
 
 ---
 
@@ -300,7 +300,7 @@ You've done the 30 days. Now bring one more person in.
 
 Thank you for signing. Thank you for doing the work. We'll see you in the fall.
 
-— Ken & Bob, AIGovOps Foundation
+— Ken & Bob, AiGovOps Foundation
 
 ---
 
@@ -310,4 +310,4 @@ Thank you for signing. Thank you for doing the work. We'll see you in the fall.
 
 ---
 
-*NCW AI Partnership Pledge Drip Sequence v1.0 · AIGovOps Foundation · Ken Johnston & Bob Rapp · August 2026*
+*NCW AI Partnership Pledge Drip Sequence v1.0 · AiGovOps Foundation · Ken Johnston & Bob Rapp · August 2026*

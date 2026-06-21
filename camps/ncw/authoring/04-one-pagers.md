@@ -22,7 +22,7 @@
 │      Save your prompt + the AI's answer.        │
 │                                                 │
 │   AI Expo 2026 · NCW Tech Alliance              │
-│   Brought to you by the AIGovOps Foundation     │
+│   Brought to you by the AiGovOps Foundation     │
 │   aigovops-foundation.com · ncwtech.org         │
 └─────────────────────────────────────────────────┘
 ```
@@ -75,7 +75,7 @@ Every great AI prompt has four pieces. Miss one, and the answer gets weird.
 
 ### Keep Learning (free)
 - **aiEDU resources** → aiedu.org
-- **AIGovOps Foundation** (open-source AI governance toolkit) → aigovops-foundation.com
+- **AiGovOps Foundation** (open-source AI governance toolkit) → aigovops-foundation.com
 - **NCW AI in Action series** (next round Fall 2026) → ncwtech.org/ai-in-action
 - **Lenny's Newsletter Product Bundle** ($200/yr → $30k+ of tools incl. Gemini Pro, Gamma, Perplexity, Granola, Wispr Flow) → lennysnewsletter.com/p/productpass
 
@@ -141,7 +141,7 @@ If your district uses **Glean**, you can ask one question across all of your dis
 - **aiEDU classroom curriculum** → aiedu.org/curriculum
 - **NCESD AI resources** → ncesd.org
 - **Common Sense Education AI literacy** → commonsense.org
-- **AIGovOps Foundation** (for the "policy" conversations with admin) → aigovops-foundation.com
+- **AiGovOps Foundation** (for the "policy" conversations with admin) → aigovops-foundation.com
 - **Clock hours** available — sign in at the registration desk!
 
 ### My Win Today
@@ -204,7 +204,7 @@ Make a Google Drive folder called **"AI receipts."** Paste the prompt and the an
 
 ### When You're Ready to Grow Up
 - **Glean** — like ChatGPT, but it knows everything in YOUR company (Drive, Slack, email, CRM) and respects who's allowed to see what. For ~$20-30/user/mo. → glean.com
-- **AIGovOps Foundation Beacon** (free, open-source) — finds every AI tool in your business and checks it against 23 audit frameworks. For when your bank or insurer asks "what's your AI policy?" → aigovops-foundation.com
+- **AiGovOps Foundation Beacon** (free, open-source) — finds every AI tool in your business and checks it against 23 audit frameworks. For when your bank or insurer asks "what's your AI policy?" → aigovops-foundation.com
 
 ### Free Tools That Are Actually Worth It
 | Tool | Free tier good enough for | Where |
@@ -280,7 +280,7 @@ Add this README to your agent's webpage:
 > **Who's responsible for it:** [your name + email]
 > **How to escalate to a human:** [phone or contact form]
 
-This is the AIGovOps Foundation's idea — **"governance that runs like engineering"** — at your scale. The big version of this is called the **Lantern** governance CLI; yours is a README.
+This is the AiGovOps Foundation's idea — **"governance that runs like engineering"** — at your scale. The big version of this is called the **Lantern** governance CLI; yours is a README.
 
 ### Tools You Got Free Today (via Lenny's Bundle, if you're a subscriber)
 - **Lovable** ($252/yr) — prompt-build webapps
@@ -322,4 +322,4 @@ If your agent solves a real NCW problem — 8-minute pitch + $5,000 in prizes. A
 
 **Pro tip:** print each one-pager on a different pastel paper color so attendees can quickly find theirs in their tote bag — orange for Cool Tools, green for Cool Schools, blue for The Rules, yellow for Build It.
 
-*One-pagers v1 · NCW AI Expo 2026 · AIGovOps Foundation × NCW Tech Alliance*
+*One-pagers v1 · NCW AI Expo 2026 · AiGovOps Foundation × NCW Tech Alliance*

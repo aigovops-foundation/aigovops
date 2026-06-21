@@ -2,7 +2,7 @@
 ## Cool Tools, Cool Schools & The Rules
 *Wenatchee Convention Center · August 11, 2026 · 4 sessions × 60 min each · 3 breakout rooms*
 
-**Co-leads:** Ken Johnston & Bob Rapp (AIGovOps Foundation)
+**Co-leads:** Ken Johnston & Bob Rapp (AiGovOps Foundation)
 **Style:** Mini hands-on, show-and-tell, 5→7/8 confidence jump
 **Tool deck:** Lenny's Newsletter Product Bundle (Gamma, Granola, Lovable, Bolt, Replit, Perplexity, ChatPRD, Magic Patterns, Wispr Flow, n8n, Linear, Notion, Manus, Canva, Framer, ElevenLabs, Mobbin, Gumloop) + Google Gemini (NotebookLM, Gemini in Docs/Sheets/Slides) + Glean
 
@@ -18,7 +18,7 @@ Every 60-minute session follows the same rhythm so attendees who hop between roo
 | 3-8 | **The Hook** — one live demo, no setup, big "wow" | High |
 | 8-15 | **The Map** — Problem → Task → Role → Outcome on one slide | Steady |
 | 15-50 | **Mini hands-on rounds** (3-4 × 8-10 min each, show-and-tell after each) | Building |
-| 50-57 | **The Rule** (the AIGovOps moment) + write-your-own 5-sentence policy | Anchoring |
+| 50-57 | **The Rule** (the AiGovOps moment) + write-your-own 5-sentence policy | Anchoring |
 | 57-60 | **Re-dot 1-10**, take-home QR, applause | Lift |
 
 **Why mini-rounds work for a 5/10 audience:** every 8-10 minutes there's a "win" — someone in the room gets something working, holds it up, and the rest of the room sees themselves doing it.
@@ -83,14 +83,14 @@ Hands-on: attendees open gamma.app on their phone or laptop and type one prompt 
 
 **Show-and-tell:** scroll through 2 volunteers' decks on the big screen. *"Maria, you went from idea to draft deck in 4 minutes. That's the win."*
 
-**47-55 · The Rule (the AIGovOps moment).** Ken or Bob steps in. One slide:
+**47-55 · The Rule (the AiGovOps moment).** Ken or Bob steps in. One slide:
 
 > **The 3 Rules — pocket card**
 > 1. **Never paste private data into a free tool.** (No SSNs, no health, no kid-plus-grade.)
 > 2. **Two-eyes rule.** A human approves anything that goes to a customer, student, or the government.
 > 3. **Keep the receipts.** Save your good prompts and the AI's answer.
 
-*"This is the whole point of the AIGovOps Foundation, scaled down to a pocket card. Governance isn't a 200-page binder. It's three habits."*
+*"This is the whole point of the AiGovOps Foundation, scaled down to a pocket card. Governance isn't a 200-page binder. It's three habits."*
 
 **55-60 · Re-dot + close.** *"Move your sticker. Most rooms move from 5 to 7. Take the Cool Tools card. QR on the back goes to free starter resources."* Applause.
 
@@ -139,7 +139,7 @@ Hands-on: build one Gamma deck for a real lesson next week. 7 minutes. **Show-an
 
 **Optional Glean moment (if district has Glean):** *"If your district uses Glean, this exact question — 'show me last year's photosynthesis lesson plans across our 4th-grade team' — pulls from your actual Drive/Docs/SharePoint and answers with citations to your own materials. That's what governance-aware AI looks like in a district."*
 
-**45-55 · Write your AI policy (the AIGovOps moment).** Bob or Ken steps in. Fill-in template, projected huge:
+**45-55 · Write your AI policy (the AiGovOps moment).** Bob or Ken steps in. Fill-in template, projected huge:
 
 > **My Classroom AI Policy** (write 3 sentences)
 > 1. Students MAY use AI for ____________.
@@ -153,7 +153,7 @@ Hands-on: build one Gamma deck for a real lesson next week. 7 minutes. **Show-an
 - **Citation honesty:** model what you teach.
 - **Human-in-the-loop:** never let AI be the final word on a real kid's record.
 
-**55-60 · Re-dot + close.** Cool Schools toolkit one-pager. QR to aiEDU + NCESD + AIGovOps Foundation. Applause.
+**55-60 · Re-dot + close.** Cool Schools toolkit one-pager. QR to aiEDU + NCESD + AiGovOps Foundation. Applause.
 
 ### Materials checklist (Option 2)
 - [ ] 300 × Cool Schools one-pager (includes policy template on back)
@@ -198,7 +198,7 @@ Hands-on: pick ONE of the five, do it with your real business in 7 minutes. **Sh
 
 **35-42 · Mini Round 3 — Glean as the grown-up version.** *"Everything we just did in free tools, Glean does across your actual company files, with permissions respected. Same question — 'what did we tell the Wenatchee Co-op last March?' — gets you the actual email thread, the actual contract clause, the actual Slack message. This is what AI looks like when your business outgrows the free tier."* Short demo on the Glean tenant. No hands-on — just a *"file this away for when you're ready"* moment.
 
-**42-55 · The 3 Rules — co-presented by Ken & Bob (the AIGovOps centerpiece of the day).**
+**42-55 · The 3 Rules — co-presented by Ken & Bob (the AiGovOps centerpiece of the day).**
 
 This is the most important 13 minutes of the Expo. Slow down. Big slides. Real stories.
 
@@ -219,7 +219,7 @@ This is the most important 13 minutes of the Expo. Slow down. Big slides. Real s
 
 5 minutes to write. 2 volunteers read aloud.
 
-**55-60 · Re-dot + close.** The Rules one-pager + QR to AIGovOps Foundation's open-source toolkit. *"Everything we use at the Foundation is Apache-2.0 and free. If you want to grow into governance, the on-ramp is there."*
+**55-60 · Re-dot + close.** The Rules one-pager + QR to AiGovOps Foundation's open-source toolkit. *"Everything we use at the Foundation is Apache-2.0 and free. If you want to grow into governance, the on-ramp is there."*
 
 ### Materials checklist (Option 3)
 - [ ] 300 × The Rules one-pager
@@ -277,7 +277,7 @@ Hands-on: 12 minutes to prompt-build a real one for their business / classroom /
 
 Each pair adds 1-2 lines to their rules to fix what they found. **This is policy-as-code, learned by playing.**
 
-**50-57 · The Rule (the AIGovOps moment, Build It edition).**
+**50-57 · The Rule (the AiGovOps moment, Build It edition).**
 > **When you ship an agent, you also ship its policy.**
 > What it WILL do. What it WON'T do. Who's responsible. How users escalate to a human.
 > Add that to your README. That's your Lantern. That's evidence.
@@ -326,7 +326,7 @@ Ken or Bob ties it back: *"Big enterprises pay seven figures for tools that do t
 
 ### The opening ceremony (8:55-9:00, plenary)
 Ken and Bob on stage together, 4 minutes:
-> *"Good morning, NCW. We're Ken and Bob from the AIGovOps Foundation. We're not here to sell you anything — every tool we use today, you can use free or cheap. We have one job in the next four hours: move you from a 5 to a 7. We do it with three rules, four sessions, and a whole lot of show-and-tell. Pick the room that scares you a little. That's the one that pays off. Let's go."*
+> *"Good morning, NCW. We're Ken and Bob from the AiGovOps Foundation. We're not here to sell you anything — every tool we use today, you can use free or cheap. We have one job in the next four hours: move you from a 5 to a 7. We do it with three rules, four sessions, and a whole lot of show-and-tell. Pick the room that scares you a little. That's the one that pays off. Let's go."*
 
 ### The closing ceremony (11:55, plenary)
 - 60-second highlight reel of show-and-tell moments (filmed during the morning)
@@ -335,4 +335,4 @@ Ken and Bob on stage together, 4 minutes:
 
 ---
 
-*Run-of-show v1 · prepared for Bob Rapp & Ken Johnston, AIGovOps Foundation · for NCW Tech Alliance AI Expo 2026*
+*Run-of-show v1 · prepared for Bob Rapp & Ken Johnston, AiGovOps Foundation · for NCW Tech Alliance AI Expo 2026*

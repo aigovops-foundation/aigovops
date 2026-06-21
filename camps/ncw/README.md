@@ -1,4 +1,4 @@
-# AIGovOps × NCW AI Camp
+# AiGovOps × NCW AI Camp
 
 > **Cool Tools. Cool Schools. The Rules.**
 > A complete, open-source community AI training program — built for the NCW Tech Alliance **AI Expo 2026**, August 11, 2026, Wenatchee Convention Center.
@@ -93,7 +93,7 @@ Or deploy directly to:
 
 ### Want to adapt this for your community?
 
-This is Apache 2.0 licensed — fork it, rename "NCW" to your region, adjust the Pledge text in `pledge.html`, swap the trailer frames in `assets/img/trailer/`, and ship. Please credit the AIGovOps Foundation and consider opening a PR with your adaptations so other communities can learn.
+This is Apache 2.0 licensed — fork it, rename "NCW" to your region, adjust the Pledge text in `pledge.html`, swap the trailer frames in `assets/img/trailer/`, and ship. Please credit the AiGovOps Foundation and consider opening a PR with your adaptations so other communities can learn.
 
 ---
 
@@ -113,7 +113,7 @@ Sign it: [ncwaigovopsfoundation.pplx.app/pledge.html](https://ncwaigovopsfoundat
 
 ## Foundation principles, scaled down
 
-Every artifact in this package is built on the AIGovOps Foundation's three habits:
+Every artifact in this package is built on the AiGovOps Foundation's three habits:
 
 | Foundation habit | What it looks like in this camp |
 |---|---|
@@ -128,7 +128,7 @@ What costs seven figures in the enterprise — Beacon, Umbrella, Lantern — is 
 ## Credits
 
 **Co-leads:** Ken Johnston · Bob Rapp
-**Foundation:** [AIGovOps Foundation](https://www.aigovops-foundation.com) (501(c)(3))
+**Foundation:** [AiGovOps Foundation](https://www.aigovops-foundation.com) (501(c)(3))
 **Community partner:** [NCW Tech Alliance](https://www.ncwtech.org)
 **Built with:** Perplexity Computer — research, drafting, page builds, image generation, end-to-end QA
 **Source dataset for evidence claims:** Khan Academy + AIMS Collaboratory (June 2026), [MIT critical-thinking study](https://www.theguardian.com/us-news/2026/jun/19/chatbots-critical-thinking-skills) (June 2026), Cornell GenAI study (May 2026), and the full citations library at `docs/15-qa-report.md`.

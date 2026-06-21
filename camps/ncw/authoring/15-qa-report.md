@@ -133,7 +133,7 @@ All hyperlinks tested. Results grouped by status.
 | https://edtechmagazine.com/k12/article/2026/06/deepfakes-education-cyberbullying-age-ai-perfcon | DeepFakes EdTech |
 | https://resources.norrageducation.org/resource/822/sneak-preview-a-blueprint-for-an-ai-bill-of-rights-for-education | AI Bill of Rights |
 | https://www.nist.gov/itl/ai-risk-management-framework | NIST AI RMF |
-| https://aigovops.substack.com | AIGovOps Substack |
+| https://aigovops.substack.com | AiGovOps Substack |
 | https://www.aigovops-foundation.com | Foundation site |
 | https://ncwaigovopsfoundation.pplx.app | Webapp |
 | https://verodate.ca/blog/ai-tutors-personalized-learning-classroom-2026 | Khan +23% |
@@ -214,7 +214,7 @@ All 14 frames from shot01 through shot12 (including 04a, 04b, 04c) are present i
 | Shot 4b | shot04b_owner.jpg | (Not individually examined — filename present) | ✓ present |
 | Shot 4c | shot04c_leader.jpg | (Not individually examined — filename present) | ✓ present |
 | Shots 5–11 | Various | All present per directory listing | ✓ all present |
-| Shot 12 | shot12_titlecard.jpg | **"NCW AI USE CASE SHOWDOWN" title card** — August 11, 2026, Wenatchee Convention Center, $5,000 in prizes, ncwtech.org, AIGovOps + NCW Tech Alliance logos | Looks great. Date, venue, prize amount, URL all correct and consistent with other docs. ✓ |
+| Shot 12 | shot12_titlecard.jpg | **"NCW AI USE CASE SHOWDOWN" title card** — August 11, 2026, Wenatchee Convention Center, $5,000 in prizes, ncwtech.org, AiGovOps + NCW Tech Alliance logos | Looks great. Date, venue, prize amount, URL all correct and consistent with other docs. ✓ |
 
 **Resources.html claims "All 14 frames are royalty-free, generated at 1280px JPEG."** Directory confirms 14 files present. ✓
 
@@ -241,7 +241,7 @@ All mini-camps reviewed. Exercises are well-structured and follow the stated "hu
 | ElevenLabs (elevenlabs.io) | ✓ | Yes | ✓ |
 | Glean (glean.com) | ✓ | Yes | Enterprise tool — may not be relevant for NCW SMBs; included in the tool list. Low risk. |
 | n8n (n8n.io) | ✓ | Yes | ✓ |
-| AIGovOps Beacon/Umbrella/Lantern | aigovops-foundation.com | Yes | ✓ |
+| AiGovOps Beacon/Umbrella/Lantern | aigovops-foundation.com | Yes | ✓ |
 
 ### Prompt Quality
 The sample prompts across all mini-camps are specific, pedagogically sound, and appropriate for the stated age/audience. Key observations:
@@ -477,4 +477,4 @@ resources.html "Read on Substack" links to `https://aigovops.substack.com` (the 
 
 ---
 
-*QA review completed June 20, 2026. All stats verified against primary sources where available. Any findings marked "LIKELY HALLUCINATED" require resolution before public distribution. Questions: contact the AIGovOps Foundation.*
+*QA review completed June 20, 2026. All stats verified against primary sources where available. Any findings marked "LIKELY HALLUCINATED" require resolution before public distribution. Questions: contact the AiGovOps Foundation.*

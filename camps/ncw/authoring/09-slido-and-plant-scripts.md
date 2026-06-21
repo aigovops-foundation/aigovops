@@ -1,6 +1,6 @@
 # NCW AI Expo 2026 — Sli.do Question Bank + Plant Scripts
 ## Centerpiece Plenary Q&A · Minutes 50-58
-*Ken Johnston + Bob Rapp · AIGovOps Foundation · August 11, 2026*
+*Ken Johnston + Bob Rapp · AiGovOps Foundation · August 11, 2026*
 
 ---
 
@@ -53,7 +53,7 @@ Start with Khanmigo — it's free for qualified districts, it's curriculum-align
 **Answer (2–3 sentences):**
 Make a folder in Google Drive called "AI Receipts" right now — that's it. Every time you use AI to draft a customer email, a social post, or a quote, save the prompt and the output to that folder. That one habit satisfies Rule 3 ("keep the receipts"), protects you legally under the [FTC's amended COPPA Rule effective April 22, 2026](https://aurascape.ai/answers/ai-compliance-frameworks-standards-and-governance-for-education-institutions/) if you're ever in a dispute, and means you accumulate a personal library of prompts that actually work for your specific business.
 
-**Citation/Source:** [FTC amended COPPA Rule, April 22, 2026](https://aurascape.ai/answers/ai-compliance-frameworks-standards-and-governance-for-education-institutions/); [AIGovOps Foundation](https://www.aigovops-foundation.com)
+**Citation/Source:** [FTC amended COPPA Rule, April 22, 2026](https://aurascape.ai/answers/ai-compliance-frameworks-standards-and-governance-for-education-institutions/); [AiGovOps Foundation](https://www.aigovops-foundation.com)
 
 ---
 
@@ -68,14 +68,14 @@ Yes — and the evidence is unusually strong here. The [Stanford GSE 6-month ran
 
 ---
 
-### Q5 · What does the AIGovOps Foundation actually do — and why is it free?
+### Q5 · What does the AiGovOps Foundation actually do — and why is it free?
 
 **Tag-in:** [KEN]
 
 **Answer (2–3 sentences):**
-The [AIGovOps Foundation](https://www.aigovops-foundation.com) is a 501(c)(3) nonprofit that builds open-source governance tools — Beacon finds every AI in your environment, Umbrella translates 40-plus global frameworks into executable controls, and Lantern produces the human-readable parent-or-board-facing report — all Apache-2.0 licensed, no SaaS subscription. It's free because the Foundation's explicit mission is to empower disadvantaged, rural, and small communities through improved AI access: if we charged NCW school districts, we'd be doing the opposite of our mission. What Ken and I built at Microsoft, Ford, Autonomic, IBM, and GE Healthcare costs seven figures in the enterprise — here it's your Saturday afternoon.
+The [AiGovOps Foundation](https://www.aigovops-foundation.com) is a 501(c)(3) nonprofit that builds open-source governance tools — Beacon finds every AI in your environment, Umbrella translates 40-plus global frameworks into executable controls, and Lantern produces the human-readable parent-or-board-facing report — all Apache-2.0 licensed, no SaaS subscription. It's free because the Foundation's explicit mission is to empower disadvantaged, rural, and small communities through improved AI access: if we charged NCW school districts, we'd be doing the opposite of our mission. What Ken and I built at Microsoft, Ford, Autonomic, IBM, and GE Healthcare costs seven figures in the enterprise — here it's your Saturday afternoon.
 
-**Citation/Source:** [AIGovOps Foundation](https://www.aigovops-foundation.com)
+**Citation/Source:** [AiGovOps Foundation](https://www.aigovops-foundation.com)
 
 ---
 
@@ -102,7 +102,7 @@ That's exactly the right question, and it's why we showed the harms slide at equ
 **Answer (2–3 sentences):**
 The specific tools will change — Gemini, ChatGPT, Claude will all look different in 2028 — but the skills you're practicing today are durable: how to write a clear prompt, how to evaluate an AI's output critically, how to keep a human in the loop on decisions that matter. Those skills transfer to every tool that comes after this one, the same way knowing how to evaluate a spreadsheet transferred from Lotus 1-2-3 to Excel. The people in this room who wait two years won't be starting at the same place as the people who started today — they'll be starting two years behind.
 
-**Citation/Source:** [AIGovOps Foundation](https://www.aigovops-foundation.com)
+**Citation/Source:** [AiGovOps Foundation](https://www.aigovops-foundation.com)
 
 ---
 
@@ -151,7 +151,7 @@ They're describing the 2022 version accurately — large language models do, at 
 **Answer (2–3 sentences):**
 The Foundation is a 501(c)(3), Apache-2.0, no-SaaS — we receive no compensation from Google, OpenAI, or any tool vendor, and our code is public so anyone can verify that. We demonstrate Gemini Deep Think today the same way we'd demonstrate a hammer to a carpenter: it's the best-in-class tool for a specific job, and our job is to help NCW use the best tools safely, not to protect any vendor's market share. If a better tool ships tomorrow, we'll demonstrate that one instead — the Foundation's value is the governance framework that wraps any tool, not the tool itself.
 
-**Citation/Source:** [AIGovOps Foundation](https://www.aigovops-foundation.com)
+**Citation/Source:** [AiGovOps Foundation](https://www.aigovops-foundation.com)
 
 ---
 
@@ -171,7 +171,7 @@ The Foundation is a 501(c)(3), Apache-2.0, no-SaaS — we receive no compensatio
 **Tag-in:** [KEN]
 
 **Answer (2–3 sentences):**
-The [Senate investigation led by Senators Blunt Rochester and Tuberville, opened June 5, 2026](https://www.bluntrochester.senate.gov/news/press-releases/news-ranking-member-blunt-rochester-and-chair-tuberville-lead-investigation-into-ai-and-k-12-education/) is asking exactly the right oversight questions — and we welcome it. But while Congress investigates, 50,000 schools are already using AI tools, students already have these tools on their phones, and the evidence already shows that unmanaged use produces the Jake outcome. "Wait for Washington" is not a strategy; it's a decision to let the default happen, and the default right now is unmanaged. The AIGovOps Foundation's framework is designed to be exactly what a GAO audit would want to find — documented, auditable, human-accountable.
+The [Senate investigation led by Senators Blunt Rochester and Tuberville, opened June 5, 2026](https://www.bluntrochester.senate.gov/news/press-releases/news-ranking-member-blunt-rochester-and-chair-tuberville-lead-investigation-into-ai-and-k-12-education/) is asking exactly the right oversight questions — and we welcome it. But while Congress investigates, 50,000 schools are already using AI tools, students already have these tools on their phones, and the evidence already shows that unmanaged use produces the Jake outcome. "Wait for Washington" is not a strategy; it's a decision to let the default happen, and the default right now is unmanaged. The AiGovOps Foundation's framework is designed to be exactly what a GAO audit would want to find — documented, auditable, human-accountable.
 
 **Citation/Source:** [Senate GAO investigation, June 5, 2026](https://www.bluntrochester.senate.gov/news/press-releases/news-ranking-member-blunt-rochester-and-chair-tuberville-lead-investigation-into-ai-and-k-12-education/)
 
@@ -184,7 +184,7 @@ The [Senate investigation led by Senators Blunt Rochester and Tuberville, opened
 **Answer (2–3 sentences):**
 This is the right question and the binding answer is in the law: FERPA controls student records, COPPA controls data from children under 13, and the [FTC's amended COPPA rule effective April 22, 2026](https://aurascape.ai/answers/ai-compliance-frameworks-standards-and-governance-for-education-institutions/) just expanded "personal information" to include biometrics — voiceprints and facial patterns — meaning schools must now update consent processes before using any AI that processes student audio or video. The Foundation's Beacon tool inventories every AI tool a district uses and flags exactly which FERPA and COPPA controls each one requires — if your district can't answer "what data does this tool collect and where does it go," that's a two-week project with Beacon, not a two-year one.
 
-**Citation/Source:** [FTC amended COPPA Rule, April 22, 2026](https://aurascape.ai/answers/ai-compliance-frameworks-standards-and-governance-for-education-institutions/); [AIGovOps Foundation](https://www.aigovops-foundation.com)
+**Citation/Source:** [FTC amended COPPA Rule, April 22, 2026](https://aurascape.ai/answers/ai-compliance-frameworks-standards-and-governance-for-education-institutions/); [AiGovOps Foundation](https://www.aigovops-foundation.com)
 
 ---
 
@@ -222,7 +222,7 @@ Standard Gemini gives you its first-best answer immediately — it's fast and us
 **Answer (2–3 sentences):**
 A Model Council means asking the same hard question to three frontier AIs in parallel — Gemini Deep Think, Claude Opus extended thinking, GPT-5 reasoning — then pasting all three answers into a fourth tab with a synthesizer prompt that surfaces where they agree (high-confidence), where they disagree (worth your attention), what none of them said (often the most important thing), and what you should do first. Perplexity's Model Council runs this automatically in one interface; you can also do it manually in 15 minutes with three browser tabs and the synthesizer prompt we demoed today. The key principle is: no single AI gets to answer a question that matters — that's point 6 of the Pledge.
 
-**Citation/Source:** [Gemini 3 Deep Think](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/); [AIGovOps Foundation](https://www.aigovops-foundation.com)
+**Citation/Source:** [Gemini 3 Deep Think](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/); [AiGovOps Foundation](https://www.aigovops-foundation.com)
 
 ---
 
@@ -233,7 +233,7 @@ A Model Council means asking the same hard question to three frontier AIs in par
 **Answer (2–3 sentences):**
 Yes — and this is a real NCW infrastructure issue. Smaller open-source models (Llama 3, Mistral) can run locally on a laptop or a school server without any internet connection, and the Foundation's Beacon tool can inventory and govern those the same way it handles cloud tools. For classrooms with intermittent connectivity, the better near-term answer is often to do AI-assisted prep work offline at home or in a library, then bring the outputs to class — the Pledge's "keep the receipts" habit works fine in a Google Drive folder that syncs when you reconnect.
 
-**Citation/Source:** [AIGovOps Foundation](https://www.aigovops-foundation.com)
+**Citation/Source:** [AiGovOps Foundation](https://www.aigovops-foundation.com)
 
 ---
 
@@ -255,7 +255,7 @@ Gemini, Claude, and GPT-5 all handle Spanish-to-English and English-to-Spanish a
 **Answer (2–3 sentences):**
 Beacon scans your environment — Google Workspace, Microsoft 365, browser extensions, installed apps — to find every AI tool in use across your organization, then attests each one against 23 audit frameworks and produces a cryptographically signed receipt: a verifiable record that says "as of this date, this is every AI tool we use and here's how each one maps to our governance controls." For an NCW school district, that means a superintendent can answer a [Senate GAO inquiry](https://www.bluntrochester.senate.gov/news/press-releases/news-ranking-member-blunt-rochester-and-chair-tuberville-lead-investigation-into-ai-and-k-12-education/) or a parent's FERPA question in 60 seconds instead of three weeks. It's open-source, Apache-2.0, free — think of it as an AI inventory audit that runs itself.
 
-**Citation/Source:** [AIGovOps Foundation](https://www.aigovops-foundation.com); [Senate GAO investigation](https://www.bluntrochester.senate.gov/news/press-releases/news-ranking-member-blunt-rochester-and-chair-tuberville-lead-investigation-into-ai-and-k-12-education/)
+**Citation/Source:** [AiGovOps Foundation](https://www.aigovops-foundation.com); [Senate GAO investigation](https://www.bluntrochester.senate.gov/news/press-releases/news-ranking-member-blunt-rochester-and-chair-tuberville-lead-investigation-into-ai-and-k-12-education/)
 
 ---
 
@@ -271,7 +271,7 @@ Beacon scans your environment — Google Workspace, Microsoft 365, browser exten
 **Answer (2–3 sentences):**
 Start with what you already pay for: Google Workspace for Education is already in most NCW districts, and Gemini is built in — no new procurement, no new contract. The one-part-time-tech-coordinator problem is real, which is exactly why we built the Foundation tools to be self-service: Beacon runs a scan, Umbrella generates the controls checklist, and Lantern produces the parent-facing report — your coordinator can stand up a working governance posture in a day. For the AI tutoring piece, Khanmigo has a free-district program for qualifying schools — we'll connect you after the session.
 
-**Citation/Source:** [AIGovOps Foundation](https://www.aigovops-foundation.com); [Khan Academy Khanmigo, June 2026](https://www.aimscollaboratory.org/resources-all/how-khan-academy-is-building-a-better-ai-tutor-our-most-recent-learnings)
+**Citation/Source:** [AiGovOps Foundation](https://www.aigovops-foundation.com); [Khan Academy Khanmigo, June 2026](https://www.aimscollaboratory.org/resources-all/how-khan-academy-is-building-a-better-ai-tutor-our-most-recent-learnings)
 
 ---
 
@@ -282,7 +282,7 @@ Start with what you already pay for: Google Workspace for Education is already i
 **Answer (2–3 sentences):**
 Absolutely, and this is one of the most direct productivity wins in NCW. A Custom Gemini Gem loaded with your orchard's frost-protection SOPs, your historical NOAA temperature data, and your spray schedule can answer "what's our cold-spray protocol below 28°F?" in four seconds and brief a new crew member in five minutes — we built the "Orchard Helper" demo running on the screen right now in under an hour this morning. The bigger long-term play is connecting that Gem to a weather API and an n8n automation workflow so it sends your foreman a Slack alert when the overnight low is forecast to drop below threshold — no code, just two nodes, 20 minutes.
 
-**Citation/Source:** [AIGovOps Foundation](https://www.aigovops-foundation.com)
+**Citation/Source:** [AiGovOps Foundation](https://www.aigovops-foundation.com)
 
 ---
 
@@ -293,7 +293,7 @@ Absolutely, and this is one of the most direct productivity wins in NCW. A Custo
 **Answer (2–3 sentences):**
 Indigenous data sovereignty — the principle that tribal nations have authority over data about their communities, lands, and peoples — is a real and important constraint that most AI governance frameworks underaddress. The Foundation's Umbrella tool maps to 40-plus global frameworks, and we're actively working to incorporate the OCAP® principles (Ownership, Control, Access, Possession) into the tribal-community controls layer — if you're working with a tribal education department in NCW, we want that conversation after today. The practical starting point: any AI tool used in a BIE or tribal school must be assessed for where data is stored, whether it can be trained on student-generated content, and whether the tribal nation has contractual data-return rights — that's a Beacon scan plus a legal review of the vendor DPA.
 
-**Citation/Source:** [AIGovOps Foundation](https://www.aigovops-foundation.com); [AI Bill of Rights for Education](https://resources.norrageducation.org/resource/822/sneak-preview-a-blueprint-for-an-ai-bill-of-rights-for-education)
+**Citation/Source:** [AiGovOps Foundation](https://www.aigovops-foundation.com); [AI Bill of Rights for Education](https://resources.norrageducation.org/resource/822/sneak-preview-a-blueprint-for-an-ai-bill-of-rights-for-education)
 
 ---
 
@@ -304,7 +304,7 @@ Indigenous data sovereignty — the principle that tribal nations have authority
 **Answer (2–3 sentences):**
 The "Orchard Helper" agent we built this morning — the 4-ingredient Gemini Gem — was built by a team of two in under an hour and costs zero dollars per month. For a 3-staff nonprofit, the highest-ROI AI habits are: grant-writing drafts in Gemini (save 4 hours per application), donor email personalization (save 30 minutes per campaign), and meeting summaries in Granola (save 2 hours of back-and-forth follow-up per week) — those three habits alone save a small NCW nonprofit 15 to 20 hours a month, which at staff cost is the equivalent of a part-time hire. The Rules breakout session this morning was designed specifically for organizations your size.
 
-**Citation/Source:** [AIGovOps Foundation](https://www.aigovops-foundation.com)
+**Citation/Source:** [AiGovOps Foundation](https://www.aigovops-foundation.com)
 
 ---
 
@@ -315,7 +315,7 @@ The "Orchard Helper" agent we built this morning — the 4-ingredient Gemini Gem
 **Answer (2–3 sentences):**
 Bob: The NCW AI in Action follow-up series lives at ncwtech.org/ai-in-action — it's a monthly community of practice where educators, business owners, and nonprofit leaders in our region share what's working, what failed, and what questions they're taking to the next session. Ken: Every signer of the NCW Pledge gets a badge for their classroom door, store window, or nonprofit homepage — and the Pledge lives at aigovops-foundation.com/ncw-pledge, where it updates as the field evolves. The community we're building today is the point: NCW moving together, not waiting for a city or a federal agency to tell it what to do.
 
-**Citation/Source:** [AIGovOps Foundation](https://www.aigovops-foundation.com)
+**Citation/Source:** [AiGovOps Foundation](https://www.aigovops-foundation.com)
 
 ---
 ---
@@ -418,7 +418,7 @@ This answer references **three moments from earlier in the plenary:**
 
 ### The Callback
 This answer references **three moments from earlier in the plenary:**
-1. **The AIGovOps Foundation Lens (min 30–40):** "Policy as code" — Marco's one-sentence AI policy is the exact classroom-to-business translation of Slide 8 ("A 5-sentence classroom AI policy, written by the teacher, posted on the wall") applied to a cold-storage operation.
+1. **The AiGovOps Foundation Lens (min 30–40):** "Policy as code" — Marco's one-sentence AI policy is the exact classroom-to-business translation of Slide 8 ("A 5-sentence classroom AI policy, written by the teacher, posted on the wall") applied to a cold-storage operation.
 2. **The 7-Point Pledge (min 40–50):** Pledge Point 3 ("We govern AI like we engineer it — with checklists, evidence, and reviews") and Point 7 ("We keep the receipts") — the USDA compliance use case is the most concrete possible expression of both.
 3. **The Build It in 60 reference (implied in the run-of-show):** "That's an n8n workflow with three nodes" — this callback rewards anyone in the room who attended the morning breakout and makes the afternoon's plenary feel like it closes a loop.
 
@@ -466,7 +466,7 @@ This answer references **three moments from earlier in the plenary:**
 ### The Callback
 This answer references **three moments from earlier in the plenary:**
 1. **The Two Futures (min 0–5):** Jake's story — "Sara stops coming to school" — is the exact deepfake scenario Diana is describing. Bob's answer validates Diana's fear by making it clear this is a documented, real scenario from the opening scene, not a hypothetical.
-2. **The AIGovOps Foundation Lens (min 30–40):** "Lantern — the human-readable governance CLI that explains it to your parents, your board, your auditor" — Diana's question is the use case Lantern was built for, and the answer makes that specific and concrete.
+2. **The AiGovOps Foundation Lens (min 30–40):** "Lantern — the human-readable governance CLI that explains it to your parents, your board, your auditor" — Diana's question is the use case Lantern was built for, and the answer makes that specific and concrete.
 3. **The 7-Point Pledge (min 40–50):** Pledge Point 7 ("We keep the receipts — so a parent, a regulator, an auditor — or our own conscience — can verify our work") uses the exact language of parental accountability. Diana's question is what Point 7 sounds like from the outside.
 
 ---
@@ -485,5 +485,5 @@ This answer references **three moments from earlier in the plenary:**
 
 ---
 
-*NCW AI Expo 2026 · Sli.do Bank + Plant Scripts v1 · Ken Johnston + Bob Rapp · AIGovOps Foundation · August 11, 2026*
-*All citations linked inline. Key sources: [Stanford GSE](https://www.instagram.com/p/DZWP5QnFxuz/) · [Khan Academy](https://www.aimscollaboratory.org/resources-all/how-khan-academy-is-building-a-better-ai-tutor-our-most-recent-learnings) · [MIT/Guardian](https://www.theguardian.com/us-news/2026/jun/19/chatbots-critical-thinking-skills) · [Cornell](https://scientificinquirer.com/2026/05/26/widespread-ai-misuse-by-college-students-signals-need-to-rethink-assessment/) · [Senate GAO](https://www.bluntrochester.senate.gov/news/press-releases/news-ranking-member-blunt-rochester-and-chair-tuberville-lead-investigation-into-ai-and-k-12-education/) · [NYC pause](https://www.nytimes.com/2026/06/09/nyregion/nyc-schools-council-members-ai-ban.html) · [AI Bill of Rights for Education](https://resources.norrageducation.org/resource/822/sneak-preview-a-blueprint-for-an-ai-bill-of-rights-for-education) · [FTC COPPA](https://aurascape.ai/answers/ai-compliance-frameworks-standards-and-governance-for-education-institutions/) · [AIGovOps Foundation](https://www.aigovops-foundation.com) · [Gemini 3 Deep Think](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/)*
+*NCW AI Expo 2026 · Sli.do Bank + Plant Scripts v1 · Ken Johnston + Bob Rapp · AiGovOps Foundation · August 11, 2026*
+*All citations linked inline. Key sources: [Stanford GSE](https://www.instagram.com/p/DZWP5QnFxuz/) · [Khan Academy](https://www.aimscollaboratory.org/resources-all/how-khan-academy-is-building-a-better-ai-tutor-our-most-recent-learnings) · [MIT/Guardian](https://www.theguardian.com/us-news/2026/jun/19/chatbots-critical-thinking-skills) · [Cornell](https://scientificinquirer.com/2026/05/26/widespread-ai-misuse-by-college-students-signals-need-to-rethink-assessment/) · [Senate GAO](https://www.bluntrochester.senate.gov/news/press-releases/news-ranking-member-blunt-rochester-and-chair-tuberville-lead-investigation-into-ai-and-k-12-education/) · [NYC pause](https://www.nytimes.com/2026/06/09/nyregion/nyc-schools-council-members-ai-ban.html) · [AI Bill of Rights for Education](https://resources.norrageducation.org/resource/822/sneak-preview-a-blueprint-for-an-ai-bill-of-rights-for-education) · [FTC COPPA](https://aurascape.ai/answers/ai-compliance-frameworks-standards-and-governance-for-education-institutions/) · [AiGovOps Foundation](https://www.aigovops-foundation.com) · [Gemini 3 Deep Think](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/)*

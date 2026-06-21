@@ -1,6 +1,6 @@
 # NCW Mini-Camp Video Scripts — Production Master
 ## 11 Camps · English + Spanish · ElevenLabs + Synthesia + Gamma
-*AIGovOps Foundation × NCW Tech Alliance · AI Expo 2026*
+*AiGovOps Foundation × NCW Tech Alliance · AI Expo 2026*
 *Production document v1.0 · All scripts written for 90–120 second runtime*
 
 ---
@@ -166,7 +166,7 @@ Each mini-camp section contains four parts:
 | 6 | 0:42–0:55 | Sophia at the kitchen table, gluing photos to a large poster board. A hand-drawn wolf. Colored pencils scattered. She holds it up — proud. | `The ideas are hers.` | *"She built a poster. Sophia's AI did the hard searching. Sophia did the thinking."* | `Young girl proudly holding up a homemade poster about wolves, hand-drawn illustrations, colored pencils on table, warm kitchen light, genuine and joyful` |
 | 7 | 0:55–1:05 | Adult narrator appears (Charlotte/Tina avatar) — warm, direct to camera. Simple background: a classroom or warm room. | `That's the rule.` | *"That's the rule. That's the camp."* | `Friendly female teacher in her 30s speaking directly to camera in a warm classroom setting, professional but approachable, photorealistic` |
 | 8 | 1:05–1:20 | Wide shot: a diverse classroom — several kids at Chromebooks, each clearly engaged with something different. A handwritten sign on the wall: "AI asks. YOU think." Teacher circling. | `For every kid who finishes early and wants more.` | *"For kids like Sophia — and the gifted student in your classroom —"* | `Wide shot of a diverse elementary classroom, students at Chromebooks engaged individually, teacher walking among them, handwritten sign on wall, warm documentary style` |
-| 9 | 1:20–1:30 | Final card: dark forest-green background. AIGovOps + NCW Tech Alliance logos. CTA text animates in. QR code bottom center. | `Sign the pledge → aigovops-foundation.github.io/aigovops-ncw-ai-camp` | *"Sign the pledge at aigovops-foundation.github.io/aigovops-ncw-ai-camp"* | `Minimalist title card, dark forest-green background, white sans-serif typography, small foundation logos, QR code, professional` |
+| 9 | 1:20–1:30 | Final card: dark forest-green background. AiGovOps + NCW Tech Alliance logos. CTA text animates in. QR code bottom center. | `Sign the pledge → aigovops-foundation.github.io/aigovops-ncw-ai-camp` | *"Sign the pledge at aigovops-foundation.github.io/aigovops-ncw-ai-camp"* | `Minimalist title card, dark forest-green background, white sans-serif typography, small foundation logos, QR code, professional` |
 
 ---
 
@@ -1504,12 +1504,12 @@ Line 2: (blank line)
 Line 3: Sign the pledge → — white, 20pt, regular
 Line 4: aigovops-foundation.github.io/aigovops-ncw-ai-camp — white, 18pt, underlined
 (QR code: centered, bottom third)
-(AIGovOps Foundation + NCW Tech Alliance logos: bottom corners, small)
+(AiGovOps Foundation + NCW Tech Alliance logos: bottom corners, small)
 ```
 
 ---
 
-*NCW Mini-Camp Video Scripts v1.0 · AI Expo 2026 · AIGovOps Foundation × NCW Tech Alliance*
+*NCW Mini-Camp Video Scripts v1.0 · AI Expo 2026 · AiGovOps Foundation × NCW Tech Alliance*
 *All narrations written for ElevenLabs voice generation and Synthesia avatar production.*
 *All storyboard frames written for Gamma AI image generation.*
 *Sign the pledge → aigovops-foundation.github.io/aigovops-ncw-ai-camp*

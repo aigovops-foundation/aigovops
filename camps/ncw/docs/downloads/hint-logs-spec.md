@@ -1,6 +1,6 @@
 # The Hint-Log Spec
 
-**A project of the AIGovOps Foundation × NCW AI Expo 2026**
+**A project of the AiGovOps Foundation × NCW AI Expo 2026**
 *"Keep the receipts" — scaled down for one person.*
 
 ---
@@ -9,7 +9,7 @@
 
 A **hint-log** is one short, structured entry that captures a meaningful AI interaction and records the single most important fact about it: **a human, not the machine, made the final call.**
 
-Hint-logs are the small-scale, individual version of what the AIGovOps Foundation's **Beacon** tool does for enterprises. They are the *receipts side* of the three habits we teach at the Expo:
+Hint-logs are the small-scale, individual version of what the AiGovOps Foundation's **Beacon** tool does for enterprises. They are the *receipts side* of the three habits we teach at the Expo:
 
 1. **The two-eyes rule** — never ship an AI output a human hasn't reviewed.
 2. **Triangulate hard questions** — check important claims against a real source.
@@ -107,11 +107,11 @@ Most of the tools you'll log against have a free tier. Remember: when a tool is 
 
 A hint-log is something you keep by hand, for the AI moments that matter to one person.
 
-**When you outgrow a personal hint-log, Beacon does this automatically at the enterprise scale.** The AIGovOps Foundation's Beacon captures the same five things — the hint, the answer, the catch, the human call, and the receipt — across an entire organization, turning the habit into governance enforced in code rather than goodwill. It is the same idea: a personal notebook becomes an organizational system of record, so that anyone who later asks *"did a human actually check this?"* always has a verifiable answer.
+**When you outgrow a personal hint-log, Beacon does this automatically at the enterprise scale.** The AiGovOps Foundation's Beacon captures the same five things — the hint, the answer, the catch, the human call, and the receipt — across an entire organization, turning the habit into governance enforced in code rather than goodwill. It is the same idea: a personal notebook becomes an organizational system of record, so that anyone who later asks *"did a human actually check this?"* always has a verifiable answer.
 
 Start with a notebook. Graduate to Beacon when the stakes — and the volume — demand it.
 
 ---
 
-*AIGovOps Foundation — a 501(c)(3) nonprofit · Apache-2.0 · × NCW Tech Alliance*
+*AiGovOps Foundation — a 501(c)(3) nonprofit · Apache-2.0 · × NCW Tech Alliance*
 *Learn more: https://www.aigovops-foundation.com · https://www.ncwtech.org*

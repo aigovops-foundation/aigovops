@@ -2,7 +2,7 @@
 ## Cool Tools, Cool Schools & The Rules
 *Paste into Gamma at gamma.app → "Generate" → "Import from outline" → paste this whole file. Each `# SLIDE` becomes one slide. Then edit live in Gamma — fonts, colors, images.*
 
-**Recommended Gamma theme:** "Oasis" or "Daktilo" — clean, friendly, high contrast. **Recommended color palette:** NCW orchard green (#2E7D4F), AIGovOps signal orange (#E07A2A), warm cream background (#FAF7F0), charcoal text (#1F1F1F).
+**Recommended Gamma theme:** "Oasis" or "Daktilo" — clean, friendly, high contrast. **Recommended color palette:** NCW orchard green (#2E7D4F), AiGovOps signal orange (#E07A2A), warm cream background (#FAF7F0), charcoal text (#1F1F1F).
 
 ---
 
@@ -10,7 +10,7 @@
 **Cool Tools, Cool Schools & The Rules**
 A practical AI workshop for North Central Washington
 AI Expo 2026 · Wenatchee · August 11
-Brought to you by the AIGovOps Foundation × NCW Tech Alliance
+Brought to you by the AiGovOps Foundation × NCW Tech Alliance
 *Ken Johnston & Bob Rapp*
 
 ---
@@ -25,7 +25,7 @@ We're going to do that with three rules, four tools, and a whole lot of show-and
 # SLIDE 3 — Who's running this
 **Ken Johnston** — AI & data leadership at Microsoft, Ford, and CEO of Autonomic.ai
 **Bob Rapp** — AI/ML at Vodafone, IBM Watson, GE Healthcare, Microsoft, and General Motors
-Together: co-founders of the **AIGovOps Foundation** — open-source AI governance for everyone, not just enterprises.
+Together: co-founders of the **AiGovOps Foundation** — open-source AI governance for everyone, not just enterprises.
 
 ---
 
@@ -137,7 +137,7 @@ That's the work.
 We have to talk about the rules.
 Not because AI is scary.
 Because **AI without rules is how you end up in the newspaper.**
-This is what the AIGovOps Foundation does for a living. Here's the small-business / small-classroom version.
+This is what the AiGovOps Foundation does for a living. Here's the small-business / small-classroom version.
 
 ---
 
@@ -249,7 +249,7 @@ Welcome to it.
 # SLIDE 31 — Keep learning, free
 **NCW Tech Alliance** — AI in Action series returns Fall 2026 → ncwtech.org
 **aiEDU** — classroom AI literacy → aiedu.org
-**AIGovOps Foundation** — open-source governance toolkit, free training, community → aigovops-foundation.com
+**AiGovOps Foundation** — open-source governance toolkit, free training, community → aigovops-foundation.com
 **The Foundation's Substack** — practical governance for practitioners
 **Clock hours available today** — sign in at the registration desk.
 
@@ -280,7 +280,7 @@ That's how NCW moves from 5 to 7 — together.
 
 # SLIDE 35 — Thank you
 **Ken Johnston** · **Bob Rapp**
-AIGovOps Foundation · aigovops-foundation.com
+AiGovOps Foundation · aigovops-foundation.com
 NCW Tech Alliance · ncwtech.org
 *"AI governance that runs like engineering. Cool tools. Cool schools. And the rules."*
 
@@ -294,7 +294,7 @@ NCW Tech Alliance · ncwtech.org
 # SLIDE 36 — Centerpiece cover
 **AI as Partner in Education**
 The future we build. The harms we prevent.
-Ken Johnston · Bob Rapp · AIGovOps Foundation
+Ken Johnston · Bob Rapp · AiGovOps Foundation
 NCW AI Expo 2026 · keynote plenary
 
 ---
@@ -400,7 +400,7 @@ That's the **two-eyes rule** with a third opinion.
 
 ---
 
-# SLIDE 50 — The AIGovOps Foundation lens, in a classroom
+# SLIDE 50 — The AiGovOps Foundation lens, in a classroom
 **Policy as code** → a 5-sentence classroom AI policy on the wall
 **Evidence that ships** → a Drive folder with prompts, work, AI contributions
 **Find every AI on your network** (Beacon) → a district AI inventory
@@ -479,14 +479,14 @@ That's how NCW moves from 5 to 7 — together.
 # SLIDE 59 — Thank you, NCW
 The story we tell about AI in NCW
 will be the story we wrote — together.
-*— Ken Johnston · Bob Rapp · AIGovOps Foundation*
+*— Ken Johnston · Bob Rapp · AiGovOps Foundation*
 aigovops-foundation.com · ncwtech.org
 
 ---
 
 # SLIDE 60 — Outro / lights
 *[Lights up. Music. Applause. Roll out.]*
-*Logos: AIGovOps Foundation · NCW Tech Alliance · Microsoft · aiEDU · NCESD*
+*Logos: AiGovOps Foundation · NCW Tech Alliance · Microsoft · aiEDU · NCESD*
 
 ---
 
@@ -498,7 +498,7 @@ When you paste this into Gamma:
 2. **First-pass theme:** pick **"Oasis"** or **"Daktilo."** Both have warm, friendly type and good contrast.
 3. **Image style:** prompt Gamma's image AI with: *"warm, photographic, real people, North Central Washington orchards / classrooms / small-town businesses, natural light, not stocky"*
 4. **Animation:** keep it minimal — slide-up transitions only. This is a workshop, not a TED talk.
-5. **Brand the title and closing slide** with NCW Tech Alliance logo + AIGovOps Foundation logo.
+5. **Brand the title and closing slide** with NCW Tech Alliance logo + AiGovOps Foundation logo.
 6. **For demo slides (6, 13, 25):** insert a placeholder image like "[LIVE DEMO]" — the facilitator will switch to the live tool.
 7. **Speaker notes:** after Gamma generates, go back and paste the matching section of `ncw_facilitator_run_of_show.md` into the speaker-notes panel of each slide.
 

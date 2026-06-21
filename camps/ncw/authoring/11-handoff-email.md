@@ -37,7 +37,7 @@ This is a gift, not a pitch. Everything is open-source, no strings, no SaaS. We 
 Talk soon —
 
 Bob Rapp
-Co-founder, AIGovOps Foundation
+Co-founder, AiGovOps Foundation
 Ellensburg, WA
 [www.aigovops-foundation.com](https://www.aigovops-foundation.com)
 

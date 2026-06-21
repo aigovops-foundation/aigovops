@@ -2,7 +2,7 @@
 ## Five Scenarios · Seven Voices · One Principle
 *"Human in the driver's seat. AI does the painful work. Truth-grounded. Always."*
 
-Brought to you by the **AIGovOps Foundation** for the **NCW Tech Alliance AI Expo 2026**.
+Brought to you by the **AiGovOps Foundation** for the **NCW Tech Alliance AI Expo 2026**.
 
 ---
 
@@ -23,7 +23,7 @@ And the AI does the **painful work**:
 - The repetitive cleanup
 - The "what am I missing?" check
 
-Every mini-camp is built on the AIGovOps Foundation's three habits:
+Every mini-camp is built on the AiGovOps Foundation's three habits:
 
 | Habit | What it sounds like in the camp |
 |---|---|
@@ -107,7 +107,7 @@ That's your real homework — answering the *other side.*
 
 This is the **Model Council** trick. You're using three AIs to triangulate truth.
 
-**Step 3 — Read the actual source.** Yes, the actual one. A primary document, a peer-reviewed paper, a long-form article from an outlet with a real editor. AI suggests; you verify. (This is what the AIGovOps Foundation calls "truth-grounded.")
+**Step 3 — Read the actual source.** Yes, the actual one. A primary document, a peer-reviewed paper, a long-form article from an outlet with a real editor. AI suggests; you verify. (This is what the AiGovOps Foundation calls "truth-grounded.")
 
 **Step 4 — Write your draft in your voice.** AI can help with: structure, grammar, what to cut. AI is NOT writing your sentences. **If you can't explain a sentence out loud to your dog, delete it.**
 
@@ -396,7 +396,7 @@ Right now — without buying anything — open a Google Sheet titled "District A
 
 Ask every principal to fill in the rows for their building. **You will be shocked.** Most districts find 15-40 AI tools already in use — most never approved, most touching student data.
 
-This is what the AIGovOps Foundation's [**Beacon** tool](https://www.aigovops-foundation.com) does for enterprises automatically — and Beacon is Apache-2.0 free if your IT wants to use it. But the spreadsheet works.
+This is what the AiGovOps Foundation's [**Beacon** tool](https://www.aigovops-foundation.com) does for enterprises automatically — and Beacon is Apache-2.0 free if your IT wants to use it. But the spreadsheet works.
 
 **Move 2: The traffic-light policy.**
 
@@ -424,7 +424,7 @@ Free options:
 - Common Sense Education AI literacy
 - NCW Tech Alliance AI in Action follow-up series → [ncwtech.org/ai-in-action](https://www.ncwtech.org/ai-in-action)
 - [Khan Academy's free Khanmigo Districts program](https://www.khanmigo.com)
-- AIGovOps Foundation's open-source training packs → [aigovops-foundation.com](https://www.aigovops-foundation.com)
+- AiGovOps Foundation's open-source training packs → [aigovops-foundation.com](https://www.aigovops-foundation.com)
 
 You don't need a contract. You need to designate **one AI lead per building** and give them 2 hours a month + a small stipend. That's it.
 
@@ -526,7 +526,7 @@ Print it. Post it in the break room. Done. **You just shipped a policy.**
 
 For ~$20-30/user/month, [Glean](https://glean.com) searches across all your business files (Drive, Slack, email, CRM) and answers questions with permissions respected. *"What did we tell the Wenatchee Co-op last March?"* → the actual email thread.
 
-When you grow past Glean, the [AIGovOps Foundation's Beacon tool](https://www.aigovops-foundation.com) (Apache-2.0, free) inventories every AI in your business and checks it against 23 audit frameworks. **For when your bank, your insurer, or your biggest customer asks "what's your AI policy?"**
+When you grow past Glean, the [AiGovOps Foundation's Beacon tool](https://www.aigovops-foundation.com) (Apache-2.0, free) inventories every AI in your business and checks it against 23 audit frameworks. **For when your bank, your insurer, or your biggest customer asks "what's your AI policy?"**
 
 ### The truth about small business and AI
 
@@ -582,7 +582,7 @@ You don't need a designer. Paste this into Lovable:
 
 60 seconds later: a real site. Edit by prompting. **Share the link in your next email to allies.**
 
-This is what the AIGovOps Foundation calls "evidence that ships." You moved from concern → action in 30 minutes.
+This is what the AiGovOps Foundation calls "evidence that ships." You moved from concern → action in 30 minutes.
 
 ### 🌟 The Community Leader's Three Rules
 
@@ -608,7 +608,7 @@ You serve a small city or county. Your constituents are watching the news — th
 
 **Move 1: Inventory.** Same spreadsheet move as the school administrator above. Every department, every tool. (City clerk, planning, parks, police, library, schools.) Most small cities find 8-20 AI tools already in use — most never approved.
 
-The AIGovOps Foundation's free [Beacon tool](https://www.aigovops-foundation.com) automates this if your IT lead wants it. Either way, **you can't govern what you can't see.**
+The AiGovOps Foundation's free [Beacon tool](https://www.aigovops-foundation.com) automates this if your IT lead wants it. Either way, **you can't govern what you can't see.**
 
 **Move 2: Adopt a 1-page AI use ordinance.**
 
@@ -617,7 +617,7 @@ Three sections:
 2. **What we will NEVER use AI for** (decisions that affect a resident's rights, benefits, or access to public services without human review; surveillance without a warrant; final hiring decisions; any decision about a child without two-eyes review)
 3. **Public accountability** (quarterly disclosure of which AI tools we use, a public-comment process before adopting new ones, and a named city employee who is accountable)
 
-This is what the AIGovOps Foundation calls **policy-as-code at the municipal scale.** It fits on one page. It's defensible. It's modular.
+This is what the AiGovOps Foundation calls **policy-as-code at the municipal scale.** It fits on one page. It's defensible. It's modular.
 
 Draft template available at [aigovops-foundation.com](https://www.aigovops-foundation.com).
 
@@ -646,7 +646,7 @@ Once a year, publish:
 
 Make it short. Make it readable. **Make it boring** — boring annual reports are what trust looks like in local government.
 
-The AIGovOps Foundation's [Lantern tool](https://www.aigovops-foundation.com) (in early development, free, open-source) is built exactly for this: turning policy-as-code into human-readable reports an auditor — or a resident — can understand.
+The AiGovOps Foundation's [Lantern tool](https://www.aigovops-foundation.com) (in early development, free, open-source) is built exactly for this: turning policy-as-code into human-readable reports an auditor — or a resident — can understand.
 
 ### 🌟 The Local Leader's Three Rules
 
@@ -658,7 +658,7 @@ The AIGovOps Foundation's [Lantern tool](https://www.aigovops-foundation.com) (i
 
 Big cities will spend years and millions arguing about AI. **You can lead by example in 30 days.** A 35,000-person city with a one-page AI ordinance, a public inventory, and an annual report is more advanced than most Fortune 500s.
 
-[Ken and Bob](https://www.aigovops-foundation.com) — and the AIGovOps Foundation — will help you draft any of this for free. That's the mission: empower disadvantaged, rural, and small communities with the same AI access and impact the biggest enterprises have.
+[Ken and Bob](https://www.aigovops-foundation.com) — and the AiGovOps Foundation — will help you draft any of this for free. That's the mission: empower disadvantaged, rural, and small communities with the same AI access and impact the biggest enterprises have.
 
 **NCW could be the first AI-governed region in America that small cities actually copy from.** That's not a small thing. That's leadership.
 
@@ -684,9 +684,9 @@ Across all 5 scenarios and all 7 voices, the pattern is the same:
 > AI does the painful invisible work.
 > The human keeps the joy, the judgment, and the final word.
 > We disclose. We keep the receipts. We triangulate hard questions.
-> **That's the AIGovOps Foundation way. That's the NCW way.**
+> **That's the AiGovOps Foundation way. That's the NCW way.**
 
 ---
 
-*Mini-Camps v1 · NCW AI Expo 2026 · AIGovOps Foundation × NCW Tech Alliance*
+*Mini-Camps v1 · NCW AI Expo 2026 · AiGovOps Foundation × NCW Tech Alliance*
 *Sign the Pledge → aigovops-foundation.com/ncw-pledge*

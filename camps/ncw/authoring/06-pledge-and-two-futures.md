@@ -53,7 +53,7 @@ Prompts saved. Outputs saved. Edits saved. So a parent, a regulator, an auditor 
 [J-PAL evaluations and the npj Science of Learning 2025 systematic review](https://etcjournal.com/2026/06/02/ai-and-the-promise-of-educational-equity/): AI tutoring shows consistent gains for low-income learners and across diverse student populations. The biggest gains came in math and science — the subjects where students struggled most. *(Stanford GSE 6-month RCT of 10,000 students across 200 US schools: +34% test scores with AI tutors.)*
 
 **Why #3 (govern like engineering):**
-The [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) is the methodology the US government uses for AI risk. The AIGovOps Foundation translates it — and 40+ other global frameworks — into practical tools any organization can use for free.
+The [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) is the methodology the US government uses for AI risk. The AiGovOps Foundation translates it — and 40+ other global frameworks — into practical tools any organization can use for free.
 
 **Why #4 (protect critical thinking):**
 [Cornell, 95,000-student study, 2026](https://scientificinquirer.com/2026/05/26/widespread-ai-misuse-by-college-students-signals-need-to-rethink-assessment/): 1 in 3 college students regularly use GenAI for assignments; 9% admit to outright cheating. We need new assessments, not new bans.
@@ -73,7 +73,7 @@ Three frontier AIs in parallel — [Perplexity's Model Council](https://www.link
 |---|---|
 | Sign the Pledge | aigovops-foundation.com/ncw-pledge |
 | Get the free Foundation toolkit (Beacon, Umbrella, Lantern) | aigovops-foundation.com |
-| Join the AIGovOps community | community.aigovopsfoundation.org |
+| Join the AiGovOps community | community.aigovopsfoundation.org |
 | NCW AI in Action follow-up series | ncwtech.org/ai-in-action |
 | Submit to the AI Use Case Showdown | ncwtech.org |
 
@@ -174,7 +174,7 @@ Maria's teacher saves the prompts, the AI's answers, and her edits in a shared D
 ```
 
 > **The story we tell about AI in NCW will be the story we wrote — together.**
-> *— Ken Johnston & Bob Rapp, AIGovOps Foundation*
+> *— Ken Johnston & Bob Rapp, AiGovOps Foundation*
 
 ---
 
@@ -191,4 +191,4 @@ Maria's teacher saves the prompts, the AI's answers, and her edits in a shared D
 
 ---
 
-*Pledge + Two Futures handouts v1 · NCW AI Expo 2026 · AIGovOps Foundation × NCW Tech Alliance*
+*Pledge + Two Futures handouts v1 · NCW AI Expo 2026 · AiGovOps Foundation × NCW Tech Alliance*

@@ -1,6 +1,6 @@
 # NCW AI Expo 2026 — Centerpiece + Breakout Video Scripts
 ## English & Mexican Spanish · Production-Ready
-*5 videos · AIGovOps Foundation × NCW Tech Alliance*
+*5 videos · AiGovOps Foundation × NCW Tech Alliance*
 *Ken Johnston + Bob Rapp · August 11, 2026 · Wenatchee Convention Center*
 
 ---
@@ -95,7 +95,7 @@ Each of the five videos below contains:
 > That's not a dream.
 > That's Deep Think.
 > That's the Model Council.
-> That's what the AIGovOps Foundation builds —
+> That's what the AiGovOps Foundation builds —
 > for free, open source — for communities exactly like this one.
 
 > **[PAUSE — 0.4s]**
@@ -188,7 +188,7 @@ Each of the five videos below contains:
 > Eso no es un sueño.
 > Eso es Deep Think.
 > Eso es el Consejo de Modelos.
-> Eso es lo que construye la Fundación AIGovOps —
+> Eso es lo que construye la Fundación AiGovOps —
 > gratuito, de código abierto — para comunidades exactamente como esta.
 
 > **[PAUSA — 0.4s]**
@@ -271,7 +271,7 @@ Each of the five videos below contains:
 | 10 | 1:20–1:30 | Quick montage — three 2-second cuts: (a) A teacher at a laptop — smiling, Sunday morning, not drowning; (b) An SMB owner reading an AI-drafted email on a phone, nodding; (c) A nonprofit leader at a whiteboard with three sticky notes labeled "AI says / We checked / We decided." | `What if...` *(italic, appears during montage)* | "What if AI asked your struggling student the right question instead of giving them the answer?" | `A relaxed teacher at a kitchen table on Sunday morning, smiling while reviewing a laptop, coffee nearby, warm natural light, authentic, not staged` |
 | 11 | 1:30–1:38 | **THE DEMO PREVIEW SHOT.** A single wide monitor split three ways: three AI interfaces (Gemini, Claude, ChatGPT) showing different answers to the same question. A synthesizer result panel appears on a fourth panel. Arrows point from each AI answer to the synthesis. | `3 AIs. 1 question. Better together.` | "What if three AIs argued about a hard problem — and showed their reasoning — and then a human decided?" | `A wide monitor showing three AI chat interfaces side by side with different responses to the same question, a fourth synthesis panel emerging, clean UI, conceptual but realistic, warm ambient lighting` |
 | 12 | 1:38–1:46 | Close-up: a hand writing on a single sheet of paper — five lines, each beginning with a different phrase. "Students MAY..." "Students MUST..." At the bottom: a teacher's signature. | `5 sentences. That's your policy.` | "What if your school had a written AI policy that fit on one page and actually got followed?" | `Close-up of a hand writing a short AI policy on a single piece of paper, five short lines visible, a signature line at the bottom, warm desk light, authentic handwriting style` |
-| 13 | 1:46–1:54 | Ken and Bob on stage — a preview shot, backs to camera, looking out at a full audience. The energy is about to happen. | `Deep Think. Model Council. AIGovOps Foundation.` *(each term fades in on its own line)* | "That's not a dream. That's Deep Think. That's the Model Council. That's what the AIGovOps Foundation builds — for free, open source — for communities exactly like this one." | `Two male presenters on a stage, backs to camera, looking out at a large full audience in a convention center, stage lights illuminating them from behind, cinematic, hopeful` |
+| 13 | 1:46–1:54 | Ken and Bob on stage — a preview shot, backs to camera, looking out at a full audience. The energy is about to happen. | `Deep Think. Model Council. AiGovOps Foundation.` *(each term fades in on its own line)* | "That's not a dream. That's Deep Think. That's the Model Council. That's what the AiGovOps Foundation builds — for free, open source — for communities exactly like this one." | `Two male presenters on a stage, backs to camera, looking out at a large full audience in a convention center, stage lights illuminating them from behind, cinematic, hopeful` |
 | 14 | 1:54–2:04 | **THE MODEL COUNCIL SEQUENCE — SHOT 1.** Screen fill: three AI reasoning traces, stacked or side by side, visibly "thinking" — reasoning text scrolling. Labels: GEMINI / CLAUDE / GPT-5. | `GEMINI · CLAUDE · GPT-5` | "Today, in this room, you'll see three frontier AIs reason through a real question about a real NCW student — in real time." | `Split-screen showing three AI reasoning interfaces side by side, each with scrolling thought traces, labeled Gemini, Claude, and GPT-5, modern clean UI, deep blue background, cinematic` |
 | 15 | 2:04–2:10 | **MODEL COUNCIL — SHOT 2.** A fourth panel appears: "SYNTHESIS." Five bullet points emerge one at a time. A glowing confidence score (1–5) appears next to each bullet. | `SYNTHESIS · High confidence: 4 of 5 AIs agree` | *(music swell — no narration for 2 seconds)* | `A synthesis AI panel emerging on a screen with five bulleted takeaways and confidence scores 1-5 appearing next to each, modern interface, dramatic reveal lighting` |
 | 16 | 2:10–2:16 | **MODEL COUNCIL — SHOT 3.** Pull back to reveal: Ken at the podium, reading from the synthesis live. The audience is visibly leaning forward. A few people in the front row are taking notes. | *(none — let the moment breathe)* | *(continued narration runs under this shot — "in real time.")* | `A presenter at a podium reading results from a large projection screen showing AI synthesized results, audience leaning forward attentively, convention center setting, documentary style` |
@@ -280,7 +280,7 @@ Each of the five videos below contains:
 | 19 | 2:32–2:42 | **THE HERO SHOT.** Aerial slow drone pull-back over Wenatchee — the Convention Center visible, the Columbia River, the Cascades. A city that is small, real, and beautiful. Evening golden light. | `AI as Partner in Education` *(elegant white type, centered)* | "AI as partner in education — this is what it looks like when a community decides to lead." | `Aerial drone shot over downtown Wenatchee Washington at golden hour, Columbia River visible, Cascade Mountains in background, Convention Center visible, cinematic wide angle, photorealistic, hopeful` |
 | 20 | 2:42–2:48 | Return to María — same classroom, same window. But now she's smiling at something off-screen, not at the camera. Her Chromebook is open. She's working. | *(none)* | *(music only — 2 second breath before the final lines)* | `Close-up of a young Latina girl in a classroom, smiling slightly while focused on a laptop, warm morning light, the same girl from the opening shots, full circle moment` |
 | 21 | 2:48–2:56 | **THE PLEDGE.** A single sheet of paper — the NCW AI Partnership Pledge — being signed. A hand writes a name. Then: the sheet is held up to the camera. We can read the first line: "AI is a partner, not a replacement." | *(none)* | "Sign the pledge. Use the tools. Keep the receipts." | `Close-up of a hand signing the NCW AI Partnership Pledge document, the pledge text partially visible, warm desk lighting, hopeful and deliberate` |
-| 22 | 2:56–3:00 | **FINAL CARD.** Dark deep-green background. AIGovOps Foundation + NCW Tech Alliance logos. Text animates in one line at a time. QR code appears last. | `AI AS PARTNER IN EDUCATION` · `NCW AI Expo · August 11, 2026` · `aigovops-foundation.com/ncw` | *(music only — warm orchestral resolve)* | `Minimalist title card on deep forest-green background, white sans-serif type, two small institutional logos, QR code at bottom center, professional event branding` |
+| 22 | 2:56–3:00 | **FINAL CARD.** Dark deep-green background. AiGovOps Foundation + NCW Tech Alliance logos. Text animates in one line at a time. QR code appears last. | `AI AS PARTNER IN EDUCATION` · `NCW AI Expo · August 11, 2026` · `aigovops-foundation.com/ncw` | *(music only — warm orchestral resolve)* | `Minimalist title card on deep forest-green background, white sans-serif type, two small institutional logos, QR code at bottom center, professional event branding` |
 
 ---
 
@@ -973,4 +973,4 @@ Three reasons:
 2. **It has the longest revision cycle.** At 3 minutes with 22 shots, the centerpiece will require the most back-and-forth on pacing, music placement, and the Model Council visual sequence. Getting it into review early leaves time to fix it before the breakout intros lock.
 3. **It's the room-opener.** If only one video is finished by the morning of August 11, it must be this one. The breakouts can be run without video intros if necessary. The plenary cannot.
 
-*Script v1.0 · NCW AI Expo 2026 · AIGovOps Foundation × NCW Tech Alliance · Ken Johnston + Bob Rapp*
+*Script v1.0 · NCW AI Expo 2026 · AiGovOps Foundation × NCW Tech Alliance · Ken Johnston + Bob Rapp*

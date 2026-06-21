@@ -2,7 +2,7 @@
 ## A Practical AI Training Plan for NCW Tech Alliance
 *Designed for the AI Expo 2026 — Wenatchee Convention Center · Up to 300 attendees · 3 breakout rooms · 60-minute sessions*
 
-**Co-presented by:** Ken Johnston & Bob Rapp — AIGovOps Foundation
+**Co-presented by:** Ken Johnston & Bob Rapp — AiGovOps Foundation
 **Audience:** Educators (K-12, higher-ed, librarians), small-and-medium business owners, nonprofit leaders, and community members across North Central Washington
 
 ---
@@ -11,7 +11,7 @@
 
 Move every attendee from a self-rated **5/10** ("AI-curious, a little nervous, not sure where to start") to a **7-8/10** ("I have a tool, a workflow, and a guardrail I can use Monday morning") in 60 minutes.
 
-We do that by speaking NCW's existing language — **Problem → Task → Role → Outcome** — and layering in three principles from the AIGovOps Foundation that keep the work safe and trustworthy:
+We do that by speaking NCW's existing language — **Problem → Task → Role → Outcome** — and layering in three principles from the AiGovOps Foundation that keep the work safe and trustworthy:
 
 | Foundation idea | What it sounds like for this room |
 |---|---|
@@ -100,9 +100,9 @@ Pick any three to run in parallel rooms (Sessions 1, 2, 3 → three rooms × two
 | 0:00 – 0:05 | **The cost of doing nothing** | One slide: SMB owners using AI save an average of 5-10 hours a week. Show one local example (orchard scheduling, real-estate listing, dental front-desk). |
 | 0:05 – 0:18 | **The 5 jobs to give AI first** | Demo each in 90 seconds: (1) draft customer emails, (2) summarize meetings, (3) write social posts, (4) clean up spreadsheets, (5) prep for a hard conversation (firing, vendor dispute, refund). |
 | 0:18 – 0:35 | **Workshop: my next 3 jobs** | Each attendee fills a worksheet: *Three repetitive tasks in my business. Which AI tool. What could go wrong.* Pair-share with the person next to them. |
-| 0:35 – 0:48 | **The 3 Rules (the AIGovOps moment)** | Co-present with Ken or Bob. Three rules, big and friendly on screen: **(1) Never paste customer PII, payment info, or health data into a free tool.** **(2) Two-eyes rule — humans approve anything that goes to a customer or the government.** **(3) Keep the receipts — save your prompts and outputs so you can show your work.** Each rule explained with a 30-second NCW-flavored war story. |
+| 0:35 – 0:48 | **The 3 Rules (the AiGovOps moment)** | Co-present with Ken or Bob. Three rules, big and friendly on screen: **(1) Never paste customer PII, payment info, or health data into a free tool.** **(2) Two-eyes rule — humans approve anything that goes to a customer or the government.** **(3) Keep the receipts — save your prompts and outputs so you can show your work.** Each rule explained with a 30-second NCW-flavored war story. |
 | 0:48 – 0:57 | **Write your one-page AI policy** | Fill-in template: *"At [Business], we use AI to ___. We never use AI for ___. The person responsible is ___. We review our AI use every ___."* Five sentences. Done. |
-| 0:57 – 1:00 | **Take-home & re-rate** | *The Rules* one-pager: the 3 rules, the policy template, a short checklist of approved free + paid tools, and a QR to the AIGovOps Foundation's free open-source resources. |
+| 0:57 – 1:00 | **Take-home & re-rate** | *The Rules* one-pager: the 3 rules, the policy template, a short checklist of approved free + paid tools, and a QR to the AiGovOps Foundation's free open-source resources. |
 
 **Materials needed:** projector, printed worksheets (300), printed policy template, fine-tip pens.
 
@@ -153,7 +153,7 @@ This pattern lets all four options run, repeats the two highest-demand ones (Coo
    - Never paste private data into a free tool.
    - Two-eyes rule on anything that goes to a customer, student, or government.
    - Keep the receipts.
-5. **A QR code** to a free resource bundle: AIGovOps Foundation open-source toolkit, aiEDU classroom materials, NCW Tech Alliance follow-on workshops, and an "I-want-to-keep-learning" signup.
+5. **A QR code** to a free resource bundle: AiGovOps Foundation open-source toolkit, aiEDU classroom materials, NCW Tech Alliance follow-on workshops, and an "I-want-to-keep-learning" signup.
 
 ---
 
@@ -161,7 +161,7 @@ This pattern lets all four options run, repeats the two highest-demand ones (Coo
 
 **For NCW Tech Alliance:** Every session uses their **Problem → Task → Role → Outcome** language, mirrors their existing AI 101/201 ladder, and slots cleanly into the AI Expo morning workshop schedule. It feeds their Use Case Showdown, their AI-Skill-A-Thon pipeline, and their AI in Action follow-up series.
 
-**For the AIGovOps Foundation:** Every session quietly teaches the Foundation's three core ideas — *governance like engineering, evidence that ships, policy as code* — at the scale of one teacher, one orchard, one nonprofit. It's the **mission of the Foundation as stated in the charter: empower disadvantaged, rural, and small communities through improved AI access and impact** — turned into a Tuesday morning in Wenatchee.
+**For the AiGovOps Foundation:** Every session quietly teaches the Foundation's three core ideas — *governance like engineering, evidence that ships, policy as code* — at the scale of one teacher, one orchard, one nonprofit. It's the **mission of the Foundation as stated in the charter: empower disadvantaged, rural, and small communities through improved AI access and impact** — turned into a Tuesday morning in Wenatchee.
 
 ---
 
@@ -169,7 +169,7 @@ This pattern lets all four options run, repeats the two highest-demand ones (Coo
 
 - [ ] Confirm room sizes and Wi-Fi capacity per breakout room.
 - [ ] Print 300 of each session's one-pager + 300 of the universal "3 Rules" card.
-- [ ] Recruit 6-8 floor helpers (CWU students, NCESD staff, AIGovOps Foundation volunteers).
+- [ ] Recruit 6-8 floor helpers (CWU students, NCESD staff, AiGovOps Foundation volunteers).
 - [ ] Pre-create 4-6 partner-station ChatGPT Plus / Copilot accounts for Build-It-in-60 walk-ins.
 - [ ] Prepare three NCW-flavored war stories for Option 3 (one orchard, one school, one healthcare/public power).
 - [ ] Send attendees a 2-question pre-survey: "Your current 1-10?" and "One thing you want AI to do for you?"
@@ -177,4 +177,4 @@ This pattern lets all four options run, repeats the two highest-demand ones (Coo
 
 ---
 
-*Prepared for Bob Rapp & Ken Johnston · AIGovOps Foundation · in service of NCW Tech Alliance and the communities of North Central Washington.*
+*Prepared for Bob Rapp & Ken Johnston · AiGovOps Foundation · in service of NCW Tech Alliance and the communities of North Central Washington.*

@@ -10,7 +10,7 @@
       { q: "Is Deep Think available on the free version of Gemini?", who: "Ken", a: "It launched at the top tier, but thinking-mode access keeps rolling down to free accounts — check your settings. Ask: what's 3 minutes of compute worth against 2 hours of a teacher's Sunday?" },
       { q: "What's the single best first AI habit for a small business in NCW?", who: "Bob", a: "Make a Google Drive folder called \u201cAI Receipts\u201d today. Save every prompt and output. That one habit satisfies \u201ckeep the receipts,\u201d protects you in a dispute, and builds a personal library of prompts that work." },
       { q: "Can AI help close the gap for ELL students specifically?", who: "Bob", a: "Yes — the Stanford GSE RCT and the npj Science of Learning review both found the biggest gains in underserved populations, because they had the fewest human tutoring hours. The key is an AI that asks questions in the student's dominant language." },
-      { q: "What does the AIGovOps Foundation actually do — and why is it free?", who: "Ken", a: "A 501(c)(3) building open-source governance tools — Beacon, Umbrella, Lantern — all Apache-2.0. Free because the mission is to empower rural and small communities; charging districts would defeat it." }
+      { q: "What does the AiGovOps Foundation actually do — and why is it free?", who: "Ken", a: "A 501(c)(3) building open-source governance tools — Beacon, Umbrella, Lantern — all Apache-2.0. Free because the mission is to empower rural and small communities; charging districts would defeat it." }
     ]},
     { cat: "Skeptical", color: "blue", qs: [
       { q: "How do we know the +34% Stanford result isn't cherry-picked?", who: "Ken", a: "It was a 6-month randomized controlled trial across 200 schools, not a vendor case study. The same evidence base includes the MIT \u221215.3% finding — the truth is both, and the Pledge is designed to get the +34% while refusing the \u221215%." },
@@ -56,7 +56,7 @@
     { name: "Lovable", url: "https://lovable.dev", note: "Build a working web app by chatting", tag: "Free / Pro" },
     { name: "Bolt", url: "https://bolt.new", note: "Prompt-to-app in the browser", tag: "Free / Pro" },
     { name: "n8n", url: "https://n8n.io", note: "Open-source workflow automation", tag: "Open source" },
-    { name: "AIGovOps Beacon · Umbrella · Lantern", url: "https://www.aigovops-foundation.com", note: "Open-source governance: discover, control, report", tag: "Apache-2.0" }
+    { name: "AiGovOps Beacon · Umbrella · Lantern", url: "https://www.aigovops-foundation.com", note: "Open-source governance: discover, control, report", tag: "Apache-2.0" }
   ];
 
   var CITATIONS = [
