@@ -1,0 +1,11 @@
+{
+  "recurse": true,
+  "concurrency": 10,
+  "timeout": 10000,
+  "retry": true,
+  "skip": [
+    "^https?://(?!localhost|127\\.0\\.0\\.1)",
+    "mailto:",
+    "tel:"
+  ]
+}

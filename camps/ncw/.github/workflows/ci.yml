@@ -1,0 +1,136 @@
+name: CI — landing site
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  # ---------------------------------------------------------------
+  # 1. HTML lint — catches malformed markup before anything else.
+  # ---------------------------------------------------------------
+  html-lint:
+    name: HTML lint (htmlhint)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci --no-audit --no-fund
+      - run: npm run test:html
+
+  # ---------------------------------------------------------------
+  # 2. API unit tests — /api/sign pledge endpoint contract.
+  # ---------------------------------------------------------------
+  api-tests:
+    name: API tests (/api/sign)
+    runs-on: ubuntu-latest
+    needs: html-lint
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci --no-audit --no-fund
+      - run: npm run test:api
+
+  # ---------------------------------------------------------------
+  # 3. End-to-end + accessibility + responsiveness.
+  # ---------------------------------------------------------------
+  e2e:
+    name: E2E (Playwright • a11y • mobile)
+    runs-on: ubuntu-latest
+    needs: html-lint
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - chromium-desktop
+          - mobile-safari
+          - mobile-android
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - run: npm ci --no-audit --no-fund
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium webkit
+
+      - name: Run Playwright (${{ matrix.project }})
+        run: |
+          npx playwright test \
+            --config=tests/playwright.config.mjs \
+            --project=${{ matrix.project }}
+
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-${{ matrix.project }}
+          path: playwright-report/
+          retention-days: 14
+
+      - name: Upload traces / screenshots
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-traces-${{ matrix.project }}
+          path: test-results/
+          retention-days: 7
+
+  # ---------------------------------------------------------------
+  # 4. Internal link check — every relative href resolves.
+  # ---------------------------------------------------------------
+  link-check:
+    name: Internal link check
+    runs-on: ubuntu-latest
+    needs: html-lint
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci --no-audit --no-fund
+      - run: npm run test:links
+
+  # ---------------------------------------------------------------
+  # 5. Build summary — friendly green check on the PR.
+  # ---------------------------------------------------------------
+  ci-summary:
+    name: CI summary
+    runs-on: ubuntu-latest
+    if: always()
+    needs: [html-lint, api-tests, e2e, link-check]
+    steps:
+      - name: Aggregate results
+        run: |
+          echo "html-lint:   ${{ needs.html-lint.result }}"
+          echo "api-tests:   ${{ needs.api-tests.result }}"
+          echo "e2e:         ${{ needs.e2e.result }}"
+          echo "link-check:  ${{ needs.link-check.result }}"
+          if [[ "${{ needs.html-lint.result }}" != "success" || \
+                "${{ needs.api-tests.result }}" != "success" || \
+                "${{ needs.e2e.result }}" != "success" || \
+                "${{ needs.link-check.result }}" != "success" ]]; then
+            echo "::error::One or more CI jobs failed."
+            exit 1
+          fi
+          echo "All required checks passed."

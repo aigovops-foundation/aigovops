@@ -14,3 +14,10 @@ __pycache__/
 # Local builds
 node_modules/
 dist/
+
+# Playwright / test artifacts
+playwright-report/
+test-results/
+.playwright/
+*.log
+
