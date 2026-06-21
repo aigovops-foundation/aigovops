@@ -15,6 +15,7 @@ const PAGES = [
   "/centerpiece.html",
   "/mini-camps.html",
   "/tools.html",
+  "/courses.html",
   "/hint-logs.html",
   "/pledge.html",
   "/resources.html",

@@ -8,7 +8,7 @@
     "serve": "http-server docs -p 4173 -s -c-1",
     "test:api": "node --test tests/api/sign.test.mjs",
     "test:e2e": "playwright test --config=tests/playwright.config.mjs",
-    "test:a11y": "node tests/a11y/run-axe.mjs",
+    "test:a11y": "playwright test --config=tests/playwright.config.mjs tests/e2e/a11y.spec.mjs",
     "test:html": "htmlhint \"docs/**/*.html\" --config tests/.htmlhintrc",
     "test:links": "linkinator docs --recurse --silent --skip \"https?://(?!localhost|127\\.0\\.0\\.1)\" --config tests/linkinator.config.json",
     "test": "npm run test:html && npm run test:api && npm run test:e2e && npm run test:a11y"
@@ -19,5 +19,8 @@
     "htmlhint": "^1.1.4",
     "http-server": "^14.1.1",
     "linkinator": "^6.1.2"
+  },
+  "overrides": {
+    "uuid": "^11.1.1"
   }
 }

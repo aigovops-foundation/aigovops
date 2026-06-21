@@ -5,7 +5,7 @@ import AxeBuilder from "@axe-core/playwright";
 
 const PAGES = [
   "/", "/centerpiece.html", "/mini-camps.html", "/tools.html",
-  "/hint-logs.html", "/pledge.html", "/resources.html",
+  "/courses.html", "/hint-logs.html", "/pledge.html", "/resources.html",
   "/about.html", "/plan.html",
 ];
 const BASE = "http://127.0.0.1:4173";
