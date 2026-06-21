@@ -1,0 +1,65 @@
+/* ============================================================
+   NCW AI Expo 2026 — shared custom styles (beyond Tailwind CDN)
+   Palette: orchard #2E7D4F · signal #E07A2A · cream #FAF7F0 · charcoal #1F1F1F
+   Type: Lora (serif headlines) · Inter (body)
+   ============================================================ */
+
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+body { background-color: #FAF7F0; color: #1F1F1F; -webkit-font-smoothing: antialiased; }
+
+/* tiny breakpoint so the wordmark can appear a touch earlier */
+@media (min-width: 420px) { .xs\:block { display: block; } }
+
+/* Scroll fade-in */
+.fade-in { opacity: 0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+.fade-in.shown { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* Hover lift for cards */
+.lift { transition: transform .25s cubic-bezier(.16,1,.3,1), box-shadow .25s cubic-bezier(.16,1,.3,1); }
+.lift:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -12px rgba(31,31,31,.18); }
+
+/* <details> chevron */
+details > summary { list-style: none; cursor: pointer; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] .ev-chevron { transform: rotate(90deg); }
+.ev-chevron { transition: transform .2s ease; }
+
+/* count pop */
+@keyframes pop { 0%{transform:scale(1)} 40%{transform:scale(1.18)} 100%{transform:scale(1)} }
+.count-pop { animation: pop .5s ease; }
+
+/* editorial prose helpers */
+.prose-ncw p { max-width: 68ch; }
+.prose-ncw h3 { font-family: 'Lora', Georgia, serif; }
+
+/* scenario color tokens (mini-camps) */
+.sc-green  { --sc: #2E7D4F; --sc-soft: #E7F0EA; }
+.sc-blue   { --sc: #2E6FA3; --sc-soft: #E4EEF6; }
+.sc-yellow { --sc: #C99700; --sc-soft: #F6EECF; }
+.sc-orange { --sc: #E07A2A; --sc-soft: #F8E9DA; }
+.sc-purple { --sc: #7A4FB0; --sc-soft: #ECE4F4; }
+
+/* gentle grain-free divider */
+.rule-soft { height: 1px; background: linear-gradient(90deg, transparent, rgba(31,31,31,.12), transparent); }
+
+/* ===== Print styles — for "Print this camp" ===== */
+@media print {
+  #site-header, #site-footer, .no-print { display: none !important; }
+  body { background: #fff !important; }
+  .print-only { display: block !important; }
+  .camp-card { break-inside: avoid; box-shadow: none !important; border: 1px solid #ccc !important; }
+  a[href]:after { content: ""; }
+}
+.print-only { display: none; }
+
+/* focus ring */
+:focus-visible { outline: 2px solid #2E7D4F; outline-offset: 3px; border-radius: 6px; }
+
+/* ===== Tools / Hint-Logs sections ===== */
+.alink { color:#2E7D4F; font-weight:600; text-decoration:underline; text-decoration-color:rgba(46,125,79,.35); text-underline-offset:2px; transition:color .15s ease; }
+.alink:hover { color:#23613D; text-decoration-color:#23613D; }
+.hl-table th, .hl-table td { vertical-align: top; }
