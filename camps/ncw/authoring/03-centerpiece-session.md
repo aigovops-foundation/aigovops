@@ -60,11 +60,11 @@ Two-column slide, equal weight, same font size. Don't let either side win the vi
 | What's working | Source / Date |
 |---|---|
 | **+34% test scores** with AI tutors in Stanford study of 10,000 students across 200 US schools | Stanford GSE 6-month RCT, [reported June 2026](https://www.instagram.com/p/DZWP5QnFxuz/) |
-| **+23% mastery** on curriculum-aligned assessments when students used Khanmigo 30+ min/week | Khan Academy data, [ASU+GSV April 2026](https://verodate.ca/blog/ai-tutors-personalized-learning-classroom-2026) |
+| **+23% mastery** on curriculum-aligned assessments when students used Khanmigo 30+ min/week | Khan Academy data, [ASU+GSV April 2026](https://www.aimscollaboratory.org/resources-all/how-khan-academy-is-building-a-better-ai-tutor-our-most-recent-learnings) |
 | **+6.1% next-item correctness** after Khan Academy's 20 product A/B tests on Khanmigo | [Khan Academy / AIMS Collaboratory, June 2026](https://www.aimscollaboratory.org/resources-all/how-khan-academy-is-building-a-better-ai-tutor-our-most-recent-learnings) |
 | **Consistent learning gains across K-12 contexts and student populations** — equity-positive | [npj Science of Learning systematic review, 2025](https://etcjournal.com/2026/06/02/ai-and-the-promise-of-educational-equity/) |
 | **"Safely and effectively support students"** — UK classroom RCT | UK RCT late 2025 (Education Endowment Foundation) |
-| **NotebookLM, Gemini, Khanmigo** running at scale in 50,000+ US schools | [Verodate, June 2026](https://verodate.ca/blog/ai-tutors-personalized-learning-classroom-2026) |
+| **NotebookLM, Gemini, Khanmigo** running at scale in 50,000+ US schools | [Verodate, June 2026](https://www.aimscollaboratory.org/resources-all/how-khan-academy-is-building-a-better-ai-tutor-our-most-recent-learnings) |
 
 ### Slide 5 — "The harms are also real" (right column)
 

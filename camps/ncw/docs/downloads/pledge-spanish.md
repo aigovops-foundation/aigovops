@@ -114,7 +114,7 @@ La Escuela de Graduados de Educación de Stanford siguió a 10,000 estudiantes c
 María quiere ser ingeniera en la [presa del Confluence de Wenatchee](https://www.publicpower.com). Por primera vez, siente que puede lograrlo.
 
 **Fuente:** [Stanford GSE, ensayo clínico de seis meses, junio de 2026](https://www.instagram.com/p/DZWP5QnFxuz/)
-**Además:** [Datos propios de Khan Academy, ASU+GSV abril de 2026 — estudiantes que usaron Khanmigo 30+ minutos a la semana mostraron +23% de dominio en evaluaciones curriculares.](https://verodate.ca/blog/ai-tutors-personalized-learning-classroom-2026)
+**Además:** [Datos propios de Khan Academy, ASU+GSV abril de 2026 — estudiantes que usaron Khanmigo 30+ minutos a la semana mostraron +23% de dominio en evaluaciones curriculares.](https://www.aimscollaboratory.org/resources-all/how-khan-academy-is-building-a-better-ai-tutor-our-most-recent-learnings)
 
 ---
 

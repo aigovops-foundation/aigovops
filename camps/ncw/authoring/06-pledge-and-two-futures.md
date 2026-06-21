@@ -108,7 +108,7 @@ Stanford Graduate School of Education followed 10,000 students like Maria across
 Maria wants to be an engineer at the [Wenatchee Confluence dam](https://www.publicpower.com). For the first time, she thinks she can.
 
 **Source:** [Stanford GSE 6-month RCT, June 2026](https://www.instagram.com/p/DZWP5QnFxuz/)
-**Plus:** [Khan Academy's own data, ASU+GSV April 2026 — students using Khanmigo 30+ min/week showed +23% mastery on curriculum-aligned assessments.](https://verodate.ca/blog/ai-tutors-personalized-learning-classroom-2026)
+**Plus:** [Khan Academy's own data, ASU+GSV April 2026 — students using Khanmigo 30+ min/week showed +23% mastery on curriculum-aligned assessments.](https://www.aimscollaboratory.org/resources-all/how-khan-academy-is-building-a-better-ai-tutor-our-most-recent-learnings)
 
 ---
 

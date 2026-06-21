@@ -29,9 +29,9 @@
 **Tag-in:** [BOB]
 
 **Answer (2–3 sentences):**
-Start with Khanmigo — it's free for qualified districts, it's curriculum-aligned, and it asks students questions instead of giving them answers, which is what produces the [+23% mastery gains Khan Academy measured in April 2026](https://verodate.ca/blog/ai-tutors-personalized-learning-classroom-2026). Before the first day, write your 5-sentence classroom AI policy — we have a template on the handout. The two-eyes rule applies from day one: the teacher reviews the AI's feedback before it shapes a grade.
+Start with Khanmigo — it's free for qualified districts, it's curriculum-aligned, and it asks students questions instead of giving them answers, which is what produces the [+23% mastery gains Khan Academy measured in April 2026](https://www.aimscollaboratory.org/resources-all/how-khan-academy-is-building-a-better-ai-tutor-our-most-recent-learnings). Before the first day, write your 5-sentence classroom AI policy — we have a template on the handout. The two-eyes rule applies from day one: the teacher reviews the AI's feedback before it shapes a grade.
 
-**Citation/Source:** [Khan Academy Khanmigo data, ASU+GSV April 2026](https://verodate.ca/blog/ai-tutors-personalized-learning-classroom-2026)
+**Citation/Source:** [Khan Academy Khanmigo data, ASU+GSV April 2026](https://www.aimscollaboratory.org/resources-all/how-khan-academy-is-building-a-better-ai-tutor-our-most-recent-learnings)
 
 ---
 
@@ -62,9 +62,9 @@ Make a folder in Google Drive called "AI Receipts" right now — that's it. Ever
 **Tag-in:** [BOB]
 
 **Answer (2–3 sentences):**
-Yes — and the evidence is unusually strong here. The [Stanford GSE 6-month randomized controlled trial of 10,000 students across 200 US schools](https://www.instagram.com/p/DZWP5QnFxuz/) and the [npj Science of Learning 2025 systematic review](https://verodate.ca/blog/ai-tutors-personalized-learning-classroom-2026) both found that AI tutoring's biggest gains came in underserved populations — ELL, low-income, special-ed — because those students historically had the fewest human tutoring hours. The key is an AI that asks questions in the student's dominant language and adjusts to their reading level, not one that simply presents English content faster.
+Yes — and the evidence is unusually strong here. The [Stanford GSE 6-month randomized controlled trial of 10,000 students across 200 US schools](https://www.instagram.com/p/DZWP5QnFxuz/) and the [npj Science of Learning 2025 systematic review](https://www.aimscollaboratory.org/resources-all/how-khan-academy-is-building-a-better-ai-tutor-our-most-recent-learnings) both found that AI tutoring's biggest gains came in underserved populations — ELL, low-income, special-ed — because those students historically had the fewest human tutoring hours. The key is an AI that asks questions in the student's dominant language and adjusts to their reading level, not one that simply presents English content faster.
 
-**Citation/Source:** [Stanford GSE RCT, June 2026](https://www.instagram.com/p/DZWP5QnFxuz/); [npj Science of Learning systematic review](https://verodate.ca/blog/ai-tutors-personalized-learning-classroom-2026)
+**Citation/Source:** [Stanford GSE RCT, June 2026](https://www.instagram.com/p/DZWP5QnFxuz/); [npj Science of Learning systematic review](https://www.aimscollaboratory.org/resources-all/how-khan-academy-is-building-a-better-ai-tutor-our-most-recent-learnings)
 
 ---
 
@@ -271,7 +271,7 @@ Beacon scans your environment — Google Workspace, Microsoft 365, browser exten
 **Answer (2–3 sentences):**
 Start with what you already pay for: Google Workspace for Education is already in most NCW districts, and Gemini is built in — no new procurement, no new contract. The one-part-time-tech-coordinator problem is real, which is exactly why we built the Foundation tools to be self-service: Beacon runs a scan, Umbrella generates the controls checklist, and Lantern produces the parent-facing report — your coordinator can stand up a working governance posture in a day. For the AI tutoring piece, Khanmigo has a free-district program for qualifying schools — we'll connect you after the session.
 
-**Citation/Source:** [AIGovOps Foundation](https://www.aigovops-foundation.com); [Khan Academy Khanmigo, June 2026](https://verodate.ca/blog/ai-tutors-personalized-learning-classroom-2026)
+**Citation/Source:** [AIGovOps Foundation](https://www.aigovops-foundation.com); [Khan Academy Khanmigo, June 2026](https://www.aimscollaboratory.org/resources-all/how-khan-academy-is-building-a-better-ai-tutor-our-most-recent-learnings)
 
 ---
 
@@ -408,7 +408,7 @@ This answer references **three moments from earlier in the plenary:**
 
 > "And Marco, I want to name what you actually bought when you bought that drone: a tool that had no use case attached to it. The drone problem isn't the drone — it's that nobody told you 'here's the specific job the drone does and here's how you'll know if it's working.' That's what the Foundation calls 'policy as code.' For your business: write one sentence — 'AI will draft the pre-cooling documentation, and Marco will review and sign every document before it goes to the USDA, no exceptions.' That sentence is your policy. Post it in the office. Now the AI has a job, and you have a review step, and your USDA cert is protected.
 >
-> [Khan Academy](https://verodate.ca/blog/ai-tutors-personalized-learning-classroom-2026) isn't relevant to cold-storage — but the same principle that produces +23% learning gains in a classroom produces a six-hour-a-week reclaim in your office: structured use, clear role, human in the loop. That's the difference between the drone and this."
+> [Khan Academy](https://www.aimscollaboratory.org/resources-all/how-khan-academy-is-building-a-better-ai-tutor-our-most-recent-learnings) isn't relevant to cold-storage — but the same principle that produces +23% learning gains in a classroom produces a six-hour-a-week reclaim in your office: structured use, clear role, human in the loop. That's the difference between the drone and this."
 
 **[KEN closes — 30 seconds]**
 
@@ -486,4 +486,4 @@ This answer references **three moments from earlier in the plenary:**
 ---
 
 *NCW AI Expo 2026 · Sli.do Bank + Plant Scripts v1 · Ken Johnston + Bob Rapp · AIGovOps Foundation · August 11, 2026*
-*All citations linked inline. Key sources: [Stanford GSE](https://www.instagram.com/p/DZWP5QnFxuz/) · [Khan Academy](https://verodate.ca/blog/ai-tutors-personalized-learning-classroom-2026) · [MIT/Guardian](https://www.theguardian.com/us-news/2026/jun/19/chatbots-critical-thinking-skills) · [Cornell](https://scientificinquirer.com/2026/05/26/widespread-ai-misuse-by-college-students-signals-need-to-rethink-assessment/) · [Senate GAO](https://www.bluntrochester.senate.gov/news/press-releases/news-ranking-member-blunt-rochester-and-chair-tuberville-lead-investigation-into-ai-and-k-12-education/) · [NYC pause](https://www.nytimes.com/2026/06/09/nyregion/nyc-schools-council-members-ai-ban.html) · [AI Bill of Rights for Education](https://resources.norrageducation.org/resource/822/sneak-preview-a-blueprint-for-an-ai-bill-of-rights-for-education) · [FTC COPPA](https://aurascape.ai/answers/ai-compliance-frameworks-standards-and-governance-for-education-institutions/) · [AIGovOps Foundation](https://www.aigovops-foundation.com) · [Gemini 3 Deep Think](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/)*
+*All citations linked inline. Key sources: [Stanford GSE](https://www.instagram.com/p/DZWP5QnFxuz/) · [Khan Academy](https://www.aimscollaboratory.org/resources-all/how-khan-academy-is-building-a-better-ai-tutor-our-most-recent-learnings) · [MIT/Guardian](https://www.theguardian.com/us-news/2026/jun/19/chatbots-critical-thinking-skills) · [Cornell](https://scientificinquirer.com/2026/05/26/widespread-ai-misuse-by-college-students-signals-need-to-rethink-assessment/) · [Senate GAO](https://www.bluntrochester.senate.gov/news/press-releases/news-ranking-member-blunt-rochester-and-chair-tuberville-lead-investigation-into-ai-and-k-12-education/) · [NYC pause](https://www.nytimes.com/2026/06/09/nyregion/nyc-schools-council-members-ai-ban.html) · [AI Bill of Rights for Education](https://resources.norrageducation.org/resource/822/sneak-preview-a-blueprint-for-an-ai-bill-of-rights-for-education) · [FTC COPPA](https://aurascape.ai/answers/ai-compliance-frameworks-standards-and-governance-for-education-institutions/) · [AIGovOps Foundation](https://www.aigovops-foundation.com) · [Gemini 3 Deep Think](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/)*

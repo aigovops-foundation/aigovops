@@ -61,7 +61,7 @@
 
   var CITATIONS = [
     { label: "Stanford GSE RCT — +34% with AI tutors (June 2026)", url: "https://www.instagram.com/p/DZWP5QnFxuz/" },
-    { label: "Khanmigo +23% mastery — Verodate, April 2026", url: "https://verodate.ca/blog/ai-tutors-personalized-learning-classroom-2026" },
+    { label: "Khanmigo +23% mastery — Verodate, April 2026", url: "https://www.aimscollaboratory.org/resources-all/how-khan-academy-is-building-a-better-ai-tutor-our-most-recent-learnings" },
     { label: "Khan AIMS study — measured math gains", url: "https://www.aimscollaboratory.org/" },
     { label: "npj Science of Learning review — equity-positive gains", url: "https://etcjournal.com/2026/06/02/ai-and-the-promise-of-educational-equity/" },
     { label: "MIT / The Guardian — \u221215.3% critical thinking", url: "https://www.theguardian.com/us-news/2026/jun/19/chatbots-critical-thinking-skills" },
