@@ -18,6 +18,7 @@
     { href: "centerpiece.html", key: "centerpiece", label: "Centerpiece" },
     { href: "mini-camps.html", key: "mini-camps", label: "Mini-Camps" },
     { href: "tools.html", key: "tools", label: "Tools" },
+    { href: "courses.html", key: "courses", label: "Courses" },
     { href: "pledge.html", key: "pledge", label: "Pledge" },
     { href: "hint-logs.html", key: "hint-logs", label: "Hint-Logs" },
     { href: "resources.html", key: "resources", label: "Resources" },
