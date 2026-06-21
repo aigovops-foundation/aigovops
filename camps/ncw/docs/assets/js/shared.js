@@ -131,8 +131,11 @@
       </footer>`;
   }
 
-  /* Scroll fade-ins */
+  /* Scroll fade-ins. We add `.js-fade` to <html> so the CSS only hides
+     fade-in elements when JS is running — axe-core, search crawlers, and
+     no-JS visitors see fully-revealed content. */
   function initFade() {
+    document.documentElement.classList.add("js-fade");
     const els = document.querySelectorAll(".fade-in");
     if (!("IntersectionObserver" in window)) {
       els.forEach((el) => el.classList.add("shown"));
@@ -150,6 +153,14 @@
       { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
     );
     els.forEach((el) => obs.observe(el));
+    /* Safety net: if any element hasn't been revealed within 2s
+       (e.g. inside an overflow:hidden parent the observer can't see),
+       reveal it so it never stays invisible. */
+    setTimeout(() => {
+      document.querySelectorAll(".fade-in:not(.shown)").forEach((el) =>
+        el.classList.add("shown")
+      );
+    }, 2000);
   }
 
   /* Count-up on stats with data-count */

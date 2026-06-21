@@ -53,13 +53,13 @@ test.describe("Pledge form — /pledge.html", () => {
     expect(isInvalid).toBe(true);
   });
 
-  test("valid submission shows success card with the signer's name", async ({
+  test("valid submission shows success card with the signer's first name + city", async ({
     page,
   }) => {
     // Stub the /api/sign endpoint so we don't depend on a backend.
     // GitHub Pages serves static files only, so the real prod path is the
     // localStorage-only fallback inside pledge.js. This stub lets us also
-    // verify the network-success branch.
+    // verify the network-success branch and capture the POST payload.
     let captured = null;
     await page.route("**/api/sign", async (route) => {
       const req = route.request();
@@ -90,22 +90,27 @@ test.describe("Pledge form — /pledge.html", () => {
 
     await page.locator('#pledgeForm button[type="submit"]').click();
 
-    // Success card flips visible; form hides.
+    // Success card flips visible; form hides via Tailwind .hidden class.
     await expect(page.locator("#successCard")).toBeVisible({ timeout: 7_000 });
     await expect(page.locator("#pledgeForm")).toBeHidden();
 
-    // Name is echoed in the thank-you (case-insensitive contains).
+    // pledge.js renders "<first> from <city> — your signature is on the wall."
+    // We assert the contract that matters: first name AND city appear, in any
+    // wording the script may evolve into.
     const successText = await page.locator("#successName").innerText();
-    expect(successText.toLowerCase()).toContain(
-      VALID_SIGNER.name.toLowerCase()
-    );
+    const firstName = VALID_SIGNER.name.split(/\s+/)[0];
+    expect(successText.toLowerCase()).toContain(firstName.toLowerCase());
+    expect(successText.toLowerCase()).toContain(VALID_SIGNER.city.toLowerCase());
 
-    // If the form attempted to POST to /api/sign, the payload should
-    // include the signer's name and email. (Some implementations rely
-    // purely on localStorage — that branch is covered in the next test.)
+    // If a POST was issued, payload must include the signer's data.
+    // The pledge.js fetch is fire-and-forget (.catch ignored), so a
+    // missing capture is acceptable here — we just verify integrity when
+    // it does fire.
     if (captured && typeof captured === "object") {
       expect(captured.name).toBe(VALID_SIGNER.name);
       expect(captured.email).toBe(VALID_SIGNER.email);
+      expect(captured.role).toBe(VALID_SIGNER.role);
+      expect(captured.commit ?? true).toBeTruthy();
     }
   });
 

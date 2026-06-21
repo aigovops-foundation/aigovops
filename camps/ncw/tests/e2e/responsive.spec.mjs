@@ -37,7 +37,11 @@ for (const { path, name } of PAGES) {
 
   test(`${name} (${path}) — no horizontal scroll`, async ({ page }) => {
     await page.goto(path);
-    await page.waitForLoadState("networkidle").catch(() => {});
+    // Resources page has many video sources that webkit polls; don't
+    // wait for networkidle on those — a domcontentloaded + short tick
+    // is enough to measure layout.
+    await page.waitForLoadState("domcontentloaded");
+    await page.waitForTimeout(500);
 
     const overflow = await page.evaluate(() => {
       const doc = document.documentElement;

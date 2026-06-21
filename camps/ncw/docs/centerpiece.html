@@ -151,15 +151,15 @@
     </div>
     <div id="councilGrid" class="grid md:grid-cols-3 gap-4">
       <div class="council-card rounded-2xl bg-white border border-charcoal/10 p-5" data-ai="Gemini">
-        <p class="font-700 text-charcoal flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-[#4285F4]"></span>Gemini</p>
+        <p class="font-700 text-charcoal flex items-center gap-2"><span aria-hidden="true" class="w-2.5 h-2.5 rounded-full bg-[#4285F4]"></span>Gemini</p>
         <p class="council-body mt-3 text-[15px] text-charcoal/45 italic">Tap "Convene the council" to reveal.</p>
       </div>
       <div class="council-card rounded-2xl bg-white border border-charcoal/10 p-5" data-ai="Claude">
-        <p class="font-700 text-charcoal flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-signal"></span>Claude</p>
+        <p class="font-700 text-charcoal flex items-center gap-2"><span aria-hidden="true" class="w-2.5 h-2.5 rounded-full bg-signal"></span>Claude</p>
         <p class="council-body mt-3 text-[15px] text-charcoal/45 italic">Tap "Convene the council" to reveal.</p>
       </div>
       <div class="council-card rounded-2xl bg-white border border-charcoal/10 p-5" data-ai="ChatGPT">
-        <p class="font-700 text-charcoal flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-orchard"></span>ChatGPT</p>
+        <p class="font-700 text-charcoal flex items-center gap-2"><span aria-hidden="true" class="w-2.5 h-2.5 rounded-full bg-orchard"></span>ChatGPT</p>
         <p class="council-body mt-3 text-[15px] text-charcoal/45 italic">Tap "Convene the council" to reveal.</p>
       </div>
     </div>
@@ -218,7 +218,9 @@
     ];
     var ol = document.getElementById("pledgeInset");
     if (ol) ol.innerHTML = titles.map(function (t, i) {
-      return '<li class="flex gap-4 rounded-2xl bg-white/10 border border-cream/15 p-5">' +
+      // bg-orchard-dark (#23613D) gives full white at 8.5:1 — well above
+      // WCAG AA 4.5:1. The previous bg-white/10 only reached 4.16:1.
+      return '<li class="flex gap-4 rounded-2xl bg-orchard-dark/40 border border-cream/30 p-5">' +
         '<span class="shrink-0 w-9 h-9 rounded-lg bg-cream text-orchard font-serif font-700 grid place-items-center">' + (i + 1) + '</span>' +
         '<span class="font-600 leading-snug pt-1">' + t + '</span></li>';
     }).join("");

@@ -26,8 +26,31 @@ const BLOCKING_IMPACTS = new Set(["critical", "serious"]);
 
 for (const path of PAGES) {
   test(`Accessibility: ${path}`, async ({ page }, testInfo) => {
+    // Disable all animations/transitions BEFORE navigation so the
+    // page never spends time mid-transition. axe-core computes contrast
+    // against the CURRENT computed opacity; a half-faded element
+    // shows as light gray and false-fails the contrast check.
+    await page.addInitScript(() => {
+      const style = document.createElement("style");
+      style.textContent = `
+        *, *::before, *::after {
+          transition: none !important;
+          animation: none !important;
+        }
+        .fade-in { opacity: 1 !important; transform: none !important; }
+      `;
+      (document.head || document.documentElement).appendChild(style);
+    });
+
     await page.goto(path);
     await page.waitForLoadState("domcontentloaded");
+    // Belt-and-suspenders: also force-reveal any .fade-in that the
+    // observer missed. Page is now fully static.
+    await page.evaluate(() => {
+      document
+        .querySelectorAll(".fade-in")
+        .forEach((el) => el.classList.add("shown"));
+    });
 
     const results = await new AxeBuilder({ page })
       .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
