@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ecosystem | AiGovOps Foundation</title>
+  <meta name="description" content="The AiGovOps ecosystem at a glance — the governed library, the Foundation hub, the membership community, and the NCW learning camp, and how they connect." />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <meta property="og:title" content="Ecosystem | AiGovOps Foundation" />
+  <meta property="og:url" content="https://www.aigovops-foundation.com/ecosystem.html" />
+  <link rel="alternate" type="application/rss+xml" title="AiGovOps Foundation Feed" href="/feed.xml" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/i18n/i18n.js"></script>
+  <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
+  <style>
+    .eco-hero { background: linear-gradient(135deg, var(--dark) 0%, #0a2318 60%, #0d1a2e 100%); color: var(--white); padding: 60px 0 48px; text-align: center; }
+    .eco-hero .hero-eyebrow { color: var(--teal); font-family: 'Courier New', monospace; font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 12px; }
+    .eco-hero h1 { font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight: 700; margin-bottom: 12px; }
+    .eco-hero p { color: rgba(255,255,255,.62); font-size: .95rem; max-width: 560px; margin: 0 auto; }
+    .map-wrap { background: var(--dark); padding: 12px 0 40px; }
+    .map-wrap svg { display: block; width: 100%; height: auto; max-width: 920px; margin: 0 auto; }
+    .props { display: grid; grid-template-columns: repeat(auto-fit, minmax(248px,1fr)); gap: 18px; }
+    .prop { background: var(--white); border: 1px solid var(--rule, #e7e9f2); border-radius: 12px; padding: 22px; display: flex; flex-direction: column; }
+    .prop h3 { font-size: 1.05rem; font-weight: 700; margin: 0 0 2px; }
+    .prop .dom { font-family: 'Courier New', monospace; font-size: .76rem; color: var(--teal-accessible); margin-bottom: 10px; word-break: break-all; }
+    .prop .role { font-size: .86rem; color: var(--muted); margin-bottom: 14px; }
+    .prop .fns-label { font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px; }
+    .prop ul { list-style: none; padding: 0; margin: 0 0 16px; }
+    .prop li { font-size: .83rem; color: var(--text, #2d2d4e); padding: 3px 0 3px 16px; position: relative; }
+    .prop li::before { content: "·"; position: absolute; left: 4px; color: var(--teal-accessible); font-weight: 700; }
+    .prop .go { margin-top: auto; font-size: .82rem; font-weight: 600; color: var(--teal-accessible); text-decoration: none; }
+    .prop .go:hover { color: var(--teal-dark); }
+    .conn { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 12px; }
+    .conn div { background: var(--light); border-radius: 10px; padding: 14px 16px; font-size: .85rem; color: var(--text, #2d2d4e); }
+    .conn .lbl { font-family: 'Courier New', monospace; font-size: .72rem; color: var(--teal-accessible); display: block; margin-bottom: 4px; }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo-link" aria-label="AiGovOps Foundation home">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="height:38px;width:38px;flex-shrink:0">
+        <title>AiGovOps Foundation</title>
+        <circle cx="100" cy="100" r="96" fill="#071a12"/>
+        <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+        <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+        <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
+        <ellipse cx="100" cy="57" rx="4" ry="6" fill="#9fe1cb" opacity="0.95"/>
+        <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+      </svg>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="frameworks.html">Frameworks</a>
+      <a href="ecosystem.html" class="active">Ecosystem</a>
+      <a href="alpha.html" data-i18n="nav.alpha">Alpha <span aria-hidden="true">α</span></a>
+      <a href="support.html">Support</a>
+    </nav>
+    <div class="lang-toggle" aria-label="Language selector">
+      <button class="lang-btn lang-active" data-lang="en" onclick="window.I18N_SET('en')">EN</button>
+      <button class="lang-btn" data-lang="es" onclick="window.I18N_SET('es')">ES</button>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="eco-hero">
+    <div class="container">
+      <p class="hero-eyebrow">The ecosystem</p>
+      <h1>One mission, four properties</h1>
+      <p>The same governed core, expressed for four audiences. The library defines the agents, skills, and design; the Foundation hub, the membership community, and the NCW learning camp put them in front of people.</p>
+    </div>
+  </section>
+
+  <div class="map-wrap">
+    <svg viewBox="0 0 920 360" role="img" xmlns="http://www.w3.org/2000/svg">
+      <title>The AiGovOps ecosystem map</title>
+      <desc>The library is the source of truth for agents, skills, and design. It feeds three public sites: the Foundation hub, the membership community, and the NCW learning camp. Learning links to foundation and membership; foundation links to membership.</desc>
+      <defs>
+        <marker id="eh" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#5dcaa5"/></marker>
+      </defs>
+      <rect x="290" y="28" width="340" height="62" rx="10" fill="#0a3d2a" stroke="#1d9e75" stroke-width="1.5"/>
+      <text x="460" y="55" text-anchor="middle" fill="#ffffff" font-family="Georgia,serif" font-size="19" font-weight="700">AiGovOps library</text>
+      <text x="460" y="76" text-anchor="middle" fill="#9fe1cb" font-family="'Courier New',monospace" font-size="12.5">source of truth · agents · skills · design</text>
+      <path d="M460 90 L175 150" fill="none" stroke="#2a6b52" stroke-width="1.5" marker-end="url(#eh)"/>
+      <path d="M460 90 L460 150" fill="none" stroke="#2a6b52" stroke-width="1.5" marker-end="url(#eh)"/>
+      <path d="M460 90 L745 150" fill="none" stroke="#2a6b52" stroke-width="1.5" marker-end="url(#eh)"/>
+      <text x="472" y="120" fill="#6f8f84" font-family="'Courier New',monospace" font-size="12">defines all three</text>
+      <g>
+        <rect x="40" y="152" width="250" height="104" rx="10" fill="#0d1a2e" stroke="#1d9e75" stroke-width="1.5"/>
+        <text x="62" y="180" fill="#ffffff" font-family="Georgia,serif" font-size="17" font-weight="700">Foundation site</text>
+        <text x="62" y="200" fill="#5dcaa5" font-family="'Courier New',monospace" font-size="12">aigovops-foundation.com</text>
+        <text x="62" y="222" fill="#cfe9e0" font-family="'Courier New',monospace" font-size="12.5">the public hub</text>
+        <text x="62" y="242" fill="#9fb8b1" font-family="'Courier New',monospace" font-size="12">products · frameworks · alpha</text>
+      </g>
+      <g>
+        <rect x="335" y="152" width="250" height="104" rx="10" fill="#0d1a2e" stroke="#1d9e75" stroke-width="1.5"/>
+        <text x="357" y="180" fill="#ffffff" font-family="Georgia,serif" font-size="17" font-weight="700">Membership</text>
+        <text x="357" y="200" fill="#5dcaa5" font-family="'Courier New',monospace" font-size="12">community.aigovops-…com</text>
+        <text x="357" y="222" fill="#cfe9e0" font-family="'Courier New',monospace" font-size="12.5">the garden · members</text>
+        <text x="357" y="242" fill="#9fb8b1" font-family="'Courier New',monospace" font-size="12">courses · posts · events</text>
+      </g>
+      <g>
+        <rect x="630" y="152" width="250" height="104" rx="10" fill="#0d1a2e" stroke="#1d9e75" stroke-width="1.5"/>
+        <text x="652" y="180" fill="#ffffff" font-family="Georgia,serif" font-size="17" font-weight="700">Learning — NCW camp</text>
+        <text x="652" y="200" fill="#5dcaa5" font-family="'Courier New',monospace" font-size="12">ncw-ai-camp (Pages)</text>
+        <text x="652" y="222" fill="#cfe9e0" font-family="'Courier New',monospace" font-size="12.5">the on-ramp · event</text>
+        <text x="652" y="242" fill="#9fb8b1" font-family="'Courier New',monospace" font-size="12">tools · camps · pledge</text>
+      </g>
+      <path d="M335 286 L585 286" fill="none" stroke="#2a6b52" stroke-width="1.5" marker-end="url(#eh)"/>
+      <text x="460" y="280" text-anchor="middle" fill="#6f8f84" font-family="'Courier New',monospace" font-size="12">learning → membership · enroll</text>
+      <path d="M630 312 L290 312" fill="none" stroke="#2a6b52" stroke-width="1.5" marker-end="url(#eh)"/>
+      <text x="460" y="328" text-anchor="middle" fill="#6f8f84" font-family="'Courier New',monospace" font-size="12">learning → foundation · foundation → membership</text>
+    </svg>
+  </div>
+
+  <section class="section" style="background:var(--white)">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center">The four properties and their functions</h2>
+      <p class="section-sub" style="text-align:center;max-width:560px;margin:8px auto 28px;color:var(--muted)">One brand, one set of governed agents and skills, four front doors.</p>
+      <div class="props">
+        <div class="prop">
+          <h3>The library</h3>
+          <div class="dom">aigovops-library (the governed core)</div>
+          <div class="role">The source of truth — and the running v1 core. Defines the agents, skills, and design every other property uses.</div>
+          <p class="fns-label">Functions</p>
+          <ul>
+            <li>13 governed agents (Concierge, Lantern, Beacon, Maker, Scribe, Cloud-Mary…)</li>
+            <li>Skill catalog (framework-map, beacon-sign-evidence, accessibility-audit…)</li>
+            <li>The Yes-Gate + signed evidence ledger</li>
+            <li>Design tokens (canonical in css/tokens.css)</li>
+          </ul>
+          <a class="go" href="https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/" target="_blank" rel="noopener">Open the library →</a>
+        </div>
+        <div class="prop">
+          <h3>The Foundation site</h3>
+          <div class="dom">www.aigovops-foundation.com</div>
+          <div class="role">The public hub — who we are, the products, the frameworks, and how to get involved.</div>
+          <p class="fns-label">Functions</p>
+          <ul>
+            <li>Products: Beacon, Umbrella, Lantern</li>
+            <li>40+ frameworks mapped to controls</li>
+            <li>Alpha program, blog, press, support</li>
+            <li>This ecosystem map</li>
+          </ul>
+          <a class="go" href="index.html">Home →</a>
+        </div>
+        <div class="prop">
+          <h3>The membership community</h3>
+          <div class="dom">community.aigovops-foundation.com</div>
+          <div class="role">The garden — where members learn, post, and earn signed receipts. Sign-in required.</div>
+          <p class="fns-label">Functions</p>
+          <ul>
+            <li>Self-paced courses + completion certificates</li>
+            <li>Posts, polls, events, member circles</li>
+            <li>Contributions and sustaining support</li>
+            <li>Agents: curriculum, welcomer, curator, moderator</li>
+          </ul>
+          <a class="go" href="https://community.aigovops-foundation.com/" target="_blank" rel="noopener">Enter the community →</a>
+        </div>
+        <div class="prop">
+          <h3>The learning camp</h3>
+          <div class="dom">aigovops-foundation.github.io/aigovops-ncw-ai-camp</div>
+          <div class="role">The on-ramp — the NCW AI Expo: Cool Tools, Cool Schools, The Rules. Public and free.</div>
+          <p class="fns-label">Functions</p>
+          <ul>
+            <li>The tools catalog and mini-camps</li>
+            <li>Courses (enroll links into the community)</li>
+            <li>The NCW AI Partnership Pledge</li>
+            <li>One-pagers, decks, and resources</li>
+          </ul>
+          <a class="go" href="https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/" target="_blank" rel="noopener">Visit the camp →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--light)">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center">How they connect</h2>
+      <p class="section-sub" style="text-align:center;max-width:560px;margin:8px auto 28px;color:var(--muted)">The library defines; the sites present and cross-link.</p>
+      <div class="conn">
+        <div><span class="lbl">defines →</span>The library is the single source of truth for agents, skills, and design tokens used everywhere.</div>
+        <div><span class="lbl">learning → membership</span>Camp course cards link into the community to enroll and track progress.</div>
+        <div><span class="lbl">learning ⇄ foundation</span>The camp and the Foundation hub link to each other.</div>
+        <div><span class="lbl">foundation → membership</span>The hub points members to the community.</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" aria-label="AiGovOps Foundation home">
+        <svg style="height:32px;width:32px" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="96" fill="#071a12"/>
+          <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+          <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+          <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
+          <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+        </svg>
+      </a>
+      <p>Governance Versioned Like Code. Tested Before Deployment.</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="frameworks.html">Frameworks</a>
+      <a href="ecosystem.html">Ecosystem</a>
+      <a href="community.html">Community</a>
+      <a href="https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/" target="_blank" rel="noopener">NCW AI Camp</a>
+      <a href="support.html">Support</a>
+      <a href="press.html">Press</a>
+      <a href="/feed.xml">RSS</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <div class="container"><p>© 2026 AiGovOps Foundation — 501(c)(3) Nonprofit</p></div>
+  </div>
+</footer>
+<script>
+const t = document.querySelector('.nav-toggle'), n = document.querySelector('.main-nav');
+if (t && n) t.addEventListener('click', () => { const o = n.classList.toggle('open'); t.setAttribute('aria-expanded', o); });
+</script>
+</body>
+</html>

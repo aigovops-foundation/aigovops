@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Admin cockpit | AiGovOps Foundation</title>
+  <meta name="description" content="Internal admin cockpit — status and management surfaces for the four AiGovOps properties. Stewards only." />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .adm-hero { background: linear-gradient(135deg, var(--dark) 0%, #0a2318 60%, #0d1a2e 100%); color: var(--white); padding: 48px 0 36px; }
+    .adm-hero .hero-eyebrow { color: var(--teal); font-family: 'Courier New', monospace; font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 10px; }
+    .adm-hero h1 { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 700; margin-bottom: 8px; }
+    .adm-hero p { color: rgba(255,255,255,.6); font-size: .9rem; max-width: 560px; }
+    .adm-note { display:inline-block; margin-top:14px; font-family:'Courier New',monospace; font-size:.72rem; letter-spacing:.04em; color:#9fe1cb; background:rgba(29,158,117,.12); border:1px solid rgba(29,158,117,.4); border-radius:6px; padding:6px 10px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 16px; }
+    .card { background: var(--white); border: 1px solid var(--rule, #e7e9f2); border-radius: 12px; padding: 20px; }
+    .card h3 { font-size: 1.02rem; font-weight: 700; margin: 0 0 2px; }
+    .card .dom { font-family: 'Courier New', monospace; font-size: .74rem; color: var(--teal-accessible); margin-bottom: 14px; word-break: break-all; }
+    .row { display: grid; grid-template-columns: 84px 1fr; gap: 8px; font-size: .82rem; padding: 5px 0; border-top: 1px solid var(--rule, #eef0f5); }
+    .row .k { font-family: 'Courier New', monospace; font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); padding-top: 2px; }
+    .row .v { color: var(--text, #2d2d4e); }
+    .row .v code { font-family: 'Courier New', monospace; font-size: .74rem; background: var(--light); padding: 1px 5px; border-radius: 4px; word-break: break-all; }
+    .row .v a { color: var(--teal-accessible); text-decoration: none; }
+    .row .v a:hover { color: var(--teal-dark); }
+    .links a { display:inline-block; margin: 4px 10px 0 0; font-size:.8rem; font-weight:600; color: var(--teal-accessible); text-decoration:none; }
+    .links a:hover { color: var(--teal-dark); }
+    .legend { font-size:.78rem; color:var(--muted); margin-top:6px; }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo-link" aria-label="AiGovOps Foundation home">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="height:38px;width:38px;flex-shrink:0">
+        <title>AiGovOps Foundation</title>
+        <circle cx="100" cy="100" r="96" fill="#071a12"/>
+        <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+        <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+        <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
+        <ellipse cx="100" cy="57" rx="4" ry="6" fill="#9fe1cb" opacity="0.95"/>
+        <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+      </svg>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="ecosystem.html">Ecosystem</a>
+      <a href="admin.html" class="active">Admin</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="adm-hero">
+    <div class="container">
+      <p class="hero-eyebrow">Internal · stewards only</p>
+      <h1>Admin cockpit</h1>
+      <p>One place to see all four properties — where each lives, how it ships, and the surfaces that manage it. Links open in the relevant tool; nothing here performs an action.</p>
+      <span class="adm-note">noindex · not in public nav · the human makes every irreversible move</span>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--white)">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center">The four properties</h2>
+      <p class="legend" style="text-align:center;margin:6px auto 26px">Open the live site, the repo, or the management surface. Deploy notes describe the path; running them stays a human step.</p>
+      <div class="grid">
+
+        <div class="card">
+          <h3>The library</h3>
+          <div class="dom">aigovops-library-june-ken-bob</div>
+          <div class="row"><span class="k">Live</span><span class="v"><a href="https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/" target="_blank" rel="noopener">Pages site ↗</a></span></div>
+          <div class="row"><span class="k">Repo</span><span class="v"><a href="https://github.com/aigovops-foundation/aigovops-library-june-ken-bob" target="_blank" rel="noopener">GitHub ↗</a></span></div>
+          <div class="row"><span class="k">Deploy</span><span class="v">push to <code>main</code> → <code>pages.yml</code></span></div>
+          <div class="row"><span class="k">Manage</span><span class="v links"><a href="https://github.com/aigovops-foundation/aigovops-library-june-ken-bob/actions" target="_blank" rel="noopener">Actions</a></span></div>
+        </div>
+
+        <div class="card">
+          <h3>The Foundation site</h3>
+          <div class="dom">www.aigovops-foundation.com</div>
+          <div class="row"><span class="k">Live</span><span class="v"><a href="https://www.aigovops-foundation.com" target="_blank" rel="noopener">www.aigovops-foundation.com ↗</a></span></div>
+          <div class="row"><span class="k">Repo</span><span class="v"><a href="https://github.com/aigovops-foundation/aigovops-foundation-site-redesign-June2026-ken-and-bob" target="_blank" rel="noopener">GitHub ↗</a></span></div>
+          <div class="row"><span class="k">Deploy</span><span class="v">PR + Cloud-Mary review → Pages</span></div>
+          <div class="row"><span class="k">Manage</span><span class="v links"><a href="https://github.com/aigovops-foundation/aigovops-foundation-site-redesign-June2026-ken-and-bob/pulls" target="_blank" rel="noopener">Pulls</a><a href="https://github.com/aigovops-foundation/aigovops-foundation-site-redesign-June2026-ken-and-bob/actions" target="_blank" rel="noopener">Actions</a></span></div>
+        </div>
+
+        <div class="card">
+          <h3>The membership community</h3>
+          <div class="dom">community.aigovops-foundation.com</div>
+          <div class="row"><span class="k">Live</span><span class="v"><a href="https://community.aigovops-foundation.com/" target="_blank" rel="noopener">the garden ↗</a></span></div>
+          <div class="row"><span class="k">Repo</span><span class="v"><a href="https://github.com/bobrapp/Omni-Rapp-June-2026" target="_blank" rel="noopener">Omni-Rapp ↗</a></span></div>
+          <div class="row"><span class="k">Deploy</span><span class="v"><code>scripts/ship.sh</code> → droplet (rsync + restart)</span></div>
+          <div class="row"><span class="k">Manage</span><span class="v links"><a href="https://community.aigovops-foundation.com/steward.html" target="_blank" rel="noopener">Steward tools</a><a href="https://community.aigovops-foundation.com/admin.html" target="_blank" rel="noopener">Admin</a><a href="https://community.aigovops-foundation.com/signin.html" target="_blank" rel="noopener">Sign in</a></span></div>
+        </div>
+
+        <div class="card">
+          <h3>The learning camp</h3>
+          <div class="dom">aigovops-foundation.github.io/aigovops-ncw-ai-camp</div>
+          <div class="row"><span class="k">Live</span><span class="v"><a href="https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/" target="_blank" rel="noopener">NCW AI Camp ↗</a></span></div>
+          <div class="row"><span class="k">Repo</span><span class="v"><a href="https://github.com/aigovops-foundation/aigovops-ncw-ai-camp" target="_blank" rel="noopener">GitHub ↗</a></span></div>
+          <div class="row"><span class="k">Deploy</span><span class="v">PR → CI (1 review) → Pages</span></div>
+          <div class="row"><span class="k">Manage</span><span class="v links"><a href="https://github.com/aigovops-foundation/aigovops-ncw-ai-camp/pulls" target="_blank" rel="noopener">Pulls</a><a href="https://github.com/aigovops-foundation/aigovops-ncw-ai-camp/actions" target="_blank" rel="noopener">Actions</a></span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--light)">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center">Org-wide</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Source of truth</h3>
+          <div class="legend">Agents, skills, and design tokens are defined in the library and the canonical <code>css/tokens.css</code>; the community and Vendor RFI vendor an identical token copy.</div>
+          <div class="row"><span class="k">Map</span><span class="v"><a href="ecosystem.html">Ecosystem page →</a></span></div>
+        </div>
+        <div class="card">
+          <h3>GitHub org</h3>
+          <div class="row"><span class="k">Org</span><span class="v"><a href="https://github.com/aigovops-foundation" target="_blank" rel="noopener">aigovops-foundation ↗</a></span></div>
+          <div class="row"><span class="k">Security</span><span class="v"><a href="https://github.com/orgs/aigovops-foundation/security/risk" target="_blank" rel="noopener">Dependabot / risk ↗</a></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" aria-label="AiGovOps Foundation home">
+        <svg style="height:32px;width:32px" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="96" fill="#071a12"/>
+          <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+          <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+          <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+        </svg>
+      </a>
+      <p>Internal cockpit — stewards only.</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="ecosystem.html">Ecosystem</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <div class="container"><p>© 2026 AiGovOps Foundation — 501(c)(3) Nonprofit</p></div>
+  </div>
+</footer>
+</body>
+</html>
