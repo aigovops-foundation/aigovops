@@ -74,6 +74,9 @@
     + '.jv-foot{border-top:1px solid #eef1ef;padding:11px 16px;display:flex;gap:14px;font-size:12.5px}'
     + '.jv-foot a{color:#0f6e56;text-decoration:none;font-weight:600}'
     + '.jv-key{font-size:11.5px;color:#5b655e;padding:0 16px 13px;text-align:center}'
+    + '.jv-fb{font-size:12px;color:#5b655e;text-align:center;padding:0 16px 12px;display:flex;align-items:center;justify-content:center;gap:8px}'
+    + '.jv-fb button{border:1px solid #e4ebe8;border-radius:8px;background:#fff;min-width:42px;min-height:38px;cursor:pointer;font-size:15px}'
+    + '.jv-fb button:hover{border-color:#0f6e56}'
     + '.jv-view{display:none} .jv-view.on{display:block}'
     + '.jv-panel :focus-visible{outline:2px solid #0f6e56;outline-offset:2px}'
     + '@media (prefers-reduced-motion: reduce){.jv-panel{transition:none}}';
@@ -114,6 +117,7 @@
     + '<div class="jv-view" id="jv-map">' + mapHtml() + '</div>'
     + '</div>'
     + '<div class="jv-key">Green = I did it myself · amber = it waited for you. Nothing irreversible without a steward.</div>'
+    + '<div class="jv-fb">Enjoying AiGovOps? <button data-fb="up" aria-label="Yes">👍</button><button data-fb="down" aria-label="No">👎</button><span class="jv-fbx" style="display:none;color:#0f6e56;font-weight:600">thanks ✓</span></div>'
     + '<div class="jv-foot"><a href="' + F + '/jeeves-console.html" target="_blank" rel="noopener">▶ The console</a>'
     + '<a href="' + COM + '/" target="_blank" rel="noopener">Enter the live fleet ↗</a></div>';
   document.body.appendChild(panel);
@@ -130,6 +134,17 @@
       var v = t.getAttribute("data-v");
       panel.querySelector("#jv-help").classList.toggle("on", v === "help");
       panel.querySelector("#jv-map").classList.toggle("on", v === "map");
+    });
+  });
+
+  // delight signal — preflight-free (text/plain) cross-origin POST to the community ledger; fire-and-forget
+  [].forEach.call(panel.querySelectorAll(".jv-fb button"), function (b) {
+    b.addEventListener("click", function () {
+      try {
+        fetch(COM + "/api/feedback", { method: "POST", headers: { "Content-Type": "text/plain" },
+          body: JSON.stringify({ topic: "site:" + SITE, value: b.getAttribute("data-fb") }) });
+      } catch (e) {}
+      var x = panel.querySelector(".jv-fbx"); if (x) x.style.display = "inline";
     });
   });
 
