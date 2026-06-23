@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Agent-first home (prototype) — AiGovOps</title>
+<meta name="description" content="A prototype of an agent-first home: Jeeves front and centre. You say what you need; he suggests and drives the work; every irreversible step still waits for you." />
+<meta property="og:title" content="Agent-first home (prototype) — AiGovOps" />
+<meta property="og:description" content="Jeeves front and centre: say what you need, he suggests and drives, you hold the keys." />
+<meta property="og:type" content="website" />
+<style>
+  :root{
+    --navy:#0c1430; --ink:#16304a; --teal:#0f6e56; --teal-d:#0b5743; --teal-bright:#1d9e75;
+    --page:#f5f8f7; --card:#fff; --line:#e4ebe8; --muted:#566;
+    --green:#0f7a45; --green-w:#e8f3ec; --amber:#8a5a0d; --amber-w:#fbf0dd; --gray:#5b655e;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; --serif:Georgia,"Times New Roman",serif;
+  }
+  *{box-sizing:border-box} body{margin:0;background:var(--page);color:var(--ink);font-family:var(--sans);line-height:1.55}
+  .top{display:flex;align-items:center;justify-content:space-between;padding:16px 22px;max-width:1020px;margin:0 auto}
+  .top .b{display:flex;align-items:center;gap:9px;font-weight:700;color:var(--navy);font-size:15px}
+  .top nav a{color:var(--muted);text-decoration:none;font-size:13px;margin-left:16px}
+  .top nav a:hover{color:var(--teal)}
+  .hero{max-width:720px;margin:0 auto;padding:6vh 22px 30px;text-align:center}
+  .jmark{width:74px;height:74px;margin:0 auto 18px;display:block}
+  h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.7rem,4vw,2.5rem);color:var(--navy);margin:0 0 8px;line-height:1.12}
+  .lede{font-size:1.08rem;color:var(--muted);max-width:520px;margin:0 auto 26px}
+  .ask{display:flex;gap:8px;max-width:560px;margin:0 auto 16px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:7px 7px 7px 16px;box-shadow:0 6px 24px rgba(8,20,15,.07)}
+  .ask input{flex:1;border:none;outline:none;font:400 1rem/1.5 var(--sans);color:var(--ink);background:transparent}
+  .ask button{flex:0 0 auto;background:var(--teal);color:#fff;border:none;border-radius:10px;min-width:48px;min-height:48px;font-size:1.1rem;cursor:pointer;display:grid;place-items:center}
+  .ask button:hover{background:var(--teal-d)}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;max-width:600px;margin:0 auto}
+  .chip{background:#fff;border:1px solid var(--line);border-radius:22px;padding:10px 16px;min-height:44px;font-size:13.5px;color:var(--ink);cursor:pointer;transition:.14s;display:inline-flex;align-items:center;gap:7px}
+  .chip:hover{border-color:var(--teal);color:var(--teal)}
+  .chip .s{color:var(--teal-bright);font-size:12px}
+  .cap{font-size:12px;color:var(--gray);text-transform:uppercase;letter-spacing:.1em;margin:0 0 12px}
+  /* thread */
+  .thread{max-width:600px;margin:0 auto;display:none}
+  .thread.on{display:block}
+  .msg{border-radius:14px;padding:12px 15px;margin:0 0 11px;font-size:14.5px}
+  .msg.you{background:var(--navy);color:#fff;margin-left:48px;border-bottom-right-radius:4px}
+  .msg.jv{background:#fff;border:1px solid var(--line);border-bottom-left-radius:4px}
+  .msg.jv .who{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--teal);font-size:13px;margin-bottom:7px}
+  .step{display:flex;align-items:center;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:13.5px}
+  .step:first-of-type{border-top:0}
+  .step .lbl{flex:1} .step .lbl em{font-style:normal;font-weight:600;color:var(--navy)}
+  .pill{font-size:11px;font-weight:700;padding:3px 9px;border-radius:7px;white-space:nowrap}
+  .pill.auto{background:var(--green-w);color:var(--green)} .pill.hold{background:var(--amber-w);color:var(--amber)}
+  .approve{display:flex;gap:8px;margin-top:4px}
+  .approve button{border:1px solid #d7e3dd;border-radius:8px;padding:9px 14px;min-height:44px;font:600 13px/1 var(--sans);cursor:pointer;background:#fff;color:var(--ink)}
+  .approve button.yes{background:var(--teal);border-color:var(--teal);color:#fff} .approve button.yes:hover{background:var(--teal-d)}
+  .approve button.no:hover{border-color:#a3242b;color:#a3242b}
+  .reset{display:inline-flex;align-items:center;gap:7px;background:none;border:none;color:var(--teal);font:600 13.5px var(--sans);cursor:pointer;margin-top:6px}
+  .note{max-width:600px;margin:30px auto 0;padding:14px 16px;background:#fff;border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:0 12px 12px 0;font-size:13px;color:var(--muted)}
+  .note b{color:var(--navy)}
+  .explore{max-width:720px;margin:34px auto 50px;padding-top:20px;border-top:1px solid var(--line);text-align:center}
+  .explore .cap{margin-bottom:10px} .explore a{color:var(--muted);text-decoration:none;font-size:13px;margin:0 10px;white-space:nowrap}
+  .explore a:hover{color:var(--teal)}
+  .banner{background:#fef9ec;border-bottom:1px solid #f0e2bf;color:#7a5a14;font-size:12.5px;text-align:center;padding:7px 14px}
+</style>
+</head>
+<body>
+<div class="banner">Prototype · an <b>agent-first</b> take on the home page — for Ken &amp; Bob to react to. Click a suggestion or type a request.</div>
+<header class="top">
+  <div class="b"><svg width="24" height="24" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="none" stroke="#1d9e75" stroke-width="1.6"/><path d="M11 21 L16 9 L21 21 Z" fill="#0f6e56"/><circle cx="22" cy="9" r="2.4" fill="#5dcaa5"/></svg> AiGovOps</div>
+  <nav><a href="ecosystem.html">Ecosystem</a><a href="jeeves-estate.html">Demo</a><a href="https://community.aigovops-foundation.com/">Sign in</a></nav>
+</header>
+
+<main>
+  <section class="hero">
+    <svg class="jmark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#0c1430"/><circle cx="16" cy="16" r="15" fill="none" stroke="#1d9e75" stroke-width="1.3"/><path d="M11 21 L16 9 L21 21 Z" fill="#0f6e56"/><circle cx="22" cy="9" r="2.6" fill="#5dcaa5"/></svg>
+    <h1>Hi, I'm Jeeves.</h1>
+    <p class="lede">I run the busywork across AiGovOps. Tell me what you need — I'll suggest a path and do it. Anything that can't be undone waits for your yes.</p>
+    <form class="ask" id="ask" autocomplete="off">
+      <input id="askin" placeholder="Ask me to do something…" aria-label="Ask Jeeves" />
+      <button type="submit" aria-label="Send">→</button>
+    </form>
+    <p class="cap" id="chipcap">Or start with one of these</p>
+    <div class="chips" id="chips"></div>
+
+    <div class="thread" id="thread" aria-live="polite"></div>
+
+    <div class="note"><b>Why this shape?</b> Instead of a wall of links, the page asks one question — <em>what do you need?</em> — and Jeeves offers the few things worth doing here, then drives them. The governance never leaves: reversible work just runs; irreversible steps still stop for you.</div>
+  </section>
+
+  <section class="explore">
+    <p class="cap">Prefer to browse?</p>
+    <a href="ecosystem.html">The ecosystem</a> · <a href="frameworks.html">Frameworks</a> · <a href="alpha.html">The tools</a> · <a href="blog.html">Writing</a> · <a href="jeeves-estate.html">Watch the estate run</a>
+  </section>
+</main>
+
+<script>
+(function(){
+  var MARK='<svg width="18" height="18" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="none" stroke="#1d9e75" stroke-width="2"/><path d="M11 21 L16 9 L21 21 Z" fill="#0f6e56"/></svg>';
+  var CHIPS=[
+    {q:"Draft a post on OVERT 1.0", steps:[["draft the post",true],["publish it to the blog",false]]},
+    {q:"What frameworks apply to my hiring AI?", steps:[["map it to the frameworks that bind it",true],["hand you the path to Yes",true]]},
+    {q:"Run a governance report", steps:[["compile the controls",true],["sign the evidence bundle",true],["publish the report",false]]},
+    {q:"What's waiting for my approval?", steps:[["pull your queue (read-only)",true]]}
+  ];
+  var chips=document.getElementById("chips"), thread=document.getElementById("thread");
+  CHIPS.forEach(function(c,i){var b=document.createElement("button");b.className="chip";b.innerHTML='<span class="s">▸</span>'+c.q;b.onclick=function(){go(c);};chips.appendChild(b);});
+
+  function esc(s){return s.replace(/</g,"&lt;");}
+  function plan(q){
+    // map a typed request to the closest scripted plan, else a generic draft->publish
+    var hit=CHIPS.filter(function(c){return c.q.toLowerCase()===q.toLowerCase();})[0];
+    if(hit) return hit.steps;
+    return [["draft what you asked for",true],["publish / send it",false]];
+  }
+  function go(c){
+    var q=c.q, steps=c.steps;
+    runPlan(q, steps);
+  }
+  function runPlan(q, steps){
+    thread.classList.add("on");
+    var holds = steps.filter(function(s){return !s[1];}).length;
+    var rows = steps.map(function(s,i){
+      if(s[1]) return '<div class="step"><span class="lbl">Jeeves <em>'+esc(s[0])+'</em></span><span class="pill auto">runs now ✓</span></div>';
+      return '<div class="step" data-hold="1"><span class="lbl">Jeeves wants to <em>'+esc(s[0])+'</em></span><span class="pill hold">waits for you</span></div>';
+    }).join("");
+    var approve = holds ? '<div class="approve"><button class="yes" id="ap">Approve</button><button class="no" id="dn">Hold</button></div>' : '';
+    thread.innerHTML =
+      '<div class="msg you">'+esc(q)+'</div>'+
+      '<div class="msg jv"><div class="who">'+MARK+'Jeeves</div>'+
+        '<div style="color:var(--muted);font-size:13px;margin-bottom:6px">Here\'s my plan'+(holds?' — the last bit needs your yes':'')+':</div>'+
+        rows+approve+'</div>';
+    thread.scrollIntoView({behavior:"smooth",block:"nearest"});
+    var ap=document.getElementById("ap"), dn=document.getElementById("dn");
+    if(ap) ap.onclick=function(){finish(true);};
+    if(dn) dn.onclick=function(){finish(false);};
+    if(!holds) finishMsg("All reversible — done, and signed into the ledger.");
+  }
+  function finish(yes){
+    document.querySelectorAll('.step[data-hold]').forEach(function(s){
+      var p=s.querySelector(".pill"); p.className="pill "+(yes?"auto":"hold");
+      p.textContent = yes ? "approved · done ✓" : "held · never ran";
+    });
+    var a=document.querySelector(".approve"); if(a) a.remove();
+    finishMsg(yes ? "Done — and notice that step needed your yes. Anything irreversible always does." : "Held. It never runs — you hold the keys.");
+  }
+  function finishMsg(txt){
+    var d=document.createElement("div"); d.className="msg jv";
+    d.innerHTML='<div class="who">'+MARK+'Jeeves</div>'+txt+'<br><button class="reset" id="rs">↺ ask me something else</button>';
+    thread.appendChild(d);
+    document.getElementById("rs").onclick=function(){thread.classList.remove("on");thread.innerHTML="";window.scrollTo({top:0,behavior:"smooth"});};
+    d.scrollIntoView({behavior:"smooth",block:"nearest"});
+  }
+  document.getElementById("ask").addEventListener("submit",function(e){
+    e.preventDefault(); var v=document.getElementById("askin").value.trim(); if(!v)return;
+    document.getElementById("askin").value=""; runPlan(v, plan(v));
+  });
+})();
+</script>
+<script src="/jeeves-widget.js" data-jeeves-site="foundation" defer></script>
+</body>
+</html>
