@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How the AI helper runs the work — NCW AI Expo 2026</title>
+<meta name="description" content="A self-running demo, NCW edition: one plain-English task flows through the governed AI helper. It does the busywork; a human stays in the driver's seat for anything that can't be undone." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232E7D4F'/%3E%3Cpath d='M4 22 L11 11 L16 18 L21 9 L28 22 Z' fill='%23FAF7F0'/%3E%3Ccircle cx='24' cy='8' r='3' fill='%23E07A2A'/%3E%3C/svg%3E" />
+<style>
+  :root{
+    --orchard:#2E7D4F; --orchard-d:#23613D; --signal:#E07A2A; --signal-d:#C4661C;
+    --cream:#FAF7F0; --cream-d:#F2ECDF; --charcoal:#1F1F1F; --ink:#2c352f; --muted:#5e6f64; --line:#e6e1d6;
+    --green:#1f7a45; --green-w:#e8f3ec; --amber:#9a6410; --amber-w:#fbf0dd; --red:#a3242b; --red-w:#fbe9ea; --gray:#84897f; --gray-w:#efeee8;
+    --serif:'Lora',Georgia,serif; --sans:'Inter',-apple-system,system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:780px;margin:0 auto;padding:0 18px}
+  header.site{background:var(--charcoal);color:var(--cream);padding:22px 0 18px}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand b{font-size:15px;font-weight:600}
+  .brand span{display:block;font-size:11px;color:#8fcfa8;letter-spacing:.13em;text-transform:uppercase;margin-top:1px}
+  h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.5rem,3.4vw,2.1rem);margin:15px 0 6px;color:var(--cream);line-height:1.14}
+  header.site p{color:rgba(250,247,240,.74);font-size:.95rem;max-width:570px;margin:0}
+  main{padding:22px 0 10px}
+  .goal{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--orchard);border-radius:10px;padding:11px 15px;margin-bottom:18px}
+  .goal .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+  .goal .txt{font-weight:600;font-size:.98rem;color:var(--charcoal)}
+  .pipe{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:6px}
+  .chip{display:flex;align-items:center;gap:7px;padding:7px 11px;border:1px solid var(--line);border-radius:9px;background:#fff;cursor:pointer;font-size:12.5px;color:var(--muted);transition:.18s;user-select:none}
+  .chip .n{width:18px;height:18px;border-radius:50%;background:var(--gray-w);color:var(--muted);font-size:11px;font-weight:600;display:grid;place-items:center}
+  .chip.on{border-color:var(--orchard);color:var(--orchard);background:var(--green-w);font-weight:600}
+  .chip.on .n{background:var(--orchard);color:#fff}
+  .chip.done .n{background:var(--green);color:#fff}
+  .bar{height:4px;background:var(--line);border-radius:3px;overflow:hidden;margin:12px 0 18px}
+  .bar i{display:block;height:100%;width:0;background:var(--orchard);transition:width .2s linear}
+  .grid{display:grid;grid-template-columns:1.25fr 1fr;gap:14px;align-items:start}
+  @media(max-width:620px){.grid{grid-template-columns:1fr}}
+  .panel{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+  .panel.stage{min-height:172px}
+  .stage .head{display:flex;align-items:center;gap:11px;margin-bottom:9px}
+  .stage .ic{width:38px;height:38px;border-radius:10px;background:var(--green-w);display:grid;place-items:center;flex:0 0 auto}
+  .stage .ic svg{stroke:var(--orchard);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .stage .step{font-size:11.5px;color:var(--gray)}
+  .stage h2{font-family:var(--serif);font-size:1.2rem;margin:0 0 6px;color:var(--charcoal);font-weight:700}
+  .stage p{margin:0;color:var(--muted);font-size:.92rem;line-height:1.6}
+  .acts .cap{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--gray);margin:0 0 12px}
+  .act{display:flex;align-items:center;gap:10px;padding:7px 0;border-top:1px solid var(--line)}
+  .act:first-of-type{border-top:0}
+  .act .ai{width:26px;height:26px;border-radius:7px;background:var(--gray-w);display:grid;place-items:center;flex:0 0 auto}
+  .act .ai svg{width:15px;height:15px;stroke:var(--muted);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .act .nm{flex:1;font-size:13px;color:var(--ink)}
+  .badge{font-size:11px;font-weight:600;padding:3px 9px;border-radius:7px;white-space:nowrap}
+  .controls{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:18px 0 6px;flex-wrap:wrap}
+  .btns{display:flex;gap:8px}
+  button.b{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:9px;padding:9px 15px;font-size:.9rem;font-weight:600;cursor:pointer;transition:.15s;font-family:var(--sans)}
+  button.b:hover{border-color:var(--orchard);color:var(--orchard)}
+  button.b.primary{background:var(--orchard);border-color:var(--orchard);color:#fff}
+  button.b.primary:hover{background:var(--orchard-d);border-color:var(--orchard-d)}
+  button.b svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .legend{display:flex;gap:20px;font-size:12.5px;color:var(--muted);flex-wrap:wrap}
+  .legend i{width:9px;height:9px;border-radius:50%;display:inline-block;vertical-align:1px;margin-right:6px}
+  .key{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 18px;margin:18px 0 0}
+  .key p{margin:0;font-size:.92rem;color:var(--muted)} .key b{color:var(--charcoal)}
+  footer.site{margin-top:26px;border-top:1px solid var(--line);padding:20px 0 30px;font-size:13px;color:var(--muted)}
+  footer.site a{color:var(--orchard)}
+  footer.site .row{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+  .cta{display:inline-flex;align-items:center;gap:7px;background:var(--signal);color:#fff!important;text-decoration:none;border-radius:9px;padding:9px 16px;font-weight:600;font-size:.9rem}
+  @media(prefers-reduced-motion:reduce){.bar i{transition:none}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <div class="brand">
+      <svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#2E7D4F"/><path d="M4 22 L11 11 L16 18 L21 9 L28 22 Z" fill="#FAF7F0"/><circle cx="24" cy="8" r="3" fill="#E07A2A"/></svg>
+      <div><b>NCW AI Expo 2026</b><span>Cool Tools · governed</span></div>
+    </div>
+    <h1>How the AI helper runs the work</h1>
+    <p>One plain-English task, start to finish. The helper does the busywork itself — and stops for a human at the moments that can't be taken back. The human stays in the driver's seat.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="goal">
+      <span class="lbl">the task</span>
+      <span class="txt">&ldquo;post this term's classroom AI guidelines and let our teachers know&rdquo;</span>
+    </div>
+    <div class="pipe" id="pipe" role="tablist" aria-label="demo stages"></div>
+    <div class="bar"><i id="bar"></i></div>
+    <div class="grid">
+      <div class="panel stage" role="region" aria-live="polite">
+        <div class="head"><span class="ic" id="s-ic" aria-hidden="true"></span><span class="step" id="s-step">step 1 of 7</span></div>
+        <h2 id="s-title">A task arrives</h2>
+        <p id="s-blurb"></p>
+      </div>
+      <div class="panel acts"><p class="cap">the three steps the helper planned</p><div id="acts"></div></div>
+    </div>
+    <div class="controls">
+      <div class="btns">
+        <button class="b primary" id="play" aria-label="play or pause"><span id="play-ic"></span><span id="play-tx">pause</span></button>
+        <button class="b" id="restart" aria-label="restart"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v4h4"/></svg> restart</button>
+      </div>
+      <div class="legend">
+        <span><i style="background:#1f7a45"></i>runs on its own</span>
+        <span><i style="background:#9a6410"></i>waits for a person</span>
+      </div>
+    </div>
+    <div class="key"><p><b>The one rule.</b> Green is the helper acting on its own; amber is it waiting for you. Nothing that can't be undone — posting publicly, emailing families, spending money — happens without a person saying yes. The helper does the bureaucracy; the human keeps the keys.</p></div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap row">
+    <span>© 2026 NCW AI Expo · AiGovOps Foundation × NCW Tech Alliance. Share this page freely.</span>
+    <a class="cta" href="https://www.aigovops-foundation.com/jeeves-demo.html" target="_blank" rel="noopener">The full story ↗</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var ICON={
+    goal:'<svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L3 21l1.1-4A8.4 8.4 0 1 1 21 11.5z"/></svg>',
+    plan:'<svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V17h6v-.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z"/></svg>',
+    dept:'<svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.9"/></svg>',
+    gate:'<svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+    queue:'<svg viewBox="0 0 24 24"><path d="M22 12h-6l-2 3h-4l-2-3H2M5.5 5.1 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.5-6.9A2 2 0 0 0 16.8 4H7.2a2 2 0 0 0-1.7 1.1z"/></svg>',
+    approve:'<svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="6"/><path d="M14.5 14.5 21 21M10 8l-2 2-1-1"/></svg>',
+    receipt:'<svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M9 13.5 7 22l5-3 5 3-2-8.5"/></svg>',
+    pencil:'<svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>',
+    world:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg>',
+    mail:'<svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>'
+  };
+  var STAGES=[["goal","task"],["plan","plan"],["dept","helpers"],["gate","check"],["queue","queue"],["approve","you say yes"],["receipt","receipt"]];
+  var STEPS=[
+    {t:"A task arrives",b:"A teacher, the weekly schedule, or a quick message hands the helper a plain-English task. No menus, no dashboards — you just say what you need."},
+    {t:"The helper plans it",b:"It breaks the task into clear steps and double-checks each one is a real, allowed action before anything happens."},
+    {t:"Little helpers do the work",b:"Each step goes to a specialist that spins up a one-time worker to do it, then lets it go. The work gets done; nothing piles up."},
+    {t:"The check on every step",b:"Easy-to-undo work runs by itself. Anything you can't take back stops and waits. The draft runs; posting and emailing wait."},
+    {t:"One short list for you",b:"Everything waiting on a person lands in a single list — see it in the staff cockpit, on Slack, or on your phone. Nothing hidden."},
+    {t:"You say yes (or no)",b:"Say yes and the step runs, safely scoped; say no and it never happens. Here: you approve the post and hold the email for a second look."},
+    {t:"Done, on the record",b:"Everything that ran leaves a tamper-proof receipt you can check later. Then the helper keeps going on its own — bringing you only what needs a person."}
+  ];
+  var ACTS=[["pencil","draft the guidelines"],["world","post them to the camp site"],["mail","email the teachers"]];
+  var TONE={auto:["var(--green-w)","var(--green)"],hold:["var(--amber-w)","var(--amber)"],stop:["var(--red-w)","var(--red)"],idle:["var(--gray-w)","var(--gray)"]};
+  var ST=[
+    [["idle","not yet"],["idle","not yet"],["idle","not yet"]],
+    [["idle","planned"],["idle","planned"],["idle","planned"]],
+    [["idle","assigned"],["idle","assigned"],["idle","assigned"]],
+    [["auto","runs now"],["hold","waits"],["hold","waits"]],
+    [["auto","done"],["hold","in your list"],["hold","in your list"]],
+    [["auto","done"],["auto","approved · posted"],["stop","held for review"]],
+    [["auto","receipt saved"],["auto","receipt saved"],["stop","not sent"]]
+  ];
+  var i=0,timer=null,playing=true,DUR=4200;
+  var pipe=document.getElementById("pipe"),acts=document.getElementById("acts"),bar=document.getElementById("bar");
+  STAGES.forEach(function(s,k){var c=document.createElement("div");c.className="chip";c.setAttribute("role","tab");c.dataset.k=k;c.innerHTML='<span class="n">'+(k+1)+'</span><span>'+s[1]+'</span>';c.onclick=function(){go(k,true)};pipe.appendChild(c);});
+  ACTS.forEach(function(a){var r=document.createElement("div");r.className="act";r.innerHTML='<span class="ai">'+ICON[a[0]]+'</span><span class="nm">'+a[1]+'</span><span class="badge"></span>';acts.appendChild(r);});
+  function render(){var s=STEPS[i];document.getElementById("s-ic").innerHTML=ICON[STAGES[i][0]];document.getElementById("s-title").textContent=s.t;document.getElementById("s-blurb").textContent=s.b;document.getElementById("s-step").textContent="step "+(i+1)+" of 7";
+    [].forEach.call(pipe.children,function(c,k){c.className="chip"+(k===i?" on":"")+(k<i?" done":"");c.setAttribute("aria-selected",k===i?"true":"false");});
+    [].forEach.call(acts.children,function(r,k){var t=ST[i][k],col=TONE[t[0]],b=r.querySelector(".badge");b.textContent=t[1];b.style.background=col[0];b.style.color=col[1];r.style.opacity=t[0]==="idle"?".6":"1";});}
+  function animateBar(){bar.style.transition="none";bar.style.width="0";void bar.offsetWidth;if(playing){bar.style.transition="width "+DUR+"ms linear";bar.style.width="100%";}else{bar.style.width=(i/(STEPS.length-1)*100)+"%";}}
+  function schedule(){clearTimeout(timer);if(!playing)return;timer=setTimeout(function(){i=(i+1)%STEPS.length;render();animateBar();schedule();},DUR);}
+  function go(k,pause){i=k;if(pause){playing=false;setPlay();}render();animateBar();schedule();}
+  function setPlay(){document.getElementById("play-ic").innerHTML=playing?'<svg viewBox="0 0 24 24" style="width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>':'<svg viewBox="0 0 24 24" style="width:15px;height:15px;stroke:currentColor;fill:currentColor"><path d="M7 4l13 8-13 8z"/></svg>';document.getElementById("play-tx").textContent=playing?"pause":"play";}
+  document.getElementById("play").onclick=function(){playing=!playing;setPlay();animateBar();schedule();};
+  document.getElementById("restart").onclick=function(){i=0;playing=true;setPlay();render();animateBar();schedule();};
+  setPlay();render();animateBar();schedule();
+})();
+</script>
+</body>
+</html>
