@@ -207,3 +207,13 @@
     document.querySelectorAll("[data-year]").forEach((e) => (e.textContent = new Date().getFullYear()));
   });
 })();
+
+/* Jeeves corner assistant — the same governed helper that lives on every AiGovOps site. */
+(function () {
+  if (document.querySelector('script[src*="jeeves-widget.js"]')) return;
+  window.JEEVES_SITE = "learning";
+  var s = document.createElement("script");
+  s.src = "https://www.aigovops-foundation.com/jeeves-widget.js";
+  s.defer = true;
+  document.body.appendChild(s);
+})();
