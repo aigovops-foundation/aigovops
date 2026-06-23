@@ -39,7 +39,9 @@
   .qbody{padding:8px 16px 14px} .qempty{color:var(--muted);font-size:13.5px;padding:10px 0}
   .qrow{display:flex;align-items:center;gap:11px;padding:11px 0;border-top:1px solid var(--line)} .qrow:first-child{border-top:0}
   .qrow .qt{flex:1;font-size:13.5px;color:var(--ink)} .qrow .qt b{color:var(--navy)} .qrow .qt span{color:var(--gray);font-size:12px}
-  .qb{border:1px solid #d7e3dd;border-radius:8px;padding:7px 13px;font-size:13px;font-weight:700;cursor:pointer;background:#fff;color:var(--ink);font-family:var(--sans)}
+  .qb{border:1px solid #d7e3dd;border-radius:8px;padding:11px 14px;min-height:44px;font-size:13px;font-weight:700;cursor:pointer;background:#fff;color:var(--ink);font-family:var(--sans)}
+  :focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+  @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
   .qb.yes{background:var(--teal);border-color:var(--teal);color:#fff} .qb.yes:hover{background:var(--teal-d)} .qb.no:hover{border-color:var(--red);color:var(--red)}
   .key{margin:18px 0 0;font-size:13px;color:var(--muted)} .key i{width:9px;height:9px;border-radius:50%;display:inline-block;margin:0 5px 0 12px;vertical-align:1px} .key i:first-child{margin-left:0}
   footer.site{margin-top:24px;border-top:1px solid var(--line);padding:18px 0 34px;font-size:13px;color:var(--muted)}

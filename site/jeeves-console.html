@@ -64,8 +64,11 @@
   .pal .ps .x{background:none;border:none;font-size:20px;color:var(--gray);cursor:pointer;min-width:40px;min-height:40px}
   .pal .pl{overflow:auto;padding:8px 0}
   .grp{padding:6px 16px 2px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--gray)}
-  .cap{display:flex;align-items:center;gap:10px;padding:9px 16px;cursor:pointer}
+  .cap{display:flex;width:100%;align-items:center;gap:10px;padding:11px 16px;min-height:44px;cursor:pointer;border:none;background:none;font:inherit;color:var(--ink);text-align:left}
   .cap:hover{background:var(--green-w)}
+  :focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+  input:focus-visible{outline:2px solid var(--teal);outline-offset:1px}
+  @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
   .cap .nm{flex:1;font-size:13.5px;color:var(--ink)}
   .tag{font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:6px;white-space:nowrap}
   .tag.a{background:var(--green-w);color:var(--green)} .tag.h{background:var(--amber-w);color:var(--amber)}
@@ -105,7 +108,7 @@
 <p class="note">A working model of the agent-first console. The live version runs on <a href="https://community.aigovops-foundation.com/" target="_blank" rel="noopener">the community</a>, wired to the real planner, gate, and signed ledger. <a href="jeeves-estate.html">See the estate run →</a></p>
 </div></main>
 
-<div class="ov" id="ov"><div class="pal">
+<div class="ov" id="ov"><div class="pal" role="dialog" aria-modal="true" aria-label="What Jeeves can do">
   <div class="ps"><span aria-hidden="true">🔍</span><input id="palq" placeholder="Search what Jeeves can do…" aria-label="Search capabilities" /><button class="x" id="palx" aria-label="Close">&times;</button></div>
   <div class="pl" id="pl"></div>
   <div class="hint">Green <b>runs on its own</b> · amber <b>waits for your yes</b></div>
@@ -188,7 +191,7 @@
       if(!caps.length) return;
       var h=document.createElement("div"); h.className="grp"; h.textContent=g[0]; pl.appendChild(h);
       caps.forEach(function(c){
-        var d=document.createElement("div"); d.className="cap";
+        var d=document.createElement("button"); d.className="cap"; d.type="button";
         d.innerHTML='<span class="nm">'+esc(c[0])+'</span><span class="tag '+(c[1]?"h":"a")+'">'+(c[1]?"waits":"runs")+'</span>';
         d.onclick=function(){ ov.classList.remove("on"); propose(c[0], c[1], c[2]); };
         pl.appendChild(d);
