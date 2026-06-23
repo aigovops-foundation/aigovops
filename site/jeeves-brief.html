@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jeeves — the governed fleet · one-page brief · AiGovOps</title>
+<meta name="description" content="A one-page brief: how the AiGovOps fleet runs itself under Jeeves, with a human holding every irreversible move." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23071a12'/%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%231d9e75' stroke-width='1.5'/%3E%3Cpath d='M11 20 L16 9 L21 20 Z' fill='%230f6e56'/%3E%3C/svg%3E" />
+<style>
+  :root{--navy:#0c1c2e;--ink:#1a3046;--teal:#0f6e56;--teal2:#1d9e75;--wash:#e8f5ef;--page:#f5f8f7;--card:#fff;--line:#e1e9e5;--muted:#56655f;--green:#0f7a45;--amber:#9a6410;
+    --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--serif:Georgia,"Times New Roman",serif;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page);color:var(--ink);font-family:var(--font);line-height:1.5;font-size:14px;-webkit-font-smoothing:antialiased}
+  .sheet{max-width:820px;margin:18px auto;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .top{background:linear-gradient(135deg,var(--navy),#0a2318 70%);color:#fff;padding:20px 28px}
+  .brand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+  .brand b{font-size:14px;font-weight:600}
+  .brand span{display:block;font-size:10.5px;color:#8fd3ba;letter-spacing:.14em;text-transform:uppercase}
+  h1{font-family:var(--serif);font-weight:700;font-size:1.7rem;margin:0 0 4px;color:#fff}
+  .top p{margin:0;color:rgba(255,255,255,.74);font-size:.95rem;max-width:620px}
+  .body{padding:22px 28px 26px}
+  h2{font-size:.78rem;text-transform:uppercase;letter-spacing:.13em;color:var(--teal);margin:0 0 10px;font-weight:700}
+  .lead{font-size:1.02rem;color:var(--navy);margin:0 0 20px;line-height:1.55}
+  .lead b{color:var(--teal)}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  @media(max-width:620px){.cols{grid-template-columns:1fr}}
+  .law{display:flex;gap:11px;margin:0 0 11px}
+  .law .v{flex:0 0 22px;height:22px;border-radius:6px;display:grid;place-items:center;font-weight:700;font-size:12px;color:#fff}
+  .law .t{font-size:13px}
+  .law .t b{color:var(--navy)}
+  ul.live{list-style:none;margin:0;padding:0}
+  ul.live li{position:relative;padding:4px 0 4px 22px;font-size:13px}
+  ul.live li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:700}
+  .pill{display:inline-block;background:var(--wash);color:var(--teal);font-size:11px;font-weight:600;padding:2px 9px;border-radius:6px;margin:0 4px 4px 0}
+  .key{background:var(--wash);border-radius:10px;padding:13px 16px;margin:20px 0 0}
+  .key b{color:var(--navy)}
+  .stats{display:flex;gap:24px;flex-wrap:wrap;margin:18px 0 0;border-top:1px solid var(--line);padding-top:16px}
+  .stat .n{font-family:var(--serif);font-weight:700;font-size:1.5rem;color:var(--teal)}
+  .stat .l{font-size:11.5px;color:var(--muted)}
+  .foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center;border-top:1px solid var(--line);margin-top:18px;padding-top:14px;font-size:12.5px;color:var(--muted)}
+  .foot a{color:var(--teal);text-decoration:none;font-weight:600}
+  @media print{body{background:#fff}.sheet{border:0;margin:0;max-width:100%}.top{-webkit-print-color-adjust:exact;print-color-adjust:exact}.noprint{display:none}}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="top">
+    <div class="brand">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#071a12"/><circle cx="16" cy="16" r="14" fill="none" stroke="#1d9e75" stroke-width="1.4"/><path d="M11 20 L16 9 L21 20 Z" fill="#0f6e56"/><circle cx="22" cy="9" r="2.4" fill="#5dcaa5"/></svg>
+      <div><b>AiGovOps Foundation</b><span>Jeeves · the governed fleet</span></div>
+    </div>
+    <h1>The site runs itself. Humans hold the keys.</h1>
+    <p>A multi-agent operation where everything reversible happens automatically — and every irreversible move pauses for a named human. One-page brief.</p>
+  </div>
+  <div class="body">
+    <p class="lead">A master agent, <b>Jeeves</b>, takes a plain-English goal, plans it, and dispatches a fleet of departments to do the work. A cryptographic <b>gate</b> sits on every action: reversible work proceeds on its own; anything irreversible holds for a steward. The result is a platform that runs ~99% on its own, with a human in the loop exactly — and only — where it counts.</p>
+
+    <div class="cols">
+      <div>
+        <h2>The one law</h2>
+        <div class="law"><span class="v" style="background:var(--green)">1</span><span class="t"><b>Proceed.</b> The effect is reversible (a draft, a read, an un-publish). No human needed.</span></div>
+        <div class="law"><span class="v" style="background:var(--amber)">?</span><span class="t"><b>Hold for a steward.</b> The effect is irreversible — send, pay, deploy, delete. Waits for Ken or Bob.</span></div>
+        <div class="law"><span class="v" style="background:#7c867f">0</span><span class="t"><b>Stop.</b> Unsafe or unreviewed. It does not run.</span></div>
+        <p style="font-size:12.5px;color:var(--muted);margin:12px 0 0">Agents have no ambient authority — every effect goes through the gate, and every one that runs is Ed25519-signed into an auditable ledger.</p>
+      </div>
+      <div>
+        <h2>Live in production today</h2>
+        <ul class="live">
+          <li>Jeeves plans goals with Claude, validated step-by-step</li>
+          <li>9 departments; one ? queue for all held actions</li>
+          <li>Approve / deny from the cockpit, Slack, or Telegram</li>
+          <li>Runs itself on a 15-minute tick; backups + peer sync</li>
+          <li>An ops runbook that flags only what needs a human</li>
+        </ul>
+        <div style="margin-top:12px">
+          <span class="pill">no ambient authority</span><span class="pill">signed receipts</span><span class="pill">sandboxed tools</span><span class="pill">steward-only admin</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="key"><b>Why it matters.</b> Devin, Claude, and OpenAI agents are powerful but bounded by prompts and a sandbox. AiGovOps adds a cryptographically enforced reversibility boundary: no irreversible action — public or private — happens without a named human. That is the moat, and it is what makes "mostly automatic" safe.</div>
+
+    <div class="stats">
+      <div class="stat"><div class="n">~99%</div><div class="l">of work runs without a human</div></div>
+      <div class="stat"><div class="n">60s</div><div class="l">scoped token per approved action</div></div>
+      <div class="stat"><div class="n">2</div><div class="l">people who hold every key (Ken &amp; Bob)</div></div>
+      <div class="stat"><div class="n">0</div><div class="l">irreversible actions taken unattended</div></div>
+    </div>
+
+    <div class="foot">
+      <span>© 2026 AiGovOps Foundation — a 501(c)(3) nonprofit. Apache-2.0.</span>
+      <span class="noprint"><a href="jeeves-demo.html">▶ Watch the self-running demo</a> &nbsp;·&nbsp; <a href="https://community.aigovops-foundation.com/" target="_blank" rel="noopener">See it live ↗</a></span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
