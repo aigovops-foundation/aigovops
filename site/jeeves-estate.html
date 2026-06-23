@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jeeves runs the estate — end to end, across every site</title>
+<meta name="description" content="One run, every property. Jeeves proposes an action on each AiGovOps site; reversible work runs itself, anything irreversible waits in one queue for Ken or Bob to approve. The whole estate, one gate." />
+<style>
+  :root{
+    --navy:#0c1c2e; --ink:#16304a; --teal:#0f6e56; --teal-d:#0b5743; --gold:#9a6410;
+    --page:#f5f8f7; --card:#fff; --line:#e4ebe8; --muted:#5e6f69;
+    --green:#0f7a45; --green-w:#e8f3ec; --amber:#9a6410; --amber-w:#fbf0dd; --red:#a3242b; --red-w:#fbe9ea; --gray:#7c867f; --gray-w:#eef1ef;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; --serif:Georgia,"Times New Roman",serif;
+  }
+  *{box-sizing:border-box} body{margin:0;background:var(--page);color:var(--ink);font-family:var(--sans);line-height:1.55}
+  .wrap{max-width:920px;margin:0 auto;padding:0 18px}
+  header.site{background:linear-gradient(135deg,#0c1c2e,#0a2318 80%);color:#fff;padding:26px 0 22px}
+  .brand{display:flex;align-items:center;gap:11px;font-size:13px;color:#8fd3ba;letter-spacing:.12em;text-transform:uppercase}
+  h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.6rem,3.6vw,2.3rem);margin:13px 0 7px;color:#fff;line-height:1.13}
+  header.site p{color:rgba(255,255,255,.78);max-width:640px;margin:0;font-size:1rem}
+  main{padding:22px 0 30px}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+  .run{display:inline-flex;align-items:center;gap:9px;background:var(--teal);color:#fff;border:none;border-radius:11px;padding:12px 20px;font-size:1rem;font-weight:700;cursor:pointer;font-family:var(--sans);transition:.15s}
+  .run:hover{background:var(--teal-d)} .run:disabled{opacity:.5;cursor:default}
+  .run svg{width:17px;height:17px;fill:currentColor}
+  .tally{font-size:13px;color:var(--muted)} .tally b{color:var(--ink)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:22px}
+  .prop{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 14px;transition:.2s}
+  .prop .top{display:flex;align-items:center;gap:8px;margin-bottom:7px}
+  .prop .ic{width:30px;height:30px;border-radius:8px;background:#0c1c2e;display:grid;place-items:center;flex:0 0 auto}
+  .prop .ic svg{width:16px;height:16px;stroke:#5dcaa5;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .prop .nm{font-weight:700;font-size:14px;color:var(--navy)} .prop .nm small{display:block;font-weight:400;font-size:11px;color:var(--gray);text-transform:uppercase;letter-spacing:.06em}
+  .prop .prop-do{font-size:12.5px;color:var(--muted);min-height:34px} .prop .prop-do em{color:var(--teal);font-style:normal;font-weight:600}
+  .st{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:7px;margin-top:8px;background:var(--gray-w);color:var(--gray)}
+  .st.run{background:var(--green-w);color:var(--green)} .st.hold{background:var(--amber-w);color:var(--amber)} .st.stop{background:var(--red-w);color:var(--red)}
+  .queue{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .queue h2{font-family:var(--serif);font-size:1.15rem;margin:0;padding:14px 16px;border-bottom:1px solid var(--line);color:var(--navy);display:flex;align-items:center;gap:9px}
+  .queue h2 .cnt{margin-left:auto;font-family:var(--sans);font-size:12px;font-weight:700;background:var(--amber-w);color:var(--amber);padding:3px 10px;border-radius:20px}
+  .qbody{padding:8px 16px 14px} .qempty{color:var(--muted);font-size:13.5px;padding:10px 0}
+  .qrow{display:flex;align-items:center;gap:11px;padding:11px 0;border-top:1px solid var(--line)} .qrow:first-child{border-top:0}
+  .qrow .qt{flex:1;font-size:13.5px;color:var(--ink)} .qrow .qt b{color:var(--navy)} .qrow .qt span{color:var(--gray);font-size:12px}
+  .qb{border:1px solid #d7e3dd;border-radius:8px;padding:7px 13px;font-size:13px;font-weight:700;cursor:pointer;background:#fff;color:var(--ink);font-family:var(--sans)}
+  .qb.yes{background:var(--teal);border-color:var(--teal);color:#fff} .qb.yes:hover{background:var(--teal-d)} .qb.no:hover{border-color:var(--red);color:var(--red)}
+  .key{margin:18px 0 0;font-size:13px;color:var(--muted)} .key i{width:9px;height:9px;border-radius:50%;display:inline-block;margin:0 5px 0 12px;vertical-align:1px} .key i:first-child{margin-left:0}
+  footer.site{margin-top:24px;border-top:1px solid var(--line);padding:18px 0 34px;font-size:13px;color:var(--muted)}
+  footer.site a{color:var(--teal);font-weight:600;text-decoration:none}
+  .done-msg{display:none;background:var(--navy);color:#fff;border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:14px}
+  .done-msg.on{display:block} .done-msg b{color:#5dcaa5}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <div class="brand"><svg width="20" height="20" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="none" stroke="#1d9e75" stroke-width="1.6"/><path d="M11 21 L16 9 L21 21 Z" fill="#0f6e56"/><circle cx="22" cy="9" r="2.4" fill="#5dcaa5"/></svg> AiGovOps · end-to-end</div>
+  <h1>Jeeves runs the estate</h1>
+  <p>One run across every property. Jeeves proposes an action on each site; the reversible work runs itself, and anything that can't be undone waits in <em>one</em> queue for Ken or Bob. Press the button — then approve or deny what lands in your queue.</p>
+</div></header>
+
+<main><div class="wrap">
+  <div class="bar">
+    <button class="run" id="run"><svg viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"/></svg> Jeeves, run the estate</button>
+    <div class="tally" id="tally">8 properties idle</div>
+  </div>
+  <div class="done-msg" id="done"></div>
+  <div class="grid" id="grid"></div>
+  <div class="queue">
+    <h2><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9a6410" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Your approval queue <span class="cnt" id="cnt">0</span></h2>
+    <div class="qbody" id="qbody"><div class="qempty">Nothing waiting. Irreversible actions Jeeves proposes will land here for your yes or no.</div></div>
+  </div>
+  <p class="key"><i style="background:#0f7a45"></i>ran on its own (reversible)<i style="background:#9a6410"></i>waiting for you (irreversible)<i style="background:#a3242b"></i>you said no</p>
+</div></main>
+
+<footer class="site"><div class="wrap">
+  This is the whole estate through one gate. See it live: <a href="https://community.aigovops-foundation.com/" target="_blank" rel="noopener">enter the fleet ↗</a> · <a href="ecosystem.html">the ecosystem map</a> · <a href="jeeves-demo.html">the single-task story</a>
+</div></footer>
+
+<script>
+(function(){
+  var ICON={
+    world:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg>',
+    people:'<svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.9"/></svg>',
+    book:'<svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"/></svg>',
+    cap:'<svg viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5zM6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg>',
+    beacon:'<svg viewBox="0 0 24 24"><path d="M12 2v6M5 9l3 2M19 9l-3 2M7 22l5-10 5 10z"/></svg>',
+    umb:'<svg viewBox="0 0 24 24"><path d="M12 2a9 9 0 0 1 9 9H3a9 9 0 0 1 9-9zM12 11v8a2 2 0 0 1-4 0"/></svg>',
+    lantern:'<svg viewBox="0 0 24 24"><path d="M8 2h8M9 2v3M15 2v3M6 8a6 6 0 0 1 12 0v9a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3zM12 22v-2"/></svg>',
+    rfi:'<svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M9 13h6M9 17h4"/></svg>'
+  };
+  // each property: the action Jeeves proposes, and whether it's reversible (auto) or irreversible (queues)
+  var P=[
+    {id:"foundation", nm:"Foundation site", k:"the public hub", ic:"world",  act:"publish the OVERT 1.0 post", rev:false},
+    {id:"community",  nm:"Community",        k:"the garden",     ic:"people", act:"post this week's digest",      rev:false},
+    {id:"learning",   nm:"NCW AI camp",      k:"the on-ramp",    ic:"cap",    act:"email teachers the guidelines",rev:false},
+    {id:"library",    nm:"Library",          k:"source of truth",ic:"book",   act:"draft the agents-page update", rev:true},
+    {id:"beacon",     nm:"Beacon",           k:"discover · sign",ic:"beacon", act:"sign the evidence bundle",     rev:true},
+    {id:"umbrella",   nm:"Umbrella",         k:"frameworks→controls",ic:"umb",act:"compile EU AI Act → controls", rev:true},
+    {id:"lantern",    nm:"Lantern",          k:"reads the bundle",ic:"lantern",act:"render the governance report",rev:true},
+    {id:"rfi",        nm:"Vendor RFI",       k:"diligence",      ic:"rfi",    act:"send the new-vendor RFI",      rev:false}
+  ];
+  var grid=document.getElementById("grid"), qbody=document.getElementById("qbody"),
+      cnt=document.getElementById("cnt"), tally=document.getElementById("tally"),
+      runBtn=document.getElementById("run"), done=document.getElementById("done");
+  P.forEach(function(p){
+    var d=document.createElement("div"); d.className="prop"; d.id="p-"+p.id;
+    d.innerHTML='<div class="top"><span class="ic">'+ICON[p.ic]+'</span><span class="nm">'+p.nm+'<small>'+p.k+'</small></span></div>'
+      +'<div class="prop-do" id="do-'+p.id+'"></div><div class="st" id="st-'+p.id+'">idle</div>';
+    grid.appendChild(d);
+  });
+
+  function setSt(id,cls,txt){var e=document.getElementById("st-"+id); e.className="st "+cls; e.textContent=txt;}
+  function setDo(id,html){document.getElementById("do-"+id).innerHTML=html;}
+  var queued=[], ran=0, held=0, t0=0;
+
+  function refreshQueue(){
+    cnt.textContent=queued.length;
+    if(!queued.length){ qbody.innerHTML='<div class="qempty">Nothing waiting right now.</div>'; return; }
+    qbody.innerHTML="";
+    queued.forEach(function(p){
+      var r=document.createElement("div"); r.className="qrow";
+      r.innerHTML='<div class="qt"><b>'+p.nm+'</b> — Jeeves wants to <b>'+p.act+'</b>. <span>irreversible · needs a steward</span></div>'
+        +'<button class="qb yes" data-a="approve" data-id="'+p.id+'">Approve</button>'
+        +'<button class="qb no" data-a="deny" data-id="'+p.id+'">Deny</button>';
+      qbody.appendChild(r);
+    });
+  }
+  function decide(id,a){
+    queued=queued.filter(function(p){return p.id!==id;});
+    if(a==="approve"){ setSt(id,"run","approved · done · receipt"); setDo(id,'Jeeves <em>'+P.find(function(x){return x.id===id}).act+'</em> — you approved it.'); }
+    else { setSt(id,"stop","denied · never ran"); setDo(id,'Held forever. You said no — it never happens.'); }
+    refreshQueue(); checkDone();
+  }
+  qbody.addEventListener("click",function(e){var b=e.target.closest(".qb"); if(!b)return; decide(b.getAttribute("data-id"),b.getAttribute("data-a"));});
+
+  function checkDone(){
+    if(queued.length) return;
+    if(!t0) return;
+    done.className="done-msg on";
+    done.innerHTML='Estate run complete. <b>'+ran+' reversible actions ran on their own</b>; <b>'+held+' irreversible ones waited for you</b> — and only moved when you said yes. One gate, every site. <em>That\'s the whole model.</em>';
+  }
+
+  runBtn.addEventListener("click",function(){
+    runBtn.disabled=true; queued=[]; ran=0; held=0; t0=1; done.className="done-msg";
+    var i=0;
+    P.forEach(function(p,k){
+      setTimeout(function(){
+        setSt(p.id,"","proposing…"); setDo(p.id,'Jeeves proposes: <em>'+p.act+'</em>');
+        setTimeout(function(){
+          if(p.rev){ ran++; setSt(p.id,"run","ran on its own · receipt"); setDo(p.id,'Jeeves <em>'+p.act+'</em> — reversible, so it just ran.'); }
+          else { held++; queued.push(p); setSt(p.id,"hold","waiting for you"); setDo(p.id,'Jeeves wants to <em>'+p.act+'</em> — held for your yes.'); refreshQueue(); }
+          tally.innerHTML='<b>'+ran+'</b> ran · <b>'+held+'</b> waiting · approve them below';
+          if(k===P.length-1){ runBtn.disabled=false; runBtn.innerHTML='<svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v4h4"/></svg> run again'; runBtn.querySelector("svg").setAttribute("fill","none"); runBtn.querySelector("svg").setAttribute("stroke","currentColor"); runBtn.querySelector("svg").setAttribute("stroke-width","2"); }
+        }, 360);
+      }, 260*k);
+    });
+  });
+})();
+</script>
+  <script src="/jeeves-widget.js" data-jeeves-site="foundation" defer></script>
+</body>
+</html>
