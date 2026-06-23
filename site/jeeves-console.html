@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Jeeves Console — one ask, one queue, one trail</title>
+<meta name="description" content="The whole governed estate as one surface: ask Jeeves anything, browse what he can do, approve what waits in a single queue, and watch every action sign itself into the trail." />
+<meta property="og:title" content="The Jeeves Console — one ask, one queue, one trail" />
+<meta property="og:description" content="Ask, approve, and audit the whole governed estate from one delightful surface." />
+<meta property="og:type" content="website" />
+<style>
+  :root{
+    --navy:#0c1430; --ink:#16304a; --teal:#0f6e56; --teal-d:#0b5743; --teal-b:#1d9e75;
+    --page:#eef3f1; --card:#fff; --line:#e1e8e4; --muted:#5a6863; --gray:#5b655e;
+    --green:#0f7a45; --green-w:#e8f3ec; --amber:#8a5a0d; --amber-w:#fbf0dd; --red:#a3242b;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; --serif:Georgia,serif;
+  }
+  *{box-sizing:border-box} body{margin:0;background:var(--page);color:var(--ink);font-family:var(--sans);line-height:1.5}
+  .wrap{max-width:980px;margin:0 auto;padding:0 18px}
+  header.site{background:linear-gradient(135deg,#0c1430,#0a2318 80%);color:#fff;padding:22px 0 20px}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand b{font-size:15px;font-weight:600} .brand span{display:block;font-size:11px;color:#8fd3ba;letter-spacing:.13em;text-transform:uppercase}
+  h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.5rem,3.4vw,2.15rem);margin:13px 0 5px;color:#fff;line-height:1.13}
+  header.site p{color:rgba(255,255,255,.76);font-size:.97rem;margin:0;max-width:600px}
+  /* ask */
+  .ask{display:flex;gap:8px;max-width:680px;margin:-22px auto 0;background:#fff;border:1px solid var(--line);border-radius:15px;padding:8px 8px 8px 17px;box-shadow:0 12px 34px rgba(8,20,15,.13);position:relative;z-index:3}
+  .ask input{flex:1;border:none;outline:none;font:400 1.02rem/1.5 var(--sans);color:var(--ink);background:transparent}
+  .ask .browse{flex:0 0 auto;border:1px solid var(--line);background:#f6faf8;color:var(--teal);border-radius:10px;min-height:48px;padding:0 13px;font:600 13px var(--sans);cursor:pointer;display:flex;align-items:center;gap:6px}
+  .ask .browse:hover{border-color:var(--teal)}
+  .ask .go{flex:0 0 auto;background:var(--teal);color:#fff;border:none;border-radius:10px;min-width:48px;min-height:48px;font-size:1.1rem;cursor:pointer}
+  .ask .go:hover{background:var(--teal-d)}
+  main{padding:26px 0 40px}
+  .cols{display:grid;grid-template-columns:1.15fr 1fr;gap:16px}
+  @media(max-width:760px){.cols{grid-template-columns:1fr}}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .ph{display:flex;align-items:center;gap:9px;padding:14px 16px;border-bottom:1px solid var(--line)}
+  .ph h2{font-family:var(--serif);font-size:1.12rem;margin:0;color:var(--navy)}
+  .ph .ic{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;flex:0 0 auto}
+  .ph .ic.q{background:var(--amber-w)} .ph .ic.t{background:var(--green-w)}
+  .ph .cnt{margin-left:auto;font-size:12px;font-weight:700;padding:3px 10px;border-radius:20px}
+  .ph .cnt.q{background:var(--amber-w);color:var(--amber)} .ph .cnt.t{background:var(--green-w);color:var(--green)}
+  .pb{padding:8px 16px 16px;max-height:520px;overflow:auto}
+  .empty{color:var(--muted);font-size:13.5px;padding:22px 4px;text-align:center}
+  /* queue item */
+  .qi{border-top:1px solid var(--line);padding:13px 0;animation:fade .3s} .qi:first-child{border-top:0}
+  .qi .qt{font-size:13.5px;color:var(--ink);margin-bottom:3px} .qi .qt b{color:var(--navy)}
+  .qi .qm{font-size:11.5px;color:var(--gray);margin-bottom:9px} .qi .qm .who{color:var(--teal)}
+  .qi .row{display:flex;gap:8px}
+  .qi button{border:1px solid #d7e3dd;border-radius:8px;padding:8px 14px;min-height:42px;font:600 12.5px var(--sans);cursor:pointer;background:#fff;color:var(--ink)}
+  .qi button.y{background:var(--teal);border-color:var(--teal);color:#fff} .qi button.y:hover{background:var(--teal-d)}
+  .qi button.n:hover{border-color:var(--red);color:var(--red)}
+  /* receipt */
+  .rc{border-top:1px solid var(--line);padding:11px 0;display:flex;gap:10px;animation:slidein .4s} .rc:first-child{border-top:0}
+  .rc .dot{width:8px;height:8px;border-radius:50%;background:var(--green);margin-top:6px;flex:0 0 auto}
+  .rc.denied .dot{background:var(--gray)}
+  .rc .rt{font-size:13px;color:var(--ink)} .rc .rt b{color:var(--navy)}
+  .rc .rm{font-size:11px;color:var(--gray);font-family:ui-monospace,Menlo,monospace;margin-top:2px}
+  /* palette overlay */
+  .ov{position:fixed;inset:0;background:rgba(10,20,16,.45);display:none;align-items:flex-start;justify-content:center;z-index:50;padding:7vh 16px}
+  .ov.on{display:flex}
+  .pal{background:#fff;border-radius:16px;width:100%;max-width:640px;max-height:80vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 70px rgba(8,20,15,.4)}
+  .pal .ps{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line)}
+  .pal .ps input{flex:1;border:none;outline:none;font:400 1rem var(--sans);color:var(--ink)}
+  .pal .ps .x{background:none;border:none;font-size:20px;color:var(--gray);cursor:pointer;min-width:40px;min-height:40px}
+  .pal .pl{overflow:auto;padding:8px 0}
+  .grp{padding:6px 16px 2px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--gray)}
+  .cap{display:flex;align-items:center;gap:10px;padding:9px 16px;cursor:pointer}
+  .cap:hover{background:var(--green-w)}
+  .cap .nm{flex:1;font-size:13.5px;color:var(--ink)}
+  .tag{font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:6px;white-space:nowrap}
+  .tag.a{background:var(--green-w);color:var(--green)} .tag.h{background:var(--amber-w);color:var(--amber)}
+  .hint{text-align:center;color:var(--gray);font-size:12px;padding:14px}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  @keyframes slidein{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+  .note{max-width:680px;margin:20px auto 0;font-size:12.5px;color:var(--muted);text-align:center}
+  .note a{color:var(--teal)}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <div class="brand"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#0c1430"/><circle cx="16" cy="16" r="15" fill="none" stroke="#1d9e75" stroke-width="1.3"/><path d="M11 21 L16 9 L21 21 Z" fill="#0f6e56"/><circle cx="22" cy="9" r="2.6" fill="#5dcaa5"/></svg>
+    <div><b>The Jeeves Console</b><span>one ask · one queue · one trail</span></div></div>
+  <h1>Tell me what you need. I'll do the work.</h1>
+  <p>The whole estate — 35 agents, 90-odd actions, every skill — behind one ask. I run the reversible work myself; anything that can't be undone waits for your yes, and signs itself into the trail.</p>
+</div></header>
+
+<div class="wrap">
+  <form class="ask" id="ask" autocomplete="off">
+    <input id="askin" placeholder="Ask Jeeves to do anything…" aria-label="Ask Jeeves" />
+    <button type="button" class="browse" id="browse" aria-label="Browse capabilities">▦ Browse</button>
+    <button type="submit" class="go" aria-label="Send">→</button>
+  </form>
+</div>
+
+<main><div class="wrap"><div class="cols">
+  <section class="panel">
+    <div class="ph"><span class="ic q">🛎️</span><h2>Waiting for your yes</h2><span class="cnt q" id="qc">0</span></div>
+    <div class="pb" id="queue"></div>
+  </section>
+  <section class="panel">
+    <div class="ph"><span class="ic t">✅</span><h2>Signed &amp; done</h2><span class="cnt t" id="tc">0</span></div>
+    <div class="pb" id="trail"></div>
+  </section>
+</div>
+<p class="note">A working model of the agent-first console. The live version runs on <a href="https://community.aigovops-foundation.com/" target="_blank" rel="noopener">the community</a>, wired to the real planner, gate, and signed ledger. <a href="jeeves-estate.html">See the estate run →</a></p>
+</div></main>
+
+<div class="ov" id="ov"><div class="pal">
+  <div class="ps"><span aria-hidden="true">🔍</span><input id="palq" placeholder="Search what Jeeves can do…" aria-label="Search capabilities" /><button class="x" id="palx" aria-label="Close">&times;</button></div>
+  <div class="pl" id="pl"></div>
+  <div class="hint">Green <b>runs on its own</b> · amber <b>waits for your yes</b></div>
+</div></div>
+
+<script>
+(function(){
+  // representative slice of the real catalog, grouped; [label, isHold, agent]
+  var GROUPS=[
+    ["Communications",[["Send an email",true,"inbox"],["Reply to an email",true,"inbox"],["Post to social",false,"social"],["DM a partner",true,"social"],["Draft the newsletter",false,"newsletter"],["Send the newsletter",true,"newsletter"],["Book a meeting",false,"calendar"]]],
+    ["Content & learning",[["Draft a post",false,"intel-content"],["Publish to the site",true,"aigovops-agent-deploy"],["Curate the digest",false,"curator"],["Publish a course",false,"curriculum"],["Issue a certificate",false,"curriculum"],["Run a research brief",false,"researcher"]]],
+    ["Governance & compliance",[["Compile a framework → controls",false,"governance"],["Emit a control to CI",false,"governance"],["Flag a violation",false,"governance"],["Propose a vendor-RFI update",true,"vendor-rfi"]]],
+    ["Evidence & audit",[["Sign an evidence bundle",false,"auditor"],["Read a bundle into a report",false,"auditor"],["Audit the secrets broker",false,"security"],["Verify signatures",false,"security"]]],
+    ["Deploy & release",[["Draft a PR",false,"deploy"],["Open a PR",false,"deploy"],["Merge a PR",true,"deploy"],["Deploy",true,"deploy"],["Ship to the host",true,"release"],["Flip a release live",true,"release"]]],
+    ["Infra & resilience",[["Run the tests",false,"testing"],["Take a backup",false,"resilience"],["Restore from backup",true,"resilience"],["Run a DR drill",false,"resilience"],["Provision a new surface",true,"config"]]],
+    ["Community",[["Welcome a member",false,"welcomer"],["Feature a post",false,"curator"],["Remove a post",true,"moderator"]]],
+    ["Finance",[["Record a donation",false,"finance"],["Propose a spend",true,"finance"],["Create a contribution link",false,"treasurer"],["Refund a contribution",true,"treasurer"]]],
+    ["Skills Jeeves can run",[["Map what frameworks apply",false,"governance"],["Run an accessibility audit",false,"experience"],["Run a security & privacy review",false,"security"],["Write a UX flow spec",false,"experience"],["Author user-assistance help",false,"experience"],["Generate a status report",false,"jeeves"]]]
+  ];
+  var QSEED=[
+    ["publish the OVERT 1.0 post to the blog","intel-content"],
+    ["send this week's newsletter to 1,240 members","newsletter"],
+    ["merge PR #42 and deploy to the foundation site","aigovops-agent-deploy"],
+    ["refund a $250 contribution to a sponsor","treasurer"]
+  ];
+  var TSEED=[
+    ["compiled EU AI Act → 9 controls","governance"],
+    ["signed the weekly evidence bundle","auditor"],
+    ["nightly backup completed — 14 retained","aigovops-agent-resilience"],
+    ["curated today's community digest","curator"]
+  ];
+  var queue=document.getElementById("queue"), trail=document.getElementById("trail"),
+      qc=document.getElementById("qc"), tc=document.getElementById("tc"),
+      ov=document.getElementById("ov"), pl=document.getElementById("pl");
+  var Q=[], T=[];
+  function hex(n){var s="";for(var i=0;i<n;i++)s+="0123456789abcdef"[Math.floor(Math.random()*16)];return s;}
+  function now(){return new Date().toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"});}
+  function esc(s){return String(s).replace(/</g,"&lt;");}
+
+  function renderQ(){
+    qc.textContent=Q.length;
+    queue.innerHTML = Q.length ? "" : '<div class="empty">All clear — nothing needs you right now.<br>I\'ll surface anything irreversible here.</div>';
+    Q.forEach(function(it,i){
+      var d=document.createElement("div"); d.className="qi";
+      d.innerHTML='<div class="qt"><b>Jeeves</b> wants to '+esc(it.t)+'</div>'+
+        '<div class="qm"><span class="who">'+esc(it.a)+'</span> · irreversible · needs your yes</div>'+
+        '<div class="row"><button class="y">Approve</button><button class="n">Hold</button></div>';
+      d.querySelector(".y").onclick=function(){decide(i,true);};
+      d.querySelector(".n").onclick=function(){decide(i,false);};
+      queue.appendChild(d);
+    });
+  }
+  function renderT(){
+    tc.textContent=T.length;
+    trail.innerHTML = T.length ? "" : '<div class="empty">Receipts will appear here as work completes.</div>';
+    T.forEach(function(r){
+      var d=document.createElement("div"); d.className="rc"+(r.denied?" denied":"");
+      d.innerHTML='<span class="dot"></span><div><div class="rt">'+(r.denied?'Held — <b>'+esc(r.t)+'</b> never ran':'<b>'+esc(r.a)+'</b> '+esc(r.t))+'</div>'+
+        '<div class="rm">'+(r.denied?'denied by steward':('signed · kid '+hex(8)+' · '+now()))+'</div></div>';
+      trail.appendChild(d);
+    });
+  }
+  function addReceipt(t,a,denied){ T.unshift({t:t,a:a,denied:denied}); renderT(); }
+  function decide(i,yes){
+    var it=Q[i]; Q.splice(i,1); renderQ();
+    addReceipt(it.t, it.a, !yes);
+  }
+  // the propose loop: reversible -> straight to trail; irreversible -> queue
+  function propose(label, isHold, agent){
+    if(isHold){ Q.unshift({t:label.toLowerCase(), a:agent}); renderQ(); flash(qc); }
+    else { addReceipt(label.toLowerCase(), agent, false); flash(tc); }
+  }
+  function flash(el){ el.style.transition="none"; el.style.transform="scale(1.25)"; setTimeout(function(){el.style.transition="transform .3s";el.style.transform="none";},30); }
+
+  // palette
+  function renderPal(filter){
+    filter=(filter||"").toLowerCase(); pl.innerHTML="";
+    GROUPS.forEach(function(g){
+      var caps=g[1].filter(function(c){return c[0].toLowerCase().indexOf(filter)>=0;});
+      if(!caps.length) return;
+      var h=document.createElement("div"); h.className="grp"; h.textContent=g[0]; pl.appendChild(h);
+      caps.forEach(function(c){
+        var d=document.createElement("div"); d.className="cap";
+        d.innerHTML='<span class="nm">'+esc(c[0])+'</span><span class="tag '+(c[1]?"h":"a")+'">'+(c[1]?"waits":"runs")+'</span>';
+        d.onclick=function(){ ov.classList.remove("on"); propose(c[0], c[1], c[2]); };
+        pl.appendChild(d);
+      });
+    });
+    if(!pl.children.length) pl.innerHTML='<div class="hint">Nothing matches — but just ask me in plain words.</div>';
+  }
+  function openPal(){ ov.classList.add("on"); document.getElementById("palq").value=""; renderPal(""); document.getElementById("palq").focus(); }
+  document.getElementById("browse").onclick=openPal;
+  document.getElementById("palx").onclick=function(){ov.classList.remove("on");};
+  ov.onclick=function(e){ if(e.target===ov) ov.classList.remove("on"); };
+  document.getElementById("palq").addEventListener("input",function(e){renderPal(e.target.value);});
+  document.addEventListener("keydown",function(e){ if(e.key==="Escape") ov.classList.remove("on"); });
+
+  // free-text ask -> guess hold by keyword
+  var HOLDWORDS=["publish","send","deploy","merge","ship","refund","delete","remove","email","dm","spend","buy","purchase","invite"];
+  document.getElementById("ask").addEventListener("submit",function(e){
+    e.preventDefault(); var v=document.getElementById("askin").value.trim(); if(!v) return;
+    document.getElementById("askin").value="";
+    var hold=HOLDWORDS.some(function(w){return v.toLowerCase().indexOf(w)>=0;});
+    propose(v, hold, "jeeves");
+  });
+
+  // seed
+  QSEED.forEach(function(q){Q.push({t:q[0],a:q[1]});});
+  TSEED.forEach(function(t){T.push({t:t[0],a:t[1],denied:false});});
+  renderQ(); renderT();
+})();
+</script>
+<script src="/jeeves-widget.js" data-jeeves-site="foundation" defer></script>
+</body>
+</html>
