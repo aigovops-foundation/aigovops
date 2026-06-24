@@ -33,7 +33,9 @@
       { q: "Summarize this week's activity", steps: [["read the ledger and summarize", true]] } ] }
   };
   var S = SCENES[SITE] || SCENES.foundation;
-  var MARK = '<svg width="16" height="16" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="none" stroke="#1d9e75" stroke-width="2"/><path d="M11 21 L16 9 L21 21 Z" fill="#0f6e56"/></svg>';
+  // The one canonical Jeeves mark — solid navy badge, mint ring, teal sail, mint-light spark — identical
+  // to the corner widget and this hero's own header, so Jeeves is visually one agent everywhere.
+  var MARK = '<svg width="16" height="16" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#0c1430"/><circle cx="16" cy="16" r="15" fill="none" stroke="#1d9e75" stroke-width="1.4"/><path d="M11 21 L16 9 L21 21 Z" fill="#0f6e56"/><circle cx="22" cy="9" r="2.6" fill="#5dcaa5"/></svg>';
 
   var css =
     '.jh{--jt:#0f6e56;--jtd:#0b5743;--jn:#0c1430;--jl:#e4ebe8;--jm:#566;background:#f5f8f7;border-bottom:1px solid var(--jl);padding:46px 20px 38px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}'
