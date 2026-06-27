@@ -117,7 +117,7 @@ checkFalse('Old Ken LinkedIn removed from chat.js intent', chatJs.includes("url:
 checkTrue('Beacon URL is GitHub Pages (aigovops-foundation org)', chatJs.includes('aigovops-foundation.github.io/aigovops-beacon/'));
 checkFalse('Old bobrapp Beacon URL absent from chat.js', chatJs.includes('bobrapp.github.io/aigovops-beacon/'));
 checkFalse('Beacon URL is not raw github.com', chatJs.includes('github.com/aigovops-foundation/aigovops-beacon') && !chatJs.includes('github.io'));
-checkTrue('Luma event URL present', chatJs.includes('luma.com/2mypeqtr'));
+checkTrue('Luma event URL present', chatJs.includes('luma.com/aigovops'));
 checkTrue('Ken RSS URL correct in fetch script',
   fs.readFileSync(path.join(__dirname, '../scripts/fetch_posts.py'), 'utf8')
     .includes('rss.app/feeds/g12M4qd70BrS5rcy.xml'));

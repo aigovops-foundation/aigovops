@@ -70,7 +70,7 @@ The Sponsors programme itself is **not yet activated** — Bob/Ken must enroll a
 | Service | URL | Status | Notes |
 |---------|-----|--------|-------|
 | Newsletter | `https://aigovops.substack.com/` | ✅ LIVE | Active Substack |
-| Next Event | `https://luma.com/2mypeqtr` | ✅ LIVE | Active Luma event — must be updated when event changes |
+| Next Event | `https://luma.com/aigovops` | ✅ LIVE | Active Luma event — must be updated when event changes |
 | Open Collective | `https://opencollective.com/aigovops-foundation` | ⚠️ NOT SET UP | Collective not yet created — Bob/Ken to action |
 | LinkedIn (org) | `https://www.linkedin.com/company/aigovops-foundation` | ✅ LIVE |
 | LinkedIn (Ken) | `https://www.linkedin.com/in/rkjohnston/` | ✅ LIVE — correct handle |
