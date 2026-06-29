@@ -423,3 +423,7 @@ address a:hover { color: var(--white); }
    Hidden site-wide here (one place) — re-enable by removing this block. */
 .lang-toggle { display: none !important; }
 a[href="blog.html"], a[href="/blog.html"] { display: none !important; }
+
+/* AiGovOps assistant (js/chat.js) temporarily hidden (June 2026): it conflicts with the
+   Jeeves widget — two chat bubbles in the same corner. Re-enable by removing this block. */
+#chatBubble, #chatWindow { display: none !important; }
