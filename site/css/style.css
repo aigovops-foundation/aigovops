@@ -179,9 +179,9 @@ p:last-child { margin-bottom: 0; }
 .site-footer { background: var(--dark); color: #a0a0b8; padding: 52px 0 0; }
 .footer-inner { display: grid; grid-template-columns: 1fr auto auto; gap: 48px; align-items: start; padding-bottom: 40px; }
 .footer-logo { height: 36px; width: auto; margin-bottom: 16px; opacity: 0.9; }
-.footer-brand p { font-size: 0.85rem; color: #7070a0; margin-bottom: 8px; }
-address { font-style: normal; font-size: 0.85rem; color: #7070a0; }
-address a { color: #7070a0; transition: color 0.2s; }
+.footer-brand p { font-size: 0.85rem; color: #8080a0; margin-bottom: 8px; }
+address { font-style: normal; font-size: 0.85rem; color: #8080a0; }
+address a { color: #8080a0; transition: color 0.2s; }
 address a:hover { color: var(--white); }
 .footer-nav { display: flex; flex-direction: column; gap: 10px; padding-top: 4px; }
 .footer-nav a { font-size: 0.85rem; color: #8080a0; transition: color 0.2s; }
@@ -190,7 +190,7 @@ address a:hover { color: var(--white); }
 .footer-social a { color: #8080a0; transition: color 0.2s; }
 .footer-social a:hover { color: var(--white); }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding: 16px 0; }
-.footer-bottom p { font-size: 0.8rem; color: #5050708; }
+.footer-bottom p { font-size: 0.8rem; color: #a0a0b8; }
 
 /* ===== BLOG PAGE ===== */
 .page-hero { background: linear-gradient(135deg, var(--dark), var(--mid)); color: var(--white); padding: 64px 0 48px; }
