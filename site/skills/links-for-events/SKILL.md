@@ -73,10 +73,16 @@ GIT_TERMINAL_PROMPT=0 git push origin main
 
 If the push fails with "fetch first", pull and rebase first:
 ```bash
-TOKEN="***REDACTED-GITHUB-TOKEN***"
-GIT_TERMINAL_PROMPT=0 git pull https://bobrapp:${TOKEN}@github.com/bobrapp/aigovops-foundation-site-redesign-June2026-ken-and-bob.git main --rebase
-GIT_TERMINAL_PROMPT=0 git push https://bobrapp:${TOKEN}@github.com/bobrapp/aigovops-foundation-site-redesign-June2026-ken-and-bob.git main
+git pull --rebase origin main
+git push origin main
 ```
+
+Authentication is handled by the machine's local git credentials — **never embed a
+personal access token in this file or any command**. This machine already has `gh`
+logged in (`gh auth status` shows the active account) and macOS Keychain holding the
+credential, so plain `git pull` / `git push origin main` against the `origin` remote
+authenticate non-interactively with no token in sight. If git ever prompts, run
+`gh auth setup-git` once to wire `gh` in as the git credential helper.
 
 ### Step 4 — Confirm
 
@@ -101,8 +107,11 @@ The `index.html` hero action cards have their own `href` attributes that duplica
 these URLs (newsletter, event, ken, bob, beacon, lantern). If the user asks to update both
 the chatbot AND the hero cards, edit `index.html` too and include it in the same commit.
 
-## If the Token Has Expired
+## If Authentication Fails
 
-GitHub tokens expire. If `git push` fails with authentication errors, tell the user:
-"The GitHub token has expired — you'll need a new one from github.com/settings/tokens
-(check `repo` + `workflow` scopes), then I can update it in `~/.git-credentials`."
+If `git push` fails with authentication errors, the local credential has expired or is
+missing. Tell the user to re-authenticate `gh` (which stores the credential in the macOS
+Keychain — no token is ever written into this repo):
+"Run `gh auth login` (choose GitHub.com → HTTPS → login with a browser, or paste a fresh
+token with `repo` + `workflow` scopes), then `gh auth setup-git`. After that `git push`
+works again with no embedded secret."
