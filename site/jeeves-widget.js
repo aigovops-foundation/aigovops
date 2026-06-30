@@ -55,7 +55,7 @@
     + 'font:600 13.5px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;box-shadow:0 5px 18px rgba(8,20,15,.22);transition:opacity .15s,transform .15s}'
     + '.jv-btn:hover{opacity:1;transform:translateY(-1px)} .jv-btn .jv-play{color:var(--jv-mint);font-size:12px}'
     // quarter-screen panel, bottom-right, as a flex column
-    + '.jv-panel{position:fixed;right:20px;bottom:78px;z-index:2147483000;width:clamp(358px,40vw,560px);height:clamp(460px,64vh,760px);'
+    + '.jv-panel{position:fixed;right:20px;bottom:78px;z-index:2147483000;width:clamp(340px,34vw,460px);height:clamp(440px,58vh,620px);'
     + 'max-width:calc(100vw - 40px);max-height:calc(100vh - 96px);background:#fff;border-radius:16px;display:flex;flex-direction:column;'
     + 'box-shadow:0 14px 50px rgba(8,20,15,.30);overflow:hidden;font:400 14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--jv-ink);'
     + 'opacity:0;transform:translateY(10px) scale(.98);transform-origin:bottom right;transition:.16s;pointer-events:none}'
@@ -94,7 +94,10 @@
     + '.jv-foot a{color:var(--jv-teal);text-decoration:none;font-weight:600}'
     + '.jv-panel.jv-tourmode .jv-foot{display:none}'
     + '.jv-panel :focus-visible{outline:2px solid var(--jv-teal);outline-offset:2px}'
-    + '@media (prefers-reduced-motion: reduce){.jv-panel,.jv-btn{transition:none}}';
+    + '@media (prefers-reduced-motion: reduce){.jv-panel,.jv-btn{transition:none}}'
+    // Phones: keep it a contained bottom-right card (margins both sides via the clamp) and cap the
+    // height so a clear band of the page always shows above — never a full-screen takeover.
+    + '@media (max-width:560px){.jv-panel{max-height:56vh;bottom:72px}}';
 
   var style = document.createElement("style"); style.textContent = css; document.head.appendChild(style);
 
