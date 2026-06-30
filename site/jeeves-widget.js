@@ -1,8 +1,8 @@
 /* Jeeves — the governed AiGovOps assistant, present on every page. A calm corner launcher
  * opens a quarter-screen chatbot panel with three views:
  *   • Help — Jeeves greets and shows the propose -> approve gate inline.
- *   • Tour — the guided video tour, embedded and deep-linked to THIS property; an easy
- *            "start video", plus a 10s-idle auto-offer (this section / the whole estate / stop).
+ *   • Tour — the guided video tour, embedded and deep-linked to THIS property; fully opt-in
+ *            (pick "these pages" or "the whole estate"). It never auto-opens or auto-plays.
  *   • Map  — the whole estate: every site + sub-site, with where-you-are highlighted.
  * One line on any site:
  *   <script src="https://www.aigovops-foundation.com/jeeves-widget.js" data-jeeves-site="foundation" defer></script>
@@ -134,7 +134,7 @@
     + '<div class="jv-out" id="jv-o2"></div></div>'
     + '</div>'
     + '<div class="jv-view" id="jv-tour">'
-    + '<div class="jv-offer" id="jv-offer" hidden><p id="jv-offer-msg">Taking a breather? <b>Want a quick guided tour?</b></p>'
+    + '<div class="jv-offer" id="jv-offer"><p id="jv-offer-msg"><b>Want a quick guided tour?</b></p>'
     + '<div class="jv-row"><button class="jv-b jv-yes" data-tour="section">▶ These pages</button>'
     + '<button class="jv-b" data-tour="estate">▶ The whole estate</button>'
     + '<button class="jv-b jv-ghost" data-tour="stop">Stop</button></div></div>'
@@ -180,8 +180,10 @@
   [].forEach.call(panel.querySelectorAll(".jv-tab"), function (t) {
     t.addEventListener("click", function () {
       var v = t.getAttribute("data-v");
-      // tab click IS a user gesture → if entering the tour, start playing this section with sound
-      if (v === "tour") { loadTour("section", true); offer.hidden = true; }
+      // Entering the Tour tab shows the choice ("these pages / the whole estate") and does NOT autoplay —
+      // peeking at Tour shouldn't blast narration. Sound starts only when the user PICKS a tour below,
+      // or via the explicit "Watch the guided tour" CTA in Help.
+      if (v === "tour") { offer.hidden = false; }
       showView(v);
     });
   });
@@ -195,9 +197,10 @@
   var offered = false, idleTimer;
   function stopped() { try { return localStorage.getItem(STOP_KEY) === "1"; } catch (e) { return false; } }
   function armIdle() {
-    if (offered || stopped()) return;
-    clearTimeout(idleTimer);
-    idleTimer = setTimeout(autoOffer, IDLE_MS);
+    // Auto-offer DISABLED: Jeeves stays a quiet collapsed bubble in the corner and never pops itself
+    // open — the page gets to be a page first. The tour is fully opt-in: open the bubble and pick Tour
+    // (or the "Watch the guided tour" CTA in Help). Kept as a no-op so the interaction listeners below
+    // don't error.
   }
   function autoOffer() {
     if (offered || stopped()) return;
