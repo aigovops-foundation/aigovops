@@ -65,7 +65,7 @@
     + '.jv-x{margin-left:auto;background:none;border:none;color:#9fc3b6;font-size:22px;cursor:pointer;line-height:1;min-width:44px;min-height:44px;display:grid;place-items:center}'
     + '.jv-tabs{display:flex;border-bottom:1px solid var(--jv-line);flex:none}'
     + '.jv-tab{flex:1;border:none;background:none;padding:11px;min-height:44px;font:600 13px inherit;color:#5e6f69;cursor:pointer;border-bottom:2px solid transparent}'
-    + '.jv-tab.on{color:var(--jv-teal);border-bottom-color:var(--jv-teal)} .jv-tab .jv-play{color:var(--jv-mint)}'
+    + '.jv-tab.on{color:var(--jv-teal);border-bottom-color:var(--jv-teal)} .jv-tab .jv-play{color:#06875e}'  // WCAG AA: mint (#1d9e75) is 3.39:1 on the white panel; #06875e passes 4.5:1 (launcher keeps mint — it sits on navy, 4.9:1)
     + '.jv-body{flex:1;min-height:0;position:relative;display:flex}'
     + '.jv-view{display:none;width:100%;overflow:auto;padding:15px 16px}'
     + '.jv-view.on{display:block}'
