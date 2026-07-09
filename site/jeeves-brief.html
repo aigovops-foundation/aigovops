@@ -40,6 +40,9 @@
   .foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center;border-top:1px solid var(--line);margin-top:18px;padding-top:14px;font-size:12.5px;color:var(--muted)}
   .foot a{color:var(--teal);text-decoration:none;font-weight:600}
   @media print{body{background:#fff}.sheet{border:0;margin:0;max-width:100%}.top{-webkit-print-color-adjust:exact;print-color-adjust:exact}.noprint{display:none}}
+  /* a11y pack */
+  a:focus-visible,button:focus-visible,summary:focus-visible,[role="button"]:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--teal,#1d9e75);outline-offset:2px}
+  @media (prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
