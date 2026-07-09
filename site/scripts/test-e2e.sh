@@ -57,11 +57,13 @@ echo "$cname_content" | grep -q "aigovops-foundation.com" \
   && check "CNAME file correct" "ok" \
   || check "CNAME file correct" "content: $cname_content"
 
-# 12: Server is GitHub Pages (not old Hostinger)
+# 12: Modern host — GitHub Pages, or Cloudflare fronting it (not the old Hostinger).
+# The site now sits behind Cloudflare, which proxies GitHub Pages and masks the origin
+# `server:` header, so we accept either signal and rely on the CNAME + DNS checks above.
 server=$(curl -sLI "$SITE/" | grep -i "^server:" | head -1 | tr -d '\r')
-echo "$server" | grep -qi "github" \
-  && check "Served by GitHub Pages (not Hostinger)" "ok" \
-  || check "Served by GitHub Pages (not Hostinger)" "$server"
+echo "$server" | grep -qiE "github|cloudflare" \
+  && check "Served by GitHub Pages / Cloudflare (not Hostinger)" "ok" \
+  || check "Served by GitHub Pages / Cloudflare (not Hostinger)" "$server"
 
 # 13: www redirect works
 www_code=$(curl -sL -o /dev/null -w "%{http_code}" "https://www.aigovops-foundation.com/")
