@@ -85,9 +85,38 @@
     }
   }
 
+  /* Canonical AiGovOps estate link set — identical labels + order on every
+     property, themed to each site's palette. Group A stays inside the estate
+     (same-tab); Group B leaves it (new tab). The NCW entry is the current
+     site, so it carries aria-current="page". */
+  const ESTATE = [
+    { href: "https://www.aigovops-foundation.com", label: "Foundation" },
+    { href: "https://community.aigovops-foundation.com", label: "Community platform" },
+    { href: "https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/", label: "Library" },
+    { href: "https://aigovops-foundation.github.io/aigovops-beacon/", label: "Beacon" },
+    { href: "https://aigovops-foundation.github.io/umbrella-govops/", label: "Umbrella" },
+    { href: "https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/", label: "NCW AI Camp", current: true },
+  ];
+  const CONNECT = [
+    { href: "https://aigovops.substack.com/", label: "Newsletter" },
+    { href: "https://luma.com/aigovops", label: "Events" },
+    { href: "https://github.com/aigovops-foundation", label: "GitHub" },
+    { href: "https://www.linkedin.com/company/aigovops-foundation", label: "LinkedIn" },
+  ];
+
   function renderFooter() {
     const mount = document.getElementById("site-footer");
     if (!mount) return;
+    const estateLinks = ESTATE.map(
+      (l) => `<li><a href="${l.href}"${l.current ? ' aria-current="page"' : ""}
+        class="inline-block py-1 text-cream/75 hover:text-signal transition-colors${
+          l.current ? " font-700 text-cream" : ""
+        }">${l.label}</a></li>`
+    ).join("");
+    const connectLinks = CONNECT.map(
+      (l) => `<li><a href="${l.href}" target="_blank" rel="noopener"
+        class="inline-block py-1 text-cream/75 hover:text-signal transition-colors">${l.label}</a></li>`
+    ).join("");
     mount.innerHTML = `
       <footer class="bg-charcoal text-cream mt-0">
         <div class="max-w-7xl mx-auto px-5 sm:px-8 py-16">
@@ -124,6 +153,16 @@
                 <li class="flex gap-2.5"><span aria-hidden="true">📂</span><span>Keep the receipts</span></li>
               </ul>
             </div>
+          </div>
+          <div class="mt-14 pt-10 border-t border-cream/15 grid sm:grid-cols-2 gap-x-10 gap-y-8">
+            <nav aria-label="Explore the estate">
+              <span class="aig-ef-h block font-700 text-xs uppercase tracking-[0.16em] text-cream/45 mb-4">Explore the estate</span>
+              <ul class="grid grid-cols-2 gap-x-6 text-sm">${estateLinks}</ul>
+            </nav>
+            <nav aria-label="Connect">
+              <span class="aig-ef-h block font-700 text-xs uppercase tracking-[0.16em] text-cream/45 mb-4">Connect</span>
+              <ul class="grid grid-cols-2 gap-x-6 text-sm">${connectLinks}</ul>
+            </nav>
           </div>
           <div class="mt-14 pt-8 border-t border-cream/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-cream/50">
             <p class="font-serif italic">The story we tell about AI in NCW will be the story we wrote — together.</p>
