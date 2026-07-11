@@ -52,6 +52,7 @@
     ).join("");
 
     mount.innerHTML = `
+      <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-orchard focus:text-white focus:font-700 focus:px-4 focus:py-2 focus:shadow-lg">Skip to main content</a>
       <header class="sticky top-0 z-50 bg-cream/90 backdrop-blur-md border-b border-cream-deep">
         <div class="max-w-7xl mx-auto px-5 sm:px-8 h-[68px] flex items-center justify-between gap-4">
           <a href="${href('index.html')}" class="flex items-center gap-2.5 group shrink-0">
