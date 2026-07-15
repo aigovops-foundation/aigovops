@@ -14,6 +14,7 @@ const PAGES = [
   "/",
   "/centerpiece.html",
   "/mini-camps.html",
+  "/demos.html",
   "/tools.html",
   "/courses.html",
   "/hint-logs.html",
@@ -51,6 +52,15 @@ for (const path of PAGES) {
       document
         .querySelectorAll(".fade-in")
         .forEach((el) => el.classList.add("shown"));
+    });
+    // The CSS kill-switch above cannot stop Web Animations API animations
+    // (element.animate()), which injected widgets/components use — axe then
+    // reads mid-fade opacity and false-fails contrast. Jump every animation,
+    // including inside shadow roots, to its end state.
+    await page.evaluate(() => {
+      document.getAnimations({ subtree: true }).forEach((a) => {
+        try { a.finish(); } catch (e) { a.cancel(); }
+      });
     });
 
     const results = await new AxeBuilder({ page })

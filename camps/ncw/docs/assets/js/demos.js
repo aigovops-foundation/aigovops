@@ -14,6 +14,16 @@
 
   var state = { track: "full", persona: "all", tool: "all", yes: "all", q: "" };
 
+  // Step-by-step screenshots from the capture rig (capture/RUNBOOK.md).
+  // Loaded async; cards re-render when the manifest arrives.
+  var CAPTURES = {};
+  if (window.fetch) {
+    fetch("assets/captures/manifest.json")
+      .then(function (r) { return r.ok ? r.json() : {}; })
+      .then(function (m) { CAPTURES = m || {}; render(); })
+      .catch(function () {});
+  }
+
   function esc(s) {
     return String(s == null ? "" : s)
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -31,6 +41,10 @@
   function swapNote(d) {
     var f = FREE[d.id];
     return (state.track === "free" && f && f.swap) ? f.swap : "";
+  }
+  function activePrep(d) {
+    var f = FREE[d.id];
+    return (state.track === "free" && f && f.prep) ? f.prep : d.prep;
   }
   function toolInfo(name) {
     return TOOLS[name] || { vendor: "", tier: "freemium", url: "", signup: "" };
@@ -159,6 +173,25 @@
       '<ol class="space-y-3">' + items + "</ol></div>";
   }
 
+  /* ---- captured walkthrough strip (from the capture rig) ---- */
+  function capturesHTML(d) {
+    var cap = CAPTURES[d.id];
+    if (!cap || !cap.steps || !cap.steps.length) return "";
+    var thumbs = cap.steps.map(function (s, i) {
+      var src = "assets/captures/" + d.id + "/" + s.file;
+      return '<a href="' + esc(src) + '" target="_blank" rel="noopener" class="block shrink-0 w-44">' +
+        '<img src="' + esc(src) + '" alt="Step ' + (i + 1) + ": " + esc(s.caption) + '" loading="lazy" class="w-44 rounded-lg border border-charcoal/15 bg-white" />' +
+        '<span class="mt-1 block text-[11.5px] leading-snug text-charcoal/60">' + (i + 1) + " · " + esc(s.caption) + "</span>" +
+      "</a>";
+    }).join("");
+    return '<div class="rounded-2xl border border-charcoal/10 p-5 bg-white">' +
+      '<div class="flex items-baseline justify-between gap-3 mb-3">' +
+        '<p class="text-[11px] font-700 uppercase tracking-wider text-charcoal/45">As it actually looks — captured walkthrough</p>' +
+        '<span class="font-mono text-[11px] font-700 text-charcoal/40">' + esc(cap.captured || "") + "</span>" +
+      "</div>" +
+      '<div class="flex gap-3 overflow-x-auto pb-1">' + thumbs + "</div></div>";
+  }
+
   /* ---- tool footer (open + signup links, track-aware) ---- */
   function toolFooterHTML(d) {
     var name = activeTool(d);
@@ -222,9 +255,10 @@
             swapBox +
             '<div class="rounded-2xl border border-charcoal/10 p-5 bg-cream/60">' +
               '<p class="text-[11px] font-700 uppercase tracking-wider text-charcoal/45 mb-1.5">Prep — the night before</p>' +
-              '<p class="text-charcoal/75 text-[14px] leading-relaxed">' + esc(d.prep) + "</p>" +
+              '<p class="text-charcoal/75 text-[14px] leading-relaxed">' + esc(activePrep(d)) + "</p>" +
             "</div>" +
             pathHTML("good", d.goodAt, d.good) +
+            capturesHTML(d) +
             pathHTML("bad", d.badAt, d.bad) +
             '<div class="rounded-2xl p-5" style="background:var(--sc-soft)">' +
               '<div class="flex items-baseline justify-between gap-3">' +
