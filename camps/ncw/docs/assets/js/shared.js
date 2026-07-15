@@ -17,6 +17,7 @@
     { href: "plan.html", key: "plan", label: "The Plan" },
     { href: "centerpiece.html", key: "centerpiece", label: "Centerpiece" },
     { href: "mini-camps.html", key: "mini-camps", label: "Mini-Camps" },
+    { href: "demos.html", key: "demos", label: "Demo Lab" },
     { href: "tools.html", key: "tools", label: "Tools" },
     { href: "courses.html", key: "courses", label: "Courses" },
     { href: "pledge.html", key: "pledge", label: "Pledge" },

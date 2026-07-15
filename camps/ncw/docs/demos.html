@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Demo Lab — NCW AI Expo 2026</title>
+<meta name="description" content="25 good-AI / bad-AI demo tutorials — 5 personas × 5 tools, each a 5–8 minute step-by-step demo: the good path, the same task going wrong, and the one question that tells the two futures apart." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232E7D4F'/%3E%3Cpath d='M4 22 L11 11 L16 18 L21 9 L28 22 Z' fill='%23FAF7F0'/%3E%3Ccircle cx='24' cy='8' r='3' fill='%23E07A2A'/%3E%3C/svg%3E" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/custom.css" />
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { orchard:'#2E7D4F','orchard-dark':'#23613D', signal:'#E07A2A','signal-dark':'#C4661C', cream:'#FAF7F0','cream-deep':'#F2ECDF', charcoal:'#1F1F1F' },
+    fontFamily: { serif:['Lora','Georgia','serif'], sans:['Inter','system-ui','sans-serif'] } } } };
+</script>
+<style>
+.font-600{font-weight:600}.font-700{font-weight:700}.font-500{font-weight:500}
+/* good-path / bad-path tone tokens */
+.path-good { --pt:#2E7D4F; --pt-soft:#E7F0EA; --pt-line:rgba(46,125,79,.28); --pt-bg:#F4F9F5; }
+.path-bad  { --pt:#B3382C; --pt-soft:#F7E3E0; --pt-line:rgba(179,56,44,.28); --pt-bg:#FBF3F1; }
+/* print one demo */
+@media print {
+  .printing-one .no-print, .printing-one #site-header, .printing-one #site-footer { display: none !important; }
+  .printing-one .print-hide { display: none !important; }
+  .printing-one section { padding-top: 0 !important; }
+  .print-only-me { break-inside: avoid; border: 1px solid #ccc !important; box-shadow: none !important; }
+}
+</style>
+</head>
+<body class="font-sans antialiased text-charcoal" data-page="demos">
+<div id="site-header"></div>
+<main id="main-content">
+
+<!-- ===== PAGE HEAD ===== -->
+<section class="max-w-7xl mx-auto px-5 sm:px-8 pt-14 pb-6 sm:pt-20">
+  <p class="text-sm font-700 uppercase tracking-[0.18em] text-signal mb-3">The Demo Lab</p>
+  <h1 class="font-serif font-700 text-4xl sm:text-6xl text-charcoal leading-[1.05] tracking-tight max-w-3xl">Every demo, run twice: the good way, then the bad way</h1>
+  <p class="mt-6 text-lg text-charcoal/75 max-w-2xl leading-relaxed">Twenty-five 5&ndash;8 minute tutorials &mdash; five NCW personas, each task run the <span class="font-700" style="color:#2E7D4F">good way</span> live, then staged <span class="font-700" style="color:#B3382C">going wrong</span>, ending with the one question that tells the two futures apart. Every demo comes in <span class="font-700">two tracks</span>: the full toolkit we use on stage, and a <span class="font-700">free track</span> &mdash; ChatGPT, Claude, Gemini, Copilot, and the tools already on your machine &mdash; so you can run every single one for $0. Toggle below; each card links straight to the tool and its signup.</p>
+</section>
+
+<!-- ===== THE SHARED SPINE ===== -->
+<section class="max-w-7xl mx-auto px-5 sm:px-8 pb-8">
+  <div class="grid lg:grid-cols-2 gap-5">
+    <div class="rounded-3xl bg-white border border-charcoal/10 p-6 sm:p-7">
+      <p class="text-[12px] font-700 uppercase tracking-[0.16em] text-orchard mb-3">The shared clock — every demo, same spine</p>
+      <ol class="space-y-2.5 text-[14px] text-charcoal/80">
+        <li class="flex gap-3"><span class="font-mono font-700 text-charcoal/45 w-10 shrink-0">0:00</span><span><span class="font-700">Hook</span> — name the persona, name the pain, invite the volunteer.</span></li>
+        <li class="flex gap-3"><span class="font-mono font-700 text-charcoal/45 w-10 shrink-0">0:45</span><span><span class="font-700" style="color:#2E7D4F">🟢 Good path</span> — do the task live, narrating each choice out loud.</span></li>
+        <li class="flex gap-3"><span class="font-mono font-700 text-charcoal/45 w-10 shrink-0">3:45</span><span><span class="font-700" style="color:#B3382C">🔴 Bad path</span> — the <em>same task</em>, run the way most people run it. Staged, never shipped.</span></li>
+        <li class="flex gap-3"><span class="font-mono font-700 text-charcoal/45 w-10 shrink-0">5:45</span><span><span class="font-700">The tell</span> — the one question the audience can ask forever after.</span></li>
+        <li class="flex gap-3"><span class="font-mono font-700 text-charcoal/45 w-10 shrink-0">6:15</span><span><span class="font-700">Receipts</span> — save prompt, output, and human edit to the hint-log. Send-off in English and Spanish.</span></li>
+      </ol>
+    </div>
+    <div class="rounded-3xl bg-charcoal text-cream p-6 sm:p-7">
+      <p class="text-[12px] font-700 uppercase tracking-[0.16em] text-signal mb-3">Staging rules — the bad path is theater, not malpractice</p>
+      <ul class="space-y-2.5 text-[14px] text-cream/85 leading-relaxed">
+        <li><span class="font-700 text-cream">Stage, don&rsquo;t ship.</span> Show the drafted reply, the deleted approval node, the toggle &mdash; never actually publish, post, send, or record the bad thing.</li>
+        <li><span class="font-700 text-cream">Fake data only.</span> Synthetic patients and customers. No real student, patient, customer, or elder data on screen, ever.</li>
+        <li><span class="font-700 text-cream">Consent is part of the show.</span> Any demo that records audio asks the room out loud first.</li>
+        <li><span class="font-700 text-cream">Pre-run every bad path</span> the night before; keep the screenshot as a fallback slide.</li>
+        <li><span class="font-700 text-cream">Blame configurations, not brands.</span> &ldquo;A chatbot without sources,&rdquo; not a product name.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FILTER BAR (compact: track + search always visible, chips behind a disclosure) ===== -->
+<section id="filters" class="bg-cream/95 border-y border-cream-deep no-print scroll-mt-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-4 space-y-3">
+    <div class="flex flex-wrap items-center gap-3">
+      <div id="trackToggle" class="flex gap-2"></div>
+      <div class="relative flex-1 min-w-[220px]">
+        <svg class="absolute left-3.5 top-1/2 -translate-y-1/2 text-charcoal/40" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="demoSearch" type="search" placeholder="Search demos — &quot;WAC&quot;, &quot;consent&quot;, &quot;outage&quot;, &quot;citations&quot;..." class="w-full rounded-full border border-charcoal/15 bg-white pl-11 pr-4 py-3 text-[15px] focus:border-orchard focus:ring-2 focus:ring-orchard/20 outline-none transition" />
+      </div>
+      <button id="filterToggle" aria-expanded="false" aria-controls="filterPanel" class="shrink-0 inline-flex items-center gap-2 rounded-full border border-charcoal/15 bg-white hover:bg-cream-deep transition-colors text-charcoal font-600 px-5 py-3 text-sm">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 3H2l8 9.46V19l4 2v-8.54z"/></svg>
+        Filters<span id="filterCount" class="hidden min-w-[20px] h-5 px-1 rounded-full bg-signal text-white text-[11px] font-700 grid place-items-center"></span>
+      </button>
+      <button id="clearFilters" class="shrink-0 inline-flex justify-center items-center gap-2 rounded-full border border-charcoal/15 bg-white hover:bg-cream-deep transition-colors text-charcoal font-600 px-5 py-3 text-sm">Clear</button>
+    </div>
+    <div id="filterPanel" class="hidden space-y-3 pt-1">
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="text-[12px] font-700 uppercase tracking-wider text-charcoal/45 mr-1 w-20">Persona</span>
+        <div id="personaChips" class="flex flex-wrap gap-2"></div>
+      </div>
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="text-[12px] font-700 uppercase tracking-wider text-charcoal/45 mr-1 w-20">Tool</span>
+        <div id="toolChips" class="flex flex-wrap gap-2"></div>
+      </div>
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="text-[12px] font-700 uppercase tracking-wider text-charcoal/45 mr-1 w-20">Which Yes</span>
+        <div id="yesChips" class="flex flex-wrap gap-2"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESULTS ===== -->
+<section class="max-w-7xl mx-auto px-5 sm:px-8 py-10 sm:py-12">
+  <p id="resultCount" class="text-sm font-600 text-charcoal/55 mb-6"></p>
+  <div id="demoGrid" class="grid md:grid-cols-2 gap-6"></div>
+  <div id="emptyState" class="hidden text-center py-20">
+    <div class="mx-auto w-14 h-14 rounded-full bg-cream-deep grid place-items-center mb-4"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F1F1F" stroke-width="1.8" opacity="0.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+    <p class="font-serif font-700 text-xl text-charcoal">No demos match those filters</p>
+    <p class="mt-2 text-charcoal/60">Try clearing a filter or searching a different word.</p>
+    <button id="emptyClear" class="mt-5 inline-flex justify-center items-center rounded-full bg-orchard hover:bg-orchard-dark transition-colors text-white font-600 px-6 py-3">Clear all filters</button>
+  </div>
+</section>
+
+<!-- ===== THE THREE PATTERNS ===== -->
+<section class="max-w-7xl mx-auto px-5 sm:px-8 pb-10">
+  <div class="rounded-3xl bg-white border border-charcoal/10 p-7 sm:p-9">
+    <p class="text-[12px] font-700 uppercase tracking-[0.16em] text-signal mb-2">The Block-3 close</p>
+    <h2 class="font-serif font-700 text-2xl sm:text-3xl text-charcoal mb-4">Twenty-five demos, three moves</h2>
+    <p class="text-charcoal/75 max-w-3xl leading-relaxed mb-6">By the end, the room has <em>watched</em> the same three moves win twenty-five times &mdash; and discovered the three-Yes framework empirically before anyone said the word &ldquo;framework.&rdquo;</p>
+    <div class="grid sm:grid-cols-3 gap-5">
+      <div class="rounded-2xl bg-cream/70 border border-charcoal/10 p-5">
+        <p class="font-700 text-charcoal text-[15px]">1 · Citation or it didn&rsquo;t happen</p>
+        <p class="mt-1.5 text-[14px] text-charcoal/70 leading-relaxed">Every good path clicked through to a source; every bad path was confident and unclickable. <span class="font-600 text-orchard">Yes-1: does it work?</span></p>
+      </div>
+      <div class="rounded-2xl bg-cream/70 border border-charcoal/10 p-5">
+        <p class="font-700 text-charcoal text-[15px]">2 · The human stays on the trigger</p>
+        <p class="mt-1.5 text-[14px] text-charcoal/70 leading-relaxed">Every good path had a person edit, approve, or sign; every bad path deleted that node. <span class="font-600 text-orchard">Yes-2: is it safe?</span></p>
+      </div>
+      <div class="rounded-2xl bg-cream/70 border border-charcoal/10 p-5">
+        <p class="font-700 text-charcoal text-[15px]">3 · Translation is a safety feature</p>
+        <p class="mt-1.5 text-[14px] text-charcoal/70 leading-relaxed">Every good path reached the Spanish-first neighbor, the field crew, the elder; every bad path pretended English was the whole town. <span class="font-600 text-orchard">Yes-3: does it reach everyone?</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CROSS LINKS ===== -->
+<section class="max-w-7xl mx-auto px-5 sm:px-8 pb-20 grid md:grid-cols-2 gap-5">
+  <a href="hint-logs.html" class="group rounded-2xl bg-white border border-charcoal/10 p-7 lift fade-in">
+    <p class="text-[12px] font-700 uppercase tracking-[0.16em] text-orchard mb-1.5">Keep the receipts</p>
+    <h3 class="font-serif font-700 text-2xl text-charcoal">Hint-Logs</h3>
+    <p class="mt-2 text-charcoal/70 text-[14px]">Every demo above ends by saving prompt, output, and human edit &mdash; this is the method those receipts live in.</p>
+    <span class="mt-4 inline-flex items-center gap-1.5 text-orchard font-700 group-hover:gap-3 transition-all">Learn the method<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+  </a>
+  <a href="tools.html" class="group rounded-2xl bg-charcoal text-cream p-7 lift fade-in">
+    <p class="text-[12px] font-700 uppercase tracking-[0.16em] text-signal mb-1.5">Take the tools home</p>
+    <h3 class="font-serif font-700 text-2xl">The Tools pages</h3>
+    <p class="mt-2 text-cream/70 text-[14px]">Every tool in these demos has a one-page install guide &mdash; pricing, free alternatives, and the data-cost warning that matters.</p>
+    <span class="mt-4 inline-flex items-center gap-1.5 text-signal font-700 group-hover:gap-3 transition-all">Open the tools<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+  </a>
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/js/demos-data.js"></script>
+<script src="assets/js/shared.js"></script>
+<script src="assets/js/demos.js"></script>
+</body>
+</html>
