@@ -22,6 +22,7 @@ const PAGES = [
   { path: "/hint-logs.html", name: "Hint Logs" },
   { path: "/pledge.html", name: "Pledge" },
   { path: "/resources.html", name: "Resources" },
+  { path: "/support.html", name: "Support" },
   { path: "/about.html", name: "About" },
   { path: "/plan.html", name: "Plan" },
 ];

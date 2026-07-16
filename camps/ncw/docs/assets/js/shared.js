@@ -23,6 +23,7 @@
     { href: "pledge.html", key: "pledge", label: "Pledge" },
     { href: "hint-logs.html", key: "hint-logs", label: "Hint-Logs" },
     { href: "resources.html", key: "resources", label: "Resources" },
+    { href: "support.html", key: "support", label: "Support" },
     { href: "about.html", key: "about", label: "About" },
   ];
 

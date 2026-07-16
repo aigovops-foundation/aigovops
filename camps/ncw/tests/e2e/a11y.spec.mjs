@@ -20,6 +20,7 @@ const PAGES = [
   "/hint-logs.html",
   "/pledge.html",
   "/resources.html",
+  "/support.html",
   "/about.html",
   "/plan.html",
 ];
