@@ -4,21 +4,29 @@
 `docs/support.html` (the "Support" nav item); this doc is the durable source + the ready-to-send
 outreach template Ken & Bob use.*
 
-## The ask (one paragraph)
+## The ask
 The AiGovOps Foundation runs the NCW AI Camp — teaching North Central Washington's teachers,
 utilities, tribal offices, clinics, and small businesses to use AI **the good way** (citations, a
-human on the trigger, translation so it reaches everyone). Your tool is in our labs. We're inviting
-you to support the mission with **either**:
-- **a $500 contribution**, or
-- **a year of free usage for two users** — our co-founders **Ken Johnston** and **Bob Rapp**, who
-  build and teach every camp.
+human on the trigger, translation so it reaches everyone). Back the mission at whatever tier fits.
+Every supporter gets **their logo on the event screen — August 11, 2026 — in front of up to 500
+education-focused attendees**, and on the Supporters page year-round. Bigger tiers, bigger billing.
 
-Every supporter gets **their logo on the screen at the event — August 11, 2026 — in front of up to
-500 education-focused attendees**, and on the Supporters page year-round.
+## Sponsorship tiers
+| Tier | Amount | What it gets |
+|---|---|---|
+| **Neighbor** | $50 / year | Logo on the Supporters page |
+| **Supporter** | $1,000 / year | Logo on the Supporters page **+ the event screen** |
+| **Sustainer** | $500 / month | Year-round backing; prominent logo on screen + page |
+| **Champion** (lead sponsor) | $10,000 / year | Top billing — largest logo, named from the stage Aug 11 |
+| **In-kind** (for AI tool vendors) | 12 months of your **Max** service for **two** users | For co-founders Ken Johnston & Bob Rapp; counts as a full sponsorship (logo on screen + page) |
 
 ## Contribution rails
-- **$500:** Stripe — https://buy.stripe.com/bJe7sKbi214M7qJ1t75J603
-- **Year of access:** reply to the outreach email (below) to set up the two co-founder seats.
+- **Cash tiers:** Stripe — https://buy.stripe.com/bJe7sKbi214M7qJ1t75J603
+  - ⚠️ **Action for Bob:** that one link bills a single amount. Create a Stripe **payment link (or
+    pricing table)** per tier — $50/yr, $1,000/yr, $500/mo, $10,000/yr — and send them; each tier's
+    card in `support.html` has a marked `data-tier` slot to swap the href in. Until then, all cash
+    tiers point at the one link.
+- **In-kind (12 months Max for two users):** reply to the outreach email (below).
 
 ## The vendors to invite (taught in the Demo Lab / Tools page)
 OpenAI (ChatGPT) · Anthropic (Claude) · Google (Gemini, NotebookLM) · Microsoft (Copilot) ·
