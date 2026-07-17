@@ -2,9 +2,9 @@ window.I18N = {
   lang: 'en',
   nav: { home: 'Home', blog: 'Blog' },
   hero: {
-    eyebrow: 'Policy as Code · Apache-2.0 · No SaaS Lock-In',
-    h1: 'AI Governance that Runs Like Engineering.',
-    sub: 'Policy as code. Evidence that ships. Governance your auditor can verify with one command — and a community that builds it in the open.',
+    eyebrow: 'Ship Safe AI · Never Unsafe AI · Policy as Code',
+    h1: 'Get to Yes. Stay at Yes. Recover to Yes.',
+    sub: 'Before you ship, while it runs, when it breaks — governance as code that makes AI safe to say yes to, built in the open by a community keeping the garden of humanity growing. Come see. Come join.',
   },
   pillars: { title: 'Our Core Pillars' },
   toolkit: { title: 'Three tools. One verifiable evidence chain.' },

@@ -2,9 +2,9 @@ window.I18N = {
   lang: 'es',
   nav: { home: 'Inicio', blog: 'Blog' },
   hero: {
-    eyebrow: 'Política como Código · Apache-2.0 · Sin bloqueo SaaS',
-    h1: 'Gobernanza de IA que funciona como ingeniería.',
-    sub: 'Política como código. Evidencia que se despliega. Gobernanza que tu auditor puede verificar con un solo comando — y una comunidad que la construye en abierto.',
+    eyebrow: 'Despliega IA segura · Nunca IA insegura · Política como Código',
+    h1: 'Llegar al Sí. Mantener el Sí. Recuperar el Sí.',
+    sub: 'Antes de desplegar, mientras funciona, cuando falla — gobernanza como código que hace que la IA sea segura para decir sí, construida en abierto por una comunidad que cuida el jardín de la humanidad. Ven a ver. Ven a unirte.',
   },
   pillars: { title: 'Nuestros Pilares Fundamentales' },
   toolkit: { title: 'Tres herramientas. Una cadena de evidencia verificable.' },
