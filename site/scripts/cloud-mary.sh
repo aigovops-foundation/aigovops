@@ -3,8 +3,9 @@
 # ║  Cloud-Mary v3 — AiGovOps Foundation Test Orchestrator          ║
 # ║  Runs all test tiers and produces a unified pass/fail report     ║
 # ║  Run: bash scripts/cloud-mary.sh                                 ║
-# ║  Flags: --unit  --design  --e2e  --happy  --a11y  --i18n         ║
-# ║         --scale  --chaos  --docs  --dns  --uptime  --errors      ║
+# ║  Flags: --unit  --design  --security  --privacy  --arch  --e2e   ║
+# ║         --happy  --ux  --a11y  --i18n  --scale  --chaos  --docs  ║
+# ║         --dns  --uptime  --errors                                ║
 # ║         --skip-network  (skip tests requiring live site)         ║
 # ╚══════════════════════════════════════════════════════════════════╝
 
@@ -18,6 +19,10 @@ for arg in "$@"; do
   case $arg in
     --unit)         TIERS+=("unit");  RUN_ALL=false ;;
     --design)       TIERS+=("design"); RUN_ALL=false ;;
+    --security)     TIERS+=("security"); RUN_ALL=false ;;
+    --privacy)      TIERS+=("privacy");  RUN_ALL=false ;;
+    --arch)         TIERS+=("arch");     RUN_ALL=false ;;
+    --ux)           TIERS+=("ux");       RUN_ALL=false ;;
     --e2e)          TIERS+=("e2e");   RUN_ALL=false ;;
     --happy)        TIERS+=("happy"); RUN_ALL=false ;;
     --dns)          TIERS+=("dns");    RUN_ALL=false ;;
@@ -31,7 +36,7 @@ for arg in "$@"; do
     --skip-network) SKIP_NETWORK=true ;;
   esac
 done
-[ "$RUN_ALL" = "true" ] && TIERS=("unit" "design" "e2e" "dns" "uptime" "errors" "happy" "a11y" "i18n" "scale" "chaos" "docs")
+[ "$RUN_ALL" = "true" ] && TIERS=("unit" "design" "security" "privacy" "arch" "e2e" "dns" "uptime" "errors" "happy" "ux" "a11y" "i18n" "scale" "chaos" "docs")
 
 cd "$REPO" || { echo "❌ Cannot cd to $REPO"; exit 1; }
 
@@ -100,6 +105,27 @@ if [[ " ${TIERS[*]} " =~ " design " ]]; then
     "🎨  Design-System Tests (garden-warm)"
 fi
 
+# ── Tier 1c: Security Tests (M12a — local + live headers) ──────────────────
+if [[ " ${TIERS[*]} " =~ " security " ]]; then
+  run_tier "security" \
+    "SKIP_NETWORK=$SKIP_NETWORK bash scripts/test-security.sh" \
+    "🔒  Security Tests (M12a)"
+fi
+
+# ── Tier 1d: Privacy Tests (M12a — local, no network) ──────────────────────
+if [[ " ${TIERS[*]} " =~ " privacy " ]]; then
+  run_tier "privacy" \
+    "bash scripts/test-privacy.sh" \
+    "🛡️   Privacy Tests (M12a)"
+fi
+
+# ── Tier 1e: Architecture Tests (M12a — local, no network) ─────────────────
+if [[ " ${TIERS[*]} " =~ " arch " ]]; then
+  run_tier "arch" \
+    "bash scripts/test-arch.sh" \
+    "🏛️   Architecture Tests (M12a)"
+fi
+
 # ── Tier 2: E2E Tests ──────────────────────────────────────────────────────
 if [[ " ${TIERS[*]} " =~ " e2e " ]]; then
   if [ "$SKIP_NETWORK" = "true" ]; then
@@ -145,6 +171,13 @@ if [[ " ${TIERS[*]} " =~ " happy " ]]; then
   else
     run_tier "happy" "bash scripts/test-happy.sh" "😊  Happy-Path Journey Tests"
   fi
+fi
+
+# ── Tier 2f: UX Heuristic Tests (M12a — local, no network) ─────────────────
+if [[ " ${TIERS[*]} " =~ " ux " ]]; then
+  run_tier "ux" \
+    "bash scripts/test-ux.sh" \
+    "🧭  UX Heuristic Tests (M12a)"
 fi
 
 # ── Tier 3: Accessibility Tests ────────────────────────────────────────────
@@ -200,11 +233,15 @@ echo ""
 TIER_LABELS=(
   "unit:🧪  Unit Tests"
   "design:🎨  Design System"
+  "security:🔒  Security"
+  "privacy:🛡️   Privacy"
+  "arch:🏛️   Architecture"
   "e2e:🌐  E2E Tests"
   "dns:🌐  DNS Tests"
   "uptime:⏱️   Uptime Tests"
   "errors:🚨  Error Tests"
   "happy:😊  Happy Paths"
+  "ux:🧭  UX Heuristics"
   "a11y:♿  Accessibility"
   "i18n:🌍  Multilingual"
   "scale:⚡  Scale Tests"
