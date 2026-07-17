@@ -69,6 +69,10 @@ a { color: inherit; text-decoration: none; }
 .main-nav a:hover, .main-nav a.active { color: var(--purple); border-bottom-color: var(--purple); }
 .nav-toggle { display: none; background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--text); min-width: 44px; min-height: 44px; }
 /* Language toggle */
+/* Blog stays dark for now (Bob, 2026-07-17 — reverses the M11 un-hide; blog pages
+   remain reachable by URL). Delete this rule to put Blog back in the nav. */
+a[href="blog.html"], a[href="/blog.html"], a[href="../blog.html"] { display: none !important; }
+
 .lang-toggle { display: flex; gap: 2px; align-items: center; }
 .lang-btn { background: none; border: 1px solid var(--border); border-radius: 4px; padding: 3px 8px; font-size: 0.72rem; font-weight: 700; cursor: pointer; color: var(--muted); transition: all 0.15s; font-family: 'Courier New', monospace; letter-spacing: 0.05em; min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
 .lang-btn:hover { border-color: var(--teal-accessible); color: var(--teal-accessible); }
