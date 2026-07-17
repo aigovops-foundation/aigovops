@@ -73,7 +73,7 @@ HOME=$(body "$SITE/")
 echo "$HOME" | grep -q "AiGovOps"          && check "Brand name present"              "ok" || check "Brand name present"              "not found"
 echo "$HOME" | grep -q "chatBubble\|chat.js" && check "Chatbot referenced"             "ok" || check "Chatbot referenced"             "not found"
 echo "$HOME" | grep -q "action-grid\|action-card" && check "Action grid present"       "ok" || check "Action grid present"            "not found"
-echo "$HOME" | grep -q "action-meeting"    && check "Schedule a Call card present"     "ok" || check "Schedule a Call card present"    "not found"
+echo "$HOME" | grep -q 'aria-label="Schedule a call with a community leader"' && check "Schedule-a-call link present (M3 quiet link)" "ok" || check "Schedule-a-call link present (M3 quiet link)" "not found"
 echo "$HOME" | grep -q "schedule.js"       && check "schedule.js loaded"               "ok" || check "schedule.js loaded"             "not found"
 echo "$HOME" | grep -q "skip-link\|Skip to" && check "Skip-to-content link present"   "ok" || check "Skip-to-content link present"    "not found"
 echo "$HOME" | grep -q "aria-live"         && check "aria-live on chatbot messages"    "ok" || check "aria-live on chatbot messages"   "not found"
