@@ -14,17 +14,22 @@ body { background-color: #FAF7F0; color: #1F1F1F; }
 @media (min-width: 420px) { .xs\:block { display: block; } }
 
 /* Scroll fade-in — progressive enhancement only.
-   We DON'T start at opacity:0 because that hides content from
-   accessibility scanners and search crawlers before the IntersectionObserver
-   has had a chance to promote .shown. Instead the JS adds .js-fade to
-   <html> on load, scopes the hidden state to that, and the observer
-   promotes via .shown as elements scroll into view. No-JS visitors,
-   axe-core, and Lighthouse all see the fully revealed content. */
-.fade-in { transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
-.js-fade .fade-in { opacity: 0; transform: translateY(18px); }
-.js-fade .fade-in.shown { opacity: 1; transform: translateY(0); }
+   Content is NEVER persistently hidden. There is no opacity:0 resting
+   state: no-JS visitors, search crawlers, axe-core, and headless
+   full-page captures (which never scroll, so an IntersectionObserver
+   below the fold never fires) all see the fully revealed page at every
+   instant. When JS runs, shared.js adds .js-fade to <html> and the
+   observer adds .shown as an element enters the viewport — the entrance
+   then plays as a one-shot keyframe animation that starts from the
+   faded pose. A user scrolling to the element sees the same fade-up as
+   before; anyone (or anything) that doesn't scroll sees full content. */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.js-fade .fade-in.shown { animation: fade-up .7s cubic-bezier(.16,1,.3,1) both; }
 @media (prefers-reduced-motion: reduce) {
-  .js-fade .fade-in { opacity: 1; transform: none; transition: none; }
+  .js-fade .fade-in.shown { animation: none; }
   html { scroll-behavior: auto; }
 }
 
@@ -162,14 +167,13 @@ html [class~="hover:text-orchard"]:hover {
 .sc-orange { --sc: #6B340F; }
 .sc-purple { --sc: #432765; }
 
-/* 7. fade-in elements start at opacity:0 and are revealed by an
-      IntersectionObserver. In headless CI / reduced-motion contexts
-      the observer can be slow or skipped — axe then reads the
-      faded foreground as gray and reports a contrast violation.
-      Force the fully-revealed state if the script hasn't promoted
-      the element within 1s OR if the user prefers reduced motion. */
+/* 7. fade-in elements are visible at rest (see the fade-up keyframe
+      near the top of this file — the entrance is a one-shot animation,
+      never a persistent opacity:0 state). Under reduced motion, pin
+      the revealed pose so no keyframe can ever dim the foreground and
+      trip axe's contrast check. */
 @media (prefers-reduced-motion: reduce) {
-  .fade-in { opacity: 1 !important; transform: none !important; }
+  .fade-in { opacity: 1 !important; transform: none !important; animation: none !important; }
 }
 
 /* 8. text-cream alphas (/70, /75, /80, /85, /90) on the green orchard

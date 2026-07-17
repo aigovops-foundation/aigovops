@@ -179,9 +179,12 @@
       </footer>`;
   }
 
-  /* Scroll fade-ins. We add `.js-fade` to <html> so the CSS only hides
-     fade-in elements when JS is running — axe-core, search crawlers, and
-     no-JS visitors see fully-revealed content. */
+  /* Scroll fade-ins. Content is visible at rest — `.shown` plays a
+     one-shot fade-up keyframe (see custom.css) when an element enters
+     the viewport. Nothing is ever persistently hidden, so no-JS
+     visitors, crawlers, and headless full-page captures (which never
+     scroll) always see the full page. `.js-fade` scopes the animation
+     to JS-running sessions. */
   function initFade() {
     document.documentElement.classList.add("js-fade");
     const els = document.querySelectorAll(".fade-in");
@@ -201,14 +204,9 @@
       { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
     );
     els.forEach((el) => obs.observe(el));
-    /* Safety net: if any element hasn't been revealed within 2s
-       (e.g. inside an overflow:hidden parent the observer can't see),
-       reveal it so it never stays invisible. */
-    setTimeout(() => {
-      document.querySelectorAll(".fade-in:not(.shown)").forEach((el) =>
-        el.classList.add("shown")
-      );
-    }, 2000);
+    /* No timed safety net needed: un-`.shown` elements are fully
+       visible at rest, so an element the observer never reaches is
+       simply shown without its entrance animation. */
   }
 
   /* Count-up on stats with data-count */

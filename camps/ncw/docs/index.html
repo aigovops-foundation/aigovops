@@ -61,10 +61,10 @@
 <!-- ===== STATS ROW ===== -->
 <section class="border-y border-cream-deep bg-white/60">
   <div class="max-w-7xl mx-auto px-5 sm:px-8 py-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-    <div><p class="font-serif font-700 text-4xl sm:text-5xl text-orchard"><span data-count="300">0</span></p><p class="mt-1 text-sm font-600 text-charcoal/60 uppercase tracking-wide">attendees</p></div>
-    <div><p class="font-serif font-700 text-4xl sm:text-5xl text-orchard"><span data-count="4">0</span></p><p class="mt-1 text-sm font-600 text-charcoal/60 uppercase tracking-wide">breakouts</p></div>
-    <div><p class="font-serif font-700 text-4xl sm:text-5xl text-orchard"><span data-count="35">0</span></p><p class="mt-1 text-sm font-600 text-charcoal/60 uppercase tracking-wide">mini-camps</p></div>
-    <div><p class="font-serif font-700 text-4xl sm:text-5xl text-signal"><span data-count="1">0</span></p><p class="mt-1 text-sm font-600 text-charcoal/60 uppercase tracking-wide">pledge</p></div>
+    <div><p class="font-serif font-700 text-4xl sm:text-5xl text-orchard"><span data-count="300">300</span></p><p class="mt-1 text-sm font-600 text-charcoal/60 uppercase tracking-wide">attendees</p></div>
+    <div><p class="font-serif font-700 text-4xl sm:text-5xl text-orchard"><span data-count="4">4</span></p><p class="mt-1 text-sm font-600 text-charcoal/60 uppercase tracking-wide">breakouts</p></div>
+    <div><p class="font-serif font-700 text-4xl sm:text-5xl text-orchard"><span data-count="35">35</span></p><p class="mt-1 text-sm font-600 text-charcoal/60 uppercase tracking-wide">mini-camps</p></div>
+    <div><p class="font-serif font-700 text-4xl sm:text-5xl text-signal"><span data-count="7">7</span></p><p class="mt-1 text-sm font-600 text-charcoal/60 uppercase tracking-wide">pledge commitments</p></div>
   </div>
 </section>
 
@@ -75,7 +75,59 @@
     <h2 class="font-serif font-700 text-3xl sm:text-4xl text-charcoal leading-tight">A camp for everyone who walks in the door</h2>
     <p class="mt-4 text-charcoal/70 text-lg leading-relaxed">Thirty-five hands-on mini-camps, built from five real NCW scenarios. The human stays in the driver's seat. AI does the painful work. Always truth-grounded.</p>
   </div>
-  <div id="scenarioCards" class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  <!-- Static fallback: the five scenario cards are baked in from
+       assets/js/mini-camps-data.js (single source of truth) so the grid
+       renders without JS — headless captures, crawlers, and no-JS
+       visitors all see the cards. The inline script at the foot of the
+       page re-renders this same markup from window.SCENARIOS when JS
+       runs, so the data file stays canonical. -->
+  <div id="scenarioCards" class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    <a href="mini-camps.html#gifted" class="group sc-green block rounded-2xl bg-white border border-charcoal/10 overflow-hidden lift fade-in">
+      <div class="h-1.5" style="background:var(--sc)"></div>
+      <div class="p-6">
+        <div class="flex items-center gap-2.5 mb-3"><span class="text-xl">🟢</span><span class="text-[11px] font-700 uppercase tracking-wider px-2.5 py-1 rounded-full" style="background:var(--sc-soft);color:var(--sc)">Gifted</span></div>
+        <h3 class="font-serif font-700 text-xl text-charcoal leading-snug">Gifted goes deeper</h3>
+        <p class="mt-2.5 text-charcoal/70 text-[15px] leading-relaxed">AI hunts sources, spars, and critiques — the question, the argument, and the voice stay the student's.</p>
+        <p class="mt-4 inline-flex items-center gap-1.5 font-700 text-[14px] group-hover:gap-2.5 transition-all" style="color:var(--sc)">Open these camps<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+      </div>
+    </a>
+    <a href="mini-camps.html#challenged" class="group sc-blue block rounded-2xl bg-white border border-charcoal/10 overflow-hidden lift fade-in">
+      <div class="h-1.5" style="background:var(--sc)"></div>
+      <div class="p-6">
+        <div class="flex items-center gap-2.5 mb-3"><span class="text-xl">🔵</span><span class="text-[11px] font-700 uppercase tracking-wider px-2.5 py-1 rounded-full" style="background:var(--sc-soft);color:var(--sc)">Challenged</span></div>
+        <h3 class="font-serif font-700 text-xl text-charcoal leading-snug">Challenged keeps up</h3>
+        <p class="mt-2.5 text-charcoal/70 text-[15px] leading-relaxed">A patient tutor that never tires — re-explains as many times as it takes while the student does the learning.</p>
+        <p class="mt-4 inline-flex items-center gap-1.5 font-700 text-[14px] group-hover:gap-2.5 transition-all" style="color:var(--sc)">Open these camps<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+      </div>
+    </a>
+    <a href="mini-camps.html#teacher" class="group sc-yellow block rounded-2xl bg-white border border-charcoal/10 overflow-hidden lift fade-in">
+      <div class="h-1.5" style="background:var(--sc)"></div>
+      <div class="p-6">
+        <div class="flex items-center gap-2.5 mb-3"><span class="text-xl">🟡</span><span class="text-[11px] font-700 uppercase tracking-wider px-2.5 py-1 rounded-full" style="background:var(--sc-soft);color:var(--sc)">Teacher</span></div>
+        <h3 class="font-serif font-700 text-xl text-charcoal leading-snug">Burned-out teacher</h3>
+        <p class="mt-2.5 text-charcoal/70 text-[15px] leading-relaxed">AI does the four hours of paper-pushing so the relationship, judgment, and spark stay human.</p>
+        <p class="mt-4 inline-flex items-center gap-1.5 font-700 text-[14px] group-hover:gap-2.5 transition-all" style="color:var(--sc)">Open these camps<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+      </div>
+    </a>
+    <a href="mini-camps.html#smb" class="group sc-orange block rounded-2xl bg-white border border-charcoal/10 overflow-hidden lift fade-in">
+      <div class="h-1.5" style="background:var(--sc)"></div>
+      <div class="p-6">
+        <div class="flex items-center gap-2.5 mb-3"><span class="text-xl">🟠</span><span class="text-[11px] font-700 uppercase tracking-wider px-2.5 py-1 rounded-full" style="background:var(--sc-soft);color:var(--sc)">SMB</span></div>
+        <h3 class="font-serif font-700 text-xl text-charcoal leading-snug">Small business owner</h3>
+        <p class="mt-2.5 text-charcoal/70 text-[15px] leading-relaxed">AI does the painful invisible work; the owner keeps every customer-facing moment.</p>
+        <p class="mt-4 inline-flex items-center gap-1.5 font-700 text-[14px] group-hover:gap-2.5 transition-all" style="color:var(--sc)">Open these camps<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+      </div>
+    </a>
+    <a href="mini-camps.html#community" class="group sc-purple block rounded-2xl bg-white border border-charcoal/10 overflow-hidden lift fade-in">
+      <div class="h-1.5" style="background:var(--sc)"></div>
+      <div class="p-6">
+        <div class="flex items-center gap-2.5 mb-3"><span class="text-xl">🟣</span><span class="text-[11px] font-700 uppercase tracking-wider px-2.5 py-1 rounded-full" style="background:var(--sc-soft);color:var(--sc)">Community</span></div>
+        <h3 class="font-serif font-700 text-xl text-charcoal leading-snug">Community leader</h3>
+        <p class="mt-2.5 text-charcoal/70 text-[15px] leading-relaxed">AI researches, drafts, and visualizes; the leader keeps the listening, the trust, and the room.</p>
+        <p class="mt-4 inline-flex items-center gap-1.5 font-700 text-[14px] group-hover:gap-2.5 transition-all" style="color:var(--sc)">Open these camps<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+      </div>
+    </a>
+  </div>
   <div class="mt-8">
     <a href="mini-camps.html" class="inline-flex items-center gap-2 font-700 text-orchard hover:text-orchard-dark transition-colors">Browse all 11 written camps<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
@@ -165,7 +217,10 @@
 <script src="assets/js/mini-camps-data.js"></script>
 <script src="assets/js/shared.js"></script>
 <script>
-  // Render five scenario teaser cards on home
+  // Progressive enhancement: re-render the five scenario teaser cards from
+  // window.SCENARIOS (assets/js/mini-camps-data.js — the single source of
+  // truth). The same markup is baked statically into #scenarioCards above,
+  // so if this script or the data file fails to run, the cards still show.
   (function () {
     var mount = document.getElementById("scenarioCards");
     if (!mount || !window.SCENARIOS) return;
