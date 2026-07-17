@@ -127,9 +127,17 @@ grep -q 'buy\.stripe\.com' "$REPO/support.html" \
   || check "support giving flows via Stripe checkout (off-site)" "Stripe checkout link missing"
 # Feedback strip (M12b): once it ships, its privacy line must exist with it.
 if grep -q 'aig-feedback' "$REPO/index.html" 2>/dev/null; then
-  grep -qiE 'aig-feedback' "$REPO/index.html" && grep -qiE 'anonymous|only what you type|no account' "$REPO/index.html" \
-    && check "feedback strip ships with an honest privacy line" "ok" \
-    || check "feedback strip ships with an honest privacy line" "aig-feedback present but no privacy line near it"
+  # The strip is a self-contained injector (feedback.js) — the privacy line ships
+  # INSIDE the widget file (one source of truth, rendered on every page), so the
+  # check follows the architecture: marker pages must load feedback.js, and
+  # feedback.js must carry the honest line.
+  if grep -q 'feedback\.js' "$REPO/index.html" \
+     && grep -qiE 'no account|only what you type|anonymous' "$REPO/feedback.js" 2>/dev/null \
+     && grep -qiE 'no cookies' "$REPO/feedback.js" 2>/dev/null; then
+    check "feedback strip ships with an honest privacy line (in feedback.js)" "ok"
+  else
+    check "feedback strip ships with an honest privacy line (in feedback.js)" "loader or privacy line missing"
+  fi
 else
   echo "  ⏭️   feedback-strip privacy line — skipped (widget not shipped yet, lands with M12b)"
 fi
