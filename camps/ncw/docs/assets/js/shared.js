@@ -1,5 +1,9 @@
 /* ============================================================
    NCW AI Expo 2026 — shared header, footer, scroll animations
+   skin: aigovops-july-2026 (garden-warm, camp-native) — canonical tokens:
+   foundation repo design/aigovops-july-2026/tokens.css (orchard=--garden-green,
+   signal=--garden-orange, cream=--garden-cream, cream-deep=--garden-deep-cream,
+   charcoal=--garden-charcoal); the estate creed below must stay byte-identical.
    Injects a consistent nav + footer on every page and wires up
    subtle motion (scroll fade-ins, stat count-ups, mobile menu).
    ============================================================ */
