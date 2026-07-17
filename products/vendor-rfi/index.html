@@ -16,36 +16,37 @@
 <meta name="twitter:title" content="AIGovOps Vendor RFI — open-source vendor selection + audit training">
 <meta name="twitter:description" content="Choose an AI-governance stack like engineering: 50 vendors across five categories, neutral and gap-aware, with audit training and a Beacon-style decision receipt.">
 <meta name="twitter:image" content="https://aigovops-foundation.github.io/aigovops-vendor-rfi/assets/og-vendor-rfi.png">
-  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="garden.css">
 <style>
-    /* AIGovOps "deep ocean governance" brand — shared with Beacon & Umbrella (teal = Beacon signal) */
-    :root{--bg:var(--aigov-ocean-bg,#0e141b);--surface:var(--aigov-ocean-surface,#141c24);--surface2:var(--aigov-ocean-surface2,#192330);--border:var(--aigov-ocean-border,#2a333c);--text:var(--aigov-ocean-text,#e2e7e9);--muted:var(--aigov-ocean-muted,#7e919a);
-      --primary:var(--aigov-teal-bright,#14b393);--primary2:var(--aigov-teal-bright-2,#0f8e74);--radius:16px;--shadow:0 12px 32px rgba(0,0,0,.35);
-      --font:'Satoshi','General Sans',system-ui,Segoe UI,Roboto,Arial,sans-serif;
+    /* aigovops-july-2026 "garden-warm" skin — cream ground, orchard green, signal orange */
+    :root{--bg:var(--garden-cream,#FAF7F0);--surface:#fff;--surface2:var(--garden-deep-cream,#F1EAD8);--border:var(--garden-card-line,rgba(43,43,40,.08));--text:var(--garden-charcoal,#2B2B28);--muted:var(--garden-ink-soft,#4C4A42);
+      --primary:var(--garden-green-ink,#1F5E3A);--primary2:var(--garden-green-deep,#0F4A2C);--radius:16px;--shadow:var(--garden-shadow-sm,0 10px 26px -14px rgba(78,60,32,.3));
+      --font:var(--garden-sans,'Source Sans 3','Segoe UI',system-ui,sans-serif);
       --mono:'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,monospace}
     *{box-sizing:border-box} body{margin:0;font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.55} a{color:inherit}
+    h1,h2{font-family:var(--garden-serif,'Fraunces',Georgia,serif);font-optical-sizing:auto;color:var(--garden-charcoal)}
     .wrap{max-width:1100px;margin:0 auto;padding:32px 20px 80px}
-    .hero{padding:48px 0 28px;border-top:3px solid var(--primary)}
+    .hero{padding:48px 0 28px;border-top:3px solid var(--garden-green)}
     .eyebrow{font-family:var(--mono);text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:var(--primary);font-weight:500}
-    h1{font-size:clamp(2rem,4vw,3.6rem);line-height:1.04;margin:.5rem 0 1rem;letter-spacing:-.01em} h2{font-size:1.15rem;margin:0 0 .5rem}
-    p{max-width:72ch;color:var(--text)} .muted,.small{color:var(--muted)}
+    h1{font-size:clamp(2rem,4vw,3.6rem);line-height:1.04;margin:.5rem 0 1rem;letter-spacing:-.01em;font-weight:600} h2{font-size:1.15rem;margin:0 0 .5rem}
+    p{max-width:72ch;color:var(--muted)} .muted,.small{color:var(--muted)}
     .grid{display:grid;grid-template-columns:1.25fr .95fr;gap:24px;margin-top:8px}
     .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
     .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
-    .btn{display:inline-block;padding:13px 18px;border-radius:12px;text-decoration:none;border:1px solid var(--border);font-weight:700;background:var(--surface2);color:var(--text)}
-    .btn:hover{border-color:var(--primary)}
-    .btn.primary{background:var(--primary);color:#06231d;border-color:var(--primary)} .btn.primary:hover{background:var(--primary2)}
+    .btn{display:inline-block;padding:13px 18px;border-radius:999px;text-decoration:none;border:1px solid var(--garden-line);font-weight:700;background:#fff;color:var(--text)}
+    .btn:hover{border-color:var(--garden-green);background:var(--surface2)}
+    .btn.primary{background:var(--garden-green);color:#fff;border-color:var(--garden-green)} .btn.primary:hover{background:var(--primary2);border-color:var(--primary2)}
     .stack{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
     .stack .card strong{color:var(--primary)} .small{font-size:14px}
     @media (max-width:900px){.grid,.stack{grid-template-columns:1fr}}
-  
+
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
-.skip-link{position:absolute;left:-9999px;top:0;background:#14b393;color:#0e141b;padding:10px 16px;border-radius:0 0 8px 0;z-index:1000;font-weight:700;text-decoration:none}.skip-link:focus{left:0}
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--garden-green,#2E7D4F);color:#fff;padding:10px 16px;border-radius:0 0 8px 0;z-index:1000;font-weight:700;text-decoration:none}.skip-link:focus{left:0}
 </style>
 </head>
 <body>
@@ -81,5 +82,6 @@
       <div class="card"><strong>Umbrella</strong><p class="small">Future diff, CLI, and PR evidence reader for ongoing governance.</p></div>
     </section>
   </div>
+<script src="https://www.aigovops-foundation.com/estate-footer.js" data-site="vendor-rfi" data-theme="light" defer></script>
 </body>
 </html>

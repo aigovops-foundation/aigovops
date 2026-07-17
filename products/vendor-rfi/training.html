@@ -16,29 +16,31 @@
 <meta name="twitter:description" content="An interactive audit training tool for AI governance vendor selection: learn the AIGovOps stack, take a knowledge check, run a self-audit, and generate a Beacon-style training receipt.">
 <meta name="twitter:image" content="https://aigovops-foundation.github.io/aigovops-vendor-rfi/assets/og-vendor-rfi.png">
 <meta name="description" content="An interactive audit training tool for AI governance vendor selection: learn the AIGovOps stack, take a knowledge check, run a self-audit, and generate a Beacon-style training receipt." />
-<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="garden.css">
 <style>
-/* AIGovOps "deep ocean governance" brand — shared with Beacon & Umbrella */
-:root{--bg:var(--aigov-ocean-bg,#0e141b);--surface:var(--aigov-ocean-surface,#141c24);--surface2:var(--aigov-ocean-surface2,#192330);--border:var(--aigov-ocean-border,#2a333c);--text:var(--aigov-ocean-text,#e2e7e9);--muted:var(--aigov-ocean-muted,#7e919a);
-  --primary:var(--aigov-teal-bright,#14b393);--primary2:var(--aigov-teal-bright-2,#0f8e74);--blue:#5591c7;--warn:var(--aigov-warn-bright,#faaf2e);--gap:var(--aigov-danger-bright,#d74242);--radius:14px;
-  --font:'Satoshi','General Sans',system-ui,Segoe UI,Roboto,Arial,sans-serif;
+/* aigovops-july-2026 "garden-warm" skin — cream ground, orchard green, signal orange */
+:root{--bg:var(--garden-cream,#FAF7F0);--surface:#fff;--surface2:var(--garden-deep-cream,#F1EAD8);--border:var(--garden-line,rgba(43,43,40,.14));--text:var(--garden-charcoal,#2B2B28);--muted:var(--garden-ink-soft,#4C4A42);
+  --primary:var(--garden-green-ink,#1F5E3A);--primary2:var(--garden-green-deep,#0F4A2C);--blue:#006494;--warn:var(--garden-orange-ink,#9C4E12);--gap:var(--aigov-danger,#b4232a);--radius:14px;
+  --font:var(--garden-sans,'Source Sans 3','Segoe UI',system-ui,sans-serif);
   --mono:'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,monospace}
 *{box-sizing:border-box}body{margin:0;font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6}
 a{color:var(--primary)}
-.topbar{border-top:3px solid var(--primary);border-bottom:1px solid var(--border);padding:16px 20px}
+h1,h2,.layer h3{font-family:var(--garden-serif,'Fraunces',Georgia,serif);font-optical-sizing:auto}
+h1{font-weight:600}
+.topbar{border-top:3px solid var(--garden-green);border-bottom:1px solid var(--border);padding:16px 20px}
 .topbar .inner{max-width:920px;margin:0 auto;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
 .eyebrow{font-family:var(--mono);text-transform:uppercase;letter-spacing:.16em;font-size:11px;color:var(--primary);font-weight:500}
-.nav a{color:var(--muted);text-decoration:none;font-weight:700;font-size:14px;margin-left:16px}.nav a:hover{color:var(--primary)}
+.nav a{color:var(--muted);text-decoration:none;font-weight:700;font-size:14px;margin-left:16px}.nav a:hover{color:var(--primary2)}
 .wrap{max-width:920px;margin:0 auto;padding:30px 20px 90px}
 h1{font-size:clamp(2rem,4vw,3rem);line-height:1.06;letter-spacing:-.01em;margin:.4rem 0 .6rem}
 .lede{color:var(--muted);max-width:70ch;font-size:1.05rem}
 h2{font-size:1.5rem;margin:0 0 .4rem}
-.section{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin:22px 0}
+.section{background:var(--surface);border:1px solid var(--garden-card-line);border-radius:var(--radius);padding:24px;margin:22px 0;box-shadow:var(--garden-shadow-sm)}
 .step{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--primary)}
 .objectives{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}
 .objectives li{list-style:none;background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;font-size:14px}
@@ -49,25 +51,25 @@ h2{font-size:1.5rem;margin:0 0 .4rem}
 .q{border-top:1px solid var(--border);padding:18px 0}.q:first-of-type{border-top:0}
 .q .stem{font-weight:600;margin-bottom:10px}.q .opt{display:block;padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:var(--surface2);margin:7px 0;cursor:pointer;font-size:14px}
 .q .opt input{margin-right:9px}
-.q.correct .opt.chosen{border-color:var(--primary);background:color-mix(in srgb,var(--primary) 14%,var(--surface2))}
+.q.correct .opt.chosen{border-color:var(--garden-green);background:color-mix(in srgb,var(--garden-green) 14%,var(--surface2))}
 .q.wrong .opt.chosen{border-color:var(--gap);background:color-mix(in srgb,var(--gap) 14%,var(--surface2))}
-.q .opt.answer{border-color:var(--primary)}
+.q .opt.answer{border-color:var(--garden-green)}
 .q .exp{display:none;margin-top:8px;font-size:13px;color:var(--muted);border-left:3px solid var(--primary);padding-left:10px}
 .q.graded .exp{display:block}
 .check{display:flex;align-items:flex-start;gap:10px;padding:11px 12px;border:1px solid var(--border);border-radius:10px;background:var(--surface2);margin:8px 0;font-size:14px;cursor:pointer}
 .check input{margin-top:.2rem}
-.btn{display:inline-block;padding:11px 18px;border-radius:11px;border:1px solid var(--border);background:var(--surface2);color:var(--text);font-family:var(--font);font-weight:700;cursor:pointer;text-decoration:none}
-.btn:hover{border-color:var(--primary)} .btn.primary{background:var(--primary);color:#06231d;border-color:var(--primary)}.btn.primary:hover{background:var(--primary2)}
+.btn{display:inline-block;padding:11px 18px;border-radius:999px;border:1px solid var(--border);background:#fff;color:var(--text);font-family:var(--font);font-weight:700;cursor:pointer;text-decoration:none}
+.btn:hover{border-color:var(--garden-green);background:var(--surface2)} .btn.primary{background:var(--garden-green);color:#fff;border-color:var(--garden-green)}.btn.primary:hover{background:var(--primary2);border-color:var(--primary2)}
 .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:14px}
-.badge{font-family:var(--mono);font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;background:color-mix(in srgb,var(--primary) 14%,var(--surface));color:var(--primary)}
+.badge{font-family:var(--mono);font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;background:color-mix(in srgb,var(--garden-green) 14%,#fff);color:var(--primary)}
 .meter{height:10px;border-radius:999px;background:var(--surface2);border:1px solid var(--border);overflow:hidden;margin:12px 0 4px}
-.meter > i{display:block;height:100%;background:var(--primary);width:0;transition:width .25s}
+.meter > i{display:block;height:100%;background:var(--garden-green);width:0;transition:width .25s}
 pre{font-family:var(--mono);font-size:12px;white-space:pre-wrap;word-break:break-word;background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:14px;max-height:360px;overflow:auto;margin-top:12px}
 .note{font-size:13px;color:var(--muted)}.warn{color:var(--warn)}
 @media (max-width:760px){.objectives,.layers{grid-template-columns:1fr}}
 
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
-.skip-link{position:absolute;left:-9999px;top:0;background:#14b393;color:#0e141b;padding:10px 16px;border-radius:0 0 8px 0;z-index:1000;font-weight:700;text-decoration:none}.skip-link:focus{left:0}
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--garden-green,#2E7D4F);color:#fff;padding:10px 16px;border-radius:0 0 8px 0;z-index:1000;font-weight:700;text-decoration:none}.skip-link:focus{left:0}
 </style>
 </head>
 <body>
@@ -205,5 +207,6 @@ $('receiptBtn').onclick=refreshReceipt;
 $('downloadBtn').onclick=()=>{ if(!lastReceipt) return; const blob=new Blob([JSON.stringify({receipt:lastReceipt.rec,evidence_sha256:lastReceipt.hash,signature:null},null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='aigovops-training-receipt.json'; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),1000); };
 refreshReady(); refreshReceipt();
 </script>
+<script src="https://www.aigovops-foundation.com/estate-footer.js" data-site="vendor-rfi" data-theme="light" defer></script>
 </body>
 </html>

@@ -53,6 +53,11 @@
   --aigov-danger-bright: #d74242;
 
   /* ── Type ────────────────────────────────────────────────────────────── */
+  /* NOTE: 'Satoshi'/'General Sans'/'JetBrains Mono' are NOT webfont-loaded on the public surfaces —
+   * each resolves to its system fallback (system-ui / ui-monospace). That is intentional and fast.
+   * To make the brand display face real, add an @font-face or CDN link on the surface; until then the
+   * fallback IS the live type. (Per-site display faces — Cinzel/Spectral, Lora/Inter — are loaded by
+   * those surfaces themselves and are deliberate regional/section identities, not drift.) */
   --aigov-font: 'Satoshi','General Sans',system-ui,Segoe UI,Roboto,Arial,sans-serif;
   --aigov-mono: 'JetBrains Mono','Fira Code',ui-monospace,SFMono-Regular,Menlo,monospace;
 
