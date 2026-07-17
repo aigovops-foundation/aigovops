@@ -1,11 +1,16 @@
-/* AiGovOps brand tokens — the single source of truth for the whole surface (site · Vendor RFI ·
- * Omni control-room). Each surface maps its own semantic vars to these `--aigov-*` primitives, with
- * the current hex as a CSS fallback, so adopting this file is zero visual change — but a brand change
- * is now ONE edit here. This file is canonical in the foundation-site repo; the Vendor RFI and the
- * Omni control-room vendor an identical copy (kept in sync; tokens change rarely).
+/* AiGovOps LEGACY brand tokens (`--aigov-*`) — FROZEN compatibility layer.
  *
- * Light surfaces (site, control-room) and the deep-ocean dark tool (Vendor RFI / Beacon) share one
- * brand identity — the teal, the navy, the type, the scale — but keep distinct semantic palettes.
+ * SUPERSEDED (2026-07-17) by the estate design system `aigovops-july-2026`:
+ * the single source of truth for design tokens is design/aigovops-july-2026/tokens.css
+ * (`--garden-*`) + DESIGN-SYSTEM.md in this repo. New work uses garden tokens only.
+ *
+ * This file remains served, byte-frozen, because existing surfaces still consume
+ * `--aigov-*` primitives as CSS fallbacks (site style.css semantic mappings; the
+ * Vendor RFI's CI-guarded vendored copy; the Omni control-room's vendored copy).
+ * Do NOT restyle by editing values here — the garden layer overrides visually on
+ * converted pages, and mutating these fallbacks would shift three surfaces at once.
+ * Retire consumers surface-by-surface instead; delete this file when the last
+ * `var(--aigov-` reference is gone.
  */
 :root {
   /* ── Brand: teal (the AiGovOps accent) ───────────────────────────────── */

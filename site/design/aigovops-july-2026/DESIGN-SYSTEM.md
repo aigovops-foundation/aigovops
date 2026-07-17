@@ -68,6 +68,15 @@ around them is garden.
 - Enforcement: Jeeves' design-warden watches the live estate for creed presence, token
   drift, and AA regressions (Omni repo, `docs/RUNBOOK-design-system.md`).
 
+## Legacy tokens (`--aigov-*`)
+
+`css/tokens.css` (the pre-garden brand tokens: teal/purple/navy) is a FROZEN
+compatibility layer, formally superseded by this system — its header says so. It stays
+served because site `style.css`, the Vendor RFI (CI drift-guarded vendored copy), and
+the Omni control-room still consume `--aigov-*` primitives as fallbacks. Never restyle
+by editing its values; the garden layer wins on converted pages. Retire consumers
+surface-by-surface; delete the file when the last `var(--aigov-` reference is gone.
+
 ## Provenance
 
 Chosen by Bob from three externally-evaluated variants (garden-warm, lantern-daylight,
