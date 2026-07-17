@@ -46,7 +46,7 @@ The site is a static HTML/CSS/JS application deployed via GitHub Pages to a Host
 |------|---------|
 | `index.html` | Hero, action cards, pillars, founders, posts feed, toolkit, newsletter form, chatbot |
 | `frameworks.html` | 40 filterable framework cards with shareable URLs |
-| `support.html` | 3 donation tiers, GitHub Sponsors + Open Collective, locale-aware coffee amounts |
+| `support.html` | 3 donation tiers with pledge mailtos, direct Stripe giving (interim: $500 checkout + pledge email) |
 | `community.html` | Org stats, repos, contribution guide, support tiers |
 | `press.html` | Logo downloads, boilerplate copy, media contact |
 | `ken.html` / `bob.html` | Founder bio, speaking topics, schedule CTA |

@@ -33,27 +33,16 @@
     .support-hero .hero-eyebrow { color: var(--garden-green-ink); font-family: 'Courier New', monospace; font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .16em; margin-bottom: 14px; }
     .support-hero h1 { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 600; margin-bottom: 16px; }
     .support-hero p { font-size: 1.05rem; color: var(--garden-ink-soft); max-width: 560px; margin: 0 auto 36px; line-height: 1.6; }
-    /* the "Give monthly" ghost CTA carries inline white-on-dark styles — re-skin it */
-    .support-hero a.btn[style] { background: var(--garden-cream) !important; color: var(--garden-green-deep) !important; border: 2px solid var(--garden-green) !important; border-radius: 999px; }
-    .support-hero a.btn[style]:hover { background: var(--garden-deep-cream) !important; }
-    /* the parked-checkout note carries inline rgba-white text — re-ink it */
-    .support-hero div > p[style] { color: var(--garden-ink-soft) !important; }
-    .support-hero div > p[style] a { color: var(--garden-green-ink) !important; }
-
     /* Give-now cluster (rails-ribbon treatment, one giving surface) */
     .coffee-banner { background: var(--garden-cream); border-top: 1.5px dashed rgba(46,125,79,.5); border-bottom: 1.5px dashed rgba(46,125,79,.5); padding: 28px 0; text-align: center; }
     .give-cluster { padding: 36px 0; }
     .give-cluster .btn-teal-outline { background: transparent; }
-    .coffee-banner p { font-size: .95rem; color: var(--garden-charcoal); max-width: 640px; margin: 0 auto 16px; line-height: 1.6; }
-    .coffee-amounts { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 4px; }
-    .coffee-pill { background: #fff; border: 1.5px solid var(--garden-green); color: var(--garden-green-deep); border-radius: 999px; padding: 6px 16px; font-size: .82rem; font-weight: 700; font-family: 'Courier New', monospace; cursor: pointer; transition: all .15s; }
-    .coffee-pill:hover { background: var(--garden-green); color: #fff; }
-    .coffee-link { display: inline-block; margin-top: 12px; font-size: .82rem; color: var(--garden-green-ink); font-weight: 600; text-decoration: underline; }
-    /* PARKED-GIVING HIDE (Bob, 2026-07-17): only the live $500 Stripe checkout shows.
-       All parked markup + data-orig attrs stay intact for apply-stripe-links.sh —
-       when Ken's remaining links land, run the script AND delete this rule block. */
+    /* PARKED-GIVING HIDE (Bob, 2026-07-17; pruned 2026-07-17 design review): the
+       coffee rail and the two parked top buttons are DELETED from markup, not
+       hidden. What remains parked is the three tier cards' data-orig CTAs — the
+       flip machinery for scripts/apply-stripe-links.sh. The script strips this
+       rule when Ken's Stripe links land; do not remove it by hand before then. */
     a[data-orig] { display: none !important; }
-    #coffeeAmounts, .give-cluster .container > p { display: none !important; }
 
     /* Tier grid */
     .tiers-section { background: var(--garden-cream); padding: 64px 0; }
@@ -186,17 +175,6 @@
       to pledge and we'll set you up directly — other giving options return when their Stripe links go live.
     </div>
     <!-- giving-interim:end -->
-    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:18px">
-      <a href="https://github.com/aigovops-foundation" data-orig="https://github.com/sponsors/aigovops-foundation" target="_blank" rel="noopener" class="btn btn-primary" onclick="if(window.plausible)plausible('Support: GitHub Sponsors click')">💳 Donate securely</a>
-      <a href="https://github.com/aigovops-foundation" data-orig="https://opencollective.com/aigovops-foundation" target="_blank" rel="noopener" class="btn btn-teal-outline" style="display:inline-block" onclick="if(window.plausible)plausible('Support: Open Collective click')">💚 Give monthly</a>
-    </div>
-    <p><strong>☕ Buy the team a coffee</strong> — Every bit helps. Pick the amount closest to a coffee in your local currency:</p>
-    <div class="coffee-amounts" id="coffeeAmounts">
-      <!-- Populated by JS based on browser locale -->
-    </div>
-    <a href="https://github.com/aigovops-foundation" data-orig="https://opencollective.com/aigovops-foundation/donate" target="_blank" rel="noopener" class="coffee-link" onclick="if(window.plausible)plausible('Support: Coffee click')">
-      Or donate any amount via Stripe →
-    </a>
   </div>
 </section>
 
@@ -222,6 +200,7 @@
         <div class="tier-actions">
           <a href="https://github.com/aigovops-foundation" data-orig="https://github.com/sponsors/aigovops-foundation?tier=contributor" target="_blank" rel="noopener" class="btn-teal" onclick="if(window.plausible)plausible('Support: Tier click',{props:{tier:'contributor',platform:'github'}})">⭐ Sponsor on GitHub</a>
           <a href="https://github.com/aigovops-foundation" data-orig="https://opencollective.com/aigovops-foundation/contribute/contributor-50" target="_blank" rel="noopener" class="btn-teal-outline" onclick="if(window.plausible)plausible('Support: Tier click',{props:{tier:'contributor',platform:'opencollective'}})">💚 Via Open Collective</a>
+          <a href="mailto:bob.rapp@aigovops.community?subject=Contributor pledge ($50)" class="btn-teal-outline" onclick="if(window.plausible)plausible('Support: Tier pledge email',{props:{tier:'contributor'}})">✉️ Email to pledge →</a>
         </div>
       </div>
 
@@ -242,6 +221,7 @@
         <div class="tier-actions">
           <a href="https://github.com/aigovops-foundation" data-orig="https://github.com/sponsors/aigovops-foundation?tier=sustainer" target="_blank" rel="noopener" class="btn-teal" onclick="if(window.plausible)plausible('Support: Tier click',{props:{tier:'sustainer',platform:'github'}})">⭐ Sponsor on GitHub</a>
           <a href="https://github.com/aigovops-foundation" data-orig="https://opencollective.com/aigovops-foundation/contribute/sustainer-1000" target="_blank" rel="noopener" class="btn-teal-outline" onclick="if(window.plausible)plausible('Support: Tier click',{props:{tier:'sustainer',platform:'opencollective'}})">💚 Via Open Collective</a>
+          <a href="mailto:bob.rapp@aigovops.community?subject=Sustainer pledge ($1,000)" class="btn-teal-outline" onclick="if(window.plausible)plausible('Support: Tier pledge email',{props:{tier:'sustainer'}})">✉️ Email to pledge →</a>
         </div>
       </div>
 
@@ -406,66 +386,6 @@
 </footer>
 
 <script>
-// ── Coffee amounts by locale ─────────────────────────────────────────────
-(function() {
-  const locale = navigator.language || 'en-US';
-  const currency = (function() {
-    try {
-      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
-      const map = {
-        'America': 'USD', 'Europe/London': 'GBP', 'Europe': 'EUR',
-        'Asia/Tokyo': 'JPY', 'Asia/Seoul': 'KRW', 'Asia/Shanghai': 'CNY',
-        'Asia/Kolkata': 'INR', 'Asia/Singapore': 'SGD', 'Australia': 'AUD',
-        'America/Sao_Paulo': 'BRL', 'America/Toronto': 'CAD', 'America/Vancouver': 'CAD',
-      };
-      for (const [k, v] of Object.entries(map)) {
-        if (tz.startsWith(k)) return v;
-      }
-    } catch(e) {}
-    return 'USD';
-  })();
-
-  // Coffee equivalent amounts per currency (roughly $5, $10, $20 USD)
-  const amounts = {
-    USD: [{ label: '$5',    amt: 5   }, { label: '$10',   amt: 10  }, { label: '$20',   amt: 20  }],
-    GBP: [{ label: '£4',   amt: 4   }, { label: '£8',    amt: 8   }, { label: '£16',   amt: 16  }],
-    EUR: [{ label: '€5',   amt: 5   }, { label: '€10',   amt: 10  }, { label: '€18',   amt: 18  }],
-    JPY: [{ label: '¥750', amt: 750 }, { label: '¥1500', amt: 1500}, { label: '¥3000', amt: 3000}],
-    KRW: [{ label: '₩7000',amt: 7000}, { label: '₩14000',amt:14000}, { label: '₩28000',amt:28000}],
-    CNY: [{ label: '¥35',  amt: 35  }, { label: '¥70',   amt: 70  }, { label: '¥140',  amt: 140 }],
-    INR: [{ label: '₹420', amt: 420 }, { label: '₹840',  amt: 840 }, { label: '₹1680', amt: 1680}],
-    SGD: [{ label: 'S$7',  amt: 7   }, { label: 'S$14',  amt: 14  }, { label: 'S$28',  amt: 28  }],
-    AUD: [{ label: 'A$8',  amt: 8   }, { label: 'A$16',  amt: 16  }, { label: 'A$30',  amt: 30  }],
-    BRL: [{ label: 'R$26', amt: 26  }, { label: 'R$52',  amt: 52  }, { label: 'R$100', amt: 100 }],
-    CAD: [{ label: 'C$7',  amt: 7   }, { label: 'C$14',  amt: 14  }, { label: 'C$26',  amt: 26  }],
-  };
-
-  const list = amounts[currency] || amounts['USD'];
-  const container = document.getElementById('coffeeAmounts');
-  if (!container) return;
-
-  list.forEach(item => {
-    const btn = document.createElement('a');
-    // giving-interim: online checkout not live yet — send coffee clicks to the org page,
-    // preserve the original destination in data-orig for the automated restore.
-    btn.href = 'https://github.com/aigovops-foundation';
-    btn.setAttribute('data-orig', `https://opencollective.com/aigovops-foundation/donate?amount=${item.amt}&interval=onetime`);
-    btn.target = '_blank';
-    btn.rel = 'noopener';
-    btn.className = 'coffee-pill';
-    btn.textContent = `☕ ${item.label}`;
-    btn.setAttribute('aria-label', `Donate ${item.label} — about the price of a coffee`);
-    btn.addEventListener('click', () => { try { if(window.plausible) window.plausible('Support: Coffee amount', {props:{amount:item.label,currency}}); } catch(e){} });
-    container.appendChild(btn);
-  });
-
-  // Show detected currency
-  const note = document.createElement('p');
-  note.style.cssText = 'font-size:.75rem;color:#0a3d2a;opacity:.7;margin-top:8px';
-  note.textContent = `Showing ${currency} amounts based on your location.`;
-  container.after(note);
-})();
-
 // ── Mobile nav toggle ───────────────────────────────────────────────────
 const navToggle = document.querySelector('.nav-toggle');
 const mainNav = document.querySelector('.main-nav');

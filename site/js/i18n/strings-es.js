@@ -2,9 +2,10 @@ window.I18N = {
   lang: 'es',
   nav: { home: 'Inicio', blog: 'Blog' },
   hero: {
-    eyebrow: 'Despliega IA segura · Nunca IA insegura · Política como Código',
-    h1: 'Llegar al Sí. Mantener el Sí. Recuperar el Sí.',
-    sub: 'Antes de desplegar, mientras funciona, cuando falla — gobernanza como código que hace que la IA sea segura para decir sí, construida en abierto por una comunidad que cuida el jardín de la humanidad. Ven a ver. Ven a unirte.',
+    eyebrow: 'Fundación AiGovOps · Política como Código',
+    h1: 'Despliega IA segura.<br>Nunca IA insegura.',
+    movements: '<span class="mv"><b>Llegar al Sí</b> — antes de desplegar</span> <span class="mv-sep" aria-hidden="true">·</span> <span class="mv"><b>Mantener el Sí</b> — mientras funciona</span> <span class="mv-sep" aria-hidden="true">·</span> <span class="mv"><b>Recuperar el Sí</b> — cuando falla</span>',
+    sub: 'Gobernanza como código que hace que la IA sea segura para decir sí — construida en abierto por una comunidad que cuida el jardín de la humanidad. Ven a ver. Ven a unirte.',
   },
   pillars: { title: 'Nuestros Pilares Fundamentales' },
   toolkit: { title: 'Tres herramientas. Una cadena de evidencia verificable.' },

@@ -27,6 +27,19 @@
   margin-left: auto;
   margin-right: auto;
 }
+/* the three movements, welded to their plain glosses (headline rule: the hero
+   anchors to shipping safe AI first; "Yes" never stands cold at a first touch) */
+.hero-movements {
+  font-family: var(--porch-serif);
+  font-size: clamp(1.02rem, 1.7vw, 1.3rem);
+  line-height: 1.55;
+  color: var(--porch-ink-soft);
+  max-width: 62rem;
+  margin: 16px auto 10px;
+}
+.hero-movements .mv { white-space: nowrap; }
+.hero-movements .mv b { color: var(--porch-green-ink); font-weight: 640; }
+.hero-movements .mv-sep { color: var(--porch-orange-ink); margin: 0 .3em; }
 .hero-sub {
   color: var(--porch-ink-soft);
   font-size: clamp(1.02rem, 1.5vw, 1.18rem);

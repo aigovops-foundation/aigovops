@@ -165,7 +165,8 @@ echo "  [support.html]"
 [ -f "$REPO/support.html" ] && check "support.html exists" "ok" || check "support.html exists" "missing"
 check_html "$REPO/support.html" "GitHub Sponsors link"           'github.com/sponsors'
 check_html "$REPO/support.html" "Open Collective link"           'opencollective.com'
-check_html "$REPO/support.html" "Coffee amounts JS"              'coffeeAmounts'
+check_html "$REPO/support.html" "Tier pledge mailto CTAs"        'Email to pledge'
+check_absent "$REPO/support.html" "Coffee rail deleted (S2)"     'coffeeAmounts'
 check_html "$REPO/support.html" "Three tiers present"            'Founding Steward'
 check_html "$REPO/support.html" "501c3 mention"                  '501(c)(3)'
 check_html "$REPO/support.html" "skip-link on support page"      'skip-link'

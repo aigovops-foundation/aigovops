@@ -8,12 +8,16 @@ Collective, no GitHub Sponsors.
 `support.html` ships in a *parked* state because the real Stripe Payment Links
 don't exist yet — Ken (the Stripe admin) creates them and sends the four URLs.
 
-While parked:
+While parked (pruned by the 2026-07-17 design review — S2 "delete, don't hide":
+the coffee rail, its locale JS, and the two top parked buttons are deleted from
+the markup entirely; the tier cards also carry visible "Email to pledge" mailtos):
 
-- Every giving CTA points at `https://github.com/aigovops-foundation` (a safe,
-  live destination — never a 404 or a dead sponsor/OC page) and carries its
-  **intended** destination in a `data-orig="…"` attribute. `data-orig` is the
-  mapping key the finish script reads; **do not edit those values.**
+- Every remaining parked CTA — the three tier cards' buttons and the
+  impact-section anchor — points at `https://github.com/aigovops-foundation`
+  (a safe, live destination — never a 404 or a dead sponsor/OC page), carries
+  its **intended** destination in a `data-orig="…"` attribute, and is hidden by
+  the page's `a[data-orig] { display:none }` rule. `data-orig` is the mapping
+  key the finish script reads; **do not edit those values.**
 - A visible **`giving-interim`** notice (between `<!-- giving-interim:start -->`
   and `<!-- giving-interim:end -->`) tells donors that secure Stripe checkout is
   being set up and to email `bob.rapp@aigovops.community` to pledge.
@@ -39,8 +43,10 @@ The script (`scripts/apply-stripe-links.sh`) is **idempotent** and **abort-loud*
    `…contributor…` → CONTRIBUTOR · `…sustainer…` → SUSTAINER ·
    `…founding…` → FOUNDING · everything else (donate / bare sponsor / OC) → DONATE.
 3. Sets each `href` to its Stripe link, removes `data-orig`, enforces
-   `target="_blank" rel="noopener"`, points the JS coffee button at DONATE, and
-   **strips the `giving-interim` block**.
+   `target="_blank" rel="noopener"`, **replaces the `giving-interim` block**
+   ($500-only link included) with a visible primary DONATE anchor — the general
+   "give any amount" option — and **strips the `a[data-orig]` hide rule** so the
+   mapped tier CTAs become visible.
 4. Updates the literal-string **unit-test assertions** to the Stripe end-state.
 5. Runs the full **Cloud-Mary** gate, then **ships its own PR** per the deploy
    workflow (branch → gate → PR → squash merge).
@@ -55,7 +61,7 @@ bash scripts/apply-stripe-links.sh --selftest
 
 | Stripe arg   | Tier                     | Parked `data-orig` it replaces |
 |--------------|--------------------------|--------------------------------|
-| `DONATE`     | one-time / general give  | bare sponsor, OC org, `/donate`, coffee button |
+| `DONATE`     | one-time / general give  | OC org (impact section) + the injected give-cluster primary |
 | `CONTRIBUTOR`| Contributor ($50)        | `…?tier=contributor`, `…/contribute/contributor-50` |
 | `SUSTAINER`  | Sustainer ($1,000)       | `…?tier=sustainer`, `…/contribute/sustainer-1000` |
 | `FOUNDING`   | Founding Steward Partner | `…/contribute/founding-partner-10000` |

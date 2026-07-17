@@ -48,8 +48,21 @@
     .bub .btns span { font-size: .78rem; font-weight: 700; padding: 4px 12px; border-radius: 8px; }
     .bub .ap { background: #14b393; color: #04241c; } .bub .dn { border: 1px solid #3a4655; color: #9fb0bd; }
     .embed { border: 1px solid var(--garden-card-line); border-radius: 14px; overflow: hidden; background: #fff; box-shadow: var(--garden-shadow-sm); }
-    .embed iframe { display: block; width: 100%; height: 520px; border: 0; }
+    .embed iframe { display: block; width: 100%; height: 520px; border: 0; position: relative; z-index: 1; background: transparent; }
     .embed .cap { font-size: .82rem; color: var(--garden-ink-soft); padding: 9px 14px; background: var(--garden-deep-cream); border-top: 1px solid var(--garden-line); }
+    /* C1: garden-styled skeleton poster behind the eager-loaded iframe — visible
+       until the frame paints (the iframe stays transparent; onload fades it out) */
+    .embed-frame { position: relative; background: var(--garden-deep-cream); }
+    .embed-skeleton { position: absolute; inset: 0; z-index: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: var(--garden-deep-cream); transition: opacity .4s ease; }
+    .embed-skeleton .skel-eyebrow { font-family: 'Courier New', monospace; text-transform: uppercase; letter-spacing: .14em; font-size: .72rem; font-weight: 700; color: var(--garden-green-ink); }
+    .embed-skeleton .skel-bar { width: min(72%, 520px); height: 12px; border-radius: 999px; background: linear-gradient(90deg, rgba(46,125,79,.14), rgba(46,125,79,.3), rgba(46,125,79,.14)); background-size: 200% 100%; animation: skelShimmer 1.6s ease-in-out infinite; }
+    .embed-skeleton .skel-bar:nth-child(3) { width: min(56%, 400px); animation-delay: .2s; }
+    .embed-skeleton .skel-bar:nth-child(4) { width: min(64%, 460px); animation-delay: .4s; }
+    @keyframes skelShimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+    @media (prefers-reduced-motion: reduce) { .embed-skeleton .skel-bar { animation: none; } }
+    .embed-frame.embed-loaded .embed-skeleton { opacity: 0; }
+    .embed .embed-fallback { display: inline-block; margin-top: 4px; font-weight: 700; color: var(--garden-green-ink); text-decoration: underline; text-underline-offset: 3px; }
+    section[style*="background:#0e141b"] .embed .embed-fallback { color: #5DCAA5; }
     .receipt { font-family: 'Courier New', monospace; font-size: .8rem; background: #0e141b; color: #9fe1cb; border-radius: 12px; padding: 16px; white-space: pre-wrap; overflow: auto; line-height: 1.5; }
     .flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; color: var(--garden-ink-soft); font-size: .86rem; margin: 0 0 20px; }
     .flow b { color: var(--garden-charcoal); font-weight: 700; } .flow .ar { color: var(--garden-green-ink); font-weight: 700; }
@@ -197,8 +210,17 @@
       <h3 style="color:#fff">From &ldquo;which vendors?&rdquo; to a signed decision</h3>
       <div class="flow"><b>Compose a stack</b> <span class="ar" aria-hidden="true">&rarr;</span> <b>Compare 50 vendors</b> <span class="ar" aria-hidden="true">&rarr;</span> <b>Approve a shortlist</b> <span class="ar" aria-hidden="true">&rarr;</span> <b>Decision receipt</b></div>
       <div class="embed">
-        <iframe title="Live: the Vendor RFI 50-vendor comparison page" src="https://aigovops-foundation.github.io/aigovops-vendor-rfi/comparison.html" loading="lazy"></iframe>
-        <p class="cap">Live, right here — the real comparison page. 50 vendors across five categories; search and filter it.</p>
+        <div class="embed-frame">
+          <div class="embed-skeleton" aria-hidden="true">
+            <span class="skel-eyebrow">▶ Loading the live comparison…</span>
+            <span class="skel-bar"></span>
+            <span class="skel-bar"></span>
+            <span class="skel-bar"></span>
+          </div>
+          <iframe title="Live: the Vendor RFI 50-vendor comparison page" src="https://aigovops-foundation.github.io/aigovops-vendor-rfi/comparison.html" onload="this.parentElement.classList.add('embed-loaded')"></iframe>
+        </div>
+        <p class="cap">Live, right here — the real comparison page. 50 vendors across five categories; search and filter it.<br>
+          <a class="embed-fallback" href="https://aigovops-foundation.github.io/aigovops-vendor-rfi/comparison.html" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Alpha: Vendor RFI comparison tab')">Open the live comparison in its own tab →</a></p>
       </div>
       <p style="font-size:1rem;line-height:1.65;color:#c4ccd2;max-width:62ch;margin:24px 0 14px">Approve your shortlist in the advisor and export a governed <strong style="color:#fff">decision receipt</strong> — canonical JSON with a SHA-256 digest (Beacon-signable later):</p>
       <pre class="receipt">{

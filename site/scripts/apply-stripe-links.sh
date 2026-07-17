@@ -3,26 +3,34 @@
 # ║  apply-stripe-links.sh — finish the parked giving rails with Stripe links  ║
 # ╚══════════════════════════════════════════════════════════════════════════╝
 #
-# The support page ships in a PARKED state: every giving CTA points at the GitHub
-# org and carries its intended destination in a data-orig attribute, and a
-# "giving-interim" notice tells donors checkout is being set up. When Ken (the
-# Stripe admin) sends the four Stripe Payment Links, run this ONE command to make
-# the page live:
+# REDESIGN (2026-07-17 design review, S2 "delete, don't hide"): the coffee rail,
+# its locale JS, and the two top parked buttons (Donate securely / Give monthly)
+# are DELETED from support.html — they no longer exist as parked anchors. What
+# remains parked is exactly: the three tier cards' data-orig CTAs (hidden by the
+# page's `a[data-orig] { display:none }` rule) and the impact-section's data-orig
+# anchor. The visible interim giving surface is the $500 Stripe link + the pledge
+# mailto inside the giving-interim block.
+#
+# When Ken (the Stripe admin) sends the four Stripe Payment Links, run this ONE
+# command to make the page live:
 #
 #   bash scripts/apply-stripe-links.sh <DONATE> <CONTRIBUTOR> <SUSTAINER> <FOUNDING>
 #
 # where each argument is a https://buy.stripe.com/... Payment Link. It:
 #   1. validates all four URLs are buy.stripe.com AND return 200 AND are not
 #      deactivated ("link is no longer active") — BEFORE touching any file;
-#   2. maps each parked CTA by its data-orig URL:
+#   2. maps each parked data-orig CTA by its data-orig URL:
 #        …contributor… → CONTRIBUTOR   …sustainer… → SUSTAINER
-#        …founding…     → FOUNDING      everything else (donate/bare sponsor/OC) → DONATE
+#        …founding…     → FOUNDING      everything else (bare sponsor/OC) → DONATE
 #      sets each href to the Stripe link, removes data-orig, and enforces
 #      target="_blank" rel="noopener" on the giving CTAs;
-#   3. strips the giving-interim block (markers included) and points the JS coffee
-#      button at the DONATE link;
-#   4. updates the literal-string unit-test assertions to the Stripe end-state;
-#   5. runs the full Cloud-Mary gate, then ships its own PR per the deploy workflow.
+#   3. REPLACES the giving-interim block (markers included, $500 link included)
+#      with a visible primary DONATE anchor in the give cluster — the general
+#      "give any amount" option that supersedes the interim $500-only checkout;
+#   4. STRIPS the `a[data-orig] { display:none }` hide rule (comment included)
+#      so the freshly-mapped tier CTAs become visible;
+#   5. updates the literal-string unit-test assertions to the Stripe end-state;
+#   6. runs the full Cloud-Mary gate, then ships its own PR per the deploy workflow.
 #
 # Idempotent: re-running after it has been applied is a clean no-op. Abort-loud:
 # any bad URL or unexpected state stops before a single edit. Offline self-test:
@@ -77,19 +85,24 @@ def fix_anchor(m: "re.Match") -> str:
 
 html = re.sub(r"<a\b[^>]*>", fix_anchor, html)
 
-# JS coffee button: point it at DONATE and drop its data-orig + interim comment.
-html = re.sub(
-    r'[ \t]*//[^\n]*giving-interim[^\n]*\n'
-    r'(?:[ \t]*//[^\n]*\n)?'
-    r"[ \t]*btn\.href = '[^']*';\n"
-    r"[ \t]*btn\.setAttribute\('data-orig',[^\n]*\n",
-    f"    btn.href = {DONATE!r};\n", html)
-# Fallback: any lingering btn data-orig setAttribute (idempotence safety).
-html = re.sub(r"[ \t]*btn\.setAttribute\('data-orig',[^\n]*\n", "", html)
+# REPLACE the giving-interim block (markers + $500-only link) with the live
+# give cluster: one visible primary DONATE anchor — the general option.
+GIVE_LIVE = (
+    '<div class="give-live" style="text-align:center">\n'
+    f'      <a href="{DONATE}" target="_blank" rel="noopener" class="btn btn-primary btn-large" '
+    'onclick="if(window.plausible)plausible(\'Support: Stripe donate\')">'
+    '\U0001F49A Give any amount — secure Stripe checkout →</a>\n'
+    '    </div>'
+)
+html = re.sub(r"<!-- giving-interim:start.*?giving-interim:end -->",
+              lambda m: GIVE_LIVE, html, flags=re.S)
 
-# Strip the giving-interim block, markers included.
-html = re.sub(r"\n?[ \t]*<!-- giving-interim:start.*?giving-interim:end -->",
-              "", html, flags=re.S)
+# STRIP the a[data-orig] hide rule (comment block included) so the mapped tier
+# CTAs become visible.
+html = re.sub(
+    r"[ \t]*/\* PARKED-GIVING HIDE.*?\*/\n"
+    r"[ \t]*a\[data-orig\] \{ display: none !important; \}\n",
+    "", html, flags=re.S)
 
 if "data-orig=" in html:
     print("ERROR: data-orig attributes remain after transform — aborting.", file=sys.stderr)
@@ -97,11 +110,18 @@ if "data-orig=" in html:
 if "giving-interim:start" in html:
     print("ERROR: giving-interim block remains after transform — aborting.", file=sys.stderr)
     sys.exit(1)
+if "a[data-orig] { display: none" in html:
+    print("ERROR: a[data-orig] hide rule remains after transform — aborting.", file=sys.stderr)
+    sys.exit(1)
+if 'class="give-live"' not in html:
+    print("ERROR: live DONATE cluster was not injected — aborting.", file=sys.stderr)
+    sys.exit(1)
 
 open(path, "w", encoding="utf-8").write(html)
 for src, dest in changes:
     print(f"  {src}  ->  {dest}")
-print(f"applied {len(changes)} CTA(s) + JS coffee button; interim block stripped.")
+print(f"applied {len(changes)} CTA(s); DONATE injected as the visible give-cluster "
+      "primary; interim block replaced; a[data-orig] hide rule stripped.")
 sys.exit(0)
 PY
 }
@@ -145,14 +165,16 @@ selftest() {
   local fail=0
   chk() { if eval "$2"; then echo "  ✅ $1"; else echo "  ❌ $1"; fail=1; fi; }
   chk "all data-orig removed"                 '! grep -q "data-orig=" "$tmp/support.html"'
-  chk "interim block stripped"                '! grep -q "giving-interim:start" "$tmp/support.html"'
+  chk "interim block replaced"                '! grep -q "giving-interim:start" "$tmp/support.html"'
   chk "contributor CTA -> CONTRIBUTOR link"   'grep -q "href=\"$C\"" "$tmp/support.html"'
   chk "sustainer CTA -> SUSTAINER link"       'grep -q "href=\"$S\"" "$tmp/support.html"'
   chk "founding CTA -> FOUNDING link"         'grep -q "href=\"$F\"" "$tmp/support.html"'
-  chk "donate/bare/OC CTAs -> DONATE link"    'grep -q "href=\"$D\"" "$tmp/support.html"'
+  chk "bare-sponsor/OC CTAs -> DONATE link"   'grep -q "href=\"$D\"" "$tmp/support.html"'
   chk "no leftover org-parked giving hrefs"   '[ "$(grep -c "href=\"https://github.com/aigovops-foundation\"" "$tmp/support.html")" = "0" ]'
-  chk "JS coffee button -> DONATE"            'grep -q "btn.href = .https://buy.stripe.com/test_DONATE" "$tmp/support.html"'
-  chk "giving CTAs keep target=_blank"        '[ "$(grep -c "href=\"https://buy.stripe.com/test_" "$tmp/support.html")" -ge 9 ]'
+  chk "DONATE injected as visible give-cluster primary" 'grep -q "class=\"give-live\"" "$tmp/support.html"'
+  chk "a[data-orig] hide rule stripped"       '! grep -q "a\[data-orig\] { display: none" "$tmp/support.html"'
+  chk "tier pledge mailtos untouched"         '[ "$(grep -c "Email to pledge" "$tmp/support.html")" = "2" ]'
+  chk "giving CTAs all mapped (7 Stripe links)" '[ "$(grep -c "href=\"https://buy.stripe.com/test_" "$tmp/support.html")" -ge 7 ]'
   # Idempotence: a second run must be a clean no-op (exit 2).
   set +e; transform "$tmp/support.html" "$D" "$C" "$S" "$F" >/dev/null 2>&1; local rc=$?; set -e
   chk "second run is a no-op (already applied)" '[ "$rc" = "2" ]'
