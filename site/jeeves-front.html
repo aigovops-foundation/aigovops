@@ -10,10 +10,11 @@
 <meta property="og:description" content="Jeeves front and centre: say what you need, he suggests and drives, you hold the keys." />
 <meta property="og:type" content="website" />
 <style>
+  /* garden-warm skin (M6b): the prototype keeps its own token set, re-pointed to garden values */
   :root{
-    --navy:#0c1430; --ink:#16304a; --teal:#0f6e56; --teal-d:#0b5743; --teal-bright:#1d9e75;
-    --page:#f5f8f7; --card:#fff; --line:#e4ebe8; --muted:#566;
-    --green:#0f7a45; --green-w:#e8f3ec; --amber:#8a5a0d; --amber-w:#fbf0dd; --gray:#5b655e;
+    --navy:#2B2B28; --ink:#2B2B28; --teal:#1F5E3A; --teal-d:#0F4A2C; --teal-bright:#1F5E3A;
+    --page:#FAF7F0; --card:#fff; --line:rgba(43,43,40,.14); --muted:#4C4A42;
+    --green:#1F5E3A; --green-w:#e8f3ec; --amber:#9C4E12; --amber-w:#FAEEDA; --gray:#4C4A42;
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; --serif:Georgia,"Times New Roman",serif;
   }
   *{box-sizing:border-box} body{margin:0;background:var(--page);color:var(--ink);font-family:var(--sans);line-height:1.55}
@@ -56,7 +57,7 @@
   .explore{max-width:720px;margin:34px auto 50px;padding-top:20px;border-top:1px solid var(--line);text-align:center}
   .explore .cap{margin-bottom:10px} .explore a{color:var(--muted);text-decoration:none;font-size:13px;margin:0 10px;white-space:nowrap}
   .explore a:hover{color:var(--teal)}
-  .banner{background:#fef9ec;border-bottom:1px solid #f0e2bf;color:#6b4e11;font-size:12.5px;text-align:center;padding:7px 14px}
+  .banner{background:#F1EAD8;border-bottom:1px solid rgba(43,43,40,.14);color:#9C4E12;font-size:12.5px;text-align:center;padding:7px 14px}
   :focus-visible{outline:2px solid var(--teal);outline-offset:2px}
   input:focus-visible{outline:2px solid var(--teal);outline-offset:1px}
   @media (prefers-reduced-motion: reduce){*{transition:none!important}}
@@ -156,5 +157,7 @@
 })();
 </script>
 <script src="/jeeves-widget.js" data-jeeves-site="foundation" defer></script>
+
+<footer role="contentinfo" style="padding:20px 24px;text-align:center;font-style:italic;font-size:.85rem;opacity:.75">Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes, and keep the garden of humanity growing.</footer>
 </body>
 </html>

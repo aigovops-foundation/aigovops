@@ -14,32 +14,46 @@
   <meta property="og:url" content="https://www.aigovops-foundation.com/ken.html" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="css/style.css" />
+  <!-- M6b garden-warm skin (shared system) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/garden.css" />
   <script src="js/i18n/i18n.js"></script>
   <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
   <style>
-    .founder-hero { background: var(--light); padding: 64px 0 52px; }
-    .founder-hero .container { display: grid; grid-template-columns: 240px 1fr; gap: 48px; align-items: start; }
-    .founder-avatar { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center top; border: 3px solid var(--teal); }
-    .founder-eyebrow { font-size: .72rem; font-weight: 600; font-family: 'Courier New', monospace; text-transform: uppercase; letter-spacing: .14em; color: var(--teal-accessible); margin-bottom: 10px; }
-    .founder-name { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; margin-bottom: 6px; }
-    .founder-title { font-size: 1rem; color: var(--muted); margin-bottom: 20px; }
-    .founder-bio { font-size: .95rem; line-height: 1.75; color: var(--text); max-width: 640px; }
+    /* ── Founder page specific — garden-warm skin (M6b) ── */
+    :root { --teal-accessible: #1F5E3A; }
+
+    .founder-hero { background: var(--garden-deep-cream); padding: 64px 0 52px; position: relative; overflow: hidden; }
+    .founder-hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(480px 220px at 10% 115%, rgba(232,181,74,.28), transparent 70%), radial-gradient(460px 220px at 92% -15%, rgba(46,125,79,.16), transparent 70%); }
+    .founder-hero .container { display: grid; grid-template-columns: 240px 1fr; gap: 48px; align-items: start; position: relative; }
+    .founder-avatar { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center top; border: 3px solid var(--garden-green); box-shadow: var(--garden-shadow-sm); }
+    .founder-eyebrow { font-size: .72rem; font-weight: 600; font-family: 'Courier New', monospace; text-transform: uppercase; letter-spacing: .14em; color: var(--garden-green-ink); margin-bottom: 10px; }
+    .founder-name { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 600; margin-bottom: 6px; }
+    .founder-title { font-size: 1rem; color: var(--garden-ink-soft); margin-bottom: 20px; }
+    .founder-bio { font-size: .95rem; line-height: 1.75; color: var(--garden-ink-soft); max-width: 640px; }
     .founder-bio p { margin-bottom: 14px; }
     .founder-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
-    .founder-link { display: inline-flex; align-items: center; gap: 7px; padding: 9px 18px; border-radius: 8px; font-size: .85rem; font-weight: 600; text-decoration: none; transition: all .15s; border: 1.5px solid var(--teal-accessible); color: var(--teal-accessible); }
-    .founder-link:hover { background: var(--teal-accessible); color: var(--white); }
-    .founder-link.primary { background: var(--teal); border-color: var(--teal); color: var(--white); }
-    .founder-link.primary:hover { background: var(--teal-dark); border-color: var(--teal-dark); }
-    .speaking-section { background: var(--white); padding: 56px 0; }
+    .founder-link { display: inline-flex; align-items: center; gap: 7px; padding: 9px 18px; border-radius: 999px; font-size: .85rem; font-weight: 600; text-decoration: none; transition: all .15s; border: 1.5px solid var(--garden-green); color: var(--garden-green-deep); }
+    .founder-link:hover { background: var(--garden-green); color: #fff; }
+    .founder-link.primary { background: var(--garden-green); border-color: var(--garden-green); color: #fff; }
+    .founder-link.primary:hover { background: var(--garden-green-deep); border-color: var(--garden-green-deep); }
+    .speaking-section { background: var(--garden-cream); padding: 56px 0; }
     .speaking-section h2 { margin-bottom: 32px; }
     .topics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
-    .topic-card { border: .5px solid var(--border); border-radius: 12px; padding: 20px; }
+    .topic-card { background: #fff; border: 1px solid var(--garden-card-line); box-shadow: var(--garden-shadow-sm); border-radius: 14px; padding: 20px; }
     .topic-icon { font-size: 1.4rem; margin-bottom: 10px; }
     .topic-title { font-size: .9rem; font-weight: 700; margin-bottom: 6px; }
-    .topic-desc { font-size: .82rem; color: var(--muted); line-height: 1.5; }
-    .schedule-banner { background: var(--dark); color: var(--white); padding: 48px 0; text-align: center; }
-    .schedule-banner h2 { color: var(--white); margin-bottom: 10px; }
-    .schedule-banner p { color: rgba(255,255,255,.6); margin-bottom: 28px; font-size: .95rem; }
+    .topic-desc { font-size: .82rem; color: var(--garden-ink-soft); line-height: 1.5; }
+    /* schedule banner — orchard-green band */
+    .schedule-banner { background: var(--garden-green); color: #fff; padding: 48px 0; text-align: center; position: relative; overflow: hidden; }
+    .schedule-banner::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(480px 220px at 10% 115%, rgba(232,181,74,.22), transparent 70%), radial-gradient(460px 220px at 92% -15%, rgba(15,74,44,.55), transparent 70%); }
+    .schedule-banner .container { position: relative; }
+    .schedule-banner h2 { color: #fff; margin-bottom: 10px; }
+    .schedule-banner p { color: #F4FAF4; margin-bottom: 28px; font-size: .95rem; }
+    .schedule-banner .btn-primary { background: var(--garden-orange); color: var(--garden-charcoal); }
+    .schedule-banner .btn-primary:hover { background: #E98A40; }
     @media (max-width: 700px) { .founder-hero .container { grid-template-columns: 1fr; } .founder-avatar { width: 140px; height: 140px; } }
   </style>
 
@@ -192,6 +206,7 @@
           <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
         </svg>
       </a>
+      <p>Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes, and keep the garden of humanity growing.</p>
       <p>Governance Versioned Like Code. Tested Before Deployment.</p>
     </div>
         <nav class="footer-nav">

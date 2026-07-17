@@ -14,25 +14,40 @@
   <meta property="og:url" content="https://www.aigovops-foundation.com/demo.html" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="css/style.css" />
+  <!-- M6b garden-warm skin (shared system) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/garden.css" />
   <script src="js/i18n/i18n.js"></script>
   <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
   <style>
-    .support-hero{background:linear-gradient(135deg,var(--dark) 0%,#0a2318 55%,#0d1a2e 100%);color:var(--white);padding:72px 0 56px;text-align:center;}
-    .support-hero .hero-eyebrow{color:var(--teal);font-family:'Courier New',monospace;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.16em;margin-bottom:14px;}
-    .support-hero h1{font-size:clamp(1.8rem,4vw,3rem);font-weight:700;margin-bottom:16px;}
-    .support-hero p{font-size:1.05rem;color:#d8d4f2;max-width:620px;margin:0 auto 30px;line-height:1.6;}
-    .act{padding:60px 0;border-top:1px solid var(--border);}
-    .act:nth-of-type(odd){background:var(--light);}
+    /* ── Demo page specific — garden-warm skin (M6b) ── */
+    /* Inline markup (active nav link) uses var(--teal-accessible); re-point it. */
+    :root { --teal-accessible: #1F5E3A; }
+
+    .support-hero{background:var(--garden-deep-cream);color:var(--garden-charcoal);padding:72px 0 56px;text-align:center;position:relative;overflow:hidden;}
+    .support-hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(480px 220px at 10% 115%, rgba(232,181,74,.28), transparent 70%), radial-gradient(460px 220px at 92% -15%, rgba(46,125,79,.16), transparent 70%);}
+    .support-hero .container{position:relative;}
+    .support-hero .hero-eyebrow{color:var(--garden-green-ink);font-family:'Courier New',monospace;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.16em;margin-bottom:14px;}
+    .support-hero h1{font-size:clamp(1.8rem,4vw,3rem);font-weight:600;margin-bottom:16px;}
+    .support-hero p{font-size:1.05rem;color:var(--garden-ink-soft);max-width:620px;margin:0 auto 30px;line-height:1.6;}
+    /* the "Jump to the Vendor RFI" ghost CTA carries inline white-on-dark styles */
+    .support-hero a.btn[style]{background:var(--garden-cream) !important;color:var(--garden-green-deep) !important;border:2px solid var(--garden-green) !important;border-radius:999px;}
+    .support-hero a.btn[style]:hover{background:#fff !important;}
+    .act{padding:60px 0;border-top:1px solid var(--garden-line);}
+    .act:nth-of-type(odd){background:var(--garden-deep-cream);}
     .act .container{max-width:880px;}
-    .act .eyebrow{font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:.14em;font-size:.74rem;font-weight:700;color:var(--teal-accessible);margin:0 0 8px;}
-    .act h2{font-size:1.7rem;margin:0 0 12px;color:var(--dark);}
-    .act h3{font-size:1.05rem;margin:26px 0 12px;color:var(--dark);}
-    .act .lede{color:var(--text);max-width:62ch;line-height:1.65;margin:0 0 22px;}
+    .act .eyebrow{font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:.14em;font-size:.74rem;font-weight:700;color:var(--garden-green-ink);margin:0 0 8px;}
+    .act h2{font-size:1.7rem;margin:0 0 12px;color:var(--garden-charcoal);}
+    .act h3{font-size:1.05rem;margin:26px 0 12px;color:var(--garden-charcoal);}
+    .act .lede{color:var(--garden-ink-soft);max-width:62ch;line-height:1.65;margin:0 0 22px;}
     .gatelaw{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 8px;}
-    .glaw{flex:1 1 200px;border:1px solid var(--border);border-radius:12px;padding:14px 16px;background:var(--white);}
+    .glaw{flex:1 1 200px;border:1px solid var(--garden-card-line);border-radius:12px;padding:14px 16px;background:#fff;box-shadow:var(--garden-shadow-sm);}
     .glaw b{font-size:1.5rem;font-family:'Courier New',monospace;line-height:1;}
-    .glaw.yes b{color:var(--teal-accessible);} .glaw.no b{color:#b4232a;} .glaw.hold b{color:#854f0b;}
-    .glaw p{margin:6px 0 0;font-size:.88rem;color:var(--muted);line-height:1.45;}
+    .glaw.yes b{color:var(--garden-green-ink);} .glaw.no b{color:#b4232a;} .glaw.hold b{color:#854f0b;}
+    .glaw p{margin:6px 0 0;font-size:.88rem;color:var(--garden-ink-soft);line-height:1.45;}
+    /* the phone mock and receipt keep their own dark device surfaces (load-bearing) */
     .phone{max-width:380px;background:#0e141b;border-radius:18px;padding:14px;border:1px solid #2a333c;}
     .bub{font-size:.86rem;line-height:1.5;border-radius:12px;padding:9px 12px;margin:0 0 8px;max-width:88%;}
     .bub:last-child{margin-bottom:0;}
@@ -42,14 +57,15 @@
     .bub .btns{display:flex;gap:8px;margin-top:8px;}
     .bub .btns span{font-size:.78rem;font-weight:700;padding:4px 12px;border-radius:8px;}
     .bub .ap{background:#14b393;color:#04241c;} .bub .dn{border:1px solid #3a4655;color:#9fb0bd;}
-    .embed{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--white);}
+    .embed{border:1px solid var(--garden-card-line);border-radius:14px;overflow:hidden;background:#fff;box-shadow:var(--garden-shadow-sm);}
     .embed iframe{display:block;width:100%;height:520px;border:0;}
-    .embed .cap{font-size:.82rem;color:var(--muted);padding:9px 14px;background:var(--light);border-top:1px solid var(--border);}
+    .embed .cap{font-size:.82rem;color:var(--garden-ink-soft);padding:9px 14px;background:var(--garden-deep-cream);border-top:1px solid var(--garden-line);}
     .receipt{font-family:'Courier New',monospace;font-size:.8rem;background:#0e141b;color:#9fe1cb;border-radius:12px;padding:16px;white-space:pre-wrap;overflow:auto;line-height:1.5;}
-    .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;color:var(--muted);font-size:.86rem;margin:0 0 24px;}
-    .flow b{color:var(--dark);font-weight:700;} .flow .ar{color:var(--teal);font-weight:700;}
+    .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;color:var(--garden-ink-soft);font-size:.86rem;margin:0 0 24px;}
+    .flow b{color:var(--garden-charcoal);font-weight:700;} .flow .ar{color:var(--garden-green-ink);font-weight:700;}
     .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;}
-    .ghost{background:#f2f2f2;color:#222;border:1px solid #ddd;}
+    .ghost{background:#fff;color:var(--garden-charcoal);border:1px solid var(--garden-line);border-radius:999px;}
+    .ghost:hover{background:var(--garden-deep-cream);}
   </style>
 </head>
 <body>
@@ -210,6 +226,7 @@ SHA-256  6d4c19e14efa8151&hellip;</pre>
           <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
         </svg>
       </a>
+      <p>Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes, and keep the garden of humanity growing.</p>
       <p>Governance Versioned Like Code. Tested Before Deployment.</p>
     </div>
         <nav class="footer-nav">

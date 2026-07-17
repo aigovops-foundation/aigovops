@@ -10,7 +10,8 @@ PASS=0; FAIL=0
 
 URLS=("/" "/blog.html" "/events.html" "/css/style.css" "/js/chat.js"
       "/js/main.js" "/js/schedule.js" "/images/logo.png"
-      "/images/founders.jpg" "/images/favicon-32.png")
+      "/images/founders.jpg" "/images/favicon-32.png"
+      "/css/garden.css" "/css/porch.css" "/design/aigovops-july-2026/tokens.css")
 
 ms_now() { python3 -c "import time; print(int(time.time()*1000))"; }
 

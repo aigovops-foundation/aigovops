@@ -7,10 +7,23 @@ SITE="${SITE_URL:-https://www.aigovops-foundation.com}"
 echo ""
 echo "🚨  HTTP Error Detection Tests"
 echo ""
-echo "  [No server errors]"
-error_no_5xx "$SITE/"
-error_no_5xx "$SITE/frameworks.html"
-error_no_5xx "$SITE/blog.html"
+echo "  [No server errors — all 21 top-level pages]"
+for p in "/" "/404.html" "/admin.html" "/alpha.html" "/blog.html" "/bob.html" \
+         "/community.html" "/demo.html" "/ecosystem.html" "/events.html" \
+         "/f-ai-friday.html" "/frameworks.html" "/jeeves-brief.html" \
+         "/jeeves-console.html" "/jeeves-demo.html" "/jeeves-estate.html" \
+         "/jeeves-front.html" "/ken.html" "/press.html" "/status.html" "/support.html"; do
+  error_no_5xx "$SITE$p"
+done
+echo ""
+echo "  [No server errors — all 9 blog posts]"
+for p in "/blog/agentic-frontiers-retrospective.html" "/blog/agentic-hell.html" \
+         "/blog/eu-ai-act-90-day-roadmap.html" "/blog/flow-to-trust-loop.html" \
+         "/blog/healthcare-ai-governance-spring-2026.html" "/blog/nist-ai-rmf-vs-real-world.html" \
+         "/blog/no-more-anonymous-ghosts.html" "/blog/stop-writing-for-humans.html" \
+         "/blog/what-is-aigovops.html"; do
+  error_no_5xx "$SITE$p"
+done
 echo ""
 echo "  [No redirect loops]  (catches Cloudflare-Flexible misconfig)"
 error_no_redirect_loop "$SITE/"

@@ -10,23 +10,24 @@
 <meta property="og:description" content="Agents do the bureaucracy; humans hold the keys. Watch one goal flow end to end." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23071a12'/%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%231d9e75' stroke-width='1.5'/%3E%3Cpath d='M11 20 L16 9 L21 20 Z' fill='%230f6e56'/%3E%3C/svg%3E" />
 <style>
+  /* garden-warm skin (M6b): the demo keeps its own token set, re-pointed to garden values */
   :root{
-    --navy:#0c1c2e; --ink:#16304a; --teal:#0f6e56; --teal2:#1d9e75; --teal-wash:#e8f5ef;
-    --page:#f5f8f7; --card:#ffffff; --line:#e4ebe8; --muted:#5e6f69;
-    --green:#0f7a45; --green-w:#e7f4ec; --amber:#9a6410; --amber-w:#fbf0dd; --red:#a3242b; --red-w:#fbe9ea; --gray:#7c867f; --gray-w:#eef1ef;
+    --navy:#2B2B28; --ink:#2B2B28; --teal:#1F5E3A; --teal2:#2E7D4F; --teal-wash:#e8f5ef;
+    --page:#FAF7F0; --card:#ffffff; --line:rgba(43,43,40,.14); --muted:#4C4A42;
+    --green:#1F5E3A; --green-w:#e7f4ec; --amber:#9C4E12; --amber-w:#FAEEDA; --red:#a3242b; --red-w:#fbe9ea; --gray:#5F5C52; --gray-w:#EFEBE0;
     --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     --serif:Georgia,"Times New Roman",serif;
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--page);color:var(--ink);font-family:var(--font);line-height:1.55;-webkit-font-smoothing:antialiased}
   .wrap{max-width:780px;margin:0 auto;padding:0 18px}
-  header.site{background:linear-gradient(135deg,var(--navy),#0a2318 70%);color:#fff;padding:22px 0 18px}
+  header.site{background:linear-gradient(135deg,#2E7D4F,#0F4A2C 70%);color:#fff;padding:22px 0 18px}
   .brand{display:flex;align-items:center;gap:11px}
   .brand svg{flex:0 0 auto}
   .brand b{font-size:15px;font-weight:600;letter-spacing:.2px}
-  .brand span{display:block;font-size:11px;color:#8fd3ba;letter-spacing:.14em;text-transform:uppercase;margin-top:1px}
+  .brand span{display:block;font-size:11px;color:#F4FAF4;letter-spacing:.14em;text-transform:uppercase;margin-top:1px}
   h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.5rem,3.4vw,2.1rem);margin:16px 0 6px;color:#fff;line-height:1.12}
-  header.site p{color:rgba(255,255,255,.72);font-size:.95rem;max-width:560px;margin:0}
+  header.site p{color:#F4FAF4;font-size:.95rem;max-width:560px;margin:0}
   main{padding:22px 0 10px}
   .goal{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--teal2);border-radius:10px;padding:11px 15px;margin-bottom:18px}
   .goal .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
@@ -73,6 +74,9 @@
   footer.site a{color:var(--teal)}
   footer.site .row{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
   .cta{display:inline-flex;align-items:center;gap:7px;background:var(--teal);color:#fff!important;text-decoration:none;border-radius:9px;padding:9px 16px;font-weight:600;font-size:.9rem}
+  /* the legend dots carry inline hexes (attrs untouched) — re-ink to garden */
+  .legend i[style*="#0f7a45"]{background:#1F5E3A!important}
+  .legend i[style*="#9a6410"]{background:#9C4E12!important}
   @media(prefers-reduced-motion:reduce){.bar i{transition:none}}
 </style>
 </head>
@@ -131,6 +135,7 @@
 </main>
 
 <footer class="site">
+  <p class="estate-creed" style="font-style:italic;opacity:.85;margin:0 0 .6em">Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes, and keep the garden of humanity growing.</p>
   <div class="wrap row">
     <span>© 2026 AiGovOps Foundation — a 501(c)(3). This page is self-contained; share it freely.</span>
     <span><a href="ecosystem.html">← Back to the ecosystem</a> &nbsp;·&nbsp; <a class="cta" href="https://community.aigovops-foundation.com/" target="_blank" rel="noopener">See it live ↗</a></span>

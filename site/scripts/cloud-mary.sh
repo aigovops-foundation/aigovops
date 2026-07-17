@@ -3,7 +3,8 @@
 # ║  Cloud-Mary v3 — AiGovOps Foundation Test Orchestrator          ║
 # ║  Runs all test tiers and produces a unified pass/fail report     ║
 # ║  Run: bash scripts/cloud-mary.sh                                 ║
-# ║  Flags: --unit  --e2e  --a11y  --i18n  --scale  --chaos  --docs  ║
+# ║  Flags: --unit  --design  --e2e  --happy  --a11y  --i18n         ║
+# ║         --scale  --chaos  --docs  --dns  --uptime  --errors      ║
 # ║         --skip-network  (skip tests requiring live site)         ║
 # ╚══════════════════════════════════════════════════════════════════╝
 
@@ -16,7 +17,9 @@ TIERS=()
 for arg in "$@"; do
   case $arg in
     --unit)         TIERS+=("unit");  RUN_ALL=false ;;
+    --design)       TIERS+=("design"); RUN_ALL=false ;;
     --e2e)          TIERS+=("e2e");   RUN_ALL=false ;;
+    --happy)        TIERS+=("happy"); RUN_ALL=false ;;
     --dns)          TIERS+=("dns");    RUN_ALL=false ;;
     --uptime)       TIERS+=("uptime"); RUN_ALL=false ;;
     --errors)       TIERS+=("errors"); RUN_ALL=false ;;
@@ -28,7 +31,7 @@ for arg in "$@"; do
     --skip-network) SKIP_NETWORK=true ;;
   esac
 done
-[ "$RUN_ALL" = "true" ] && TIERS=("unit" "e2e" "dns" "uptime" "errors" "a11y" "i18n" "scale" "chaos" "docs")
+[ "$RUN_ALL" = "true" ] && TIERS=("unit" "design" "e2e" "dns" "uptime" "errors" "happy" "a11y" "i18n" "scale" "chaos" "docs")
 
 cd "$REPO" || { echo "❌ Cannot cd to $REPO"; exit 1; }
 
@@ -90,6 +93,13 @@ if [[ " ${TIERS[*]} " =~ " unit " ]]; then
     "🧪  Unit Tests (v1 + v3)"
 fi
 
+# ── Tier 1b: Design-System Tests (local, no network) ───────────────────────
+if [[ " ${TIERS[*]} " =~ " design " ]]; then
+  run_tier "design" \
+    "bash scripts/test-design.sh" \
+    "🎨  Design-System Tests (garden-warm)"
+fi
+
 # ── Tier 2: E2E Tests ──────────────────────────────────────────────────────
 if [[ " ${TIERS[*]} " =~ " e2e " ]]; then
   if [ "$SKIP_NETWORK" = "true" ]; then
@@ -125,6 +135,15 @@ if [[ " ${TIERS[*]} " =~ " errors " ]]; then
     skip_tier "errors" "🚨  Error Tests" "--skip-network flag set"
   else
     run_tier "errors" "bash scripts/test-errors.sh" "🚨  HTTP Error Detection Tests"
+  fi
+fi
+
+# ── Tier 2e: Happy-Path Journey Tests (network) ────────────────────────────
+if [[ " ${TIERS[*]} " =~ " happy " ]]; then
+  if [ "$SKIP_NETWORK" = "true" ]; then
+    skip_tier "happy" "😊  Happy-Path Tests" "--skip-network flag set"
+  else
+    run_tier "happy" "bash scripts/test-happy.sh" "😊  Happy-Path Journey Tests"
   fi
 fi
 
@@ -180,10 +199,12 @@ echo ""
 
 TIER_LABELS=(
   "unit:🧪  Unit Tests"
+  "design:🎨  Design System"
   "e2e:🌐  E2E Tests"
   "dns:🌐  DNS Tests"
   "uptime:⏱️   Uptime Tests"
   "errors:🚨  Error Tests"
+  "happy:😊  Happy Paths"
   "a11y:♿  Accessibility"
   "i18n:🌍  Multilingual"
   "scale:⚡  Scale Tests"

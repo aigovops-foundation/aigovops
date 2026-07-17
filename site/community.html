@@ -11,42 +11,62 @@
   <meta property="og:url" content="https://www.aigovops-foundation.com/community.html" />
   <link rel="alternate" type="application/rss+xml" title="AiGovOps Foundation Feed" href="/feed.xml" />
   <link rel="stylesheet" href="css/style.css" />
+  <!-- M6b garden-warm skin (shared system) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/garden.css" />
   <script src="js/i18n/i18n.js"></script>
   <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
   <style>
-    .comm-hero { background: linear-gradient(135deg, var(--dark) 0%, #0a2318 60%, #0d1a2e 100%); color: var(--white); padding: 60px 0 48px; text-align: center; }
-    .comm-hero .hero-eyebrow { color: var(--teal); font-family: 'Courier New', monospace; font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 12px; }
-    .comm-hero h1 { font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight: 700; margin-bottom: 12px; }
-    .comm-hero p { color: rgba(255,255,255,.6); font-size: .95rem; max-width: 500px; margin: 0 auto; }
+    /* ── Community page — garden-warm skin (M6b) ── */
+    /* Inline markup uses var(--teal-accessible); re-point it to garden green-ink. */
+    :root { --teal-accessible: #1F5E3A; }
+
+    .comm-hero { background: var(--garden-deep-cream); color: var(--garden-charcoal); padding: 60px 0 48px; text-align: center; position: relative; overflow: hidden; }
+    .comm-hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(480px 220px at 10% 115%, rgba(232,181,74,.28), transparent 70%), radial-gradient(460px 220px at 92% -15%, rgba(46,125,79,.16), transparent 70%); }
+    .comm-hero .container { position: relative; }
+    .comm-hero .hero-eyebrow { color: var(--garden-green-ink); font-family: 'Courier New', monospace; font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 12px; }
+    .comm-hero h1 { font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight: 600; margin-bottom: 12px; }
+    .comm-hero p { color: var(--garden-ink-soft); font-size: .95rem; max-width: 500px; margin: 0 auto; }
     .section { padding: 52px 0; }
-    .section + .section { border-top: 1px solid var(--border); }
+    .section + .section { border-top: 1px solid var(--garden-line); }
     .section h2 { margin-bottom: 8px; }
-    .section-sub { font-size: .85rem; color: var(--muted); margin-bottom: 28px; }
+    .section-sub { font-size: .85rem; color: var(--garden-ink-soft); margin-bottom: 28px; }
+    /* sections carry inline background:var(--white)/var(--light) — re-band them */
+    .section[style*="--white"] { background: var(--garden-cream) !important; }
+    .section[style*="--light"] { background: var(--garden-deep-cream) !important; }
     .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap: 12px; margin-bottom: 36px; }
-    .stat { background: var(--light); border-radius: 10px; padding: 16px 18px; text-align: center; }
-    .stat-n { font-size: 2rem; font-weight: 700; color: var(--teal); font-family: 'Courier New', monospace; }
-    .stat-l { font-size: .75rem; color: var(--muted); margin-top: 2px; }
+    .stat { background: #fff; border: 1px solid var(--garden-card-line); box-shadow: var(--garden-shadow-sm); border-radius: 14px; padding: 16px 18px; text-align: center; }
+    .stat-n { font-family: var(--garden-serif); font-size: 2rem; font-weight: 600; color: var(--garden-green-deep); }
+    .stat-l { font-size: .75rem; color: var(--garden-ink-soft); margin-top: 2px; }
     .repo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
-    .repo-card { border: .5px solid var(--border); border-radius: 12px; padding: 18px 20px; text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 6px; transition: border-color .15s, transform .15s; }
-    .repo-card:hover { border-color: var(--teal); transform: translateY(-2px); }
-    .repo-name { font-size: .9rem; font-weight: 700; color: var(--teal-accessible); font-family: 'Courier New', monospace; }
-    .repo-desc { font-size: .82rem; color: var(--muted); line-height: 1.5; }
-    .repo-meta { display: flex; gap: 12px; font-size: .75rem; color: var(--muted); margin-top: 4px; font-family: 'Courier New', monospace; }
+    .repo-card { background: var(--garden-cream); border: 1px solid var(--garden-card-line); box-shadow: var(--garden-shadow-sm); border-radius: 14px; padding: 18px 20px; text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 6px; transition: border-color .15s, transform .15s, box-shadow .15s; }
+    .repo-card:hover { border-color: var(--garden-green); transform: translateY(-2px); box-shadow: var(--garden-shadow); }
+    .repo-name { font-size: .9rem; font-weight: 700; color: var(--garden-green-ink); font-family: 'Courier New', monospace; }
+    .repo-desc { font-size: .82rem; color: var(--garden-ink-soft); line-height: 1.5; }
+    .repo-meta { display: flex; gap: 12px; font-size: .75rem; color: var(--garden-ink-soft); margin-top: 4px; font-family: 'Courier New', monospace; }
     .tier-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 16px; }
-    .tier-card { border: .5px solid var(--border); border-radius: 12px; padding: 20px; }
+    .tier-card { background: #fff; border: 1px solid var(--garden-card-line); box-shadow: var(--garden-shadow-sm); border-radius: 14px; padding: 20px; }
     .tier-icon { font-size: 1.4rem; margin-bottom: 8px; }
     .tier-name { font-size: .9rem; font-weight: 700; margin-bottom: 4px; }
-    .tier-desc { font-size: .82rem; color: var(--muted); line-height: 1.5; margin-bottom: 12px; }
-    .tier-cta { font-size: .8rem; color: var(--teal-accessible); font-weight: 600; text-decoration: none; }
-    .tier-cta:hover { color: var(--teal-dark); }
+    .tier-desc { font-size: .82rem; color: var(--garden-ink-soft); line-height: 1.5; margin-bottom: 12px; }
+    .tier-cta { font-size: .8rem; color: var(--garden-green-ink); font-weight: 600; text-decoration: none; }
+    .tier-cta:hover { color: var(--garden-green-deep); text-decoration: underline; }
     .ways-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 14px; }
-    .way { background: var(--light); border-radius: 10px; padding: 18px; }
+    .way { background: var(--garden-cream); border: 1px solid var(--garden-card-line); box-shadow: var(--garden-shadow-sm); border-radius: 14px; padding: 18px; }
     .way-icon { font-size: 1.3rem; margin-bottom: 8px; }
     .way-title { font-size: .88rem; font-weight: 700; margin-bottom: 4px; }
-    .way-desc { font-size: .8rem; color: var(--muted); line-height: 1.5; }
-    .join-banner { background: var(--dark); color: var(--white); padding: 52px 0; text-align: center; }
-    .join-banner h2 { color: var(--white); margin-bottom: 10px; }
-    .join-banner p { color: rgba(255,255,255,.6); margin-bottom: 28px; font-size: .95rem; max-width: 460px; margin-left: auto; margin-right: auto; }
+    .way-desc { font-size: .8rem; color: var(--garden-ink-soft); line-height: 1.5; }
+    /* join banner — orchard-green band (newsletter treatment) */
+    .join-banner { background: var(--garden-green); color: #fff; padding: 52px 0; text-align: center; position: relative; overflow: hidden; }
+    .join-banner::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(420px 200px at 12% 110%, rgba(232,181,74,.22), transparent 70%), radial-gradient(420px 220px at 92% -10%, rgba(15,74,44,.55), transparent 70%); }
+    .join-banner .container { position: relative; }
+    .join-banner h2 { color: #fff; margin-bottom: 10px; }
+    .join-banner p { color: #F4FAF4; margin-bottom: 28px; font-size: .95rem; max-width: 460px; margin-left: auto; margin-right: auto; }
+    /* green-on-green fix: primary CTAs go warm orange inside the green band */
+    .join-banner .btn-primary { background: var(--garden-orange); color: var(--garden-charcoal); }
+    .join-banner .btn-primary:hover { background: #E98A40; }
   </style>
 </head>
 <body>
@@ -209,6 +229,7 @@
           <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
         </svg>
       </a>
+      <p class="estate-creed">Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes, and keep the garden of humanity growing.</p>
       <p>Governance Versioned Like Code. Tested Before Deployment.</p>
     </div>
         <nav class="footer-nav">

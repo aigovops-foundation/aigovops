@@ -9,14 +9,20 @@
   <meta property="og:title" content="#F-AI-Friday — 100 Verified AI-Harm Cases">
   <meta property="og:description" content="100 real AI failures with primary sources. One per day. Each carries the gate that would have caught it.">
   <meta property="og:type" content="website">
+  <!-- M6b garden-warm skin (shared system) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/garden.css" />
   <style>
+    /* ── #F-AI-Friday — garden-warm skin (M6b): dark local palette re-mapped ── */
     :root {
-      --bg: #0a0e14; --bg-card: #131820; --bg-accent: #1a2030;
-      --fg: #e8eaed; --fg-dim: #9aa0a6; --fg-faint: #5f6368;
-      --border: #2d333d; --accent: #4fc3f7; --accent-warm: #ffb74d;
-      --no: #ef5350; --maybe: #ffb74d; --yes: #66bb6a;
-      --serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --bg: var(--garden-cream); --bg-card: #fff; --bg-accent: var(--garden-deep-cream);
+      --fg: var(--garden-charcoal); --fg-dim: var(--garden-ink-soft); --fg-faint: var(--garden-ink-soft);
+      --border: var(--garden-line); --accent: var(--garden-green-ink); --accent-warm: var(--garden-orange-ink);
+      --no: #B22222; --maybe: var(--garden-orange-ink); --yes: var(--garden-green-ink);
+      --serif: var(--garden-serif);
+      --sans: var(--garden-sans);
       --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
     }
     * { box-sizing: border-box; }
@@ -30,11 +36,11 @@
     .nav { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 24px; font-size: 13px; color: var(--fg-dim); }
     .nav button, .nav a {
       background: var(--bg-card); border: 1px solid var(--border); color: var(--fg);
-      padding: 7px 13px; border-radius: 4px; cursor: pointer; font-size: 13px;
+      padding: 7px 13px; border-radius: 999px; cursor: pointer; font-size: 13px;
       text-decoration: none; font-family: inherit;
     }
-    .nav button:hover, .nav a:hover { background: var(--bg-accent); border-color: var(--accent); }
-    .nav .primary { background: var(--accent); color: #000; font-weight: 600; border-color: var(--accent); }
+    .nav button:hover, .nav a:hover { background: var(--bg-accent); border-color: var(--garden-green); }
+    .nav .primary { background: var(--garden-green); color: #fff; font-weight: 600; border-color: var(--garden-green); }
     .nav .spacer { flex: 1; }
     .filter-row { display: flex; gap: 8px; align-items: center; margin-bottom: 16px; flex-wrap: wrap; }
     .filter-row input, .filter-row select {
@@ -42,7 +48,7 @@
       padding: 7px 11px; border-radius: 4px; font-family: inherit; font-size: 13px;
     }
     .filter-row input { flex: 1; min-width: 200px; }
-    .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 32px; margin-bottom: 16px; }
+    .card { background: var(--bg-card); border: 1px solid var(--garden-card-line); box-shadow: var(--garden-shadow-sm); border-radius: 14px; padding: 32px; margin-bottom: 16px; }
     .card .id { font-family: var(--mono); font-size: 12px; color: var(--fg-faint); letter-spacing: 0.05em; }
     .card h2 { margin: 8px 0 4px; font-family: var(--serif); font-size: 26px; font-weight: 600; letter-spacing: -0.01em; }
     .card h2 .year { color: var(--fg-faint); font-weight: 400; }
@@ -63,6 +69,7 @@
     .framework-list li { font-family: var(--mono); font-size: 11px; background: var(--bg-accent); padding: 4px 8px; border-radius: 3px; color: var(--fg); }
     footer { max-width: 880px; margin: 0 auto; padding: 32px 24px; border-top: 1px solid var(--border); font-size: 12px; color: var(--fg-faint); }
     footer a { color: var(--accent); }
+    footer code { word-break: break-all; } /* the corpus SHA-256 must wrap on narrow screens */
     .results-count { font-family: var(--mono); font-size: 12px; color: var(--fg-dim); margin-bottom: 12px; }
     .no-results { text-align: center; padding: 60px 20px; color: var(--fg-dim); }
     @media (max-width: 600px) {
@@ -74,7 +81,7 @@
     /* a11y pack */
     a:focus-visible, button:focus-visible, summary:focus-visible, [role="button"]:focus-visible,
     input:focus-visible, select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible {
-      outline: 2px solid #1d9e75; outline-offset: 2px;
+      outline: 3px solid var(--garden-orange); outline-offset: 2px;
     }
     @media (prefers-reduced-motion: reduce) {
       * { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
@@ -113,6 +120,7 @@
     <div id="content"></div>
   </main>
   <footer>
+    <p>Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes, and keep the garden of humanity growing.</p>
     <p>Batch 2026-W24 · 100 entries · re-verified across 6 review turns against primary sources.<br>
     Tier: 67 primary / 33 strong-secondary / 0 single-source. Verdict: 85 No-stop / 13 Maybe-needs-owner / 2 Yes-earned (gate held).<br>
     Corpus SHA-256: <code style="font-size:11px">b86e0a7e3670d623c239815536b8453c85d6d3b958e7c733a76dd4bdf47738b2</code><br>

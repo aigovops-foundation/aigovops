@@ -7,18 +7,19 @@
 <link rel="canonical" href="https://www.aigovops-foundation.com/jeeves-estate.html" />
 <meta name="description" content="One run, every property. Jeeves proposes an action on each AiGovOps site; reversible work runs itself, anything irreversible waits in one queue for Ken or Bob to approve. The whole estate, one gate." />
 <style>
+  /* garden-warm skin (M6b): the demo keeps its own token set, re-pointed to garden values */
   :root{
-    --navy:#0c1c2e; --ink:#16304a; --teal:#0f6e56; --teal-d:#0b5743; --gold:#9a6410;
-    --page:#f5f8f7; --card:#fff; --line:#e4ebe8; --muted:#5e6f69;
-    --green:#0f7a45; --green-w:#e8f3ec; --amber:#9a6410; --amber-w:#fbf0dd; --red:#a3242b; --red-w:#fbe9ea; --gray:#7c867f; --gray-w:#eef1ef;
+    --navy:#2B2B28; --ink:#4C4A42; --teal:#1F5E3A; --teal-d:#0F4A2C; --gold:#9C4E12;
+    --page:#FAF7F0; --card:#fff; --line:rgba(43,43,40,.14); --muted:#4C4A42;
+    --green:#1F5E3A; --green-w:#e8f3ec; --amber:#9C4E12; --amber-w:#FAEEDA; --red:#a3242b; --red-w:#fbe9ea; --gray:#5F5C52; --gray-w:#EFEBE0;
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; --serif:Georgia,"Times New Roman",serif;
   }
   *{box-sizing:border-box} body{margin:0;background:var(--page);color:var(--ink);font-family:var(--sans);line-height:1.55}
   .wrap{max-width:920px;margin:0 auto;padding:0 18px}
-  header.site{background:linear-gradient(135deg,#0c1c2e,#0a2318 80%);color:#fff;padding:26px 0 22px}
-  .brand{display:flex;align-items:center;gap:11px;font-size:13px;color:#8fd3ba;letter-spacing:.12em;text-transform:uppercase}
+  header.site{background:linear-gradient(135deg,#2E7D4F,#0F4A2C 80%);color:#fff;padding:26px 0 22px}
+  .brand{display:flex;align-items:center;gap:11px;font-size:13px;color:#F4FAF4;letter-spacing:.12em;text-transform:uppercase}
   h1{font-family:var(--serif);font-weight:700;font-size:clamp(1.6rem,3.6vw,2.3rem);margin:13px 0 7px;color:#fff;line-height:1.13}
-  header.site p{color:rgba(255,255,255,.78);max-width:640px;margin:0;font-size:1rem}
+  header.site p{color:#F4FAF4;max-width:640px;margin:0;font-size:1rem}
   main{padding:22px 0 30px}
   .bar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:16px}
   .run{display:inline-flex;align-items:center;gap:9px;background:var(--teal);color:#fff;border:none;border-radius:11px;padding:12px 20px;font-size:1rem;font-weight:700;cursor:pointer;font-family:var(--sans);transition:.15s}
@@ -28,7 +29,7 @@
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:22px}
   .prop{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 14px;transition:.2s}
   .prop .top{display:flex;align-items:center;gap:8px;margin-bottom:7px}
-  .prop .ic{width:30px;height:30px;border-radius:8px;background:#0c1c2e;display:grid;place-items:center;flex:0 0 auto}
+  .prop .ic{width:30px;height:30px;border-radius:8px;background:#2B2B28;display:grid;place-items:center;flex:0 0 auto}
   .prop .ic svg{width:16px;height:16px;stroke:#5dcaa5;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
   .prop .nm{font-weight:700;font-size:14px;color:var(--navy)} .prop .nm small{display:block;font-weight:400;font-size:11px;color:var(--gray);text-transform:uppercase;letter-spacing:.06em}
   .prop .prop-do{font-size:12.5px;color:var(--muted);min-height:34px} .prop .prop-do em{color:var(--teal);font-style:normal;font-weight:600}
@@ -49,6 +50,9 @@
   footer.site a{color:var(--teal);font-weight:600;text-decoration:none}
   .done-msg{display:none;background:var(--navy);color:#fff;border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:14px}
   .done-msg.on{display:block} .done-msg b{color:#5dcaa5}
+  /* the legend dots carry inline hexes (attrs untouched) — re-ink to garden */
+  .key i[style*="#0f7a45"]{background:#1F5E3A!important}
+  .key i[style*="#9a6410"]{background:#9C4E12!important}
 </style>
 </head>
 <body>
@@ -72,7 +76,8 @@
   <p class="key"><i style="background:#0f7a45"></i>ran on its own (reversible)<i style="background:#9a6410"></i>waiting for you (irreversible)<i style="background:#a3242b"></i>you said no</p>
 </div></main>
 
-<footer class="site"><div class="wrap">
+<footer class="site">
+  <p class="estate-creed" style="font-style:italic;opacity:.85;margin:0 0 .6em">Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes, and keep the garden of humanity growing.</p><div class="wrap">
   This is the whole estate through one gate. See it live: <a href="https://community.aigovops-foundation.com/" target="_blank" rel="noopener">enter the fleet ↗</a> · <a href="ecosystem.html">the ecosystem map</a> · <a href="jeeves-demo.html">the single-task story</a>
 </div></footer>
 

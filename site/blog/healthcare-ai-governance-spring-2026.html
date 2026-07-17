@@ -16,6 +16,11 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="author" content="Ken Johnston" />
   <link rel="stylesheet" href="../css/style.css" />
+  <!-- M6b garden-warm skin (shared system) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/garden.css" />
   <script src="../js/i18n/i18n.js"></script>
   <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
   <script type="application/ld+json">
@@ -35,6 +40,19 @@
     "url": "https://www.aigovops-foundation.com/blog/healthcare-ai-governance-spring-2026.html"
   }
   </script>
+  <style>
+    /* ── Blog post — garden-warm skin (M6b) ── */
+    /* re-point the vars the inline article styles consume */
+    :root {
+      --teal-accessible: #1F5E3A;         /* eyebrow + back-links go garden green-ink */
+      --text: var(--garden-charcoal);     /* long-form body copy: charcoal on cream */
+      --muted: var(--garden-ink-soft);
+      --light: var(--garden-deep-cream);  /* "read the full article" panel ground */
+      --border: var(--garden-line);
+    }
+    /* footer-brand's mission paragraph is not the motto — keep it readable */
+    .footer-brand p:nth-of-type(2) { font-size: .85rem; font-weight: 400; letter-spacing: normal; text-transform: none; color: var(--garden-on-dark-dim); }
+  </style>
 </head>
 <body>
 
@@ -99,6 +117,7 @@
   <div class="container footer-inner">
     <div class="footer-brand">
       <span class="logo-text footer-logo" style="color:#fff;font-size:1.1rem;">AiGovOps Foundation</span>
+      <p>Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes, and keep the garden of humanity growing.</p>
       <p style="margin-top:16px">The AiGovOps Foundation is dedicated to shaping the future of artificial intelligence through rigorous oversight, audit, and compliance.</p>
       <address>Seattle, WA 98104 &bull; <a href="mailto:bob.rapp@aigovops.community">bob.rapp@aigovops.community</a></address>
     </div>

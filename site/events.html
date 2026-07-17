@@ -7,9 +7,24 @@
 <link rel="canonical" href="https://www.aigovops-foundation.com/events.html" />
   <meta name="description" content="Upcoming events from the AiGovOps Foundation." />
   <link rel="stylesheet" href="css/style.css" />
+  <!-- M6b garden-warm skin (shared system) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/garden.css" />
   <script src="js/i18n/i18n.js"></script>
   <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
   <link rel="alternate" type="application/rss+xml" title="AiGovOps Foundation Feed" href="/feed.xml" />
+  <style>
+    /* ── Events page — garden-warm skin (M6b) ── */
+    /* the coming-soon hero uses the homepage .hero gradient — re-ground it daylight */
+    .hero { background: var(--garden-deep-cream); color: var(--garden-charcoal); position: relative; overflow: hidden; }
+    .hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(480px 220px at 10% 115%, rgba(232,181,74,.28), transparent 70%), radial-gradient(460px 220px at 92% -15%, rgba(46,125,79,.16), transparent 70%); }
+    .hero .container { position: relative; }
+    .hero-eyebrow { color: var(--garden-green-ink); }
+    .hero h1 { font-weight: 600; }
+    .hero-sub { color: var(--garden-ink-soft); }
+  </style>
 </head>
 <body>
 
@@ -54,6 +69,7 @@
   <div class="container footer-inner">
     <div class="footer-brand">
       <a href="index.html"><img src="images/logo-footer.png" alt="AiGovOps Foundation" class="footer-logo" /></a>
+      <p>Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes, and keep the garden of humanity growing.</p>
       <p>Governance Versioned Like Code. Tested Before Deployment.</p>
     </div>
         <nav class="footer-nav">
