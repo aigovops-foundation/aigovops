@@ -64,7 +64,7 @@ const RESOURCES = {
     label: 'Browse 40+ governance frameworks',
     cta:   'Explore Frameworks →',
   },
-  alpha: { url: 'alpha.html', label: 'Alpha · the Library', cta: '🧪 Enter the lab' },
+  alpha: { url: 'stay-at-yes.html', label: 'Alpha · the Library', cta: '🧪 Enter the lab' },
 };
 // ────────────────────────────────────────────────────────────────────────────
 

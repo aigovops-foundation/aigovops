@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recover to Yes — when it breaks | AiGovOps Foundation</title>
+<link rel="canonical" href="https://www.aigovops-foundation.com/recover-to-yes.html" />
+  <meta name="description" content="Recover to yes — when it breaks. 100 verified AI-harm cases with the gates that would have caught them, the practitioner test, FailFest, and the recovery posture that turns a break back into an earned yes." />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <meta property="og:title" content="Recover to Yes — when it breaks | AiGovOps Foundation" />
+  <meta property="og:url" content="https://www.aigovops-foundation.com/recover-to-yes.html" />
+  <link rel="alternate" type="application/rss+xml" title="AiGovOps Foundation Feed" href="/feed.xml" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- M6b garden-warm skin (shared system) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/garden.css" />
+  <script src="js/i18n/i18n.js"></script>
+  <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
+  <style>
+    /* ── Recover-to-Yes hub — garden-warm skin (M13: the third movement's home) ── */
+    :root { --teal-accessible: #1F5E3A; --muted: var(--garden-ink-soft); }
+
+    .rec-hero { background: var(--garden-deep-cream); color: var(--garden-charcoal); padding: 60px 0 48px; text-align: center; position: relative; overflow: hidden; }
+    .rec-hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(480px 220px at 10% 115%, rgba(232,181,74,.28), transparent 70%), radial-gradient(460px 220px at 92% -15%, rgba(46,125,79,.16), transparent 70%); }
+    .rec-hero .container { position: relative; }
+    .rec-hero .hero-eyebrow { color: var(--garden-green-ink); font-family: 'Courier New', monospace; font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 12px; }
+    .rec-hero h1 { font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight: 600; margin-bottom: 12px; }
+    .rec-hero p { color: var(--garden-ink-soft); font-size: .95rem; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+    /* the lead asset — the F-AI-Friday corpus card */
+    .corpus-card { background: #fff; border: 1.5px solid var(--garden-green); box-shadow: var(--garden-shadow); border-radius: 16px; padding: 30px 32px; max-width: 760px; margin: 0 auto; }
+    .corpus-card h2 { margin: 0 0 6px; font-size: 1.4rem; }
+    .corpus-card p { color: var(--garden-ink-soft); font-size: .95rem; line-height: 1.6; margin: 0 0 20px; }
+    /* the companion assets */
+    .rec-assets { display: grid; grid-template-columns: repeat(auto-fit, minmax(248px,1fr)); gap: 18px; }
+    .rec-asset { background: #fff; border: 1px solid var(--garden-card-line); box-shadow: var(--garden-shadow-sm); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; }
+    .rec-asset h3 { font-size: 1.05rem; font-weight: 700; margin: 0 0 2px; }
+    .rec-asset .role { font-size: .86rem; color: var(--garden-ink-soft); margin-bottom: 14px; line-height: 1.55; }
+    .rec-asset .go { margin-top: auto; font-size: .82rem; font-weight: 600; color: var(--garden-green-ink); text-decoration: none; }
+    .rec-asset .go:hover { color: var(--garden-green-deep); }
+
+    /* one gate-law explainer (the 1/?/0 block, once — moved here from See-It-Run: recovery is where the 0 and ? matter) */
+    .gatelaw-section { background: var(--garden-deep-cream); padding: 56px 24px; }
+    .gatelaw-section .container { max-width: 880px; }
+    .gatelaw-section h2 { font-size: 1.5rem; margin: 0 0 8px; }
+    .gatelaw-section .lede { color: var(--garden-ink-soft); max-width: 62ch; line-height: 1.65; margin: 0 0 22px; }
+    .gatelaw { display: flex; gap: 10px; flex-wrap: wrap; margin: 0; }
+    .glaw { flex: 1 1 200px; border: 1px solid var(--garden-card-line); border-radius: 12px; padding: 14px 16px; background: #fff; box-shadow: var(--garden-shadow-sm); }
+    .glaw b { font-size: 1.5rem; font-family: 'Courier New', monospace; line-height: 1; }
+    .glaw.yes b { color: var(--garden-green-ink); } .glaw.no b { color: #b4232a; } .glaw.hold b { color: #854f0b; }
+    .glaw p { margin: 6px 0 0; font-size: .88rem; color: var(--garden-ink-soft); line-height: 1.45; }
+
+    .next-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+    /* re-band the inline-styled sections (inline attrs stay untouched) */
+    .section[style*="--white"] { background: var(--garden-cream) !important; }
+    .section[style*="--light"] { background: var(--garden-deep-cream) !important; }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo-link" aria-label="AiGovOps Foundation home">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="height:38px;width:38px;flex-shrink:0">
+        <title>AiGovOps Foundation</title>
+        <circle cx="100" cy="100" r="96" fill="#071a12"/>
+        <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+        <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+        <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
+        <ellipse cx="100" cy="57" rx="4" ry="6" fill="#9fe1cb" opacity="0.95"/>
+        <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+      </svg>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="get-to-yes.html">Get to Yes</a>
+      <a href="stay-at-yes.html">Stay at Yes</a>
+      <a href="recover-to-yes.html" class="active">Recover to Yes</a>
+      <a href="blog.html" data-i18n="nav.blog">Blog</a>
+      <a href="community.html" class="nav-join">Join</a>
+    </nav>
+    <div class="lang-toggle" aria-label="Language selector">
+      <button class="lang-btn lang-active" data-lang="en" onclick="window.I18N_SET('en')">EN</button>
+      <button class="lang-btn" data-lang="es" onclick="window.I18N_SET('es')">ES</button>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="rec-hero">
+    <div class="container">
+      <p class="hero-eyebrow">Recover to yes · when it breaks</p>
+      <h1>Recover to Yes — when it breaks</h1>
+      <p>Things break — that&rsquo;s not the failure. The failure is pretending they won&rsquo;t. This is the recovery shelf: real harms studied case by case, a test to sharpen your own verdicts, and the posture that turns a break back into an earned yes.</p>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--white)">
+    <div class="container">
+      <div class="corpus-card">
+        <h2>🔁 #F-AI-Friday — 100 verified AI-harm cases</h2>
+        <p>A daily rotation through real, source-cited AI failures from 1999 to 2025. Curated, re-verified across 6 review turns by the AiGovOps Foundation. No padding. No vibes. Just gates — each case carries the gate that would have caught it.</p>
+        <a href="f-ai-friday.html" class="btn btn-primary" onclick="if(window.plausible)plausible('Recover: F-AI-Friday corpus')">Open the corpus →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--light)">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center">Practice the recovery</h2>
+      <div class="rec-assets">
+        <div class="rec-asset">
+          <h3>📝 The practitioner test</h3>
+          <div class="role">A 10-question practitioner test drawn from the 100 verified, source-cited AI-harm incidents. Read the case, pick the gate verdict, see the answer. In the members&rsquo; Library — join free; the source stays public.</div>
+          <a class="go" href="https://community.aigovops-foundation.com/library/practitioner.html" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Recover: practitioner test')">Take the test →</a>
+        </div>
+        <div class="rec-asset">
+          <h3>🎪 #FridayFailFest</h3>
+          <div class="role">The Library&rsquo;s rotation through the same corpus — one verified harm case a day, each with the gate that would have caught it. In the members&rsquo; Library — join free.</div>
+          <a class="go" href="https://community.aigovops-foundation.com/library/failfest.html" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Recover: FailFest')">Visit FailFest →</a>
+        </div>
+        <div class="rec-asset">
+          <h3>🛠️ The recovery posture</h3>
+          <div class="role">Durability is designed, not hoped for: the Library runs a two-layer architecture — always-up CDN hub, Fly-backed dynamic core — and every hold that nobody approves decays safely to 0. The durability plan is the written posture.</div>
+          <a class="go" href="https://community.aigovops-foundation.com/library/durability-plan.html" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Recover: durability plan')">Read the durability plan →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE GATE LAW (once, site-wide — moved from the See-It-Run page) -->
+  <section class="gatelaw-section">
+    <div class="container">
+      <h2>One gate law runs through everything.</h2>
+      <p class="lede">Every action — a Library decision, an agent&rsquo;s send, a vendor shortlist — is a proposal, and the gate answers in exactly one of three ways:</p>
+      <div class="gatelaw">
+        <div class="glaw yes"><b>1</b><p>Yes — earned, with evidence. Runs once, on a single-use receipt.</p></div>
+        <div class="glaw no"><b>0</b><p>No — refused, and written to the ledger.</p></div>
+        <div class="glaw hold"><b>?</b><p>Held for a human — and decays to 0 if no one approves by the deadline.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--white)">
+    <div class="container" style="text-align:center">
+      <h2 class="section-title">Where to next</h2>
+      <div class="next-ctas">
+        <a href="community.html" class="btn btn-primary btn-large" onclick="if(window.plausible)plausible('Recover: Come join')">🌿 Come join →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" aria-label="AiGovOps Foundation home">
+        <svg style="height:32px;width:32px" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="96" fill="#071a12"/>
+          <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+          <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+          <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
+          <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+        </svg>
+      </a>
+      <p>Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes, and keep the garden of humanity growing.</p>
+      <p>Governance Versioned Like Code. Tested Before Deployment.</p>
+    </div>
+        <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="get-to-yes.html">Get to Yes</a>
+      <a href="stay-at-yes.html">Stay at Yes</a>
+      <a href="recover-to-yes.html">Recover to Yes</a>
+      <a href="https://community.aigovops-foundation.com" target="_blank" rel="noopener">Community platform</a>
+      <a href="https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/" target="_blank" rel="noopener">Library</a>
+      <a href="https://aigovops-foundation.github.io/aigovops-beacon/" target="_blank" rel="noopener">Beacon</a>
+      <a href="https://aigovops-foundation.github.io/umbrella-govops/" target="_blank" rel="noopener">Umbrella</a>
+      <a href="https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/" target="_blank" rel="noopener">NCW AI Camp</a>
+      <a href="blog.html">Blog</a>
+      <a href="frameworks.html">Frameworks</a>
+      <a href="support.html">Support</a>
+      <a href="press.html">Press</a>
+      <a href="founders.html#ken">Ken Johnston</a>
+      <a href="founders.html#bob">Bob Rapp</a>
+      <a href="/feed.xml">RSS</a>
+      <a href="https://aigovops.substack.com/" target="_blank" rel="noopener">Newsletter</a>
+      <a href="https://luma.com/aigovops" target="_blank" rel="noopener">Events</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <div class="container"><p>© 2026 AiGovOps Foundation — 501(c)(3) Nonprofit</p></div>
+  </div>
+</footer>
+<script>
+const t = document.querySelector('.nav-toggle'), n = document.querySelector('.main-nav');
+if (t && n) t.addEventListener('click', () => { const o = n.classList.toggle('open'); t.setAttribute('aria-expanded', o); });
+</script>
+  <script src="/jeeves-widget.js" data-jeeves-site="foundation" defer></script>
+<script src="feedback.js" class="aig-feedback-loader" defer></script>
+<script>
+// Mobile nav — inject secondary links when menu opens on small screens (M13: Press / Founders / Support)
+(function() {
+  const toggle = document.querySelector('.nav-toggle');
+  const nav    = document.querySelector('.main-nav');
+  if (!toggle || !nav) return;
+  const EXTRA = [
+    { href: '/press.html',     label: 'Press' },
+    { href: '/founders.html',  label: 'Founders' },
+    { href: '/support.html',   label: 'Support' },
+  ];
+  let injected = false;
+  toggle.addEventListener('click', () => {
+    if (injected) return;
+    const current = window.location.pathname.replace(/\/$/, '') || '/index.html';
+    EXTRA.forEach(item => {
+      const alreadyInNav = [...nav.querySelectorAll('a')].some(a => a.getAttribute('href') === item.href || a.href.endsWith(item.href));
+      if (alreadyInNav) return;
+      const a = document.createElement('a');
+      a.href  = item.href;
+      a.textContent = item.label;
+      a.style.cssText = 'font-size:.85rem;color:var(--muted)';
+      if (current.endsWith(item.href.replace(/^\//, ''))) a.classList.add('active');
+      nav.appendChild(a);
+    });
+    injected = true;
+  });
+})();
+</script>
+</body>
+</html>

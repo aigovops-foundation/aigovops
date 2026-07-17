@@ -7,10 +7,11 @@ SITE="${SITE_URL:-https://www.aigovops-foundation.com}"
 echo ""
 echo "🚨  HTTP Error Detection Tests"
 echo ""
-echo "  [No server errors — all 21 top-level pages]"
+echo "  [No server errors — all 24 top-level pages]"
 for p in "/" "/404.html" "/admin.html" "/alpha.html" "/blog.html" "/bob.html" \
          "/community.html" "/demo.html" "/ecosystem.html" "/events.html" \
-         "/f-ai-friday.html" "/frameworks.html" "/jeeves-brief.html" \
+         "/f-ai-friday.html" "/frameworks.html" "/get-to-yes.html" \
+         "/stay-at-yes.html" "/recover-to-yes.html" "/jeeves-brief.html" \
          "/jeeves-console.html" "/jeeves-demo.html" "/jeeves-estate.html" \
          "/jeeves-front.html" "/ken.html" "/press.html" "/status.html" "/support.html"; do
   error_no_5xx "$SITE$p"

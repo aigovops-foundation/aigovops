@@ -341,10 +341,12 @@ checkFalse('deploy.yml retired (not active)', fs.existsSync(path.join(__dirname,
 checkTrue('deploy.yml.disabled preserved', fs.existsSync(path.join(__dirname,'../.github/workflows/deploy.yml.disabled')));
 
 // ── Alpha: Vendor RFI integration (project 2 of 2) ────────────────────────
-console.log('\n  [Alpha — Vendor RFI]');
-const alphaHtml = fs.readFileSync(path.join(__dirname, '../alpha.html'), 'utf8');
+// M13 three doors: the alpha deep-dives moved wholesale to stay-at-yes.html
+// (alpha.html is now a redirect stub).
+console.log('\n  [Alpha — Vendor RFI (stay-at-yes.html)]');
+const alphaHtml = fs.readFileSync(path.join(__dirname, '../stay-at-yes.html'), 'utf8');
 const RFI = 'https://aigovops-foundation.github.io/aigovops-vendor-rfi';
-checkTrue('alpha.html has the Vendor RFI section',          alphaHtml.includes('Vendor RFI'));
+checkTrue('stay-at-yes.html has the Vendor RFI section',          alphaHtml.includes('Vendor RFI'));
 checkTrue('alpha links to the Vendor RFI hub',             alphaHtml.includes(`${RFI}/`));
 checkTrue('alpha links to audit training',                 alphaHtml.includes(`${RFI}/training.html`));
 checkTrue('alpha links to the 50-vendor comparison',       alphaHtml.includes(`${RFI}/comparison.html`));

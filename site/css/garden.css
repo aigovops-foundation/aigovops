@@ -85,6 +85,21 @@ input:focus-visible, [tabindex]:focus-visible {
   color: var(--garden-green-deep);
   border-bottom-color: var(--garden-green);
 }
+/* M13 three doors — "Join" is the nav's one primary action: a filled
+   garden-green pill, consistent on every page that carries the site nav. */
+.main-nav a.nav-join {
+  background: var(--garden-green);
+  color: #fff;
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-weight: 600;
+  border-bottom-color: transparent;
+}
+.main-nav a.nav-join:hover, .main-nav a.nav-join.active {
+  background: var(--garden-green-deep);
+  color: #fff;
+  border-bottom-color: transparent;
+}
 .nav-toggle { color: var(--garden-charcoal); }
 .main-nav.open { background: var(--garden-cream); border-bottom: 1px solid var(--garden-line); }
 .lang-btn { border-color: var(--garden-line); color: var(--garden-ink-soft); }

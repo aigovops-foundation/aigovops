@@ -6,10 +6,11 @@ PASS=0; FAIL=0
 SITE="${SITE_URL:-https://www.aigovops-foundation.com}"
 APEX="${APEX_URL:-https://aigovops-foundation.com}"
 MAXMS="${MAX_LATENCY_MS:-3000}"
-# All 21 top-level pages + the 9 blog posts (mirrors the repo's page inventory).
+# All 24 top-level pages + the 9 blog posts (mirrors the repo's page inventory).
 PAGES=("/" "/404.html" "/admin.html" "/alpha.html" "/blog.html" "/bob.html"
        "/community.html" "/demo.html" "/ecosystem.html" "/events.html"
-       "/f-ai-friday.html" "/frameworks.html" "/jeeves-brief.html"
+       "/f-ai-friday.html" "/frameworks.html" "/get-to-yes.html"
+       "/stay-at-yes.html" "/recover-to-yes.html" "/jeeves-brief.html"
        "/jeeves-console.html" "/jeeves-demo.html" "/jeeves-estate.html"
        "/jeeves-front.html" "/ken.html" "/press.html" "/status.html" "/support.html")
 BLOG_PAGES=("/blog/agentic-frontiers-retrospective.html" "/blog/agentic-hell.html"

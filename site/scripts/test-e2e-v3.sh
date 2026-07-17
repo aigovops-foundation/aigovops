@@ -186,9 +186,9 @@ error_soft_404 "$SITE/" "There isn't a GitHub Pages site here"
 
 echo ""
 
-# ── ALPHA — VENDOR RFI INTEGRATION ─────────────────────────────────────────
-echo "  [Alpha — Vendor RFI]"
-ALPHA=$(body "$SITE/alpha.html")
+# ── ALPHA — VENDOR RFI INTEGRATION (M13: lives on stay-at-yes.html) ────────
+echo "  [Alpha — Vendor RFI (stay-at-yes.html)]"
+ALPHA=$(body "$SITE/stay-at-yes.html")
 echo "$ALPHA" | grep -q "aigovops-vendor-rfi" \
   && check "alpha page links the Vendor RFI" "ok" \
   || check "alpha page links the Vendor RFI" "link missing"

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stay at Yes — while it runs | AiGovOps Foundation</title>
+<link rel="canonical" href="https://www.aigovops-foundation.com/stay-at-yes.html" />
+  <meta name="description" content="Stay at yes — while it runs. The open-source toolkit (Beacon, Umbrella, the Vendor RFI), the live gates, and two alpha projects running in front of you — every step on the record." />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <meta property="og:title" content="Stay at Yes — while it runs | AiGovOps Foundation" />
+  <meta property="og:description" content="The open-source toolkit, the live gates, and two alpha projects, live — a governed agent platform and an open vendor RFI, every step on the record." />
+  <meta property="og:image" content="https://www.aigovops-foundation.com/images/founders.jpg" />
+  <meta property="og:url" content="https://www.aigovops-foundation.com/stay-at-yes.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- M6b garden-warm skin (shared system) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/garden.css" />
+  <script src="js/i18n/i18n.js"></script>
+  <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
+  <style>
+    /* ── Stay-at-Yes hub — garden-warm skin (M13: alpha reborn as a movement hub) ── */
+    /* Inline markup (active nav link) uses var(--teal-accessible); re-point it. */
+    :root { --teal-accessible: #1F5E3A; }
+
+    .support-hero { background: var(--garden-deep-cream); color: var(--garden-charcoal); padding: 72px 0 56px; text-align: center; position: relative; overflow: hidden; }
+    .support-hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(480px 220px at 10% 115%, rgba(232,181,74,.28), transparent 70%), radial-gradient(460px 220px at 92% -15%, rgba(46,125,79,.16), transparent 70%); }
+    .support-hero .container { position: relative; }
+    .support-hero .hero-eyebrow { color: var(--garden-green-ink); font-family: 'Courier New', monospace; font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .16em; margin-bottom: 14px; }
+    .support-hero h1 { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 600; margin-bottom: 16px; }
+    .support-hero p { font-size: 1.05rem; color: var(--garden-ink-soft); max-width: 620px; margin: 0 auto; line-height: 1.6; }
+
+    /* open-source toolkit cards */
+    .tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(248px,1fr)); gap: 18px; }
+    .tool { background: #fff; border: 1px solid var(--garden-card-line); box-shadow: var(--garden-shadow-sm); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; }
+    .tool .tag { font-family: 'Courier New', monospace; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--garden-green-ink); margin-bottom: 8px; }
+    .tool h3 { font-size: 1.05rem; font-weight: 700; margin: 0 0 6px; }
+    .tool p { font-size: .86rem; color: var(--garden-ink-soft); line-height: 1.55; margin: 0 0 14px; }
+    .tool .go { margin-top: auto; font-size: .82rem; font-weight: 600; color: var(--garden-green-ink); text-decoration: none; }
+    .tool .go:hover { color: var(--garden-green-deep); }
+
+    /* live gates links */
+    .gates-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(248px,1fr)); gap: 18px; }
+    .gate-link { background: var(--garden-cream); border: 1px solid var(--garden-card-line); box-shadow: var(--garden-shadow-sm); border-radius: 14px; padding: 20px 22px; text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 6px; transition: border-color .15s, transform .15s; }
+    .gate-link:hover { border-color: var(--garden-green); transform: translateY(-2px); }
+    .gate-link b { color: var(--garden-green-ink); font-size: .95rem; }
+    .gate-link span { font-size: .82rem; color: var(--garden-ink-soft); line-height: 1.5; }
+
+    /* watch-it-run subsections folded in from the demo acts */
+    .watch { margin-top: 34px; border-top: 1px dashed rgba(46,125,79,.45); padding-top: 26px; }
+    .watch .watch-eyebrow { font-family: 'Courier New', monospace; text-transform: uppercase; letter-spacing: .14em; font-size: .72rem; font-weight: 700; color: var(--garden-green-ink); margin: 0 0 10px; }
+    .watch h3 { font-size: 1.05rem; margin: 0 0 12px; }
+    /* the phone mock and receipt keep their own dark device surfaces (load-bearing) */
+    .phone { max-width: 380px; background: #0e141b; border-radius: 18px; padding: 14px; border: 1px solid #2a333c; }
+    .bub { font-size: .86rem; line-height: 1.5; border-radius: 12px; padding: 9px 12px; margin: 0 0 8px; max-width: 88%; }
+    .bub:last-child { margin-bottom: 0; }
+    .bub.me { background: #14b393; color: #04241c; margin-left: auto; font-family: 'Courier New', monospace; }
+    .bub.bot { background: #192330; color: #e2e7e9; }
+    .bub .dim { color: #9fb0bd; }
+    .bub .btns { display: flex; gap: 8px; margin-top: 8px; }
+    .bub .btns span { font-size: .78rem; font-weight: 700; padding: 4px 12px; border-radius: 8px; }
+    .bub .ap { background: #14b393; color: #04241c; } .bub .dn { border: 1px solid #3a4655; color: #9fb0bd; }
+    .embed { border: 1px solid var(--garden-card-line); border-radius: 14px; overflow: hidden; background: #fff; box-shadow: var(--garden-shadow-sm); }
+    .embed iframe { display: block; width: 100%; height: 520px; border: 0; position: relative; z-index: 1; background: transparent; }
+    .embed .cap { font-size: .82rem; color: var(--garden-ink-soft); padding: 9px 14px; background: var(--garden-deep-cream); border-top: 1px solid var(--garden-line); }
+    /* C1: garden-styled skeleton poster behind the eager-loaded iframe — visible
+       until the frame paints (the iframe stays transparent; onload fades it out) */
+    .embed-frame { position: relative; background: var(--garden-deep-cream); }
+    .embed-skeleton { position: absolute; inset: 0; z-index: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: var(--garden-deep-cream); transition: opacity .4s ease; }
+    .embed-skeleton .skel-eyebrow { font-family: 'Courier New', monospace; text-transform: uppercase; letter-spacing: .14em; font-size: .72rem; font-weight: 700; color: var(--garden-green-ink); }
+    .embed-skeleton .skel-bar { width: min(72%, 520px); height: 12px; border-radius: 999px; background: linear-gradient(90deg, rgba(46,125,79,.14), rgba(46,125,79,.3), rgba(46,125,79,.14)); background-size: 200% 100%; animation: skelShimmer 1.6s ease-in-out infinite; }
+    .embed-skeleton .skel-bar:nth-child(3) { width: min(56%, 400px); animation-delay: .2s; }
+    .embed-skeleton .skel-bar:nth-child(4) { width: min(64%, 460px); animation-delay: .4s; }
+    @keyframes skelShimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+    @media (prefers-reduced-motion: reduce) { .embed-skeleton .skel-bar { animation: none; } }
+    .embed-frame.embed-loaded .embed-skeleton { opacity: 0; }
+    .embed .embed-fallback { display: inline-block; margin-top: 4px; font-weight: 700; color: var(--garden-green-ink); text-decoration: underline; text-underline-offset: 3px; }
+    section[style*="background:#0e141b"] .embed .embed-fallback { color: #5DCAA5; }
+    .receipt { font-family: 'Courier New', monospace; font-size: .8rem; background: #0e141b; color: #9fe1cb; border-radius: 12px; padding: 16px; white-space: pre-wrap; overflow: auto; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; color: var(--garden-ink-soft); font-size: .86rem; margin: 0 0 20px; }
+    .flow b { color: var(--garden-charcoal); font-weight: 700; } .flow .ar { color: var(--garden-green-ink); font-weight: 700; }
+
+    /* Re-band the inline-styled body sections (inline attrs stay untouched) */
+    section[style*="background:#fff"] { background: var(--garden-cream) !important; }
+    section[style*="background:#f8f7f4"] { background: var(--garden-deep-cream) !important; }
+    /* Vendor RFI band: navy → charcoal, gold rule, AA-safe teal accents */
+    section[style*="background:#0e141b"] { background: var(--garden-charcoal) !important; border-top-color: var(--garden-gold) !important; }
+    section[style*="background:#0e141b"] p[style*="color:#14b393"] { color: #5DCAA5 !important; }
+    section[style*="background:#0e141b"] code[style*="color:#14b393"] { color: #5DCAA5 !important; }
+    section[style*="background:#0e141b"] .watch { border-top-color: rgba(250,247,240,.28); }
+    section[style*="background:#0e141b"] .watch .watch-eyebrow { color: #5DCAA5; }
+    section[style*="background:#0e141b"] .flow { color: #c4ccd2; }
+    section[style*="background:#0e141b"] .flow b { color: #fff; } section[style*="background:#0e141b"] .flow .ar { color: #5DCAA5; }
+    section[style*="background:#0e141b"] .embed { border-color: rgba(250,247,240,.2); }
+    section[style*="background:#0e141b"] .embed .cap { background: #192330; color: #c4ccd2; border-top-color: rgba(250,247,240,.15); }
+    /* eyebrow + body inks on the re-banded light sections */
+    section[style*="background:#fff"] p[style*="color:#888"] { color: var(--garden-ink-soft) !important; }
+    section[style*="background:#fff"] p[style*="color:#333"], section[style*="background:#fff"] ul[style*="color:#333"] { color: var(--garden-ink-soft) !important; }
+    section[style*="background:#f8f7f4"] p[style*="color:#444"] { color: var(--garden-ink-soft) !important; }
+  </style>
+  <link rel="alternate" type="application/rss+xml" title="AiGovOps Foundation Feed" href="/feed.xml" />
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- NAV -->
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo-link" aria-label="AiGovOps Foundation home">
+      <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AiGovOps Foundation Lantern logo" style="height:38px;width:38px;flex-shrink:0">
+        <title>AiGovOps Foundation</title>
+        <circle cx="100" cy="100" r="96" fill="#071a12"/>
+        <polygon points="100,100 42,0 158,0" fill="#9fe1cb" opacity="0.09"/>
+        <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+        <circle cx="100" cy="100" r="79" fill="none" stroke="#1d9e75" stroke-width="0.5" opacity="0.35"/>
+        <line x1="100" y1="4" x2="100" y2="11" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+        <line x1="100" y1="189" x2="100" y2="196" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+        <line x1="4" y1="100" x2="11" y2="100" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+        <line x1="189" y1="100" x2="196" y2="100" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+        <line x1="100" y1="18" x2="100" y2="10" stroke="#1d9e75" stroke-width="1.8" stroke-linecap="round"/>
+        <ellipse cx="100" cy="9" rx="7" ry="3" fill="none" stroke="#1d9e75" stroke-width="1.8"/>
+        <rect x="84" y="17" width="32" height="6" rx="2" fill="#085041"/>
+        <path d="M88 23 L80 41 L120 41 L112 23 Z" fill="#0f6e56"/>
+        <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+        <line x1="90" y1="41" x2="90" y2="93" stroke="#1d9e75" stroke-width="1" opacity="0.5"/>
+        <line x1="100" y1="41" x2="100" y2="93" stroke="#1d9e75" stroke-width="1" opacity="0.5"/>
+        <line x1="110" y1="41" x2="110" y2="93" stroke="#1d9e75" stroke-width="1" opacity="0.5"/>
+        <line x1="78" y1="67" x2="122" y2="67" stroke="#1d9e75" stroke-width="1.2" opacity="0.5"/>
+        <rect x="78" y="41" width="44" height="52" rx="1.5" fill="none" stroke="#1d9e75" stroke-width="1"/>
+        <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
+        <ellipse cx="100" cy="57" rx="4" ry="6" fill="#9fe1cb" opacity="0.95"/>
+        <ellipse cx="100" cy="55" rx="2" ry="3" fill="#e1f5ee" opacity="0.9"/>
+        <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+        <rect x="84" y="111" width="32" height="6" rx="2" fill="#085041"/>
+        <ellipse cx="100" cy="121" rx="5" ry="2.5" fill="#085041"/>
+      </svg>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="get-to-yes.html">Get to Yes</a>
+      <a href="stay-at-yes.html" class="active" style="color:var(--teal-accessible);border-bottom-color:var(--teal-accessible)">Stay at Yes</a>
+      <a href="recover-to-yes.html">Recover to Yes</a>
+      <a href="blog.html" data-i18n="nav.blog">Blog</a>
+      <a href="community.html" class="nav-join">Join</a>
+    </nav>
+    <div class="lang-toggle" aria-label="Language selector">
+      <button class="lang-btn lang-active" data-lang="en" onclick="window.I18N_SET('en')" aria-label="Switch to English">EN</button>
+      <button class="lang-btn" data-lang="es" onclick="window.I18N_SET('es')" aria-label="Cambiar a español">ES</button>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="support-hero" id="main-content">
+  <div class="container">
+    <p class="hero-eyebrow">Stay at yes · while it runs</p>
+    <h1>Stay at Yes — while it runs.</h1>
+    <p>An earned yes only holds while the evidence keeps flowing. This is the running side of the estate: the open-source toolkit that signs and compiles the evidence, the live gates, and the Foundation&rsquo;s lab of ideation-stage projects — early, real, and changing fast. Things break, names change, the gates aren&rsquo;t always polished. That&rsquo;s the point.</p>
+  </div>
+</section>
+
+<!-- OPEN-SOURCE TOOLKIT -->
+<section class="section" style="background:var(--garden-cream);padding:64px 24px">
+  <div class="container">
+    <p style="font-size:.72rem;font-weight:700;font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:.14em;color:var(--garden-green-ink);margin-bottom:10px">The Open-Source Toolkit</p>
+    <h2 style="margin-bottom:6px">Three tools. One verifiable evidence chain.</h2>
+    <p style="color:var(--garden-ink-soft);font-size:.9rem;max-width:560px;margin-bottom:28px">Beacon signs the evidence. Umbrella compiles it into executable controls. The Vendor RFI turns tool selection into an evidence-first decision. All Apache-2.0. All under the AiGovOps Foundation.</p>
+    <div class="tools">
+      <div class="tool">
+        <span class="tag">🔦 Scanner + Signer</span>
+        <h3>AiGovOps Beacon</h3>
+        <p>Finds every AI on your network. Attests them against 23 audit frameworks. Produces a cryptographically signed bundle any auditor can re-verify with one command. OVERT 1.0 Protocol.</p>
+        <a href="https://aigovops-foundation.github.io/aigovops-beacon/" target="_blank" rel="noopener" class="go" onclick="if(window.plausible)plausible('Stay at Yes: Beacon click')">See it sign — live →</a>
+      </div>
+      <div class="tool">
+        <span class="tag">🏮 Compiler</span>
+        <h3>AiGovOps Umbrella</h3>
+        <p>Converts 40+ global frameworks — EU AI Act, NIST AI RMF, ISO/IEC 42001, Korea AI Basic Act — into executable YAML controls you can run in CI.</p>
+        <a href="https://aigovops-foundation.github.io/umbrella-govops/" target="_blank" rel="noopener" class="go" onclick="if(window.plausible)plausible('Stay at Yes: Umbrella click')">Get to Yes in 15 minutes →</a>
+      </div>
+      <div class="tool">
+        <span class="tag">📋 Evidence-first RFI</span>
+        <h3>Vendor RFI</h3>
+        <p>An open, evidence-oriented vendor RFI and audit-training tool — 50 vendors, 5 categories, neutral and gap-aware, with a verifiable decision receipt. Running live further down this page.</p>
+        <a href="https://aigovops-foundation.github.io/aigovops-vendor-rfi/" target="_blank" rel="noopener" class="go" onclick="if(window.plausible)plausible('Stay at Yes: Vendor RFI card')">Open the Vendor RFI →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE GATES -->
+<section class="section" style="background:var(--garden-deep-cream);padding:56px 24px">
+  <div class="container">
+    <h2 style="margin-bottom:6px">Watch the gates run</h2>
+    <p style="color:var(--garden-ink-soft);font-size:.9rem;max-width:620px;margin-bottom:24px">The gates live in the members&rsquo; Library — joining is free registration, never money or secrecy, and the source stays public on GitHub.</p>
+    <div class="gates-links">
+      <a class="gate-link" href="https://community.aigovops-foundation.com/library/gates.html" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Stay at Yes: gates live')">
+        <b>The gates, live — join free →</b>
+        <span>A live walk through the Library gates: real council, real questions, real Beacon-signed ledger, real human gate.</span>
+      </a>
+      <a class="gate-link" href="https://community.aigovops-foundation.com/library/watch-gates.html" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Stay at Yes: watch gates')">
+        <b>The recorded walkthrough — join free →</b>
+        <span>A half-speed walkthrough of the live gates: the nine rooms, their agents, the Yes/No/Maybe verdicts, each signed into the ledger.</span>
+      </a>
+      <a class="gate-link" href="jeeves-estate.html" onclick="if(window.plausible)plausible('Stay at Yes: estate simulation')">
+        <b>The estate simulation →</b>
+        <span>The whole estate through one gate — a self-contained simulation, no sign-in needed.</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- LIBRARY / PLATFORM CARD -->
+<section style="padding:80px 24px;background:#fff">
+  <div class="container" style="max-width:880px">
+    <p style="text-transform:uppercase;letter-spacing:2px;color:#888;font-size:.78rem;margin:0 0 8px">Current alpha · project 1 of 2</p>
+    <h2 style="font-size:2rem;margin:0 0 16px">The AiGovOps Library</h2>
+    <p style="font-size:1.1rem;line-height:1.6;color:#333">A governance-as-code product. <strong>Members propose, stewards approve, every decision becomes a Beacon-signed receipt.</strong> Nine seats (Legal, Product Security, AI Governance, IT Security, Insurance, Safety, DevSecOps, FinOps, Public Policy) walk a real scenario through nine gates in front of a live, tamper-evident ledger. The verdicts are honest — including the ones that come back as &ldquo;not yet.&rdquo;</p>
+    <ul style="font-size:1rem;line-height:1.9;color:#333;margin:24px 0 32px;padding-left:22px">
+      <li><strong>Identity:</strong> real GitHub OAuth. Stewards hold the gate; non-stewards see a 403 on convene.</li>
+      <li><strong>Ledger:</strong> Ed25519 Beacon signatures on every accepted decision; verifiable from <code>/status</code>.</li>
+      <li><strong>Durability:</strong> two-layer architecture — always-up CDN hub, Fly-backed dynamic core. See the <a href="https://community.aigovops-foundation.com/library/durability-plan.html" target="_blank" rel="noopener">durability plan</a>.</li>
+    </ul>
+
+    <div class="watch">
+      <p class="watch-eyebrow">▶ Watch it run · the platform that governs</p>
+      <h3>Do real work from your phone — every send still gated</h3>
+      <p style="font-size:1rem;line-height:1.65;color:#333;max-width:62ch;margin:0 0 18px">The same gate governs the whole fleet. Omni runs <strong>30 agents with no ambient authority</strong> — the only way any of them touches the world is <code>core.mediator.perform</code>, and every answer lands on the ledger:</p>
+      <div class="phone" role="img" aria-label="Telegram transcript. You send slash-draft Q3 governance brief; the bot replies draft_post done, verdict 1, earned. You send slash-publish; the bot replies publish_post held for approval with Approve and Deny buttons. After you tap Approve, it replies published, receipt signed and used once.">
+        <div class="bub me">/draft Q3 governance brief</div>
+        <div class="bub bot">&#9989; draft_post — done. <span class="dim">(verdict 1 · earned)</span></div>
+        <div class="bub me">/publish draft-12</div>
+        <div class="bub bot">&#9203; publish_post held for approval.<div class="btns"><span class="ap">Approve</span><span class="dn">Deny</span></div></div>
+        <div class="bub bot">&#9989; published — receipt signed, used once. <span class="dim">(you tapped Approve)</span></div>
+      </div>
+      <p style="font-size:1rem;line-height:1.65;color:#333;max-width:62ch;margin:18px 0 22px">Holds fan out to your channels; an approval performs <strong>exactly once</strong>. The <strong>Jeeves Fleet cockpit</strong> shows the whole fleet at a glance — what&rsquo;s pending, what&rsquo;s wired, and what each agent is allowed to do — and leads with what needs you.</p>
+    </div>
+
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a href="https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/" target="_blank" rel="noopener" class="btn btn-primary" onclick="if(window.plausible)plausible('Alpha: Library hub')">Enter the Library &rarr;</a>
+      <a href="https://community.aigovops-foundation.com/fleet.html" target="_blank" rel="noopener" class="btn" style="background:#f2f2f2;color:#222;border:1px solid #ddd" onclick="if(window.plausible)plausible('Alpha: live cockpit')">Open the live cockpit &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- VENDOR RFI CARD -->
+<section style="padding:80px 24px;background:#0e141b;color:#e2e7e9;border-top:3px solid #14b393">
+  <div class="container" style="max-width:880px">
+    <p style="text-transform:uppercase;letter-spacing:2px;color:#14b393;font-size:.78rem;margin:0 0 8px;font-family:ui-monospace,Menlo,monospace">Current alpha · project 2 of 2</p>
+    <h2 style="font-size:2rem;margin:0 0 16px;color:#fff">Vendor RFI — choose a governance stack like engineering</h2>
+    <p style="font-size:1.1rem;line-height:1.6;color:#c4ccd2">An open, <strong style="color:#fff">evidence-oriented vendor RFI and audit-training tool</strong>. Learn the 2026 landscape, compose a policy-as-code stack from real options, see the honest gaps — and leave with a Beacon-style decision receipt instead of a sales deck.</p>
+    <ul style="font-size:1rem;line-height:1.9;color:#c4ccd2;margin:24px 0 32px;padding-left:22px">
+      <li><strong style="color:#fff">50 vendors, 5 categories</strong> — compliance/GRC, policy-as-code, runtime guardrails, code shipping, and OT/IIoT — side by side and filterable.</li>
+      <li><strong style="color:#fff">Neutral &amp; gap-aware</strong> — ranking can&rsquo;t be bought and gaps aren&rsquo;t hidden; the OT row is honest (OT-security, <em>not</em> AI-model governance).</li>
+      <li><strong style="color:#fff">Audit training</strong> — lessons, a knowledge check, a self-audit, and an unsigned SHA-256 receipt you can verify.</li>
+      <li><strong style="color:#fff">Governed surface</strong> — maintained by <code style="color:#14b393">aigovops-agent-vendor-rfi</code>; content changes hold for steward sign-off.</li>
+    </ul>
+
+    <div class="watch">
+      <p class="watch-eyebrow">▶ Watch it run · then decide, openly</p>
+      <h3 style="color:#fff">From &ldquo;which vendors?&rdquo; to a signed decision</h3>
+      <div class="flow"><b>Compose a stack</b> <span class="ar" aria-hidden="true">&rarr;</span> <b>Compare 50 vendors</b> <span class="ar" aria-hidden="true">&rarr;</span> <b>Approve a shortlist</b> <span class="ar" aria-hidden="true">&rarr;</span> <b>Decision receipt</b></div>
+      <div class="embed">
+        <div class="embed-frame">
+          <div class="embed-skeleton" aria-hidden="true">
+            <span class="skel-eyebrow">▶ Loading the live comparison…</span>
+            <span class="skel-bar"></span>
+            <span class="skel-bar"></span>
+            <span class="skel-bar"></span>
+          </div>
+          <iframe title="Live: the Vendor RFI 50-vendor comparison page" src="https://aigovops-foundation.github.io/aigovops-vendor-rfi/comparison.html" onload="this.parentElement.classList.add('embed-loaded')"></iframe>
+        </div>
+        <p class="cap">Live, right here — the real comparison page. 50 vendors across five categories; search and filter it.<br>
+          <a class="embed-fallback" href="https://aigovops-foundation.github.io/aigovops-vendor-rfi/comparison.html" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Alpha: Vendor RFI comparison tab')">Open the live comparison in its own tab →</a></p>
+      </div>
+      <p style="font-size:1rem;line-height:1.65;color:#c4ccd2;max-width:62ch;margin:24px 0 14px">Approve your shortlist in the advisor and export a governed <strong style="color:#fff">decision receipt</strong> — canonical JSON with a SHA-256 digest (Beacon-signable later):</p>
+      <pre class="receipt">{
+  "schema": "aigovops.vendor-rfi.decision.v1",
+  "catalog_size": 50,
+  "approved_shortlist": [
+    { "cat": "grc",    "name": "Credo AI" },
+    { "cat": "policy", "name": "Styra / OPA" }
+  ],
+  "notes": { "signing": "unsigned preview only",
+             "neutrality": "inclusion is not endorsement; ranking can't be bought" }
+}
+SHA-256  6d4c19e14efa8151&hellip;</pre>
+    </div>
+
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
+      <a href="https://aigovops-foundation.github.io/aigovops-vendor-rfi/" target="_blank" rel="noopener" class="btn btn-primary" onclick="if(window.plausible)plausible('Alpha: Vendor RFI hub')">Open the Vendor RFI &rarr;</a>
+      <a href="https://aigovops-foundation.github.io/aigovops-vendor-rfi/training.html" target="_blank" rel="noopener" class="btn" style="background:#192330;color:#e2e7e9;border:1px solid #2a333c" onclick="if(window.plausible)plausible('Alpha: Vendor RFI training')">Start audit training &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT-ALPHA-MEANS -->
+<section style="padding:64px 24px;background:#f8f7f4">
+  <div class="container" style="max-width:880px">
+    <h2 style="font-size:1.5rem;margin:0 0 16px">What &ldquo;alpha&rdquo; means here</h2>
+    <p style="font-size:1rem;line-height:1.7;color:#444">Alpha means we&rsquo;re shipping it openly while it&rsquo;s still being shaped. You can read the code, run the demo, sign the ledger, file the bug. What you can&rsquo;t do yet is treat it as production. URLs may move, schemas may change, and the steward roster is small. If something breaks or makes you say &ldquo;wait, why?&rdquo;, that&rsquo;s a signal we want — email the team or open an issue.</p>
+    <p style="font-size:1rem;line-height:1.7;color:#444;margin-top:14px">More alpha experiments are coming. This page will grow.</p>
+    <p style="margin-top:28px"><a href="community.html" class="btn btn-primary btn-large" onclick="if(window.plausible)plausible('Stay at Yes: Come join')">🌿 Come join →</a></p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" aria-label="AiGovOps Foundation home">
+        <svg class="footer-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="height:38px;width:38px">
+          <title>AiGovOps Foundation</title>
+          <circle cx="100" cy="100" r="96" fill="#071a12"/>
+          <polygon points="100,100 42,0 158,0" fill="#9fe1cb" opacity="0.09"/>
+          <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+          <circle cx="100" cy="100" r="79" fill="none" stroke="#1d9e75" stroke-width="0.5" opacity="0.35"/>
+          <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
+          <ellipse cx="100" cy="57" rx="4" ry="6" fill="#9fe1cb" opacity="0.95"/>
+          <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+          <rect x="78" y="41" width="44" height="52" rx="1.5" fill="none" stroke="#1d9e75" stroke-width="1"/>
+          <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+        </svg>
+      </a>
+      <p>Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes, and keep the garden of humanity growing.</p>
+      <p>Governance Versioned Like Code. Tested Before Deployment.</p>
+    </div>
+        <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="get-to-yes.html">Get to Yes</a>
+      <a href="stay-at-yes.html">Stay at Yes</a>
+      <a href="recover-to-yes.html">Recover to Yes</a>
+      <a href="https://community.aigovops-foundation.com" target="_blank" rel="noopener">Community platform</a>
+      <a href="https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/" target="_blank" rel="noopener">Library</a>
+      <a href="https://aigovops-foundation.github.io/aigovops-beacon/" target="_blank" rel="noopener">Beacon</a>
+      <a href="https://aigovops-foundation.github.io/umbrella-govops/" target="_blank" rel="noopener">Umbrella</a>
+      <a href="https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/" target="_blank" rel="noopener">NCW AI Camp</a>
+      <a href="blog.html">Blog</a>
+      <a href="frameworks.html">Frameworks</a>
+      <a href="support.html">Support</a>
+      <a href="press.html">Press</a>
+      <a href="founders.html#ken">Ken Johnston</a>
+      <a href="founders.html#bob">Bob Rapp</a>
+      <a href="/feed.xml">RSS</a>
+      <a href="https://aigovops.substack.com/" target="_blank" rel="noopener">Newsletter</a>
+      <a href="https://luma.com/aigovops" target="_blank" rel="noopener">Events</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+      <p>© 2026 AiGovOps Foundation — 501(c)(3) Nonprofit</p>
+      <address style="font-style:normal;font-size:.8rem;color:#8080a0">
+        Seattle, WA · Global Community &bull;
+        <a href="mailto:bob.rapp@aigovops.community" style="color:#8080a0">bob.rapp@aigovops.community</a> &bull;
+        <a href="mailto:ken.johnston@aigovops.community" style="color:#8080a0">ken.johnston@aigovops.community</a>
+      </address>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── Mobile nav toggle ───────────────────────────────────────────────────
+const navToggle = document.querySelector('.nav-toggle');
+const mainNav = document.querySelector('.main-nav');
+if (navToggle && mainNav) {
+  navToggle.addEventListener('click', () => {
+    const open = mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open);
+  });
+}
+</script>
+  <script src="/jeeves-widget.js" data-jeeves-site="foundation" defer></script>
+
+<script src="feedback.js" class="aig-feedback-loader" defer></script>
+<script>
+// Mobile nav — inject secondary links when menu opens on small screens (M13: Press / Founders / Support)
+(function() {
+  const toggle = document.querySelector('.nav-toggle');
+  const nav    = document.querySelector('.main-nav');
+  if (!toggle || !nav) return;
+  const EXTRA = [
+    { href: '/press.html',     label: 'Press' },
+    { href: '/founders.html',  label: 'Founders' },
+    { href: '/support.html',   label: 'Support' },
+  ];
+  let injected = false;
+  toggle.addEventListener('click', () => {
+    if (injected) return;
+    const current = window.location.pathname.replace(/\/$/, '') || '/index.html';
+    EXTRA.forEach(item => {
+      const alreadyInNav = [...nav.querySelectorAll('a')].some(a => a.getAttribute('href') === item.href || a.href.endsWith(item.href));
+      if (alreadyInNav) return;
+      const a = document.createElement('a');
+      a.href  = item.href;
+      a.textContent = item.label;
+      a.style.cssText = 'font-size:.85rem;color:var(--muted)';
+      if (current.endsWith(item.href.replace(/^\//, ''))) a.classList.add('active');
+      nav.appendChild(a);
+    });
+    injected = true;
+  });
+})();
+</script>
+</body>
+</html>

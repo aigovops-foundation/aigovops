@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Community | AiGovOps Foundation</title>
+  <title>Come Join | AiGovOps Foundation</title>
 <link rel="canonical" href="https://www.aigovops-foundation.com/community.html" />
-  <meta name="description" content="The AiGovOps Foundation community — contributors, sustainers, founding partners, and open-source projects." />
+  <meta name="description" content="Come join the AiGovOps Foundation community — give time, give money, write code, map frameworks. Contributors, sustainers, founding partners, and open-source projects." />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
-  <meta property="og:title" content="Community | AiGovOps Foundation" />
+  <meta property="og:title" content="Come Join | AiGovOps Foundation" />
   <meta property="og:url" content="https://www.aigovops-foundation.com/community.html" />
   <link rel="alternate" type="application/rss+xml" title="AiGovOps Foundation Feed" href="/feed.xml" />
   <link rel="stylesheet" href="css/style.css" />
@@ -78,12 +78,12 @@
       </svg>
     </a>
     <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="ecosystem.html">Start Here</a>
-      <a href="frameworks.html">Frameworks</a>
-      <a href="alpha.html">See It Run</a>
-      <a href="blog.html">Blog</a>
-      <a href="support.html">Support</a>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="get-to-yes.html">Get to Yes</a>
+      <a href="stay-at-yes.html">Stay at Yes</a>
+      <a href="recover-to-yes.html">Recover to Yes</a>
+      <a href="blog.html" data-i18n="nav.blog">Blog</a>
+      <a href="community.html" class="nav-join active">Join</a>
     </nav>
     <div class="lang-toggle" aria-label="Language selector">
       <button class="lang-btn lang-active" data-lang="en" onclick="window.I18N_SET('en')">EN</button>
@@ -97,8 +97,13 @@
   <section class="comm-hero">
     <div class="container">
       <p class="hero-eyebrow">Open source · Apache-2.0 · Global</p>
-      <h1>The Community</h1>
+      <h1>Come join</h1>
       <p>Practitioners, engineers, and compliance professionals building the open standard for AI governance together.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:22px">
+        <a href="https://community.aigovops-foundation.com/" target="_blank" rel="noopener" class="btn btn-primary" onclick="if(window.plausible)plausible('Join: Enter platform (hero)')">🌿 Enter the community platform →</a>
+        <a href="#ways-to-contribute" class="btn" style="border:1.5px solid var(--garden-green);color:var(--garden-green-deep);border-radius:999px" onclick="if(window.plausible)plausible('Join: Give time')">🕰️ Give time</a>
+        <a href="support.html" class="btn" style="border:1.5px solid var(--garden-green);color:var(--garden-green-deep);border-radius:999px" onclick="if(window.plausible)plausible('Join: Give money')">💚 Give money</a>
+      </div>
     </div>
   </section>
 
@@ -204,6 +209,9 @@
     </div>
         <nav class="footer-nav">
       <a href="index.html">Home</a>
+      <a href="get-to-yes.html">Get to Yes</a>
+      <a href="stay-at-yes.html">Stay at Yes</a>
+      <a href="recover-to-yes.html">Recover to Yes</a>
       <a href="https://community.aigovops-foundation.com" target="_blank" rel="noopener">Community platform</a>
       <a href="https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/" target="_blank" rel="noopener">Library</a>
       <a href="https://aigovops-foundation.github.io/aigovops-beacon/" target="_blank" rel="noopener">Beacon</a>
@@ -232,9 +240,9 @@ if (t && n) t.addEventListener('click', () => { const o = n.classList.toggle('op
   const nav    = document.querySelector('.main-nav');
   if (!toggle || !nav) return;
   const EXTRA = [
-    { href: '/community.html', label: 'Community' },
     { href: '/press.html',     label: 'Press' },
     { href: '/founders.html',  label: 'Founders' },
+    { href: '/support.html',   label: 'Support' },
   ];
   let injected = false;
   toggle.addEventListener('click', () => {

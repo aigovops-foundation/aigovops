@@ -137,11 +137,11 @@
     </a>
     <nav class="main-nav">
       <a href="index.html" class="active" data-i18n="nav.home">Home</a>
-      <a href="ecosystem.html">Start Here</a>
-      <a href="frameworks.html">Frameworks</a>
-      <a href="alpha.html">See It Run</a>
+      <a href="get-to-yes.html">Get to Yes</a>
+      <a href="stay-at-yes.html">Stay at Yes</a>
+      <a href="recover-to-yes.html">Recover to Yes</a>
       <a href="blog.html" data-i18n="nav.blog">Blog</a>
-      <a href="support.html">Support</a>
+      <a href="community.html" class="nav-join">Join</a>
     </nav>
     <div class="lang-toggle" aria-label="Language selector">
       <button class="lang-btn lang-active" data-lang="en" onclick="window.I18N_SET('en')" aria-label="Switch to English">EN</button>
@@ -373,6 +373,9 @@
     </div>
         <nav class="footer-nav">
       <a href="index.html">Home</a>
+      <a href="get-to-yes.html">Get to Yes</a>
+      <a href="stay-at-yes.html">Stay at Yes</a>
+      <a href="recover-to-yes.html">Recover to Yes</a>
       <a href="https://community.aigovops-foundation.com" target="_blank" rel="noopener">Community platform</a>
       <a href="https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/" target="_blank" rel="noopener">Library</a>
       <a href="https://aigovops-foundation.github.io/aigovops-beacon/" target="_blank" rel="noopener">Beacon</a>
@@ -473,9 +476,9 @@ function handleNewsletterSubmit(e) {
   const nav    = document.querySelector('.main-nav');
   if (!toggle || !nav) return;
   const EXTRA = [
-    { href: '/community.html', label: 'Community' },
     { href: '/press.html',     label: 'Press' },
     { href: '/founders.html',  label: 'Founders' },
+    { href: '/support.html',   label: 'Support' },
   ];
   let injected = false;
   toggle.addEventListener('click', () => {

@@ -137,6 +137,48 @@ for page in "${TOP_PAGES[@]}" "${BLOG_PAGES[@]}"; do
   fi
 done
 
+# ── 4b. M13 three-doors nav invariant ──────────────────────────────────────
+# Off the porch, the whole IA is three movements + Join: the three movement
+# hub pages must exist, and every non-stub page that carries the site nav
+# must offer the three movement labels + Join (admin.html's reduced console
+# nav is the documented exception, mirroring the ux tier).
+echo ""
+echo "  [M13 three-doors — movement hubs exist; nav carries the three doors + Join]"
+for hub in get-to-yes.html stay-at-yes.html recover-to-yes.html; do
+  if [ -f "$REPO/$hub" ] && ! grep -q 'http-equiv="refresh"' "$REPO/$hub"; then
+    check "movement hub exists (not a stub): $hub" "ok"
+  else
+    check "movement hub exists (not a stub): $hub" "missing or reduced to a redirect stub"
+  fi
+done
+while IFS='|' read -r label result; do
+  [ -z "$label" ] && continue
+  check "$label" "$result"
+done <<< "$(python3 - "$REPO" <<'PY'
+import re, os, sys, glob
+os.chdir(sys.argv[1])
+CONSOLES = {"admin.html"}  # reduced console nav on purpose (ux-tier exception)
+for p in sorted(glob.glob("*.html")):
+    s = open(p, encoding="utf-8", errors="replace").read()
+    if re.search(r'http-equiv="refresh"', s, re.I):
+        continue  # redirect stubs carry no site nav
+    m = re.search(r'<nav class="main-nav"[^>]*>(.*?)</nav>', s, re.S)
+    if not m:
+        continue  # standalone pages carry no site nav by design
+    if p in CONSOLES:
+        print(f"three-doors nav: {p} (console nav — documented exception)|ok")
+        continue
+    labels = [re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", a)).strip()
+              for a in re.findall(r"<a\b[^>]*>(.*?)</a>", m.group(1), re.S)]
+    missing = [w for w in ("Get to Yes", "Stay at Yes", "Recover to Yes", "Join")
+               if w not in labels]
+    if missing:
+        print(f"three-doors nav: {p}|missing from main-nav: {', '.join(missing)}")
+    else:
+        print(f"three-doors nav: {p}|ok")
+PY
+)"
+
 # ── 5. index.html loads garden.css before porch.css ────────────────────────
 echo ""
 echo "  [index.html stylesheet order]"

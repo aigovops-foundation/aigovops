@@ -3,331 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>See it run · AiGovOps alpha | AiGovOps Foundation</title>
-<link rel="canonical" href="https://www.aigovops-foundation.com/alpha.html" />
-  <meta name="description" content="See AiGovOps run — two alpha projects, live. The AiGovOps Library puts every decision through a gate and signs the receipt; the open Vendor RFI turns tool selection into an evidence-first decision. Watch both work, end to end." />
+  <title>See It Run — page moved | AiGovOps Foundation</title>
+  <meta http-equiv="refresh" content="2;url=stay-at-yes.html" />
+  <meta name="robots" content="noindex" />
+  <link rel="canonical" href="https://www.aigovops-foundation.com/stay-at-yes.html" />
+  <meta name="description" content="This page moved. The alpha projects, the open-source toolkit, and the live gates now run on Stay at Yes — while it runs." />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-  <meta property="og:title" content="See it run · AiGovOps alpha" />
-  <meta property="og:description" content="Two alpha projects, one story — a governed agent platform and an open vendor RFI, every step on the record." />
-  <meta property="og:image" content="https://www.aigovops-foundation.com/images/founders.jpg" />
-  <meta property="og:url" content="https://www.aigovops-foundation.com/alpha.html" />
-  <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="css/style.css" />
   <!-- M6b garden-warm skin (shared system) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/garden.css" />
-  <script src="js/i18n/i18n.js"></script>
-  <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
   <style>
-    /* ── See-it-run page — garden-warm skin (M11: alpha absorbs demo) ── */
-    /* Inline markup (active nav link) uses var(--teal-accessible); re-point it. */
-    :root { --teal-accessible: #1F5E3A; }
-
-    .support-hero { background: var(--garden-deep-cream); color: var(--garden-charcoal); padding: 72px 0 56px; text-align: center; position: relative; overflow: hidden; }
-    .support-hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(480px 220px at 10% 115%, rgba(232,181,74,.28), transparent 70%), radial-gradient(460px 220px at 92% -15%, rgba(46,125,79,.16), transparent 70%); }
-    .support-hero .container { position: relative; }
-    .support-hero .hero-eyebrow { color: var(--garden-green-ink); font-family: 'Courier New', monospace; font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .16em; margin-bottom: 14px; }
-    .support-hero h1 { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 600; margin-bottom: 16px; }
-    .support-hero p { font-size: 1.05rem; color: var(--garden-ink-soft); max-width: 620px; margin: 0 auto; line-height: 1.6; }
-
-    /* watch-it-run subsections folded in from the demo acts */
-    .watch { margin-top: 34px; border-top: 1px dashed rgba(46,125,79,.45); padding-top: 26px; }
-    .watch .watch-eyebrow { font-family: 'Courier New', monospace; text-transform: uppercase; letter-spacing: .14em; font-size: .72rem; font-weight: 700; color: var(--garden-green-ink); margin: 0 0 10px; }
-    .watch h3 { font-size: 1.05rem; margin: 0 0 12px; }
-    /* the phone mock and receipt keep their own dark device surfaces (load-bearing) */
-    .phone { max-width: 380px; background: #0e141b; border-radius: 18px; padding: 14px; border: 1px solid #2a333c; }
-    .bub { font-size: .86rem; line-height: 1.5; border-radius: 12px; padding: 9px 12px; margin: 0 0 8px; max-width: 88%; }
-    .bub:last-child { margin-bottom: 0; }
-    .bub.me { background: #14b393; color: #04241c; margin-left: auto; font-family: 'Courier New', monospace; }
-    .bub.bot { background: #192330; color: #e2e7e9; }
-    .bub .dim { color: #9fb0bd; }
-    .bub .btns { display: flex; gap: 8px; margin-top: 8px; }
-    .bub .btns span { font-size: .78rem; font-weight: 700; padding: 4px 12px; border-radius: 8px; }
-    .bub .ap { background: #14b393; color: #04241c; } .bub .dn { border: 1px solid #3a4655; color: #9fb0bd; }
-    .embed { border: 1px solid var(--garden-card-line); border-radius: 14px; overflow: hidden; background: #fff; box-shadow: var(--garden-shadow-sm); }
-    .embed iframe { display: block; width: 100%; height: 520px; border: 0; position: relative; z-index: 1; background: transparent; }
-    .embed .cap { font-size: .82rem; color: var(--garden-ink-soft); padding: 9px 14px; background: var(--garden-deep-cream); border-top: 1px solid var(--garden-line); }
-    /* C1: garden-styled skeleton poster behind the eager-loaded iframe — visible
-       until the frame paints (the iframe stays transparent; onload fades it out) */
-    .embed-frame { position: relative; background: var(--garden-deep-cream); }
-    .embed-skeleton { position: absolute; inset: 0; z-index: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: var(--garden-deep-cream); transition: opacity .4s ease; }
-    .embed-skeleton .skel-eyebrow { font-family: 'Courier New', monospace; text-transform: uppercase; letter-spacing: .14em; font-size: .72rem; font-weight: 700; color: var(--garden-green-ink); }
-    .embed-skeleton .skel-bar { width: min(72%, 520px); height: 12px; border-radius: 999px; background: linear-gradient(90deg, rgba(46,125,79,.14), rgba(46,125,79,.3), rgba(46,125,79,.14)); background-size: 200% 100%; animation: skelShimmer 1.6s ease-in-out infinite; }
-    .embed-skeleton .skel-bar:nth-child(3) { width: min(56%, 400px); animation-delay: .2s; }
-    .embed-skeleton .skel-bar:nth-child(4) { width: min(64%, 460px); animation-delay: .4s; }
-    @keyframes skelShimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
-    @media (prefers-reduced-motion: reduce) { .embed-skeleton .skel-bar { animation: none; } }
-    .embed-frame.embed-loaded .embed-skeleton { opacity: 0; }
-    .embed .embed-fallback { display: inline-block; margin-top: 4px; font-weight: 700; color: var(--garden-green-ink); text-decoration: underline; text-underline-offset: 3px; }
-    section[style*="background:#0e141b"] .embed .embed-fallback { color: #5DCAA5; }
-    .receipt { font-family: 'Courier New', monospace; font-size: .8rem; background: #0e141b; color: #9fe1cb; border-radius: 12px; padding: 16px; white-space: pre-wrap; overflow: auto; line-height: 1.5; }
-    .flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; color: var(--garden-ink-soft); font-size: .86rem; margin: 0 0 20px; }
-    .flow b { color: var(--garden-charcoal); font-weight: 700; } .flow .ar { color: var(--garden-green-ink); font-weight: 700; }
-
-    /* one gate-law explainer (the 1/?/0 block, once) */
-    .gatelaw-section { background: var(--garden-deep-cream); padding: 56px 24px; }
-    .gatelaw-section .container { max-width: 880px; }
-    .gatelaw-section h2 { font-size: 1.5rem; margin: 0 0 8px; }
-    .gatelaw-section .lede { color: var(--garden-ink-soft); max-width: 62ch; line-height: 1.65; margin: 0 0 22px; }
-    .gatelaw { display: flex; gap: 10px; flex-wrap: wrap; margin: 0; }
-    .glaw { flex: 1 1 200px; border: 1px solid var(--garden-card-line); border-radius: 12px; padding: 14px 16px; background: #fff; box-shadow: var(--garden-shadow-sm); }
-    .glaw b { font-size: 1.5rem; font-family: 'Courier New', monospace; line-height: 1; }
-    .glaw.yes b { color: var(--garden-green-ink); } .glaw.no b { color: #b4232a; } .glaw.hold b { color: #854f0b; }
-    .glaw p { margin: 6px 0 0; font-size: .88rem; color: var(--garden-ink-soft); line-height: 1.45; }
-
-    /* Re-band the inline-styled body sections (inline attrs stay untouched) */
-    section[style*="background:#fff"] { background: var(--garden-cream) !important; }
-    section[style*="background:#f8f7f4"] { background: var(--garden-deep-cream) !important; }
-    /* Vendor RFI band: navy → charcoal, gold rule, AA-safe teal accents */
-    section[style*="background:#0e141b"] { background: var(--garden-charcoal) !important; border-top-color: var(--garden-gold) !important; }
-    section[style*="background:#0e141b"] p[style*="color:#14b393"] { color: #5DCAA5 !important; }
-    section[style*="background:#0e141b"] code[style*="color:#14b393"] { color: #5DCAA5 !important; }
-    section[style*="background:#0e141b"] .watch { border-top-color: rgba(250,247,240,.28); }
-    section[style*="background:#0e141b"] .watch .watch-eyebrow { color: #5DCAA5; }
-    section[style*="background:#0e141b"] .flow { color: #c4ccd2; }
-    section[style*="background:#0e141b"] .flow b { color: #fff; } section[style*="background:#0e141b"] .flow .ar { color: #5DCAA5; }
-    section[style*="background:#0e141b"] .embed { border-color: rgba(250,247,240,.2); }
-    section[style*="background:#0e141b"] .embed .cap { background: #192330; color: #c4ccd2; border-top-color: rgba(250,247,240,.15); }
-    /* eyebrow + body inks on the re-banded light sections */
-    section[style*="background:#fff"] p[style*="color:#888"] { color: var(--garden-ink-soft) !important; }
-    section[style*="background:#fff"] p[style*="color:#333"], section[style*="background:#fff"] ul[style*="color:#333"] { color: var(--garden-ink-soft) !important; }
-    section[style*="background:#f8f7f4"] p[style*="color:#444"] { color: var(--garden-ink-soft) !important; }
+    /* ── Redirect stub — garden chrome-lite (M11 pattern · M13 three doors) ── */
+    .stub-main { background: var(--garden-deep-cream); min-height: 60vh; display: flex; align-items: center; text-align: center; padding: 64px 24px; position: relative; overflow: hidden; }
+    .stub-main::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(480px 220px at 10% 115%, rgba(232,181,74,.28), transparent 70%), radial-gradient(460px 220px at 92% -15%, rgba(46,125,79,.16), transparent 70%); }
+    .stub-main .container { position: relative; max-width: 560px; margin: 0 auto; }
+    .stub-eyebrow { font-size: .72rem; font-weight: 600; font-family: 'Courier New', monospace; text-transform: uppercase; letter-spacing: .16em; color: var(--garden-green-ink); margin-bottom: 12px; }
+    .stub-main h1 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 600; color: var(--garden-charcoal); margin-bottom: 12px; }
+    .stub-main p { color: var(--garden-ink-soft); font-size: 1rem; line-height: 1.6; margin-bottom: 28px; }
+    .stub-pill { display: inline-flex; align-items: center; gap: 8px; background: var(--garden-green); color: #fff; text-decoration: none; border-radius: 999px; padding: 13px 26px; font-size: .95rem; font-weight: 600; transition: background .15s; }
+    .stub-pill:hover { background: var(--garden-green-deep); }
+    .stub-note { font-size: .8rem; margin-top: 18px; margin-bottom: 0; }
+    .stub-footer { background: var(--garden-cream); border-top: 1px solid var(--garden-line); padding: 24px; text-align: center; }
+    .stub-footer .creed { font-family: var(--garden-serif, Georgia, serif); font-style: italic; font-size: .88rem; color: var(--garden-ink-soft); margin: 0 0 6px; }
+    .stub-footer .fine { font-size: .78rem; color: var(--garden-ink-soft); margin: 0; }
   </style>
-  <link rel="alternate" type="application/rss+xml" title="AiGovOps Foundation Feed" href="/feed.xml" />
 </head>
 <body>
-
-<a href="#main-content" class="skip-link">Skip to main content</a>
-
-<!-- NAV -->
 <header class="site-header">
   <div class="container nav-inner">
     <a href="index.html" class="logo-link" aria-label="AiGovOps Foundation home">
-      <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AiGovOps Foundation Lantern logo" style="height:38px;width:38px;flex-shrink:0">
+      <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="height:38px;width:38px;flex-shrink:0">
         <title>AiGovOps Foundation</title>
         <circle cx="100" cy="100" r="96" fill="#071a12"/>
-        <polygon points="100,100 42,0 158,0" fill="#9fe1cb" opacity="0.09"/>
         <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
-        <circle cx="100" cy="100" r="79" fill="none" stroke="#1d9e75" stroke-width="0.5" opacity="0.35"/>
-        <line x1="100" y1="4" x2="100" y2="11" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
-        <line x1="100" y1="189" x2="100" y2="196" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
-        <line x1="4" y1="100" x2="11" y2="100" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
-        <line x1="189" y1="100" x2="196" y2="100" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
-        <line x1="100" y1="18" x2="100" y2="10" stroke="#1d9e75" stroke-width="1.8" stroke-linecap="round"/>
-        <ellipse cx="100" cy="9" rx="7" ry="3" fill="none" stroke="#1d9e75" stroke-width="1.8"/>
-        <rect x="84" y="17" width="32" height="6" rx="2" fill="#085041"/>
-        <path d="M88 23 L80 41 L120 41 L112 23 Z" fill="#0f6e56"/>
         <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
-        <line x1="90" y1="41" x2="90" y2="93" stroke="#1d9e75" stroke-width="1" opacity="0.5"/>
-        <line x1="100" y1="41" x2="100" y2="93" stroke="#1d9e75" stroke-width="1" opacity="0.5"/>
-        <line x1="110" y1="41" x2="110" y2="93" stroke="#1d9e75" stroke-width="1" opacity="0.5"/>
-        <line x1="78" y1="67" x2="122" y2="67" stroke="#1d9e75" stroke-width="1.2" opacity="0.5"/>
-        <rect x="78" y="41" width="44" height="52" rx="1.5" fill="none" stroke="#1d9e75" stroke-width="1"/>
         <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
         <ellipse cx="100" cy="57" rx="4" ry="6" fill="#9fe1cb" opacity="0.95"/>
-        <ellipse cx="100" cy="55" rx="2" ry="3" fill="#e1f5ee" opacity="0.9"/>
         <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
-        <rect x="84" y="111" width="32" height="6" rx="2" fill="#085041"/>
-        <ellipse cx="100" cy="121" rx="5" ry="2.5" fill="#085041"/>
       </svg>
     </a>
-    <nav class="main-nav">
-      <a href="index.html" data-i18n="nav.home">Home</a>
-      <a href="ecosystem.html">Start Here</a>
-      <a href="frameworks.html">Frameworks</a>
-      <a href="alpha.html" class="active" style="color:var(--teal-accessible);border-bottom-color:var(--teal-accessible)">See It Run</a>
-      <a href="blog.html" data-i18n="nav.blog">Blog</a>
-      <a href="support.html">Support</a>
-    </nav>
-    <div class="lang-toggle" aria-label="Language selector">
-      <button class="lang-btn lang-active" data-lang="en" onclick="window.I18N_SET('en')" aria-label="Switch to English">EN</button>
-      <button class="lang-btn" data-lang="es" onclick="window.I18N_SET('es')" aria-label="Cambiar a español">ES</button>
-    </div>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="support-hero" id="main-content">
+<main id="main-content" class="stub-main">
   <div class="container">
-    <p class="hero-eyebrow">🧪 Alpha · see it run</p>
-    <h1>See it run.</h1>
-    <p>The Foundation runs a small lab of ideation-stage projects — early, real, and changing fast. This page is the whole story: what each project is, and the same project actually running, live, in front of you. Things break, names change, the gates aren&rsquo;t always polished. That&rsquo;s the point.</p>
+    <p class="stub-eyebrow">Moved</p>
+    <h1>This page moved</h1>
+    <p>The alpha projects, the open-source toolkit, and the live gates now run on <strong>Stay at Yes</strong> — the while-it-runs door.</p>
+    <a class="stub-pill" href="stay-at-yes.html">Go to Stay at Yes →</a>
+    <p class="stub-note">Taking you there automatically — or use the link above.</p>
   </div>
-</section>
+</main>
 
-<!-- LIBRARY / PLATFORM CARD -->
-<section style="padding:80px 24px;background:#fff">
-  <div class="container" style="max-width:880px">
-    <p style="text-transform:uppercase;letter-spacing:2px;color:#888;font-size:.78rem;margin:0 0 8px">Current alpha · project 1 of 2</p>
-    <h2 style="font-size:2rem;margin:0 0 16px">The AiGovOps Library</h2>
-    <p style="font-size:1.1rem;line-height:1.6;color:#333">A governance-as-code product. <strong>Members propose, stewards approve, every decision becomes a Beacon-signed receipt.</strong> Nine seats (Legal, Product Security, AI Governance, IT Security, Insurance, Safety, DevSecOps, FinOps, Public Policy) walk a real scenario through nine gates in front of a live, tamper-evident ledger. The verdicts are honest — including the ones that come back as &ldquo;not yet.&rdquo;</p>
-    <ul style="font-size:1rem;line-height:1.9;color:#333;margin:24px 0 32px;padding-left:22px">
-      <li><strong>Identity:</strong> real GitHub OAuth. Stewards hold the gate; non-stewards see a 403 on convene.</li>
-      <li><strong>Ledger:</strong> Ed25519 Beacon signatures on every accepted decision; verifiable from <code>/status</code>.</li>
-      <li><strong>Durability:</strong> two-layer architecture — always-up CDN hub, Fly-backed dynamic core. See the <a href="https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/durability-plan.html" target="_blank" rel="noopener">durability plan</a>.</li>
-    </ul>
-
-    <div class="watch">
-      <p class="watch-eyebrow">▶ Watch it run · the platform that governs</p>
-      <h3>Do real work from your phone — every send still gated</h3>
-      <p style="font-size:1rem;line-height:1.65;color:#333;max-width:62ch;margin:0 0 18px">The same gate governs the whole fleet. Omni runs <strong>30 agents with no ambient authority</strong> — the only way any of them touches the world is <code>core.mediator.perform</code>, and every answer lands on the ledger:</p>
-      <div class="phone" role="img" aria-label="Telegram transcript. You send slash-draft Q3 governance brief; the bot replies draft_post done, verdict 1, earned. You send slash-publish; the bot replies publish_post held for approval with Approve and Deny buttons. After you tap Approve, it replies published, receipt signed and used once.">
-        <div class="bub me">/draft Q3 governance brief</div>
-        <div class="bub bot">&#9989; draft_post — done. <span class="dim">(verdict 1 · earned)</span></div>
-        <div class="bub me">/publish draft-12</div>
-        <div class="bub bot">&#9203; publish_post held for approval.<div class="btns"><span class="ap">Approve</span><span class="dn">Deny</span></div></div>
-        <div class="bub bot">&#9989; published — receipt signed, used once. <span class="dim">(you tapped Approve)</span></div>
-      </div>
-      <p style="font-size:1rem;line-height:1.65;color:#333;max-width:62ch;margin:18px 0 22px">Holds fan out to your channels; an approval performs <strong>exactly once</strong>. The <strong>Jeeves Fleet cockpit</strong> shows the whole fleet at a glance — what&rsquo;s pending, what&rsquo;s wired, and what each agent is allowed to do — and leads with what needs you.</p>
-    </div>
-
-    <div style="display:flex;gap:12px;flex-wrap:wrap">
-      <a href="https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/" target="_blank" rel="noopener" class="btn btn-primary" onclick="if(window.plausible)plausible('Alpha: Library hub')">Enter the Library &rarr;</a>
-      <a href="https://community.aigovops-foundation.com/fleet.html" target="_blank" rel="noopener" class="btn" style="background:#f2f2f2;color:#222;border:1px solid #ddd" onclick="if(window.plausible)plausible('Alpha: live cockpit')">Open the live cockpit &rarr;</a>
-    </div>
-  </div>
-</section>
-
-<!-- VENDOR RFI CARD -->
-<section style="padding:80px 24px;background:#0e141b;color:#e2e7e9;border-top:3px solid #14b393">
-  <div class="container" style="max-width:880px">
-    <p style="text-transform:uppercase;letter-spacing:2px;color:#14b393;font-size:.78rem;margin:0 0 8px;font-family:ui-monospace,Menlo,monospace">Current alpha · project 2 of 2</p>
-    <h2 style="font-size:2rem;margin:0 0 16px;color:#fff">Vendor RFI — choose a governance stack like engineering</h2>
-    <p style="font-size:1.1rem;line-height:1.6;color:#c4ccd2">An open, <strong style="color:#fff">evidence-oriented vendor RFI and audit-training tool</strong>. Learn the 2026 landscape, compose a policy-as-code stack from real options, see the honest gaps — and leave with a Beacon-style decision receipt instead of a sales deck.</p>
-    <ul style="font-size:1rem;line-height:1.9;color:#c4ccd2;margin:24px 0 32px;padding-left:22px">
-      <li><strong style="color:#fff">50 vendors, 5 categories</strong> — compliance/GRC, policy-as-code, runtime guardrails, code shipping, and OT/IIoT — side by side and filterable.</li>
-      <li><strong style="color:#fff">Neutral &amp; gap-aware</strong> — ranking can&rsquo;t be bought and gaps aren&rsquo;t hidden; the OT row is honest (OT-security, <em>not</em> AI-model governance).</li>
-      <li><strong style="color:#fff">Audit training</strong> — lessons, a knowledge check, a self-audit, and an unsigned SHA-256 receipt you can verify.</li>
-      <li><strong style="color:#fff">Governed surface</strong> — maintained by <code style="color:#14b393">aigovops-agent-vendor-rfi</code>; content changes hold for steward sign-off.</li>
-    </ul>
-
-    <div class="watch">
-      <p class="watch-eyebrow">▶ Watch it run · then decide, openly</p>
-      <h3 style="color:#fff">From &ldquo;which vendors?&rdquo; to a signed decision</h3>
-      <div class="flow"><b>Compose a stack</b> <span class="ar" aria-hidden="true">&rarr;</span> <b>Compare 50 vendors</b> <span class="ar" aria-hidden="true">&rarr;</span> <b>Approve a shortlist</b> <span class="ar" aria-hidden="true">&rarr;</span> <b>Decision receipt</b></div>
-      <div class="embed">
-        <div class="embed-frame">
-          <div class="embed-skeleton" aria-hidden="true">
-            <span class="skel-eyebrow">▶ Loading the live comparison…</span>
-            <span class="skel-bar"></span>
-            <span class="skel-bar"></span>
-            <span class="skel-bar"></span>
-          </div>
-          <iframe title="Live: the Vendor RFI 50-vendor comparison page" src="https://aigovops-foundation.github.io/aigovops-vendor-rfi/comparison.html" onload="this.parentElement.classList.add('embed-loaded')"></iframe>
-        </div>
-        <p class="cap">Live, right here — the real comparison page. 50 vendors across five categories; search and filter it.<br>
-          <a class="embed-fallback" href="https://aigovops-foundation.github.io/aigovops-vendor-rfi/comparison.html" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Alpha: Vendor RFI comparison tab')">Open the live comparison in its own tab →</a></p>
-      </div>
-      <p style="font-size:1rem;line-height:1.65;color:#c4ccd2;max-width:62ch;margin:24px 0 14px">Approve your shortlist in the advisor and export a governed <strong style="color:#fff">decision receipt</strong> — canonical JSON with a SHA-256 digest (Beacon-signable later):</p>
-      <pre class="receipt">{
-  "schema": "aigovops.vendor-rfi.decision.v1",
-  "catalog_size": 50,
-  "approved_shortlist": [
-    { "cat": "grc",    "name": "Credo AI" },
-    { "cat": "policy", "name": "Styra / OPA" }
-  ],
-  "notes": { "signing": "unsigned preview only",
-             "neutrality": "inclusion is not endorsement; ranking can't be bought" }
-}
-SHA-256  6d4c19e14efa8151&hellip;</pre>
-    </div>
-
-    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
-      <a href="https://aigovops-foundation.github.io/aigovops-vendor-rfi/" target="_blank" rel="noopener" class="btn btn-primary" onclick="if(window.plausible)plausible('Alpha: Vendor RFI hub')">Open the Vendor RFI &rarr;</a>
-      <a href="https://aigovops-foundation.github.io/aigovops-vendor-rfi/training.html" target="_blank" rel="noopener" class="btn" style="background:#192330;color:#e2e7e9;border:1px solid #2a333c" onclick="if(window.plausible)plausible('Alpha: Vendor RFI training')">Start audit training &rarr;</a>
-    </div>
-  </div>
-</section>
-
-<!-- THE GATE LAW (once) -->
-<section class="gatelaw-section">
+<footer class="site-footer stub-footer" role="contentinfo">
   <div class="container">
-    <h2>One gate law runs through both.</h2>
-    <p class="lede">Every action — a Library decision, an agent&rsquo;s send, a vendor shortlist — is a proposal, and the gate answers in exactly one of three ways:</p>
-    <div class="gatelaw">
-      <div class="glaw yes"><b>1</b><p>Yes — earned, with evidence. Runs once, on a single-use receipt.</p></div>
-      <div class="glaw no"><b>0</b><p>No — refused, and written to the ledger.</p></div>
-      <div class="glaw hold"><b>?</b><p>Held for a human — and decays to 0 if no one approves by the deadline.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT-ALPHA-MEANS -->
-<section style="padding:64px 24px;background:#f8f7f4">
-  <div class="container" style="max-width:880px">
-    <h2 style="font-size:1.5rem;margin:0 0 16px">What &ldquo;alpha&rdquo; means here</h2>
-    <p style="font-size:1rem;line-height:1.7;color:#444">Alpha means we&rsquo;re shipping it openly while it&rsquo;s still being shaped. You can read the code, run the demo, sign the ledger, file the bug. What you can&rsquo;t do yet is treat it as production. URLs may move, schemas may change, and the steward roster is small. If something breaks or makes you say &ldquo;wait, why?&rdquo;, that&rsquo;s a signal we want — email the team or open an issue.</p>
-    <p style="font-size:1rem;line-height:1.7;color:#444;margin-top:14px">More alpha experiments are coming. This page will grow.</p>
-    <p style="margin-top:28px"><a href="https://community.aigovops-foundation.com/" target="_blank" rel="noopener" class="btn btn-primary" onclick="if(window.plausible)plausible('Alpha: enter Control Room')">See it live — enter the Control Room &rarr;</a></p>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <a href="index.html" aria-label="AiGovOps Foundation home">
-        <svg class="footer-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="height:38px;width:38px">
-          <title>AiGovOps Foundation</title>
-          <circle cx="100" cy="100" r="96" fill="#071a12"/>
-          <polygon points="100,100 42,0 158,0" fill="#9fe1cb" opacity="0.09"/>
-          <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
-          <circle cx="100" cy="100" r="79" fill="none" stroke="#1d9e75" stroke-width="0.5" opacity="0.35"/>
-          <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
-          <ellipse cx="100" cy="57" rx="4" ry="6" fill="#9fe1cb" opacity="0.95"/>
-          <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
-          <rect x="78" y="41" width="44" height="52" rx="1.5" fill="none" stroke="#1d9e75" stroke-width="1"/>
-          <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
-        </svg>
-      </a>
-      <p>Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes, and keep the garden of humanity growing.</p>
-      <p>Governance Versioned Like Code. Tested Before Deployment.</p>
-    </div>
-        <nav class="footer-nav">
-      <a href="index.html">Home</a>
-      <a href="https://community.aigovops-foundation.com" target="_blank" rel="noopener">Community platform</a>
-      <a href="https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/" target="_blank" rel="noopener">Library</a>
-      <a href="https://aigovops-foundation.github.io/aigovops-beacon/" target="_blank" rel="noopener">Beacon</a>
-      <a href="https://aigovops-foundation.github.io/umbrella-govops/" target="_blank" rel="noopener">Umbrella</a>
-      <a href="https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/" target="_blank" rel="noopener">NCW AI Camp</a>
-      <a href="blog.html">Blog</a>
-      <a href="frameworks.html">Frameworks</a>
-      <a href="press.html">Press</a>
-      <a href="founders.html#ken">Ken Johnston</a>
-      <a href="founders.html#bob">Bob Rapp</a>
-      <a href="/feed.xml">RSS</a>
-      <a href="https://aigovops.substack.com/" target="_blank" rel="noopener">Newsletter</a>
-      <a href="https://luma.com/aigovops" target="_blank" rel="noopener">Events</a>
-    </nav>
-  </div>
-  <div class="footer-bottom">
-    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
-      <p>© 2026 AiGovOps Foundation — 501(c)(3) Nonprofit</p>
-      <address style="font-style:normal;font-size:.8rem;color:#8080a0">
-        Seattle, WA · Global Community &bull;
-        <a href="mailto:bob.rapp@aigovops.community" style="color:#8080a0">bob.rapp@aigovops.community</a> &bull;
-        <a href="mailto:ken.johnston@aigovops.community" style="color:#8080a0">ken.johnston@aigovops.community</a>
-      </address>
-    </div>
+    <p class="creed">Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes, and keep the garden of humanity growing.</p>
+    <p class="fine">© 2026 AiGovOps Foundation — 501(c)(3) Nonprofit</p>
   </div>
 </footer>
-
-<script>
-// ── Mobile nav toggle ───────────────────────────────────────────────────
-const navToggle = document.querySelector('.nav-toggle');
-const mainNav = document.querySelector('.main-nav');
-if (navToggle && mainNav) {
-  navToggle.addEventListener('click', () => {
-    const open = mainNav.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', open);
-  });
-}
-</script>
-  <script src="/jeeves-widget.js" data-jeeves-site="foundation" defer></script>
-
-<script src="feedback.js" class="aig-feedback-loader" defer></script>
 </body>
 </html>
