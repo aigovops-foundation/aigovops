@@ -46,13 +46,6 @@
     .repo-name { font-size: .9rem; font-weight: 700; color: var(--garden-green-ink); font-family: 'Courier New', monospace; }
     .repo-desc { font-size: .82rem; color: var(--garden-ink-soft); line-height: 1.5; }
     .repo-meta { display: flex; gap: 12px; font-size: .75rem; color: var(--garden-ink-soft); margin-top: 4px; font-family: 'Courier New', monospace; }
-    .tier-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 16px; }
-    .tier-card { background: #fff; border: 1px solid var(--garden-card-line); box-shadow: var(--garden-shadow-sm); border-radius: 14px; padding: 20px; }
-    .tier-icon { font-size: 1.4rem; margin-bottom: 8px; }
-    .tier-name { font-size: .9rem; font-weight: 700; margin-bottom: 4px; }
-    .tier-desc { font-size: .82rem; color: var(--garden-ink-soft); line-height: 1.5; margin-bottom: 12px; }
-    .tier-cta { font-size: .8rem; color: var(--garden-green-ink); font-weight: 600; text-decoration: none; }
-    .tier-cta:hover { color: var(--garden-green-deep); text-decoration: underline; }
     .ways-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 14px; }
     .way { background: var(--garden-cream); border: 1px solid var(--garden-card-line); box-shadow: var(--garden-shadow-sm); border-radius: 14px; padding: 18px; }
     .way-icon { font-size: 1.3rem; margin-bottom: 8px; }
@@ -86,10 +79,10 @@
     </a>
     <nav class="main-nav">
       <a href="index.html">Home</a>
-      <a href="blog.html">Blog</a>
+      <a href="ecosystem.html">Start Here</a>
       <a href="frameworks.html">Frameworks</a>
-      <a href="ecosystem.html">Ecosystem</a>
-      <a href="alpha.html" data-i18n="nav.alpha">Alpha <span aria-hidden="true">α</span></a>
+      <a href="alpha.html">See It Run</a>
+      <a href="blog.html">Blog</a>
       <a href="support.html">Support</a>
     </nav>
     <div class="lang-toggle" aria-label="Language selector">
@@ -155,28 +148,7 @@
 
   <section class="section" style="background:var(--white)">
     <div class="container">
-      <h2>Support tiers</h2>
-      <p class="section-sub">Sustainers keep the infrastructure running. <a href="support.html" style="color:var(--teal-accessible)">See all support options →</a></p>
-      <div class="tier-cards">
-        <div class="tier-card">
-          <div class="tier-icon">🌱</div>
-          <div class="tier-name">Contributor — $50</div>
-          <div class="tier-desc">Your name in the GitHub contributors file. Early framework access.</div>
-          <a href="support.html" class="tier-cta">Become a contributor →</a>
-        </div>
-        <div class="tier-card" style="border-color:var(--teal)">
-          <div class="tier-icon">🔦</div>
-          <div class="tier-name">Sustainer — $1,000</div>
-          <div class="tier-desc">Logo in Beacon + Lantern README, priority issue triage, quarterly briefing.</div>
-          <a href="support.html" class="tier-cta">Become a sustainer →</a>
-        </div>
-        <div class="tier-card">
-          <div class="tier-icon">🏛️</div>
-          <div class="tier-name">Founding Steward — $10,000</div>
-          <div class="tier-desc">OVERT 1.0 protocol attribution, roadmap seat, direct advisory access.</div>
-          <a href="support.html" class="tier-cta">Become a founding partner →</a>
-        </div>
-      </div>
+      <p style="font-size:.95rem;color:var(--garden-charcoal);margin:0">Want to fund the work? Every giving option lives in one place — <a href="support.html" style="color:var(--teal-accessible);font-weight:600">see support options →</a></p>
     </div>
   </section>
 
@@ -198,12 +170,10 @@
   <section class="join-banner">
     <div class="container">
       <h2>Ready to get involved?</h2>
-      <p>Enter the live governed platform, join the conversation on Discord, open an issue or PR, or schedule a call with Ken or Bob.</p>
+      <p>The conversation, the courses, and the signed receipts all live on the community platform.</p>
       <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-        <a href="https://community.aigovops-foundation.com/" target="_blank" rel="noopener" class="btn btn-primary btn-large" onclick="if(window.plausible)plausible('Community: Enter platform')">🌿 Enter the live community →</a>
-        <a href="https://discord.gg/fKaEd4ur4" target="_blank" rel="noopener" class="btn btn-large" style="background:#5865F2;color:#fff;border:2px solid #5865F2" onclick="if(window.plausible)plausible('Community: Discord click')">💬 Join our Discord →</a>
-        <a href="https://github.com/aigovops-foundation" target="_blank" rel="noopener" class="btn btn-primary btn-large" onclick="if(window.plausible)plausible('Community: GitHub org click')">💻 View on GitHub →</a>
-        <a href="support.html" class="btn btn-large" style="background:rgba(255,255,255,.1);color:#fff;border:2px solid rgba(255,255,255,.25)" onclick="if(window.plausible)plausible('Community: Support click')">💚 Support the foundation</a>
+        <a href="https://community.aigovops-foundation.com/" target="_blank" rel="noopener" class="btn btn-primary btn-large" onclick="if(window.plausible)plausible('Community: Enter platform')">🌿 Enter the community platform →</a>
+        <a href="https://github.com/aigovops-foundation" target="_blank" rel="noopener" class="btn btn-large" style="background:rgba(255,255,255,.1);color:#fff;border:2px solid rgba(255,255,255,.25)" onclick="if(window.plausible)plausible('Community: GitHub org click')">💻 GitHub</a>
       </div>
     </div>
   </section>
@@ -242,8 +212,8 @@
       <a href="blog.html">Blog</a>
       <a href="frameworks.html">Frameworks</a>
       <a href="press.html">Press</a>
-      <a href="ken.html">Ken Johnston</a>
-      <a href="bob.html">Bob Rapp</a>
+      <a href="founders.html#ken">Ken Johnston</a>
+      <a href="founders.html#bob">Bob Rapp</a>
       <a href="/feed.xml">RSS</a>
       <a href="https://aigovops.substack.com/" target="_blank" rel="noopener">Newsletter</a>
       <a href="https://luma.com/aigovops" target="_blank" rel="noopener">Events</a>
@@ -264,9 +234,7 @@ if (t && n) t.addEventListener('click', () => { const o = n.classList.toggle('op
   const EXTRA = [
     { href: '/community.html', label: 'Community' },
     { href: '/press.html',     label: 'Press' },
-    { href: '/ken.html',       label: 'Ken Johnston' },
-    { href: '/bob.html',       label: 'Bob Rapp' },
-    { href: '/support.html',   label: 'Support' },
+    { href: '/founders.html',  label: 'Founders' },
   ];
   let injected = false;
   toggle.addEventListener('click', () => {

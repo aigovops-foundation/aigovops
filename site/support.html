@@ -40,8 +40,10 @@
     .support-hero div > p[style] { color: var(--garden-ink-soft) !important; }
     .support-hero div > p[style] a { color: var(--garden-green-ink) !important; }
 
-    /* Coffee banner — rails-ribbon treatment */
+    /* Give-now cluster (rails-ribbon treatment, one giving surface) */
     .coffee-banner { background: var(--garden-cream); border-top: 1.5px dashed rgba(46,125,79,.5); border-bottom: 1.5px dashed rgba(46,125,79,.5); padding: 28px 0; text-align: center; }
+    .give-cluster { padding: 36px 0; }
+    .give-cluster .btn-teal-outline { background: transparent; }
     .coffee-banner p { font-size: .95rem; color: var(--garden-charcoal); max-width: 640px; margin: 0 auto 16px; line-height: 1.6; }
     .coffee-amounts { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 4px; }
     .coffee-pill { background: #fff; border: 1.5px solid var(--garden-green); color: var(--garden-green-deep); border-radius: 999px; padding: 6px 16px; font-size: .82rem; font-weight: 700; font-family: 'Courier New', monospace; cursor: pointer; transition: all .15s; }
@@ -71,34 +73,34 @@
     .btn-teal-outline { background: transparent; color: var(--garden-green-deep); border: 1.5px solid var(--garden-green); border-radius: 999px; padding: 10px 20px; font-size: .82rem; font-weight: 600; cursor: pointer; text-align: center; text-decoration: none; display: block; transition: all .15s; }
     .btn-teal-outline:hover { background: var(--garden-deep-cream); }
 
-    /* Impact section — charcoal band (toolkit treatment) */
+    /* Trust band — charcoal (impact ∪ transparency, toolkit treatment) */
     .impact-section { background: var(--garden-charcoal); --teal: #5DCAA5; color: var(--garden-cream); padding: 56px 0; }
     .impact-section h2 { color: var(--garden-cream); text-align: center; margin-bottom: 8px; }
-    .impact-sub { text-align: center; color: rgba(250,247,240,.72); font-size: .9rem; margin-bottom: 40px; }
+    .impact-sub { text-align: center; color: rgba(250,247,240,.72); font-size: .9rem; max-width: 640px; margin: 0 auto 40px; }
     .impact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
     .impact-card { border: 1px solid rgba(250,247,240,.16); border-radius: var(--garden-r-2xl); padding: 20px 16px; text-align: center; }
     .impact-amount { font-size: 1.3rem; font-weight: 700; color: var(--garden-gold); font-family: 'Courier New', monospace; margin-bottom: 6px; }
     .impact-label { font-size: .8rem; color: rgba(250,247,240,.72); line-height: 1.4; }
-
-    /* Transparency */
-    .transparency-section { background: var(--garden-deep-cream); padding: 52px 0; }
-    .transparency-section h2 { text-align: center; margin-bottom: 8px; }
-    .transparency-sub { text-align: center; color: var(--garden-ink-soft); font-size: .9rem; margin-bottom: 36px; }
-    .transparency-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .transparency-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
     .transparency-item { background: var(--garden-cream); border-radius: 14px; padding: 18px 20px; border: 1px solid var(--garden-card-line); box-shadow: var(--garden-shadow-sm); }
     .transparency-item h4 { font-size: .9rem; font-weight: 700; margin-bottom: 6px; color: var(--garden-charcoal); }
     .transparency-item p { font-size: .82rem; color: var(--garden-ink-soft); line-height: 1.5; }
+    .impact-section .btn-outline { border: 1.5px solid #5DCAA5; color: #5DCAA5; border-radius: 999px; }
+    .impact-section .btn-outline:hover { background: rgba(93,202,165,.12); color: #9fe1cb; border-color: #9fe1cb; }
 
-    /* FAQ */
+    /* FAQ — accessible accordion (details/summary) */
     .faq-section { background: var(--garden-cream); padding: 52px 0; }
     .faq-section h2 { text-align: center; margin-bottom: 36px; }
-    .faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 860px; margin: 0 auto; }
-    .faq-item { background: #fff; border: 1px solid var(--garden-card-line); border-radius: 14px; padding: 18px 20px; box-shadow: var(--garden-shadow-sm); }
-    .faq-item h4 { font-size: .9rem; font-weight: 700; color: var(--garden-charcoal); margin-bottom: 8px; }
-    .faq-item p { font-size: .82rem; color: var(--garden-ink-soft); line-height: 1.5; }
+    .faq-list { display: flex; flex-direction: column; gap: 12px; max-width: 760px; margin: 0 auto; }
+    .faq-item { background: #fff; border: 1px solid var(--garden-card-line); border-radius: 14px; padding: 0; box-shadow: var(--garden-shadow-sm); }
+    .faq-item summary { font-size: .9rem; font-weight: 700; color: var(--garden-charcoal); padding: 16px 20px; cursor: pointer; list-style-position: inside; border-radius: 14px; }
+    .faq-item summary:hover { color: var(--garden-green-deep); }
+    .faq-item summary:focus-visible { outline: 3px solid var(--garden-orange); outline-offset: 2px; }
+    .faq-item[open] summary { border-bottom: 1px solid var(--garden-line); }
+    .faq-item p { font-size: .82rem; color: var(--garden-ink-soft); line-height: 1.5; padding: 12px 20px 16px; }
 
     /* Responsive */
-    @media (max-width: 900px) { .tiers-grid { grid-template-columns: 1fr; } .impact-grid { grid-template-columns: repeat(2,1fr); } .transparency-grid { grid-template-columns: 1fr; } .faq-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 900px) { .tiers-grid { grid-template-columns: 1fr; } .impact-grid { grid-template-columns: repeat(2,1fr); } .transparency-grid { grid-template-columns: 1fr; } }
     @media (max-width: 600px) { .impact-grid { grid-template-columns: 1fr 1fr; } }
   </style>
   <link rel="alternate" type="application/rss+xml" title="AiGovOps Foundation Feed" href="/feed.xml" />
@@ -141,10 +143,10 @@
     </a>
     <nav class="main-nav">
       <a href="index.html" data-i18n="nav.home">Home</a>
-      <a href="blog.html" data-i18n="nav.blog">Blog</a>
+      <a href="ecosystem.html">Start Here</a>
       <a href="frameworks.html">Frameworks</a>
-      <a href="ecosystem.html">Ecosystem</a>
-      <a href="alpha.html" data-i18n="nav.alpha">Alpha <span aria-hidden="true">α</span></a>
+      <a href="alpha.html">See It Run</a>
+      <a href="blog.html" data-i18n="nav.blog">Blog</a>
       <a href="support.html" class="active" style="color:var(--teal-accessible);border-bottom-color:var(--teal-accessible)">Support</a>
     </nav>
     <div class="lang-toggle" aria-label="Language selector">
@@ -162,23 +164,27 @@
     <h1>Fund the Standard.<br>Keep Governance Free.</h1>
     <p>The AiGovOps Foundation builds open-source tools that turn AI compliance into verifiable code — free for every practitioner, startup, and regulator on the planet. Your support keeps it that way.</p>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-      <a href="https://github.com/aigovops-foundation" data-orig="https://github.com/sponsors/aigovops-foundation" target="_blank" rel="noopener" class="btn btn-primary btn-large" onclick="if(window.plausible)plausible('Support: GitHub Sponsors click')">
-        💳 Donate securely
-      </a>
-      <a href="https://github.com/aigovops-foundation" data-orig="https://opencollective.com/aigovops-foundation" target="_blank" rel="noopener" class="btn btn-large" style="background:rgba(255,255,255,.12);color:#fff;border:2px solid rgba(255,255,255,.3)" onclick="if(window.plausible)plausible('Support: Open Collective click')">
-        💚 Give monthly
-      </a>
-      <p style="font-size:.75rem;color:rgba(255,255,255,.4);margin-top:12px;font-family:'Courier New',monospace">
-        🚧 Secure Stripe checkout is being set up — contact
-        <a href="mailto:bob.rapp@aigovops.community" style="color:rgba(255,255,255,.5)">bob.rapp@aigovops.community</a> to donate directly while payment links are finalized.
-      </p>
+      <a href="#give" class="btn btn-primary btn-large" onclick="if(window.plausible)plausible('Support: Give now click')">💚 Give now</a>
     </div>
   </div>
 </section>
 
-<!-- COFFEE BANNER -->
-<section class="coffee-banner" aria-label="Buy us a coffee">
+<!-- GIVE NOW — the one giving cluster -->
+<section class="give-cluster coffee-banner" id="give" aria-label="Give now">
   <div class="container">
+    <!-- giving-interim:start — parked until Ken's Stripe links arrive; run scripts/apply-stripe-links.sh DONATE CONTRIBUTOR SUSTAINER FOUNDING to map each data-orig CTA to its buy.stripe.com link and strip this block. Jeeves giving_rails watches this state. -->
+    <div class="giving-interim-notice" role="note" style="max-width:760px;margin:0 auto 18px;padding:14px 18px;border:2px solid var(--teal-accessible,#0a7);border-radius:10px;background:rgba(10,170,120,.08);text-align:center;font-size:.95rem;line-height:1.5">
+      💚 <strong>The first checkout is live:</strong>
+      <a href="https://buy.stripe.com/bJe7sKbi214M7qJ1t75J603" target="_blank" rel="noopener" style="display:inline-block;margin:6px 8px;padding:10px 22px;border-radius:999px;background:var(--teal-accessible,#0a7);color:#fff;font-weight:700;text-decoration:none" onclick="if(window.plausible)plausible('Support: Stripe $500 donate')">Give $500 — secure Stripe checkout →</a><br>
+      🚧 For the other amounts, secure Stripe checkout is being set up — email
+      <a href="mailto:bob.rapp@aigovops.community?subject=Pledge my support" style="color:var(--teal-accessible,#0a7);font-weight:600">bob.rapp@aigovops.community</a>
+      to pledge and we'll set you up directly. The buttons below link to our GitHub org until their Stripe links go live.
+    </div>
+    <!-- giving-interim:end -->
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:18px">
+      <a href="https://github.com/aigovops-foundation" data-orig="https://github.com/sponsors/aigovops-foundation" target="_blank" rel="noopener" class="btn btn-primary" onclick="if(window.plausible)plausible('Support: GitHub Sponsors click')">💳 Donate securely</a>
+      <a href="https://github.com/aigovops-foundation" data-orig="https://opencollective.com/aigovops-foundation" target="_blank" rel="noopener" class="btn btn-teal-outline" style="display:inline-block" onclick="if(window.plausible)plausible('Support: Open Collective click')">💚 Give monthly</a>
+    </div>
     <p><strong>☕ Buy the team a coffee</strong> — Every bit helps. Pick the amount closest to a coffee in your local currency:</p>
     <div class="coffee-amounts" id="coffeeAmounts">
       <!-- Populated by JS based on browser locale -->
@@ -193,16 +199,7 @@
 <section class="tiers-section">
   <div class="container">
     <h2>Choose your level of support</h2>
-    <!-- giving-interim:start — parked until Ken's Stripe links arrive; run scripts/apply-stripe-links.sh DONATE CONTRIBUTOR SUSTAINER FOUNDING to map each data-orig CTA to its buy.stripe.com link and strip this block. Jeeves giving_rails watches this state. -->
-    <div class="giving-interim-notice" role="note" style="max-width:760px;margin:12px auto 4px;padding:14px 18px;border:2px solid var(--teal-accessible,#0a7);border-radius:10px;background:rgba(10,170,120,.08);text-align:center;font-size:.95rem;line-height:1.5">
-      💚 <strong>The first checkout is live:</strong>
-      <a href="https://buy.stripe.com/bJe7sKbi214M7qJ1t75J603" target="_blank" rel="noopener" style="display:inline-block;margin:6px 8px;padding:10px 22px;border-radius:999px;background:var(--teal-accessible,#0a7);color:#fff;font-weight:700;text-decoration:none" onclick="if(window.plausible)plausible('Support: Stripe $500 donate')">Give $500 — secure Stripe checkout →</a><br>
-      🚧 The tiers below aren't live for card payment yet — email
-      <a href="mailto:bob.rapp@aigovops.community?subject=Pledge my support" style="color:var(--teal-accessible,#0a7);font-weight:600">bob.rapp@aigovops.community</a>
-      to pledge and we'll set you up directly. The tier buttons link to our GitHub org until their Stripe links go live.
-    </div>
-    <!-- giving-interim:end -->
-    <p class="section-sub">All tiers contribute to the same mission — open, verifiable AI governance for everyone.</p>
+    <p class="section-sub">All tiers contribute to the same mission — open, verifiable AI governance for everyone. Want to give right now? The <a href="#give" style="color:var(--teal-accessible)">give-now cluster</a> is above.</p>
     <div class="tiers-grid">
 
       <!-- CONTRIBUTOR -->
@@ -267,11 +264,11 @@
   </div>
 </section>
 
-<!-- IMPACT -->
+<!-- TRUST — where it goes + how to check (impact ∪ transparency) -->
 <section class="impact-section">
   <div class="container">
-    <h2>Where your support goes</h2>
-    <p class="impact-sub">Every dollar funds open infrastructure. No SaaS margins. No VC overhead.</p>
+    <h2>Where your support goes — and how to check</h2>
+    <p class="impact-sub">Every dollar funds open infrastructure — no SaaS margins, no VC overhead. We're a 501(c)(3) building Apache-2.0 tools: public finances, open code, verifiable governance.</p>
     <div class="impact-grid">
       <div class="impact-card">
         <div class="impact-amount">$50</div>
@@ -290,22 +287,14 @@
         <div class="impact-label">Funds a full year of foundation operations + OVERT protocol stewardship</div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- TRANSPARENCY -->
-<section class="transparency-section">
-  <div class="container">
-    <h2>Radical transparency</h2>
-    <p class="transparency-sub">We're a 501(c)(3). Our finances are public. Our code is open. Our governance is verifiable.</p>
     <div class="transparency-grid">
       <div class="transparency-item">
         <h4>📊 Public finances</h4>
-        <p>As a 501(c)(3) our finances are public — income and expenses are reported in our annual filings and shared on request. No black boxes, no hidden overhead.</p>
+        <p>Income and expenses are reported in our annual filings and shared on request. No black boxes, no hidden overhead.</p>
       </div>
       <div class="transparency-item">
         <h4>💻 Open source everything</h4>
-        <p>Beacon, Lantern, and all foundation tooling is Apache-2.0. Read it, fork it, audit it. No lock-in, ever.</p>
+        <p>Beacon, Lantern, and all foundation tooling — read it, fork it, audit it. No lock-in, ever.</p>
       </div>
       <div class="transparency-item">
         <h4>🔏 Cryptographically signed</h4>
@@ -322,31 +311,31 @@
 <section class="faq-section">
   <div class="container">
     <h2>Common questions</h2>
-    <div class="faq-grid">
-      <div class="faq-item">
-        <h4>Is my donation tax-deductible?</h4>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Is my donation tax-deductible?</summary>
         <p>Yes — the AiGovOps Foundation is a 501(c)(3) nonprofit. Donations are tax-deductible in the United States. Check your local laws for international deductibility.</p>
-      </div>
-      <div class="faq-item">
-        <h4>What payment methods are accepted?</h4>
+      </details>
+      <details class="faq-item">
+        <summary>What payment methods are accepted?</summary>
         <p>We use <strong>Stripe</strong> for secure checkout — it accepts all major credit and debit cards, and handles both one-time and recurring monthly donations. Card details go straight to Stripe (PCI-compliant); the foundation never sees or stores them.</p>
-      </div>
-      <div class="faq-item">
-        <h4>Can my company be invoiced?</h4>
+      </details>
+      <details class="faq-item">
+        <summary>Can my company be invoiced?</summary>
         <p>Yes — need an invoice for a corporate contribution? Stripe emails a receipt automatically, and for a formal invoice email <a href="mailto:bob.rapp@aigovops.community?subject=Contribution invoice" style="color:var(--teal-accessible)">bob.rapp@aigovops.community</a> and we'll provide one.</p>
-      </div>
-      <div class="faq-item">
-        <h4>What if I want to contribute code instead?</h4>
+      </details>
+      <details class="faq-item">
+        <summary>What if I want to contribute code instead?</summary>
         <p>Even better! Check the open issues on <a href="https://github.com/aigovops-foundation/aigovops-beacon" target="_blank" rel="noopener" style="color:var(--teal-accessible)">Beacon</a> and <a href="https://aigovops-foundation.github.io/umbrella-govops/" target="_blank" rel="noopener" style="color:var(--teal-accessible)">Lantern</a>. First-time contributors get the same credit as financial supporters.</p>
-      </div>
-      <div class="faq-item">
-        <h4>How do I get listed as a Sustainer?</h4>
+      </details>
+      <details class="faq-item">
+        <summary>How do I get listed as a Sustainer?</summary>
         <p>Once your contribution is confirmed on either platform, email <a href="mailto:bob.rapp@aigovops.community" style="color:var(--teal-accessible)">bob.rapp@aigovops.community</a> with your name/logo and we'll add you within 48 hours.</p>
-      </div>
-      <div class="faq-item">
-        <h4>Is there a monthly option?</h4>
+      </details>
+      <details class="faq-item">
+        <summary>Is there a monthly option?</summary>
         <p>Yes — Stripe supports monthly recurring donations. You can cancel anytime with no penalty. Monthly sustainers keep the infrastructure running reliably.</p>
-      </div>
+      </details>
     </div>
   </div>
 </section>
@@ -392,8 +381,8 @@
       <a href="blog.html">Blog</a>
       <a href="frameworks.html">Frameworks</a>
       <a href="press.html">Press</a>
-      <a href="ken.html">Ken Johnston</a>
-      <a href="bob.html">Bob Rapp</a>
+      <a href="founders.html#ken">Ken Johnston</a>
+      <a href="founders.html#bob">Bob Rapp</a>
       <a href="/feed.xml">RSS</a>
       <a href="https://aigovops.substack.com/" target="_blank" rel="noopener">Newsletter</a>
       <a href="https://luma.com/aigovops" target="_blank" rel="noopener">Events</a>

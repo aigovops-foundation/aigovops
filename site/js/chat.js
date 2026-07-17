@@ -30,12 +30,12 @@ const RESOURCES = {
     cta:   'View & Register on Luma →',
   },
   ken: {
-    url:   'https://www.aigovops-foundation.com/ken.html',
+    url:   'https://www.aigovops-foundation.com/founders.html#ken',
     label: "Ken Johnston — AiGovOps Foundation Co-founder",
     cta:   'View Ken\'s page →',
   },
   bob: {
-    url:   'https://www.aigovops-foundation.com/bob.html',
+    url:   'https://www.aigovops-foundation.com/founders.html#bob',
     label: "Bob Rapp — AiGovOps Foundation Co-founder",
     cta:   'View Bob\'s page →',
   },

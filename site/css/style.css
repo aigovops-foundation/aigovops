@@ -432,10 +432,11 @@ address a:hover { color: var(--white); }
 @keyframes voicePulse { 0%,100%{opacity:1} 50%{opacity:.45} }
 @media (prefers-reduced-motion: reduce) { #voiceBtn { animation: none !important; } }
 
-/* Disabled for testing (June 2026): the EN/ES toggle is non-functional, and the blog isn't live yet.
-   Hidden site-wide here (one place) — re-enable by removing this block. */
+/* Disabled for testing (June 2026): the EN/ES toggle is non-functional.
+   Hidden site-wide here (one place) — re-enable by removing this block.
+   (The blog-link hiding that lived here was removed in M11: Blog is part of
+   the intent-shaped nav — Home · Start Here · Frameworks · See It Run · Blog · Support.) */
 .lang-toggle { display: none !important; }
-a[href="blog.html"], a[href="/blog.html"] { display: none !important; }
 
 /* AiGovOps assistant (js/chat.js) temporarily hidden (June 2026): it conflicts with the
    Jeeves widget — two chat bubbles in the same corner. Re-enable by removing this block. */

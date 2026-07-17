@@ -157,7 +157,8 @@ echo ""
 echo "  [analytics]"
 check_html "$REPO/index.html"  "Plausible on index.html"  'plausible.io'
 check_html "$REPO/blog.html"   "Plausible on blog.html"   'plausible.io'
-check_html "$REPO/events.html" "Plausible on events.html" 'plausible.io'
+# M11: events.html is a JS-free redirect stub (→ Luma); analytics coverage moved to founders.html
+check_html "$REPO/founders.html" "Plausible on founders.html" 'plausible.io'
 
 echo ""
 echo "  [support.html]"

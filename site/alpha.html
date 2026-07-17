@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alpha · what we are building next | AiGovOps Foundation</title>
+  <title>See it run · AiGovOps alpha | AiGovOps Foundation</title>
 <link rel="canonical" href="https://www.aigovops-foundation.com/alpha.html" />
-  <meta name="description" content="Alpha — ideation-stage projects from the AiGovOps Foundation. Currently in the lab: the AiGovOps Library, a governance-as-code product where members propose, stewards approve, and every decision becomes a Beacon-signed receipt." />
+  <meta name="description" content="See AiGovOps run — two alpha projects, live. The AiGovOps Library puts every decision through a gate and signs the receipt; the open Vendor RFI turns tool selection into an evidence-first decision. Watch both work, end to end." />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-  <meta property="og:title" content="Support the AiGovOps Foundation" />
-  <meta property="og:description" content="Fund the open-source AI governance standard. Keep policy-as-code free, verifiable, and global." />
+  <meta property="og:title" content="See it run · AiGovOps alpha" />
+  <meta property="og:description" content="Two alpha projects, one story — a governed agent platform and an open vendor RFI, every step on the record." />
   <meta property="og:image" content="https://www.aigovops-foundation.com/images/founders.jpg" />
   <meta property="og:url" content="https://www.aigovops-foundation.com/alpha.html" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -22,7 +22,7 @@
   <script src="js/i18n/i18n.js"></script>
   <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
   <style>
-    /* ── Alpha page specific — garden-warm skin (M6b) ── */
+    /* ── See-it-run page — garden-warm skin (M11: alpha absorbs demo) ── */
     /* Inline markup (active nav link) uses var(--teal-accessible); re-point it. */
     :root { --teal-accessible: #1F5E3A; }
 
@@ -31,67 +31,39 @@
     .support-hero .container { position: relative; }
     .support-hero .hero-eyebrow { color: var(--garden-green-ink); font-family: 'Courier New', monospace; font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .16em; margin-bottom: 14px; }
     .support-hero h1 { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 600; margin-bottom: 16px; }
-    .support-hero p { font-size: 1.05rem; color: var(--garden-ink-soft); max-width: 560px; margin: 0 auto 36px; line-height: 1.6; }
-    /* the Library / gates-demo ghost CTAs carry inline white-on-dark styles */
-    .support-hero a.btn[style] { background: var(--garden-cream) !important; color: var(--garden-green-deep) !important; border: 2px solid var(--garden-green) !important; border-radius: 999px; }
-    .support-hero a.btn[style]:hover { background: #fff !important; }
+    .support-hero p { font-size: 1.05rem; color: var(--garden-ink-soft); max-width: 620px; margin: 0 auto; line-height: 1.6; }
 
-    /* Coffee banner — rails-ribbon treatment */
-    .coffee-banner { background: var(--garden-cream); border-top: 1.5px dashed rgba(46,125,79,.5); border-bottom: 1.5px dashed rgba(46,125,79,.5); padding: 28px 0; text-align: center; }
-    .coffee-banner p { font-size: .95rem; color: var(--garden-charcoal); max-width: 640px; margin: 0 auto 16px; line-height: 1.6; }
-    .coffee-amounts { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 4px; }
-    .coffee-pill { background: #fff; border: 1.5px solid var(--garden-green); color: var(--garden-green-deep); border-radius: 999px; padding: 6px 16px; font-size: .82rem; font-weight: 700; font-family: 'Courier New', monospace; cursor: pointer; transition: all .15s; }
-    .coffee-pill:hover { background: var(--garden-green); color: #fff; }
-    .coffee-link { display: inline-block; margin-top: 12px; font-size: .82rem; color: var(--garden-green-ink); font-weight: 600; text-decoration: underline; }
+    /* watch-it-run subsections folded in from the demo acts */
+    .watch { margin-top: 34px; border-top: 1px dashed rgba(46,125,79,.45); padding-top: 26px; }
+    .watch .watch-eyebrow { font-family: 'Courier New', monospace; text-transform: uppercase; letter-spacing: .14em; font-size: .72rem; font-weight: 700; color: var(--garden-green-ink); margin: 0 0 10px; }
+    .watch h3 { font-size: 1.05rem; margin: 0 0 12px; }
+    /* the phone mock and receipt keep their own dark device surfaces (load-bearing) */
+    .phone { max-width: 380px; background: #0e141b; border-radius: 18px; padding: 14px; border: 1px solid #2a333c; }
+    .bub { font-size: .86rem; line-height: 1.5; border-radius: 12px; padding: 9px 12px; margin: 0 0 8px; max-width: 88%; }
+    .bub:last-child { margin-bottom: 0; }
+    .bub.me { background: #14b393; color: #04241c; margin-left: auto; font-family: 'Courier New', monospace; }
+    .bub.bot { background: #192330; color: #e2e7e9; }
+    .bub .dim { color: #9fb0bd; }
+    .bub .btns { display: flex; gap: 8px; margin-top: 8px; }
+    .bub .btns span { font-size: .78rem; font-weight: 700; padding: 4px 12px; border-radius: 8px; }
+    .bub .ap { background: #14b393; color: #04241c; } .bub .dn { border: 1px solid #3a4655; color: #9fb0bd; }
+    .embed { border: 1px solid var(--garden-card-line); border-radius: 14px; overflow: hidden; background: #fff; box-shadow: var(--garden-shadow-sm); }
+    .embed iframe { display: block; width: 100%; height: 520px; border: 0; }
+    .embed .cap { font-size: .82rem; color: var(--garden-ink-soft); padding: 9px 14px; background: var(--garden-deep-cream); border-top: 1px solid var(--garden-line); }
+    .receipt { font-family: 'Courier New', monospace; font-size: .8rem; background: #0e141b; color: #9fe1cb; border-radius: 12px; padding: 16px; white-space: pre-wrap; overflow: auto; line-height: 1.5; }
+    .flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; color: var(--garden-ink-soft); font-size: .86rem; margin: 0 0 20px; }
+    .flow b { color: var(--garden-charcoal); font-weight: 700; } .flow .ar { color: var(--garden-green-ink); font-weight: 700; }
 
-    /* Tier grid */
-    .tiers-section { background: var(--garden-cream); padding: 64px 0; }
-    .tiers-section h2 { text-align: center; margin-bottom: 8px; }
-    .tiers-section .section-sub { text-align: center; color: var(--garden-ink-soft); font-size: .9rem; margin-bottom: 48px; }
-    .tiers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .tier-card { background: #fff; border: 1px solid var(--garden-card-line); box-shadow: var(--garden-shadow-sm); border-radius: var(--garden-r-2xl); padding: 32px 28px; display: flex; flex-direction: column; gap: 12px; position: relative; transition: transform .18s, border-color .18s, box-shadow .18s; }
-    .tier-card:hover { transform: translateY(-4px); border-color: var(--garden-green); box-shadow: var(--garden-shadow); }
-    .tier-card.featured { border-color: var(--garden-green); background: var(--garden-deep-cream); }
-    .tier-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--garden-green); color: #fff; font-size: .72rem; font-weight: 700; font-family: 'Courier New', monospace; letter-spacing: .1em; text-transform: uppercase; padding: 4px 14px; border-radius: 20px; white-space: nowrap; }
-    .tier-icon { font-size: 1.8rem; }
-    .tier-name { font-size: 1rem; font-weight: 700; color: var(--garden-charcoal); }
-    .tier-amount { font-family: var(--garden-serif); font-size: 2rem; font-weight: 600; color: var(--garden-green-deep); line-height: 1; }
-    .tier-amount span { font-family: var(--garden-sans); font-size: .85rem; font-weight: 400; color: var(--garden-ink-soft); }
-    .tier-desc { font-size: .85rem; color: var(--garden-ink-soft); line-height: 1.5; }
-    .tier-perks { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 7px; }
-    .tier-perks li { font-size: .84rem; color: var(--garden-charcoal); display: flex; align-items: flex-start; gap: 8px; line-height: 1.4; }
-    .tier-perks li::before { content: '✓'; color: var(--garden-green-ink); font-weight: 700; flex-shrink: 0; }
-    .tier-actions { margin-top: auto; display: flex; flex-direction: column; gap: 8px; }
-    .btn-teal { background: var(--garden-green); color: #fff; border: none; border-radius: 999px; padding: 12px 20px; font-size: .88rem; font-weight: 600; cursor: pointer; text-align: center; text-decoration: none; display: block; transition: background .15s; }
-    .btn-teal:hover { background: var(--garden-green-deep); }
-    .btn-teal-outline { background: transparent; color: var(--garden-green-deep); border: 1.5px solid var(--garden-green); border-radius: 999px; padding: 10px 20px; font-size: .82rem; font-weight: 600; cursor: pointer; text-align: center; text-decoration: none; display: block; transition: all .15s; }
-    .btn-teal-outline:hover { background: var(--garden-deep-cream); }
-
-    /* Impact section — charcoal band (toolkit treatment) */
-    .impact-section { background: var(--garden-charcoal); --teal: #5DCAA5; color: var(--garden-cream); padding: 56px 0; }
-    .impact-section h2 { color: var(--garden-cream); text-align: center; margin-bottom: 8px; }
-    .impact-sub { text-align: center; color: rgba(250,247,240,.72); font-size: .9rem; margin-bottom: 40px; }
-    .impact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-    .impact-card { border: 1px solid rgba(250,247,240,.16); border-radius: var(--garden-r-2xl); padding: 20px 16px; text-align: center; }
-    .impact-amount { font-size: 1.3rem; font-weight: 700; color: var(--garden-gold); font-family: 'Courier New', monospace; margin-bottom: 6px; }
-    .impact-label { font-size: .8rem; color: rgba(250,247,240,.72); line-height: 1.4; }
-
-    /* Transparency */
-    .transparency-section { background: var(--garden-deep-cream); padding: 52px 0; }
-    .transparency-section h2 { text-align: center; margin-bottom: 8px; }
-    .transparency-sub { text-align: center; color: var(--garden-ink-soft); font-size: .9rem; margin-bottom: 36px; }
-    .transparency-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .transparency-item { background: var(--garden-cream); border-radius: 14px; padding: 18px 20px; border: 1px solid var(--garden-card-line); box-shadow: var(--garden-shadow-sm); }
-    .transparency-item h4 { font-size: .9rem; font-weight: 700; margin-bottom: 6px; color: var(--garden-charcoal); }
-    .transparency-item p { font-size: .82rem; color: var(--garden-ink-soft); line-height: 1.5; }
-
-    /* FAQ */
-    .faq-section { background: var(--garden-cream); padding: 52px 0; }
-    .faq-section h2 { text-align: center; margin-bottom: 36px; }
-    .faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 860px; margin: 0 auto; }
-    .faq-item { background: #fff; border: 1px solid var(--garden-card-line); border-radius: 14px; padding: 18px 20px; box-shadow: var(--garden-shadow-sm); }
-    .faq-item h4 { font-size: .9rem; font-weight: 700; color: var(--garden-charcoal); margin-bottom: 8px; }
-    .faq-item p { font-size: .82rem; color: var(--garden-ink-soft); line-height: 1.5; }
+    /* one gate-law explainer (the 1/?/0 block, once) */
+    .gatelaw-section { background: var(--garden-deep-cream); padding: 56px 24px; }
+    .gatelaw-section .container { max-width: 880px; }
+    .gatelaw-section h2 { font-size: 1.5rem; margin: 0 0 8px; }
+    .gatelaw-section .lede { color: var(--garden-ink-soft); max-width: 62ch; line-height: 1.65; margin: 0 0 22px; }
+    .gatelaw { display: flex; gap: 10px; flex-wrap: wrap; margin: 0; }
+    .glaw { flex: 1 1 200px; border: 1px solid var(--garden-card-line); border-radius: 12px; padding: 14px 16px; background: #fff; box-shadow: var(--garden-shadow-sm); }
+    .glaw b { font-size: 1.5rem; font-family: 'Courier New', monospace; line-height: 1; }
+    .glaw.yes b { color: var(--garden-green-ink); } .glaw.no b { color: #b4232a; } .glaw.hold b { color: #854f0b; }
+    .glaw p { margin: 6px 0 0; font-size: .88rem; color: var(--garden-ink-soft); line-height: 1.45; }
 
     /* Re-band the inline-styled body sections (inline attrs stay untouched) */
     section[style*="background:#fff"] { background: var(--garden-cream) !important; }
@@ -100,16 +72,16 @@
     section[style*="background:#0e141b"] { background: var(--garden-charcoal) !important; border-top-color: var(--garden-gold) !important; }
     section[style*="background:#0e141b"] p[style*="color:#14b393"] { color: #5DCAA5 !important; }
     section[style*="background:#0e141b"] code[style*="color:#14b393"] { color: #5DCAA5 !important; }
-    section[style*="background:#0e141b"] a.btn[style] { background: transparent !important; color: var(--garden-cream) !important; border: 1px solid rgba(250,247,240,.4) !important; border-radius: 999px; }
-    section[style*="background:#0e141b"] a.btn[style]:hover { border-color: var(--garden-gold) !important; color: var(--garden-gold) !important; }
+    section[style*="background:#0e141b"] .watch { border-top-color: rgba(250,247,240,.28); }
+    section[style*="background:#0e141b"] .watch .watch-eyebrow { color: #5DCAA5; }
+    section[style*="background:#0e141b"] .flow { color: #c4ccd2; }
+    section[style*="background:#0e141b"] .flow b { color: #fff; } section[style*="background:#0e141b"] .flow .ar { color: #5DCAA5; }
+    section[style*="background:#0e141b"] .embed { border-color: rgba(250,247,240,.2); }
+    section[style*="background:#0e141b"] .embed .cap { background: #192330; color: #c4ccd2; border-top-color: rgba(250,247,240,.15); }
     /* eyebrow + body inks on the re-banded light sections */
     section[style*="background:#fff"] p[style*="color:#888"] { color: var(--garden-ink-soft) !important; }
     section[style*="background:#fff"] p[style*="color:#333"], section[style*="background:#fff"] ul[style*="color:#333"] { color: var(--garden-ink-soft) !important; }
     section[style*="background:#f8f7f4"] p[style*="color:#444"] { color: var(--garden-ink-soft) !important; }
-
-    /* Responsive */
-    @media (max-width: 900px) { .tiers-grid { grid-template-columns: 1fr; } .impact-grid { grid-template-columns: repeat(2,1fr); } .transparency-grid { grid-template-columns: 1fr; } .faq-grid { grid-template-columns: 1fr; } }
-    @media (max-width: 600px) { .impact-grid { grid-template-columns: 1fr 1fr; } }
   </style>
   <link rel="alternate" type="application/rss+xml" title="AiGovOps Foundation Feed" href="/feed.xml" />
 </head>
@@ -151,10 +123,10 @@
     </a>
     <nav class="main-nav">
       <a href="index.html" data-i18n="nav.home">Home</a>
-      <a href="blog.html" data-i18n="nav.blog">Blog</a>
+      <a href="ecosystem.html">Start Here</a>
       <a href="frameworks.html">Frameworks</a>
-      <a href="ecosystem.html">Ecosystem</a>
-      <a href="alpha.html" class="active" data-i18n="nav.alpha" style="color:var(--teal-accessible);border-bottom-color:var(--teal-accessible)">Alpha <span aria-hidden="true">α</span></a>
+      <a href="alpha.html" class="active" style="color:var(--teal-accessible);border-bottom-color:var(--teal-accessible)">See It Run</a>
+      <a href="blog.html" data-i18n="nav.blog">Blog</a>
       <a href="support.html">Support</a>
     </nav>
     <div class="lang-toggle" aria-label="Language selector">
@@ -168,39 +140,41 @@
 <!-- HERO -->
 <section class="support-hero" id="main-content">
   <div class="container">
-    <p class="hero-eyebrow">🧪 Alpha · in active ideation</p>
-    <h1>What we&rsquo;re building next.</h1>
-    <p>The Foundation runs a small lab of ideation-stage projects — early, real, and changing fast. What lives here is closer to a working sketch than a finished product. Things break, names change, the gates aren&rsquo;t always polished. That&rsquo;s the point.</p>
-    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px">
-      <a href="demo.html" class="btn btn-primary btn-large" onclick="if(window.plausible)plausible('Alpha: end-to-end demo')">
-        ▶ Watch the end-to-end demo
-      </a>
-      <a href="https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/" target="_blank" rel="noopener" class="btn btn-large" style="background:rgba(255,255,255,.12);color:#fff;border:2px solid rgba(255,255,255,.3)" onclick="if(window.plausible)plausible('Alpha: open Library')">
-        🏛️ Open the Library
-      </a>
-      <a href="https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/gates.html" target="_blank" rel="noopener" class="btn btn-large" style="background:rgba(255,255,255,.12);color:#fff;border:2px solid rgba(255,255,255,.3)" onclick="if(window.plausible)plausible('Alpha: watch gates demo')">
-        🎬 Watch the live gates demo
-      </a>
-    </div>
+    <p class="hero-eyebrow">🧪 Alpha · see it run</p>
+    <h1>See it run.</h1>
+    <p>The Foundation runs a small lab of ideation-stage projects — early, real, and changing fast. This page is the whole story: what each project is, and the same project actually running, live, in front of you. Things break, names change, the gates aren&rsquo;t always polished. That&rsquo;s the point.</p>
   </div>
 </section>
 
-<!-- LIBRARY CARD -->
+<!-- LIBRARY / PLATFORM CARD -->
 <section style="padding:80px 24px;background:#fff">
   <div class="container" style="max-width:880px">
     <p style="text-transform:uppercase;letter-spacing:2px;color:#888;font-size:.78rem;margin:0 0 8px">Current alpha · project 1 of 2</p>
     <h2 style="font-size:2rem;margin:0 0 16px">The AiGovOps Library</h2>
     <p style="font-size:1.1rem;line-height:1.6;color:#333">A governance-as-code product. <strong>Members propose, stewards approve, every decision becomes a Beacon-signed receipt.</strong> Nine seats (Legal, Product Security, AI Governance, IT Security, Insurance, Safety, DevSecOps, FinOps, Public Policy) walk a real scenario through nine gates in front of a live, tamper-evident ledger. The verdicts are honest — including the ones that come back as &ldquo;not yet.&rdquo;</p>
     <ul style="font-size:1rem;line-height:1.9;color:#333;margin:24px 0 32px;padding-left:22px">
-      <li><strong>Gate law:</strong> 1 = Yes (earned, with evidence). 0 = No. ? = Maybe (held only with owner + ETA).</li>
       <li><strong>Identity:</strong> real GitHub OAuth. Stewards hold the gate; non-stewards see a 403 on convene.</li>
       <li><strong>Ledger:</strong> Ed25519 Beacon signatures on every accepted decision; verifiable from <code>/status</code>.</li>
       <li><strong>Durability:</strong> two-layer architecture — always-up CDN hub, Fly-backed dynamic core. See the <a href="https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/durability-plan.html" target="_blank" rel="noopener">durability plan</a>.</li>
     </ul>
+
+    <div class="watch">
+      <p class="watch-eyebrow">▶ Watch it run · the platform that governs</p>
+      <h3>Do real work from your phone — every send still gated</h3>
+      <p style="font-size:1rem;line-height:1.65;color:#333;max-width:62ch;margin:0 0 18px">The same gate governs the whole fleet. Omni runs <strong>30 agents with no ambient authority</strong> — the only way any of them touches the world is <code>core.mediator.perform</code>, and every answer lands on the ledger:</p>
+      <div class="phone" role="img" aria-label="Telegram transcript. You send slash-draft Q3 governance brief; the bot replies draft_post done, verdict 1, earned. You send slash-publish; the bot replies publish_post held for approval with Approve and Deny buttons. After you tap Approve, it replies published, receipt signed and used once.">
+        <div class="bub me">/draft Q3 governance brief</div>
+        <div class="bub bot">&#9989; draft_post — done. <span class="dim">(verdict 1 · earned)</span></div>
+        <div class="bub me">/publish draft-12</div>
+        <div class="bub bot">&#9203; publish_post held for approval.<div class="btns"><span class="ap">Approve</span><span class="dn">Deny</span></div></div>
+        <div class="bub bot">&#9989; published — receipt signed, used once. <span class="dim">(you tapped Approve)</span></div>
+      </div>
+      <p style="font-size:1rem;line-height:1.65;color:#333;max-width:62ch;margin:18px 0 22px">Holds fan out to your channels; an approval performs <strong>exactly once</strong>. The <strong>Jeeves Fleet cockpit</strong> shows the whole fleet at a glance — what&rsquo;s pending, what&rsquo;s wired, and what each agent is allowed to do — and leads with what needs you.</p>
+    </div>
+
     <div style="display:flex;gap:12px;flex-wrap:wrap">
       <a href="https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/" target="_blank" rel="noopener" class="btn btn-primary" onclick="if(window.plausible)plausible('Alpha: Library hub')">Enter the Library &rarr;</a>
-      <a href="https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/gates.html" target="_blank" rel="noopener" class="btn" style="background:#f2f2f2;color:#222;border:1px solid #ddd" onclick="if(window.plausible)plausible('Alpha: gates demo')">Live gates demo &rarr;</a>
-      <a href="https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/tour.html" target="_blank" rel="noopener" class="btn" style="background:#f2f2f2;color:#222;border:1px solid #ddd" onclick="if(window.plausible)plausible('Alpha: tour')">Take the tour &rarr;</a>
+      <a href="https://community.aigovops-foundation.com/fleet.html" target="_blank" rel="noopener" class="btn" style="background:#f2f2f2;color:#222;border:1px solid #ddd" onclick="if(window.plausible)plausible('Alpha: live cockpit')">Open the live cockpit &rarr;</a>
     </div>
   </div>
 </section>
@@ -217,10 +191,45 @@
       <li><strong style="color:#fff">Audit training</strong> — lessons, a knowledge check, a self-audit, and an unsigned SHA-256 receipt you can verify.</li>
       <li><strong style="color:#fff">Governed surface</strong> — maintained by <code style="color:#14b393">aigovops-agent-vendor-rfi</code>; content changes hold for steward sign-off.</li>
     </ul>
-    <div style="display:flex;gap:12px;flex-wrap:wrap">
+
+    <div class="watch">
+      <p class="watch-eyebrow">▶ Watch it run · then decide, openly</p>
+      <h3 style="color:#fff">From &ldquo;which vendors?&rdquo; to a signed decision</h3>
+      <div class="flow"><b>Compose a stack</b> <span class="ar" aria-hidden="true">&rarr;</span> <b>Compare 50 vendors</b> <span class="ar" aria-hidden="true">&rarr;</span> <b>Approve a shortlist</b> <span class="ar" aria-hidden="true">&rarr;</span> <b>Decision receipt</b></div>
+      <div class="embed">
+        <iframe title="Live: the Vendor RFI 50-vendor comparison page" src="https://aigovops-foundation.github.io/aigovops-vendor-rfi/comparison.html" loading="lazy"></iframe>
+        <p class="cap">Live, right here — the real comparison page. 50 vendors across five categories; search and filter it.</p>
+      </div>
+      <p style="font-size:1rem;line-height:1.65;color:#c4ccd2;max-width:62ch;margin:24px 0 14px">Approve your shortlist in the advisor and export a governed <strong style="color:#fff">decision receipt</strong> — canonical JSON with a SHA-256 digest (Beacon-signable later):</p>
+      <pre class="receipt">{
+  "schema": "aigovops.vendor-rfi.decision.v1",
+  "catalog_size": 50,
+  "approved_shortlist": [
+    { "cat": "grc",    "name": "Credo AI" },
+    { "cat": "policy", "name": "Styra / OPA" }
+  ],
+  "notes": { "signing": "unsigned preview only",
+             "neutrality": "inclusion is not endorsement; ranking can't be bought" }
+}
+SHA-256  6d4c19e14efa8151&hellip;</pre>
+    </div>
+
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
       <a href="https://aigovops-foundation.github.io/aigovops-vendor-rfi/" target="_blank" rel="noopener" class="btn btn-primary" onclick="if(window.plausible)plausible('Alpha: Vendor RFI hub')">Open the Vendor RFI &rarr;</a>
       <a href="https://aigovops-foundation.github.io/aigovops-vendor-rfi/training.html" target="_blank" rel="noopener" class="btn" style="background:#192330;color:#e2e7e9;border:1px solid #2a333c" onclick="if(window.plausible)plausible('Alpha: Vendor RFI training')">Start audit training &rarr;</a>
-      <a href="https://aigovops-foundation.github.io/aigovops-vendor-rfi/comparison.html" target="_blank" rel="noopener" class="btn" style="background:#192330;color:#e2e7e9;border:1px solid #2a333c" onclick="if(window.plausible)plausible('Alpha: Vendor RFI compare')">Compare 50 vendors &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- THE GATE LAW (once) -->
+<section class="gatelaw-section">
+  <div class="container">
+    <h2>One gate law runs through both.</h2>
+    <p class="lede">Every action — a Library decision, an agent&rsquo;s send, a vendor shortlist — is a proposal, and the gate answers in exactly one of three ways:</p>
+    <div class="gatelaw">
+      <div class="glaw yes"><b>1</b><p>Yes — earned, with evidence. Runs once, on a single-use receipt.</p></div>
+      <div class="glaw no"><b>0</b><p>No — refused, and written to the ledger.</p></div>
+      <div class="glaw hold"><b>?</b><p>Held for a human — and decays to 0 if no one approves by the deadline.</p></div>
     </div>
   </div>
 </section>
@@ -231,6 +240,7 @@
     <h2 style="font-size:1.5rem;margin:0 0 16px">What &ldquo;alpha&rdquo; means here</h2>
     <p style="font-size:1rem;line-height:1.7;color:#444">Alpha means we&rsquo;re shipping it openly while it&rsquo;s still being shaped. You can read the code, run the demo, sign the ledger, file the bug. What you can&rsquo;t do yet is treat it as production. URLs may move, schemas may change, and the steward roster is small. If something breaks or makes you say &ldquo;wait, why?&rdquo;, that&rsquo;s a signal we want — email the team or open an issue.</p>
     <p style="font-size:1rem;line-height:1.7;color:#444;margin-top:14px">More alpha experiments are coming. This page will grow.</p>
+    <p style="margin-top:28px"><a href="https://community.aigovops-foundation.com/" target="_blank" rel="noopener" class="btn btn-primary" onclick="if(window.plausible)plausible('Alpha: enter Control Room')">See it live — enter the Control Room &rarr;</a></p>
   </div>
 </section>
 
@@ -264,8 +274,8 @@
       <a href="blog.html">Blog</a>
       <a href="frameworks.html">Frameworks</a>
       <a href="press.html">Press</a>
-      <a href="ken.html">Ken Johnston</a>
-      <a href="bob.html">Bob Rapp</a>
+      <a href="founders.html#ken">Ken Johnston</a>
+      <a href="founders.html#bob">Bob Rapp</a>
       <a href="/feed.xml">RSS</a>
       <a href="https://aigovops.substack.com/" target="_blank" rel="noopener">Newsletter</a>
       <a href="https://luma.com/aigovops" target="_blank" rel="noopener">Events</a>
@@ -284,63 +294,6 @@
 </footer>
 
 <script>
-// ── Coffee amounts by locale ─────────────────────────────────────────────
-(function() {
-  const locale = navigator.language || 'en-US';
-  const currency = (function() {
-    try {
-      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
-      const map = {
-        'America': 'USD', 'Europe/London': 'GBP', 'Europe': 'EUR',
-        'Asia/Tokyo': 'JPY', 'Asia/Seoul': 'KRW', 'Asia/Shanghai': 'CNY',
-        'Asia/Kolkata': 'INR', 'Asia/Singapore': 'SGD', 'Australia': 'AUD',
-        'America/Sao_Paulo': 'BRL', 'America/Toronto': 'CAD', 'America/Vancouver': 'CAD',
-      };
-      for (const [k, v] of Object.entries(map)) {
-        if (tz.startsWith(k)) return v;
-      }
-    } catch(e) {}
-    return 'USD';
-  })();
-
-  // Coffee equivalent amounts per currency (roughly $5, $10, $20 USD)
-  const amounts = {
-    USD: [{ label: '$5',    amt: 5   }, { label: '$10',   amt: 10  }, { label: '$20',   amt: 20  }],
-    GBP: [{ label: '£4',   amt: 4   }, { label: '£8',    amt: 8   }, { label: '£16',   amt: 16  }],
-    EUR: [{ label: '€5',   amt: 5   }, { label: '€10',   amt: 10  }, { label: '€18',   amt: 18  }],
-    JPY: [{ label: '¥750', amt: 750 }, { label: '¥1500', amt: 1500}, { label: '¥3000', amt: 3000}],
-    KRW: [{ label: '₩7000',amt: 7000}, { label: '₩14000',amt:14000}, { label: '₩28000',amt:28000}],
-    CNY: [{ label: '¥35',  amt: 35  }, { label: '¥70',   amt: 70  }, { label: '¥140',  amt: 140 }],
-    INR: [{ label: '₹420', amt: 420 }, { label: '₹840',  amt: 840 }, { label: '₹1680', amt: 1680}],
-    SGD: [{ label: 'S$7',  amt: 7   }, { label: 'S$14',  amt: 14  }, { label: 'S$28',  amt: 28  }],
-    AUD: [{ label: 'A$8',  amt: 8   }, { label: 'A$16',  amt: 16  }, { label: 'A$30',  amt: 30  }],
-    BRL: [{ label: 'R$26', amt: 26  }, { label: 'R$52',  amt: 52  }, { label: 'R$100', amt: 100 }],
-    CAD: [{ label: 'C$7',  amt: 7   }, { label: 'C$14',  amt: 14  }, { label: 'C$26',  amt: 26  }],
-  };
-
-  const list = amounts[currency] || amounts['USD'];
-  const container = document.getElementById('coffeeAmounts');
-  if (!container) return;
-
-  list.forEach(item => {
-    const btn = document.createElement('a');
-    btn.href = `https://opencollective.com/aigovops-foundation/donate?amount=${item.amt}&interval=onetime`;
-    btn.target = '_blank';
-    btn.rel = 'noopener';
-    btn.className = 'coffee-pill';
-    btn.textContent = `☕ ${item.label}`;
-    btn.setAttribute('aria-label', `Donate ${item.label} — about the price of a coffee`);
-    btn.addEventListener('click', () => { try { if(window.plausible) window.plausible('Support: Coffee amount', {props:{amount:item.label,currency}}); } catch(e){} });
-    container.appendChild(btn);
-  });
-
-  // Show detected currency
-  const note = document.createElement('p');
-  note.style.cssText = 'font-size:.75rem;color:#0a3d2a;opacity:.7;margin-top:8px';
-  note.textContent = `Showing ${currency} amounts based on your location.`;
-  container.after(note);
-})();
-
 // ── Mobile nav toggle ───────────────────────────────────────────────────
 const navToggle = document.querySelector('.nav-toggle');
 const mainNav = document.querySelector('.main-nav');

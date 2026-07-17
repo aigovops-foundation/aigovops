@@ -29,8 +29,6 @@
     .page-hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(480px 220px at 10% 115%, rgba(232,181,74,.28), transparent 70%), radial-gradient(460px 220px at 92% -15%, rgba(46,125,79,.16), transparent 70%); }
     .page-hero .container { position: relative; }
     .page-hero h1 { font-weight: 600; }
-    /* footer-brand's mission paragraph is not the motto — keep it readable */
-    .footer-brand p:nth-of-type(2) { font-size: .85rem; font-weight: 400; letter-spacing: normal; text-transform: none; color: var(--garden-on-dark-dim); }
   </style>
 </head>
 <body>
@@ -39,15 +37,23 @@
 
 <header class="site-header">
   <div class="container nav-inner">
-    <a href="index.html" class="logo-link">
-      <span class="logo-text">AiGovOps Foundation</span>
+    <a href="index.html" class="logo-link" aria-label="AiGovOps Foundation home">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="height:38px;width:38px;flex-shrink:0">
+        <title>AiGovOps Foundation</title>
+        <circle cx="100" cy="100" r="96" fill="#071a12"/>
+        <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+        <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+        <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
+        <ellipse cx="100" cy="57" rx="4" ry="6" fill="#9fe1cb" opacity="0.95"/>
+        <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+      </svg>
     </a>
     <nav class="main-nav">
       <a href="index.html" data-i18n="nav.home">Home</a>
-      <a href="blog.html" class="active" data-i18n="nav.blog">Blog</a>
+      <a href="ecosystem.html">Start Here</a>
       <a href="frameworks.html">Frameworks</a>
-      <a href="ecosystem.html">Ecosystem</a>
-      <a href="alpha.html" data-i18n="nav.alpha">Alpha <span aria-hidden="true">α</span></a>
+      <a href="alpha.html">See It Run</a>
+      <a href="blog.html" class="active" data-i18n="nav.blog">Blog</a>
       <a href="support.html">Support</a>
     </nav>
     <div class="lang-toggle" aria-label="Language selector">
@@ -166,10 +172,17 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <span class="logo-text footer-logo" style="color:#fff;font-size:1.1rem;">AiGovOps Foundation</span>
-      <p>Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes, and keep the garden of humanity growing.</p>
-      <p style="margin-top:16px">The AiGovOps Foundation is dedicated to shaping the future of artificial intelligence through rigorous oversight, audit, and compliance.</p>
-      <address>Seattle, WA 98104 &bull; <a href="mailto:bob.rapp@aigovops.community">bob.rapp@aigovops.community</a></address>
+      <a href="index.html" aria-label="AiGovOps Foundation home">
+        <svg style="height:32px;width:32px" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="96" fill="#071a12"/>
+          <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+          <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+          <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
+          <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+        </svg>
+      </a>
+      <p class="estate-creed">Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes, and keep the garden of humanity growing.</p>
+      <p>Governance Versioned Like Code. Tested Before Deployment.</p>
     </div>
         <nav class="footer-nav">
       <a href="index.html">Home</a>
@@ -181,18 +194,15 @@
       <a href="blog.html">Blog</a>
       <a href="frameworks.html">Frameworks</a>
       <a href="press.html">Press</a>
-      <a href="ken.html">Ken Johnston</a>
-      <a href="bob.html">Bob Rapp</a>
+      <a href="founders.html#ken">Ken Johnston</a>
+      <a href="founders.html#bob">Bob Rapp</a>
       <a href="/feed.xml">RSS</a>
       <a href="https://aigovops.substack.com/" target="_blank" rel="noopener">Newsletter</a>
       <a href="https://luma.com/aigovops" target="_blank" rel="noopener">Events</a>
     </nav>
   </div>
   <div class="footer-bottom">
-    <div class="container">
-      <p>Governance Versioned Like Code. Tested Before Deployment.</p>
-      <p>© 2026 AiGovOps Foundation. All rights reserved.</p>
-    </div>
+    <div class="container"><p>© 2026 AiGovOps Foundation — 501(c)(3) Nonprofit</p></div>
   </div>
 </footer>
 
