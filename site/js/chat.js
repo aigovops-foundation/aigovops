@@ -25,8 +25,8 @@ const RESOURCES = {
     cta:   'Subscribe on Substack →',
   },
   event: {
-    url:   'https://luma.com/aigovops',
-    label: 'Upcoming AiGovOps Event on Luma',
+    url:   'community.html',
+    label: 'Events live inside the community — join free',
     cta:   'View & Register on Luma →',
   },
   ken: {
