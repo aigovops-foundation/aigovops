@@ -192,9 +192,9 @@ ALPHA=$(body "$SITE/stay-at-yes.html")
 echo "$ALPHA" | grep -q "aigovops-vendor-rfi" \
   && check "alpha page links the Vendor RFI" "ok" \
   || check "alpha page links the Vendor RFI" "link missing"
-echo "$ALPHA" | grep -q "project 2 of 2" \
-  && check "alpha shows Vendor RFI as project 2 of 2" "ok" \
-  || check "alpha shows Vendor RFI as project 2 of 2" "label missing"
+echo "$ALPHA" | grep -q "aigovops-vendor-rfi/comparison.html" \
+  && check "stay-at-yes carries the live RFI comparison embed" "ok" \
+  || check "stay-at-yes carries the live RFI comparison embed" "embed missing"
 RFI="https://aigovops-foundation.github.io/aigovops-vendor-rfi"
 for p in "/" "/training.html" "/comparison.html"; do
   code=$(http_code "$RFI$p")

@@ -54,15 +54,6 @@
     .watch .watch-eyebrow { font-family: 'Courier New', monospace; text-transform: uppercase; letter-spacing: .14em; font-size: .72rem; font-weight: 700; color: var(--garden-green-ink); margin: 0 0 10px; }
     .watch h3 { font-size: 1.05rem; margin: 0 0 12px; }
     /* the phone mock and receipt keep their own dark device surfaces (load-bearing) */
-    .phone { max-width: 380px; background: #0e141b; border-radius: 18px; padding: 14px; border: 1px solid #2a333c; }
-    .bub { font-size: .86rem; line-height: 1.5; border-radius: 12px; padding: 9px 12px; margin: 0 0 8px; max-width: 88%; }
-    .bub:last-child { margin-bottom: 0; }
-    .bub.me { background: #14b393; color: #04241c; margin-left: auto; font-family: 'Courier New', monospace; }
-    .bub.bot { background: #192330; color: #e2e7e9; }
-    .bub .dim { color: #9fb0bd; }
-    .bub .btns { display: flex; gap: 8px; margin-top: 8px; }
-    .bub .btns span { font-size: .78rem; font-weight: 700; padding: 4px 12px; border-radius: 8px; }
-    .bub .ap { background: #14b393; color: #04241c; } .bub .dn { border: 1px solid #3a4655; color: #9fb0bd; }
     .embed { border: 1px solid var(--garden-card-line); border-radius: 14px; overflow: hidden; background: #fff; box-shadow: var(--garden-shadow-sm); }
     .embed iframe { display: block; width: 100%; height: 520px; border: 0; position: relative; z-index: 1; background: transparent; }
     .embed .cap { font-size: .82rem; color: var(--garden-ink-soft); padding: 9px 14px; background: var(--garden-deep-cream); border-top: 1px solid var(--garden-line); }
@@ -78,8 +69,6 @@
     @media (prefers-reduced-motion: reduce) { .embed-skeleton .skel-bar { animation: none; } }
     .embed-frame.embed-loaded .embed-skeleton { opacity: 0; }
     .embed .embed-fallback { display: inline-block; margin-top: 4px; font-weight: 700; color: var(--garden-green-ink); text-decoration: underline; text-underline-offset: 3px; }
-    section[style*="background:#0e141b"] .embed .embed-fallback { color: #5DCAA5; }
-    .receipt { font-family: 'Courier New', monospace; font-size: .8rem; background: #0e141b; color: #9fe1cb; border-radius: 12px; padding: 16px; white-space: pre-wrap; overflow: auto; line-height: 1.5; }
     .flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; color: var(--garden-ink-soft); font-size: .86rem; margin: 0 0 20px; }
     .flow b { color: var(--garden-charcoal); font-weight: 700; } .flow .ar { color: var(--garden-green-ink); font-weight: 700; }
 
@@ -87,15 +76,6 @@
     section[style*="background:#fff"] { background: var(--garden-cream) !important; }
     section[style*="background:#f8f7f4"] { background: var(--garden-deep-cream) !important; }
     /* Vendor RFI band: navy → charcoal, gold rule, AA-safe teal accents */
-    section[style*="background:#0e141b"] { background: var(--garden-charcoal) !important; border-top-color: var(--garden-gold) !important; }
-    section[style*="background:#0e141b"] p[style*="color:#14b393"] { color: #5DCAA5 !important; }
-    section[style*="background:#0e141b"] code[style*="color:#14b393"] { color: #5DCAA5 !important; }
-    section[style*="background:#0e141b"] .watch { border-top-color: rgba(250,247,240,.28); }
-    section[style*="background:#0e141b"] .watch .watch-eyebrow { color: #5DCAA5; }
-    section[style*="background:#0e141b"] .flow { color: #c4ccd2; }
-    section[style*="background:#0e141b"] .flow b { color: #fff; } section[style*="background:#0e141b"] .flow .ar { color: #5DCAA5; }
-    section[style*="background:#0e141b"] .embed { border-color: rgba(250,247,240,.2); }
-    section[style*="background:#0e141b"] .embed .cap { background: #192330; color: #c4ccd2; border-top-color: rgba(250,247,240,.15); }
     /* eyebrow + body inks on the re-banded light sections */
     section[style*="background:#fff"] p[style*="color:#888"] { color: var(--garden-ink-soft) !important; }
     section[style*="background:#fff"] p[style*="color:#333"], section[style*="background:#fff"] ul[style*="color:#333"] { color: var(--garden-ink-soft) !important; }
@@ -215,36 +195,8 @@
     </div>
 
     <div class="watch" style="max-width:880px">
-      <p class="watch-eyebrow">Current alpha · project 1 of 2 · the platform that governs</p>
-      <h3>The AiGovOps Library — do real work from your phone, every send still gated</h3>
-      <p style="font-size:1rem;line-height:1.65;color:var(--garden-ink-soft);max-width:62ch;margin:0 0 18px">A governance-as-code product: <strong>members propose, stewards approve, every decision becomes a Beacon-signed receipt</strong> — real GitHub OAuth identity, Ed25519 signatures verifiable from <code>/status</code>. The same gate governs the whole fleet — Omni runs <strong>30 agents with no ambient authority</strong>, and every answer lands on the ledger:</p>
-      <div class="phone" role="img" aria-label="Telegram transcript. You send slash-draft Q3 governance brief; the bot replies draft_post done, verdict 1, earned. You send slash-publish; the bot replies publish_post held for approval with Approve and Deny buttons. After you tap Approve, it replies published, receipt signed and used once.">
-        <div class="bub me">/draft Q3 governance brief</div>
-        <div class="bub bot">&#9989; draft_post — done. <span class="dim">(verdict 1 · earned)</span></div>
-        <div class="bub me">/publish draft-12</div>
-        <div class="bub bot">&#9203; publish_post held for approval.<div class="btns"><span class="ap">Approve</span><span class="dn">Deny</span></div></div>
-        <div class="bub bot">&#9989; published — receipt signed, used once. <span class="dim">(you tapped Approve)</span></div>
-      </div>
-      <p style="font-size:1rem;line-height:1.65;color:var(--garden-ink-soft);max-width:62ch;margin:18px 0 22px">Holds fan out to your channels; an approval performs <strong>exactly once</strong>.</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a href="https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/" target="_blank" rel="noopener" class="btn" style="background:#fff;color:var(--garden-green-ink);border:1.5px solid var(--garden-green)" onclick="if(window.plausible)plausible('Alpha: Library hub')">Enter the Library &rarr;</a>
-        <a href="https://community.aigovops-foundation.com/fleet.html" target="_blank" rel="noopener" class="btn" style="background:#fff;color:var(--garden-green-ink);border:1.5px solid var(--garden-green)" onclick="if(window.plausible)plausible('Alpha: live cockpit')">Open the live cockpit &rarr;</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- VENDOR RFI CARD -->
-<section style="padding:80px 24px;background:#0e141b;color:#e2e7e9;border-top:3px solid #14b393">
-  <div class="container" style="max-width:880px">
-    <p style="text-transform:uppercase;letter-spacing:2px;color:#14b393;font-size:.78rem;margin:0 0 8px;font-family:ui-monospace,Menlo,monospace">Current alpha · project 2 of 2</p>
-    <h2 style="font-size:2rem;margin:0 0 16px;color:#fff">Vendor RFI — choose a governance stack like engineering</h2>
-    <p style="font-size:1.1rem;line-height:1.6;color:#c4ccd2">An open, <strong style="color:#fff">evidence-oriented vendor RFI and audit-training tool</strong>: 50 vendors across five categories, <strong style="color:#fff">neutral and gap-aware</strong> — ranking can&rsquo;t be bought and gaps aren&rsquo;t hidden — with audit training and a verifiable receipt. The surface is governed: maintained by <code style="color:#14b393">aigovops-agent-vendor-rfi</code>, content changes hold for steward sign-off.</p>
-
-    <div class="watch">
-      <p class="watch-eyebrow">▶ Watch it run · then decide, openly</p>
-      <h3 style="color:#fff">From &ldquo;which vendors?&rdquo; to a signed decision</h3>
-      <div class="flow"><b>Compose a stack</b> <span class="ar" aria-hidden="true">&rarr;</span> <b>Compare 50 vendors</b> <span class="ar" aria-hidden="true">&rarr;</span> <b>Approve a shortlist</b> <span class="ar" aria-hidden="true">&rarr;</span> <b>Decision receipt</b></div>
+      <p class="watch-eyebrow">&#9654; Live, right here — the Vendor RFI comparison</p>
+      <p style="font-size:1rem;line-height:1.65;color:var(--garden-ink-soft);max-width:62ch;margin:0 0 18px">50 vendors across five categories, <strong>neutral and gap-aware</strong> — ranking can&rsquo;t be bought and gaps aren&rsquo;t hidden. The surface itself is governed: maintained by <code>aigovops-agent-vendor-rfi</code>, content changes hold for steward sign-off.</p>
       <div class="embed">
         <div class="embed-frame">
           <div class="embed-skeleton" aria-hidden="true">
@@ -257,24 +209,10 @@
         </div>
         <p class="cap">Live, right here — the real comparison page. 50 vendors across five categories; search and filter it.<br>
           <a class="embed-fallback" href="https://aigovops-foundation.github.io/aigovops-vendor-rfi/comparison.html" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Alpha: Vendor RFI comparison tab')">Open the live comparison in its own tab →</a></p>
+      
       </div>
-      <p style="font-size:1rem;line-height:1.65;color:#c4ccd2;max-width:62ch;margin:24px 0 14px">Approve your shortlist in the advisor and export a governed <strong style="color:#fff">decision receipt</strong> — canonical JSON with a SHA-256 digest (Beacon-signable later):</p>
-      <pre class="receipt">{
-  "schema": "aigovops.vendor-rfi.decision.v1",
-  "catalog_size": 50,
-  "approved_shortlist": [
-    { "cat": "grc",    "name": "Credo AI" },
-    { "cat": "policy", "name": "Styra / OPA" }
-  ],
-  "notes": { "signing": "unsigned preview only",
-             "neutrality": "inclusion is not endorsement; ranking can't be bought" }
-}
-SHA-256  6d4c19e14efa8151&hellip;</pre>
-    </div>
-
-    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
-      <a href="https://aigovops-foundation.github.io/aigovops-vendor-rfi/" target="_blank" rel="noopener" class="btn" style="background:#192330;color:#e2e7e9;border:1px solid #2a333c" onclick="if(window.plausible)plausible('Alpha: Vendor RFI hub')">Open the Vendor RFI &rarr;</a>
-      <a href="https://aigovops-foundation.github.io/aigovops-vendor-rfi/training.html" target="_blank" rel="noopener" class="btn" style="background:#192330;color:#e2e7e9;border:1px solid #2a333c" onclick="if(window.plausible)plausible('Alpha: Vendor RFI training')">Start audit training &rarr;</a>
+      <p style="font-size:.9rem;margin-top:14px"><a href="https://aigovops-foundation.github.io/aigovops-vendor-rfi/" target="_blank" rel="noopener" style="color:var(--garden-green-ink);font-weight:600" onclick="if(window.plausible)plausible('Alpha: Vendor RFI hub')">Open the Vendor RFI &rarr;</a>
+      &nbsp;&middot;&nbsp; <a href="https://aigovops-foundation.github.io/aigovops-vendor-rfi/training.html" target="_blank" rel="noopener" style="color:var(--garden-green-ink)" onclick="if(window.plausible)plausible('Alpha: Vendor RFI training')">audit training &rarr;</a></p>
     </div>
   </div>
 </section>

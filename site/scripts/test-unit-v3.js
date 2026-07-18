@@ -351,7 +351,7 @@ checkTrue('alpha links to the Vendor RFI hub',             alphaHtml.includes(`$
 checkTrue('alpha links to audit training',                 alphaHtml.includes(`${RFI}/training.html`));
 checkTrue('alpha links to the 50-vendor comparison',       alphaHtml.includes(`${RFI}/comparison.html`));
 checkTrue('Vendor RFI links open in a new tab safely',     alphaHtml.includes(`href="${RFI}/" target="_blank" rel="noopener"`));
-checkTrue('alpha shows two projects (Library + RFI)',      alphaHtml.includes('project 1 of 2') && alphaHtml.includes('project 2 of 2'));
+checkTrue('stay-at-yes carries the live RFI embed',        alphaHtml.includes('aigovops-vendor-rfi/comparison.html') && alphaHtml.includes('aigovops-agent-vendor-rfi'));
 checkTrue('Vendor RFI credits its governing agent',        alphaHtml.includes('aigovops-agent-vendor-rfi'));
 checkFalse('Alpha uses the canonical org copy (no personal fork URL)', alphaHtml.includes('bobrapp.github.io/aigov'));
 checkFalse('Alpha does not relink the retired /vendor-rfi-alpha bundle', alphaHtml.includes('/vendor-rfi-alpha/'));
