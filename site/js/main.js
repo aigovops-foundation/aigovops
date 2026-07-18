@@ -57,9 +57,12 @@ function renderCol(person, posts) {
       ${profileBtn}
     </div>`;
   }
+  // Teaser mode (2026-07-18 one-word fixes): the porch shows the 2 newest per
+  // founder; the full feed lives on their LinkedIn profiles via the button below.
+  const teaser = posts.slice(0, 2);
   return `<div class="founders-col">
     <div class="founders-col-header">${p.name}</div>
-    ${posts.map(renderPostCard).join('')}
+    ${teaser.map(renderPostCard).join('')}
     ${profileBtn}
   </div>`;
 }

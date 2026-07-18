@@ -440,7 +440,7 @@ address a:hover { color: var(--white); }
    Hidden site-wide here (one place) — re-enable by removing this block.
    (The blog-link hiding that lived here was removed in M11: Blog is part of
    the intent-shaped nav — Home · Start Here · Frameworks · See It Run · Blog · Support.) */
-.lang-toggle { display: none !important; }
+/* .lang-toggle re-enabled 2026-07-18 (one-word fixes): es ships with en; the June "testing" hide reason was stale. */
 
 /* AiGovOps assistant (js/chat.js) temporarily hidden (June 2026): it conflicts with the
    Jeeves widget — two chat bubbles in the same corner. Re-enable by removing this block. */
