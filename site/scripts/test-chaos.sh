@@ -33,7 +33,7 @@ fi
 # ── CHAOS 1: Corrupt chat.js URL → verify node rejects it ──
 echo "  → Chaos 1: inject malformed URL into chat.js"
 cp js/chat.js js/chat.js.chaos_bak
-perl -i -pe "s|url:   'https://luma\.com/aigovops'|url:   'NOT_A_REAL_URL_CHAOS_$$'|" js/chat.js
+perl -i -pe "s|url:   'community\.html'|url:   'NOT_A_REAL_URL_CHAOS_$$'|" js/chat.js
 grep -q "NOT_A_REAL_URL" js/chat.js \
   && check "Bad URL injected" "ok" \
   || check "Bad URL injected" "pattern not matched"
