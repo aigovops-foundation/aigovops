@@ -108,7 +108,5 @@ scripts/
 ├── test-chaos.sh        # Chaos (14 scenarios)
 ├── test-e2e-v3.sh       # E2E live (38 checks, skips if egress blocked)
 ├── test-scale-v3.sh     # Scale (50 concurrent)
-├── test-docs.sh         # Doc validation (NEW — PR #5)
-├── test-e2e.sh          # DEPRECATED (superseded by v3)
-└── test-scale.sh        # DEPRECATED (superseded by v3)
+└── test-docs.sh         # Doc validation (NEW — PR #5)
 ```

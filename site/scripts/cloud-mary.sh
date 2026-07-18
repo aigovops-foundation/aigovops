@@ -45,18 +45,31 @@ BOLD='\033[1m'; RESET='\033[0m'; GREEN='\033[0;32m'; RED='\033[0;31m'
 YELLOW='\033[0;33m'; CYAN='\033[0;36m'
 
 TOTAL_PASS=0; TOTAL_FAIL=0; TOTAL_SKIP=0
-declare -A TIER_RESULT
-declare -A TIER_NOTE
+# Per-tier results as name-mangled scalars (TIER_RESULT_<name>) — macOS ships
+# bash 3.2, where `declare -A` fails and associative subscripts silently
+# collapse to index 0, rendering every tier with the LAST tier's result.
+tier_set_result() { eval "TIER_RESULT_$1=\"\$2\""; }
+tier_get_result() { eval "printf '%s' \"\${TIER_RESULT_$1:-NOT RUN}\""; }
+tier_set_note()   { eval "TIER_NOTE_$1=\"\$2\""; }
+tier_get_note()   { eval "printf '%s' \"\${TIER_NOTE_$1}\""; }
 
 run_tier() {
   local name="$1" cmd="$2" label="$3"
   echo ""
   echo -e "${CYAN}${BOLD}── $label ──────────────────────────────────────────────${RESET}"
-  if eval "$cmd"; then
-    TIER_RESULT[$name]="PASS"
+  local status=0
+  eval "$cmd" || status=$?
+  if [ "$status" -eq 0 ]; then
+    tier_set_result "$name" "PASS"
     TOTAL_PASS=$((TOTAL_PASS+1))
+  elif [ "$status" -eq 3 ]; then
+    # exit 3 = the tier's tests could not run (network unreachable) —
+    # honest SKIP, counted in the Skipped column, never in Passed.
+    tier_set_result "$name" "SKIP"
+    tier_set_note "$name" "network unreachable (exit 3)"
+    TOTAL_SKIP=$((TOTAL_SKIP+1))
   else
-    TIER_RESULT[$name]="FAIL"
+    tier_set_result "$name" "FAIL"
     TOTAL_FAIL=$((TOTAL_FAIL+1))
   fi
 }
@@ -66,8 +79,8 @@ skip_tier() {
   echo ""
   echo -e "${YELLOW}${BOLD}── $label (SKIPPED) ──────────────────────────────────────${RESET}"
   echo "  ⏭️   Skipped: $reason"
-  TIER_RESULT[$name]="SKIP"
-  TIER_NOTE[$name]="$reason"
+  tier_set_result "$name" "SKIP"
+  tier_set_note "$name" "$reason"
   TOTAL_SKIP=$((TOTAL_SKIP+1))
 }
 
@@ -253,8 +266,8 @@ for entry in "${TIER_LABELS[@]}"; do
   key="${entry%%:*}"
   label="${entry#*:}"
   if [[ " ${TIERS[*]} " =~ " $key " ]]; then
-    result="${TIER_RESULT[$key]:-NOT RUN}"
-    note="${TIER_NOTE[$key]}"
+    result="$(tier_get_result "$key")"
+    note="$(tier_get_note "$key")"
     case $result in
       PASS) echo -e "  ${GREEN}✅  $label${RESET}" ;;
       FAIL) echo -e "  ${RED}❌  $label${RESET}" ;;

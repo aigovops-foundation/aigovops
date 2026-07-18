@@ -38,7 +38,8 @@ if [ "$PREFLIGHT" = "403" ] || [ "$PREFLIGHT" = "000" ]; then
   echo "  ⏭️   SKIPPED — sandbox egress proxy blocks external requests (HTTP $PREFLIGHT)"
   echo "  ℹ️   Happy-path tests run correctly from an unrestricted network"
   echo ""
-  exit 0
+  # exit 3 = "skipped, not passed" — Cloud-Mary renders this tier SKIPPED
+  exit 3
 fi
 
 # ── Journey 1: the porch — homepage loads and makes the promise ────────────

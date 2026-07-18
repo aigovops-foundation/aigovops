@@ -16,6 +16,8 @@
 #      are exempt
 #   6. redirect stubs (any page with meta-refresh) carry noindex +
 #      meta-refresh + canonical
+#   7. no shipped page or served JS links the retired Library github.io
+#      mirror — the Library is served gated at community…/library/
 # Run: bash scripts/test-arch.sh
 
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -160,6 +162,14 @@ for p in pages:
         emit(f"reachable: {p} (noindex console/fallback — exempt)")
     else:
         emit(f"reachable: {p}", "ok" if p in reach else "orphan — not linked from index/nav/footer/sitemap within 2 hops")
+
+# ── 6b. retired Library mirror — nothing may link the dead github.io URL ──
+section("Retired Library mirror — no shipped page or served JS links it")
+MIRROR = "aigovops-foundation.github.io/aigovops-library-june-ken-bob"
+served_js = sorted(set(glob.glob("*.js") + glob.glob("js/**/*.js", recursive=True)))
+for p in pages + served_js:
+    emit(f"no retired-mirror link: {p}",
+         "ok" if MIRROR not in read(p) else "links the retired github.io mirror — use https://community.aigovops-foundation.com/library/")
 
 # ── 6. redirect stubs — noindex + meta-refresh + canonical ────────────────
 section("Redirect stubs carry noindex + meta-refresh + canonical")

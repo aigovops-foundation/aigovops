@@ -18,7 +18,8 @@ if [ "$PREFLIGHT" = "403" ] || [ "$PREFLIGHT" = "000" ]; then
   echo "  ℹ️   E2E tests run correctly in GitHub Actions (unrestricted network)"
   echo "  ℹ️   Live site confirmed working via browser at https://www.aigovops-foundation.com"
   echo ""
-  exit 0
+  # exit 3 = "skipped, not passed" — Cloud-Mary renders this tier SKIPPED
+  exit 3
 fi
 
 check() {

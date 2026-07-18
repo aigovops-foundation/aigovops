@@ -25,7 +25,7 @@
 
   // The whole estate — every site + its key sub-sites. Absolute URLs so links work cross-site.
   var F = "https://www.aigovops-foundation.com";
-  var LIB = "https://aigovops-foundation.github.io/aigovops-library-june-ken-bob";
+  var LIB = "https://community.aigovops-foundation.com/library";
   var NCW = "https://aigovops-foundation.github.io/aigovops-ncw-ai-camp";
   var COM = "https://community.aigovops-foundation.com";
   var TOUR = LIB + "/onboarding.html";           // the guided video tour

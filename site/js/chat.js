@@ -27,7 +27,7 @@ const RESOURCES = {
   event: {
     url:   'community.html',
     label: 'Events live inside the community — join free',
-    cta:   'View & Register on Luma →',
+    cta:   'See upcoming events →',
   },
   ken: {
     url:   'https://www.aigovops-foundation.com/founders.html#ken',
@@ -64,7 +64,7 @@ const RESOURCES = {
     label: 'Browse 40+ governance frameworks',
     cta:   'Explore Frameworks →',
   },
-  alpha: { url: 'stay-at-yes.html', label: 'Alpha · the Library', cta: '🧪 Enter the lab' },
+  alpha: { url: 'stay-at-yes.html', label: 'See It Run · the Library', cta: '🧪 Enter the lab' },
 };
 // ────────────────────────────────────────────────────────────────────────────
 
@@ -97,7 +97,7 @@ const CHIP_LABELS = {
   opensource:  '💻 Open Source',
   beacon:      '🔦 Beacon',
   umbrella:    '🏮 Lantern',
-  alpha:       '🧪 Alpha · the Library',
+  alpha:       '🧪 See It Run · the Library',
 };
 
 const FALLBACK = `I can help with ten things — tap a chip below or type: "frameworks", "meeting", "support", "newsletter", "event", "Ken", "Bob", "open source", "Beacon", or "Lantern", or "Alpha".`;

@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /transcripts/
 
 Sitemap: https://www.aigovops-foundation.com/sitemap.xml

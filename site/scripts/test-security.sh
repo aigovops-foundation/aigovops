@@ -58,6 +58,7 @@ else
   CODE=$(echo "$HEADERS" | head -1 | grep -oE '[0-9]{3}' | head -1)
   if [ -z "$HEADERS" ] || [ "$CODE" = "403" ] || [ "$CODE" = "000" ]; then
     echo "  ⏭️   live checks skipped — network unavailable or egress-blocked (HTTP ${CODE:-none})"
+    NET_UNREACHABLE=true   # → exit 3: Cloud-Mary renders the tier SKIPPED, never PASS
   else
     [ "$CODE" = "200" ] && check "$SITE/ answers 200 over HTTPS" "ok" \
                         || check "$SITE/ answers 200 over HTTPS" "HTTP $CODE"
@@ -174,14 +175,22 @@ hits=$(grep -rnE '\beval\(|new Function\(' "${JS_FILES[@]}" | head -3)
 echo ""
 echo "  ${PASS} passed, ${FAIL} failed, ${WARN} warning(s)"
 echo ""
-if [ $FAIL -eq 0 ]; then
-  if [ $WARN -gt 0 ]; then
-    echo "  ✅  All security tests passed ($WARN warning(s) — see header policy note)"
-  else
-    echo "  ✅  All security tests passed"
-  fi
-else
+if [ $FAIL -gt 0 ]; then
   echo "  ❌  ${FAIL} security test(s) failed"
+  echo ""
+  exit 1
+fi
+if [ "${NET_UNREACHABLE:-false}" = "true" ]; then
+  # Local checks passed but live checks never ran — exit 3 = "skipped, not
+  # passed"; Cloud-Mary renders the tier SKIPPED (never PASS).
+  echo "  ⏭️   local security tests passed — live checks unreachable, tier SKIPPED"
+  echo ""
+  exit 3
+fi
+if [ $WARN -gt 0 ]; then
+  echo "  ✅  All security tests passed ($WARN warning(s) — see header policy note)"
+else
+  echo "  ✅  All security tests passed"
 fi
 echo ""
-exit $((FAIL > 0 ? 1 : 0))
+exit 0

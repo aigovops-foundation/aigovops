@@ -24,10 +24,10 @@ cd ~/aigovops-repo
 node scripts/test-unit.js
 
 # E2E (live site, needs DNS to be up):
-bash scripts/test-e2e.sh
+bash scripts/test-e2e-v3.sh
 
 # Scale (50 concurrent requests):
-bash scripts/test-scale.sh
+bash scripts/test-scale-v3.sh
 
 # Chaos monkey (intentional breakage + recovery):
 bash scripts/test-chaos.sh
@@ -106,11 +106,11 @@ process.exit(failed > 0 ? 1 : 0);
 
 **What they check:** The live site — DNS, HTTP responses, page content, link validity.
 
-**Write and run** `scripts/test-e2e.sh`:
+**Write and run** `scripts/test-e2e-v3.sh`:
 
 ```bash
 #!/usr/bin/env bash
-# scripts/test-e2e.sh
+# scripts/test-e2e-v3.sh
 # End-to-end tests for aigovops-foundation.com
 
 SITE="https://aigovops-foundation.com"
@@ -184,11 +184,11 @@ exit $((FAIL > 0 ? 1 : 0))
 
 **What they check:** Site stability under concurrent load (50 simultaneous requests).
 
-**Write and run** `scripts/test-scale.sh`:
+**Write and run** `scripts/test-scale-v3.sh`:
 
 ```bash
 #!/usr/bin/env bash
-# scripts/test-scale.sh
+# scripts/test-scale-v3.sh
 # Sends 50 concurrent requests across all pages and measures error rate + latency.
 # Requires: curl (built-in on macOS)
 
