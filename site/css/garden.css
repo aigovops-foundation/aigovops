@@ -290,3 +290,12 @@ input:focus-visible, [tabindex]:focus-visible {
 .chip:hover { background: var(--garden-deeper); }
 .chat-input-row button { background: var(--garden-green); }
 .chat-input-row button:hover { background: var(--garden-green-deep); }
+
+/* Founder-hidden footer threads (Bob, 2026-07-18): RSS, Newsletter, Community
+   platform, and Press links are dark estate-wide on this site — the Join pill is
+   the one door to the platform. Links stay in markup (arch tier's orphan check
+   still sees them); delete this block to bring any of them back. */
+a[href="/feed.xml"], a[href="feed.xml"],
+a[href="press.html"], a[href="/press.html"], a[href="../press.html"],
+.footer-nav a[href*="substack.com"],
+.footer-nav a[href*="community.aigovops-foundation.com"] { display: none !important; }
