@@ -59,6 +59,16 @@ around them is garden.
   `data-theme`) for properties with no footer system; *native* for properties with one.
   Never both on a page.
 
+## The dead-simple rule (M14)
+
+Every content page reads in one breath: a hero with one plain-verb h1, one sentence of
+truth, and exactly ONE primary CTA; at most three sections after the hero, each with one
+job and zero duplicated content; one quiet secondary path at the end (a link, never a
+banner); the creed footer. Long-form assets (the corpus, blog articles, the brief) are
+exempt in body but obey it in their headers. Reference implementation: `community.html`.
+The design tier enforces the hero invariant — one `.btn-primary` (or Join pill) in the
+hero, never more (`scripts/test-design.sh`, section 4c).
+
 ## Mechanics
 
 - Page conversion recipe: `mockups/m6-porch/CONVERSION-GUIDE.md` (palette mapping,

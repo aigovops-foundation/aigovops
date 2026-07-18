@@ -58,15 +58,7 @@
     .topic-desc { font-size: .82rem; color: var(--garden-ink-soft); line-height: 1.5; }
     .topic-who { display: inline-block; margin-top: 10px; font-size: .7rem; font-weight: 700; font-family: 'Courier New', monospace; text-transform: uppercase; letter-spacing: .1em; color: var(--garden-green-ink); background: var(--garden-deep-cream); border: 1px solid var(--garden-card-line); border-radius: 20px; padding: 3px 10px; }
 
-    /* schedule banner — orchard-green band (the one green band on this page) */
-    .schedule-banner { background: var(--garden-green); color: #fff; padding: 48px 0; text-align: center; position: relative; overflow: hidden; }
-    .schedule-banner::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(480px 220px at 10% 115%, rgba(232,181,74,.22), transparent 70%), radial-gradient(460px 220px at 92% -15%, rgba(15,74,44,.55), transparent 70%); }
-    .schedule-banner .container { position: relative; }
-    .schedule-banner h2 { color: #fff; margin-bottom: 10px; }
-    .schedule-banner p { color: #F4FAF4; margin-bottom: 28px; font-size: .95rem; }
-    .schedule-banner .btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-    .schedule-banner .btn-primary { background: var(--garden-orange); color: var(--garden-charcoal); }
-    .schedule-banner .btn-primary:hover { background: #E98A40; }
+    /* schedule — the quiet end (M14: link, not a banner) */
     @media (max-width: 700px) { .founder-section .container { grid-template-columns: 1fr; gap: 24px; } .founder-avatar { width: 140px; height: 140px; } }
   </style>
 
@@ -163,8 +155,9 @@
   <section class="founders-hero">
     <div class="container">
       <p class="founders-eyebrow">The founders · AiGovOps Foundation</p>
-      <h1>Two careers, one conviction.</h1>
-      <p class="sub">Ken Johnston and Bob Rapp spent decades shipping AI inside companies where getting it wrong has real consequences. They founded the AiGovOps Foundation to make AI governance as rigorous and verifiable as production engineering.</p>
+      <h1>Meet the founders.</h1>
+      <p class="sub">Ken Johnston and Bob Rapp spent decades shipping AI inside companies where getting it wrong has real consequences.</p>
+      <p style="margin-top:26px"><a href="#schedule" class="btn btn-primary" style="font-size:1.05rem;padding:14px 34px;border-radius:999px" onclick="if(window.plausible)plausible('Founders: Schedule CTA')">📆 Schedule a call →</a></p>
     </div>
   </section>
 
@@ -235,7 +228,7 @@
   <section class="speaking-section">
     <div class="container">
       <h2>Speaking topics</h2>
-      <p class="section-sub">Both founders speak at conferences, community meetups, and private briefings. Each card names who carries the topic.</p>
+      <p class="section-sub">Both founders speak at conferences, community meetups, and private briefings.</p>
       <div class="topics-grid">
         <div class="topic-card">
           <div class="topic-icon">⚙️</div>
@@ -246,13 +239,13 @@
         <div class="topic-card">
           <div class="topic-icon">🏗️</div>
           <div class="topic-title">Policy as code — into the pipeline</div>
-          <div class="topic-desc">Translating regulatory requirements into testable, versioned controls — and making those checks a first-class part of CI/CD rather than a quarterly audit exercise.</div>
+          <div class="topic-desc">Translating regulatory requirements into testable, versioned controls in CI/CD.</div>
           <span class="topic-who">Ken · Bob</span>
         </div>
         <div class="topic-card">
           <div class="topic-icon">🏥</div>
           <div class="topic-title">AI in regulated, safety-critical industries</div>
-          <div class="topic-desc">Healthcare, automotive, telecom — from Ford's Autonomic platform to GE diagnostics, what high-stakes deployment teaches about risk, evidence, and accountability.</div>
+          <div class="topic-desc">Healthcare, automotive, telecom — what high-stakes deployment teaches about risk and evidence.</div>
           <span class="topic-who">Ken · Bob</span>
         </div>
         <div class="topic-card">
@@ -277,14 +270,12 @@
     </div>
   </section>
 
-  <section class="schedule-banner" id="schedule">
+  <section id="schedule" style="background:var(--garden-deep-cream);text-align:center;padding:44px 0;scroll-margin-top:80px">
     <div class="container">
-      <h2>Schedule a call with the founders</h2>
-      <p>Both are available for governance advisory, speaking engagements, and community conversations.</p>
-      <div class="btns">
-        <a href="mailto:ken.johnston@aigovops.community?subject=Meeting request — AiGovOps Foundation&body=Hi Ken,%0A%0AI'd like to schedule a call to discuss [topic].%0A%0AMy name: %0AOrganization: %0AAvailability: " class="btn btn-primary btn-large" onclick="if(window.plausible)plausible('Founder: Ken Email')">✉️ Email Ken</a>
-        <a href="mailto:bob.rapp@aigovops.community?subject=Meeting request — AiGovOps Foundation&body=Hi Bob,%0A%0AI'd like to schedule a call to discuss [topic].%0A%0AMy name: %0AOrganization: %0AAvailability: " class="btn btn-primary btn-large" onclick="if(window.plausible)plausible('Founder: Bob Email')">✉️ Email Bob</a>
-      </div>
+      <p style="font-size:.95rem;color:var(--garden-ink-soft)">Schedule a call with the founders —
+        <a href="mailto:ken.johnston@aigovops.community?subject=Meeting request — AiGovOps Foundation&body=Hi Ken,%0A%0AI'd like to schedule a call to discuss [topic].%0A%0AMy name: %0AOrganization: %0AAvailability: " style="color:var(--garden-green-ink);font-weight:600" onclick="if(window.plausible)plausible('Founder: Ken Email')">✉️ Email Ken &rarr;</a>
+        &nbsp;·&nbsp;
+        <a href="mailto:bob.rapp@aigovops.community?subject=Meeting request — AiGovOps Foundation&body=Hi Bob,%0A%0AI'd like to schedule a call to discuss [topic].%0A%0AMy name: %0AOrganization: %0AAvailability: " style="color:var(--garden-green-ink);font-weight:600" onclick="if(window.plausible)plausible('Founder: Bob Email')">✉️ Email Bob &rarr;</a></p>
     </div>
   </section>
 </main>

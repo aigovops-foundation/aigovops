@@ -25,6 +25,38 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/garden.css" />
   <link rel="stylesheet" href="css/porch.css" />
+  <style>
+    /* ── M14 dead-simple porch: two doors, one quiet line ── */
+    /* two doors instead of four — centered pair */
+    .hero .action-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 680px; margin-left: auto; margin-right: auto; }
+    @media (max-width: 600px) { .hero .action-grid { grid-template-columns: 1fr; } }
+    /* the Come Join door carries btn-primary (the hero's ONE primary CTA);
+       the porch door look wins over the garden pill defaults */
+    .hero .action-card.btn-primary { border-radius: var(--porch-r-2xl); }
+    /* the merged quiet line reads as one quiet sentence — neutralize the
+       old ribbon's pill treatment (it assumed the give-time/give-money pair) */
+    .hero .hero-quiet-links:last-of-type {
+      max-width: 760px; padding: 0; background: transparent; border: none;
+      font-family: var(--porch-sans); font-style: normal; font-size: .92rem !important;
+      color: var(--porch-ink-soft); margin: 18px auto 44px !important;
+    }
+    .hero .hero-quiet-links:last-of-type a,
+    .hero .hero-quiet-links:last-of-type a:first-of-type,
+    .hero .hero-quiet-links:last-of-type a:last-of-type {
+      display: inline; background: none; border: none; padding: 0; margin: 0;
+      border-radius: 0; font-family: inherit; font-style: normal; font-size: inherit;
+      font-weight: 600; text-decoration: underline; text-underline-offset: 3px;
+      color: var(--porch-green-ink) !important;
+    }
+    .hero .hero-quiet-links:last-of-type a:hover,
+    .hero .hero-quiet-links:last-of-type a:first-of-type:hover,
+    .hero .hero-quiet-links:last-of-type a:last-of-type:hover {
+      transform: none; box-shadow: none; color: var(--porch-orange-ink) !important;
+    }
+    /* the toolkit band, reduced to one line (the trio lives on Stay at Yes) */
+    .toolkit-section .toolkit-line { color: rgba(255,255,255,0.75); font-size: .95rem; max-width: 720px; margin: 0 auto; text-align: center; line-height: 1.7; }
+    .toolkit-section .toolkit-line .toolkit-link { white-space: nowrap; }
+  </style>
   <script src="js/i18n/i18n.js"></script>
   <!-- Plausible Analytics — privacy-first, GDPR-compliant, no cookie banner -->
   <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
@@ -169,10 +201,10 @@
       <img src="images/porch/marker-new-shoot.png" alt="" width="108" height="108" />
     </div>
 
-    <!-- ONE-CLICK ACTIONS -->
+    <!-- TWO DOORS (M14 dead-simple) -->
     <div class="action-grid">
 
-      <a href="https://community.aigovops-foundation.com/" target="_blank" rel="noopener" class="action-card" onclick="if(window.plausible)plausible('Home: Enter platform')">
+      <a href="https://community.aigovops-foundation.com/" target="_blank" rel="noopener" class="action-card btn-primary" onclick="if(window.plausible)plausible('Home: Enter platform')">
         <span class="action-icon">🌿</span>
         <span class="action-label">Come Join</span>
         <span class="action-hint">Enter the governed community →</span>
@@ -184,26 +216,14 @@
         <span class="action-hint">Read the Library — three shelves →</span>
       </a>
 
-      <a href="https://aigovops.substack.com/" target="_blank" rel="noopener" class="action-card action-newsletter">
-        <span class="action-icon">📰</span>
-        <span class="action-label">Newsletter</span>
-        <span class="action-hint">Weekly on Substack</span>
-      </a>
-
-      <a href="https://luma.com/aigovops" target="_blank" rel="noopener" class="action-card action-event">
-        <span class="action-icon">📅</span>
-        <span class="action-label">Next Event</span>
-        <span class="action-hint">View &amp; Register on Luma</span>
-      </a>
-
     </div>
     <p class="hero-quiet-links" style="margin-top:14px;font-size:0.92rem;">
       Or <button onclick="window.SCHEDULE && window.SCHEDULE.open()" aria-label="Schedule a call with a community leader" style="cursor:pointer;background:none;border:none;padding:0;font:inherit;color:inherit;text-decoration:underline;">schedule a call with a community leader</button>
+      &nbsp;·&nbsp; <a href="https://aigovops.substack.com/" target="_blank" rel="noopener">Newsletter</a>
+      &nbsp;·&nbsp; <a href="https://luma.com/aigovops" target="_blank" rel="noopener">Next Event</a>
       &nbsp;·&nbsp; explore <a href="https://aigovops-foundation.github.io/aigovops-beacon/" target="_blank" rel="noopener">Beacon</a> &amp;
-      <a href="https://aigovops-foundation.github.io/umbrella-govops/" target="_blank" rel="noopener">Umbrella</a> in the open
-    </p>
-    <p class="hero-quiet-links" style="margin-top:6px;font-size:0.92rem;">
-      Tend the garden: <a href="community.html#ways-to-contribute" onclick="if(window.plausible)plausible('Home: Give time')">give time</a>
+      <a href="https://aigovops-foundation.github.io/umbrella-govops/" target="_blank" rel="noopener">Umbrella</a>
+      &nbsp;·&nbsp; tend the garden: <a href="community.html#ways-to-contribute" onclick="if(window.plausible)plausible('Home: Give time')">give time</a>
       &nbsp;·&nbsp; <a href="support.html" onclick="if(window.plausible)plausible('Home: Give money')">give money</a>
     </p>
   </div>
@@ -266,32 +286,11 @@
   </div>
 </section>
 
-<!-- TOOLKIT TRILOGY -->
+<!-- TOOLKIT — one line; the full trio lives on Stay at Yes (M14 dead-simple) -->
 <section class="toolkit-section">
   <div class="container">
-    <p style="font-size:0.7rem;font-weight:700;font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:0.14em;color:var(--teal);margin-bottom:10px;">The Open-Source Toolkit</p>
-    <h2 style="color:var(--white);margin-bottom:6px;">Three tools. One verifiable evidence chain.</h2>
-    <p style="color:rgba(255,255,255,0.5);font-size:0.9rem;max-width:520px;">Beacon signs the evidence. Umbrella compiles it into executable controls. Lantern reads it back as a human-readable report. All Apache-2.0. All under the AiGovOps Foundation.</p>
-    <div class="toolkit-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
-      <div class="toolkit-card">
-        <span class="toolkit-tag">🔦 Scanner + Signer</span>
-        <h3>AiGovOps Beacon</h3>
-        <p>Finds every AI on your network. Attests them against 23 audit frameworks. Produces a cryptographically signed bundle any auditor can re-verify with one command. OVERT 1.0 Protocol.</p>
-        <a href="https://aigovops-foundation.github.io/aigovops-beacon/" target="_blank" rel="noopener" class="toolkit-link" onclick="if(window.plausible)plausible('Toolkit: Beacon click')">See it sign — live <span class="toolkit-arrow">→</span></a>
-      </div>
-      <div class="toolkit-card">
-        <span class="toolkit-tag">🏮 Compiler</span>
-        <h3>AiGovOps Umbrella</h3>
-        <p>Converts 40+ global frameworks — EU AI Act, NIST AI RMF, ISO/IEC 42001, Korea AI Basic Act — into executable YAML controls you can run in CI.</p>
-        <a href="https://aigovops-foundation.github.io/umbrella-govops/" target="_blank" rel="noopener" class="toolkit-link" onclick="if(window.plausible)plausible('Toolkit: Umbrella click')">Get to Yes in 15 minutes <span class="toolkit-arrow">→</span></a>
-      </div>
-      <div class="toolkit-card" style="cursor:default">
-        <span class="toolkit-tag" style="background:rgba(255,255,255,0.08);color:var(--garden-on-dark-dim)">🚧 Coming soon</span>
-        <h3 style="color:var(--garden-on-dark-dim)">Lantern</h3>
-        <p style="color:var(--garden-on-dark-dim)">Lantern is the human-carried companion to Beacon: it reads Beacon's signed bundles and turns them into a human-readable report for a parent, a board, or an auditor. In early development — star the repo to follow.</p>
-        <a href="https://github.com/aigovops-foundation/aigovops-lantern" target="_blank" rel="noopener" class="toolkit-link" onclick="if(window.plausible)plausible('Toolkit: Lantern stub click')">Follow on GitHub <span class="toolkit-arrow">→</span></a>
-      </div>
-    </div>
+    <p class="toolkit-line">The Open-Source Toolkit — Beacon signs the evidence, Umbrella compiles it into executable controls, Lantern reads it back. All Apache-2.0.
+      <a href="stay-at-yes.html#toolkit" class="toolkit-link">Explore the toolkit on Stay at Yes <span class="toolkit-arrow">→</span></a></p>
   </div>
 </section>
 

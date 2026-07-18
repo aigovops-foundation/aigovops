@@ -59,7 +59,8 @@ echo ""
 echo "  [index.html — Action Cards]"
 check_html "$REPO/index.html" "Schedule button aria-label"         'aria-label="Schedule a call with a community leader"'
 check_html "$REPO/index.html" "Hero SVG aria-hidden (decorative)"  'aria-hidden="true"'
-check_html "$REPO/index.html" "Newsletter card has label text"     'action-label.*Newsletter\|Newsletter.*action-label'
+# M14 dead-simple: Newsletter demoted from action card to a quiet hero link
+check_html "$REPO/index.html" "Newsletter quiet link has visible text" '>Newsletter</a>'
 
 echo ""
 echo "  [index.html — Meta & Language]"
@@ -112,9 +113,10 @@ check_absent "$REPO/css/style.css" "Old low-contrast hero sub absent (#c4c0e0)" 
 echo ""
 echo "  [brand upgrade — toolkit & badges]"
 check_html "$REPO/index.html" "Toolkit section present"             'toolkit-section'
-check_html "$REPO/index.html" "Toolkit grid present"               'toolkit-grid'
+# M14 dead-simple: the porch toolkit band is one line + link; the trio lives on Stay at Yes
+check_html "$REPO/index.html" "Toolkit band links to the Stay at Yes trio" 'href="stay-at-yes.html#toolkit"'
 check_html "$REPO/index.html" "Beacon toolkit card (Scanner)"      'Scanner.*Signer\|aigovops-beacon'
-check_html "$REPO/index.html" "Lantern toolkit card (Compiler)"    'Compiler\|lantern'
+check_html "$REPO/index.html" "Lantern named in the toolkit line"  'Umbrella compiles\|Lantern reads'
 check_html "$REPO/index.html" "Lantern name present"               'Lantern'
 check_html "$REPO/index.html" "Toolkit links accessible"           'toolkit-link'
 check_html "$REPO/index.html" "Compliance badge strip present"     'badge-strip'
