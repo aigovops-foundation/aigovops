@@ -105,7 +105,6 @@
   ];
   const CONNECT = [
     { href: "https://aigovops.substack.com/", label: "Newsletter" },
-    { href: "https://luma.com/aigovops", label: "Events" },
     { href: "https://github.com/aigovops-foundation", label: "GitHub" },
     { href: "https://www.linkedin.com/company/aigovops-foundation", label: "LinkedIn" },
   ];
