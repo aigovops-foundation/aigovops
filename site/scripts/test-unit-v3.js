@@ -331,7 +331,7 @@ POST_SLUGS.forEach(slug => {
     const html = fs.readFileSync(p, 'utf8');
     checkTrue('  ' + slug + ' has canonical tag', html.includes('rel="canonical"'));
     checkTrue('  ' + slug + ' has BlogPosting schema', html.includes('BlogPosting'));
-    checkTrue('  ' + slug + ' links to full article', html.includes('aigovopsfoundation.org/post'));
+    checkFalse('  ' + slug + ' carries no dead Wix link', html.includes('aigovopsfoundation.org'));
   }
   checkTrue('blog.html links to ' + slug, blogHtml.includes('blog/' + slug + '.html'));
 });
