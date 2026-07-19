@@ -167,13 +167,16 @@
 <!-- GIVE NOW — the one giving cluster -->
 <section class="give-cluster coffee-banner" id="give" aria-label="Give now">
   <div class="container">
-    <!-- giving-interim:start — parked until Ken's Stripe links arrive; run scripts/apply-stripe-links.sh DONATE CONTRIBUTOR SUSTAINER FOUNDING to map each data-orig CTA to its buy.stripe.com link and strip this block. Jeeves giving_rails watches this state. -->
+    <!-- giving-interim:start — giving rails LIVE (2026-07-18, Ken's Stripe links): pick-your-amount + $25/$50/$500 quick gifts. Tier-card checkouts still parked (pledge-by-email); run scripts/apply-stripe-links.sh DONATE CONTRIBUTOR SUSTAINER FOUNDING when tier links arrive. Jeeves giving_rails watches this state. -->
     <div class="giving-interim-notice" role="note" style="max-width:760px;margin:0 auto 18px;padding:14px 18px;border:2px solid var(--teal-accessible,#0a7);border-radius:10px;background:rgba(10,170,120,.08);text-align:center;font-size:.95rem;line-height:1.5">
-      💚 <strong>The first checkout is live:</strong>
-      <a href="https://buy.stripe.com/bJe7sKbi214M7qJ1t75J603" target="_blank" rel="noopener" style="display:inline-block;margin:6px 8px;padding:10px 22px;border-radius:999px;background:var(--teal-accessible,#0a7);color:#fff;font-weight:700;text-decoration:none" onclick="if(window.plausible)plausible('Support: Stripe $500 donate')">Give $500 — one-time supporter · secure Stripe checkout →</a><br>
-      🚧 For the other amounts, secure Stripe checkout is being set up — email
-      <a href="mailto:bob.rapp@aigovops.community?subject=Pledge my support" style="color:var(--teal-accessible,#0a7);font-weight:600">bob.rapp@aigovops.community</a>
-      to pledge and we'll set you up directly — other giving options return when their Stripe links go live.
+      💚 <strong>Give securely in one click</strong> — every checkout is Stripe.<br>
+      <a href="https://buy.stripe.com/cNi9AU8RT0884tR6Ix4Vy02" target="_blank" rel="noopener" style="display:inline-block;margin:8px 8px 6px;padding:11px 26px;border-radius:999px;background:var(--teal-accessible,#0a7);color:#fff;font-weight:700;text-decoration:none" onclick="if(window.plausible)plausible('Support: Stripe donate',{props:{amount:'any'}})">Give any amount →</a><br>
+      <span style="display:inline-block;margin-top:4px">Or a quick gift:</span>
+      <a href="https://buy.stripe.com/eVq7sMb015ss9Obd6V4Vy00" target="_blank" rel="noopener" style="display:inline-block;margin:6px 4px;padding:8px 18px;border-radius:999px;border:2px solid var(--teal-accessible,#0a7);color:var(--teal-accessible,#0a7);font-weight:700;text-decoration:none" onclick="if(window.plausible)plausible('Support: Stripe donate',{props:{amount:'25'}})">$25</a>
+      <a href="https://buy.stripe.com/28E00kfgh1ccbWjgj74Vy01" target="_blank" rel="noopener" style="display:inline-block;margin:6px 4px;padding:8px 18px;border-radius:999px;border:2px solid var(--teal-accessible,#0a7);color:var(--teal-accessible,#0a7);font-weight:700;text-decoration:none" onclick="if(window.plausible)plausible('Support: Stripe donate',{props:{amount:'50'}})">$50</a>
+      <a href="https://buy.stripe.com/bJe7sKbi214M7qJ1t75J603" target="_blank" rel="noopener" style="display:inline-block;margin:6px 4px;padding:8px 18px;border-radius:999px;border:2px solid var(--teal-accessible,#0a7);color:var(--teal-accessible,#0a7);font-weight:700;text-decoration:none" onclick="if(window.plausible)plausible('Support: Stripe donate',{props:{amount:'500'}})">$500</a><br>
+      <span style="font-size:.9rem">For larger gifts or anything bespoke, email
+      <a href="mailto:bob.rapp@aigovops.community?subject=Pledge my support" style="color:var(--teal-accessible,#0a7);font-weight:600">bob.rapp@aigovops.community</a>.</span>
     </div>
     <!-- giving-interim:end -->
   </div>

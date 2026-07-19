@@ -312,7 +312,11 @@ checkFalse('Old OVERT umbrella URL gone from frameworks',  fwHtml.includes("url:
 checkTrue('Texas entry updated to TRAIGA HB 149',         fwHtml.includes('Texas TRAIGA'));
 checkFalse('Old Texas HB 1709 name gone',                  fwHtml.includes("name: 'Texas AI Act (HB 1709)'"));
 checkFalse('Beacon star count removed from community',     communityHtml.includes('⭐ 3'));
-checkTrue('Support page has parked-state Stripe notice',  supportHtml.includes('checkout is being set up'));
+checkTrue('Support give rail live: pick-your-amount',     supportHtml.includes('https://buy.stripe.com/cNi9AU8RT0884tR6Ix4Vy02'));
+checkTrue('Support give rail live: $25 quick gift',       supportHtml.includes('https://buy.stripe.com/eVq7sMb015ss9Obd6V4Vy00'));
+checkTrue('Support give rail live: $50 quick gift',       supportHtml.includes('https://buy.stripe.com/28E00kfgh1ccbWjgj74Vy01'));
+checkTrue('Support give rail keeps the $500 gift',        supportHtml.includes('https://buy.stripe.com/bJe7sKbi214M7qJ1t75J603'));
+checkFalse('Parked-state apology copy is gone',           supportHtml.includes('checkout is being set up'));
 checkTrue('Support giving CTAs are parked (data-orig)',   supportHtml.includes('data-orig='));
 checkFalse('No live GitHub Sponsors / Open Collective link', /href="https:\/\/(github\.com\/sponsors|opencollective\.com)/.test(supportHtml));
 checkTrue('Press page has EIN pending placeholder',       pressHtml.includes('IRS EIN') || pressHtml.includes('EIN'));
