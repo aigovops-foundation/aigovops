@@ -147,6 +147,8 @@
     + '</div>'
     + '<div class="jv-foot"><a href="' + F + '/jeeves-console.html" target="_blank" rel="noopener">▶ The console</a>'
     + '<a href="' + COM + '/" target="_blank" rel="noopener">Enter the live fleet ↗</a></div>';
+  panel.setAttribute("inert", "");          // starts closed -> starts inert
+  panel.setAttribute("aria-hidden", "true");
   document.body.appendChild(panel);
 
   var frame = panel.querySelector("#jv-frame");
@@ -175,7 +177,18 @@
     panel.classList.toggle("jv-tourmode", v === "tour");
     if (v === "tour" && loadedScope === null) loadTour("section", false); // queued, not autoplaying
   }
-  function toggle(open) { panel.classList.toggle("jv-open", open); btn.style.display = open ? "none" : "flex"; }
+  function toggle(open) {
+    panel.classList.toggle("jv-open", open);
+    // `inert` is load-bearing, not polish. The closed panel keeps display:flex +
+    // visibility:visible (only opacity:0 + pointer-events:none), so 33 of the 47 focusable
+    // elements on every page lived inside a panel nobody could see: keyboard users tabbed
+    // into nothing and pressed Enter on invisible Approve/Deny buttons, and screen readers
+    // read the whole closed panel — including its 20-link site map — as page content.
+    // Mouse users were fine, which is why it went unnoticed. Found 2026-07-19.
+    if (open) { panel.removeAttribute("inert"); } else { panel.setAttribute("inert", ""); }
+    panel.setAttribute("aria-hidden", open ? "false" : "true");
+    btn.style.display = open ? "none" : "flex";
+  }
 
   btn.addEventListener("click", function () { toggle(true); });
   panel.querySelector(".jv-x").addEventListener("click", function () { toggle(false); });
