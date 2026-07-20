@@ -70,19 +70,67 @@ function renderCol(person, posts) {
 function loadPosts(data) {
   const grid = document.getElementById('postsGrid');
   if (!grid) return;
-  grid.innerHTML = renderCol('bob', data.bob) + renderCol('ken', data.ken);
-  // Show last-updated timestamp so visitors know how fresh the feed is
-  if (data.updated) {
-    const ts = document.getElementById('postsUpdated');
-    if (ts) {
-      try {
-        const d = new Date(data.updated);
-        const age = Math.round((Date.now() - d) / 3600000);
-        const label = age < 1 ? 'just now' : age < 24 ? `${age}h ago` : `${Math.round(age/24)}d ago`;
-        ts.textContent = `Updated ${label}`;
-        ts.title = d.toLocaleString();
-      } catch(e) {}
-    }
+
+  // IS THIS FEED ACTUALLY ALIVE?
+  //
+  // On 2026-07-20 this section had been showing posts from 2 June under the heading
+  // "Latest" for seven weeks. The RSS bridge subscription had lapsed (HTTP 402) and the
+  // fetch job reported success every run, so nothing anywhere said otherwise. The data
+  // itself was honest — it carried fetch_error:true and updated:2026-06-02 — and both
+  // layers that could have read it did not.
+  //
+  // A stale feed must not be dressed as a live one. Past the threshold we show the
+  // profile links (always correct, never stale) instead of pretending June is today.
+  const STALE_HOURS = 48;
+  const MAX_POSTS = 10;      // never show more than this per person
+  const MAX_AGE_DAYS = 30;   // …and nothing older than this, however few that leaves
+
+  // The same rule the fetcher applies, applied again here. Belt and braces on purpose: the
+  // JSON is a file on a CDN and can be cached, hand-edited, or simply old, and the page is
+  // the last thing between a stale post and a visitor who will read it as current. A post
+  // with an unreadable date is KEPT — a feed changing its date format should look odd, not
+  // vanish silently.
+  function fresh(posts){
+    const cutoff = Date.now() - MAX_AGE_DAYS * 86400000;
+    return (posts || []).filter(function (p) {
+      const t = Date.parse(p && p.date);
+      return isNaN(t) ? true : t >= cutoff;
+    }).slice(0, MAX_POSTS);
+  }
+  let ageHours = null;
+  if (data && data.updated) {
+    try { ageHours = (Date.now() - new Date(data.updated)) / 3600000; } catch (e) {}
+  }
+  const stale = (data && data.fetch_error) || (ageHours !== null && ageHours > STALE_HOURS);
+
+  const bob = stale ? [] : fresh(data.bob);
+  const ken = stale ? [] : fresh(data.ken);
+  grid.innerHTML = renderCol('bob', bob) + renderCol('ken', ken);
+
+  // If the feed is technically fresh but nothing survives the age filter, say so rather than
+  // showing two empty columns that look like a broken page.
+  const emptied = !stale && !bob.length && !ken.length;
+
+  const ts = document.getElementById('postsUpdated');
+  if (!ts) return;
+  if (emptied) {
+    ts.textContent = 'No posts in the last ' + MAX_AGE_DAYS + ' days — visit our profiles for the latest.';
+    ts.style.color = 'var(--muted)';
+    return;
+  }
+  if (stale) {
+    // Say it plainly and visibly. A staleness notice in muted 0.75rem grey next to a
+    // heading that says "Latest" is not a notice, it is decoration.
+    ts.textContent = 'Live feed is not updating right now — visit our profiles for the latest.';
+    ts.style.color = 'var(--warn, #b8860b)';
+    ts.title = data && data.updated ? 'Last successful fetch: ' + new Date(data.updated).toLocaleString() : '';
+  } else if (ageHours !== null) {
+    const label = ageHours < 1 ? 'just now'
+      : ageHours < 24 ? Math.round(ageHours) + 'h ago'
+      : Math.round(ageHours / 24) + 'd ago';
+    ts.textContent = 'Updated ' + label;
+    ts.style.color = '';
+    try { ts.title = new Date(data.updated).toLocaleString(); } catch (e) {}
   }
 }
 

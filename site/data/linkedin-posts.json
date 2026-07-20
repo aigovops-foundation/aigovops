@@ -1,89 +1,151 @@
 {
-  "updated": "2026-06-02T20:29:35Z",
+  "updated": "2026-07-20T14:50:22Z",
   "bob": [
     {
-      "title": "Industry 4.0 thrives on efficiency, but safety is the foundation of \"Yes.\" We encode ISO safety standards directly into the factor...",
-      "link": "https://www.linkedin.com/posts/bobrapp_industry40-aigovernance-policyascode-activity-7467606368926023680-yBau",
-      "date": "Tue, 02 Jun 2026 16:01:40 GMT",
-      "summary": "Industry 4.0 thrives on efficiency, but safety is the foundation of \"Yes.\" We encode ISO safety standards directly into the factory floor. ✅ Ship Good AI / Enviar IA Buena: - [EN] Sync AI vision with robot stops via Safety-as-Code. - [ES] Sincronizar visión de IA con paradas de r",
+      "title": "EU Tech Sovereignty is rising. From the Chips Act to Qwant, Europe is leading. We're building responsible AI. La souveraineté tech...",
+      "link": "https://www.linkedin.com/posts/bobrapp_eu-tech-sovereignty-is-rising-from-the-chips-activity-7484956588420767745-CAOO",
+      "date": "Mon, 20 Jul 2026 13:05:14 GMT",
+      "summary": "EU Tech Sovereignty is rising. From the Chips Act to Qwant, Europe is leading. We're building responsible AI. La souveraineté tech en UE s’impose. Du Chips Act à Qwant, l'Europe mène. Nous bâtissons une IA responsable. Connect with Bob Rapp & Ken Johnston.",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "Problem: AI projects often fail at the governance gap. Shadow agents and model drift are systemic risks, not just bugs. Solution:...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-ai-projects-often-fail-at-the-governance-activity-7467534962037280769-or1Q",
-      "date": "Tue, 02 Jun 2026 11:17:55 GMT",
-      "summary": "Problem: AI projects often fail at the governance gap. Shadow agents and model drift are systemic risks, not just bugs. Solution: Ship \"Safe AI as Code\" using our Three-Yes Test: Is it transparent, controllable, and pro-human? Summary: Automate your governance. [Español] Problema",
+      "title": "Problem: AI Ethics Boards are often toothless suggestion boxes lacking the authority to stop high-risk deployments. Solution: Buil...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-ai-ethics-boards-are-often-toothless-activity-7484955993714442240-pm1V",
+      "date": "Mon, 20 Jul 2026 13:02:53 GMT",
+      "summary": "Problem: AI Ethics Boards are often toothless suggestion boxes lacking the authority to stop high-risk deployments. Solution: Build structural accountability with veto power and independent oversight. Ship Good AI: - Grant board veto power - Use independent members - Direct CEO e",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "Getting to Yes: The Power of 10,000+ Governance Experts 🤝 Problem: Building AI policy from scratch is slow and risky. Solutions: A...",
-      "link": "https://www.linkedin.com/posts/bobrapp_policyascode-pol%C3%ADticacomoc%C3%B3digo-aigovops-activity-7467364810335293440-yB1-",
-      "date": "Tue, 02 Jun 2026 00:01:48 GMT",
-      "summary": "Getting to Yes: The Power of 10,000+ Governance Experts 🤝 Problem: Building AI policy from scratch is slow and risky. Solutions: Access 500+ curated frameworks shared by 10,000+ experts. Summary: Define the future of #PolicyAsCode. Ship Good AI: - Use peer-reviewed templates. - M",
+      "title": "🚨 EU AI Act 2026: Non-consensual AI images & CSAM are banned. Stay compliant. 🚨 Loi IA UE 2026 : Images IA non consenties & CSAM i...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-activity-7484729592503644160-1ATS",
+      "date": "Sun, 19 Jul 2026 22:03:14 GMT",
+      "summary": "🚨 EU AI Act 2026: Non-consensual AI images & CSAM are banned. Stay compliant. 🚨 Loi IA UE 2026 : Images IA non consenties & CSAM interdits. Soyez conformes. Ref: Connect: Bob & Ken. 🐾 #AIGovOps",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "Getting to Yes: Policy-as-Code for Aerospace & Space Tech 🚀 Orbital safety requires precision that manual oversight can't match. \"...",
-      "link": "https://www.linkedin.com/posts/bobrapp_getting-to-yes-policy-as-code-for-aerospace-activity-7467243738143092737-UVb5",
-      "date": "Mon, 01 Jun 2026 16:00:42 GMT",
-      "summary": "Getting to Yes: Policy-as-Code for Aerospace & Space Tech 🚀 Orbital safety requires precision that manual oversight can't match. \"Yes\" to exploration means encoding the Artemis Accords into flight logic. ✅ SHIP GOOD AI / ENVIAR IA BUENA: • [EN] Automate real-time Debris Avoidance",
+      "title": "Black-box AI is a liability. Without understanding decisions, you’re flying blind. Problem: Opaque models cause bias and regulator...",
+      "link": "https://www.linkedin.com/posts/bobrapp_modelriskmanagement-blackbox-aitransparency-activity-7484729590607843328-K8hm",
+      "date": "Sun, 19 Jul 2026 22:03:14 GMT",
+      "summary": "Black-box AI is a liability. Without understanding decisions, you’re flying blind. Problem: Opaque models cause bias and regulatory failure. Solutions: Model Risk Management (MRM) controls risk throughout the AI lifecycle. Summary: Build transparency into your stack with proven M",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "Shipping AI shouldn't be a leap of faith. The gap between policy and 'Git Push' is where risks like drift live. We need technical...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-responsibleai-aigovernance-activity-7467172465597804544-oHo8",
-      "date": "Mon, 01 Jun 2026 11:17:29 GMT",
-      "summary": "Shipping AI shouldn't be a leap of faith. The gap between policy and 'Git Push' is where risks like drift live. We need technical controls in CI/CD pipelines. Lanzar IA no debe ser un acto de fe. El riesgo vive en la brecha entre la política y el código. Necesitamos controles téc",
+      "title": "🔐 AI Agent Identity & Authentication: Who's Really in Control? Problem: When agents spawn sub-processes, the \"Anonymous Ghost\" pro...",
+      "link": "https://www.linkedin.com/posts/bobrapp_agentidentity-aiauthentication-cryptographicid-activity-7484594157202788352-Z_0Q",
+      "date": "Sun, 19 Jul 2026 13:05:04 GMT",
+      "summary": "🔐 AI Agent Identity & Authentication: Who's Really in Control? Problem: When agents spawn sub-processes, the \"Anonymous Ghost\" problem emerges: accountability vanishes. Solution: Cryptographic IDs. NIST briefings confirm identity management is vital for records. Source:",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "US Commerce U-turn: Anthropic Mythos open to trusted partners. Frontier AI shift. Join our 10,000+ community. تراجع التجارة الأمري...",
+      "link": "https://ae.linkedin.com/posts/bobrapp_us-commerce-u-turn-anthropic-mythos-open-activity-7484593771050057728-a8gZ",
+      "date": "Sun, 19 Jul 2026 13:03:32 GMT",
+      "summary": "US Commerce U-turn: Anthropic Mythos open to trusted partners. Frontier AI shift. Join our 10,000+ community. تراجع التجارة الأمريكية: نماذج Mythos متاحة للشركاء. تحول في الحوكمة. انضم لـ ١٠ آلاف مهني.",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "🔌 Circuit Breakers: Your AI's Emergency Shut-Off Switch When AI behaves unexpectedly, every second counts. Circuit breakers are au...",
+      "link": "https://www.linkedin.com/posts/bobrapp_circuitbreakers-aisafety-killswitch-activity-7484367298414297088-AO9R",
+      "date": "Sat, 18 Jul 2026 22:03:37 GMT",
+      "summary": "🔌 Circuit Breakers: Your AI's Emergency Shut-Off Switch When AI behaves unexpectedly, every second counts. Circuit breakers are automated safeguards that halt systems exceeding thresholds for anomalies, costs, or compliance. Design safety in from day one. 🇨🇳 断路器：AI系统的紧急开关。当系统出现异常",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "US EO: NSA benchmarks Frontier AI for cyber risks. Security > Ethics. 🇺🇸 美国行政令：NSA 对前沿 AI 进行网络风险基准测试。安全 > 伦理。🇨🇳 See our research lib...",
+      "link": "https://www.linkedin.com/posts/bobrapp_us-eo-nsa-benchmarks-frontier-ai-for-cyber-activity-7484366845186174976-YBpZ",
+      "date": "Sat, 18 Jul 2026 22:01:49 GMT",
+      "summary": "US EO: NSA benchmarks Frontier AI for cyber risks. Security > Ethics. 🇺🇸 美国行政令：NSA 对前沿 AI 进行网络风险基准测试。安全 > 伦理。🇨🇳 See our research library. Source: Connect with Bob Rapp & Ken Johnston! 🤝",
       "image": null,
       "author": "Bob Rapp"
     }
   ],
   "ken": [
     {
-      "title": "Countdown to June 4th: 2 Days to go!",
-      "link": "https://www.linkedin.com/posts/rkjohnston_devops-aigovops-devops-activity-7467655570754306052-_4fd",
-      "date": "Tue, 02 Jun 2026 19:17:10 GMT",
-      "summary": "Countdown to June 4th: 2 Days to go! 🚀 Seattle's AI House is getting ready to host a different kind of conversation. We’re moving beyond the high-level policy debates and getting into the weeds of operationalizing trust. Governance debt is the silent killer of AI innovation, and",
+      "title": "A Toronto teacher hid a secret word in white text inside a Romeo and Juliet assignment.",
+      "link": "https://www.linkedin.com/posts/rkjohnston_fridayfailfest-promptinjection-aigovernance-activity-7484638217518915584-Gf21",
+      "date": "Sun, 19 Jul 2026 16:00:09 GMT",
+      "summary": "A Toronto teacher hid a secret word in white text inside a Romeo and Juliet assignment. Made a TikTok about it that went viral. Students who actually read it: clean essays. Students who pasted it into ChatGPT: essays containing the word. Every time. No AI detector needed. The out",
       "image": null,
       "author": "Ken Johnston"
     },
     {
-      "title": "Governance debt is the silent killer of AI innovation.",
-      "link": "https://www.linkedin.com/posts/rkjohnston_devops-aigovops-devops-activity-7467606972121661440-IeMu",
-      "date": "Tue, 02 Jun 2026 16:04:04 GMT",
-      "summary": "Governance debt is the silent killer of AI innovation. We’re fixing that. Registration link: Join us for the 1st AiGovOps Meetup: AI Governance Founders Forum. We’re gathering at the AI House in Seattle and streaming globally to bridge the gap between po",
+      "title": "Toronto Teacher Exposes AI Essay Cheating Vulnerability  posted on the topic",
+      "link": "https://www.linkedin.com/posts/rkjohnston_fridayfailfest-rai-aigovernance-activity-7483902086061899776-8gt8",
+      "date": "Fri, 17 Jul 2026 15:15:01 GMT",
+      "summary": "A Toronto teacher hid a secret word in white text inside a Romeo and Juliet assignment. Made a TikTok about it that went viral. Students who actually read it: clean essays. Students who pasted it into ChatGPT: essays containing the word. Every time. No AI detector. The output sel",
       "image": null,
       "author": "Ken Johnston"
     },
     {
-      "title": "Rehearsals done and we are ALL READY to see you all at #MSBuild bright and early-ish tomorrow Tuesday June 2nd!",
-      "link": "https://www.linkedin.com/posts/donasarkar_msbuild-imaginecup-activity-7467387957575008256-KbN9",
-      "date": "Tue, 02 Jun 2026 01:33:46 GMT",
-      "summary": "Rehearsals done and we are ALL READY to see you all at #MSBuild bright and early-ish tomorrow Tuesday June 2nd! First up we will crown (well trophy I guess) this years #ImagineCup winner (and there is a fun surprise in there too 👀) Next up will be the Satya Nadella and friends ke",
+      "title": "I’m sitting down with Tom Wisnowski on AI Minute Mondays with Suchi to tackle the Buy vs.",
+      "link": "https://www.linkedin.com/posts/suchi-mohan-tech_aiminutemondays-buyvsbuild-ailearning-activity-7483868258169888768-Huxg",
+      "date": "Fri, 17 Jul 2026 13:00:36 GMT",
+      "summary": "I’m sitting down with Tom Wisnowski on AI Minute Mondays with Suchi to tackle the Buy vs. Build dilemma. With AI changing cost, speed, and capability, the decision looks very different than it did even a year ago! Join us to find out which side you should be on? #AIMinuteMondays",
       "image": null,
       "author": "Ken Johnston"
     },
     {
-      "title": "Excited to see our President, Leigh Felton, tackling one of the most important questions in AI today: How do we know it's actually working? \n\nAs AI becomes embedded in organizational decision-making,… | AI for Job Security Foundation",
-      "link": "https://www.linkedin.com/posts/aiforjobsecurity_excited-to-see-our-president-leigh-felton-activity-7467369562393530368-P4Is",
-      "date": "Tue, 02 Jun 2026 00:20:41 GMT",
-      "summary": "Excited to see our President, Leigh Felton, tackling one of the most important questions in AI today: How do we know it's actually working? As AI becomes embedded in organizational decision-making, meaningful measurement is no longer optional. Looking forward to this important di",
+      "title": "Designing Oversight for Effective AI Systems  posted on the topic",
+      "link": "https://www.linkedin.com/posts/bobrapp_humanintheloop-aisafety-agenticai-activity-7483642519390638080-fQD6",
+      "date": "Thu, 16 Jul 2026 22:03:36 GMT",
+      "summary": "👤 Human in the Loop: Designing Oversight That Actually Works AI agents are scaling fast, but oversight is now regulatory reality. Spain's \"Rule of 2\" requires dual verification for >€10K actions. Oregon’s SB 1546 sets a statutory Duty of Care. Ship Good AI: - Set clear interventi",
       "image": null,
       "author": "Ken Johnston"
     },
     {
-      "title": "Humans in AI Week begins today!!!.",
-      "link": "https://www.linkedin.com/posts/aicollective_hiaiw-findyourcity-aic-activity-7467293880472973312-K6ba",
-      "date": "Mon, 01 Jun 2026 19:19:57 GMT",
-      "summary": "Humans in AI Week begins today!!!. It’s Monday, June 1st, and it’s time to celebrate. 🎉 AI is reshaping how we work, learn, create, and govern. Most of these decisions have been made by a remarkably small number of people. At AIC, we think everyone deserves a seat at that table.",
+      "title": "FTC Cracks Down on Deceptive AI Steering, Export Controls Lifted on Mythos 5  posted on the topic",
+      "link": "https://www.linkedin.com/posts/bobrapp_is-your-ai-working-for-you-or-a-hidden-agenda-activity-7483642191148527616-wVRU",
+      "date": "Thu, 16 Jul 2026 22:02:18 GMT",
+      "summary": "Is your AI working for you or a hidden agenda? The FTC is cracking down on \"deceptive steering\"—AI nudging users based on secret commercial interests. Meanwhile, the US lifting export controls on Anthropic’s Mythos 5 after safety reviews proves governance opens global markets. 您的",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "I've read so many of these posts from long-time colleagues over the last few weeks, but it took me a bit to be ready to post the same. I decided to take Microsoft up on the \"Voluntary Retirement… | Mary Beth Thome",
+      "link": "https://www.linkedin.com/posts/mbthome_ive-read-so-many-of-these-posts-from-long-time-activity-7483625201042108417-LeH8",
+      "date": "Thu, 16 Jul 2026 20:54:47 GMT",
+      "summary": "I've read so many of these posts from long-time colleagues over the last few weeks, but it took me a bit to be ready to post the same. I decided to take Microsoft up on the \"Voluntary Retirement Program\" and my last day with the company was July 1. Copying below the mail I sent t",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "STARWest is coming up!",
+      "link": "https://www.linkedin.com/posts/rkjohnston_starwest-is-coming-up-activity-7483622037865775104-bOjx",
+      "date": "Thu, 16 Jul 2026 20:42:13 GMT",
+      "summary": "STARWest is coming up!",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Nobody Breaks a Cycle Alone",
+      "link": "https://www.linkedin.com/posts/jukap_nobody-breaks-a-cycle-alone-activity-7483612532968960000-7K6x",
+      "date": "Thu, 16 Jul 2026 20:04:27 GMT",
+      "summary": "This one hits on a day where it matters more than most... Paying attention to the signs around you isn't always easy, but sometimes it's the difference. Just remember to take time to silence the chaos sometimes, today is that kind of day for me. But not for long, #LAX101 starts t",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "While 60-minute sessions are fantastic for inspiration, true, tactical skill-building requires getting your hands dirty.",
+      "link": "https://www.linkedin.com/posts/coveros_starwest-softwaretesting-qualityassurance-activity-7483611011481108480--GtW",
+      "date": "Thu, 16 Jul 2026 19:58:24 GMT",
+      "summary": "While 60-minute sessions are fantastic for inspiration, true, tactical skill-building requires getting your hands dirty. That’s why our half- and full-day Tutorials are consistently ranked as the most popular and highest-rated content at the conference. They offer the rare opport",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Not long ago, I started my journey at Ford Motor Company as a Ford College Graduate (FCG) in Material Planning & Logisti",
+      "link": "https://www.linkedin.com/posts/justine-czyrka-341323177_mfgfcg-globalmanufacturing-fordfamily-activity-7483562236909637632--d3d",
+      "date": "Thu, 16 Jul 2026 16:44:35 GMT",
+      "summary": "Officially a Ford Family! Not long ago, I started my journey at Ford Motor Company as a Ford College Graduate (FCG) in Material Planning & Logistics. Earlier this year, I was grateful to transition into a full-time role in North American Vehicle Logistics. Now I get to watch my b",
       "image": null,
       "author": "Ken Johnston"
     }
-  ],
-  "fetch_error": true,
-  "fetch_attempted": "2026-07-20T08:01:16Z"
+  ]
 }

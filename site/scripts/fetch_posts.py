@@ -10,15 +10,28 @@ Run via CI:    GitHub Actions reads secrets automatically.
 NLP pass:      Set ANTHROPIC_API_KEY secret to enable Haiku enrichment.
 """
 
+import sys
 import urllib.request
+from pathlib import Path
 import urllib.error
 import xml.etree.ElementTree as ET
 import json
 import os
 import re
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
-MAX_POSTS = 5
+MAX_POSTS = 10          # the most we ever show per person
+MAX_AGE_DAYS = 30       # …and nothing older than this, however few that leaves
+
+# WHY AN AGE LIMIT AND NOT JUST A COUNT. "Latest from Ken & Bob" showed posts from 2 June
+# for seven weeks because the fetcher only ever asked for "the newest 5" — and the newest 5
+# of a dead feed are simply the last 5 it ever saw. A count keeps the section looking full
+# while it quietly stops being true. An age limit is the part that can actually go empty,
+# which is the honest outcome when there is nothing recent to show.
+
+
+# Set by main(); read by the exit-code contract at the bottom of this file.
+STATE = {}
 
 
 def strip_html(text):
@@ -148,6 +161,30 @@ Return ONLY a JSON array. No markdown, no explanation.
         print(f"  [{author_name}] Haiku NLP pass failed (non-fatal): {exc}")
         return posts  # degrade gracefully
 
+def _fresh_only(posts, max_age_days=None, max_items=None):
+    """Newest first, nothing older than max_age_days, at most max_items.
+
+    Posts with an unparseable date are KEPT: a feed that changes its date format should make
+    the section look odd, not make it silently disappear. Dropping what we cannot read is how
+    a filter turns into censorship of its own inputs."""
+    from email.utils import parsedate_to_datetime
+    max_age_days = MAX_AGE_DAYS if max_age_days is None else max_age_days
+    max_items = MAX_POSTS if max_items is None else max_items
+    cutoff = datetime.now(timezone.utc) - timedelta(days=max_age_days)
+    keep = []
+    for p in posts or []:
+        try:
+            when = parsedate_to_datetime(p.get("date", ""))
+            if when.tzinfo is None:
+                when = when.replace(tzinfo=timezone.utc)
+            if when < cutoff:
+                continue
+        except Exception:
+            pass          # unreadable date — keep it and let a human notice
+        keep.append(p)
+    return keep[:max_items]
+
+
 def fetch_feed(url, author_name, max_items=MAX_POSTS):
     """Fetch an rss.app (or any RSS 2.0 / Atom) feed, return list of post dicts."""
     if not url:
@@ -246,6 +283,7 @@ def main():
             age_hours = (datetime.now(timezone.utc) - last_updated).total_seconds() / 3600
             if age_hours > 48:
                 print(f"  ⚠️  WARNING: Posts data is {age_hours:.0f}h old (threshold: 48h)")
+                STATE['stale_hours'] = age_hours
         except Exception:
             pass
 
@@ -269,6 +307,7 @@ def main():
     # If both fetches failed, keep last successful data
     if not bob_posts and not ken_posts and last_payload:
         print("  ⚠️  Both feeds failed — keeping last successful data")
+        STATE['both_failed'] = True
         last_payload['fetch_error'] = True
         last_payload['fetch_attempted'] = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
         with open(out_path, 'w', encoding='utf-8') as f:
@@ -294,16 +333,36 @@ def main():
     bob_posts = haiku_enrich_posts(bob_posts, 'Bob Rapp')
     ken_posts = haiku_enrich_posts(ken_posts, 'Ken Johnston')
 
+    # The freshness rule, applied per person: at most MAX_POSTS, none older than
+    # MAX_AGE_DAYS. Fallback data from a dead feed is filtered by the SAME rule, so a
+    # person whose feed has been down for a month goes empty rather than showing a museum.
+    bob_fresh, ken_fresh = _fresh_only(bob_posts), _fresh_only(ken_posts)
+    print(f"  freshness: Bob {len(bob_fresh)}/{len(bob_posts)} kept, "
+          f"Ken {len(ken_fresh)}/{len(ken_posts)} kept "
+          f"(max {MAX_POSTS}, newer than {MAX_AGE_DAYS}d)")
+
+    # THE RUN JUST FIXED THE STALENESS IT WARNED ABOUT AT STARTUP.
+    #
+    # The age check at the top reads the PREVIOUS file, which is exactly right as a warning
+    # — but it left STATE['stale_hours'] set, so the exit contract then failed a run that had
+    # just fetched 20 fresh posts, and the failure stopped the commit step before the good
+    # data could land. My own guard became the thing blocking the fix, which is the same
+    # shape as the missing-Path crash it was written to catch.
+    #
+    # A guard must judge the state it LEAVES BEHIND, not the state it arrived in.
+    if bob_fresh or ken_fresh:
+        STATE.pop('stale_hours', None)
+
     payload = {
         'updated': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
-        'bob': bob_posts,
-        'ken': ken_posts,
+        'bob': bob_fresh,
+        'ken': ken_fresh,
     }
 
     with open(out_path, 'w', encoding='utf-8') as f:
         json.dump(payload, f, indent=2, ensure_ascii=False)
 
-    print(f"Wrote data/linkedin-posts.json  (Bob: {len(bob_posts)}, Ken: {len(ken_posts)})")
+    print(f"Wrote data/linkedin-posts.json  (Bob: {len(bob_fresh)}, Ken: {len(ken_fresh)})")
 
     # ── Regenerate RSS feed ───────────────────────────────────────────────
     rss_path = Path(__file__).parent.parent / 'feed.xml'
@@ -371,5 +430,32 @@ def _regenerate_rss(data, rss_path):
         f.write(rss)
 
 
+# --------------------------------------------------------------------------------------
+# GREEN MUST MEAN FRESH.
+#
+# This script already DETECTED both failure modes — it printed "Posts data is 1140h old"
+# and "Both feeds failed" — and then returned normally, so the GitHub Action exited 0 and
+# went green. The RSS bridge subscription lapsed on 2 June 2026 (HTTP 402 on both feeds)
+# and the site showed June posts under the heading "Latest" for SEVEN WEEKS. Nobody was
+# told, because the only thing that could have told them was reporting success.
+#
+# A job that reports success while producing nothing is worse than a job that fails: it
+# spends the trust it has not earned. So the exit code now carries the truth.
+#
+# Keeping the last good data is still right — a blank section helps nobody — but it is a
+# DEGRADED state, and degraded is not success.
+
 if __name__ == '__main__':
     main()
+    problems = []
+    if STATE.get('both_failed'):
+        problems.append("both RSS feeds failed (check the bridge subscription — a lapsed "
+                        "plan returns HTTP 402)")
+    if STATE.get('stale_hours'):
+        problems.append(f"posts data is {STATE['stale_hours']:.0f}h old "
+                        f"(threshold 48h) — the feed is not updating")
+    if problems:
+        print("\n::error::LinkedIn feed is NOT healthy — " + "; ".join(problems))
+        print("The site now shows profile links instead of stale posts, so visitors are not "
+              "misled. Fix the feed source to restore live posts.")
+        sys.exit(1)
