@@ -22,4 +22,4 @@ Version-controlled record of every change applied to the live Wix site for AiGov
 ## Source of truth
 
 Mapping spec: [`../WIX-MAPPING.md`](../WIX-MAPPING.md)  
-Live reference: https://bobrapp.github.io/aigovops-foundation-site-redesign-June2026-ken-and-bob/
+Live reference: https://www.aigovops-foundation.com/

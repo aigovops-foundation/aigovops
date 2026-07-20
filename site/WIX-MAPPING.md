@@ -2,7 +2,7 @@
 
 Apply these changes block-by-block in the Wix Harmony editor for AiGovOps Foundation. Order mirrors the Beacon-style `index.html`.
 
-Live reference: https://bobrapp.github.io/aigovops-foundation-site-redesign-June2026-ken-and-bob/
+Live reference: https://www.aigovops-foundation.com/
 
 ## 1. Header / Nav
 - Light header, sticky, ~64px tall
