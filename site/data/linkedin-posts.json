@@ -1,6 +1,22 @@
 {
-  "updated": "2026-07-21T07:47:55Z",
+  "updated": "2026-07-21T19:32:01Z",
   "bob": [
+    {
+      "title": "Is your AI agent taking \"Jesus take the wheel\" too literally? As we move through 2026, the OWASP Top 10 for Agentic AI has become...",
+      "link": "https://www.linkedin.com/posts/bobrapp_is-your-ai-agent-taking-jesus-take-the-wheel-activity-7485364465111236608-rWVV",
+      "date": "Tue, 21 Jul 2026 16:06:00 GMT",
+      "summary": "Is your AI agent taking \"Jesus take the wheel\" too literally? As we move through 2026, the OWASP Top 10 for Agentic AI has become the mandatory baseline for security governance. Problem: Autonomous agents that execute code and access APIs create \"recursive loops\" of risk and pote",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Your AI assistant might be a double agent. Pentera Labs proved that a compromised inbox can poison Claude Desktop configs, creatin...",
+      "link": "https://www.linkedin.com/posts/bobrapp_your-ai-assistant-might-be-a-double-agent-activity-7485318948054454273-dstd",
+      "date": "Tue, 21 Jul 2026 13:05:08 GMT",
+      "summary": "Your AI assistant might be a double agent. Pentera Labs proved that a compromised inbox can poison Claude Desktop configs, creating a cross-device reverse shell. This is a new attack vector where productivity tools become Command-and-Control channels. Problem: AI apps are privile",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "🚀 The AI House Community: Where Governance Leaders Connect The best AI governance insights don't come from PDFs—they come from peo...",
       "link": "https://www.linkedin.com/posts/bobrapp_aihouse-aigovernance-community-activity-7485091642547351552-rmVU",
@@ -62,22 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_modelriskmanagement-blackbox-aitransparency-activity-7484729590607843328-K8hm",
       "date": "Sun, 19 Jul 2026 22:03:14 GMT",
       "summary": "Black-box AI is a liability. Without understanding decisions, you’re flying blind. Problem: Opaque models cause bias and regulatory failure. Solutions: Model Risk Management (MRM) controls risk throughout the AI lifecycle. Summary: Build transparency into your stack with proven M",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "🔐 AI Agent Identity & Authentication: Who's Really in Control? Problem: When agents spawn sub-processes, the \"Anonymous Ghost\" pro...",
-      "link": "https://www.linkedin.com/posts/bobrapp_agentidentity-aiauthentication-cryptographicid-activity-7484594157202788352-Z_0Q",
-      "date": "Sun, 19 Jul 2026 13:05:04 GMT",
-      "summary": "🔐 AI Agent Identity & Authentication: Who's Really in Control? Problem: When agents spawn sub-processes, the \"Anonymous Ghost\" problem emerges: accountability vanishes. Solution: Cryptographic IDs. NIST briefings confirm identity management is vital for records. Source:",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "US Commerce U-turn: Anthropic Mythos open to trusted partners. Frontier AI shift. Join our 10,000+ community. تراجع التجارة الأمري...",
-      "link": "https://ae.linkedin.com/posts/bobrapp_us-commerce-u-turn-anthropic-mythos-open-activity-7484593771050057728-a8gZ",
-      "date": "Sun, 19 Jul 2026 13:03:32 GMT",
-      "summary": "US Commerce U-turn: Anthropic Mythos open to trusted partners. Frontier AI shift. Join our 10,000+ community. تراجع التجارة الأمريكية: نماذج Mythos متاحة للشركاء. تحول في الحوكمة. انضم لـ ١٠ آلاف مهني.",
       "image": null,
       "author": "Bob Rapp"
     }
