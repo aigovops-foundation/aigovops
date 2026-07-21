@@ -1,6 +1,30 @@
 {
-  "updated": "2026-07-20T19:33:22Z",
+  "updated": "2026-07-21T07:47:55Z",
   "bob": [
+    {
+      "title": "🚀 The AI House Community: Where Governance Leaders Connect The best AI governance insights don't come from PDFs—they come from peo...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aihouse-aigovernance-community-activity-7485091642547351552-rmVU",
+      "date": "Mon, 20 Jul 2026 22:01:54 GMT",
+      "summary": "🚀 The AI House Community: Where Governance Leaders Connect The best AI governance insights don't come from PDFs—they come from people. At AiGovOps Foundation, our community spans 17 countries and 10,000+ professionals. From AI House in San Francisco and Seattle to global online m",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Global AI paths: EU (risk), UK (principles), US (security). Navigating compliance is a maze; our 12 frameworks help. AIガバナンスの三極化：E...",
+      "link": "https://www.linkedin.com/posts/bobrapp_global-ai-paths-eu-risk-uk-principles-activity-7485091546971713536-bQSJ",
+      "date": "Mon, 20 Jul 2026 22:01:31 GMT",
+      "summary": "Global AI paths: EU (risk), UK (principles), US (security). Navigating compliance is a maze; our 12 frameworks help. AIガバナンスの三極化：EU、英国、米国。12の成熟度モデルで、複雑なコンプライアンス対応を。 Source: Connect with Bob Rapp & Ken Johnston!",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: AI agents making autonomous decisions in a \"black box\" creates a massive liability. Without an immutable record, accounta...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-ai-agents-making-autonomous-decisions-activity-7485077225453649921-afGh",
+      "date": "Mon, 20 Jul 2026 21:04:37 GMT",
+      "summary": "Problem: AI agents making autonomous decisions in a \"black box\" creates a massive liability. Without an immutable record, accountability is impossible. Solution: Cryptographic audit trails—leveraging governance-as-code to hash, sign, and lock every decision in real-time. Summary:",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Most AI governance is a \"paper tiger.\" There is a documented 51-point gap between corporate intent and technical execution. Manual...",
       "link": "https://www.linkedin.com/posts/bobrapp_most-ai-governance-is-a-paper-tiger-there-activity-7485000862222966784-Z_bZ",
@@ -56,25 +80,17 @@
       "summary": "US Commerce U-turn: Anthropic Mythos open to trusted partners. Frontier AI shift. Join our 10,000+ community. تراجع التجارة الأمريكية: نماذج Mythos متاحة للشركاء. تحول في الحوكمة. انضم لـ ١٠ آلاف مهني.",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "🔌 Circuit Breakers: Your AI's Emergency Shut-Off Switch When AI behaves unexpectedly, every second counts. Circuit breakers are au...",
-      "link": "https://www.linkedin.com/posts/bobrapp_circuitbreakers-aisafety-killswitch-activity-7484367298414297088-AO9R",
-      "date": "Sat, 18 Jul 2026 22:03:37 GMT",
-      "summary": "🔌 Circuit Breakers: Your AI's Emergency Shut-Off Switch When AI behaves unexpectedly, every second counts. Circuit breakers are automated safeguards that halt systems exceeding thresholds for anomalies, costs, or compliance. Design safety in from day one. 🇨🇳 断路器：AI系统的紧急开关。当系统出现异常",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "US EO: NSA benchmarks Frontier AI for cyber risks. Security > Ethics. 🇺🇸 美国行政令：NSA 对前沿 AI 进行网络风险基准测试。安全 > 伦理。🇨🇳 See our research lib...",
-      "link": "https://www.linkedin.com/posts/bobrapp_us-eo-nsa-benchmarks-frontier-ai-for-cyber-activity-7484366845186174976-YBpZ",
-      "date": "Sat, 18 Jul 2026 22:01:49 GMT",
-      "summary": "US EO: NSA benchmarks Frontier AI for cyber risks. Security > Ethics. 🇺🇸 美国行政令：NSA 对前沿 AI 进行网络风险基准测试。安全 > 伦理。🇨🇳 See our research library. Source: Connect with Bob Rapp & Ken Johnston! 🤝",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "We are officially less than one week away from the start of Seattle Tech Week, and, in my opinion, a \"Top 5 Event\" for t",
+      "link": "https://www.linkedin.com/posts/jgproduct_seattletechweek2026-seattletechweek-founder-activity-7485099391645536256-xOWu",
+      "date": "Mon, 20 Jul 2026 22:32:41 GMT",
+      "summary": "We are officially less than one week away from the start of Seattle Tech Week, and, in my opinion, a \"Top 5 Event\" for the week is the \"Founder Investor Day Party\"! To kick off the week and the first morning, TF Labs and Niftmint will have live DJs who happen to be amazing Founde",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "#fridayfailfest #promptinjection #aigovernance #aigovops #owasp #devsecops",
       "link": "https://www.linkedin.com/posts/rkjohnston_fridayfailfest-promptinjection-aigovernance-activity-7485002696987394048-MKbi",
@@ -144,14 +160,6 @@
       "link": "https://www.linkedin.com/posts/rkjohnston_fridayfailfest-promptinjection-aigovernance-activity-7484638217518915584-Gf21",
       "date": "Sun, 19 Jul 2026 16:00:09 GMT",
       "summary": "A Toronto teacher hid a secret word in white text inside a Romeo and Juliet assignment. Made a TikTok about it that went viral. Students who actually read it: clean essays. Students who pasted it into ChatGPT: essays containing the word. Every time. No AI detector needed. The out",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "🔐 AI Agent Identity & Authentication: Who's Really in Control?",
-      "link": "https://www.linkedin.com/posts/bobrapp_agentidentity-aiauthentication-cryptographicid-activity-7484594157202788352-Z_0Q",
-      "date": "Sun, 19 Jul 2026 13:05:04 GMT",
-      "summary": "🔐 AI Agent Identity & Authentication: Who's Really in Control? Problem: When agents spawn sub-processes, the \"Anonymous Ghost\" problem emerges: accountability vanishes. Solution: Cryptographic IDs. NIST briefings confirm identity management is vital for records. Source:",
       "image": null,
       "author": "Ken Johnston"
     }
