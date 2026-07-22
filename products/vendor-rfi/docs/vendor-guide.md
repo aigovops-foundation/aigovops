@@ -1,21 +1,21 @@
 # AI Governance Policy-as-Code Vendor Guide for Fortune 100 Manufacturing
-### An AIGovOps Foundation–Aligned Reference | June 2026
+### An AiGovOps Foundation–Aligned Reference | June 2026
 
 ***
 
 ## Executive Summary
 
-The AIGovOps Foundation defines the practice of AI governance as turning compliance from a PDF into executable, auditable, version-controlled code that runs inside CI/CD pipelines — shipping policy frameworks as living artifacts rather than static documents. For a Fortune 100 manufacturer in 2026, this means owning the full arc from **audit discovery** → **policy authoring** → **deployment gates & controls** → **runtime guardrails** → **dashboards & cross-vendor agent oversight** → **model behavior & insights** → **code shipping** — all while keeping the system "true" (cryptographically verifiable, version-controlled, and regulator-ready).[^1][^2]
+The AiGovOps Foundation defines the practice of AI governance as turning compliance from a PDF into executable, auditable, version-controlled code that runs inside CI/CD pipelines — shipping policy frameworks as living artifacts rather than static documents. For a Fortune 100 manufacturer in 2026, this means owning the full arc from **audit discovery** → **policy authoring** → **deployment gates & controls** → **runtime guardrails** → **dashboards & cross-vendor agent oversight** → **model behavior & insights** → **code shipping** — all while keeping the system "true" (cryptographically verifiable, version-controlled, and regulator-ready).[^1][^2]
 
-Approximately 80% of organizations surveyed by Deloitte currently lack mature governance capabilities for agentic AI, including real-time monitoring, defined agent boundaries, and auditable action trails. The IAPP's 2026 Vendor Report groups the AI governance market into four capability buckets: (1) Policy & Compliance, (2) Technical Assessments & Evaluations, (3) Assurance & Auditing, and (4) Consulting & Advisory. The vendors below are mapped against the full AIGovOps pipeline layer by layer.[^3][^4]
+Approximately 80% of organizations surveyed by Deloitte currently lack mature governance capabilities for agentic AI, including real-time monitoring, defined agent boundaries, and auditable action trails. The IAPP's 2026 Vendor Report groups the AI governance market into four capability buckets: (1) Policy & Compliance, (2) Technical Assessments & Evaluations, (3) Assurance & Auditing, and (4) Consulting & Advisory. The vendors below are mapped against the full AiGovOps pipeline layer by layer.[^3][^4]
 
 ***
 
-## The AIGovOps Stack Model (Governance Layer Reference)
+## The AiGovOps Stack Model (Governance Layer Reference)
 
-Before evaluating vendors, it is critical to understand the operational stack described by the AIGovOps Foundation's **Flow-to-Trust Loop**:[^5]
+Before evaluating vendors, it is critical to understand the operational stack described by the AiGovOps Foundation's **Flow-to-Trust Loop**:[^5]
 
-| Layer | AIGovOps Function | What "True" Means |
+| Layer | AiGovOps Function | What "True" Means |
 |---|---|---|
 | **Audit** | AI inventory discovery, attestation against frameworks (NIST AI RMF, ISO 42001, EU AI Act) | Cryptographically signed audit bundles any auditor can re-verify |
 | **Policy** | Version-controlled Rego/declarative policies in Git, peer-reviewed Decision Cards | Policy drift flagged instantly; every policy traceable to a framework control |
@@ -25,7 +25,7 @@ Before evaluating vendors, it is critical to understand the operational stack de
 | **Guardrails** | Runtime interception of prompts/responses/tool invocations — block harmful or out-of-policy actions | <100ms enforcement at the execution layer |
 | **Shipping the Code** | DevSecOps + GitOps with policy gates baked into the SDLC | Security and governance are properties of the code, not checkpoints |
 
-The AIGovOps Foundation site describes this as: "Finds every AI on your network. Attests them against 23 audit frameworks. Produces a cryptographically signed bundle any auditor can re-verify."[^6]
+The AiGovOps Foundation site describes this as: "Finds every AI on your network. Attests them against 23 audit frameworks. Produces a cryptographically signed bundle any auditor can re-verify."[^6]
 
 ***
 
@@ -73,20 +73,20 @@ Credo AI is the category pioneer and most widely deployed enterprise AI governan
 **Category: Policy-as-Code Engine, Infrastructure Gates, CI/CD Controls, Shift-Left Enforcement**
 
 #### Summary
-Styra created the Open Policy Agent (OPA), now a CNCF graduated project and the de facto standard for policy-as-code across cloud-native infrastructure. OPA is the engine the AIGovOps Foundation points to as the reference implementation for policy-as-code in AI governance: it lets teams "enforce fine-grained policies over which tools an AI agent can call, what parameters are permitted, and how those tools can be used". Styra DAS (Declarative Authorization Service) is the enterprise control plane that operationalizes OPA at scale — centralizing policy authoring, distribution, impact analysis, monitoring, and audit logging across distributed environments. HashiCorp Sentinel is the policy-as-code framework embedded in Terraform Enterprise / HCP Terraform, enforcing governance on infrastructure configurations between `plan` and `apply`.[^19][^20][^21][^22][^23][^24]
+Styra created the Open Policy Agent (OPA), now a CNCF graduated project and the de facto standard for policy-as-code across cloud-native infrastructure. OPA is the engine the AiGovOps Foundation points to as the reference implementation for policy-as-code in AI governance: it lets teams "enforce fine-grained policies over which tools an AI agent can call, what parameters are permitted, and how those tools can be used". Styra DAS (Declarative Authorization Service) is the enterprise control plane that operationalizes OPA at scale — centralizing policy authoring, distribution, impact analysis, monitoring, and audit logging across distributed environments. HashiCorp Sentinel is the policy-as-code framework embedded in Terraform Enterprise / HCP Terraform, enforcing governance on infrastructure configurations between `plan` and `apply`.[^19][^20][^21][^22][^23][^24]
 
 #### What It Does Across the Stack
 
-- **Policy**: Rego — OPA's domain-specific declarative language — is the language of the AIGovOps Foundation and the standard for governance-as-code. The **GOPAL** (Governance Open Policy Agent Library) library encodes real AI governance requirements including EU AI Act, NIST AI RMF, and aviation safety standards as versioned Rego policies.[^23]
+- **Policy**: Rego — OPA's domain-specific declarative language — is the language of the AiGovOps Foundation and the standard for governance-as-code. The **GOPAL** (Governance Open Policy Agent Library) library encodes real AI governance requirements including EU AI Act, NIST AI RMF, and aviation safety standards as versioned Rego policies.[^23]
 - **Gates & Controls (CI/CD)**: OPA integrates natively into Kubernetes admission controllers, API gateways, CI/CD pipelines, Terraform runs, and microservice authorization layers. Sentinel blocks non-compliant Terraform configurations before infrastructure is provisioned.[^22][^19]
 - **Audit**: Styra DAS generates decision logs with full audit trails for every policy evaluation — answering "did we approve this?" with a verifiable record. The aigovops-foundation.com site's cryptographically signed audit bundle concept maps directly to OPA's decision logging architecture.[^24]
 - **Cross-Vendor Consistency**: A single Rego policy can be evaluated across Kubernetes, cloud APIs, CI/CD tooling, and AI agent tool invocations — preventing authorization sprawl across a complex manufacturing stack.[^24]
-- **Shift-Left**: Impact analysis tools let teams understand how a policy change will affect existing systems before deployment — reducing the "governance debt" accumulation the AIGovOps Foundation warns against.[^1][^5]
+- **Shift-Left**: Impact analysis tools let teams understand how a policy change will affect existing systems before deployment — reducing the "governance debt" accumulation the AiGovOps Foundation warns against.[^1][^5]
 
 #### Best in the World At
 - **Policy-as-code for infrastructure and AI agent tool control** — the only open-standard, vendor-neutral engine deployed at global scale for fine-grained, declarative, version-controlled policy enforcement.[^19][^24]
 - **Kubernetes and cloud-native authorization** — proven at Fortune 500 scale with full decision logging, impact analysis, and centralized policy management.[^25]
-- **GitOps-native policy workflows** — policies live in Git, pass through CI/CD reviews, and are automatically distributed to enforcement points — the exact architecture described in the AIGovOps Flow-to-Trust Loop.[^5]
+- **GitOps-native policy workflows** — policies live in Git, pass through CI/CD reviews, and are automatically distributed to enforcement points — the exact architecture described in the AiGovOps Flow-to-Trust Loop.[^5]
 
 #### Known Cost
 - **OPA**: Free and open-source (Apache 2.0).[^19]
@@ -117,7 +117,7 @@ Fiddler AI is the enterprise AI control plane for observability, guardrails, and
 
 - **Guardrails (Runtime)**: Fiddler Guardrails intercept prompts and responses in live environments, scoring them across hallucination, safety violations, PII leakage, prompt injection, and jailbreak attempts — all at **<100ms latency** and handling **5M+ requests/day**. NVIDIA NeMo Guardrails adds configurable dialog, input, retrieval, execution, and output rails with support for OpenAI, Anthropic, Azure, AWS Bedrock, and LangChain providers.[^29][^28]
 - **Model Behavior & Insights**: Fiddler monitors **80+ LLM metrics** and **30+ ML metrics** out of the box. For a manufacturer's predictive models (quality control, demand forecasting, predictive maintenance), this includes accuracy tracking, drift detection, bias/fairness scoring, and explainability (SHAP values, feature importance). The platform provides LLM-as-a-Judge entirely within the secure environment — no data leaves the perimeter.[^31][^32]
-- **Agent Observability & Dashboards**: Fiddler's agentic observability provides hierarchical visibility from application → session → individual span → tool call, with causal tracing of multi-step agent failures. The execution flow graph visualizes agent decision paths and exposes guardrails, tools, model, and framework per agent. This directly addresses the AIGovOps Foundation's "anonymous ghost" problem — every agent action is visible and auditable.[^35][^36][^5]
+- **Agent Observability & Dashboards**: Fiddler's agentic observability provides hierarchical visibility from application → session → individual span → tool call, with causal tracing of multi-step agent failures. The execution flow graph visualizes agent decision paths and exposes guardrails, tools, model, and framework per agent. This directly addresses the AiGovOps Foundation's "anonymous ghost" problem — every agent action is visible and auditable.[^35][^36][^5]
 - **Cross-Vendor Agents**: Supports LangGraph, Amazon Bedrock, CrewAI, OpenAI Agents, Mistral, Google ADK, and more — vendor-neutral observability across the entire agent ecosystem.[^35]
 - **Audit Trails**: Every interaction has a complete audit trail including source documentation and guardrail metric scores, with custom dashboards and reports for compliance evidence.[^32]
 
@@ -145,7 +145,7 @@ Fiddler AI is the enterprise AI control plane for observability, guardrails, and
 
 ## The Full Recommended Stack for Fortune 100 Manufacturing
 
-| Layer | Primary Vendor | Secondary / Complement | AIGovOps Alignment |
+| Layer | Primary Vendor | Secondary / Complement | AiGovOps Alignment |
 |---|---|---|---|
 | **AI Audit & Inventory** | Credo AI | IBM watsonx.governance | Maps every AI to a policy card; cryptographic audit evidence[^6][^10] |
 | **Policy Authoring** | Styra DAS + OPA (Rego) | GOPAL library (open source) | Policies in Git, peer-reviewed, version-controlled[^23][^24] |
@@ -160,7 +160,7 @@ Fiddler AI is the enterprise AI control plane for observability, guardrails, and
 
 ## Cross-Vendor Integration Architecture
 
-The AIGovOps Foundation's **Flow-to-Trust Loop** describes the orchestration logic:[^5]
+The AiGovOps Foundation's **Flow-to-Trust Loop** describes the orchestration logic:[^5]
 
 ```
 FlowOps (CI/CD velocity)
@@ -186,7 +186,7 @@ For a Fortune 100 manufacturer deploying AI on the shop floor, in quality contro
 | Dimension | Credo AI + watsonx.governance | Styra DAS + OPA + Sentinel | Fiddler AI + NeMo |
 |---|---|---|---|
 | **Primary Strength** | Regulatory compliance, policy library, GRC dashboard | Policy-as-code engine, infra gates, CI/CD enforcement | Runtime guardrails, model observability, agent tracing |
-| **AIGovOps Layer** | Audit, Policy Library, Compliance Dashboard | Policy Authoring, Gates & Controls | Guardrails, Model Insights, Agent Oversight |
+| **AiGovOps Layer** | Audit, Policy Library, Compliance Dashboard | Policy Authoring, Gates & Controls | Guardrails, Model Insights, Agent Oversight |
 | **Manufacturing Fit** | High — hybrid cloud / on-prem, mature GRC[^15] | High — Kubernetes-native, cloud-agnostic, IaC governance[^24] | High — VPC deployment, no data exposure, air-gap support[^29] |
 | **Fortune 100 References** | Mastercard, Cisco, Fortune 500 financial services[^8] | Global banks, Fortune 500 cloud-native deployments[^24] | Fortune 20 conglomerate at 30M+ traces/day[^33] |
 | **Open Source Option** | No | OPA (Apache 2.0), GOPAL library[^19][^23] | NeMo Guardrails (NVIDIA open source)[^28] |
@@ -209,13 +209,13 @@ Even with the full three-vendor stack, a Fortune 100 manufacturer should be awar
 
 4. **Human-in-the-Loop for High-Stakes Manufacturing Decisions**: For AI-assisted quality control decisions affecting safety (e.g., pass/fail on critical components), none of the three vendors provides native HITL workflow tooling out of the box. This typically requires integration with manufacturing workflow platforms.
 
-5. **Governance Debt Remediation**: The AIGovOps Foundation explicitly warns that governance debt compounds quietly until the audit hits. A Fortune 100 manufacturer bringing legacy AI models into governance scope will need a structured remediation backlog process — this is an advisory engagement, not a product.[^44]
+5. **Governance Debt Remediation**: The AiGovOps Foundation explicitly warns that governance debt compounds quietly until the audit hits. A Fortune 100 manufacturer bringing legacy AI models into governance scope will need a structured remediation backlog process — this is an advisory engagement, not a product.[^44]
 
 ***
 
-## AIGovOps Foundation Alignment Checklist
+## AiGovOps Foundation Alignment Checklist
 
-The following practices, drawn directly from the AIGovOps Foundation's published guidance, should be verified against any vendor deployment:[^1][^5]
+The following practices, drawn directly from the AiGovOps Foundation's published guidance, should be verified against any vendor deployment:[^1][^5]
 
 - [ ] Map all policies to Git audit logs — every policy change is a versioned commit
 - [ ] Peer-review every Decision Card before deployment
@@ -232,9 +232,9 @@ The following practices, drawn directly from the AIGovOps Foundation's published
 
 ## Conclusion
 
-For a Fortune 100 manufacturer in 2026, no single vendor covers the full AIGovOps stack from audit to shipping. The winning architecture combines three platforms in a layered stack: **Credo AI + IBM watsonx.governance** as the compliance control plane; **Styra DAS + OPA + HashiCorp Sentinel** as the policy-as-code enforcement engine; and **Fiddler AI + NVIDIA NeMo Guardrails** as the runtime safety and observability layer. Together, these platforms operationalize the AIGovOps Foundation's core mandate — turning governance from a PDF into executable, auditable, cryptographically verifiable code that ships with every model deployment.[^2][^6]
+For a Fortune 100 manufacturer in 2026, no single vendor covers the full AiGovOps stack from audit to shipping. The winning architecture combines three platforms in a layered stack: **Credo AI + IBM watsonx.governance** as the compliance control plane; **Styra DAS + OPA + HashiCorp Sentinel** as the policy-as-code enforcement engine; and **Fiddler AI + NVIDIA NeMo Guardrails** as the runtime safety and observability layer. Together, these platforms operationalize the AiGovOps Foundation's core mandate — turning governance from a PDF into executable, auditable, cryptographically verifiable code that ships with every model deployment.[^2][^6]
 
-The enforcement hierarchy is clear: **Credo AI** governs what is approved; **OPA/Styra** governs what is deployed; **Fiddler** governs what executes at runtime. For code shipping integrity, **Snyk Studio** and **Wiz Code** close the loop on the AI-generated SDLC. The gap that remains — manufacturing OT/IIoT integration, supply chain AI vendor risk, and HITL workflows for safety-critical decisions — represents the frontier where the AIGovOps Foundation's community-built tooling and practitioner frameworks will matter most.[^45][^2]
+The enforcement hierarchy is clear: **Credo AI** governs what is approved; **OPA/Styra** governs what is deployed; **Fiddler** governs what executes at runtime. For code shipping integrity, **Snyk Studio** and **Wiz Code** close the loop on the AI-generated SDLC. The gap that remains — manufacturing OT/IIoT integration, supply chain AI vendor risk, and HITL workflows for safety-critical decisions — represents the frontier where the AiGovOps Foundation's community-built tooling and practitioner frameworks will matter most.[^45][^2]
 
 ---
 
@@ -248,7 +248,7 @@ The enforcement hierarchy is clear: **Credo AI** governs what is approved; **OPA
 
 4. [AI Governance Vendor Report 2026](https://iapp.org/resources/article/ai-governance-vendor-report) - This report categorizes comprehensive AI governance providers, using a framework that provides conte...
 
-5. [The Flow-to-Trust Loop: How 10 Ops Disciplines Converge ...](https://www.linkedin.com/pulse/flow-to-trust-loop-how-10-ops-disciplines-converge-ship-ken-johnston-folic) - A Practitioner's Guide to the Modern AI Ops Stack By Ken Johnston | AIGovOps Foundation | February 2...
+5. [The Flow-to-Trust Loop: How 10 Ops Disciplines Converge ...](https://www.linkedin.com/pulse/flow-to-trust-loop-how-10-ops-disciplines-converge-ship-ken-johnston-folic) - A Practitioner's Guide to the Modern AI Ops Stack By Ken Johnston | AiGovOps Foundation | February 2...
 
 6. [AiGovOps Foundation: Home](https://www.aigovops-foundation.com) - Finds every AI on your network. Attests them against 23 audit frameworks. Produces a cryptographical...
 
@@ -328,5 +328,5 @@ The enforcement hierarchy is clear: **Credo AI** governs what is approved; **OPA
 
 44. [Blog | AiGovOps Foundation Feb 16 2026](https://www.aigovopsfoundation.org/blog) - AI Audits and Ethical Frameworks: Operational Principles Explained · Ensuring Transparent AI: Govern...
 
-45. [These teams aren't writing governance docs. They're ...](https://www.instagram.com/p/DXtiUlsFCv6/) - Every week, members inside AIGovOps Foundation share what's actually working in production. Not fram...
+45. [These teams aren't writing governance docs. They're ...](https://www.instagram.com/p/DXtiUlsFCv6/) - Every week, members inside AiGovOps Foundation share what's actually working in production. Not fram...
 

@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping improve the AIGovOps Vendor RFI project. This repo follows the AIGovOps Foundation open-source style: governance artifacts should be versioned, testable, observable, and auditable.
+Thanks for helping improve the AiGovOps Vendor RFI project. This repo follows the AiGovOps Foundation open-source style: governance artifacts should be versioned, testable, observable, and auditable.
 
 ## How to contribute
 

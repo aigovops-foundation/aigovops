@@ -2,7 +2,7 @@
 
 ## Reporting a vulnerability
 
-Please report security issues privately via the AIGovOps Foundation security contact rather than opening a public issue. Include steps to reproduce and the affected file or commit.
+Please report security issues privately via the AiGovOps Foundation security contact rather than opening a public issue. Include steps to reproduce and the affected file or commit.
 
 ## Scope
 

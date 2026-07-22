@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* AIGovOps Vendor RFI — CI integrity check.
+/* AiGovOps Vendor RFI — CI integrity check.
  * 1) vendors-data.js schema (catches malformed catalog/correction PRs).
  * 2) HTML sanity: every page declares lang/title/canonical, and every local link resolves.
  * Run: node scripts/check-site.js   (exit 1 on any failure)

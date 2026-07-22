@@ -1,4 +1,4 @@
-/* AIGovOps Vendor RFI — expanded 2026 vendor landscape (single source of truth).
+/* AiGovOps Vendor RFI — expanded 2026 vendor landscape (single source of truth).
  * Researched June 2026 by aigovops-agent-vendor-rfi across five governance categories.
  * Neutral + gap-aware: pricing/oss are public-signal estimates (mostly custom-quoted enterprise);
  * several entries reflect recent M&A. The OT/IIoT category is honestly NOT AI-model governance —

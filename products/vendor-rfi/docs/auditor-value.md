@@ -1,6 +1,6 @@
 # Auditor Value Model
 
-This document defines what AIGovOps vendor evaluation gives an auditor. The goal is to move from "vendor comparison opinion" to **evidence-oriented vendor decisions** that are versioned, testable, observable, and auditable by default.
+This document defines what AiGovOps vendor evaluation gives an auditor. The goal is to move from "vendor comparison opinion" to **evidence-oriented vendor decisions** that are versioned, testable, observable, and auditable by default.
 
 ## What auditors get
 

@@ -16,10 +16,10 @@ SHELL = """<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{title} — AIGovOps Vendor RFI</title>
+<title>{title} — AiGovOps Vendor RFI</title>
 <link rel="canonical" href="{canonical}">
-<meta name="description" content="{title} — part of the AIGovOps open-source Vendor RFI.">
-<meta property="og:title" content="{title} — AIGovOps Vendor RFI">
+<meta name="description" content="{title} — part of the AiGovOps open-source Vendor RFI.">
+<meta property="og:title" content="{title} — AiGovOps Vendor RFI">
 <meta property="og:type" content="article">
 <meta property="og:url" content="{canonical}">
 <meta property="og:image" content="https://aigovops-foundation.github.io/aigovops-vendor-rfi/assets/og-vendor-rfi.png">

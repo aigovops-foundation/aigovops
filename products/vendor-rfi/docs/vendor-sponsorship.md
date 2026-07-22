@@ -1,6 +1,6 @@
 # Vendor Sponsorship Model
 
-Principle: **sponsor the surface, not the score.** Vendors may support the Foundation's public surface area (labs, events, education, integration work, evidence tooling) but may never buy ranking position, hide gaps, or alter weighting logic. This protects AIGovOps neutrality as a trusted convener.
+Principle: **sponsor the surface, not the score.** Vendors may support the Foundation's public surface area (labs, events, education, integration work, evidence tooling) but may never buy ranking position, hide gaps, or alter weighting logic. This protects AiGovOps neutrality as a trusted convener.
 
 ## Sponsor tiers
 

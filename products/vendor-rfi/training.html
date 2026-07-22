@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>AIGovOps Vendor RFI — Audit Training</title>
+<title>AiGovOps Vendor RFI — Audit Training</title>
 <link rel="canonical" href="https://aigovops-foundation.github.io/aigovops-vendor-rfi/training.html">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="AIGovOps Foundation">
-<meta property="og:title" content="AIGovOps Vendor RFI — Audit Training">
-<meta property="og:description" content="An interactive audit training tool for AI governance vendor selection: learn the AIGovOps stack, take a knowledge check, run a self-audit, and generate a Beacon-style training receipt.">
+<meta property="og:site_name" content="AiGovOps Foundation">
+<meta property="og:title" content="AiGovOps Vendor RFI — Audit Training">
+<meta property="og:description" content="An interactive audit training tool for AI governance vendor selection: learn the AiGovOps stack, take a knowledge check, run a self-audit, and generate a Beacon-style training receipt.">
 <meta property="og:url" content="https://aigovops-foundation.github.io/aigovops-vendor-rfi/training.html">
 <meta property="og:image" content="https://aigovops-foundation.github.io/aigovops-vendor-rfi/assets/og-vendor-rfi.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="AIGovOps Vendor RFI — Audit Training">
-<meta name="twitter:description" content="An interactive audit training tool for AI governance vendor selection: learn the AIGovOps stack, take a knowledge check, run a self-audit, and generate a Beacon-style training receipt.">
+<meta name="twitter:title" content="AiGovOps Vendor RFI — Audit Training">
+<meta name="twitter:description" content="An interactive audit training tool for AI governance vendor selection: learn the AiGovOps stack, take a knowledge check, run a self-audit, and generate a Beacon-style training receipt.">
 <meta name="twitter:image" content="https://aigovops-foundation.github.io/aigovops-vendor-rfi/assets/og-vendor-rfi.png">
-<meta name="description" content="An interactive audit training tool for AI governance vendor selection: learn the AIGovOps stack, take a knowledge check, run a self-audit, and generate a Beacon-style training receipt." />
+<meta name="description" content="An interactive audit training tool for AI governance vendor selection: learn the AiGovOps stack, take a knowledge check, run a self-audit, and generate a Beacon-style training receipt." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -86,7 +86,7 @@ pre{font-family:var(--mono);font-size:12px;white-space:pre-wrap;word-break:break
 <div class="wrap" id="main" role="main">
   <span class="step">Audit training · self-paced</span>
   <h1>Train an AI-governance vendor audit — like engineering.</h1>
-  <p class="lede">A hands-on module for auditors, procurement, and engineering leads: learn the AIGovOps governance stack, test your understanding, run a self-audit against the Foundation's checklist, and generate an unsigned Beacon-style training receipt you can keep as evidence.</p>
+  <p class="lede">A hands-on module for auditors, procurement, and engineering leads: learn the AiGovOps governance stack, test your understanding, run a self-audit against the Foundation's checklist, and generate an unsigned Beacon-style training receipt you can keep as evidence.</p>
   <ul class="objectives" id="objectives"></ul>
 
   <section class="section">
@@ -110,7 +110,7 @@ pre{font-family:var(--mono);font-size:12px;white-space:pre-wrap;word-break:break
 
   <section class="section">
     <span class="step">Lesson 3</span>
-    <h2>Self-audit — AIGovOps Foundation alignment checklist</h2>
+    <h2>Self-audit — AiGovOps Foundation alignment checklist</h2>
     <p class="note">Tick the practices your (or your client's) program already does. This drives your readiness score and the training receipt.</p>
     <div id="checklist"></div>
     <div class="meter"><i id="readyBar"></i></div>
@@ -131,7 +131,7 @@ pre{font-family:var(--mono);font-size:12px;white-space:pre-wrap;word-break:break
 </div>
 <script>
 const OBJECTIVES=[
-  "Name the 7 AIGovOps stack layers and what \"true\" means at each",
+  "Name the 7 AiGovOps stack layers and what \"true\" means at each",
   "Map the reference vendors to the layers they cover",
   "Identify the gaps no single vendor solves (esp. OT/IIoT)",
   "Run a self-audit against the Foundation alignment checklist",
@@ -149,7 +149,7 @@ const LAYERS=[
 ];
 const QUIZ=[
   {q:"Which two-vendor pairing is the compliance control plane (audit, policy library, GRC dashboard)?",o:["Styra + OPA","Credo AI + IBM watsonx.governance","Fiddler AI + NeMo Guardrails","Snyk + Wiz"],a:1,e:"Credo AI's Policy Packs are embedded as Compliance Accelerators inside IBM watsonx.governance — the compliance + dashboard + model-lifecycle layer."},
-  {q:"What declarative language is the AIGovOps reference for policy-as-code?",o:["YAML","Rego (Open Policy Agent)","Python","HCL only"],a:1,e:"Rego is OPA's DSL — the standard for governance-as-code. The GOPAL library encodes EU AI Act / NIST AI RMF as versioned Rego."},
+  {q:"What declarative language is the AiGovOps reference for policy-as-code?",o:["YAML","Rego (Open Policy Agent)","Python","HCL only"],a:1,e:"Rego is OPA's DSL — the standard for governance-as-code. The GOPAL library encodes EU AI Act / NIST AI RMF as versioned Rego."},
   {q:"At which layer does Fiddler AI primarily operate?",o:["Audit & policy library","Runtime guardrails + model & agent observability","CI/CD policy gates","Code & dependency scanning"],a:1,e:"Fiddler intercepts prompts/responses at runtime and gives agentic observability. It needs upstream policy from OPA/Credo."},
   {q:"What does \"true\" mean at the Audit layer?",o:["A PDF compliance report","A dashboard screenshot","Cryptographically signed audit bundles any auditor can re-verify","A signed email approval"],a:2,e:"Beacon-style signed bundles — re-verifiable evidence, not screenshots or claims."},
   {q:"Which gap does NO single vendor in the stack fully solve for a manufacturer?",o:["Policy authoring","Runtime guardrails","OT/IIoT governance (SCADA / DCS / PLC)","Compliance dashboards"],a:2,e:"None of the three have mature SCADA/DCS/historian connectors — OT governance needs custom integration."},

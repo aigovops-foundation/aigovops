@@ -1,17 +1,17 @@
 # aigov-ops-open-source-vendor-rfi-rapp-johnston-june-2026
 
-AIGovOps Foundation open-source Vendor RFI/RFP webapp — evidence-oriented vendor stack composer for Beacon & Umbrella, with auditor value model and neutral vendor sponsorship framework.
+AiGovOps Foundation open-source Vendor RFI/RFP webapp — evidence-oriented vendor stack composer for Beacon & Umbrella, with auditor value model and neutral vendor sponsorship framework.
 
 ## Quick start
 
-**New here? Start with the [audit-training tool](training.html)** — learn the AIGovOps governance stack, take a scored knowledge check, run a self-audit, and export a verifiable receipt.
+**New here? Start with the [audit-training tool](training.html)** — learn the AiGovOps governance stack, take a scored knowledge check, run a self-audit, and export a verifiable receipt.
 
 Open `index.html` (the overview) in a browser, then "Open webapp" to launch the advisor — or open
 `vendor-rfi-advisor.html` directly.
 
 ## What this is
 
-A static, two-page site in the AIGovOps "deep ocean governance" brand (shared with Beacon & Umbrella):
+A static, two-page site in the AiGovOps "deep ocean governance" brand (shared with Beacon & Umbrella):
 
 - **`index.html`** — the overview / landing page: what the RFI gives auditors and vendors, the
   Beacon · Umbrella · Lantern roadmap, and links into the app and docs.
