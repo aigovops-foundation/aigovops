@@ -1,6 +1,30 @@
 {
-  "updated": "2026-07-22T07:47:59Z",
+  "updated": "2026-07-22T19:31:23Z",
   "bob": [
+    {
+      "title": "Is your AI governance robust enough to stop a machine-tailored spear-phishing attack? Problem: The Supply Chain Vulnerability AI h...",
+      "link": "https://www.linkedin.com/posts/bobrapp_is-your-ai-governance-robust-enough-to-stop-activity-7485726513447903232-AbWN",
+      "date": "Wed, 22 Jul 2026 16:04:39 GMT",
+      "summary": "Is your AI governance robust enough to stop a machine-tailored spear-phishing attack? Problem: The Supply Chain Vulnerability AI has weaponized phishing. The litigation in J.L. v. Alphabet (Google Gemini) highlights the security risks of unvetted AI supply chains and data practic",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Joe and team doing good work for good and safe ai",
+      "link": "https://www.linkedin.com/posts/bobrapp_joe-and-team-doing-good-work-for-good-and-activity-7485686803526610946-AVr9",
+      "date": "Wed, 22 Jul 2026 13:26:51 GMT",
+      "summary": "Joe and team doing good work for good and safe ai",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Japan is setting a global benchmark. The 2026 initiative overhauls national legal frameworks, shifting from soft law to structured...",
+      "link": "https://www.linkedin.com/posts/bobrapp_japan-is-setting-a-global-benchmark-the-activity-7485681490505310209-4G61",
+      "date": "Wed, 22 Jul 2026 13:05:45 GMT",
+      "summary": "Japan is setting a global benchmark. The 2026 initiative overhauls national legal frameworks, shifting from soft law to structured AI Governance-as-Code to lead the DX era. 日本の2026年AI法改正は、ソフトローから「コードとしてのガバナンス」へと移行し、DX時代を牽引する国家戦略です。 Ship Good AI 1. Align with G7 Hiroshima Process.",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Digital sovereignty is at risk. Weaponized AI threatens our infrastructure. The EU’s July 2026 Action Plan on AI Risks & Cyber Thr...",
       "link": "https://www.linkedin.com/posts/bobrapp_digital-sovereignty-is-at-risk-weaponized-activity-7485454604063780865-GseK",
@@ -56,33 +80,17 @@
       "summary": "🚀 The AI House Community: Where Governance Leaders Connect The best AI governance insights don't come from PDFs—they come from people. At AiGovOps Foundation, our community spans 17 countries and 10,000+ professionals. From AI House in San Francisco and Seattle to global online m",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "Global AI paths: EU (risk), UK (principles), US (security). Navigating compliance is a maze; our 12 frameworks help. AIガバナンスの三極化：E...",
-      "link": "https://www.linkedin.com/posts/bobrapp_global-ai-paths-eu-risk-uk-principles-activity-7485091546971713536-bQSJ",
-      "date": "Mon, 20 Jul 2026 22:01:31 GMT",
-      "summary": "Global AI paths: EU (risk), UK (principles), US (security). Navigating compliance is a maze; our 12 frameworks help. AIガバナンスの三極化：EU、英国、米国。12の成熟度モデルで、複雑なコンプライアンス対応を。 Source: Connect with Bob Rapp & Ken Johnston!",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: AI agents making autonomous decisions in a \"black box\" creates a massive liability. Without an immutable record, accounta...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-ai-agents-making-autonomous-decisions-activity-7485077225453649921-afGh",
-      "date": "Mon, 20 Jul 2026 21:04:37 GMT",
-      "summary": "Problem: AI agents making autonomous decisions in a \"black box\" creates a massive liability. Without an immutable record, accountability is impossible. Solution: Cryptographic audit trails—leveraging governance-as-code to hash, sign, and lock every decision in real-time. Summary:",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Most AI governance is a \"paper tiger.\" There is a documented 51-point gap between corporate intent and technical execution. Manual...",
-      "link": "https://www.linkedin.com/posts/bobrapp_most-ai-governance-is-a-paper-tiger-there-activity-7485000862222966784-Z_bZ",
-      "date": "Mon, 20 Jul 2026 16:01:10 GMT",
-      "summary": "Most AI governance is a \"paper tiger.\" There is a documented 51-point gap between corporate intent and technical execution. Manual reviews and static PDFs are the \"sandwich-board stretchers\" of the tech world—busy but offering zero structural support. To close this gap, move to P",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "Last week, a frontier model escaped its sandbox and hacked Hugging Face — to cheat on a test. OpenAI just confirmed it: their own models, running an internal cyber benchmark with safety classifiers…",
+      "link": "https://www.linkedin.com/posts/joebraidwood_last-week-a-frontier-model-escaped-its-sandbox-activity-7485674537574084609-qUa3",
+      "date": "Wed, 22 Jul 2026 12:38:07 GMT",
+      "summary": "Last week, a frontier model escaped its sandbox and hacked Hugging Face — to cheat on a test. OpenAI just confirmed it: their own models, running an internal cyber benchmark with safety classifiers deliberately off, spent serious compute finding a zero-day in the one sanctioned w",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "Hosted our first AI Tinkerers Orange County meetup at Centercode’s new office week. Good way to break the place in!\n\nGreat to see so many people experimenting and learning AI. We got to see some live…",
       "link": "https://www.linkedin.com/posts/crader_hosted-our-first-ai-tinkerers-orange-county-activity-7485520623302254592-dSrt",
@@ -152,14 +160,6 @@
       "link": "https://www.linkedin.com/posts/yenanderson_ten-years-ago-the-slide-near-the-end-of-activity-7484963113511903232-dqw2",
       "date": "Mon, 20 Jul 2026 13:31:10 GMT",
       "summary": "Ten years ago, the slide near the end of the pitch said \"and then we add a social layer.\" It meant the founder had no engine yet and hoped a crowd would become one. That rarely worked. The 2026 version is \"and then we add AI.\" Same slide, same hope, a newer noun. I have started a",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "The most important meeting on your calendar this week isn't on your calendar.\n\nIt's the meeting before the meeting.\n\nThe two minutes between when you close your laptop and when you walk into the…",
-      "link": "https://www.linkedin.com/posts/kellyameerbott_the-most-important-meeting-on-your-calendar-activity-7484941200165122049-COPR",
-      "date": "Mon, 20 Jul 2026 12:04:06 GMT",
-      "summary": "The most important meeting on your calendar this week isn't on your calendar. It's the meeting before the meeting. The two minutes between when you close your laptop and when you walk into the room. Because whatever state you bring -- that's the state you'll set. Not the state yo",
       "image": null,
       "author": "Ken Johnston"
     }
