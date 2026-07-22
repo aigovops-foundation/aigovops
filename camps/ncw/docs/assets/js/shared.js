@@ -98,7 +98,7 @@
   const ESTATE = [
     { href: "https://www.aigovops-foundation.com", label: "Foundation" },
     { href: "https://community.aigovops-foundation.com", label: "Community platform" },
-    { href: "https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/", label: "Library" },
+    { href: "https://community.aigovops-foundation.com/library/", label: "Library" },
     { href: "https://aigovops-foundation.github.io/aigovops-beacon/", label: "Beacon" },
     { href: "https://aigovops-foundation.github.io/umbrella-govops/", label: "Umbrella" },
     { href: "https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/", label: "NCW AI Camp", current: true },
