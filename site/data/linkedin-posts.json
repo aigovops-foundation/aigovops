@@ -1,6 +1,38 @@
 {
-  "updated": "2026-07-21T19:32:01Z",
+  "updated": "2026-07-22T07:47:59Z",
   "bob": [
+    {
+      "title": "Digital sovereignty is at risk. Weaponized AI threatens our infrastructure. The EU’s July 2026 Action Plan on AI Risks & Cyber Thr...",
+      "link": "https://www.linkedin.com/posts/bobrapp_digital-sovereignty-is-at-risk-weaponized-activity-7485454604063780865-GseK",
+      "date": "Tue, 21 Jul 2026 22:04:11 GMT",
+      "summary": "Digital sovereignty is at risk. Weaponized AI threatens our infrastructure. The EU’s July 2026 Action Plan on AI Risks & Cyber Threats mandates rigorous testing, moving from policy to operational resilience. La souveraineté numérique est menacée. Le Plan d'action de l'UE (juillet",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Imagine an AI bot in a Facebook group for parents, claiming to have a child. It’s not science fiction—it’s a governance failure. M...",
+      "link": "https://www.linkedin.com/posts/bobrapp_imagine-an-ai-bot-in-a-facebook-group-for-activity-7485438515363753984-3FzK",
+      "date": "Tue, 21 Jul 2026 21:00:15 GMT",
+      "summary": "Imagine an AI bot in a Facebook group for parents, claiming to have a child. It’s not science fiction—it’s a governance failure. Meta’s AI support bot incident illustrates the danger of excessive agency. When we give AI agents broad permissions without \"Least-Privilege\" guardrail",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Good ai and bad ai are relative and while a ban is tempting it understates both the value of ai and the complexity of ai governanc...",
+      "link": "https://www.linkedin.com/posts/bobrapp_good-ai-and-bad-ai-are-relative-and-while-activity-7485394495593820160-jEUD",
+      "date": "Tue, 21 Jul 2026 18:05:20 GMT",
+      "summary": "Good ai and bad ai are relative and while a ban is tempting it understates both the value of ai and the complexity of ai governance",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Well done",
+      "link": "https://www.linkedin.com/posts/bobrapp_well-done-activity-7485371250597429249-0FX_",
+      "date": "Tue, 21 Jul 2026 16:32:58 GMT",
+      "summary": "Well done",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Is your AI agent taking \"Jesus take the wheel\" too literally? As we move through 2026, the OWASP Top 10 for Agentic AI has become...",
       "link": "https://www.linkedin.com/posts/bobrapp_is-your-ai-agent-taking-jesus-take-the-wheel-activity-7485364465111236608-rWVV",
@@ -48,41 +80,49 @@
       "summary": "Most AI governance is a \"paper tiger.\" There is a documented 51-point gap between corporate intent and technical execution. Manual reviews and static PDFs are the \"sandwich-board stretchers\" of the tech world—busy but offering zero structural support. To close this gap, move to P",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "EU Tech Sovereignty is rising. From the Chips Act to Qwant, Europe is leading. We're building responsible AI. La souveraineté tech...",
-      "link": "https://www.linkedin.com/posts/bobrapp_eu-tech-sovereignty-is-rising-from-the-chips-activity-7484956588420767745-CAOO",
-      "date": "Mon, 20 Jul 2026 13:05:14 GMT",
-      "summary": "EU Tech Sovereignty is rising. From the Chips Act to Qwant, Europe is leading. We're building responsible AI. La souveraineté tech en UE s’impose. Du Chips Act à Qwant, l'Europe mène. Nous bâtissons une IA responsable. Connect with Bob Rapp & Ken Johnston.",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: AI Ethics Boards are often toothless suggestion boxes lacking the authority to stop high-risk deployments. Solution: Buil...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-ai-ethics-boards-are-often-toothless-activity-7484955993714442240-pm1V",
-      "date": "Mon, 20 Jul 2026 13:02:53 GMT",
-      "summary": "Problem: AI Ethics Boards are often toothless suggestion boxes lacking the authority to stop high-risk deployments. Solution: Build structural accountability with veto power and independent oversight. Ship Good AI: - Grant board veto power - Use independent members - Direct CEO e",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "🚨 EU AI Act 2026: Non-consensual AI images & CSAM are banned. Stay compliant. 🚨 Loi IA UE 2026 : Images IA non consenties & CSAM i...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-activity-7484729592503644160-1ATS",
-      "date": "Sun, 19 Jul 2026 22:03:14 GMT",
-      "summary": "🚨 EU AI Act 2026: Non-consensual AI images & CSAM are banned. Stay compliant. 🚨 Loi IA UE 2026 : Images IA non consenties & CSAM interdits. Soyez conformes. Ref: Connect: Bob & Ken. 🐾 #AIGovOps",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Black-box AI is a liability. Without understanding decisions, you’re flying blind. Problem: Opaque models cause bias and regulator...",
-      "link": "https://www.linkedin.com/posts/bobrapp_modelriskmanagement-blackbox-aitransparency-activity-7484729590607843328-K8hm",
-      "date": "Sun, 19 Jul 2026 22:03:14 GMT",
-      "summary": "Black-box AI is a liability. Without understanding decisions, you’re flying blind. Problem: Opaque models cause bias and regulatory failure. Solutions: Model Risk Management (MRM) controls risk throughout the AI lifecycle. Summary: Build transparency into your stack with proven M",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "Hosted our first AI Tinkerers Orange County meetup at Centercode’s new office week. Good way to break the place in!\n\nGreat to see so many people experimenting and learning AI. We got to see some live…",
+      "link": "https://www.linkedin.com/posts/crader_hosted-our-first-ai-tinkerers-orange-county-activity-7485520623302254592-dSrt",
+      "date": "Wed, 22 Jul 2026 02:26:31 GMT",
+      "summary": "Hosted our first AI Tinkerers Orange County meetup at Centercode’s new office week. Good way to break the place in! Great to see so many people experimenting and learning AI. We got to see some live demos and have real conversations about people in the Orange County tech scene ar",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Seattle Tech Week is officially here on Monday, and Thinkspace is bringing you a heavy-hitting lineup of founder session",
+      "link": "https://www.linkedin.com/posts/thinkspace_seattletechweek-seattletech-startups-activity-7485487533305356288-bzmJ",
+      "date": "Wed, 22 Jul 2026 00:15:02 GMT",
+      "summary": "Seattle Tech Week is officially here on Monday, and Thinkspace is bringing you a heavy-hitting lineup of founder sessions, teardowns, and VC panels. 🚀 If you’re looking to scale your startup, build repeatable revenue motions, or level up your engineering & AI operations, here is",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Imagine an AI bot in a Facebook group for parents, claiming to have a child. It’s not science fiction—it’s a governance failure. Meta’s AI support bot incident illustrates the danger of excessive…",
+      "link": "https://www.linkedin.com/posts/bobrapp_imagine-an-ai-bot-in-a-facebook-group-for-activity-7485438515363753984-3FzK",
+      "date": "Tue, 21 Jul 2026 21:00:15 GMT",
+      "summary": "Imagine an AI bot in a Facebook group for parents, claiming to have a child. It’s not science fiction—it’s a governance failure. Meta’s AI support bot incident illustrates the danger of excessive agency. When we give AI agents broad permissions without \"Least-Privilege\" guardrail",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Survey Sunday: is Slate Auto’s affordable electric truck going to make it?",
+      "link": "https://www.linkedin.com/posts/ted-cannis_survey-sunday-is-slate-autos-affordable-activity-7485412728807837696-0ntH",
+      "date": "Tue, 21 Jul 2026 19:17:47 GMT",
+      "summary": "Well, I have a view…",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "#robotaxis",
+      "link": "https://www.linkedin.com/posts/envorso_robotaxis-activity-7485351459203485696-JCeh",
+      "date": "Tue, 21 Jul 2026 15:14:19 GMT",
+      "summary": "",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "We are officially less than one week away from the start of Seattle Tech Week, and, in my opinion, a \"Top 5 Event\" for t",
       "link": "https://www.linkedin.com/posts/jgproduct_seattletechweek2026-seattletechweek-founder-activity-7485099391645536256-xOWu",
@@ -120,46 +160,6 @@
       "link": "https://www.linkedin.com/posts/kellyameerbott_the-most-important-meeting-on-your-calendar-activity-7484941200165122049-COPR",
       "date": "Mon, 20 Jul 2026 12:04:06 GMT",
       "summary": "The most important meeting on your calendar this week isn't on your calendar. It's the meeting before the meeting. The two minutes between when you close your laptop and when you walk into the room. Because whatever state you bring -- that's the state you'll set. Not the state yo",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "While the rest of the world was watching the World Cup today, I got to watch the USA national finals of the Divergent Hackathon at SURF Incubator. Divergent is a student-led nonprofit running…",
-      "link": "https://www.linkedin.com/posts/sally-revell_while-the-rest-of-the-world-was-watching-activity-7484855350957875200-bBZR",
-      "date": "Mon, 20 Jul 2026 06:22:58 GMT",
-      "summary": "While the rest of the world was watching the World Cup today, I got to watch the USA national finals of the Divergent Hackathon at SURF Incubator. Divergent is a student-led nonprofit running hackathons for high schoolers (link in comments). These kids (all under 18) traveled fro",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "The fastest way to lose your peace is trying to control people who were never yours to control.\n\nIt's exhausting.\n\nTrying to change someone's opinion.\nTrying to make people understand your… | Riddhi Tahalramani",
-      "link": "https://www.linkedin.com/posts/riddhisaboo_the-fastest-way-to-lose-your-peace-is-trying-activity-7484833411531096064-Sanf",
-      "date": "Mon, 20 Jul 2026 04:55:47 GMT",
-      "summary": "The fastest way to lose your peace is trying to control people who were never yours to control. It's exhausting. Trying to change someone's opinion. Trying to make people understand your intentions. Trying to get everyone to behave the way you expect. The harder we hold on... The",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "🚨 EU AI Act 2026: Non-consensual AI images & CSAM are banned.",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-activity-7484729592503644160-1ATS",
-      "date": "Sun, 19 Jul 2026 22:03:14 GMT",
-      "summary": "🚨 EU AI Act 2026: Non-consensual AI images & CSAM are banned. Stay compliant. 🚨 Loi IA UE 2026 : Images IA non consenties & CSAM interdits. Soyez conformes. Ref: Connect: Bob & Ken. 🐾 #AIGovOps",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Black-box AI is a liability.",
-      "link": "https://www.linkedin.com/posts/bobrapp_modelriskmanagement-blackbox-aitransparency-activity-7484729590607843328-K8hm",
-      "date": "Sun, 19 Jul 2026 22:03:14 GMT",
-      "summary": "Black-box AI is a liability. Without understanding decisions, you’re flying blind. Problem: Opaque models cause bias and regulatory failure. Solutions: Model Risk Management (MRM) controls risk throughout the AI lifecycle. Summary: Build transparency into your stack with proven M",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "A Toronto teacher hid a secret word in white text inside a Romeo and Juliet assignment.",
-      "link": "https://www.linkedin.com/posts/rkjohnston_fridayfailfest-promptinjection-aigovernance-activity-7484638217518915584-Gf21",
-      "date": "Sun, 19 Jul 2026 16:00:09 GMT",
-      "summary": "A Toronto teacher hid a secret word in white text inside a Romeo and Juliet assignment. Made a TikTok about it that went viral. Students who actually read it: clean essays. Students who pasted it into ChatGPT: essays containing the word. Every time. No AI detector needed. The out",
       "image": null,
       "author": "Ken Johnston"
     }
