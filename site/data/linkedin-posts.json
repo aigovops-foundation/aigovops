@@ -1,6 +1,14 @@
 {
-  "updated": "2026-07-23T07:48:37Z",
+  "updated": "2026-07-23T19:31:14Z",
   "bob": [
+    {
+      "title": "Ethics is not an optional plugin for your AI. When we treat governance as a bolt-on at the end of development, we invite catastrop...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ethics-is-not-an-optional-plugin-for-your-activity-7486089011611140096-_-C9",
+      "date": "Thu, 23 Jul 2026 16:05:05 GMT",
+      "summary": "Ethics is not an optional plugin for your AI. When we treat governance as a bolt-on at the end of development, we invite catastrophic failure. Responsible AI by Design means embedding ethics into every line of code from Day 0. PROBLEM: The legacy Move Fast and Break Things cultur",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Is your AI strategy built on solid ground? Many teams deploy AI but lack a metric for safety. Post 6 of 16 for the 'Level Up Your...",
       "link": "https://www.linkedin.com/posts/bobrapp_is-your-ai-strategy-built-on-solid-ground-activity-7485801196964978688-ZtVS",
@@ -62,14 +70,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_is-your-ai-agent-taking-jesus-take-the-wheel-activity-7485364465111236608-rWVV",
       "date": "Tue, 21 Jul 2026 16:06:00 GMT",
       "summary": "Is your AI agent taking \"Jesus take the wheel\" too literally? As we move through 2026, the OWASP Top 10 for Agentic AI has become the mandatory baseline for security governance. Problem: Autonomous agents that execute code and access APIs create \"recursive loops\" of risk and pote",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Your AI assistant might be a double agent. Pentera Labs proved that a compromised inbox can poison Claude Desktop configs, creatin...",
-      "link": "https://www.linkedin.com/posts/bobrapp_your-ai-assistant-might-be-a-double-agent-activity-7485318948054454273-dstd",
-      "date": "Tue, 21 Jul 2026 13:05:08 GMT",
-      "summary": "Your AI assistant might be a double agent. Pentera Labs proved that a compromised inbox can poison Claude Desktop configs, creating a cross-device reverse shell. This is a new attack vector where productivity tools become Command-and-Control channels. Problem: AI apps are privile",
       "image": null,
       "author": "Bob Rapp"
     }
