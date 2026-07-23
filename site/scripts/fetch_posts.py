@@ -185,6 +185,34 @@ def _fresh_only(posts, max_age_days=None, max_items=None):
     return keep[:max_items]
 
 
+def _title_is_weak(title):
+    """A title is 'weak' if, after removing hashtags, @mentions and punctuation,
+    fewer than 4 real words remain — a bare '#robotaxis' or 'Well done'. This is the
+    EXACT rule scripts/test-e2e-v3.sh enforces, kept in lock-step here so the data we
+    publish can never fail the site's own live E2E."""
+    core = re.sub(r'[#@]\S+', '', title or '')
+    core = re.sub(r'[^\w\s]', '', core).strip()
+    return len(core.split()) < 4
+
+
+def _quality_only(posts):
+    """Drop contentless feed items: a post whose title is weak AND cannot be rescued
+    from its summary. We try the summary rescue first (clean_title), and only drop when
+    the result is still weak — a post with a real body keeps its rescued headline; a bare
+    hashtag with an empty summary is dropped rather than published as junk."""
+    keep = []
+    for p in posts or []:
+        title = (p.get('title') or '').strip()
+        if _title_is_weak(title):
+            rescued = clean_title(title, p.get('summary', ''))
+            if _title_is_weak(rescued):
+                print(f"  dropped weak-title post: {title[:50]!r}")
+                continue
+            p = {**p, 'title': rescued}
+        keep.append(p)
+    return keep
+
+
 def fetch_feed(url, author_name, max_items=MAX_POSTS):
     """Fetch an rss.app (or any RSS 2.0 / Atom) feed, return list of post dicts."""
     if not url:
@@ -332,6 +360,10 @@ def main():
     print("Running NLP quality pass...")
     bob_posts = haiku_enrich_posts(bob_posts, 'Bob Rapp')
     ken_posts = haiku_enrich_posts(ken_posts, 'Ken Johnston')
+
+    # Drop contentless items (bare hashtags, one-word posts) BEFORE the top-N cut, so a
+    # junk post never crowds a real one out of the freshness window.
+    bob_posts, ken_posts = _quality_only(bob_posts), _quality_only(ken_posts)
 
     # The freshness rule, applied per person: at most MAX_POSTS, none older than
     # MAX_AGE_DAYS. Fallback data from a dead feed is filtered by the SAME rule, so a
