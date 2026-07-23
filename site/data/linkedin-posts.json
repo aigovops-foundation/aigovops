@@ -1,6 +1,14 @@
 {
-  "updated": "2026-07-22T19:31:23Z",
+  "updated": "2026-07-23T07:48:37Z",
   "bob": [
+    {
+      "title": "Is your AI strategy built on solid ground? Many teams deploy AI but lack a metric for safety. Post 6 of 16 for the 'Level Up Your...",
+      "link": "https://www.linkedin.com/posts/bobrapp_is-your-ai-strategy-built-on-solid-ground-activity-7485801196964978688-ZtVS",
+      "date": "Wed, 22 Jul 2026 21:01:25 GMT",
+      "summary": "Is your AI strategy built on solid ground? Many teams deploy AI but lack a metric for safety. Post 6 of 16 for the 'Level Up Your AI Governance' campaign. Problem: Without a Maturity Model, AI governance is reactive. Innovation outpaces safety, risking regulatory non-compliance a",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Is your AI governance robust enough to stop a machine-tailored spear-phishing attack? Problem: The Supply Chain Vulnerability AI h...",
       "link": "https://www.linkedin.com/posts/bobrapp_is-your-ai-governance-robust-enough-to-stop-activity-7485726513447903232-AbWN",
@@ -64,17 +72,33 @@
       "summary": "Your AI assistant might be a double agent. Pentera Labs proved that a compromised inbox can poison Claude Desktop configs, creating a cross-device reverse shell. This is a new attack vector where productivity tools become Command-and-Control channels. Problem: AI apps are privile",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "🚀 The AI House Community: Where Governance Leaders Connect The best AI governance insights don't come from PDFs—they come from peo...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aihouse-aigovernance-community-activity-7485091642547351552-rmVU",
-      "date": "Mon, 20 Jul 2026 22:01:54 GMT",
-      "summary": "🚀 The AI House Community: Where Governance Leaders Connect The best AI governance insights don't come from PDFs—they come from people. At AiGovOps Foundation, our community spans 17 countries and 10,000+ professionals. From AI House in San Francisco and Seattle to global online m",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "In Joe Braidwood's post, this was the killer line for me, \"and you make every consequential act provable, so \"what happe",
+      "link": "https://www.linkedin.com/posts/rkjohnston_aigovops-activity-7485809286695272448-jwdV",
+      "date": "Wed, 22 Jul 2026 21:33:34 GMT",
+      "summary": "In Joe Braidwood's post, this was the killer line for me, \"and you make every consequential act provable, so \"what happened?\" is a lookup, not a week of forensics.\" I talk all the time and I ask the audience, has your web service every had an outage or at least a service you rely",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "SDAIS meetups are always worth attending!",
+      "link": "https://www.linkedin.com/posts/rkjohnston_sdais-meetups-are-always-worth-attending-activity-7485796001543258112-zNnC",
+      "date": "Wed, 22 Jul 2026 20:40:46 GMT",
+      "summary": "SDAIS meetups are always worth attending!",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Matt Damon, Ben Affleck, and Matthew McConaughey decide to make a movie together.\n\nAffleck: \"I'll produce it.\"\n\nDamon: \"I'll direct it.\"\n\nMcConaughey: \"I'll write, I'll write, I'll write.\" (Say that… | Sandy Carter, Doctor of Science (hon)",
+      "link": "https://www.linkedin.com/posts/sandyacarter_matt-damon-ben-affleck-and-matthew-mcconaughey-activity-7485693907339771904-H772",
+      "date": "Wed, 22 Jul 2026 13:55:05 GMT",
+      "summary": "Matt Damon, Ben Affleck, and Matthew McConaughey decide to make a movie together. Affleck: \"I'll produce it.\" Damon: \"I'll direct it.\" McConaughey: \"I'll write, I'll write, I'll write.\" (Say that last one out loud. I'll wait.) Here's why this old joke is secretly about AI. The wo",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "Last week, a frontier model escaped its sandbox and hacked Hugging Face — to cheat on a test. OpenAI just confirmed it: their own models, running an internal cyber benchmark with safety classifiers…",
       "link": "https://www.linkedin.com/posts/joebraidwood_last-week-a-frontier-model-escaped-its-sandbox-activity-7485674537574084609-qUa3",
@@ -116,26 +140,10 @@
       "author": "Ken Johnston"
     },
     {
-      "title": "We are officially less than one week away from the start of Seattle Tech Week, and, in my opinion, a \"Top 5 Event\" for t",
-      "link": "https://www.linkedin.com/posts/jgproduct_seattletechweek2026-seattletechweek-founder-activity-7485099391645536256-xOWu",
-      "date": "Mon, 20 Jul 2026 22:32:41 GMT",
-      "summary": "We are officially less than one week away from the start of Seattle Tech Week, and, in my opinion, a \"Top 5 Event\" for the week is the \"Founder Investor Day Party\"! To kick off the week and the first morning, TF Labs and Niftmint will have live DJs who happen to be amazing Founde",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Last week we announced that HubSpot acquired Warmly. So today, I'm stepping down as CEO of Warmly. \n\nI really have to let that sink in.\n\nNo longer a startup founder & CEO?\n\nBeing a startup founder &… | maximus greenwald",
-      "link": "https://www.linkedin.com/posts/max-greenwald_last-week-we-announced-that-hubspot-acquired-activity-7484981710422503425-sx6n",
-      "date": "Mon, 20 Jul 2026 14:45:04 GMT",
-      "summary": "Last week we announced that HubSpot acquired Warmly. So today, I'm stepping down as CEO of Warmly. I really have to let that sink in. No longer a startup founder & CEO? Being a startup founder & CEO has been my identity for nearly my entire professional career. Being a startup fo",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Ten years ago, the slide near the end of the pitch said \"and then we add a social layer.\" It meant the founder had no engine yet and hoped a crowd would become one. That rarely worked.\n\nThe 2026…",
-      "link": "https://www.linkedin.com/posts/yenanderson_ten-years-ago-the-slide-near-the-end-of-activity-7484963113511903232-dqw2",
-      "date": "Mon, 20 Jul 2026 13:31:10 GMT",
-      "summary": "Ten years ago, the slide near the end of the pitch said \"and then we add a social layer.\" It meant the founder had no engine yet and hoped a crowd would become one. That rarely worked. The 2026 version is \"and then we add AI.\" Same slide, same hope, a newer noun. I have started a",
+      "title": "#seattledataai #aiagents #artificialintelligence #generativeai #salesforce #aws #aiengineering #enterpriseai #techcommunity | Seattle Data AI & Security",
+      "link": "https://www.linkedin.com/posts/seattle-data-ai-and-security_seattledataai-aiagents-artificialintelligence-activity-7485355472397500417-cCz0",
+      "date": "Tue, 21 Jul 2026 15:30:16 GMT",
+      "summary": "𝗔𝗜 𝗔𝗴𝗲𝗻𝘁𝘀 𝗶𝗻 𝘁𝗵𝗲 𝗪𝗶𝗹𝗱: 𝗕𝘂𝗶𝗹𝗱𝗶𝗻𝗴, 𝗦𝗰𝗮𝗹𝗶𝗻𝗴 & 𝗗𝗲𝗽𝗹𝗼𝘆𝗶𝗻𝗴 𝗶𝗻 𝗣𝗿𝗼𝗱𝘂𝗰𝘁𝗶𝗼𝗻 Move beyond AI prototypes and discover what it takes to build, deploy, and scale production-ready AI systems. 𝗔𝘂𝗴𝘂𝘀𝘁 𝟭𝟮 | 𝟰:3𝟬 𝗣𝗠 – 𝟴:𝟬𝟬 𝗣𝗠 | 𝗕𝗲𝗹𝗹𝗲𝘃𝘂𝗲 𝗖𝗶𝘁𝘆 𝗛𝗮𝗹𝗹. Seattle Data AI & Security is excited to welcome te",
       "image": null,
       "author": "Ken Johnston"
     }
