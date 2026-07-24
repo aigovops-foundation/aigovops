@@ -44,11 +44,11 @@
       ["System map", COM + "/system-map.html"]] }
   ];
 
-  var MARK = '<svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#0c1430"/><circle cx="16" cy="16" r="15" fill="none" stroke="#1d9e75" stroke-width="1.4"/><path d="M11 21 L16 9 L21 21 Z" fill="#0f6e56"/><circle cx="22" cy="9" r="2.4" fill="#5dcaa5"/></svg>';
+  var MARK = '<svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#2B2B28"/><circle cx="16" cy="16" r="15" fill="none" stroke="#1d9e75" stroke-width="1.4"/><path d="M11 21 L16 9 L21 21 Z" fill="#0f6e56"/><circle cx="22" cy="9" r="2.4" fill="#5dcaa5"/></svg>';
 
   // One palette, scoped to the widget — Jeeves looks identical on every site (no host tokens inherited).
   var css = ''
-    + ':root{--jv-teal:#0f6e56;--jv-teal-d:#0b5743;--jv-navy:#0c1430;--jv-mint:#1d9e75;'
+    + ':root{--jv-teal:#0f6e56;--jv-teal-d:#0b5743;--jv-navy:#2B2B28;/* garden-charcoal — navy retired estate-wide */--jv-mint:#1d9e75;'
     + '--jv-ink:#1a3046;--jv-line:#e4ebe8;--jv-mut:#5b655e;--jv-wash:#f1f6f4}'
     + '.jv-btn{position:fixed;right:20px;bottom:20px;z-index:2147483000;display:flex;align-items:center;gap:8px;'
     + 'background:var(--jv-navy);color:#fff;border:none;border-radius:30px;padding:11px 16px 11px 12px;min-height:46px;cursor:pointer;opacity:.94;'
