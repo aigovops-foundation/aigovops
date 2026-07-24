@@ -53,7 +53,7 @@
     + '.jv-btn{position:fixed;right:20px;bottom:20px;z-index:2147483000;display:flex;align-items:center;gap:8px;'
     + 'background:var(--jv-navy);color:#fff;border:none;border-radius:30px;padding:11px 16px 11px 12px;min-height:46px;cursor:pointer;opacity:.94;'
     + 'font:600 13.5px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;box-shadow:0 5px 18px rgba(8,20,15,.22);transition:opacity .15s,transform .15s}'
-    + '.jv-btn:hover{opacity:1;transform:translateY(-1px)} .jv-btn .jv-play{color:var(--jv-mint);font-size:12px}'
+    + '.jv-btn:hover{opacity:1;transform:translateY(-1px)} .jv-btn .jv-play{color:#5dcaa5;font-size:12px}'
     // quarter-screen panel, bottom-right, as a flex column
     + '.jv-panel{position:fixed;right:20px;bottom:78px;z-index:2147483000;width:clamp(340px,34vw,460px);height:clamp(440px,58vh,620px);'
     + 'max-width:calc(100vw - 40px);max-height:calc(100vh - 96px);background:#fff;border-radius:16px;display:flex;flex-direction:column;'
@@ -65,7 +65,7 @@
     + '.jv-x{margin-left:auto;background:none;border:none;color:#9fc3b6;font-size:22px;cursor:pointer;line-height:1;min-width:44px;min-height:44px;display:grid;place-items:center}'
     + '.jv-tabs{display:flex;border-bottom:1px solid var(--jv-line);flex:none}'
     + '.jv-tab{flex:1;border:none;background:none;padding:11px;min-height:44px;font:600 13px inherit;color:#5e6f69;cursor:pointer;border-bottom:2px solid transparent}'
-    + '.jv-tab.on{color:var(--jv-teal);border-bottom-color:var(--jv-teal)} .jv-tab .jv-play{color:#06875e}'  // WCAG AA: mint (#1d9e75) is 3.39:1 on the white panel; #06875e passes 4.5:1 (launcher keeps mint — it sits on navy, 4.9:1)
+    + '.jv-tab.on{color:var(--jv-teal);border-bottom-color:var(--jv-teal)} .jv-tab .jv-play{color:#06875e}'  // WCAG AA: mint (#1d9e75) is 3.39:1 on the white panel; #06875e passes 4.6:1 on white. Launcher glyph is #5dcaa5 (7:1 on the garden-charcoal button; was mint on navy)
     + '.jv-body{flex:1;min-height:0;position:relative;display:flex}'
     + '.jv-view{display:none;width:100%;overflow:auto;padding:15px 16px}'
     + '.jv-view.on{display:block}'
