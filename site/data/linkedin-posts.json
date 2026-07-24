@@ -1,6 +1,22 @@
 {
-  "updated": "2026-07-23T19:31:14Z",
+  "updated": "2026-07-24T07:47:44Z",
   "bob": [
+    {
+      "title": "Canada leads in digital sovereignty with a dedicated AI Minister and centralized regulator. Problem: Overlapping rules create comp...",
+      "link": "https://www.linkedin.com/posts/bobrapp_canada-leads-in-digital-sovereignty-with-activity-7486179155995402241-PxUw",
+      "date": "Thu, 23 Jul 2026 22:03:17 GMT",
+      "summary": "Canada leads in digital sovereignty with a dedicated AI Minister and centralized regulator. Problem: Overlapping rules create compliance gaps. Solution: A unified Ministry provides clear oversight. Summary: Centralization secures trust and competitiveness. कनाडा एक समर्पित AI मंत",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI shouldn't be a 'black box' when lives are on the line. (医療現場のAIは、命に関わる際に『ブラックボックス』であってはなりません。) Problem: In clinical settings, a...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-shouldnt-be-a-black-box-when-lives-activity-7486163929035935744-ZyP7",
+      "date": "Thu, 23 Jul 2026 21:02:47 GMT",
+      "summary": "AI shouldn't be a 'black box' when lives are on the line. (医療現場のAIは、命に関わる際に『ブラックボックス』であってはなりません。) Problem: In clinical settings, automation bias and model drift lead to misdiagnosis. (問題：臨床現場では、自動化バイアスやモデルのドリフトが誤診を招く恐れがあります。) Solutions: Continuous monitoring for drift and 'Human-",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Ethics is not an optional plugin for your AI. When we treat governance as a bolt-on at the end of development, we invite catastrop...",
       "link": "https://www.linkedin.com/posts/bobrapp_ethics-is-not-an-optional-plugin-for-your-activity-7486089011611140096-_-C9",
@@ -64,17 +80,25 @@
       "summary": "Good ai and bad ai are relative and while a ban is tempting it understates both the value of ai and the complexity of ai governance",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "Is your AI agent taking \"Jesus take the wheel\" too literally? As we move through 2026, the OWASP Top 10 for Agentic AI has become...",
-      "link": "https://www.linkedin.com/posts/bobrapp_is-your-ai-agent-taking-jesus-take-the-wheel-activity-7485364465111236608-rWVV",
-      "date": "Tue, 21 Jul 2026 16:06:00 GMT",
-      "summary": "Is your AI agent taking \"Jesus take the wheel\" too literally? As we move through 2026, the OWASP Top 10 for Agentic AI has become the mandatory baseline for security governance. Problem: Autonomous agents that execute code and access APIs create \"recursive loops\" of risk and pote",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "Three inspiring days at CDOIQ.\n\nOn my way to Cape Cod for a few days to recharge, I'm reflecting on the conversations that will stay with me.\n\nA few themes kept surfacing:\n\n• Leadership, more than…",
+      "link": "https://www.linkedin.com/posts/doraboussias_three-inspiring-days-at-cdoiq-on-my-way-activity-7486160027888726018-7MzS",
+      "date": "Thu, 23 Jul 2026 20:47:17 GMT",
+      "summary": "Three inspiring days at CDOIQ. On my way to Cape Cod for a few days to recharge, I'm reflecting on the conversations that will stay with me. A few themes kept surfacing: • Leadership, more than technology, determines whether organizations build trust and create value with data an",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "The highlight of #TrustCon is undoubtedly the people.",
+      "link": "https://www.linkedin.com/posts/katerossinseattle_trustcon-activity-7485812304400494593-hPRd",
+      "date": "Wed, 22 Jul 2026 21:45:33 GMT",
+      "summary": "The highlight of #TrustCon is undoubtedly the people. It was wonderful to reconnect with old friends, make new ones, and cherish the bonds with forever friends like this wonderful human, the inimitable Liz T.",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "In Joe Braidwood's post, this was the killer line for me, \"and you make every consequential act provable, so \"what happe",
       "link": "https://www.linkedin.com/posts/rkjohnston_aigovops-activity-7485809286695272448-jwdV",
@@ -88,6 +112,14 @@
       "link": "https://www.linkedin.com/posts/rkjohnston_sdais-meetups-are-always-worth-attending-activity-7485796001543258112-zNnC",
       "date": "Wed, 22 Jul 2026 20:40:46 GMT",
       "summary": "SDAIS meetups are always worth attending!",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Can We Trust the Judge?",
+      "link": "https://www.linkedin.com/posts/shanu-sushmita-3b49129_can-we-trust-the-judge-activity-7485742338057740288-phnl",
+      "date": "Wed, 22 Jul 2026 17:07:32 GMT",
+      "summary": "Call for Papers: JUDGe NeurIPS 2026 — “Can We Trust the Judge?” A full-day workshop at NeurIPS 2026 on the reliability and validity of LLM-based evaluators. As LLM judges are increasingly used for training, safety evaluation, and downstream decision-making, an important question",
       "image": null,
       "author": "Ken Johnston"
     },
@@ -128,22 +160,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_imagine-an-ai-bot-in-a-facebook-group-for-activity-7485438515363753984-3FzK",
       "date": "Tue, 21 Jul 2026 21:00:15 GMT",
       "summary": "Imagine an AI bot in a Facebook group for parents, claiming to have a child. It’s not science fiction—it’s a governance failure. Meta’s AI support bot incident illustrates the danger of excessive agency. When we give AI agents broad permissions without \"Least-Privilege\" guardrail",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Survey Sunday: is Slate Auto’s affordable electric truck going to make it?",
-      "link": "https://www.linkedin.com/posts/ted-cannis_survey-sunday-is-slate-autos-affordable-activity-7485412728807837696-0ntH",
-      "date": "Tue, 21 Jul 2026 19:17:47 GMT",
-      "summary": "Well, I have a view…",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "#seattledataai #aiagents #artificialintelligence #generativeai #salesforce #aws #aiengineering #enterpriseai #techcommunity | Seattle Data AI & Security",
-      "link": "https://www.linkedin.com/posts/seattle-data-ai-and-security_seattledataai-aiagents-artificialintelligence-activity-7485355472397500417-cCz0",
-      "date": "Tue, 21 Jul 2026 15:30:16 GMT",
-      "summary": "𝗔𝗜 𝗔𝗴𝗲𝗻𝘁𝘀 𝗶𝗻 𝘁𝗵𝗲 𝗪𝗶𝗹𝗱: 𝗕𝘂𝗶𝗹𝗱𝗶𝗻𝗴, 𝗦𝗰𝗮𝗹𝗶𝗻𝗴 & 𝗗𝗲𝗽𝗹𝗼𝘆𝗶𝗻𝗴 𝗶𝗻 𝗣𝗿𝗼𝗱𝘂𝗰𝘁𝗶𝗼𝗻 Move beyond AI prototypes and discover what it takes to build, deploy, and scale production-ready AI systems. 𝗔𝘂𝗴𝘂𝘀𝘁 𝟭𝟮 | 𝟰:3𝟬 𝗣𝗠 – 𝟴:𝟬𝟬 𝗣𝗠 | 𝗕𝗲𝗹𝗹𝗲𝘃𝘂𝗲 𝗖𝗶𝘁𝘆 𝗛𝗮𝗹𝗹. Seattle Data AI & Security is excited to welcome te",
       "image": null,
       "author": "Ken Johnston"
     }
