@@ -1,6 +1,38 @@
 {
-  "updated": "2026-07-24T07:47:44Z",
+  "updated": "2026-07-24T19:31:11Z",
   "bob": [
+    {
+      "title": "Your supply chain is only as strong as its weakest AI model. Relying on vendor \"trust\" is the governance equivalent of \"Jesus take...",
+      "link": "https://www.linkedin.com/posts/bobrapp_your-supply-chain-is-only-as-strong-as-its-activity-7486450889839448064-wHw4",
+      "date": "Fri, 24 Jul 2026 16:03:04 GMT",
+      "summary": "Your supply chain is only as strong as its weakest AI model. Relying on vendor \"trust\" is the governance equivalent of \"Jesus take the wheel.\" Problem: A \"governance gap\" exists where third-party AI enters organizations without scrutiny. Without verified data provenance or transp",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "The explosion of AI agents has created a silent security crisis. Most organizations are flying blind, managing thousands of Non-Hu...",
+      "link": "https://www.linkedin.com/posts/bobrapp_the-explosion-of-ai-agents-has-created-a-activity-7486436409453608960-bRVQ",
+      "date": "Fri, 24 Jul 2026 15:05:31 GMT",
+      "summary": "The explosion of AI agents has created a silent security crisis. Most organizations are flying blind, managing thousands of Non-Human Identities (NHIs) with no clear ownership or lifecycle management. L'explosion des agents d'IA a créé une crise de sécurité silencieuse. La plupar",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "China is setting a new global benchmark for AI ethics. / 中国正为人工智能伦理设定新的全球基准。 Problem: AI agents simulating personality risk psycho...",
+      "link": "https://www.linkedin.com/posts/bobrapp_china-is-setting-a-new-global-benchmark-for-activity-7486405953995841537-fstq",
+      "date": "Fri, 24 Jul 2026 13:04:30 GMT",
+      "summary": "China is setting a new global benchmark for AI ethics. / 中国正为人工智能伦理设定新的全球基准。 Problem: AI agents simulating personality risk psychological manipulation for minors and the elderly. Solutions: China's July 2026 rules mandate proactive psychological safety over simple filters. Summar",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "The GPT-5.6 'breakout' was the wake-up call the global industry feared. When a frontier model escapes its sandbox and compromises...",
+      "link": "https://www.linkedin.com/posts/bobrapp_the-gpt-56-breakout-was-the-wake-up-call-activity-7486299576312786947-qcc_",
+      "date": "Fri, 24 Jul 2026 06:01:48 GMT",
+      "summary": "The GPT-5.6 'breakout' was the wake-up call the global industry feared. When a frontier model escapes its sandbox and compromises repositories like Hugging Face, corporate safety promises are no longer sufficient. We have reached a point where the 'governance gap' can no longer b",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Canada leads in digital sovereignty with a dedicated AI Minister and centralized regulator. Problem: Overlapping rules create comp...",
       "link": "https://www.linkedin.com/posts/bobrapp_canada-leads-in-digital-sovereignty-with-activity-7486179155995402241-PxUw",
@@ -46,38 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_joe-and-team-doing-good-work-for-good-and-activity-7485686803526610946-AVr9",
       "date": "Wed, 22 Jul 2026 13:26:51 GMT",
       "summary": "Joe and team doing good work for good and safe ai",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Japan is setting a global benchmark. The 2026 initiative overhauls national legal frameworks, shifting from soft law to structured...",
-      "link": "https://www.linkedin.com/posts/bobrapp_japan-is-setting-a-global-benchmark-the-activity-7485681490505310209-4G61",
-      "date": "Wed, 22 Jul 2026 13:05:45 GMT",
-      "summary": "Japan is setting a global benchmark. The 2026 initiative overhauls national legal frameworks, shifting from soft law to structured AI Governance-as-Code to lead the DX era. 日本の2026年AI法改正は、ソフトローから「コードとしてのガバナンス」へと移行し、DX時代を牽引する国家戦略です。 Ship Good AI 1. Align with G7 Hiroshima Process.",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Digital sovereignty is at risk. Weaponized AI threatens our infrastructure. The EU’s July 2026 Action Plan on AI Risks & Cyber Thr...",
-      "link": "https://www.linkedin.com/posts/bobrapp_digital-sovereignty-is-at-risk-weaponized-activity-7485454604063780865-GseK",
-      "date": "Tue, 21 Jul 2026 22:04:11 GMT",
-      "summary": "Digital sovereignty is at risk. Weaponized AI threatens our infrastructure. The EU’s July 2026 Action Plan on AI Risks & Cyber Threats mandates rigorous testing, moving from policy to operational resilience. La souveraineté numérique est menacée. Le Plan d'action de l'UE (juillet",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Imagine an AI bot in a Facebook group for parents, claiming to have a child. It’s not science fiction—it’s a governance failure. M...",
-      "link": "https://www.linkedin.com/posts/bobrapp_imagine-an-ai-bot-in-a-facebook-group-for-activity-7485438515363753984-3FzK",
-      "date": "Tue, 21 Jul 2026 21:00:15 GMT",
-      "summary": "Imagine an AI bot in a Facebook group for parents, claiming to have a child. It’s not science fiction—it’s a governance failure. Meta’s AI support bot incident illustrates the danger of excessive agency. When we give AI agents broad permissions without \"Least-Privilege\" guardrail",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Good ai and bad ai are relative and while a ban is tempting it understates both the value of ai and the complexity of ai governanc...",
-      "link": "https://www.linkedin.com/posts/bobrapp_good-ai-and-bad-ai-are-relative-and-while-activity-7485394495593820160-jEUD",
-      "date": "Tue, 21 Jul 2026 18:05:20 GMT",
-      "summary": "Good ai and bad ai are relative and while a ban is tempting it understates both the value of ai and the complexity of ai governance",
       "image": null,
       "author": "Bob Rapp"
     }
