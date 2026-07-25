@@ -1,6 +1,22 @@
 {
-  "updated": "2026-07-24T19:31:11Z",
+  "updated": "2026-07-25T07:38:46Z",
   "bob": [
+    {
+      "title": "As autonomous agents move from experimentation to production, \"Jesus take the wheel\" is not a security strategy. Problem: Traditio...",
+      "link": "https://www.linkedin.com/posts/bobrapp_as-autonomous-agents-move-from-experimentation-activity-7486526555494543360-NLxB",
+      "date": "Fri, 24 Jul 2026 21:03:44 GMT",
+      "summary": "As autonomous agents move from experimentation to production, \"Jesus take the wheel\" is not a security strategy. Problem: Traditional security fails when the entity making decisions is an AI. Without a robust identity and behavior framework, agents can become \"shadow AI\" with unc",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Static audits are a snapshot of the past: obsolete before the ink dries. In continuous deployment, manual checks are a safety haza...",
+      "link": "https://www.linkedin.com/posts/bobrapp_static-audits-are-a-snapshot-of-the-past-activity-7486526516626018306-bZkF",
+      "date": "Fri, 24 Jul 2026 21:03:35 GMT",
+      "summary": "Static audits are a snapshot of the past: obsolete before the ink dries. In continuous deployment, manual checks are a safety hazard. We must move to \"Governance-as-Code\" to operationalize repeatable, code-driven audits for continuous compliance. Treat governance with the same ri",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Your supply chain is only as strong as its weakest AI model. Relying on vendor \"trust\" is the governance equivalent of \"Jesus take...",
       "link": "https://www.linkedin.com/posts/bobrapp_your-supply-chain-is-only-as-strong-as-its-activity-7486450889839448064-wHw4",
@@ -64,30 +80,30 @@
       "summary": "Is your AI strategy built on solid ground? Many teams deploy AI but lack a metric for safety. Post 6 of 16 for the 'Level Up Your AI Governance' campaign. Problem: Without a Maturity Model, AI governance is reactive. Innovation outpaces safety, risking regulatory non-compliance a",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "Is your AI governance robust enough to stop a machine-tailored spear-phishing attack? Problem: The Supply Chain Vulnerability AI h...",
-      "link": "https://www.linkedin.com/posts/bobrapp_is-your-ai-governance-robust-enough-to-stop-activity-7485726513447903232-AbWN",
-      "date": "Wed, 22 Jul 2026 16:04:39 GMT",
-      "summary": "Is your AI governance robust enough to stop a machine-tailored spear-phishing attack? Problem: The Supply Chain Vulnerability AI has weaponized phishing. The litigation in J.L. v. Alphabet (Google Gemini) highlights the security risks of unvetted AI supply chains and data practic",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Joe and team doing good work for good and safe ai",
-      "link": "https://www.linkedin.com/posts/bobrapp_joe-and-team-doing-good-work-for-good-and-activity-7485686803526610946-AVr9",
-      "date": "Wed, 22 Jul 2026 13:26:51 GMT",
-      "summary": "Joe and team doing good work for good and safe ai",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "Some days on the job remind me of how fortunate I am to be working with a talented team on problems that seemed impossible just a few years ago. There is nothing like time in a quantum lab to remind…",
+      "link": "https://www.linkedin.com/posts/jhenshaw_some-days-on-the-job-remind-me-of-how-fortunate-activity-7486477623724765186-tSiU",
+      "date": "Fri, 24 Jul 2026 17:49:18 GMT",
+      "summary": "Some days on the job remind me of how fortunate I am to be working with a talented team on problems that seemed impossible just a few years ago. There is nothing like time in a quantum lab to remind us of the diversity of skills required to achieve results like IonQ's. This is bo",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "Three inspiring days at CDOIQ.\n\nOn my way to Cape Cod for a few days to recharge, I'm reflecting on the conversations that will stay with me.\n\nA few themes kept surfacing:\n\n• Leadership, more than…",
       "link": "https://www.linkedin.com/posts/doraboussias_three-inspiring-days-at-cdoiq-on-my-way-activity-7486160027888726018-7MzS",
       "date": "Thu, 23 Jul 2026 20:47:17 GMT",
       "summary": "Three inspiring days at CDOIQ. On my way to Cape Cod for a few days to recharge, I'm reflecting on the conversations that will stay with me. A few themes kept surfacing: • Leadership, more than technology, determines whether organizations build trust and create value with data an",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "STARWEST 2026 Concurrent Session : Taming the Stochastic Beast: Building AI Evaluation Pipelines for GenAI Releases",
+      "link": "https://www.linkedin.com/posts/jasonarbon_starwest-2026-concurrent-session-taming-activity-7485876698119569408-KtTy",
+      "date": "Thu, 23 Jul 2026 02:01:26 GMT",
+      "summary": "Join me at #STARWEST 2026! Even though the conversations in-between the sessions are my favorite, these are the most relevant sessions—and the ones I’m looking forward to most: Cursor and Claude Code for Test Automation Engineers (Basics) — Filip Hric, Qo",
       "image": null,
       "author": "Ken Johnston"
     },
@@ -144,22 +160,6 @@
       "link": "https://www.linkedin.com/posts/crader_hosted-our-first-ai-tinkerers-orange-county-activity-7485520623302254592-dSrt",
       "date": "Wed, 22 Jul 2026 02:26:31 GMT",
       "summary": "Hosted our first AI Tinkerers Orange County meetup at Centercode’s new office week. Good way to break the place in! Great to see so many people experimenting and learning AI. We got to see some live demos and have real conversations about people in the Orange County tech scene ar",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Seattle Tech Week is officially here on Monday, and Thinkspace is bringing you a heavy-hitting lineup of founder session",
-      "link": "https://www.linkedin.com/posts/thinkspace_seattletechweek-seattletech-startups-activity-7485487533305356288-bzmJ",
-      "date": "Wed, 22 Jul 2026 00:15:02 GMT",
-      "summary": "Seattle Tech Week is officially here on Monday, and Thinkspace is bringing you a heavy-hitting lineup of founder sessions, teardowns, and VC panels. 🚀 If you’re looking to scale your startup, build repeatable revenue motions, or level up your engineering & AI operations, here is",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Imagine an AI bot in a Facebook group for parents, claiming to have a child. It’s not science fiction—it’s a governance failure. Meta’s AI support bot incident illustrates the danger of excessive…",
-      "link": "https://www.linkedin.com/posts/bobrapp_imagine-an-ai-bot-in-a-facebook-group-for-activity-7485438515363753984-3FzK",
-      "date": "Tue, 21 Jul 2026 21:00:15 GMT",
-      "summary": "Imagine an AI bot in a Facebook group for parents, claiming to have a child. It’s not science fiction—it’s a governance failure. Meta’s AI support bot incident illustrates the danger of excessive agency. When we give AI agents broad permissions without \"Least-Privilege\" guardrail",
       "image": null,
       "author": "Ken Johnston"
     }
