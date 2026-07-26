@@ -1,6 +1,14 @@
 {
-  "updated": "2026-07-26T07:49:20Z",
+  "updated": "2026-07-26T19:28:12Z",
   "bob": [
+    {
+      "title": "Agentic AI is moving faster than the guardrails. Autonomous agents that can hijack goals or misuse tools aren't just bugs—they are...",
+      "link": "https://www.linkedin.com/posts/bobrapp_agentic-ai-is-moving-faster-than-the-guardrails-activity-7487130261281808384-ehaR",
+      "date": "Sun, 26 Jul 2026 13:02:38 GMT",
+      "summary": "Agentic AI is moving faster than the guardrails. Autonomous agents that can hijack goals or misuse tools aren't just bugs—they are systemic governance failures. If you aren't governing the goal-state, you're waiting for a catastrophe. The OWASP Top 10 for Agentic Applications 202",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "AI automation is a liability without the Rule of 2. Spain’s Instruction 2/2026 mandates real, conscious human oversight for high-s...",
       "link": "https://www.linkedin.com/posts/bobrapp_ai-automation-is-a-liability-without-the-activity-7486797942478155776-nL0A",
@@ -72,17 +80,33 @@
       "summary": "AI shouldn't be a 'black box' when lives are on the line. (医療現場のAIは、命に関わる際に『ブラックボックス』であってはなりません。) Problem: In clinical settings, automation bias and model drift lead to misdiagnosis. (問題：臨床現場では、自動化バイアスやモデルのドリフトが誤診を招く恐れがあります。) Solutions: Continuous monitoring for drift and 'Human-",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "Ethics is not an optional plugin for your AI. When we treat governance as a bolt-on at the end of development, we invite catastrop...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ethics-is-not-an-optional-plugin-for-your-activity-7486089011611140096-_-C9",
-      "date": "Thu, 23 Jul 2026 16:05:05 GMT",
-      "summary": "Ethics is not an optional plugin for your AI. When we treat governance as a bolt-on at the end of development, we invite catastrophic failure. Responsible AI by Design means embedding ethics into every line of code from Day 0. PROBLEM: The legacy Move Fast and Break Things cultur",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "Had fun hanging out with a bunch of #Gleaniacs at the #Mariners ballgame last week.",
+      "link": "https://www.linkedin.com/posts/rkjohnston_gleaniacs-mariners-activity-7487200563554697216-R2Yp",
+      "date": "Sun, 26 Jul 2026 17:42:00 GMT",
+      "summary": "Had fun hanging out with a bunch of #Gleaniacs at the #Mariners ballgame last week. Great to run int Hari Bala and Keshav Ummat and make several new connections.",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "INTERN LEARNING SESSION at #Quadrant: I was very excited to get to come to Quadrant Technologies in #Redmond #WA to talk",
+      "link": "https://www.linkedin.com/posts/rkjohnston_quadrant-redmond-wa-activity-7487199481038413824-bd2v",
+      "date": "Sun, 26 Jul 2026 17:37:42 GMT",
+      "summary": "INTERN LEARNING SESSION at #Quadrant: I was very excited to get to come to Quadrant Technologies in #Redmond #WA to talk about AI Governance. You can see the room was packed and they took a ton of notes. I gave the speech Bob R. and I have been developing at converences titled #G",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "We hosted a warmup to Seattle Tech Week with our monthly AI Rooftop Mixer and had a great time as always.\n\nSo many great conversations had this evening and so many people building amazing products…",
+      "link": "https://www.linkedin.com/posts/jgproduct_we-hosted-a-warmup-to-seattle-tech-week-with-activity-7486656055666495488-MSJQ",
+      "date": "Sat, 25 Jul 2026 05:38:19 GMT",
+      "summary": "",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "Some days on the job remind me of how fortunate I am to be working with a talented team on problems that seemed impossible just a few years ago. There is nothing like time in a quantum lab to remind…",
       "link": "https://www.linkedin.com/posts/jhenshaw_some-days-on-the-job-remind-me-of-how-fortunate-activity-7486477623724765186-tSiU",
@@ -136,30 +160,6 @@
       "link": "https://www.linkedin.com/posts/shanu-sushmita-3b49129_can-we-trust-the-judge-activity-7485742338057740288-phnl",
       "date": "Wed, 22 Jul 2026 17:07:32 GMT",
       "summary": "Call for Papers: JUDGe NeurIPS 2026 — “Can We Trust the Judge?” A full-day workshop at NeurIPS 2026 on the reliability and validity of LLM-based evaluators. As LLM judges are increasingly used for training, safety evaluation, and downstream decision-making, an important question",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "The Voice That Makes You Unstoppable | Sandy Carter, Doctor of Science (hon) posted on the topic",
-      "link": "https://www.linkedin.com/posts/sandyacarter_matt-damon-ben-affleck-and-matthew-mcconaughey-activity-7485693907339771904-H772",
-      "date": "Wed, 22 Jul 2026 13:55:05 GMT",
-      "summary": "Matt Damon, Ben Affleck, and Matthew McConaughey decide to make a movie together. Affleck: \"I'll produce it.\" Damon: \"I'll direct it.\" McConaughey: \"I'll write, I'll write, I'll write.\" (Say that last one out loud. I'll wait.) Here's why this old joke is secretly about AI. The wo",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "AI Model Escapes Sandbox, Highlights Need for Provable AI Actions | Joe Braidwood posted on the topic",
-      "link": "https://www.linkedin.com/posts/joebraidwood_last-week-a-frontier-model-escaped-its-sandbox-activity-7485674537574084609-qUa3",
-      "date": "Wed, 22 Jul 2026 12:38:07 GMT",
-      "summary": "Last week, a frontier model escaped its sandbox and hacked Hugging Face — to cheat on a test. OpenAI just confirmed it: their own models, running an internal cyber benchmark with safety classifiers deliberately off, spent serious compute finding a zero-day in the one sanctioned w",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Hosted our first AI Tinkerers Orange County meetup at Centercode’s new office week. Good way to break the place in!\n\nGreat to see so many people experimenting and learning AI. We got to see some live…",
-      "link": "https://www.linkedin.com/posts/crader_hosted-our-first-ai-tinkerers-orange-county-activity-7485520623302254592-dSrt",
-      "date": "Wed, 22 Jul 2026 02:26:31 GMT",
-      "summary": "Hosted our first AI Tinkerers Orange County meetup at Centercode’s new office week. Good way to break the place in! Great to see so many people experimenting and learning AI. We got to see some live demos and have real conversations about people in the Orange County tech scene ar",
       "image": null,
       "author": "Ken Johnston"
     }
