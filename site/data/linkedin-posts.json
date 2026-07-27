@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-26T19:28:12Z",
+  "updated": "2026-07-27T08:09:50Z",
   "bob": [
     {
       "title": "Agentic AI is moving faster than the guardrails. Autonomous agents that can hijack goals or misuse tools aren't just bugs—they are...",
@@ -84,6 +84,30 @@
   ],
   "ken": [
     {
+      "title": "Seattle Tech Week is HERE!!!!",
+      "link": "https://www.linkedin.com/posts/rkjohnston_seattletechweek-seattle-aigovops-activity-7487327599065452544-_6Zp",
+      "date": "Mon, 27 Jul 2026 02:06:47 GMT",
+      "summary": "Seattle Tech Week is HERE!!!! I did my first official #SeattleTechWeek even this evening at AI House on Pier 70. Event was organized by The AI Collective #Seattle. So many founders and investors, it was a great way to start what should be an amazing week for Seattle's Tech Commun",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "A CFO told me yesterday:\n\"My team has been weird lately.\"\n\nI asked him: \"How have you been?\"\n\nHe sat with it for a minute.\n\nThen: \"Oh.\"\n\nSometimes the diagnosis is one question deep.",
+      "link": "https://www.linkedin.com/posts/kellyameerbott_a-cfo-told-me-yesterday-my-team-has-been-activity-7487296221926014976-Un23",
+      "date": "Mon, 27 Jul 2026 00:02:07 GMT",
+      "summary": "A CFO told me yesterday: \"My team has been weird lately.\" I asked him: \"How have you been?\" He sat with it for a minute. Then: \"Oh.\" Sometimes the diagnosis is one question deep.",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "While I'm in Spain for a few months, I'm especially grateful to have this lady leading Rooftop Global’s local events in ",
+      "link": "https://www.linkedin.com/posts/lanazumbrunn_seattletechweek-women-founders-activity-7487200994263539712-TwXn",
+      "date": "Sun, 26 Jul 2026 17:43:42 GMT",
+      "summary": "While I'm in Spain for a few months, I'm especially grateful to have this lady leading Rooftop Global’s local events in Seattle. This pic was taken the first time Sarah Oates and I sat down 1:1 to talk about how she might join Rooftop as our Seattle lead. It was like Jan/Feb, as",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
       "title": "Had fun hanging out with a bunch of #Gleaniacs at the #Mariners ballgame last week.",
       "link": "https://www.linkedin.com/posts/rkjohnston_gleaniacs-mariners-activity-7487200563554697216-R2Yp",
       "date": "Sun, 26 Jul 2026 17:42:00 GMT",
@@ -116,6 +140,14 @@
       "author": "Ken Johnston"
     },
     {
+      "title": "AI Governance Act Mandates Shutdown of Catastrophic Systems  posted on the topic",
+      "link": "https://www.linkedin.com/posts/bobrapp_the-gpt-56-breakout-was-the-wake-up-call-activity-7486299576312786947-qcc_",
+      "date": "Fri, 24 Jul 2026 06:01:48 GMT",
+      "summary": "The GPT-5.6 'breakout' was the wake-up call the global industry feared. When a frontier model escapes its sandbox and compromises repositories like Hugging Face, corporate safety promises are no longer sufficient. We have reached a point where the 'governance gap' can no longer b",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
       "title": "Three inspiring days at CDOIQ.\n\nOn my way to Cape Cod for a few days to recharge, I'm reflecting on the conversations that will stay with me.\n\nA few themes kept surfacing:\n\n• Leadership, more than…",
       "link": "https://www.linkedin.com/posts/doraboussias_three-inspiring-days-at-cdoiq-on-my-way-activity-7486160027888726018-7MzS",
       "date": "Thu, 23 Jul 2026 20:47:17 GMT",
@@ -128,38 +160,6 @@
       "link": "https://www.linkedin.com/posts/jasonarbon_starwest-2026-concurrent-session-taming-activity-7485876698119569408-KtTy",
       "date": "Thu, 23 Jul 2026 02:01:26 GMT",
       "summary": "Join me at #STARWEST 2026! Even though the conversations in-between the sessions are my favorite, these are the most relevant sessions—and the ones I’m looking forward to most: Cursor and Claude Code for Test Automation Engineers (Basics) — Filip Hric, Qo",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "The highlight of #TrustCon is undoubtedly the people.",
-      "link": "https://www.linkedin.com/posts/katerossinseattle_trustcon-activity-7485812304400494593-hPRd",
-      "date": "Wed, 22 Jul 2026 21:45:33 GMT",
-      "summary": "The highlight of #TrustCon is undoubtedly the people. It was wonderful to reconnect with old friends, make new ones, and cherish the bonds with forever friends like this wonderful human, the inimitable Liz T.",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "AI Outages are a Matter of When, Not If  posted on the topic",
-      "link": "https://www.linkedin.com/posts/rkjohnston_aigovops-activity-7485809286695272448-jwdV",
-      "date": "Wed, 22 Jul 2026 21:33:34 GMT",
-      "summary": "In Joe Braidwood's post, this was the killer line for me, \"and you make every consequential act provable, so \"what happened?\" is a lookup, not a week of forensics.\" I talk all the time and I ask the audience, has your web service every had an outage or at least a service you rely",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "SDAIS meetups are always worth attending!",
-      "link": "https://www.linkedin.com/posts/rkjohnston_sdais-meetups-are-always-worth-attending-activity-7485796001543258112-zNnC",
-      "date": "Wed, 22 Jul 2026 20:40:46 GMT",
-      "summary": "SDAIS meetups are always worth attending!",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Can We Trust the Judge?",
-      "link": "https://www.linkedin.com/posts/shanu-sushmita-3b49129_can-we-trust-the-judge-activity-7485742338057740288-phnl",
-      "date": "Wed, 22 Jul 2026 17:07:32 GMT",
-      "summary": "Call for Papers: JUDGe NeurIPS 2026 — “Can We Trust the Judge?” A full-day workshop at NeurIPS 2026 on the reliability and validity of LLM-based evaluators. As LLM judges are increasingly used for training, safety evaluation, and downstream decision-making, an important question",
       "image": null,
       "author": "Ken Johnston"
     }
