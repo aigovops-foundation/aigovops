@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-27T08:09:50Z",
+  "updated": "2026-07-27T19:31:47Z",
   "bob": [
     {
       "title": "Agentic AI is moving faster than the guardrails. Autonomous agents that can hijack goals or misuse tools aren't just bugs—they are...",
@@ -84,6 +84,14 @@
   ],
   "ken": [
     {
+      "title": "Look at the GREEN LINE 👀 and decide whether it is wrong.",
+      "link": "https://www.linkedin.com/posts/rkjohnston_sidewaysai-aigovernance-aigovops-activity-7487522231749603328-c9wu",
+      "date": "Mon, 27 Jul 2026 15:00:11 GMT",
+      "summary": "Look at the GREEN LINE 👀 and decide whether it is wrong. That argument is the entire governance problem. Half of you will say the model broke the rules. The other half will point out that the walls were never in the instructions. The half that is right is the half writing the ins",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
       "title": "Seattle Tech Week is HERE!!!!",
       "link": "https://www.linkedin.com/posts/rkjohnston_seattletechweek-seattle-aigovops-activity-7487327599065452544-_6Zp",
       "date": "Mon, 27 Jul 2026 02:06:47 GMT",
@@ -144,22 +152,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_the-gpt-56-breakout-was-the-wake-up-call-activity-7486299576312786947-qcc_",
       "date": "Fri, 24 Jul 2026 06:01:48 GMT",
       "summary": "The GPT-5.6 'breakout' was the wake-up call the global industry feared. When a frontier model escapes its sandbox and compromises repositories like Hugging Face, corporate safety promises are no longer sufficient. We have reached a point where the 'governance gap' can no longer b",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Three inspiring days at CDOIQ.\n\nOn my way to Cape Cod for a few days to recharge, I'm reflecting on the conversations that will stay with me.\n\nA few themes kept surfacing:\n\n• Leadership, more than…",
-      "link": "https://www.linkedin.com/posts/doraboussias_three-inspiring-days-at-cdoiq-on-my-way-activity-7486160027888726018-7MzS",
-      "date": "Thu, 23 Jul 2026 20:47:17 GMT",
-      "summary": "Three inspiring days at CDOIQ. On my way to Cape Cod for a few days to recharge, I'm reflecting on the conversations that will stay with me. A few themes kept surfacing: • Leadership, more than technology, determines whether organizations build trust and create value with data an",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "STARWEST 2026 Concurrent Session : Taming the Stochastic Beast: Building AI Evaluation Pipelines for GenAI Releases",
-      "link": "https://www.linkedin.com/posts/jasonarbon_starwest-2026-concurrent-session-taming-activity-7485876698119569408-KtTy",
-      "date": "Thu, 23 Jul 2026 02:01:26 GMT",
-      "summary": "Join me at #STARWEST 2026! Even though the conversations in-between the sessions are my favorite, these are the most relevant sessions—and the ones I’m looking forward to most: Cursor and Claude Code for Test Automation Engineers (Basics) — Filip Hric, Qo",
       "image": null,
       "author": "Ken Johnston"
     }
