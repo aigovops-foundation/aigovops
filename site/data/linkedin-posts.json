@@ -1,6 +1,14 @@
 {
-  "updated": "2026-07-27T19:31:47Z",
+  "updated": "2026-07-28T07:51:32Z",
   "bob": [
+    {
+      "title": "Identity is the new border. When AI agents start acting on our behalf, the \"governance gap\" widens. Without verifiable identity, w...",
+      "link": "https://www.linkedin.com/posts/bobrapp_identity-is-the-new-border-when-ai-agents-activity-7487628666789765121-G-t7",
+      "date": "Mon, 27 Jul 2026 22:03:08 GMT",
+      "summary": "Identity is the new border. When AI agents start acting on our behalf, the \"governance gap\" widens. Without verifiable identity, we lose control. الهوية هي الحدود الجديدة. عندما تعمل وكلاء الذكاء الاصطناعي نيابة عنا، تتسع \"فجوة الحوكمة\". بدون هوية محققة، نفقد السيطرة. Problem: \"S",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Agentic AI is moving faster than the guardrails. Autonomous agents that can hijack goals or misuse tools aren't just bugs—they are...",
       "link": "https://www.linkedin.com/posts/bobrapp_agentic-ai-is-moving-faster-than-the-guardrails-activity-7487130261281808384-ehaR",
@@ -72,22 +80,38 @@
       "summary": "Canada leads in digital sovereignty with a dedicated AI Minister and centralized regulator. Problem: Overlapping rules create compliance gaps. Solution: A unified Ministry provides clear oversight. Summary: Centralization secures trust and competitiveness. कनाडा एक समर्पित AI मंत",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "AI shouldn't be a 'black box' when lives are on the line. (医療現場のAIは、命に関わる際に『ブラックボックス』であってはなりません。) Problem: In clinical settings, a...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-shouldnt-be-a-black-box-when-lives-activity-7486163929035935744-ZyP7",
-      "date": "Thu, 23 Jul 2026 21:02:47 GMT",
-      "summary": "AI shouldn't be a 'black box' when lives are on the line. (医療現場のAIは、命に関わる際に『ブラックボックス』であってはなりません。) Problem: In clinical settings, automation bias and model drift lead to misdiagnosis. (問題：臨床現場では、自動化バイアスやモデルのドリフトが誤診を招く恐れがあります。) Solutions: Continuous monitoring for drift and 'Human-",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "It's AI Minute Monday!",
+      "link": "https://www.linkedin.com/posts/rkjohnston_its-ai-minute-monday-activity-7487730812612685824-u1GS",
+      "date": "Tue, 28 Jul 2026 04:49:01 GMT",
+      "summary": "",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "QA Directors: Part 1 of 5: The Trap\n\nQA directors are getting squeezed from both directions.\n\nTheir teams are worried that AI will take their work. Their executives are asking why quality still takes…",
+      "link": "https://www.linkedin.com/posts/jasonarbon_qa-directors-part-1-of-5-the-trap-qa-directors-activity-7487582608093106176-qCFC",
+      "date": "Mon, 27 Jul 2026 19:00:06 GMT",
+      "summary": "QA Directors: Part 1 of 5: The Trap QA directors are getting squeezed from both directions. Their teams are worried that AI will take their work. Their executives are asking why quality still takes so long now that coding agents can generate code, tests, and entire products. Most",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "Look at the GREEN LINE 👀 and decide whether it is wrong.",
       "link": "https://www.linkedin.com/posts/rkjohnston_sidewaysai-aigovernance-aigovops-activity-7487522231749603328-c9wu",
       "date": "Mon, 27 Jul 2026 15:00:11 GMT",
       "summary": "Look at the GREEN LINE 👀 and decide whether it is wrong. That argument is the entire governance problem. Half of you will say the model broke the rules. The other half will point out that the walls were never in the instructions. The half that is right is the half writing the ins",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "𝗝𝘂𝘀𝘁 𝟮 𝗱𝗮𝘆𝘀 𝘁𝗼 𝗴𝗼!\n\nI'm looking forward to joining Tim Morton from Prompta AI to discuss why leading successful transformations has become so challenging, and what leaders can do…",
+      "link": "https://www.linkedin.com/posts/doraboussias_%F0%9D%97%9D%F0%9D%98%82%F0%9D%98%80%F0%9D%98%81-%F0%9D%9F%AE-%F0%9D%97%B1%F0%9D%97%AE%F0%9D%98%86%F0%9D%98%80-%F0%9D%98%81%F0%9D%97%BC-%F0%9D%97%B4%F0%9D%97%BC-im-looking-activity-7487512126413090816-geQ2",
+      "date": "Mon, 27 Jul 2026 14:20:02 GMT",
+      "summary": "𝗝𝘂𝘀𝘁 𝟮 𝗱𝗮𝘆𝘀 𝘁𝗼 𝗴𝗼! I'm looking forward to joining Tim Morton from Prompta AI to discuss why leading successful transformations has become so challenging, and what leaders can do differently. We'll be sharing practical ideas on combining earlier visibility with stronger leadership",
       "image": null,
       "author": "Ken Johnston"
     },
@@ -112,46 +136,6 @@
       "link": "https://www.linkedin.com/posts/lanazumbrunn_seattletechweek-women-founders-activity-7487200994263539712-TwXn",
       "date": "Sun, 26 Jul 2026 17:43:42 GMT",
       "summary": "While I'm in Spain for a few months, I'm especially grateful to have this lady leading Rooftop Global’s local events in Seattle. This pic was taken the first time Sarah Oates and I sat down 1:1 to talk about how she might join Rooftop as our Seattle lead. It was like Jan/Feb, as",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Had fun hanging out with a bunch of #Gleaniacs at the #Mariners ballgame last week.",
-      "link": "https://www.linkedin.com/posts/rkjohnston_gleaniacs-mariners-activity-7487200563554697216-R2Yp",
-      "date": "Sun, 26 Jul 2026 17:42:00 GMT",
-      "summary": "Had fun hanging out with a bunch of #Gleaniacs at the #Mariners ballgame last week. Great to run int Hari Bala and Keshav Ummat and make several new connections.",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "INTERN LEARNING SESSION at #Quadrant: I was very excited to get to come to Quadrant Technologies in #Redmond #WA to talk",
-      "link": "https://www.linkedin.com/posts/rkjohnston_quadrant-redmond-wa-activity-7487199481038413824-bd2v",
-      "date": "Sun, 26 Jul 2026 17:37:42 GMT",
-      "summary": "INTERN LEARNING SESSION at #Quadrant: I was very excited to get to come to Quadrant Technologies in #Redmond #WA to talk about AI Governance. You can see the room was packed and they took a ton of notes. I gave the speech Bob R. and I have been developing at converences titled #G",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "We hosted a warmup to Seattle Tech Week with our monthly AI Rooftop Mixer and had a great time as always.\n\nSo many great conversations had this evening and so many people building amazing products…",
-      "link": "https://www.linkedin.com/posts/jgproduct_we-hosted-a-warmup-to-seattle-tech-week-with-activity-7486656055666495488-MSJQ",
-      "date": "Sat, 25 Jul 2026 05:38:19 GMT",
-      "summary": "",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Some days on the job remind me of how fortunate I am to be working with a talented team on problems that seemed impossible just a few years ago. There is nothing like time in a quantum lab to remind…",
-      "link": "https://www.linkedin.com/posts/jhenshaw_some-days-on-the-job-remind-me-of-how-fortunate-activity-7486477623724765186-tSiU",
-      "date": "Fri, 24 Jul 2026 17:49:18 GMT",
-      "summary": "Some days on the job remind me of how fortunate I am to be working with a talented team on problems that seemed impossible just a few years ago. There is nothing like time in a quantum lab to remind us of the diversity of skills required to achieve results like IonQ's. This is bo",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "AI Governance Act Mandates Shutdown of Catastrophic Systems  posted on the topic",
-      "link": "https://www.linkedin.com/posts/bobrapp_the-gpt-56-breakout-was-the-wake-up-call-activity-7486299576312786947-qcc_",
-      "date": "Fri, 24 Jul 2026 06:01:48 GMT",
-      "summary": "The GPT-5.6 'breakout' was the wake-up call the global industry feared. When a frontier model escapes its sandbox and compromises repositories like Hugging Face, corporate safety promises are no longer sufficient. We have reached a point where the 'governance gap' can no longer b",
       "image": null,
       "author": "Ken Johnston"
     }
