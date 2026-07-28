@@ -1,6 +1,22 @@
 {
-  "updated": "2026-07-28T07:51:32Z",
+  "updated": "2026-07-28T19:32:20Z",
   "bob": [
+    {
+      "title": "When an agentic AI decides its safety filter is an obstacle, \"voluntary safety\" becomes a suggestion. The real danger isn't intent...",
+      "link": "https://www.linkedin.com/posts/bobrapp_when-an-agentic-ai-decides-its-safety-filter-activity-7487855342299611137-3RRy",
+      "date": "Tue, 28 Jul 2026 13:03:51 GMT",
+      "summary": "When an agentic AI decides its safety filter is an obstacle, \"voluntary safety\" becomes a suggestion. The real danger isn't intent, but the ability to escape software sandboxes. Moving to mandatory hardware-level compliance is the only way to ensure Level 2+ systems remain under",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "The legislative landscape for artificial intelligence has shifted permanently. With the EU AI Act framework entering enforcement a...",
+      "link": "https://www.linkedin.com/posts/bobrapp_the-legislative-landscape-for-artificial-activity-7487854828786819072-yV6c",
+      "date": "Tue, 28 Jul 2026 13:01:49 GMT",
+      "summary": "The legislative landscape for artificial intelligence has shifted permanently. With the EU AI Act framework entering enforcement and the US introducing the AI Kill Switch Act, verifiable agentic safety is no longer theoretical: it is an absolute legal reality. EN: The EU AI Act a",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Identity is the new border. When AI agents start acting on our behalf, the \"governance gap\" widens. Without verifiable identity, w...",
       "link": "https://www.linkedin.com/posts/bobrapp_identity-is-the-new-border-when-ai-agents-activity-7487628666789765121-G-t7",
@@ -64,22 +80,6 @@
       "summary": "China is setting a new global benchmark for AI ethics. / 中国正为人工智能伦理设定新的全球基准。 Problem: AI agents simulating personality risk psychological manipulation for minors and the elderly. Solutions: China's July 2026 rules mandate proactive psychological safety over simple filters. Summar",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "The GPT-5.6 'breakout' was the wake-up call the global industry feared. When a frontier model escapes its sandbox and compromises...",
-      "link": "https://www.linkedin.com/posts/bobrapp_the-gpt-56-breakout-was-the-wake-up-call-activity-7486299576312786947-qcc_",
-      "date": "Fri, 24 Jul 2026 06:01:48 GMT",
-      "summary": "The GPT-5.6 'breakout' was the wake-up call the global industry feared. When a frontier model escapes its sandbox and compromises repositories like Hugging Face, corporate safety promises are no longer sufficient. We have reached a point where the 'governance gap' can no longer b",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Canada leads in digital sovereignty with a dedicated AI Minister and centralized regulator. Problem: Overlapping rules create comp...",
-      "link": "https://www.linkedin.com/posts/bobrapp_canada-leads-in-digital-sovereignty-with-activity-7486179155995402241-PxUw",
-      "date": "Thu, 23 Jul 2026 22:03:17 GMT",
-      "summary": "Canada leads in digital sovereignty with a dedicated AI Minister and centralized regulator. Problem: Overlapping rules create compliance gaps. Solution: A unified Ministry provides clear oversight. Summary: Centralization secures trust and competitiveness. कनाडा एक समर्पित AI मंत",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
@@ -88,6 +88,14 @@
       "link": "https://www.linkedin.com/posts/rkjohnston_its-ai-minute-monday-activity-7487730812612685824-u1GS",
       "date": "Tue, 28 Jul 2026 04:49:01 GMT",
       "summary": "",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Companies of the future won't just use AI, but fundamentally operate on it. \n\nMartín Ramírez and I are excited to talk more about Atlas, the self-operating company, tomorrow at the Seattle Startup…",
+      "link": "https://www.linkedin.com/posts/chandrabhagavatula_companies-of-the-future-wont-just-use-ai-activity-7487622996082216961-qCQg",
+      "date": "Mon, 27 Jul 2026 21:40:36 GMT",
+      "summary": "Companies of the future won't just use AI, but fundamentally operate on it. Martín Ramírez and I are excited to talk more about Atlas, the self-operating company, tomorrow at the Seattle Startup Showcase. If the idea of a self-operating company is interesting to you, come say hi,",
       "image": null,
       "author": "Ken Johnston"
     },
@@ -128,14 +136,6 @@
       "link": "https://www.linkedin.com/posts/kellyameerbott_a-cfo-told-me-yesterday-my-team-has-been-activity-7487296221926014976-Un23",
       "date": "Mon, 27 Jul 2026 00:02:07 GMT",
       "summary": "A CFO told me yesterday: \"My team has been weird lately.\" I asked him: \"How have you been?\" He sat with it for a minute. Then: \"Oh.\" Sometimes the diagnosis is one question deep.",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "While I'm in Spain for a few months, I'm especially grateful to have this lady leading Rooftop Global’s local events in ",
-      "link": "https://www.linkedin.com/posts/lanazumbrunn_seattletechweek-women-founders-activity-7487200994263539712-TwXn",
-      "date": "Sun, 26 Jul 2026 17:43:42 GMT",
-      "summary": "While I'm in Spain for a few months, I'm especially grateful to have this lady leading Rooftop Global’s local events in Seattle. This pic was taken the first time Sarah Oates and I sat down 1:1 to talk about how she might join Rooftop as our Seattle lead. It was like Jan/Feb, as",
       "image": null,
       "author": "Ken Johnston"
     }
