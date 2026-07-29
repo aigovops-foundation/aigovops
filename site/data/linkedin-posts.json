@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-28T19:32:20Z",
+  "updated": "2026-07-29T07:54:35Z",
   "bob": [
     {
       "title": "When an agentic AI decides its safety filter is an obstacle, \"voluntary safety\" becomes a suggestion. The real danger isn't intent...",
@@ -84,58 +84,82 @@
   ],
   "ken": [
     {
-      "title": "It's AI Minute Monday!",
-      "link": "https://www.linkedin.com/posts/rkjohnston_its-ai-minute-monday-activity-7487730812612685824-u1GS",
-      "date": "Tue, 28 Jul 2026 04:49:01 GMT",
+      "title": "Having a ton of fun at Seattle Tech Week.",
+      "link": "https://www.linkedin.com/posts/rkjohnston_seattle-founders-fun-activity-7488048182568972288-_Dy0",
+      "date": "Wed, 29 Jul 2026 01:50:08 GMT",
+      "summary": "Having a ton of fun at Seattle Tech Week. I thin I went to my 4th events today. Yesterday was coffee but to day was the OneSixOne Ventures #Seattle Venture Day. 5th annual I think Pablo Casilimas said. Great energy from the hundreds of founders and investors that came out. I spok",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "#SeattleSeattle Tech Week I just wrapped up a call with the team from the The AI Collective.",
+      "link": "https://www.linkedin.com/posts/rkjohnston_madisoncenter-seattle-pdftheater-activity-7488042836785844224-xA1h",
+      "date": "Wed, 29 Jul 2026 01:28:53 GMT",
+      "summary": "#SeattleSeattle Tech Week I just wrapped up a call with the team from the The AI Collective. Talking with Tristan Ingold, Keshav Ummat, Rebecca Norlander, Joe Braidwood and Bhola Chhetri we all started just ripping on the latest AI Governance news. Oh yes, the event is this Frida",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Did you miss the big awesome Madrona party last night at Pickelwood? Want another chance to show your stuff? We're only a couple of days away, but there's still time to squeeze in a few more…",
+      "link": "https://www.linkedin.com/posts/mbenua_did-you-miss-the-big-awesome-madrona-party-activity-7488004430794018817-sbmP",
+      "date": "Tue, 28 Jul 2026 22:56:17 GMT",
+      "summary": "Did you miss the big awesome Madrona party last night at Pickelwood? Want another chance to show your stuff? We're only a couple of days away, but there's still time to squeeze in a few more registrations! Come and join SheTO and AgenticBricks.com as we dive deep with our illustr",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Already an amazing event.  Room is really filling up. The live music is awesome!😎",
+      "link": "https://www.linkedin.com/posts/rkjohnston_already-an-amazing-event-room-is-really-activity-7487972538204217344-u2OI",
+      "date": "Tue, 28 Jul 2026 20:49:33 GMT",
+      "summary": "Already an amazing event. Room is really filling up. The live music is awesome!😎",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "When SceniX joined World Labs, we said spatial intelligence was never only about perceiving and generating virtual and physical worlds, but also interacting with them. Today, we’re sharing early… | Fei-Fei Li",
+      "link": "https://www.linkedin.com/posts/fei-fei-li-4541247_when-scenix-joined-world-labs-we-said-spatial-activity-7487903224914423809-OpsZ",
+      "date": "Tue, 28 Jul 2026 16:14:07 GMT",
       "summary": "",
       "image": null,
       "author": "Ken Johnston"
     },
     {
-      "title": "Companies of the future won't just use AI, but fundamentally operate on it. \n\nMartín Ramírez and I are excited to talk more about Atlas, the self-operating company, tomorrow at the Seattle Startup…",
-      "link": "https://www.linkedin.com/posts/chandrabhagavatula_companies-of-the-future-wont-just-use-ai-activity-7487622996082216961-qCQg",
-      "date": "Mon, 27 Jul 2026 21:40:36 GMT",
-      "summary": "Companies of the future won't just use AI, but fundamentally operate on it. Martín Ramírez and I are excited to talk more about Atlas, the self-operating company, tomorrow at the Seattle Startup Showcase. If the idea of a self-operating company is interesting to you, come say hi,",
+      "title": "Today’s the big day - come out and enjoy live music, delicious food and hear from some of Seattle’s most accomplished operators! \n\nDoors open at 1pm\n\nThank you Fenwick & West, Clark Nuber PS, HSBC…",
+      "link": "https://www.linkedin.com/posts/pablo-casilimas-1707a9113_todays-the-big-day-come-out-and-enjoy-activity-7487902662340894720-U-z5",
+      "date": "Tue, 28 Jul 2026 16:11:53 GMT",
+      "summary": "Today’s the big day - come out and enjoy live music, delicious food and hear from some of Seattle’s most accomplished operators! Doors open at 1pm Thank you Fenwick & West, Clark Nuber PS, HSBC Innovation Banking and Archera for making it possible!",
       "image": null,
       "author": "Ken Johnston"
     },
     {
-      "title": "QA Directors: Part 1 of 5: The Trap\n\nQA directors are getting squeezed from both directions.\n\nTheir teams are worried that AI will take their work. Their executives are asking why quality still takes…",
-      "link": "https://www.linkedin.com/posts/jasonarbon_qa-directors-part-1-of-5-the-trap-qa-directors-activity-7487582608093106176-qCFC",
-      "date": "Mon, 27 Jul 2026 19:00:06 GMT",
-      "summary": "QA Directors: Part 1 of 5: The Trap QA directors are getting squeezed from both directions. Their teams are worried that AI will take their work. Their executives are asking why quality still takes so long now that coding agents can generate code, tests, and entire products. Most",
+      "title": "Can AI truly create music, or does authentic artistic authorship belong to humans?",
+      "link": "https://www.linkedin.com/posts/shanu-sushmita-3b49129_synthetic-souls-activity-7487901179494940672-KV3K",
+      "date": "Tue, 28 Jul 2026 16:06:00 GMT",
+      "summary": "Can AI truly create music, or does authentic artistic authorship belong to humans? Two talented students from Issaquah High School (WA) are leading an exciting research project investigating public attitudes toward musical authorship in the age of generative AI. We would love you",
       "image": null,
       "author": "Ken Johnston"
     },
     {
-      "title": "Look at the GREEN LINE 👀 and decide whether it is wrong.",
-      "link": "https://www.linkedin.com/posts/rkjohnston_sidewaysai-aigovernance-aigovops-activity-7487522231749603328-c9wu",
-      "date": "Mon, 27 Jul 2026 15:00:11 GMT",
-      "summary": "Look at the GREEN LINE 👀 and decide whether it is wrong. That argument is the entire governance problem. Half of you will say the model broke the rules. The other half will point out that the walls were never in the instructions. The half that is right is the half writing the ins",
+      "title": "One of the questions I get asked most often these days is: \"Now that you've left Microsoft, what are you doing with all ",
+      "link": "https://www.linkedin.com/posts/joy-chik_theknowingmoments-restandrecharge-summerreflection-activity-7487884722023448576-dH8p",
+      "date": "Tue, 28 Jul 2026 15:00:36 GMT",
+      "summary": "One of the questions I get asked most often these days is: \"Now that you've left Microsoft, what are you doing with all this free time?\" People picture me drinking coffee all afternoon. Reading books. Taking long walks. I wish. Turns out I'm so used to being oversubscribed that w",
       "image": null,
       "author": "Ken Johnston"
     },
     {
-      "title": "𝗝𝘂𝘀𝘁 𝟮 𝗱𝗮𝘆𝘀 𝘁𝗼 𝗴𝗼!\n\nI'm looking forward to joining Tim Morton from Prompta AI to discuss why leading successful transformations has become so challenging, and what leaders can do…",
-      "link": "https://www.linkedin.com/posts/doraboussias_%F0%9D%97%9D%F0%9D%98%82%F0%9D%98%80%F0%9D%98%81-%F0%9D%9F%AE-%F0%9D%97%B1%F0%9D%97%AE%F0%9D%98%86%F0%9D%98%80-%F0%9D%98%81%F0%9D%97%BC-%F0%9D%97%B4%F0%9D%97%BC-im-looking-activity-7487512126413090816-geQ2",
-      "date": "Mon, 27 Jul 2026 14:20:02 GMT",
-      "summary": "𝗝𝘂𝘀𝘁 𝟮 𝗱𝗮𝘆𝘀 𝘁𝗼 𝗴𝗼! I'm looking forward to joining Tim Morton from Prompta AI to discuss why leading successful transformations has become so challenging, and what leaders can do differently. We'll be sharing practical ideas on combining earlier visibility with stronger leadership",
+      "title": "My first year at Microsoft, I faced a problem I couldn't solve. And I spun.\n\nIt was 2002, the early days of smartphones. Pre-iPhone, when Nokia and BlackBerry dominated. I'd just joined an…",
+      "link": "https://www.linkedin.com/posts/marioribera_my-first-year-at-microsoft-i-faced-a-problem-activity-7487873255140315136-Hse3",
+      "date": "Tue, 28 Jul 2026 14:15:02 GMT",
+      "summary": "My first year at Microsoft, I faced a problem I couldn't solve. And I spun. It was 2002, the early days of smartphones. Pre-iPhone, when Nokia and BlackBerry dominated. I'd just joined an entrepreneurial group at Microsoft out of business school when the new smartphones we'd laun",
       "image": null,
       "author": "Ken Johnston"
     },
     {
-      "title": "Seattle Tech Week is HERE!!!!",
-      "link": "https://www.linkedin.com/posts/rkjohnston_seattletechweek-seattle-aigovops-activity-7487327599065452544-_6Zp",
-      "date": "Mon, 27 Jul 2026 02:06:47 GMT",
-      "summary": "Seattle Tech Week is HERE!!!! I did my first official #SeattleTechWeek even this evening at AI House on Pier 70. Event was organized by The AI Collective #Seattle. So many founders and investors, it was a great way to start what should be an amazing week for Seattle's Tech Commun",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "A CFO told me yesterday:\n\"My team has been weird lately.\"\n\nI asked him: \"How have you been?\"\n\nHe sat with it for a minute.\n\nThen: \"Oh.\"\n\nSometimes the diagnosis is one question deep.",
-      "link": "https://www.linkedin.com/posts/kellyameerbott_a-cfo-told-me-yesterday-my-team-has-been-activity-7487296221926014976-Un23",
-      "date": "Mon, 27 Jul 2026 00:02:07 GMT",
-      "summary": "A CFO told me yesterday: \"My team has been weird lately.\" I asked him: \"How have you been?\" He sat with it for a minute. Then: \"Oh.\" Sometimes the diagnosis is one question deep.",
+      "title": "It's AI Minute Monday!",
+      "link": "https://www.linkedin.com/posts/rkjohnston_its-ai-minute-monday-activity-7487730812612685824-u1GS",
+      "date": "Tue, 28 Jul 2026 04:49:01 GMT",
+      "summary": "",
       "image": null,
       "author": "Ken Johnston"
     }
