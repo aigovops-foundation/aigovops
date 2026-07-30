@@ -10,8 +10,9 @@ logo up, edit that one cell. Date-stamp anything you can (`Jul 30`), and keep No
 ## Tracker
 
 *Sent 2026-07-30: the 12 vendors with a real inbox were emailed via the Foundation Resend sender
-(from jeeves@aigovops-foundation.com, reply-to bob.rapp@aigovops.community). The 4 form/relay
-vendors (Google, Microsoft, Replit, n8n) still need the by-hand path — see Notes.*
+(from jeeves@aigovops-foundation.com, reply-to bob.rapp@aigovops.community). **11 delivered;
+privacy@glean.com hard-bounced** (suppressed — reach Glean via their contact form/LinkedIn instead).
+The 4 form/relay vendors (Google, Microsoft, Replit, n8n) still need the by-hand path — see Notes.*
 
 | Vendor | Contact | Sent | Replied | Committed $ | Paid | Accounts granted | Logo live | Notes |
 |---|---|---|---|---|---|---|---|---|
@@ -30,7 +31,7 @@ vendors (Google, Microsoft, Replit, n8n) still need the by-hand path — see Not
 | Magic Patterns | support@magicpatterns.com | Jul 30 (email) |  |  |  |  |  |  |
 | ChatPRD | hello@chatprd.ai | Jul 30 (email) |  |  |  |  |  |  |
 | n8n | support.n8n.io (nonprofit process) |  |  |  |  |  |  | PORTAL only, not emailed; submit + 501(c)(3) |
-| Glean | privacy@glean.com / contact form | Jul 30 (email) |  |  |  |  |  | low ⚠️ — ask to forward |
+| Glean | privacy@glean.com / contact form | Jul 30 (bounced) |  |  |  |  |  | ⚠️ privacy@ HARD-BOUNCED — suppressed; use their contact form / LinkedIn |
 
 ## How to read the columns
 
