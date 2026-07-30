@@ -9,24 +9,28 @@ logo up, edit that one cell. Date-stamp anything you can (`Jul 30`), and keep No
 
 ## Tracker
 
+*Sent 2026-07-30: the 12 vendors with a real inbox were emailed via the Foundation Resend sender
+(from jeeves@aigovops-foundation.com, reply-to bob.rapp@aigovops.community). The 4 form/relay
+vendors (Google, Microsoft, Replit, n8n) still need the by-hand path — see Notes.*
+
 | Vendor | Contact | Sent | Replied | Committed $ | Paid | Accounts granted | Logo live | Notes |
 |---|---|---|---|---|---|---|---|---|
-| OpenAI | press@openai.com + partner intake form |  |  |  |  |  |  | medium ⚠️ — expect a forward |
-| Anthropic | partner-marketing@anthropic.com |  |  |  |  |  |  |  |
-| Google | Google.org / Google for Nonprofits forms |  |  |  |  |  |  | low ⚠️ — form only |
-| Microsoft | existing Expo sponsor contact (via Sue's team) |  |  |  |  |  |  | route via Sue Kane |
-| Perplexity | support@perplexity.ai |  |  |  |  |  |  | medium ⚠️ — expect a forward |
-| Khan Academy | contact@khanacademy.org |  |  |  |  |  |  |  |
-| Gamma | privacy@gamma.app |  |  |  |  |  |  | low ⚠️ — ask to forward |
-| Granola | privacy@granola.so |  |  |  |  |  |  | low ⚠️ — ask to forward |
-| Wispr | security@wispr.ai + sales form |  |  |  |  |  |  | low ⚠️ — ask to forward |
-| Lovable | support@lovable.dev (their nonprofit channel) |  |  |  |  |  |  | attach 501(c)(3) letters |
-| StackBlitz/Bolt | hello@stackblitz.com + Build with Bolt form |  |  |  |  |  |  |  |
-| Replit | educators-page intake |  |  |  |  |  |  |  |
-| Magic Patterns | support@magicpatterns.com |  |  |  |  |  |  |  |
-| ChatPRD | hello@chatprd.ai |  |  |  |  |  |  |  |
-| n8n | support.n8n.io (nonprofit process) |  |  |  |  |  |  | attach 501(c)(3) letters |
-| Glean | privacy@glean.com / contact form |  |  |  |  |  |  | low ⚠️ — ask to forward |
+| OpenAI | press@openai.com + partner intake form | Jul 30 (email) |  |  |  |  |  | medium ⚠️ — expect a forward |
+| Anthropic | partner-marketing@anthropic.com | Jul 30 (email) |  |  |  |  |  |  |
+| Google | Google.org / Google for Nonprofits forms |  |  |  |  |  |  | low ⚠️ — FORM only, not emailed; submit by hand |
+| Microsoft | existing Expo sponsor contact (via Sue's team) |  |  |  |  |  |  | route via Sue Kane — not emailed |
+| Perplexity | support@perplexity.ai | Jul 30 (email) |  |  |  |  |  | medium ⚠️ — expect a forward |
+| Khan Academy | contact@khanacademy.org | Jul 30 (email) |  |  |  |  |  |  |
+| Gamma | privacy@gamma.app | Jul 30 (email) |  |  |  |  |  | low ⚠️ — ask to forward |
+| Granola | privacy@granola.so | Jul 30 (email) |  |  |  |  |  | low ⚠️ — ask to forward |
+| Wispr | security@wispr.ai + sales form | Jul 30 (email) |  |  |  |  |  | low ⚠️ — ask to forward |
+| Lovable | support@lovable.dev (their nonprofit channel) | Jul 30 (email) |  |  |  |  |  | offered 501(c)(3) letter on reply |
+| StackBlitz/Bolt | hello@stackblitz.com + Build with Bolt form | Jul 30 (email) |  |  |  |  |  |  |
+| Replit | educators-page intake |  |  |  |  |  |  | FORM only, not emailed; submit by hand |
+| Magic Patterns | support@magicpatterns.com | Jul 30 (email) |  |  |  |  |  |  |
+| ChatPRD | hello@chatprd.ai | Jul 30 (email) |  |  |  |  |  |  |
+| n8n | support.n8n.io (nonprofit process) |  |  |  |  |  |  | PORTAL only, not emailed; submit + 501(c)(3) |
+| Glean | privacy@glean.com / contact form | Jul 30 (email) |  |  |  |  |  | low ⚠️ — ask to forward |
 
 ## How to read the columns
 
