@@ -1,6 +1,22 @@
 {
-  "updated": "2026-07-30T07:48:05Z",
+  "updated": "2026-07-30T19:31:54Z",
   "bob": [
+    {
+      "title": "Problem: As autonomous models scale, static policies fail to catch emergent vulnerabilities and edge-case failures in deployment....",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-as-autonomous-models-scale-static-activity-7488580387175055360-20F-",
+      "date": "Thu, 30 Jul 2026 13:04:55 GMT",
+      "summary": "Problem: As autonomous models scale, static policies fail to catch emergent vulnerabilities and edge-case failures in deployment. Solutions: Implement rigorous AI Red Teaming and systematic stress testing. Explore our curated research library and join expert sessions at",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "The AI \"Splinternet\" is here. Organizations operating globally are caught in a web of conflicting regulations. Problem: Fragmented...",
+      "link": "https://www.linkedin.com/posts/bobrapp_the-ai-splinternet-is-here-organizations-activity-7488580285173882881-Sv7S",
+      "date": "Thu, 30 Jul 2026 13:04:31 GMT",
+      "summary": "The AI \"Splinternet\" is here. Organizations operating globally are caught in a web of conflicting regulations. Problem: Fragmented requirements from the EU AI Act ( to the NIST AI RMF ( create operational friction. Solutions: Shif",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Well deserved - great work Joseph Landes and the entire Nerdio team",
       "link": "https://www.linkedin.com/posts/bobrapp_well-deserved-great-work-joseph-landes-activity-7488430992551018496-IYRp",
@@ -54,22 +70,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_identity-is-the-new-border-when-ai-agents-activity-7487628666789765121-G-t7",
       "date": "Mon, 27 Jul 2026 22:03:08 GMT",
       "summary": "Identity is the new border. When AI agents start acting on our behalf, the \"governance gap\" widens. Without verifiable identity, we lose control. الهوية هي الحدود الجديدة. عندما تعمل وكلاء الذكاء الاصطناعي نيابة عنا، تتسع \"فجوة الحوكمة\". بدون هوية محققة، نفقد السيطرة. Problem: \"S",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Agentic AI is moving faster than the guardrails. Autonomous agents that can hijack goals or misuse tools aren't just bugs—they are...",
-      "link": "https://www.linkedin.com/posts/bobrapp_agentic-ai-is-moving-faster-than-the-guardrails-activity-7487130261281808384-ehaR",
-      "date": "Sun, 26 Jul 2026 13:02:38 GMT",
-      "summary": "Agentic AI is moving faster than the guardrails. Autonomous agents that can hijack goals or misuse tools aren't just bugs—they are systemic governance failures. If you aren't governing the goal-state, you're waiting for a catastrophe. The OWASP Top 10 for Agentic Applications 202",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI automation is a liability without the Rule of 2. Spain’s Instruction 2/2026 mandates real, conscious human oversight for high-s...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-automation-is-a-liability-without-the-activity-7486797942478155776-nL0A",
-      "date": "Sat, 25 Jul 2026 15:02:07 GMT",
-      "summary": "AI automation is a liability without the Rule of 2. Spain’s Instruction 2/2026 mandates real, conscious human oversight for high-stakes AI actions. AI自動化は強力ですが、2人のルールがなければリスクになります。スペインの指示2/2026は、AIのアクションに対して人間による監視を義務付けています。 PROBLEM: Autonomous agents can trigger catastrophic fin",
       "image": null,
       "author": "Bob Rapp"
     }
