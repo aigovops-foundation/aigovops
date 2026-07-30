@@ -25,6 +25,14 @@ const PAGES = [
   "/support.html",
   "/about.html",
   "/plan.html",
+  "/supporters.html",
+  "/survey.html",
+  "/survey-after.html",
+  // Spanish editions. lang="es" is what makes axe read these correctly;
+  // the injected header/footer chrome is still English, which axe does not
+  // flag but a native reviewer will.
+  "/es/workshop.html",
+  "/es/checklist.html",
 ];
 
 const BLOCKING_IMPACTS = new Set(["critical", "serious"]);

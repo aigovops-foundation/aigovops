@@ -12,9 +12,17 @@
 
   // Which page is active? Derived from <body data-page="...">
   const PAGE = (document.body && document.body.getAttribute("data-page")) || "";
-  // Path prefix for pages living in a subdirectory (e.g. /tools/*.html set data-base="../")
-  const BASE = (document.body && document.body.getAttribute("data-base")) || "";
-  const href = (h) => (/^https?:/.test(h) ? h : BASE + h);
+  // Path prefix for pages living in a subdirectory (e.g. /tools/*.html set data-base="../").
+  // VALIDATED to a strict "../"-only shape: the value is developer-set, but we don't trust a DOM
+  // attribute as an input source, so anything that isn't a run of "../" is dropped to "". This closes
+  // the taint path CodeQL flags (getAttribute -> href attribute) at the source.
+  const _rawBase = (document.body && document.body.getAttribute("data-base")) || "";
+  const BASE = /^(?:\.\.\/)*$/.test(_rawBase) ? _rawBase : "";
+  // Encode a value for safe interpolation inside an HTML attribute (a recognized XSS sanitizer).
+  const escAttr = (s) => String(s).replace(/[&<>"']/g, (c) =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  // Every href() result is encoded, so each `${href(...)}` in the templates below is attribute-safe.
+  const href = (h) => escAttr(/^https?:/.test(h) ? h : BASE + h);
 
   const NAV = [
     { href: "index.html", key: "home", label: "Home" },
@@ -39,19 +47,24 @@
       <circle cx="24" cy="8" r="3" fill="#E07A2A"/>
     </svg>`;
 
-  /* Nav density: the header row is capped at max-w-7xl, so the primary nav's
-     budget stops growing at a 1280px viewport (~1006px of usable room) no
-     matter how wide the screen gets. Link metrics below are sized so the full
-     NAV set clears that ceiling on one line, and whitespace-nowrap keeps a
-     squeezed label from silently breaking mid-word into a second row. The nav
-     shows at xl (1280px) rather than lg (1024px) because it does not fit in
-     the room lg leaves; 1024-1279px gets the mobile menu instead. */
+  /* Nav density: the header row is capped at max-w-7xl, so the usable room
+     stops growing at a 1280px viewport (1216px inner) no matter how wide the
+     screen gets. Everything competing for it is fixed-width: brand 137px,
+     "Sign the Pledge" 146px, two 16px row gaps. That leaves 917px for the
+     nav, and the full NAV set at px-1.5/gap-0/13px measures 875px — 26px of
+     slack. Cut any of those levers and the shortfall does not wrap the nav
+     (whitespace-nowrap prevents that); it silently flex-shrinks the CTA
+     instead, which is why the brand's date subline is xl:hidden — restoring
+     it costs 41px the row does not have. The nav shows at xl (1280px) rather
+     than lg (1024px) because it does not fit the room lg leaves; 1024-1279px
+     gets the mobile menu, where the subline is visible again.
+     measure-header checks in tests/e2e/header.spec.mjs guard these numbers. */
   function renderHeader() {
     const mount = document.getElementById("site-header");
     if (!mount) return;
     const links = NAV.map(
       (n) => `<a href="${href(n.href)}" data-nav="${n.key}"
-        class="px-2 py-2 rounded-lg text-[13px] font-600 whitespace-nowrap transition-colors ${
+        class="px-1.5 py-2 rounded-lg text-[13px] font-600 whitespace-nowrap transition-colors ${
           n.key === PAGE
             ? "text-orchard bg-orchard/8"
             : "text-charcoal/70 hover:text-orchard hover:bg-orchard/5"
@@ -71,11 +84,11 @@
         <div class="max-w-7xl mx-auto px-5 sm:px-8 h-[68px] flex items-center justify-between gap-4">
           <a href="${href('index.html')}" class="flex items-center gap-2.5 group shrink-0">
             ${LOGO}
-            <span class="font-serif font-700 text-charcoal text-[15px] leading-[1.05] hidden xs:block">
-              NCW AI Expo<span class="block text-[11px] font-600 text-orchard tracking-wide">Aug 11, 2026 · Wenatchee</span>
+            <span class="font-serif font-700 text-charcoal text-[15px] leading-[1.05] block">
+              NCW AI Expo<span class="block xl:hidden text-[11px] font-600 text-orchard tracking-wide">Aug 11, 2026 · Wenatchee</span>
             </span>
           </a>
-          <nav class="hidden xl:flex items-center gap-0.5" aria-label="Primary">${links}</nav>
+          <nav class="hidden xl:flex items-center gap-0" aria-label="Primary">${links}</nav>
           <div class="flex items-center gap-2">
             <a href="${href('pledge.html')}" class="hidden sm:inline-flex items-center rounded-full bg-signal hover:bg-signal-dark transition-colors text-white font-700 text-sm px-5 py-2.5 shadow-sm">Sign the Pledge</a>
             <button id="menuBtn" class="xl:hidden grid place-items-center w-10 h-10 rounded-lg text-charcoal hover:bg-cream-deep" aria-label="Open menu" aria-expanded="false">
@@ -155,6 +168,7 @@
               <p class="font-700 text-xs uppercase tracking-[0.16em] text-cream/45 mb-4">Take action</p>
               <ul class="space-y-2.5 text-sm">
                 <li><a href="${href('pledge.html')}" class="text-cream/75 hover:text-signal transition-colors">Sign the Pledge</a></li>
+                <li><a href="${href('supporters.html')}" class="text-cream/75 hover:text-signal transition-colors">Our supporters</a></li>
                 <li><a href="https://www.aigovops-foundation.com" class="text-cream/75 hover:text-signal transition-colors">aigovops-foundation.com</a></li>
                 <li><a href="https://www.ncwtech.org" class="text-cream/75 hover:text-signal transition-colors">ncwtech.org</a></li>
                 <li><a href="https://github.com/focuslead/ai-council-framework" class="text-cream/75 hover:text-signal transition-colors">AI Council Framework</a></li>

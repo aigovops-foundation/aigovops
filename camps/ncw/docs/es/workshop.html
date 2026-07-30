@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<!-- Machine-drafted translation — pending native-speaker review. -->
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Las Reglas, en la Práctica (The Rules, Hands-On) — Taller matutino — NCW AI Expo 2026</title>
+<meta name="description" content="Taller matutino, de 9:00 a.m. a 12:00 p.m., 11 de agosto de 2026. Siete mesas por perfil, cuatro laboratorios prácticos y una Lista de Verificación de Gobernanza de IA para los Primeros 30 Días que ustedes mismos escriben." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232E7D4F'/%3E%3Cpath d='M4 22 L11 11 L16 18 L21 9 L28 22 Z' fill='%23FAF7F0'/%3E%3Ccircle cx='24' cy='8' r='3' fill='%23E07A2A'/%3E%3C/svg%3E" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/css/custom.css" />
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { orchard:'#2E7D4F','orchard-dark':'#23613D', signal:'#E07A2A','signal-dark':'#C4661C', cream:'#FAF7F0','cream-deep':'#F1EAD8', charcoal:'#2B2B28' },
+    fontFamily: { serif:['Lora','Georgia','serif'], sans:['Inter','system-ui','sans-serif'] } } } };
+</script>
+<style>.font-600{font-weight:600}.font-700{font-weight:700}.font-500{font-weight:500}</style>
+
+  <link rel="canonical" href="https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/es/workshop.html">
+  <link rel="alternate" hreflang="en" href="https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/workshop.html">
+  <link rel="alternate" hreflang="es" href="https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/es/workshop.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AiGovOps Foundation">
+  <meta property="og:title" content="Las Reglas, en la Práctica (The Rules, Hands-On) — Taller matutino — NCW AI Expo 2026">
+  <meta property="og:description" content="Taller matutino, de 9:00 a.m. a 12:00 p.m., 11 de agosto de 2026. Siete mesas por perfil, cuatro laboratorios prácticos y una Lista de Verificación de Gobernanza de IA para los Primeros 30 Días que ustedes mismos escriben.">
+  <meta property="og:url" content="https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/es/workshop.html">
+  <meta property="og:image" content="https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/assets/img/hero-orchard.jpg">
+  <meta name="twitter:image" content="https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/assets/img/hero-orchard.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Las Reglas, en la Práctica (The Rules, Hands-On) — Taller matutino — NCW AI Expo 2026">
+  <meta name="twitter:description" content="Taller matutino, de 9:00 a.m. a 12:00 p.m., 11 de agosto de 2026. Siete mesas por perfil, cuatro laboratorios prácticos y una Lista de Verificación de Gobernanza de IA para los Primeros 30 Días que ustedes mismos escriben.">
+</head>
+<body class="font-sans antialiased text-charcoal" data-page="workshop" data-base="../">
+<div id="site-header"></div>
+<main id="main-content">
+
+<!-- ===== LANGUAGE TOGGLE ===== -->
+<div class="max-w-7xl mx-auto px-5 sm:px-8 pt-4 no-print">
+  <a href="../workshop.html" lang="en" hreflang="en" class="inline-flex items-center gap-1.5 rounded-full border border-charcoal/15 bg-white/80 hover:bg-white transition-colors text-charcoal/75 hover:text-orchard font-600 text-[13px] px-3.5 py-1.5">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg>
+    English
+  </a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 -z-10">
+    <img src="../assets/img/gathering.jpg" alt="Vecinos de todas las edades trabajando juntos alrededor de mesas en un salón iluminado por el sol" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-b from-cream/92 via-cream/84 to-cream/96"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-cream/85 to-transparent"></div>
+  </div>
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 pt-14 pb-16 sm:pt-20 sm:pb-24">
+    <div class="max-w-3xl">
+      <div class="inline-flex items-center gap-2 rounded-full bg-white/75 border border-orchard/20 px-4 py-1.5 text-[13px] font-600 text-orchard mb-7">
+        <span class="w-2 h-2 rounded-full bg-signal animate-pulse"></span>
+        Taller matutino · AI Expo 2026
+      </div>
+      <h1 class="font-serif font-700 leading-[1.05] tracking-tight text-charcoal text-[2.4rem] sm:text-5xl md:text-6xl">
+        Las Reglas, en la Práctica (The Rules, Hands-On)<span class="block text-orchard mt-2">Construya sus primeros 30 días de gobernanza de IA</span>
+      </h1>
+      <p class="mt-6 inline-flex flex-wrap items-center gap-x-3 gap-y-1 text-sm font-600 text-charcoal/70">
+        <span class="inline-flex items-center gap-1.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-signal"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>9:00 a.m. a 12:00 p.m.</span>
+        <span class="text-charcoal/30">·</span>
+        <span class="inline-flex items-center gap-1.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-signal"><path d="M8 2v4M16 2v4M3 9h18M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg>11 de agosto de 2026</span>
+        <span class="text-charcoal/30">·</span>
+        <span class="inline-flex items-center gap-1.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-signal"><path d="M12 21s-8-4.5-8-11a8 8 0 0 1 16 0c0 6.5-8 11-8 11z"/><circle cx="12" cy="10" r="3"/></svg>Wenatchee Convention Center</span>
+      </p>
+      <p class="mt-7 text-lg sm:text-xl text-charcoal/80 max-w-2xl leading-relaxed">
+        Esta sesión no se mira. <span class="font-600 text-charcoal">Se construye.</span> Siete mesas, siete mundos y una lista de verificación que ustedes mismos escriben.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-3">
+        <a href="https://www.eventbrite.com/e/ai-expo-2026-tickets-1990674563206" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex justify-center items-center gap-2 rounded-full bg-signal hover:bg-signal-dark transition-colors text-white font-700 text-lg px-9 py-4 shadow-lg shadow-signal/25">Reserve su lugar en Eventbrite<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+        <a href="checklist.html" class="w-full sm:w-auto inline-flex justify-center items-center rounded-full bg-white/85 hover:bg-white border border-charcoal/10 transition-colors text-charcoal font-600 text-lg px-9 py-4">Vea la lista de verificación</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS ROW ===== -->
+<section class="border-y border-cream-deep bg-white/60">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    <div><p class="font-serif font-700 text-4xl sm:text-5xl text-orchard"><span data-count="7">7</span></p><p class="mt-1 text-sm font-600 text-charcoal/60 uppercase tracking-wide">mesas por perfil</p></div>
+    <div><p class="font-serif font-700 text-4xl sm:text-5xl text-orchard"><span data-count="4">4</span></p><p class="mt-1 text-sm font-600 text-charcoal/60 uppercase tracking-wide">laboratorios prácticos</p></div>
+    <div><p class="font-serif font-700 text-4xl sm:text-5xl text-orchard"><span data-count="95">95</span></p><p class="mt-1 text-sm font-600 text-charcoal/60 uppercase tracking-wide">minutos de trabajo en mesa</p></div>
+    <div><p class="font-serif font-700 text-4xl sm:text-5xl text-signal"><span data-count="1">1</span></p><p class="mt-1 text-sm font-600 text-charcoal/60 uppercase tracking-wide">lista de verificación para llevar a casa</p></div>
+  </div>
+</section>
+
+<!-- ===== FIND YOUR TABLE ===== -->
+<section id="tables" class="max-w-7xl mx-auto px-5 sm:px-8 py-16 sm:py-24">
+  <div class="max-w-2xl fade-in">
+    <p class="text-sm font-700 uppercase tracking-[0.18em] text-signal mb-3">Siete mesas, siete mundos</p>
+    <h2 class="font-serif font-700 text-3xl sm:text-4xl text-charcoal leading-tight">Encuentre su mesa</h2>
+    <p class="mt-4 text-charcoal/70 text-lg leading-relaxed">Se sentará con personas que comparten su mundo, y pasará la mañana resolviendo su propio problema en lugar de ver a otra persona resolver el suyo. Elija la mesa que se parezca a su día de trabajo.</p>
+  </div>
+  <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    <div class="sc-yellow rounded-2xl bg-white border border-charcoal/10 overflow-hidden fade-in">
+      <div class="h-1.5" style="background:var(--sc)"></div>
+      <div class="p-6">
+        <div class="flex items-center gap-2.5 mb-3"><span class="text-xl" aria-hidden="true">🟡</span><span class="text-[11px] font-700 uppercase tracking-wider px-2.5 py-1 rounded-full" style="background:var(--sc-soft);color:var(--sc)">Mesa 1</span></div>
+        <h3 class="font-serif font-700 text-xl text-charcoal leading-snug">Docentes</h3>
+        <p class="mt-2.5 text-charcoal/70 text-[15px] leading-relaxed">La IA se encarga de las cuatro horas de papeleo; usted conserva el criterio, la relación con el estudiante y la chispa de enseñar.</p>
+      </div>
+    </div>
+    <div class="sc-blue rounded-2xl bg-white border border-charcoal/10 overflow-hidden fade-in">
+      <div class="h-1.5" style="background:var(--sc)"></div>
+      <div class="p-6">
+        <div class="flex items-center gap-2.5 mb-3"><span class="text-xl" aria-hidden="true">🔵</span><span class="text-[11px] font-700 uppercase tracking-wider px-2.5 py-1 rounded-full" style="background:var(--sc-soft);color:var(--sc)">Mesa 2</span></div>
+        <h3 class="font-serif font-700 text-xl text-charcoal leading-snug">Estudiantes</h3>
+        <p class="mt-2.5 text-charcoal/70 text-[15px] leading-relaxed">Una IA que discute con usted lo vuelve más agudo. Una IA que escribe por usted lo vuelve invisible. Aprenda la diferencia y demuéstrela.</p>
+      </div>
+    </div>
+    <div class="sc-green rounded-2xl bg-white border border-charcoal/10 overflow-hidden fade-in">
+      <div class="h-1.5" style="background:var(--sc)"></div>
+      <div class="p-6">
+        <div class="flex items-center gap-2.5 mb-3"><span class="text-xl" aria-hidden="true">🟢</span><span class="text-[11px] font-700 uppercase tracking-wider px-2.5 py-1 rounded-full" style="background:var(--sc-soft);color:var(--sc)">Mesa 3</span></div>
+        <h3 class="font-serif font-700 text-xl text-charcoal leading-snug">Personal directivo escolar</h3>
+        <p class="mt-2.5 text-charcoal/70 text-[15px] leading-relaxed">Convierta la política de uso aceptable de 40 páginas que nadie lee en cinco frases que todos cumplen, y con comprobantes.</p>
+      </div>
+    </div>
+    <div class="sc-purple rounded-2xl bg-white border border-charcoal/10 overflow-hidden fade-in">
+      <div class="h-1.5" style="background:var(--sc)"></div>
+      <div class="p-6">
+        <div class="flex items-center gap-2.5 mb-3"><span class="text-xl" aria-hidden="true">🟣</span><span class="text-[11px] font-700 uppercase tracking-wider px-2.5 py-1 rounded-full" style="background:var(--sc-soft);color:var(--sc)">Mesa 4</span></div>
+        <h3 class="font-serif font-700 text-xl text-charcoal leading-snug">Concejo municipal y gobierno local</h3>
+        <p class="mt-2.5 text-charcoal/70 text-[15px] leading-relaxed">Informes al concejo, comentarios del público, solicitudes de registros. Más rápido con IA, y justo de forma demostrable, o mejor no hacerlo.</p>
+      </div>
+    </div>
+    <div class="sc-orange rounded-2xl bg-white border border-charcoal/10 overflow-hidden fade-in">
+      <div class="h-1.5" style="background:var(--sc)"></div>
+      <div class="p-6">
+        <div class="flex items-center gap-2.5 mb-3"><span class="text-xl" aria-hidden="true">🟠</span><span class="text-[11px] font-700 uppercase tracking-wider px-2.5 py-1 rounded-full" style="background:var(--sc-soft);color:var(--sc)">Mesa 5</span></div>
+        <h3 class="font-serif font-700 text-xl text-charcoal leading-snug">Dueños de negocios pequeños</h3>
+        <p class="mt-2.5 text-charcoal/70 text-[15px] leading-relaxed">La IA se encarga del trabajo invisible y tedioso. Usted conserva cada momento con su clientela.</p>
+      </div>
+    </div>
+    <div class="sc-teal rounded-2xl bg-white border border-charcoal/10 overflow-hidden fade-in">
+      <div class="h-1.5" style="background:var(--sc)"></div>
+      <div class="p-6">
+        <div class="flex items-center gap-2.5 mb-3"><span class="text-xl" aria-hidden="true">⚡</span><span class="text-[11px] font-700 uppercase tracking-wider px-2.5 py-1 rounded-full" style="background:var(--sc-soft);color:var(--sc)">Mesa 6</span></div>
+        <h3 class="font-serif font-700 text-xl text-charcoal leading-snug">Servicios públicos y centros de datos</h3>
+        <p class="mt-2.5 text-charcoal/70 text-[15px] leading-relaxed">La red eléctrica del valle funciona con confianza. Avisos de cortes, consultas de cumplimiento y lo que significan para todos los centros de datos que están llegando.</p>
+      </div>
+    </div>
+    <div class="sc-clay rounded-2xl bg-white border border-charcoal/10 overflow-hidden fade-in">
+      <div class="h-1.5" style="background:var(--sc)"></div>
+      <div class="p-6">
+        <div class="flex items-center gap-2.5 mb-3"><span class="text-xl" aria-hidden="true">🪶</span><span class="text-[11px] font-700 uppercase tracking-wider px-2.5 py-1 rounded-full" style="background:var(--sc-soft);color:var(--sc)">Mesa 7</span></div>
+        <h3 class="font-serif font-700 text-xl text-charcoal leading-snug">Miembros de comunidades tribales</h3>
+        <p class="mt-2.5 text-charcoal/70 text-[15px] leading-relaxed">Soberanía de los datos, idioma y cultura. Una IA que no llega a todas las personas no vale la electricidad que consume.</p>
+      </div>
+    </div>
+  </div>
+  <div class="mt-8">
+    <a href="../mini-camps.html" class="inline-flex items-center gap-2 font-700 text-orchard hover:text-orchard-dark transition-colors">Vea los mini-camps detrás de cada mesa<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</section>
+
+<!-- ===== THE FOUR LABS ===== -->
+<section id="labs" class="bg-cream-deep/50 py-16 sm:py-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl mb-10 fade-in">
+      <p class="text-sm font-700 uppercase tracking-[0.18em] text-signal mb-3">De 5 a 7 minutos cada uno</p>
+      <h2 class="font-serif font-700 text-3xl sm:text-4xl text-charcoal leading-tight">Los cuatro laboratorios</h2>
+      <p class="mt-4 text-charcoal/70 text-lg leading-relaxed">Mismo formato que los mini-camps: guion → herramienta → resultado bueno probable → resultado malo probable → lección clave. Su mesa hace el trabajo; las personas facilitadoras hacen las preguntas.</p>
+    </div>
+    <div class="rounded-2xl border border-charcoal/10 bg-white overflow-hidden fade-in">
+      <div class="overflow-x-auto" tabindex="0" role="region" aria-label="Los cuatro laboratorios">
+      <table class="w-full text-left">
+        <thead><tr class="bg-cream-deep/60 text-[12px] uppercase tracking-wider text-charcoal/55">
+          <th class="py-3 px-4 font-700">Laboratorio</th><th class="py-3 px-4 font-700">Ustedes van a</th><th class="py-3 px-4 font-700">La lección clave</th>
+        </tr></thead>
+        <tbody>
+          <tr class="border-t border-charcoal/8">
+            <td class="py-3 px-4 align-top font-700 text-charcoal">Rómpanlo ustedes mismos</td>
+            <td class="py-3 px-4 align-top text-charcoal/75 text-[14px]">Pegar un documento de apariencia inofensiva en un chatbot y ver cómo obedece un texto que usted no puede ver (inyección de instrucciones en letra blanca).</td>
+            <td class="py-3 px-4 align-top text-charcoal/75 text-[14px]">Revise lo que ve la máquina, no lo que ve usted.</td>
+          </tr>
+          <tr class="border-t border-charcoal/8">
+            <td class="py-3 px-4 align-top font-700 text-charcoal">Clasifiquen las fallas</td>
+            <td class="py-3 px-4 align-top text-charcoal/75 text-[14px]">Tomar 8 fallas reales de IA &mdash; Chevy Tahoe, Air Canada, Workday, CIGNA, Hugging Face &mdash; y ubicarlas en las 6 capas de AiGovOps.</td>
+            <td class="py-3 px-4 align-top text-charcoal/75 text-[14px]">Detrás de cada falla famosa hay una capa que nadie tuvo a su cargo.</td>
+          </tr>
+          <tr class="border-t border-charcoal/8">
+            <td class="py-3 px-4 align-top font-700 text-charcoal">El mini-camp de su perfil</td>
+            <td class="py-3 px-4 align-top text-charcoal/75 text-[14px]">Hacer el laboratorio de 5 minutos creado para el mundo de su mesa, y luego provocar el resultado malo a propósito.</td>
+            <td class="py-3 px-4 align-top text-charcoal/75 text-[14px]">La herramienta es la parte fácil. El hábito es la regla.</td>
+          </tr>
+          <tr class="border-t border-charcoal/8">
+            <td class="py-3 px-4 align-top font-700 text-charcoal">Evalúen sus propios riesgos</td>
+            <td class="py-3 px-4 align-top text-charcoal/75 text-[14px]">Evaluar con HARMS el uso de IA que acaban de hacer: a quién afecta, el peor escenario, la defensa, quién responde y el comprobante.</td>
+            <td class="py-3 px-4 align-top text-charcoal/75 text-[14px]">Reducir el riesgo es un proceso de pensamiento humano. No se le puede encargar a la IA.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHAT YOU LEAVE WITH ===== -->
+<section class="max-w-7xl mx-auto px-5 sm:px-8 py-16 sm:py-24">
+  <div class="grid lg:grid-cols-[1fr,1.2fr] gap-10 lg:gap-16 items-start">
+    <div class="fade-in">
+      <p class="text-sm font-700 uppercase tracking-[0.18em] text-signal mb-3">El resultado de la mañana</p>
+      <h2 class="font-serif font-700 text-3xl sm:text-4xl text-charcoal leading-tight">Con qué se van</h2>
+      <p class="mt-4 text-charcoal/70 text-lg leading-relaxed">No con apuntes. Con un plan de gobernanza de una página para su propio mundo, escrito por las personas que tienen que vivir con él, más las herramientas para seguir adelante el miércoles por la mañana.</p>
+      <a href="checklist.html" class="mt-6 inline-flex items-center gap-2 font-700 text-orchard hover:text-orchard-dark transition-colors">Abra la Lista de los Primeros 30 Días<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4 fade-in">
+      <a href="checklist.html" class="group rounded-2xl bg-white border border-charcoal/10 p-6 lift flex flex-col">
+        <span class="text-3xl mb-3" aria-hidden="true">✅</span>
+        <h3 class="font-serif font-700 text-lg text-charcoal leading-snug">Lista de los Primeros 30 Días</h3>
+        <p class="mt-1.5 text-[14px] text-charcoal/65 flex-1">Completada por su mesa, para su mundo: seis filas, una página.</p>
+        <span class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-700 text-orchard group-hover:gap-2.5 transition-all">Abrir la página<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a href="../downloads/get-started-30-days.pdf" target="_blank" rel="noopener noreferrer" class="group rounded-2xl bg-white border border-charcoal/10 p-6 lift flex flex-col">
+        <span class="text-3xl mb-3" aria-hidden="true">🗓️</span>
+        <h3 class="font-serif font-700 text-lg text-charcoal leading-snug">La guía de inicio de 30 días</h3>
+        <p class="mt-1.5 text-[14px] text-charcoal/65 flex-1">Qué hacer en la primera semana, en la segunda y en el resto del mes. Edición del taller, borrador v0.9.</p>
+        <span class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-700 text-orchard group-hover:gap-2.5 transition-all">Descargar PDF<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg></span>
+      </a>
+      <a href="../downloads/harms-worksheet.pdf" target="_blank" rel="noopener noreferrer" class="group rounded-2xl bg-white border border-charcoal/10 p-6 lift flex flex-col">
+        <span class="text-3xl mb-3" aria-hidden="true">🛡️</span>
+        <h3 class="font-serif font-700 text-lg text-charcoal leading-snug">La hoja de trabajo HARMS</h3>
+        <p class="mt-1.5 text-[14px] text-charcoal/65 flex-1">En blanco y reutilizable: evalúe el próximo uso de IA de la misma manera.</p>
+        <span class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-700 text-orchard group-hover:gap-2.5 transition-all">Descargar PDF<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg></span>
+      </a>
+      <a href="../pledge.html" class="group rounded-2xl bg-white border border-charcoal/10 p-6 lift flex flex-col">
+        <span class="text-3xl mb-3" aria-hidden="true">✍️</span>
+        <h3 class="font-serif font-700 text-lg text-charcoal leading-snug">Una invitación a firmar el Compromiso</h3>
+        <p class="mt-1.5 text-[14px] text-charcoal/65 flex-1">Siete compromisos, firmados en la sala durante la sesión plenaria de la tarde.</p>
+        <span class="mt-4 inline-flex items-center gap-1.5 text-[13px] font-700 text-orchard group-hover:gap-2.5 transition-all">Leer el compromiso<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLOSING CTA ===== -->
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 -z-10"><img src="../assets/img/classroom.jpg" alt="Un salón de clases luminoso con estudiantes trabajando codo a codo" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-orchard/88"></div></div>
+  <div class="max-w-3xl mx-auto px-5 sm:px-8 py-20 sm:py-28 text-center text-cream fade-in">
+    <h2 class="font-serif font-700 text-3xl sm:text-5xl leading-tight">Llegó como parte del público.<br>Se irá como el primer equipo de<br>gobernanza de su comunidad.</h2>
+    <p class="mt-6 text-cream/85 text-lg max-w-xl mx-auto">Los lugares se asignan por mesa: inscríbase en Eventbrite y elija la opción &ldquo;Morning hands-on workshop sessions&rdquo; (sesiones prácticas del taller matutino).</p>
+    <p class="mt-4 text-cream/80 text-[15px] max-w-xl mx-auto">¿Ya se inscribió? <a href="../survey.html" class="font-700 text-cream underline hover:no-underline">Responda tres preguntas antes de venir</a> &mdash; y su mesa lo estará esperando. ¿Ya participó en el taller? <a href="../survey-after.html" class="font-700 text-cream underline hover:no-underline">Cuéntenos cómo le fue</a>.</p>
+    <a href="https://www.eventbrite.com/e/ai-expo-2026-tickets-1990674563206" target="_blank" rel="noopener noreferrer" class="mt-9 inline-flex justify-center items-center gap-2 rounded-full bg-signal hover:bg-signal-dark transition-colors text-white font-700 text-lg px-10 py-4 shadow-xl">Inscríbase en Eventbrite<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+  </div>
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+<script src="../assets/js/shared.js"></script>
+</body>
+</html>

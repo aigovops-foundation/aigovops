@@ -27,6 +27,11 @@ const PAGES = [
   { path: "/support.html", name: "Support" },
   { path: "/about.html", name: "About" },
   { path: "/plan.html", name: "Plan" },
+  { path: "/supporters.html", name: "Supporters" },
+  { path: "/survey.html", name: "Survey (pre)" },
+  { path: "/survey-after.html", name: "Survey (post)" },
+  { path: "/es/workshop.html", name: "Workshop (ES)" },
+  { path: "/es/checklist.html", name: "Checklist (ES)" },
 ];
 
 for (const { path, name } of PAGES) {

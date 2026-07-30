@@ -50,7 +50,9 @@ The canonical, editable markdown source for every artifact in the program.
 | `02-facilitator-run-of-show.md` | Minute-by-minute for facilitators |
 | `03-centerpiece-session.md` | The 60-min plenary script with the Deep Think + Model Council live demo |
 | `04-one-pagers.md` | Source for the 4 printable one-pagers |
+| `04-one-pagers-spanish.md` | Spanish edition of the table-kit one-pagers (machine draft — native review pending) |
 | `05-gamma-deck-outline.md` | 60-slide master deck — paste into Gamma's "import from outline" |
+| `05-gamma-deck-spanish.md` | Spanish edition of the 60-slide deck, import-ready (machine draft — native review pending) |
 | `06-pledge-and-two-futures.md` | The 7-Point Pledge + Maria/Jake "two futures" story (EN) |
 | `07-mini-camps.md` | All 35 mini-camps (5 scenarios × 7 voices) |
 | `08-substack-morning-of.md` | Substack post Ken & Bob publish the morning of |
@@ -61,6 +63,18 @@ The canonical, editable markdown source for every artifact in the program.
 | `13-custom-domain-guide.md` | How to point `ncw.aigovops-foundation.com` at the live webapp |
 | `14-trailer-script.md` | 90-second trailer narration + 12-shot storyboard + ElevenLabs settings |
 | `15-qa-report.md` | End-to-end QA review — 34 findings, fact-checked stats, link audit |
+| `16-mini-camp-video-scripts.md` | Production-master narration scripts for the 35 mini-camp videos |
+| `16-mini-camp-video-shotlist.csv` | Shot list for the mini-camp videos |
+| `17-centerpiece-and-breakout-video-scripts.md` | Centerpiece + breakout video scripts |
+| `17-centerpiece-and-breakout-shotlist.csv` | Shot list for the centerpiece + breakout videos |
+| `18-production-plan.md` | Video & audio production plan |
+| `19-url-audit.md` | URL audit — every link verified |
+| `20-demo-scripts.md` | 25 live demo scripts |
+| `21-demo-tutorials.md` | 25 good-AI / bad-AI demo tutorials |
+| `22-vendor-sponsorship.md` | Vendor sponsorship ask — outreach + page |
+| `23-sponsor-tracker.md` | Sponsor send + reply tracker — one row per vendor, day-7 nudge template |
+| `24-improvement-master-plan.md` | **T-13 → showtime improvement master plan** — this wave's 10 workstreams, owners, and timeline |
+| `25-sponsor-outreach-drafts.md` | 16 ready-to-send sponsor outreach emails — one per vendor, with send plan |
 | `authoring/mini-camps-booklet.pdf` | Print-ready 32-page saddle-stitch booklet (8.5×11) |
 
 ### `/docs/trailer-frames` — Cinema-quality storyboard

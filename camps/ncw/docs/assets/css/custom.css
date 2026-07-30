@@ -10,9 +10,6 @@ body { background-color: #FAF7F0; color: #1F1F1F; }
    That property thins glyphs on WebKit/macOS/iOS and causes axe-core
    to read a lighter computed color, failing 4.5:1 contrast checks. */
 
-/* tiny breakpoint so the wordmark can appear a touch earlier */
-@media (min-width: 420px) { .xs\:block { display: block; } }
-
 /* Scroll fade-in — progressive enhancement only.
    Content is NEVER persistently hidden. There is no opacity:0 resting
    state: no-JS visitors, search crawlers, axe-core, and headless
@@ -80,7 +77,14 @@ details[open] .ev-chevron { transform: rotate(90deg); }
 :focus-visible { outline: 2px solid #2E7D4F; outline-offset: 3px; border-radius: 6px; }
 
 /* ===== Tools / Hint-Logs sections ===== */
-.alink { color:#2E7D4F; font-weight:600; text-decoration:underline; text-decoration-color:rgba(46,125,79,.35); text-underline-offset:2px; transition:color .15s ease; }
+/* Tool pages use the bare URL as its own link text, so a single "word" can run
+   80+ characters. These carried Tailwind's `break-words`, but break-word lets a
+   long word wrap without shrinking its min-content contribution, so in WebKit
+   the enclosing grid track never narrowed past the URL and the page scrolled
+   sideways at 390px. `anywhere` does shrink it. It lives here rather than as a
+   utility because the Tailwind CDN sheet loads after this file, so `break-words`
+   would win on source order -- the class was removed from the markup instead. */
+.alink { color:#2E7D4F; font-weight:600; text-decoration:underline; text-decoration-color:rgba(46,125,79,.35); text-underline-offset:2px; transition:color .15s ease; overflow-wrap:anywhere; }
 .alink:hover { color:#23613D; text-decoration-color:#23613D; }
 .hl-table th, .hl-table td { vertical-align: top; }
 
