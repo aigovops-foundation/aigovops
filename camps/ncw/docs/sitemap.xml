@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/about.html</loc></url>
   <url><loc>https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/centerpiece.html</loc></url>
+  <url><loc>https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/checklist.html</loc></url>
   <url><loc>https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/courses.html</loc></url>
   <url><loc>https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/demos.html</loc></url>
   <url><loc>https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/hint-logs.html</loc></url>
@@ -30,4 +31,5 @@
   <url><loc>https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/tools/perplexity.html</loc></url>
   <url><loc>https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/tools/replit.html</loc></url>
   <url><loc>https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/tools/wispr-flow.html</loc></url>
+  <url><loc>https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/workshop.html</loc></url>
 </urlset>

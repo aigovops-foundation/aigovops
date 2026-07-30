@@ -57,6 +57,11 @@ details[open] .ev-chevron { transform: rotate(90deg); }
 .sc-yellow { --sc: #C99700; --sc-soft: #F6EECF; }
 .sc-orange { --sc: #E07A2A; --sc-soft: #F8E9DA; }
 .sc-purple { --sc: #7A4FB0; --sc-soft: #ECE4F4; }
+.sc-teal   { --sc: #146C72; --sc-soft: #DDEEEF; }
+.sc-clay   { --sc: #8A3A2E; --sc-soft: #F6E3DF; }
+
+/* Fill-in-the-blank rule for the printable First-30-Days checklist */
+.cl-fill { display: inline-block; min-width: 8rem; max-width: 100%; border-bottom: 1.5px solid rgba(31,31,31,.4); }
 
 /* gentle grain-free divider */
 .rule-soft { height: 1px; background: linear-gradient(90deg, transparent, rgba(31,31,31,.12), transparent); }
@@ -166,6 +171,8 @@ html [class~="hover:text-orchard"]:hover {
 .sc-yellow { --sc: #5A4400; }
 .sc-orange { --sc: #6B340F; }
 .sc-purple { --sc: #432765; }
+.sc-teal   { --sc: #0E4A4F; }
+.sc-clay   { --sc: #6E2A20; }
 
 /* 7. fade-in elements are visible at rest (see the fade-up keyframe
       near the top of this file — the entrance is a one-shot animation,

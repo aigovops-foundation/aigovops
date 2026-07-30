@@ -21,6 +21,7 @@
     { href: "plan.html", key: "plan", label: "The Plan" },
     { href: "centerpiece.html", key: "centerpiece", label: "Centerpiece" },
     { href: "mini-camps.html", key: "mini-camps", label: "Mini-Camps" },
+    { href: "workshop.html", key: "workshop", label: "Workshop" },
     { href: "demos.html", key: "demos", label: "Demo Lab" },
     { href: "tools.html", key: "tools", label: "Tools" },
     { href: "courses.html", key: "courses", label: "Courses" },
@@ -145,6 +146,8 @@
                 <li><a href="${href('plan.html')}" class="text-cream/75 hover:text-signal transition-colors">The Plan & breakouts</a></li>
                 <li><a href="${href('centerpiece.html')}" class="text-cream/75 hover:text-signal transition-colors">The Centerpiece plenary</a></li>
                 <li><a href="${href('mini-camps.html')}" class="text-cream/75 hover:text-signal transition-colors">The mini-camps</a></li>
+                <li><a href="${href('workshop.html')}" class="text-cream/75 hover:text-signal transition-colors">The Rules, Hands-On workshop</a></li>
+                <li><a href="${href('checklist.html')}" class="text-cream/75 hover:text-signal transition-colors">The First-30-Days Checklist</a></li>
                 <li><a href="${href('resources.html')}" class="text-cream/75 hover:text-signal transition-colors">Resources & downloads</a></li>
               </ul>
             </div>

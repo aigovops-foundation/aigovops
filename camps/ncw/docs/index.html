@@ -94,7 +94,7 @@
   <div class="max-w-2xl fade-in">
     <p class="text-sm font-700 uppercase tracking-[0.18em] text-signal mb-3">Five scenarios, one rule</p>
     <h2 class="font-serif font-700 text-3xl sm:text-4xl text-charcoal leading-tight">A camp for everyone who walks in the door</h2>
-    <p class="mt-4 text-charcoal/70 text-lg leading-relaxed">Thirty-five hands-on mini-camps, built from five real NCW scenarios. The human stays in the driver's seat. AI does the painful work. Always truth-grounded.</p>
+    <p class="mt-4 text-charcoal/70 text-lg leading-relaxed">Thirty-five hands-on mini-camps, built from five real NCW scenarios. The human stays in the driver's seat. AI does the painful work. Always truth-grounded. Two more lanes — utility &amp; data center, and tribal members — get their own tables at <a href="workshop.html" class="font-700 text-orchard hover:underline">the morning workshop</a>.</p>
   </div>
   <!-- Static fallback: the five scenario cards are baked in from
        assets/js/mini-camps-data.js (single source of truth) so the grid
@@ -149,6 +149,30 @@
       </div>
     </a>
   </div>
+  <!-- The two workshop persona lanes live outside #scenarioCards on purpose:
+       that grid is re-rendered from window.SCENARIOS, which stays the
+       canonical five. Same card component, same grid metrics, so the seven
+       read as one continuous set. -->
+  <div class="mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    <a href="workshop.html" class="group sc-teal block rounded-2xl bg-white border border-charcoal/10 overflow-hidden lift fade-in">
+      <div class="h-1.5" style="background:var(--sc)"></div>
+      <div class="p-6">
+        <div class="flex items-center gap-2.5 mb-3"><span class="text-xl" aria-hidden="true">⚡</span><span class="text-[11px] font-700 uppercase tracking-wider px-2.5 py-1 rounded-full" style="background:var(--sc-soft);color:var(--sc)">Utility</span></div>
+        <h3 class="font-serif font-700 text-xl text-charcoal leading-snug">The grid keeps its promises</h3>
+        <p class="mt-2.5 text-charcoal/70 text-[15px] leading-relaxed">AI drafts the outage notice, checks the WAC citation, and writes the commission minutes — the engineer keeps the judgment call and the community keeps the lights. With Sabey and friends building in our valley, NCW writes the rules before the racks arrive.</p>
+        <p class="mt-4 inline-flex items-center gap-1.5 font-700 text-[14px] group-hover:gap-2.5 transition-all" style="color:var(--sc)">Open these camps<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+      </div>
+    </a>
+    <a href="workshop.html" class="group sc-clay block rounded-2xl bg-white border border-charcoal/10 overflow-hidden lift fade-in">
+      <div class="h-1.5" style="background:var(--sc)"></div>
+      <div class="p-6">
+        <div class="flex items-center gap-2.5 mb-3"><span class="text-xl" aria-hidden="true">🪶</span><span class="text-[11px] font-700 uppercase tracking-wider px-2.5 py-1 rounded-full" style="background:var(--sc-soft);color:var(--sc)">Tribal</span></div>
+        <h3 class="font-serif font-700 text-xl text-charcoal leading-snug">Sovereignty includes data</h3>
+        <p class="mt-2.5 text-charcoal/70 text-[15px] leading-relaxed">AI researches treaty context, drafts the trilingual notice, and captures the elder's story in her own words — the tribe keeps the data, the language, and the decision. AI that doesn't reach everyone isn't worth the electricity.</p>
+        <p class="mt-4 inline-flex items-center gap-1.5 font-700 text-[14px] group-hover:gap-2.5 transition-all" style="color:var(--sc)">Open these camps<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+      </div>
+    </a>
+  </div>
   <div class="mt-8">
     <a href="mini-camps.html" class="inline-flex items-center gap-2 font-700 text-orchard hover:text-orchard-dark transition-colors">Browse all 11 written camps<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
@@ -190,6 +214,7 @@
     <div class="space-y-3 fade-in">
       <div class="flex gap-5 rounded-2xl bg-white border border-charcoal/10 p-5"><div class="shrink-0 font-serif font-700 text-orchard text-lg w-20">8:30</div><div><p class="font-700 text-charcoal">Doors & coffee</p><p class="text-sm text-charcoal/60">Wenatchee Convention Center lobby</p></div></div>
       <div class="flex gap-5 rounded-2xl bg-orchard text-cream p-5"><div class="shrink-0 font-serif font-700 text-lg w-20">9:00</div><div><p class="font-700">Centerpiece plenary — AI as Partner in Education</p><p class="text-sm text-cream/75">Maria vs Jake · the evidence · a live Deep Think + Model Council demo</p></div></div>
+      <a href="workshop.html" class="flex gap-5 rounded-2xl bg-white border border-charcoal/10 p-5 lift"><div class="shrink-0 font-serif font-700 text-orchard text-[15px] leading-tight w-20">9:00–12:00</div><div><p class="font-700 text-charcoal">The Rules, Hands-On (workshop rooms)</p><p class="text-sm text-charcoal/60">Seven persona tables build their First-30-Days AI Governance Checklist. Grab a seat →</p></div></a>
       <div class="flex gap-5 rounded-2xl bg-white border border-charcoal/10 p-5"><div class="shrink-0 font-serif font-700 text-orchard text-lg w-20">10:15</div><div><p class="font-700 text-charcoal">Breakouts, round 1</p><p class="text-sm text-charcoal/60">Cool Tools · Cool Schools · Build It in 60</p></div></div>
       <div class="flex gap-5 rounded-2xl bg-white border border-charcoal/10 p-5"><div class="shrink-0 font-serif font-700 text-orchard text-lg w-20">11:30</div><div><p class="font-700 text-charcoal">Breakouts, round 2</p><p class="text-sm text-charcoal/60">Cool Tools (repeat) · The Rules · Build It in 60 (repeat)</p></div></div>
       <div class="flex gap-5 rounded-2xl bg-white border border-charcoal/10 p-5"><div class="shrink-0 font-serif font-700 text-orchard text-lg w-20">12:45</div><div><p class="font-700 text-charcoal">Plenary Q&A & the pledge signing</p><p class="text-sm text-charcoal/60">Sli.do questions · sign v1.0 in the room</p></div></div>

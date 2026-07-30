@@ -16,6 +16,8 @@ const PAGES = [
   { path: "/", name: "Home" },
   { path: "/centerpiece.html", name: "Centerpiece" },
   { path: "/mini-camps.html", name: "Mini-camps" },
+  { path: "/workshop.html", name: "Workshop" },
+  { path: "/checklist.html", name: "Checklist" },
   { path: "/demos.html", name: "Demo Lab" },
   { path: "/tools.html", name: "Tools" },
   { path: "/courses.html", name: "Courses" },
