@@ -1,6 +1,30 @@
 {
-  "updated": "2026-07-29T19:30:36Z",
+  "updated": "2026-07-30T07:48:05Z",
   "bob": [
+    {
+      "title": "Well deserved - great work Joseph Landes and the entire Nerdio team",
+      "link": "https://www.linkedin.com/posts/bobrapp_well-deserved-great-work-joseph-landes-activity-7488430992551018496-IYRp",
+      "date": "Thu, 30 Jul 2026 03:11:17 GMT",
+      "summary": "Well deserved - great work Joseph Landes and the entire Nerdio team - they really get it",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "EU AI Act compliance countdown is ticking toward August 2026. Problem: Teams lack structured roadmaps to meet strict regulatory de...",
+      "link": "https://www.linkedin.com/posts/bobrapp_eu-ai-act-compliance-countdown-is-ticking-activity-7488353825167319041-lLVr",
+      "date": "Wed, 29 Jul 2026 22:04:39 GMT",
+      "summary": "EU AI Act compliance countdown is ticking toward August 2026. Problem: Teams lack structured roadmaps to meet strict regulatory demands. Solutions: Adopt expert-led governance frameworks and join our sessions. Summary: Proactive compliance protects your organization and builds tr",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Ignorance is no longer a legal shield. The Business Judgment Rule is evolving into BJR 2.0. In the era of AI, good faith requires...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ignorance-is-no-longer-a-legal-shield-the-activity-7488353411973926912-58GJ",
+      "date": "Wed, 29 Jul 2026 22:03:00 GMT",
+      "summary": "Ignorance is no longer a legal shield. The Business Judgment Rule is evolving into BJR 2.0. In the era of AI, good faith requires technical literacy. Passive reliance on black box algorithms is not just a risk—it is a breach of fiduciary duty. Boards must transition from legal pa",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Problem: Organizations struggle to measure AI governance progress across fragmented policies. Solutions: Utilize our 12 comprehens...",
       "link": "https://fr.linkedin.com/posts/bobrapp_problem-organizations-struggle-to-measure-activity-7488217526615642112-sHdF",
@@ -48,41 +72,17 @@
       "summary": "AI automation is a liability without the Rule of 2. Spain’s Instruction 2/2026 mandates real, conscious human oversight for high-stakes AI actions. AI自動化は強力ですが、2人のルールがなければリスクになります。スペインの指示2/2026は、AIのアクションに対して人間による監視を義務付けています。 PROBLEM: Autonomous agents can trigger catastrophic fin",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "As autonomous agents move from experimentation to production, \"Jesus take the wheel\" is not a security strategy. Problem: Traditio...",
-      "link": "https://www.linkedin.com/posts/bobrapp_as-autonomous-agents-move-from-experimentation-activity-7486526555494543360-NLxB",
-      "date": "Fri, 24 Jul 2026 21:03:44 GMT",
-      "summary": "As autonomous agents move from experimentation to production, \"Jesus take the wheel\" is not a security strategy. Problem: Traditional security fails when the entity making decisions is an AI. Without a robust identity and behavior framework, agents can become \"shadow AI\" with unc",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Static audits are a snapshot of the past: obsolete before the ink dries. In continuous deployment, manual checks are a safety haza...",
-      "link": "https://www.linkedin.com/posts/bobrapp_static-audits-are-a-snapshot-of-the-past-activity-7486526516626018306-bZkF",
-      "date": "Fri, 24 Jul 2026 21:03:35 GMT",
-      "summary": "Static audits are a snapshot of the past: obsolete before the ink dries. In continuous deployment, manual checks are a safety hazard. We must move to \"Governance-as-Code\" to operationalize repeatable, code-driven audits for continuous compliance. Treat governance with the same ri",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Your supply chain is only as strong as its weakest AI model. Relying on vendor \"trust\" is the governance equivalent of \"Jesus take...",
-      "link": "https://www.linkedin.com/posts/bobrapp_your-supply-chain-is-only-as-strong-as-its-activity-7486450889839448064-wHw4",
-      "date": "Fri, 24 Jul 2026 16:03:04 GMT",
-      "summary": "Your supply chain is only as strong as its weakest AI model. Relying on vendor \"trust\" is the governance equivalent of \"Jesus take the wheel.\" Problem: A \"governance gap\" exists where third-party AI enters organizations without scrutiny. Without verified data provenance or transp",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "The explosion of AI agents has created a silent security crisis. Most organizations are flying blind, managing thousands of Non-Hu...",
-      "link": "https://www.linkedin.com/posts/bobrapp_the-explosion-of-ai-agents-has-created-a-activity-7486436409453608960-bRVQ",
-      "date": "Fri, 24 Jul 2026 15:05:31 GMT",
-      "summary": "The explosion of AI agents has created a silent security crisis. Most organizations are flying blind, managing thousands of Non-Human Identities (NHIs) with no clear ownership or lifecycle management. L'explosion des agents d'IA a créé une crise de sécurité silencieuse. La plupar",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "NVIDIA's biggest advantage is no longer just the GPU.\n\nIt is the ecosystem built around it.\n\nFrom data preparation and model serving to AI agents, robotics, simulation, and enterprise deployment… | Greg Coquillo",
+      "link": "https://www.linkedin.com/posts/greg-coquillo_nvidias-biggest-advantage-is-no-longer-just-activity-7488266618981167107-KKAk",
+      "date": "Wed, 29 Jul 2026 16:18:07 GMT",
+      "summary": "NVIDIA's biggest advantage is no longer just the GPU. It is the ecosystem built around it. From data preparation and model serving to AI agents, robotics, simulation, and enterprise deployment, NVIDIA is creating a connected stack for the complete AI lifecycle. Here is how it com",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "Law can be thin or thick. Both kinds reach AI. But today, most companies are watching only one.\n\nThin law reduces conclusions to facts. A notice was shown, consent was obtained, an assessment was…",
       "link": "https://www.linkedin.com/posts/aaron-rieke-5a178b28_law-can-be-thin-or-thick-both-kinds-reach-activity-7488250078625677313-mPll",
@@ -132,6 +132,14 @@
       "author": "Ken Johnston"
     },
     {
+      "title": "Day 1 of Seattle Tech Week: officially in the books. 🔥\n\nKristina Orille and I ran a 12-hour lap through the Seattle startup scene yesterday, and I'm still buzzing 🤪\n\nSix events. One city. So many…",
+      "link": "https://www.linkedin.com/posts/ashleybright_day-1-of-seattle-tech-week-officially-in-activity-7487960895906750464-cydw",
+      "date": "Tue, 28 Jul 2026 20:03:17 GMT",
+      "summary": "Day 1 of Seattle Tech Week: officially in the books. 🔥 Kristina Orille and I ran a 12-hour lap through the Seattle startup scene yesterday, and I'm still buzzing 🤪 Six events. One city. So many good people. ☕ Founder Investor Day Party (TF Labs x Niftmint x CIBC) Started the day",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
       "title": "Where is your LLM holding you back? What will you do with the next wave of models? Physical AI! World Models! Where will they take us?\n\nThese are questions I've been obsessing over - trust me, my…",
       "link": "https://www.linkedin.com/posts/sarah-oates_where-is-your-llm-holding-you-back-what-activity-7487950650010529792-L4wr",
       "date": "Tue, 28 Jul 2026 19:22:34 GMT",
@@ -144,22 +152,6 @@
       "link": "https://www.linkedin.com/posts/fei-fei-li-4541247_when-scenix-joined-world-labs-we-said-spatial-activity-7487903224914423809-OpsZ",
       "date": "Tue, 28 Jul 2026 16:14:07 GMT",
       "summary": "",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Today’s the big day - come out and enjoy live music, delicious food and hear from some of Seattle’s most accomplished operators! \n\nDoors open at 1pm\n\nThank you Fenwick & West, Clark Nuber PS, HSBC…",
-      "link": "https://www.linkedin.com/posts/pablo-casilimas-1707a9113_todays-the-big-day-come-out-and-enjoy-activity-7487902662340894720-U-z5",
-      "date": "Tue, 28 Jul 2026 16:11:53 GMT",
-      "summary": "Today’s the big day - come out and enjoy live music, delicious food and hear from some of Seattle’s most accomplished operators! Doors open at 1pm Thank you Fenwick & West, Clark Nuber PS, HSBC Innovation Banking and Archera for making it possible!",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Can AI truly create music, or does authentic artistic authorship belong to humans?",
-      "link": "https://www.linkedin.com/posts/shanu-sushmita-3b49129_synthetic-souls-activity-7487901179494940672-KV3K",
-      "date": "Tue, 28 Jul 2026 16:06:00 GMT",
-      "summary": "Can AI truly create music, or does authentic artistic authorship belong to humans? Two talented students from Issaquah High School (WA) are leading an exciting research project investigating public attitudes toward musical authorship in the age of generative AI. We would love you",
       "image": null,
       "author": "Ken Johnston"
     }
