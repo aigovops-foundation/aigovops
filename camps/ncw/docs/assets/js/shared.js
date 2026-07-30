@@ -38,12 +38,19 @@
       <circle cx="24" cy="8" r="3" fill="#E07A2A"/>
     </svg>`;
 
+  /* Nav density: the header row is capped at max-w-7xl, so the primary nav's
+     budget stops growing at a 1280px viewport (~1006px of usable room) no
+     matter how wide the screen gets. Link metrics below are sized so the full
+     NAV set clears that ceiling on one line, and whitespace-nowrap keeps a
+     squeezed label from silently breaking mid-word into a second row. The nav
+     shows at xl (1280px) rather than lg (1024px) because it does not fit in
+     the room lg leaves; 1024-1279px gets the mobile menu instead. */
   function renderHeader() {
     const mount = document.getElementById("site-header");
     if (!mount) return;
     const links = NAV.map(
       (n) => `<a href="${href(n.href)}" data-nav="${n.key}"
-        class="px-3 py-2 rounded-lg text-[14px] font-600 transition-colors ${
+        class="px-2 py-2 rounded-lg text-[13px] font-600 whitespace-nowrap transition-colors ${
           n.key === PAGE
             ? "text-orchard bg-orchard/8"
             : "text-charcoal/70 hover:text-orchard hover:bg-orchard/5"
@@ -67,15 +74,15 @@
               NCW AI Expo<span class="block text-[11px] font-600 text-orchard tracking-wide">Aug 11, 2026 · Wenatchee</span>
             </span>
           </a>
-          <nav class="hidden lg:flex items-center gap-0.5" aria-label="Primary">${links}</nav>
+          <nav class="hidden xl:flex items-center gap-0.5" aria-label="Primary">${links}</nav>
           <div class="flex items-center gap-2">
             <a href="${href('pledge.html')}" class="hidden sm:inline-flex items-center rounded-full bg-signal hover:bg-signal-dark transition-colors text-white font-700 text-sm px-5 py-2.5 shadow-sm">Sign the Pledge</a>
-            <button id="menuBtn" class="lg:hidden grid place-items-center w-10 h-10 rounded-lg text-charcoal hover:bg-cream-deep" aria-label="Open menu" aria-expanded="false">
+            <button id="menuBtn" class="xl:hidden grid place-items-center w-10 h-10 rounded-lg text-charcoal hover:bg-cream-deep" aria-label="Open menu" aria-expanded="false">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
           </div>
         </div>
-        <div id="mobileMenu" class="lg:hidden hidden border-t border-cream-deep bg-cream px-4 py-3 space-y-1">
+        <div id="mobileMenu" class="xl:hidden hidden border-t border-cream-deep bg-cream px-4 py-3 space-y-1">
           ${mobileLinks}
           <a href="${href('pledge.html')}" class="block text-center mt-2 rounded-full bg-signal text-white font-700 px-5 py-3">Sign the Pledge</a>
         </div>
