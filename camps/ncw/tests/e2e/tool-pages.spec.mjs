@@ -39,34 +39,27 @@ const TOOL_PAGES = [
 const ALL_PAGES = [...TOOL_PAGES, "lab-tools"];
 
 for (const slug of TOOL_PAGES) {
-  test(`Tool page ${slug} — Get set up row has both working pills`, async ({ page }) => {
+  test(`Tool page ${slug} — install guide + embedded Foundation walkthrough`, async ({ page }) => {
     const resp = await page.goto(`/tools/${slug}.html`);
     expect(resp.status(), `/tools/${slug}.html must return 200`).toBe(200);
 
+    // The vendor's Official install guide stays — a single absolute https link, new-tab-safe.
     const guide = page.getByRole("link", { name: /official install guide/i });
-    const video = page.getByRole("link", { name: /watch the walkthrough/i });
-
     await expect(guide, `${slug}: install-guide pill must render`).toBeVisible();
-    await expect(video, `${slug}: walkthrough pill must render`).toBeVisible();
+    const href = await guide.getAttribute("href");
+    expect(href, `${slug} guide: href must be one absolute https URL, got ${href}`)
+      .toMatch(/^https:\/\/[^\s"']+$/);
+    expect(href, `${slug} guide: href must not contain a second URL`)
+      .not.toMatch(/https?:\/\/[^\s]*https?:\/\//);
+    expect(await guide.getAttribute("target"), `${slug} guide: target`).toBe("_blank");
+    expect(await guide.getAttribute("rel"), `${slug} guide: rel`).toMatch(/noopener/);
 
-    for (const [label, pill] of [["guide", guide], ["video", video]]) {
-      const href = await pill.getAttribute("href");
-      // A single absolute https URL and nothing else. This is the exact
-      // shape that regressed before: two URLs joined by " · " in one href.
-      expect(href, `${slug} ${label}: href must be one absolute https URL, got ${href}`)
-        .toMatch(/^https:\/\/[^\s"']+$/);
-      expect(href, `${slug} ${label}: href must not contain a second URL`)
-        .not.toMatch(/https?:\/\/[^\s]*https?:\/\//);
-
-      // External links open in a new tab and must not leak window.opener.
-      expect(await pill.getAttribute("target"), `${slug} ${label}: target`).toBe("_blank");
-      expect(await pill.getAttribute("rel"), `${slug} ${label}: rel`).toMatch(/noopener/);
-    }
-
-    // The walkthrough pill is followed by a caption naming the video and
-    // its length. An empty caption means the data row lost its metadata.
-    const caption = page.locator("p", { hasText: /·\s*\d+\s*min/ }).first();
-    await expect(caption, `${slug}: video caption must name a duration`).toBeVisible();
+    // The walkthrough is now the self-hosted AiGovOps Foundation video (not a third-party link):
+    // an embedded <video> whose source is docs/videos/tools/<slug>.mp4, plus a caption naming it.
+    const video = page.locator(`video:has(source[src$="videos/tools/${slug}.mp4"])`);
+    await expect(video, `${slug}: Foundation walkthrough video must be embedded`).toBeVisible();
+    const caption = page.locator("p", { hasText: /AiGovOps Foundation .*guide/i }).first();
+    await expect(caption, `${slug}: video caption must name the Foundation guide`).toBeVisible();
   });
 }
 
