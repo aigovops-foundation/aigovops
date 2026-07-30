@@ -1,12 +1,19 @@
 /* ============================================================
-   NCW AI Partnership Pledge — commitments, signer store, form.
-   Ported from ncw-pledge-site. localStorage with in-memory
-   fallback (sandboxed iframes block storage), stub POST to /api/sign.
+   NCW AI Partnership Pledge — commitments + anonymous, local-only
+   commitment.
+
+   PRIVACY / CHILD-SAFETY (2026-07): This pledge is used by a
+   general audience that includes minors. It therefore collects
+   NO personal data: no name, no email, no role, no organization,
+   no city. Nothing is sent to any server (there is no /api/sign
+   call). The only thing stored is an anonymous "I committed" flag
+   plus an OPTIONAL free-text note that the person keeps for
+   themselves — it lives only in this browser's localStorage and is
+   never transmitted. There is no signer count and no signer wall,
+   so no fabricated ("baseline") numbers are shown as if real.
    ============================================================ */
 (function () {
   "use strict";
-
-  var BASELINE = 247;
 
   var COMMITMENTS = [
     {
@@ -67,17 +74,10 @@
     }
   ];
 
-  var SEED_SIGNERS = [
-    { name: "Maria", role: "Student", city: "Wenatchee" },
-    { name: "Daniel", role: "SMB owner", city: "East Wenatchee" },
-    { name: "Sofia", role: "Educator", city: "Cashmere" },
-    { name: "Raymond", role: "Nonprofit", city: "Omak" },
-    { name: "Jennifer", role: "Parent", city: "Leavenworth" },
-    { name: "Tomás", role: "Govt or city leader", city: "Chelan" }
-  ];
-
-  /* ---- storage: localStorage when allowed, in-memory otherwise ---- */
-  var LS_KEY = "ncw_pledge_signers_v1";
+  /* ---- storage: localStorage when allowed, in-memory otherwise ----
+     Stores ONLY an anonymous commitment flag + an optional private,
+     never-transmitted note. No name/email/role/org/city, ever. */
+  var LS_KEY = "ncw_pledge_commitment_v2";
   var memStore = {};
   var store = (function () {
     try {
@@ -93,11 +93,8 @@
       };
     }
   })();
-  function loadSigners() { try { return JSON.parse(store.getItem(LS_KEY)) || []; } catch (e) { return []; } }
-  function saveSigner(s) { var arr = loadSigners(); arr.push(s); try { store.setItem(LS_KEY, JSON.stringify(arr)); } catch (e) {} }
-  function totalCount() { return BASELINE + loadSigners().length; }
 
-  /* ---- render commitments ---- */
+  /* ---- render commitments (the 7-point pledge) ---- */
   function renderCommitments() {
     var ol = document.getElementById("commitList");
     if (!ol) return;
@@ -119,72 +116,32 @@
     }).join("");
   }
 
-  function avatarColor(i) { return ["bg-orchard", "bg-signal", "bg-orchard-dark", "bg-signal-dark"][i % 4]; }
-
-  function esc(s) {
-    return String(s == null ? "" : s)
-      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
-  }
-
-  function renderWall() {
-    var wall = document.getElementById("signersWall");
-    if (!wall) return;
-    var user = loadSigners().slice().reverse().map(function (s) {
-      return { name: (s.name || "").trim().split(/\s+/)[0] || "Neighbor", role: s.role || "Community", city: s.city || "NCW" };
-    });
-    var combined = user.concat(SEED_SIGNERS).slice(0, 8);
-    wall.innerHTML = combined.map(function (s, i) {
-      var initial = ((s.name && s.name[0]) || "N").toUpperCase();
-      return '<div class="bg-white rounded-2xl border border-charcoal/10 p-5 flex flex-col items-center text-center">' +
-        '<div class="w-12 h-12 rounded-full ' + avatarColor(i) + ' text-white font-700 text-lg grid place-items-center mb-3">' + esc(initial) + '</div>' +
-        '<p class="font-serif font-700 text-charcoal leading-tight">' + esc(s.name) + '</p>' +
-        '<p class="text-[12px] font-600 text-signal-dark mt-1">' + esc(s.role) + '</p>' +
-        '<p class="text-[12px] text-charcoal/55 mt-0.5">' + esc(s.city) + '</p></div>';
-    }).join("");
-  }
-
-  function updateCounts(pop) {
-    var n = totalCount();
-    ["signerCountHero", "signerCountForm", "signerCountWall"].forEach(function (id) {
-      var el = document.getElementById(id);
-      if (!el) return;
-      el.textContent = n.toLocaleString();
-      if (pop) { el.classList.remove("count-pop"); void el.offsetWidth; el.classList.add("count-pop"); }
-    });
-  }
-
+  /* ---- anonymous, local-only commitment ---- */
   function initForm() {
     var form = document.getElementById("pledgeForm");
     var success = document.getElementById("successCard");
     if (!form) return;
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      var data = {
-        name: document.getElementById("f-name").value.trim(),
-        email: document.getElementById("f-email").value.trim(),
-        role: document.getElementById("f-role").value,
-        organization: document.getElementById("f-org").value.trim(),
-        city: document.getElementById("f-city").value.trim() || "Wenatchee",
-        action: document.getElementById("f-action").value.trim(),
-        committedAt: new Date().toISOString()
+      var noteEl = document.getElementById("f-action");
+      // Anonymous record. No PII is read from the page and nothing is
+      // sent anywhere — the optional note stays only in this browser.
+      var record = {
+        committed: true,
+        committedAt: new Date().toISOString(),
+        note: noteEl ? noteEl.value.trim() : ""
       };
-      saveSigner(data);
-      try {
-        fetch("/api/sign", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) }).catch(function () {});
-      } catch (_) {}
-      updateCounts(true);
-      renderWall();
-      document.getElementById("successName").textContent = data.name.split(/\s+/)[0] + " from " + data.city + " — your signature is on the wall.";
+      try { store.setItem(LS_KEY, JSON.stringify(record)); } catch (_) {}
       form.classList.add("hidden");
-      success.classList.remove("hidden");
-      success.scrollIntoView({ behavior: "smooth", block: "center" });
+      if (success) {
+        success.classList.remove("hidden");
+        success.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
       form.reset();
-      document.getElementById("f-city").value = "Wenatchee";
     });
     var another = document.getElementById("signAnother");
     if (another) another.addEventListener("click", function () {
-      success.classList.add("hidden");
+      if (success) success.classList.add("hidden");
       form.classList.remove("hidden");
       form.scrollIntoView({ behavior: "smooth", block: "start" });
     });
@@ -192,8 +149,6 @@
 
   function init() {
     renderCommitments();
-    renderWall();
-    updateCounts(false);
     initForm();
     // fade for dynamically-added commitments
     if (window.IntersectionObserver) {

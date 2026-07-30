@@ -9,7 +9,7 @@
     "capture:auth": "node capture/auth-capture.mjs",
     "capture": "node capture/capture-demos.mjs",
     "capture:check": "node capture/capture-demos.mjs --check",
-    "test:api": "node --test tests/api/sign.test.mjs",
+    "test:api": "node --test tests/api/pledge-anonymity.test.mjs",
     "test:e2e": "playwright test --config=tests/playwright.config.mjs",
     "test:a11y": "playwright test --config=tests/playwright.config.mjs tests/e2e/a11y.spec.mjs",
     "test:html": "htmlhint \"docs/**/*.html\" --config tests/.htmlhintrc",

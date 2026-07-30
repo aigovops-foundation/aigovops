@@ -55,14 +55,10 @@
       <a href="#commitments" class="w-full sm:w-auto inline-flex justify-center items-center rounded-full bg-white/80 hover:bg-white border border-charcoal/10 transition-colors text-charcoal font-600 text-lg px-9 py-4">Read the 7 commitments</a>
     </div>
     <div class="mt-12 inline-flex items-center gap-3 rounded-2xl bg-white/80 border border-orchard/15 px-6 py-4">
-      <div class="flex -space-x-2">
-        <span class="w-8 h-8 rounded-full bg-orchard text-white text-xs font-700 grid place-items-center ring-2 ring-cream">M</span>
-        <span class="w-8 h-8 rounded-full bg-signal text-white text-xs font-700 grid place-items-center ring-2 ring-cream">J</span>
-        <span class="w-8 h-8 rounded-full bg-orchard-dark text-white text-xs font-700 grid place-items-center ring-2 ring-cream">D</span>
-      </div>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-orchard shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
       <p class="text-left leading-tight">
-        <span id="signerCountHero" class="font-serif font-700 text-2xl text-orchard">247</span>
-        <span class="block text-[13px] font-600 text-charcoal/60">and counting — NCW neighbors signed</span>
+        <span class="font-serif font-700 text-lg text-orchard">A public commitment</span>
+        <span class="block text-[13px] font-600 text-charcoal/60">by the people of North Central Washington</span>
       </p>
     </div>
   </div>
@@ -102,56 +98,30 @@
 <section id="sign" class="py-16 sm:py-24">
   <div class="max-w-2xl mx-auto px-5 sm:px-8">
     <div class="text-center mb-10">
-      <p class="text-sm font-700 uppercase tracking-[0.18em] text-signal mb-3">Add your name</p>
-      <h2 class="font-serif font-700 text-3xl sm:text-4xl text-charcoal">Sign the Pledge</h2>
-      <p class="mt-3 text-charcoal/65">Join <span id="signerCountForm" class="font-700 text-orchard">247</span> neighbors who've already committed.</p>
+      <p class="text-sm font-700 uppercase tracking-[0.18em] text-signal mb-3">Make it yours</p>
+      <h2 class="font-serif font-700 text-3xl sm:text-4xl text-charcoal">Commit to the Pledge</h2>
+      <p class="mt-3 text-charcoal/65">A private, personal commitment. No name, no email, no account — nothing is collected or sent to us.</p>
     </div>
     <form id="pledgeForm" class="bg-white rounded-3xl border border-charcoal/10 shadow-sm p-6 sm:p-9 space-y-5">
-      <div class="grid sm:grid-cols-2 gap-5">
-        <div>
-          <label for="f-name" class="block text-sm font-600 text-charcoal mb-1.5">Name <span class="text-signal">*</span></label>
-          <input id="f-name" name="name" type="text" required placeholder="First & last name" class="w-full rounded-xl border border-charcoal/15 px-4 py-3 text-[15px] focus:border-orchard focus:ring-2 focus:ring-orchard/20 outline-none transition" />
-        </div>
-        <div>
-          <label for="f-email" class="block text-sm font-600 text-charcoal mb-1.5">Email <span class="text-signal">*</span></label>
-          <input id="f-email" name="email" type="email" required placeholder="you@example.com" class="w-full rounded-xl border border-charcoal/15 px-4 py-3 text-[15px] focus:border-orchard focus:ring-2 focus:ring-orchard/20 outline-none transition" />
-        </div>
-      </div>
-      <div class="grid sm:grid-cols-2 gap-5">
-        <div>
-          <label for="f-role" class="block text-sm font-600 text-charcoal mb-1.5">Role <span class="text-signal">*</span></label>
-          <select id="f-role" name="role" required class="w-full rounded-xl border border-charcoal/15 px-4 py-3 text-[15px] bg-white focus:border-orchard focus:ring-2 focus:ring-orchard/20 outline-none transition">
-            <option value="" disabled selected>Select your role…</option>
-            <option>Educator</option><option>SMB owner</option><option>Nonprofit</option><option>Student</option><option>Parent</option><option>Govt or city leader</option><option>Other</option>
-          </select>
-        </div>
-        <div>
-          <label for="f-org" class="block text-sm font-600 text-charcoal mb-1.5">Organization <span class="text-charcoal/40 font-400">(optional)</span></label>
-          <input id="f-org" name="organization" type="text" placeholder="School, business, or group" class="w-full rounded-xl border border-charcoal/15 px-4 py-3 text-[15px] focus:border-orchard focus:ring-2 focus:ring-orchard/20 outline-none transition" />
-        </div>
-      </div>
       <div>
-        <label for="f-city" class="block text-sm font-600 text-charcoal mb-1.5">City / town</label>
-        <input id="f-city" name="city" type="text" value="Wenatchee" placeholder="Any NCW community" class="w-full rounded-xl border border-charcoal/15 px-4 py-3 text-[15px] focus:border-orchard focus:ring-2 focus:ring-orchard/20 outline-none transition" />
-      </div>
-      <div>
-        <label for="f-action" class="block text-sm font-600 text-charcoal mb-1.5">What's one thing you'll do this week?</label>
+        <label for="f-action" class="block text-sm font-600 text-charcoal mb-1.5">What's one thing you'll do this week? <span class="text-charcoal/40 font-400">(optional, private)</span></label>
         <textarea id="f-action" name="action" rows="3" placeholder="e.g. Write our classroom's 5-sentence AI policy and post it on the door." class="w-full rounded-xl border border-charcoal/15 px-4 py-3 text-[15px] focus:border-orchard focus:ring-2 focus:ring-orchard/20 outline-none transition resize-y"></textarea>
+        <p class="mt-1.5 text-xs text-charcoal/45">This note is just for you. It is kept only on this device and is never sent to us. Please don't include anyone's name or personal details.</p>
       </div>
       <label class="flex items-start gap-3 rounded-xl bg-cream p-4 cursor-pointer">
         <input id="f-commit" name="commit" type="checkbox" required class="mt-0.5 w-5 h-5 rounded border-charcoal/30 text-orchard focus:ring-orchard/30 accent-orchard" />
         <span class="text-[15px] font-600 text-charcoal leading-snug">I commit to this pledge.</span>
       </label>
-      <button type="submit" class="w-full inline-flex justify-center items-center rounded-full bg-signal hover:bg-signal-dark transition-colors text-white font-700 text-lg px-8 py-4 shadow-lg shadow-signal/25">Sign the Pledge</button>
-      <p class="text-center text-xs text-charcoal/45">Your signature is stored on this device and submitted to the Foundation. We never sell your data.</p>
+      <button type="submit" class="w-full inline-flex justify-center items-center rounded-full bg-signal hover:bg-signal-dark transition-colors text-white font-700 text-lg px-8 py-4 shadow-lg shadow-signal/25">I commit to the Pledge</button>
+      <p class="text-center text-xs text-charcoal/45">Anonymous by design. We collect no name, email, or personal information, and nothing is sent to a server — your commitment stays private, on this device. <a href="privacy.html" class="underline hover:text-charcoal/70">How we handle privacy</a>.</p>
     </form>
 
     <div id="successCard" class="hidden bg-white rounded-3xl border-2 border-orchard/30 shadow-sm p-8 sm:p-10 text-center">
       <div class="mx-auto w-16 h-16 rounded-full bg-orchard/10 grid place-items-center mb-5">
         <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#2E7D4F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
       </div>
-      <h3 class="font-serif font-700 text-2xl text-charcoal">Thank you for signing.</h3>
-      <p id="successName" class="mt-2 text-charcoal/70"></p>
+      <h3 class="font-serif font-700 text-2xl text-charcoal">Thank you for committing.</h3>
+      <p class="mt-2 text-charcoal/70">Your commitment is recorded privately, on this device only.</p>
       <p class="mt-4 text-charcoal/75 max-w-md mx-auto">You're now part of the NCW AI Partnership. Get the badge for your classroom door, store window, or homepage — and share the pledge with one more neighbor this week.</p>
       <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
         <a href="resources.html" class="inline-flex justify-center items-center rounded-full bg-orchard hover:bg-orchard-dark transition-colors text-white font-600 px-6 py-3">Get the free toolkit</a>
@@ -161,15 +131,13 @@
   </div>
 </section>
 
-<!-- ===== RECENT SIGNERS WALL ===== -->
+<!-- ===== WHY THIS PLEDGE IS ANONYMOUS ===== -->
 <section class="bg-cream-deep/60 py-16 sm:py-20">
-  <div class="max-w-5xl mx-auto px-5 sm:px-8">
-    <div class="text-center mb-10">
-      <p class="text-sm font-700 uppercase tracking-[0.18em] text-signal mb-3">The wall</p>
-      <h2 class="font-serif font-700 text-3xl sm:text-4xl text-charcoal">Recent signers</h2>
-      <p class="mt-3 text-charcoal/65"><span id="signerCountWall" class="font-700 text-orchard">247</span> and counting across North Central Washington.</p>
-    </div>
-    <div id="signersWall" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+  <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center">
+    <p class="text-sm font-700 uppercase tracking-[0.18em] text-signal mb-3">Why this is anonymous</p>
+    <h2 class="font-serif font-700 text-3xl sm:text-4xl text-charcoal">We practice what we pledge</h2>
+    <p class="mt-4 text-charcoal/75 leading-relaxed">This pledge is for everyone in North Central Washington — including students and children. So we collect <span class="font-600 text-charcoal">no names, no emails, and no personal information</span>, and nothing you enter is sent to us or stored on a server. Commitment&nbsp;#7 says we keep careful records; the most careful record of a child's personal data is the one we never collect.</p>
+    <p class="mt-4 text-charcoal/70">Read our <a href="privacy.html" class="font-600 text-orchard hover:underline">privacy page</a> for the plain-language details.</p>
   </div>
 </section>
 

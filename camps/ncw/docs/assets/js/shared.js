@@ -196,7 +196,11 @@
           </div>
           <div class="mt-14 pt-8 border-t border-cream/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-cream/50">
             <p class="font-serif italic">The story we tell about AI in NCW will be the story we wrote — together.</p>
-            <p>NCW AI Expo 2026 · v1.0</p>
+            <p class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+              <a href="${href('privacy.html')}" class="hover:text-signal transition-colors">Privacy</a><span aria-hidden="true">·</span>
+              <a href="${href('terms.html')}" class="hover:text-signal transition-colors">Terms</a><span aria-hidden="true">·</span>
+              <span>NCW AI Expo 2026 · v1.0</span>
+            </p>
           </div>
         </div>
       </footer>`;

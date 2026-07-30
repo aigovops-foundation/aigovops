@@ -81,8 +81,9 @@ test("Mobile: pledge form is fully usable on iPhone-sized viewport", async ({
 
   await page.goto("/pledge.html");
 
-  // All inputs must be visible and reachable without horizontal scroll.
-  for (const sel of ["#f-name", "#f-email", "#f-role", "#f-commit"]) {
+  // The anonymous pledge controls must be visible and reachable without
+  // horizontal scroll (the pledge collects no personal data — no name/email).
+  for (const sel of ["#f-action", "#f-commit"]) {
     const el = page.locator(sel);
     await expect(el).toBeVisible();
     const box = await el.boundingBox();
