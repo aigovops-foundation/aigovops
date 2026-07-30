@@ -26,7 +26,7 @@ The 4 form/relay vendors (Google, Microsoft, Replit, n8n) still need the by-hand
 | Granola | privacy@granola.so | Jul 30 (email) |  |  |  |  |  | low ⚠️ — ask to forward |
 | Wispr | security@wispr.ai + sales form | Jul 30 (email) |  |  |  |  |  | low ⚠️ — ask to forward |
 | Lovable | support@lovable.dev (their nonprofit channel) | Jul 30 (email) |  |  |  |  |  | offered 501(c)(3) letter on reply |
-| StackBlitz/Bolt | hello@stackblitz.com + Build with Bolt form | Jul 30 (email) |  |  |  |  |  |  |
+| StackBlitz/Bolt | collab@bolt.new (partnerships) · also hello@stackblitz.com | Jul 30 (email ×2) |  |  |  |  |  | partnership request to collab@bolt.new — delivered |
 | Replit | educators-page intake |  |  |  |  |  |  | FORM only, not emailed; submit by hand |
 | Magic Patterns | support@magicpatterns.com | Jul 30 (email) |  |  |  |  |  |  |
 | ChatPRD | hello@chatprd.ai | Jul 30 (email) |  |  |  |  |  |  |
