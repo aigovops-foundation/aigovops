@@ -22,6 +22,7 @@ const PAGES = [
   "/hint-logs.html",
   "/pledge.html",
   "/resources.html",
+  "/community-resources.html",
   "/support.html",
   "/about.html",
   "/plan.html",
@@ -33,6 +34,7 @@ const PAGES = [
   // flag but a native reviewer will.
   "/es/workshop.html",
   "/es/checklist.html",
+  "/es/community-resources.html",
 ];
 
 const BLOCKING_IMPACTS = new Set(["critical", "serious"]);

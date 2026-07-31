@@ -162,6 +162,7 @@
                 <li><a href="${href('workshop.html')}" class="text-cream/75 hover:text-signal transition-colors">The Rules, Hands-On workshop</a></li>
                 <li><a href="${href('checklist.html')}" class="text-cream/75 hover:text-signal transition-colors">The First-30-Days Checklist</a></li>
                 <li><a href="${href('resources.html')}" class="text-cream/75 hover:text-signal transition-colors">Resources & downloads</a></li>
+                <li><a href="${href('community-resources.html')}" class="text-cream/75 hover:text-signal transition-colors">Resources for your community</a></li>
               </ul>
             </div>
             <div>
