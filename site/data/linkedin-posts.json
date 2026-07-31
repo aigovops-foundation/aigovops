@@ -1,6 +1,14 @@
 {
-  "updated": "2026-07-31T07:59:18Z",
+  "updated": "2026-07-31T19:31:55Z",
   "bob": [
+    {
+      "title": "Level Up Your AI Governance — AI in Financial Services Problem: Financial institutions deploying AI face complex regulatory scruti...",
+      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-ai-in-financial-activity-7488942598083088384-UNPc",
+      "date": "Fri, 31 Jul 2026 13:04:13 GMT",
+      "summary": "Level Up Your AI Governance — AI in Financial Services Problem: Financial institutions deploying AI face complex regulatory scrutiny, compliance gaps, and ethical risks in automated lending, fraud detection, and algorithmic trading. Solutions: Leverage robust governance framework",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "NIST mandates unique Agent IDs! End of anonymous AI. Policy-as-Code active. معرّفات الذكاء الاصطناعي الفريدة من NIST. Connect w/ Bo...",
       "link": "https://www.linkedin.com/posts/bobrapp_nist-mandates-unique-agent-ids-end-of-anonymous-activity-7488715977644290048--Ixb",
@@ -64,17 +72,17 @@
       "summary": "Problem: Organizations struggle to measure AI governance progress across fragmented policies. Solutions: Utilize our 12 comprehensive maturity model frameworks and access our global community of 10,000+ professionals at Summary: Structured assessments b",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "When an agentic AI decides its safety filter is an obstacle, \"voluntary safety\" becomes a suggestion. The real danger isn't intent...",
-      "link": "https://www.linkedin.com/posts/bobrapp_when-an-agentic-ai-decides-its-safety-filter-activity-7487855342299611137-3RRy",
-      "date": "Tue, 28 Jul 2026 13:03:51 GMT",
-      "summary": "When an agentic AI decides its safety filter is an obstacle, \"voluntary safety\" becomes a suggestion. The real danger isn't intent, but the ability to escape software sandboxes. Moving to mandatory hardware-level compliance is the only way to ensure Level 2+ systems remain under",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "Anthropic just disclosed that its own Claude models breached three real companies during internal security tests.\n \nThis comes right after OpenAI’s agents escaped their sandbox and compromised…",
+      "link": "https://www.linkedin.com/posts/abalfour_anthropic-just-disclosed-that-its-own-claude-activity-7488948103337664512-tijY",
+      "date": "Fri, 31 Jul 2026 13:26:06 GMT",
+      "summary": "Anthropic just disclosed that its own Claude models breached three real companies during internal security tests. This comes right after OpenAI’s agents escaped their sandbox and compromised Hugging Face. Here’s what actually happened (and why it matters more than the headlines s",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "Just when you think you’re fully living, fully connected, and getting everything you can from the communities you care so deeply about, something happens that expands your perspective again.\n\nThat…",
       "link": "https://www.linkedin.com/posts/leighfelton_just-when-you-think-youre-fully-living-activity-7488786385588400129-CJyH",
@@ -144,14 +152,6 @@
       "link": "https://www.linkedin.com/posts/rkjohnston_seattle-founders-fun-activity-7488048182568972288-_Dy0",
       "date": "Wed, 29 Jul 2026 01:50:08 GMT",
       "summary": "Having a ton of fun at Seattle Tech Week. I thin I went to my 4th events today. Yesterday was coffee but to day was the OneSixOne Ventures #Seattle Venture Day. 5th annual I think Pablo Casilimas said. Great energy from the hundreds of founders and investors that came out. I spok",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "#SeattleSeattle Tech Week I just wrapped up a call with the team from the The AI Collective.",
-      "link": "https://www.linkedin.com/posts/rkjohnston_madisoncenter-seattle-pdftheater-activity-7488042836785844224-xA1h",
-      "date": "Wed, 29 Jul 2026 01:28:53 GMT",
-      "summary": "#SeattleSeattle Tech Week I just wrapped up a call with the team from the The AI Collective. Talking with Tristan Ingold, Keshav Ummat, Rebecca Norlander, Joe Braidwood and Bhola Chhetri we all started just ripping on the latest AI Governance news. Oh yes, the event is this Frida",
       "image": null,
       "author": "Ken Johnston"
     }
