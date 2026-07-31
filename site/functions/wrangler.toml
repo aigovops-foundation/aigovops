@@ -4,15 +4,30 @@
 #
 #   1. npm install -g wrangler         # install Cloudflare CLI
 #   2. wrangler login                  # authenticate
-#   3. wrangler deploy                 # deploy the worker
-#   4. wrangler secret put ANTHROPIC_API_KEY   # set the API key
-#   5. Copy the worker URL from the deploy output
-#   6. Open js/chat.js and set: const PROXY_URL = 'https://your-worker.workers.dev'
+#   3. Create the rate-limit KV namespace (REQUIRED — the Worker fails closed
+#      with 503 until this is bound; see below):
+#        wrangler kv namespace create RATE_LIMIT
+#      then paste the printed id into the [[kv_namespaces]] block below.
+#   4. wrangler deploy                 # deploy the worker
+#   5. wrangler secret put ANTHROPIC_API_KEY   # set the API key
+#   6. Copy the worker URL from the deploy output
+#   7. Open js/chat.js and set: const PROXY_URL = 'https://your-worker.workers.dev'
 #
-# The worker is pre-built and ready — only deployment is pending.
+# STATUS as of 2026-07: NOT deployed. js/chat.js has PROXY_URL = '' (the client
+# never calls it), and the Foundation site is served from GitHub Pages, which does
+# not run this functions/ directory. This config + the hardened Worker are ready
+# so that IF it is ever deployed, it is safe (auth-by-origin + body cap + required
+# per-IP rate limit). Do NOT set PROXY_URL until the KV namespace is bound.
 
 name = "aigovops-frameworks-agent"
 main = "frameworks-agent.js"
 compatibility_date = "2024-01-01"
 
 # Set secret via: wrangler secret put ANTHROPIC_API_KEY
+
+# REQUIRED per-IP rate-limit store. The Worker returns 503 on every request until
+# a real namespace id is bound here (fail-closed: no unlimited open proxy). Create
+# it with `wrangler kv namespace create RATE_LIMIT` and paste the id below.
+[[kv_namespaces]]
+binding = "RATE_LIMIT"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
