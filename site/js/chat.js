@@ -6,9 +6,9 @@
  *   2. Events (Luma)
  *   3. Ken Johnston's LinkedIn
  *   4. Bob Rapp's LinkedIn
- *   5. Open Source tools (Beacon + Lantern, shown together)
+ *   5. Open Source tools (Beacon + Umbrella, shown together)
  *   6. Beacon specifically (GitHub)
- *   7. Lantern specifically (GitHub Pages)
+ *   7. Umbrella specifically (GitHub Pages)
  *
  * Everything else gets a polite refusal pointing back to these six things.
  * Zero external API calls. Pure rule-based matching. Fully offline.
@@ -96,11 +96,11 @@ const CHIP_LABELS = {
   bob:         "💡 Bob's posts",
   opensource:  '💻 Open Source',
   beacon:      '🔦 Beacon',
-  umbrella:    '🏮 Lantern',
+  umbrella:    '☂️ Umbrella',
   alpha:       '🧪 See It Run · the Library',
 };
 
-const FALLBACK = `I can help with ten things — tap a chip below or type: "frameworks", "meeting", "support", "newsletter", "event", "Ken", "Bob", "open source", "Beacon", or "Lantern", or "Alpha".`;
+const FALLBACK = `I can help with ten things — tap a chip below or type: "frameworks", "meeting", "support", "newsletter", "event", "Ken", "Bob", "open source", "Beacon", or "Umbrella", or "Alpha".`;
 
 // DOM refs
 const bubble   = document.getElementById('chatBubble');
@@ -196,11 +196,11 @@ async function runFrameworkAgent(userContext) {
   document.getElementById('chatMessages').appendChild(thinking);
   document.getElementById('chatMessages').scrollTop = 9999;
 
-  const LANTERN_URL = 'https://aigovops-foundation.github.io/umbrella-govops/';
+  const UMBRELLA_URL = 'https://aigovops-foundation.github.io/umbrella-govops/';
   const SYSTEM = `You are the AiGovOps Foundation governance framework assistant.
 Given a user's context (region, industry, AI use cases), identify the top 3-5 most applicable AI governance frameworks from: EU AI Act, NIST AI RMF, ISO/IEC 42001, GDPR, HIPAA, UK AI Act, CCPA, Colorado AI Act, Korea AI Basic Act, OVERT 1.0, UNESCO AI Ethics, WCAG 2.2.
 For each framework: name, why it applies in ONE sentence, risk level (High/Medium/Low).
-Format as compact HTML using <strong> for names. End with one sentence pointing to Lantern to map into code.
+Format as compact HTML using <strong> for names. End with one sentence pointing to Umbrella to map into code.
 Be direct and technical. Max 250 words. No preamble.`;
 
   try {
@@ -228,9 +228,9 @@ Be direct and technical. Max 250 words. No preamble.`;
       const data = await res.json();
       reply = data.content?.filter(b => b.type === 'text').map(b => b.text).join('') || 'Unable to analyze frameworks right now.';
     }
-    thinking.innerHTML = reply + `<br><br><a href="${LANTERN_URL}" target="_blank" rel="noopener" style="color:var(--teal);font-weight:700;">Map these to code with Lantern →</a>`;
+    thinking.innerHTML = reply + `<br><br><a href="${UMBRELLA_URL}" target="_blank" rel="noopener" style="color:var(--teal);font-weight:700;">Map these to code with Umbrella →</a>`;
   } catch {
-    thinking.innerHTML = `Framework analysis unavailable right now. <a href="${LANTERN_URL}" target="_blank" rel="noopener" style="color:var(--teal);">Browse all 40+ frameworks on Lantern →</a>`;
+    thinking.innerHTML = `Framework analysis unavailable right now. <a href="${UMBRELLA_URL}" target="_blank" rel="noopener" style="color:var(--teal);">Browse all 40+ frameworks on Umbrella →</a>`;
   }
   document.getElementById('chatMessages').scrollTop = 9999;
 }
@@ -275,7 +275,7 @@ function handleIntent(intent) {
     return;
   }
 
-  // Special case: open source shows both Beacon and Lantern
+  // Special case: open source shows both Beacon and Umbrella
   if (intent === 'opensource') {
     const b = RESOURCES.beacon;
     const u = RESOURCES.umbrella;
