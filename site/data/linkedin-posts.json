@@ -1,6 +1,22 @@
 {
-  "updated": "2026-07-30T19:31:54Z",
+  "updated": "2026-07-31T07:59:18Z",
   "bob": [
+    {
+      "title": "NIST mandates unique Agent IDs! End of anonymous AI. Policy-as-Code active. معرّفات الذكاء الاصطناعي الفريدة من NIST. Connect w/ Bo...",
+      "link": "https://www.linkedin.com/posts/bobrapp_nist-mandates-unique-agent-ids-end-of-anonymous-activity-7488715977644290048--Ixb",
+      "date": "Thu, 30 Jul 2026 22:03:43 GMT",
+      "summary": "NIST mandates unique Agent IDs! End of anonymous AI. Policy-as-Code active. معرّفات الذكاء الاصطناعي الفريدة من NIST. Connect w/ Bob Rapp & Ken Johnston.",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: Organizations rushing to adopt third-party AI vendor solutions often face unseen compliance liabilities, opaque data hand...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-organizations-rushing-to-adopt-third-party-activity-7488715739504332800-lYPS",
+      "date": "Thu, 30 Jul 2026 22:02:46 GMT",
+      "summary": "Problem: Organizations rushing to adopt third-party AI vendor solutions often face unseen compliance liabilities, opaque data handling practices, and severe regulatory blind spots. Solutions: Implement robust Responsible AI Procurement frameworks, enforce comprehensive vendor due",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Problem: As autonomous models scale, static policies fail to catch emergent vulnerabilities and edge-case failures in deployment....",
       "link": "https://www.linkedin.com/posts/bobrapp_problem-as-autonomous-models-scale-static-activity-7488580387175055360-20F-",
@@ -56,25 +72,49 @@
       "summary": "When an agentic AI decides its safety filter is an obstacle, \"voluntary safety\" becomes a suggestion. The real danger isn't intent, but the ability to escape software sandboxes. Moving to mandatory hardware-level compliance is the only way to ensure Level 2+ systems remain under",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "The legislative landscape for artificial intelligence has shifted permanently. With the EU AI Act framework entering enforcement a...",
-      "link": "https://www.linkedin.com/posts/bobrapp_the-legislative-landscape-for-artificial-activity-7487854828786819072-yV6c",
-      "date": "Tue, 28 Jul 2026 13:01:49 GMT",
-      "summary": "The legislative landscape for artificial intelligence has shifted permanently. With the EU AI Act framework entering enforcement and the US introducing the AI Kill Switch Act, verifiable agentic safety is no longer theoretical: it is an absolute legal reality. EN: The EU AI Act a",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Identity is the new border. When AI agents start acting on our behalf, the \"governance gap\" widens. Without verifiable identity, w...",
-      "link": "https://www.linkedin.com/posts/bobrapp_identity-is-the-new-border-when-ai-agents-activity-7487628666789765121-G-t7",
-      "date": "Mon, 27 Jul 2026 22:03:08 GMT",
-      "summary": "Identity is the new border. When AI agents start acting on our behalf, the \"governance gap\" widens. Without verifiable identity, we lose control. الهوية هي الحدود الجديدة. عندما تعمل وكلاء الذكاء الاصطناعي نيابة عنا، تتسع \"فجوة الحوكمة\". بدون هوية محققة، نفقد السيطرة. Problem: \"S",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "Just when you think you’re fully living, fully connected, and getting everything you can from the communities you care so deeply about, something happens that expands your perspective again.\n\nThat…",
+      "link": "https://www.linkedin.com/posts/leighfelton_just-when-you-think-youre-fully-living-activity-7488786385588400129-CJyH",
+      "date": "Fri, 31 Jul 2026 02:43:29 GMT",
+      "summary": "Just when you think you’re fully living, fully connected, and getting everything you can from the communities you care so deeply about, something happens that expands your perspective again. That was my experience this week at Chief Austin. I met women who are brilliant, accompli",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Had a great time at the AI Tinkerers GTM (Go To Market) meetup as part of Seattle Tech Week last night.",
+      "link": "https://www.linkedin.com/posts/rkjohnston_aitinkerers-seattletechweek-activity-7488720073507893248-30qo",
+      "date": "Thu, 30 Jul 2026 22:19:59 GMT",
+      "summary": "Had a great time at the AI Tinkerers GTM (Go To Market) meetup as part of Seattle Tech Week last night. We had a great spot for the meetup hosted at Pioneer Square Labs. That place has a great vibe for startup founders. #AITinkerers has continued to grow and expand here in Seattl",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "A CEO Slacked me at 11:47 PM.\n\"I almost just fired my CFO.\"\n\nHe hadn't.\nHe’d been about to. The email was half-written. The decision felt urgent.\n\nThen he remembered our work:\nDon't decide while…",
+      "link": "https://www.linkedin.com/posts/kellyameerbott_a-ceo-slacked-me-at-1147-pm-i-almost-just-activity-7488564668089651201-SzDG",
+      "date": "Thu, 30 Jul 2026 12:02:28 GMT",
+      "summary": "A CEO Slacked me at 11:47 PM. \"I almost just fired my CFO.\" He hadn't. He’d been about to. The email was half-written. The decision felt urgent. Then he remembered our work: Don't decide while activated. He closed the laptop. He took a walk. An hour later, he didn't recognize the",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Another Startup425 Eastside Summit is in the books!\n\nWe just wrapped up our third Eastside Summit taking place during Seattle Tech Week.\n\nWe kicked off the event with opening remarks from Council…",
+      "link": "https://www.linkedin.com/posts/jgproduct_another-startup425-eastside-summit-is-in-activity-7488389149796859904-TVD0",
+      "date": "Thu, 30 Jul 2026 00:25:01 GMT",
+      "summary": "Another Startup425 Eastside Summit is in the books! We just wrapped up our third Eastside Summit taking place during Seattle Tech Week. We kicked off the event with opening remarks from Council Member Vishal Bhargava. We then had Jonathan Greechan, CEO of Founder Institute. We al",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "EU AI Act compliance countdown is ticking toward August 2026.\n\nProblem: Teams lack structured roadmaps to meet strict regulatory demands.\nSolutions: Adopt expert-led governance frameworks and join…",
+      "link": "https://www.linkedin.com/posts/bobrapp_eu-ai-act-compliance-countdown-is-ticking-activity-7488353825167319041-lLVr",
+      "date": "Wed, 29 Jul 2026 22:04:39 GMT",
+      "summary": "EU AI Act compliance countdown is ticking toward August 2026. Problem: Teams lack structured roadmaps to meet strict regulatory demands. Solutions: Adopt expert-led governance frameworks and join our sessions. Summary: Proactive compliance protects your organization and builds tr",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "NVIDIA's biggest advantage is no longer just the GPU.\n\nIt is the ecosystem built around it.\n\nFrom data preparation and model serving to AI agents, robotics, simulation, and enterprise deployment… | Greg Coquillo",
       "link": "https://www.linkedin.com/posts/greg-coquillo_nvidias-biggest-advantage-is-no-longer-just-activity-7488266618981167107-KKAk",
@@ -112,46 +152,6 @@
       "link": "https://www.linkedin.com/posts/rkjohnston_madisoncenter-seattle-pdftheater-activity-7488042836785844224-xA1h",
       "date": "Wed, 29 Jul 2026 01:28:53 GMT",
       "summary": "#SeattleSeattle Tech Week I just wrapped up a call with the team from the The AI Collective. Talking with Tristan Ingold, Keshav Ummat, Rebecca Norlander, Joe Braidwood and Bhola Chhetri we all started just ripping on the latest AI Governance news. Oh yes, the event is this Frida",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Did you miss the big awesome Madrona party last night at Pickelwood? Want another chance to show your stuff? We're only a couple of days away, but there's still time to squeeze in a few more…",
-      "link": "https://www.linkedin.com/posts/mbenua_did-you-miss-the-big-awesome-madrona-party-activity-7488004430794018817-sbmP",
-      "date": "Tue, 28 Jul 2026 22:56:17 GMT",
-      "summary": "Did you miss the big awesome Madrona party last night at Pickelwood? Want another chance to show your stuff? We're only a couple of days away, but there's still time to squeeze in a few more registrations! Come and join SheTO and AgenticBricks.com as we dive deep with our illustr",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Already an amazing event.  Room is really filling up. The live music is awesome!😎",
-      "link": "https://www.linkedin.com/posts/rkjohnston_already-an-amazing-event-room-is-really-activity-7487972538204217344-u2OI",
-      "date": "Tue, 28 Jul 2026 20:49:33 GMT",
-      "summary": "Already an amazing event. Room is really filling up. The live music is awesome!😎",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Day 1 of Seattle Tech Week: officially in the books. 🔥\n\nKristina Orille and I ran a 12-hour lap through the Seattle startup scene yesterday, and I'm still buzzing 🤪\n\nSix events. One city. So many…",
-      "link": "https://www.linkedin.com/posts/ashleybright_day-1-of-seattle-tech-week-officially-in-activity-7487960895906750464-cydw",
-      "date": "Tue, 28 Jul 2026 20:03:17 GMT",
-      "summary": "Day 1 of Seattle Tech Week: officially in the books. 🔥 Kristina Orille and I ran a 12-hour lap through the Seattle startup scene yesterday, and I'm still buzzing 🤪 Six events. One city. So many good people. ☕ Founder Investor Day Party (TF Labs x Niftmint x CIBC) Started the day",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Where is your LLM holding you back? What will you do with the next wave of models? Physical AI! World Models! Where will they take us?\n\nThese are questions I've been obsessing over - trust me, my…",
-      "link": "https://www.linkedin.com/posts/sarah-oates_where-is-your-llm-holding-you-back-what-activity-7487950650010529792-L4wr",
-      "date": "Tue, 28 Jul 2026 19:22:34 GMT",
-      "summary": "Where is your LLM holding you back? What will you do with the next wave of models? Physical AI! World Models! Where will they take us? These are questions I've been obsessing over - trust me, my husband is so sick of this topic. I'm reeeeeeally excited to share Anthony Kwiatkowsk",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "When SceniX joined World Labs, we said spatial intelligence was never only about perceiving and generating virtual and physical worlds, but also interacting with them. Today, we’re sharing early… | Fei-Fei Li",
-      "link": "https://www.linkedin.com/posts/fei-fei-li-4541247_when-scenix-joined-world-labs-we-said-spatial-activity-7487903224914423809-OpsZ",
-      "date": "Tue, 28 Jul 2026 16:14:07 GMT",
-      "summary": "",
       "image": null,
       "author": "Ken Johnston"
     }
