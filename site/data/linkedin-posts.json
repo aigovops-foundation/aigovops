@@ -1,6 +1,22 @@
 {
-  "updated": "2026-08-02T07:45:30Z",
+  "updated": "2026-08-02T19:27:14Z",
   "bob": [
+    {
+      "title": "Problem: Fragmented AI oversight and ad-hoc compliance leave executives vulnerable to emerging regulatory risks. Solutions: Join o...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-fragmented-ai-oversight-and-ad-hoc-activity-7489667620439273472-z1Cy",
+      "date": "Sun, 02 Aug 2026 13:05:12 GMT",
+      "summary": "Problem: Fragmented AI oversight and ad-hoc compliance leave executives vulnerable to emerging regulatory risks. Solutions: Join our Founders Forum & Executive Strategy session to align leadership on robust AI governance frameworks. Summary: We bridge high-level policy and real-w",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Algorithmic bias is one of the most critical risks facing AI deployment today. Without rigorous fairness auditing, automated syste...",
+      "link": "https://www.linkedin.com/posts/bobrapp_algorithmic-bias-is-one-of-the-most-critical-activity-7489667360493301760-VUPO",
+      "date": "Sun, 02 Aug 2026 13:04:10 GMT",
+      "summary": "Algorithmic bias is one of the most critical risks facing AI deployment today. Without rigorous fairness auditing, automated systems can silently perpetuate and scale discrimination. Join our upcoming expert-led webinars and community meetups to master practical bias detection fr",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Problem: SMEs struggle to implement AI governance without slowing velocity. Solutions: Use maturity frameworks and curated researc...",
       "link": "https://www.linkedin.com/posts/bobrapp_problem-smes-struggle-to-implement-ai-governance-activity-7489440295236038656-tk_K",
@@ -64,25 +80,33 @@
       "summary": "Problem: Organizations rushing to adopt third-party AI vendor solutions often face unseen compliance liabilities, opaque data handling practices, and severe regulatory blind spots. Solutions: Implement robust Responsible AI Procurement frameworks, enforce comprehensive vendor due",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: As autonomous models scale, static policies fail to catch emergent vulnerabilities and edge-case failures in deployment....",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-as-autonomous-models-scale-static-activity-7488580387175055360-20F-",
-      "date": "Thu, 30 Jul 2026 13:04:55 GMT",
-      "summary": "Problem: As autonomous models scale, static policies fail to catch emergent vulnerabilities and edge-case failures in deployment. Solutions: Implement rigorous AI Red Teaming and systematic stress testing. Explore our curated research library and join expert sessions at",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "The AI \"Splinternet\" is here. Organizations operating globally are caught in a web of conflicting regulations. Problem: Fragmented...",
-      "link": "https://www.linkedin.com/posts/bobrapp_the-ai-splinternet-is-here-organizations-activity-7488580285173882881-Sv7S",
-      "date": "Thu, 30 Jul 2026 13:04:31 GMT",
-      "summary": "The AI \"Splinternet\" is here. Organizations operating globally are caught in a web of conflicting regulations. Problem: Fragmented requirements from the EU AI Act ( to the NIST AI RMF ( create operational friction. Solutions: Shif",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "Okay, that’s pretty funny.",
+      "link": "https://www.linkedin.com/posts/rkjohnston_okay-thats-pretty-funny-activity-7489742125106946048-GO3o",
+      "date": "Sun, 02 Aug 2026 18:01:15 GMT",
+      "summary": "Okay, that’s pretty funny.",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "The most underrated piece of executive coaching:\n\nThe phrase \"let me sit with that and come back to you.\"\n\nAlmost nothing in your job actually requires an answer in the next ten seconds.\n\nYou've just…",
+      "link": "https://www.linkedin.com/posts/kellyameerbott_the-most-underrated-piece-of-executive-coaching-activity-7489651779937181696-ryWe",
+      "date": "Sun, 02 Aug 2026 12:02:15 GMT",
+      "summary": "The most underrated piece of executive coaching: The phrase \"let me sit with that and come back to you.\" Almost nothing in your job actually requires an answer in the next ten seconds. You've just trained yourself -- and your team -- to believe it does. You can unwind that.",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Problem: SMEs struggle to implement AI governance without slowing velocity.\n\nSolutions: Use maturity frameworks and curated research libraries tailored for agile teams.\n\nSummary: Scaling AI safely…",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-smes-struggle-to-implement-ai-governance-activity-7489440295236038656-tk_K",
+      "date": "Sat, 01 Aug 2026 22:01:53 GMT",
+      "summary": "Problem: SMEs struggle to implement AI governance without slowing velocity. Solutions: Use maturity frameworks and curated research libraries tailored for agile teams. Summary: Scaling AI safely empowers SMEs with practical tools. Checklist for SMEs: 1. Define clear data ownershi",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "What does it take to build a community?",
       "link": "https://www.linkedin.com/posts/sally-revell_theswell-womenfounders-communitybuilding-activity-7489366508532363264-ceTH",
@@ -136,30 +160,6 @@
       "link": "https://www.linkedin.com/posts/ted-cannis_michigan-activity-7488968811174612994-EeDb",
       "date": "Fri, 31 Jul 2026 14:48:23 GMT",
       "summary": "Thanks for posting Glenn Stevens . Bill Ford’s leadership has been instrumental. As Team Edison, we were proud to be the first Ford tenants at the refurbished Factory in Corktown. Walking around after dinner last night you can see the transformation everywhere. Thanks Will Sentan",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Anthropic just disclosed that its own Claude models breached three real companies during internal security tests.\n \nThis comes right after OpenAI’s agents escaped their sandbox and compromised…",
-      "link": "https://www.linkedin.com/posts/abalfour_anthropic-just-disclosed-that-its-own-claude-activity-7488948103337664512-tijY",
-      "date": "Fri, 31 Jul 2026 13:26:06 GMT",
-      "summary": "Anthropic just disclosed that its own Claude models breached three real companies during internal security tests. This comes right after OpenAI’s agents escaped their sandbox and compromised Hugging Face. Here’s what actually happened (and why it matters more than the headlines s",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Classie.ai turns the lights on in Miami.",
-      "link": "https://www.linkedin.com/posts/jtylerrohrer_ai-aigovernance-aisecurity-activity-7488911343232659456-qvb6",
-      "date": "Fri, 31 Jul 2026 11:00:01 GMT",
-      "summary": "Classie.ai turns the lights on in Miami. Discover. Analyze. Supervise. 15 minutes to install - 24 hours to WOW. Thank you to our growing legion of early believers!!! #AI #aiGovernance #aiSecurity #aiROI #aiTCO #tokens_count #stay_classie",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Just when you think you’re fully living, fully connected, and getting everything you can from the communities you care so deeply about, something happens that expands your perspective again.\n\nThat…",
-      "link": "https://www.linkedin.com/posts/leighfelton_just-when-you-think-youre-fully-living-activity-7488786385588400129-CJyH",
-      "date": "Fri, 31 Jul 2026 02:43:29 GMT",
-      "summary": "Just when you think you’re fully living, fully connected, and getting everything you can from the communities you care so deeply about, something happens that expands your perspective again. That was my experience this week at Chief Austin. I met women who are brilliant, accompli",
       "image": null,
       "author": "Ken Johnston"
     }
