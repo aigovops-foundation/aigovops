@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-01T19:27:08Z",
+  "updated": "2026-08-02T07:45:30Z",
   "bob": [
+    {
+      "title": "Problem: SMEs struggle to implement AI governance without slowing velocity. Solutions: Use maturity frameworks and curated researc...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-smes-struggle-to-implement-ai-governance-activity-7489440295236038656-tk_K",
+      "date": "Sat, 01 Aug 2026 22:01:53 GMT",
+      "summary": "Problem: SMEs struggle to implement AI governance without slowing velocity. Solutions: Use maturity frameworks and curated research libraries tailored for agile teams. Summary: Scaling AI safely empowers SMEs with practical tools. Checklist for SMEs: 1. Define clear data ownershi",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "The \"too big to fail\" era has shifted to the cloud. Systemic risk is now a regulatory priority. [English] UK Treasury designates A...",
       "link": "https://www.linkedin.com/posts/bobrapp_the-too-big-to-fail-era-has-shifted-to-activity-7489304969632784384-TTwI",
@@ -72,17 +80,41 @@
       "summary": "The AI \"Splinternet\" is here. Organizations operating globally are caught in a web of conflicting regulations. Problem: Fragmented requirements from the EU AI Act ( to the NIST AI RMF ( create operational friction. Solutions: Shif",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "Well deserved - great work Joseph Landes and the entire Nerdio team",
-      "link": "https://www.linkedin.com/posts/bobrapp_well-deserved-great-work-joseph-landes-activity-7488430992551018496-IYRp",
-      "date": "Thu, 30 Jul 2026 03:11:17 GMT",
-      "summary": "Well deserved - great work Joseph Landes and the entire Nerdio team - they really get it",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "What does it take to build a community?",
+      "link": "https://www.linkedin.com/posts/sally-revell_theswell-womenfounders-communitybuilding-activity-7489366508532363264-ceTH",
+      "date": "Sat, 01 Aug 2026 17:08:41 GMT",
+      "summary": "What does it take to build a community? Community is the answer. That’s how The SWELL Incubator is being built. There are no words that can describe how grateful I am for the incredible crew of people who came together to help. This venture went from idea to doors open in 5 weeks",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Proud to celebrate our incredible Ford interns on #NationalInternDay.",
+      "link": "https://www.linkedin.com/posts/anafd_nationalinternday-activity-7489355260692709376-mAJ0",
+      "date": "Sat, 01 Aug 2026 16:24:00 GMT",
+      "summary": "Proud to celebrate our incredible Ford interns on #NationalInternDay. The curiosity, energy, and fresh perspectives they bring challenge us to think differently and help shape the future of our company. Investing in early-career talent isn’t just about developing tomorrow’s leade",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Level Up Your AI Governance with cross-border compliance insights! Navigating international regulations requires diverse perspectives from 17 countries. Join our upcoming sessions at…",
+      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-with-cross-border-activity-7489304583161409536-CS1D",
+      "date": "Sat, 01 Aug 2026 13:02:37 GMT",
+      "summary": "Level Up Your AI Governance with cross-border compliance insights! Navigating international regulations requires diverse perspectives from 17 countries. Join our upcoming sessions at Discover more at CHECKLIST FOR CROSS-BORDER",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "I'm #1 in the Whova leaderboard at @KDD 2026, probably for another hour because there are so few people now - the law of small numbers works :-)\n\nIf you're coming to KDD, say hi.  \n\nIf you're staying…",
+      "link": "https://www.linkedin.com/posts/ronnyk_im-1-in-the-whova-leaderboard-at-kdd-2026-activity-7489187020049924097-YzaL",
+      "date": "Sat, 01 Aug 2026 05:15:28 GMT",
+      "summary": "I'm #1 in the Whova leaderboard at @KDD 2026, probably for another hour because there are so few people now - the law of small numbers works :-) If you're coming to KDD, say hi. If you're staying a day after KDD, I'm doing the East Jeju tour Aug 14 ( My",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "Static AI audits are point-in-time snapshots that fail the moment real-world data drifts. We call this the governance gap.\n\nस्टेटिक AI ऑडिट समय के एक बिंदु की तस्वीरें हैं जो डेटा ड्रिफ्ट होते ही…",
       "link": "https://www.linkedin.com/posts/bobrapp_static-ai-audits-are-point-in-time-snapshots-activity-7489078146957393920-sxRo",
@@ -100,6 +132,14 @@
       "author": "Ken Johnston"
     },
     {
+      "title": "Thanks for posting Glenn Stevens .",
+      "link": "https://www.linkedin.com/posts/ted-cannis_michigan-activity-7488968811174612994-EeDb",
+      "date": "Fri, 31 Jul 2026 14:48:23 GMT",
+      "summary": "Thanks for posting Glenn Stevens . Bill Ford’s leadership has been instrumental. As Team Edison, we were proud to be the first Ford tenants at the refurbished Factory in Corktown. Walking around after dinner last night you can see the transformation everywhere. Thanks Will Sentan",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
       "title": "Anthropic just disclosed that its own Claude models breached three real companies during internal security tests.\n \nThis comes right after OpenAI’s agents escaped their sandbox and compromised…",
       "link": "https://www.linkedin.com/posts/abalfour_anthropic-just-disclosed-that-its-own-claude-activity-7488948103337664512-tijY",
       "date": "Fri, 31 Jul 2026 13:26:06 GMT",
@@ -108,58 +148,18 @@
       "author": "Ken Johnston"
     },
     {
+      "title": "Classie.ai turns the lights on in Miami.",
+      "link": "https://www.linkedin.com/posts/jtylerrohrer_ai-aigovernance-aisecurity-activity-7488911343232659456-qvb6",
+      "date": "Fri, 31 Jul 2026 11:00:01 GMT",
+      "summary": "Classie.ai turns the lights on in Miami. Discover. Analyze. Supervise. 15 minutes to install - 24 hours to WOW. Thank you to our growing legion of early believers!!! #AI #aiGovernance #aiSecurity #aiROI #aiTCO #tokens_count #stay_classie",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
       "title": "Just when you think you’re fully living, fully connected, and getting everything you can from the communities you care so deeply about, something happens that expands your perspective again.\n\nThat…",
       "link": "https://www.linkedin.com/posts/leighfelton_just-when-you-think-youre-fully-living-activity-7488786385588400129-CJyH",
       "date": "Fri, 31 Jul 2026 02:43:29 GMT",
       "summary": "Just when you think you’re fully living, fully connected, and getting everything you can from the communities you care so deeply about, something happens that expands your perspective again. That was my experience this week at Chief Austin. I met women who are brilliant, accompli",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Had a great time at the AI Tinkerers GTM (Go To Market) meetup as part of Seattle Tech Week last night.",
-      "link": "https://www.linkedin.com/posts/rkjohnston_aitinkerers-seattletechweek-activity-7488720073507893248-30qo",
-      "date": "Thu, 30 Jul 2026 22:19:59 GMT",
-      "summary": "Had a great time at the AI Tinkerers GTM (Go To Market) meetup as part of Seattle Tech Week last night. We had a great spot for the meetup hosted at Pioneer Square Labs. That place has a great vibe for startup founders. #AITinkerers has continued to grow and expand here in Seattl",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "A CEO Slacked me at 11:47 PM.\n\"I almost just fired my CFO.\"\n\nHe hadn't.\nHe’d been about to. The email was half-written. The decision felt urgent.\n\nThen he remembered our work:\nDon't decide while…",
-      "link": "https://www.linkedin.com/posts/kellyameerbott_a-ceo-slacked-me-at-1147-pm-i-almost-just-activity-7488564668089651201-SzDG",
-      "date": "Thu, 30 Jul 2026 12:02:28 GMT",
-      "summary": "A CEO Slacked me at 11:47 PM. \"I almost just fired my CFO.\" He hadn't. He’d been about to. The email was half-written. The decision felt urgent. Then he remembered our work: Don't decide while activated. He closed the laptop. He took a walk. An hour later, he didn't recognize the",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Another Startup425 Eastside Summit is in the books!\n\nWe just wrapped up our third Eastside Summit taking place during Seattle Tech Week.\n\nWe kicked off the event with opening remarks from Council…",
-      "link": "https://www.linkedin.com/posts/jgproduct_another-startup425-eastside-summit-is-in-activity-7488389149796859904-TVD0",
-      "date": "Thu, 30 Jul 2026 00:25:01 GMT",
-      "summary": "Another Startup425 Eastside Summit is in the books! We just wrapped up our third Eastside Summit taking place during Seattle Tech Week. We kicked off the event with opening remarks from Council Member Vishal Bhargava. We then had Jonathan Greechan, CEO of Founder Institute. We al",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "EU AI Act compliance countdown is ticking toward August 2026.\n\nProblem: Teams lack structured roadmaps to meet strict regulatory demands.\nSolutions: Adopt expert-led governance frameworks and join…",
-      "link": "https://www.linkedin.com/posts/bobrapp_eu-ai-act-compliance-countdown-is-ticking-activity-7488353825167319041-lLVr",
-      "date": "Wed, 29 Jul 2026 22:04:39 GMT",
-      "summary": "EU AI Act compliance countdown is ticking toward August 2026. Problem: Teams lack structured roadmaps to meet strict regulatory demands. Solutions: Adopt expert-led governance frameworks and join our sessions. Summary: Proactive compliance protects your organization and builds tr",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "NVIDIA's biggest advantage is no longer just the GPU.\n\nIt is the ecosystem built around it.\n\nFrom data preparation and model serving to AI agents, robotics, simulation, and enterprise deployment… | Greg Coquillo",
-      "link": "https://www.linkedin.com/posts/greg-coquillo_nvidias-biggest-advantage-is-no-longer-just-activity-7488266618981167107-KKAk",
-      "date": "Wed, 29 Jul 2026 16:18:07 GMT",
-      "summary": "NVIDIA's biggest advantage is no longer just the GPU. It is the ecosystem built around it. From data preparation and model serving to AI agents, robotics, simulation, and enterprise deployment, NVIDIA is creating a connected stack for the complete AI lifecycle. Here is how it com",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Law can be thin or thick. Both kinds reach AI. But today, most companies are watching only one.\n\nThin law reduces conclusions to facts. A notice was shown, consent was obtained, an assessment was…",
-      "link": "https://www.linkedin.com/posts/aaron-rieke-5a178b28_law-can-be-thin-or-thick-both-kinds-reach-activity-7488250078625677313-mPll",
-      "date": "Wed, 29 Jul 2026 15:12:24 GMT",
-      "summary": "Law can be thin or thick. Both kinds reach AI. But today, most companies are watching only one. Thin law reduces conclusions to facts. A notice was shown, consent was obtained, an assessment was filed. These are observations that double as green checkmarks on a compliance form. T",
       "image": null,
       "author": "Ken Johnston"
     }
