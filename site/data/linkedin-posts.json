@@ -1,6 +1,30 @@
 {
-  "updated": "2026-08-03T08:08:47Z",
+  "updated": "2026-08-03T19:32:07Z",
   "bob": [
+    {
+      "title": "Navigating AI deployment in healthcare and life sciences requires rigorous standards and adherence to frameworks such as FDA Good...",
+      "link": "https://www.linkedin.com/posts/bobrapp_navigating-ai-deployment-in-healthcare-and-activity-7490029722060546048-YqhC",
+      "date": "Mon, 03 Aug 2026 13:04:04 GMT",
+      "summary": "Navigating AI deployment in healthcare and life sciences requires rigorous standards and adherence to frameworks such as FDA Good Machine Learning Practice ( Join our upcoming sessions on the Luma calendar at to explore best pra",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Unchecked AI deployment in clinical settings presents severe risks to patient safety and regulatory compliance. Problem: Healthcar...",
+      "link": "https://www.linkedin.com/posts/bobrapp_unchecked-ai-deployment-in-clinical-settings-activity-7490029479533215744-Q1et",
+      "date": "Mon, 03 Aug 2026 13:03:06 GMT",
+      "summary": "Unchecked AI deployment in clinical settings presents severe risks to patient safety and regulatory compliance. Problem: Healthcare organizations lack standardized frameworks for clinical AI risk management. Solutions: Implement robust governance-as-code and join our global meetu",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "How do we bridge the gap between rapid AI adoption and robust governance in our schools? The distance between \"Cool Tools\" and \"Th...",
+      "link": "https://www.linkedin.com/posts/bobrapp_how-do-we-bridge-the-gap-between-rapid-ai-activity-7490028920684240897-s8eI",
+      "date": "Mon, 03 Aug 2026 13:00:53 GMT",
+      "summary": "How do we bridge the gap between rapid AI adoption and robust governance in our schools? The distance between \"Cool Tools\" and \"The Rules\" is where most safety failures occur. Join us for the NCW AI in Action Camp on August 11, 2026, in Wenatchee. We are unveiling our new core ph",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Problem: Automated AI systems deployed without structural oversight lead to compliance failures. Solutions: Implement robust Human...",
       "link": "https://www.linkedin.com/posts/bobrapp_problem-automated-ai-systems-deployed-without-activity-7489802930389405696-04Yr",
@@ -46,30 +70,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_problem-smes-struggle-to-implement-ai-governance-activity-7489440295236038656-tk_K",
       "date": "Sat, 01 Aug 2026 22:01:53 GMT",
       "summary": "Problem: SMEs struggle to implement AI governance without slowing velocity. Solutions: Use maturity frameworks and curated research libraries tailored for agile teams. Summary: Scaling AI safely empowers SMEs with practical tools. Checklist for SMEs: 1. Define clear data ownershi",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "The \"too big to fail\" era has shifted to the cloud. Systemic risk is now a regulatory priority. [English] UK Treasury designates A...",
-      "link": "https://www.linkedin.com/posts/bobrapp_the-too-big-to-fail-era-has-shifted-to-activity-7489304969632784384-TTwI",
-      "date": "Sat, 01 Aug 2026 13:04:09 GMT",
-      "summary": "The \"too big to fail\" era has shifted to the cloud. Systemic risk is now a regulatory priority. [English] UK Treasury designates AWS, Google, Azure, and Oracle as \"Critical Third Parties\" (CTPs) to protect the financial system. [Hindi] यूके ट्रेजरी ने AWS, Google, Azure और Oracle",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Level Up Your AI Governance with cross-border compliance insights! Navigating international regulations requires diverse perspecti...",
-      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-with-cross-border-activity-7489304583161409536-CS1D",
-      "date": "Sat, 01 Aug 2026 13:02:37 GMT",
-      "summary": "Level Up Your AI Governance with cross-border compliance insights! Navigating international regulations requires diverse perspectives from 17 countries. Join our upcoming sessions at Discover more at CHECKLIST FOR CROSS-BORDER",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Static AI audits are point-in-time snapshots that fail the moment real-world data drifts. We call this the governance gap. स्टेटिक AI...",
-      "link": "https://www.linkedin.com/posts/bobrapp_static-ai-audits-are-point-in-time-snapshots-activity-7489078146957393920-sxRo",
-      "date": "Fri, 31 Jul 2026 22:02:51 GMT",
-      "summary": "Static AI audits are point-in-time snapshots that fail the moment real-world data drifts. We call this the governance gap. स्टेटिक AI ऑडिट समय के एक बिंदु की तस्वीरें हैं जो डेटा ड्रिफ्ट होते ही पुरानी हो जाती हैं। इसे हम गवर्नेंस गैप कहते हैं। Solution: The Beacon Strategy. We r",
       "image": null,
       "author": "Bob Rapp"
     }
