@@ -1,6 +1,30 @@
 {
-  "updated": "2026-08-02T19:27:14Z",
+  "updated": "2026-08-03T08:08:47Z",
   "bob": [
+    {
+      "title": "Problem: Automated AI systems deployed without structural oversight lead to compliance failures. Solutions: Implement robust Human...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-automated-ai-systems-deployed-without-activity-7489802930389405696-04Yr",
+      "date": "Sun, 02 Aug 2026 22:02:52 GMT",
+      "summary": "Problem: Automated AI systems deployed without structural oversight lead to compliance failures. Solutions: Implement robust Human-in-the-Loop (HITL) oversight design patterns across our 12 maturity model frameworks to ensure accountable AI deployment. Join our events at https://",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: For many organizations, AI governance is a \"paper tiger\", a friction point where innovation stops because compliance feel...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-for-many-organizations-ai-governance-activity-7489802810633519104-ToAW",
+      "date": "Sun, 02 Aug 2026 22:02:24 GMT",
+      "summary": "Problem: For many organizations, AI governance is a \"paper tiger\", a friction point where innovation stops because compliance feels like a constant \"no.\" Solution: We’ve redesigned the AiGovOps Foundation site around a proactive framework to bridge the gap between policy and prod",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: Siloed AI adoption across departments creates severe regulatory and compliance vulnerabilities. Solution: Enterprise roun...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-siloed-ai-adoption-across-departments-activity-7489802415706279937-_gwF",
+      "date": "Sun, 02 Aug 2026 22:00:50 GMT",
+      "summary": "Problem: Siloed AI adoption across departments creates severe regulatory and compliance vulnerabilities. Solution: Enterprise roundtables unify cross-functional teams around scalable compliance frameworks (Source: NIST AI RMF Summary: Structured roundta",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Problem: Fragmented AI oversight and ad-hoc compliance leave executives vulnerable to emerging regulatory risks. Solutions: Join o...",
       "link": "https://www.linkedin.com/posts/bobrapp_problem-fragmented-ai-oversight-and-ad-hoc-activity-7489667620439273472-z1Cy",
@@ -48,41 +72,25 @@
       "summary": "Static AI audits are point-in-time snapshots that fail the moment real-world data drifts. We call this the governance gap. स्टेटिक AI ऑडिट समय के एक बिंदु की तस्वीरें हैं जो डेटा ड्रिफ्ट होते ही पुरानी हो जाती हैं। इसे हम गवर्नेंस गैप कहते हैं। Solution: The Beacon Strategy. We r",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "Level Up Your AI Governance : AI Audit Trails & Logging Problem: Opacity in complex AI systems creates severe compliance and trust...",
-      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-ai-audit-trails-activity-7489077883949305856-UKll",
-      "date": "Fri, 31 Jul 2026 22:01:48 GMT",
-      "summary": "Level Up Your AI Governance : AI Audit Trails & Logging Problem: Opacity in complex AI systems creates severe compliance and trust risks. Without immutable audit trails, proving accountability and tracing decisions is nearly impossible. Solutions: Implement robust AI audit trails",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Level Up Your AI Governance — AI in Financial Services Problem: Financial institutions deploying AI face complex regulatory scruti...",
-      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-ai-in-financial-activity-7488942598083088384-UNPc",
-      "date": "Fri, 31 Jul 2026 13:04:13 GMT",
-      "summary": "Level Up Your AI Governance — AI in Financial Services Problem: Financial institutions deploying AI face complex regulatory scrutiny, compliance gaps, and ethical risks in automated lending, fraud detection, and algorithmic trading. Solutions: Leverage robust governance framework",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "NIST mandates unique Agent IDs! End of anonymous AI. Policy-as-Code active. معرّفات الذكاء الاصطناعي الفريدة من NIST. Connect w/ Bo...",
-      "link": "https://www.linkedin.com/posts/bobrapp_nist-mandates-unique-agent-ids-end-of-anonymous-activity-7488715977644290048--Ixb",
-      "date": "Thu, 30 Jul 2026 22:03:43 GMT",
-      "summary": "NIST mandates unique Agent IDs! End of anonymous AI. Policy-as-Code active. معرّفات الذكاء الاصطناعي الفريدة من NIST. Connect w/ Bob Rapp & Ken Johnston.",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: Organizations rushing to adopt third-party AI vendor solutions often face unseen compliance liabilities, opaque data hand...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-organizations-rushing-to-adopt-third-party-activity-7488715739504332800-lYPS",
-      "date": "Thu, 30 Jul 2026 22:02:46 GMT",
-      "summary": "Problem: Organizations rushing to adopt third-party AI vendor solutions often face unseen compliance liabilities, opaque data handling practices, and severe regulatory blind spots. Solutions: Implement robust Responsible AI Procurement frameworks, enforce comprehensive vendor due",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "Interesting quick read.  Will make think.",
+      "link": "https://www.linkedin.com/posts/rkjohnston_interesting-quick-read-will-make-think-activity-7489809861229322241-OR6a",
+      "date": "Sun, 02 Aug 2026 22:30:25 GMT",
+      "summary": "Interesting quick read. Will make think.",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "We had an energetic conversation about AI Governans the last day of Seattle Tech Week as part of The AI Collective panel",
+      "link": "https://www.linkedin.com/posts/rkjohnston_aigovops-rai-activity-7489799471095009282-i7mF",
+      "date": "Sun, 02 Aug 2026 21:49:08 GMT",
+      "summary": "We had an energetic conversation about AI Governans the last day of Seattle Tech Week as part of The AI Collective panel. Thanks to Tristan Ingold and Bhola Chhetri for organizing and Bhola for moderating. Had a blast fielding questions with my fellow panelists and good friends J",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "Okay, that’s pretty funny.",
       "link": "https://www.linkedin.com/posts/rkjohnston_okay-thats-pretty-funny-activity-7489742125106946048-GO3o",
@@ -96,6 +104,14 @@
       "link": "https://www.linkedin.com/posts/kellyameerbott_the-most-underrated-piece-of-executive-coaching-activity-7489651779937181696-ryWe",
       "date": "Sun, 02 Aug 2026 12:02:15 GMT",
       "summary": "The most underrated piece of executive coaching: The phrase \"let me sit with that and come back to you.\" Almost nothing in your job actually requires an answer in the next ten seconds. You've just trained yourself -- and your team -- to believe it does. You can unwind that.",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Excited to attend the Agentic AI Summit 2026 at UC Berkeley!",
+      "link": "https://www.linkedin.com/posts/mahmo_agenticai-activity-7489546637367971840-YgdP",
+      "date": "Sun, 02 Aug 2026 05:04:27 GMT",
+      "summary": "Excited to attend the Agentic AI Summit 2026 at UC Berkeley! Looking forward to learning from researchers and industry leaders, discovering the latest advances in agentic AI. #AgenticAI",
       "image": null,
       "author": "Ken Johnston"
     },
@@ -132,34 +148,10 @@
       "author": "Ken Johnston"
     },
     {
-      "title": "I'm #1 in the Whova leaderboard at @KDD 2026, probably for another hour because there are so few people now - the law of small numbers works :-)\n\nIf you're coming to KDD, say hi.  \n\nIf you're staying…",
-      "link": "https://www.linkedin.com/posts/ronnyk_im-1-in-the-whova-leaderboard-at-kdd-2026-activity-7489187020049924097-YzaL",
-      "date": "Sat, 01 Aug 2026 05:15:28 GMT",
-      "summary": "I'm #1 in the Whova leaderboard at @KDD 2026, probably for another hour because there are so few people now - the law of small numbers works :-) If you're coming to KDD, say hi. If you're staying a day after KDD, I'm doing the East Jeju tour Aug 14 ( My",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Static AI audits are point-in-time snapshots that fail the moment real-world data drifts. We call this the governance gap.\n\nस्टेटिक AI ऑडिट समय के एक बिंदु की तस्वीरें हैं जो डेटा ड्रिफ्ट होते ही…",
-      "link": "https://www.linkedin.com/posts/bobrapp_static-ai-audits-are-point-in-time-snapshots-activity-7489078146957393920-sxRo",
-      "date": "Fri, 31 Jul 2026 22:02:51 GMT",
-      "summary": "Static AI audits are point-in-time snapshots that fail the moment real-world data drifts. We call this the governance gap. स्टेटिक AI ऑडिट समय के एक बिंदु की तस्वीरें हैं जो डेटा ड्रिफ्ट होते ही पुरानी हो जाती हैं। इसे हम गवर्नेंस गैप कहते हैं। Solution: The Beacon Strategy. We r",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "That’s a wrap, see you at the next AI House event.",
-      "link": "https://www.linkedin.com/posts/productgrowth_thats-a-wrap-see-you-at-the-next-ai-house-activity-7488975047995559937-eH7W",
-      "date": "Fri, 31 Jul 2026 15:13:10 GMT",
-      "summary": "That’s a wrap, see you at the next AI House event.",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Thanks for posting Glenn Stevens .",
-      "link": "https://www.linkedin.com/posts/ted-cannis_michigan-activity-7488968811174612994-EeDb",
-      "date": "Fri, 31 Jul 2026 14:48:23 GMT",
-      "summary": "Thanks for posting Glenn Stevens . Bill Ford’s leadership has been instrumental. As Team Edison, we were proud to be the first Ford tenants at the refurbished Factory in Corktown. Walking around after dinner last night you can see the transformation everywhere. Thanks Will Sentan",
+      "title": "The energy across the city for Seattle Tech Week was REAL. Seattle is home to an extraordinary caliber of founders, innovators, and builders.\n\nWe have a thriving startup ecosystem built on a unique…",
+      "link": "https://www.linkedin.com/posts/earnest-mcdaniel_the-energy-across-the-city-for-seattle-tech-activity-7489193171348934656-e3-k",
+      "date": "Sat, 01 Aug 2026 05:39:55 GMT",
+      "summary": "The energy across the city for Seattle Tech Week was REAL. Seattle is home to an extraordinary caliber of founders, innovators, and builders. We have a thriving startup ecosystem built on a unique duality: fierce competition that drives excellence, paired with a collaborative net",
       "image": null,
       "author": "Ken Johnston"
     }
