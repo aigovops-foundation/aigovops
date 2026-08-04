@@ -1,6 +1,22 @@
 {
-  "updated": "2026-08-03T19:32:07Z",
+  "updated": "2026-08-04T07:51:46Z",
   "bob": [
+    {
+      "title": "Problem: Manual AI compliance checks slow down innovation and create dangerous governance gaps across organizational workflows. So...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-manual-ai-compliance-checks-slow-activity-7490165419853533185-6Woe",
+      "date": "Mon, 03 Aug 2026 22:03:17 GMT",
+      "summary": "Problem: Manual AI compliance checks slow down innovation and create dangerous governance gaps across organizational workflows. Solutions: Implement Policy-as-Code to automate compliance guardrails and deploy our 10 automated AI agents to streamline community management and risk",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: Navigating AI compliance in isolation leads to regulatory blind spots (https://lnkd.in/etzce7fB). Solutions: Join our Aft...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-navigating-ai-compliance-in-isolation-activity-7490164946392002563-H5Ip",
+      "date": "Mon, 03 Aug 2026 22:01:24 GMT",
+      "summary": "Problem: Navigating AI compliance in isolation leads to regulatory blind spots ( Solutions: Join our After Hours Networking session for cross-border collaboration and community building. Summary: Connect with global peers to share actionable governance f",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Navigating AI deployment in healthcare and life sciences requires rigorous standards and adherence to frameworks such as FDA Good...",
       "link": "https://www.linkedin.com/posts/bobrapp_navigating-ai-deployment-in-healthcare-and-activity-7490029722060546048-YqhC",
@@ -54,22 +70,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_problem-fragmented-ai-oversight-and-ad-hoc-activity-7489667620439273472-z1Cy",
       "date": "Sun, 02 Aug 2026 13:05:12 GMT",
       "summary": "Problem: Fragmented AI oversight and ad-hoc compliance leave executives vulnerable to emerging regulatory risks. Solutions: Join our Founders Forum & Executive Strategy session to align leadership on robust AI governance frameworks. Summary: We bridge high-level policy and real-w",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Algorithmic bias is one of the most critical risks facing AI deployment today. Without rigorous fairness auditing, automated syste...",
-      "link": "https://www.linkedin.com/posts/bobrapp_algorithmic-bias-is-one-of-the-most-critical-activity-7489667360493301760-VUPO",
-      "date": "Sun, 02 Aug 2026 13:04:10 GMT",
-      "summary": "Algorithmic bias is one of the most critical risks facing AI deployment today. Without rigorous fairness auditing, automated systems can silently perpetuate and scale discrimination. Join our upcoming expert-led webinars and community meetups to master practical bias detection fr",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: SMEs struggle to implement AI governance without slowing velocity. Solutions: Use maturity frameworks and curated researc...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-smes-struggle-to-implement-ai-governance-activity-7489440295236038656-tk_K",
-      "date": "Sat, 01 Aug 2026 22:01:53 GMT",
-      "summary": "Problem: SMEs struggle to implement AI governance without slowing velocity. Solutions: Use maturity frameworks and curated research libraries tailored for agile teams. Summary: Scaling AI safely empowers SMEs with practical tools. Checklist for SMEs: 1. Define clear data ownershi",
       "image": null,
       "author": "Bob Rapp"
     }
