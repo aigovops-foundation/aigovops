@@ -1,6 +1,46 @@
 {
-  "updated": "2026-08-05T07:52:51Z",
+  "updated": "2026-08-05T19:31:58Z",
   "bob": [
+    {
+      "title": "Problem: Healthcare AI deployment often outpaces regulatory oversight, risking patient safety and model drift in critical clinical...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-healthcare-ai-deployment-often-outpaces-activity-7490754321970606080-0nkt",
+      "date": "Wed, 05 Aug 2026 13:03:22 GMT",
+      "summary": "Problem: Healthcare AI deployment often outpaces regulatory oversight, risking patient safety and model drift in critical clinical environments. Solutions: Join our upcoming healthcare AI governance meetups to establish robust, real-world evaluation frameworks. Summary: We bring",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: Unchecked bias in machine learning models leads to real-world discrimination. Solutions: Implement robust fairness testin...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-unchecked-bias-in-machine-learning-activity-7490754312038559744-t9vl",
+      "date": "Wed, 05 Aug 2026 13:03:19 GMT",
+      "summary": "Problem: Unchecked bias in machine learning models leads to real-world discrimination. Solutions: Implement robust fairness testing and automated bias auditing frameworks ( Summary: Structured evaluation is essential for responsible AI deployment. Checkl",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Executives often struggle to measure ROI and mitigate risks in AI deployments due to a lack of clear governance metrics. To solve...",
+      "link": "https://www.linkedin.com/posts/bobrapp_executives-often-struggle-to-measure-roi-activity-7490754224566390784-BIdz",
+      "date": "Wed, 05 Aug 2026 13:02:59 GMT",
+      "summary": "Executives often struggle to measure ROI and mitigate risks in AI deployments due to a lack of clear governance metrics. To solve this, implement structured KPIs, leverage curated research frameworks, and participate in expert-led events. Discover upcoming sessions on our Luma ca",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Navigating AI compliance in silos leaves organizations vulnerable to unseen risks and fragmented frameworks. Problem: Building eff...",
+      "link": "https://www.linkedin.com/posts/bobrapp_navigating-ai-compliance-in-silos-leaves-activity-7490753987269332992-b_49",
+      "date": "Wed, 05 Aug 2026 13:02:02 GMT",
+      "summary": "Navigating AI compliance in silos leaves organizations vulnerable to unseen risks and fragmented frameworks. Problem: Building effective AI governance without global peer perspectives leads to costly blind spots. Solutions: Plug into a robust global ecosystem of 10,000+ AI govern",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: Getting to Yes at deployment is not the finish line. When an autonomous agent goes rogue post-deployment, static complian...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-responsibleai-aicompliance-activity-7490753805983154177-SPD9",
+      "date": "Wed, 05 Aug 2026 13:01:19 GMT",
+      "summary": "Problem: Getting to Yes at deployment is not the finish line. When an autonomous agent goes rogue post-deployment, static compliance checks fail. Solutions: Implement continuous runtime monitoring and an agentic kill switch to maintain control ( Summary:",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "In the race to deploy AI, 'Jake' ignores guardrails while 'Maria' insists on compliance. This \"governance gap\" is a liability that...",
       "link": "https://www.linkedin.com/posts/bobrapp_in-the-race-to-deploy-ai-jake-ignores-activity-7490527739490246656-xI09",
@@ -40,49 +80,33 @@
       "summary": "Problem: Fragmented AI compliance efforts leave teams isolated without peer support. Solutions: Join our global online meetups and virtual community at to collaborate with international experts. Summary: Cross-border governance frameworks bridge regulato",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: Fragmented AI oversight and isolated leadership decisions leave organizations vulnerable to severe regulatory gaps and et...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-fragmented-ai-oversight-and-isolated-activity-7490391968749961216-RzLp",
-      "date": "Tue, 04 Aug 2026 13:03:30 GMT",
-      "summary": "Problem: Fragmented AI oversight and isolated leadership decisions leave organizations vulnerable to severe regulatory gaps and ethical missteps. Solutions: Join our Founders Forum and Leadership Collaboration sessions via to align on robust, cross-secto",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: AI incidents and data drift strike without warning, leaving unprepared organizations vulnerable to compliance failures an...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-ai-incidents-and-data-drift-strike-activity-7490391771592515584-yG2_",
-      "date": "Tue, 04 Aug 2026 13:02:43 GMT",
-      "summary": "Problem: AI incidents and data drift strike without warning, leaving unprepared organizations vulnerable to compliance failures and ethical breaches. Solutions: Deploy robust AI Incident Response & Recovery Playbooks developed alongside our global community of 10,000+ AI governan",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: Manual AI compliance checks slow down innovation and create dangerous governance gaps across organizational workflows. So...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-manual-ai-compliance-checks-slow-activity-7490165419853533185-6Woe",
-      "date": "Mon, 03 Aug 2026 22:03:17 GMT",
-      "summary": "Problem: Manual AI compliance checks slow down innovation and create dangerous governance gaps across organizational workflows. Solutions: Implement Policy-as-Code to automate compliance guardrails and deploy our 10 automated AI agents to streamline community management and risk",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: Navigating AI compliance in isolation leads to regulatory blind spots (https://lnkd.in/etzce7fB). Solutions: Join our Aft...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-navigating-ai-compliance-in-isolation-activity-7490164946392002563-H5Ip",
-      "date": "Mon, 03 Aug 2026 22:01:24 GMT",
-      "summary": "Problem: Navigating AI compliance in isolation leads to regulatory blind spots ( Solutions: Join our After Hours Networking session for cross-border collaboration and community building. Summary: Connect with global peers to share actionable governance f",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Navigating AI deployment in healthcare and life sciences requires rigorous standards and adherence to frameworks such as FDA Good...",
-      "link": "https://www.linkedin.com/posts/bobrapp_navigating-ai-deployment-in-healthcare-and-activity-7490029722060546048-YqhC",
-      "date": "Mon, 03 Aug 2026 13:04:04 GMT",
-      "summary": "Navigating AI deployment in healthcare and life sciences requires rigorous standards and adherence to frameworks such as FDA Good Machine Learning Practice ( Join our upcoming sessions on the Luma calendar at to explore best pra",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "#aiagents #generativeai #productionai #artificialintelligence #softwareengineering #aws #salesforce #pinterest #seattledataai | Seattle Data AI & Security",
+      "link": "https://www.linkedin.com/posts/seattle-data-ai-and-security_aiagents-generativeai-productionai-activity-7490791362167226369-4czT",
+      "date": "Wed, 05 Aug 2026 15:30:33 GMT",
+      "summary": "𝗔𝗜 𝗔𝗴𝗲𝗻𝘁𝘀 𝗶𝗻 𝘁𝗵𝗲 𝗪𝗶𝗹𝗱 | 𝗕𝘂𝗶𝗹𝗱𝗶𝗻𝗴, 𝗦𝗰𝗮𝗹𝗶𝗻𝗴 & 𝗗𝗲𝗽𝗹𝗼𝘆𝗶𝗻𝗴 𝗶𝗻 𝗣𝗿𝗼𝗱𝘂𝗰𝘁𝗶𝗼𝗻 𝗕𝗲𝗹𝗹𝗲𝘃𝘂𝗲 𝗖𝗶𝘁𝘆 𝗛𝗮𝗹𝗹 | 𝗔𝘂𝗴𝘂𝘀𝘁 𝟭𝟮 | 𝟰:𝟯𝟬𝗽𝗺 - 𝟴:𝟬𝟬𝗽𝗺 Building an AI agent is only the beginning. The real challenge is making it reliable, observable, secure, and production-ready. Join Seattle Data, AI & Security fo",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "You can tell real positioning from a mood board with one test. Real positioning names a competitor.\n\nTwo of them, actually. The one you intend to take customers from, by name, and the one you are…",
+      "link": "https://www.linkedin.com/posts/yenanderson_you-can-tell-real-positioning-from-a-mood-activity-7490761221827153920-z-KE",
+      "date": "Wed, 05 Aug 2026 13:30:47 GMT",
+      "summary": "You can tell real positioning from a mood board with one test. Real positioning names a competitor. Two of them, actually. The one you intend to take customers from, by name, and the one you are content to lose to, on purpose. A founder who can say both has made an actual decisio",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "My feed is full of Seattle Tech Week takeaways. \nI didn't write down a single one. ‼️  \n\nWhat I'm keeping from this week are the feelings. \n\nThe disorientation before it started. The anxiety right… | Nigel Sharp 🚂",
+      "link": "https://www.linkedin.com/posts/nigelsharp_my-feed-is-full-of-seattle-tech-week-takeaways-activity-7490649249123061760-bX8h",
+      "date": "Wed, 05 Aug 2026 06:05:50 GMT",
+      "summary": "",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "We recently hosted a VC AMA with Madrona Managing Director Tim Porter, who spent time at AI House sharing insights and advice for founders. Some of the key takeaways from the discussion with AI House…",
       "link": "https://www.linkedin.com/posts/aihouse_we-recently-hosted-a-vc-ama-with-madrona-activity-7490481693066289152--Nvx",
@@ -128,38 +152,6 @@
       "link": "https://www.linkedin.com/posts/rkjohnston_aigovops-rai-activity-7489799471095009282-i7mF",
       "date": "Sun, 02 Aug 2026 21:49:08 GMT",
       "summary": "We had an energetic conversation about AI Governans the last day of Seattle Tech Week as part of The AI Collective panel. Thanks to Tristan Ingold and Bhola Chhetri for organizing and Bhola for moderating. Had a blast fielding questions with my fellow panelists and good friends J",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Okay, that’s pretty funny.",
-      "link": "https://www.linkedin.com/posts/rkjohnston_okay-thats-pretty-funny-activity-7489742125106946048-GO3o",
-      "date": "Sun, 02 Aug 2026 18:01:15 GMT",
-      "summary": "Okay, that’s pretty funny.",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "The most underrated piece of executive coaching:\n\nThe phrase \"let me sit with that and come back to you.\"\n\nAlmost nothing in your job actually requires an answer in the next ten seconds.\n\nYou've just…",
-      "link": "https://www.linkedin.com/posts/kellyameerbott_the-most-underrated-piece-of-executive-coaching-activity-7489651779937181696-ryWe",
-      "date": "Sun, 02 Aug 2026 12:02:15 GMT",
-      "summary": "The most underrated piece of executive coaching: The phrase \"let me sit with that and come back to you.\" Almost nothing in your job actually requires an answer in the next ten seconds. You've just trained yourself -- and your team -- to believe it does. You can unwind that.",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Excited to attend the Agentic AI Summit 2026 at UC Berkeley!",
-      "link": "https://www.linkedin.com/posts/mahmo_agenticai-activity-7489546637367971840-YgdP",
-      "date": "Sun, 02 Aug 2026 05:04:27 GMT",
-      "summary": "Excited to attend the Agentic AI Summit 2026 at UC Berkeley! Looking forward to learning from researchers and industry leaders, discovering the latest advances in agentic AI. #AgenticAI",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Problem: SMEs struggle to implement AI governance without slowing velocity.\n\nSolutions: Use maturity frameworks and curated research libraries tailored for agile teams.\n\nSummary: Scaling AI safely…",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-smes-struggle-to-implement-ai-governance-activity-7489440295236038656-tk_K",
-      "date": "Sat, 01 Aug 2026 22:01:53 GMT",
-      "summary": "Problem: SMEs struggle to implement AI governance without slowing velocity. Solutions: Use maturity frameworks and curated research libraries tailored for agile teams. Summary: Scaling AI safely empowers SMEs with practical tools. Checklist for SMEs: 1. Define clear data ownershi",
       "image": null,
       "author": "Ken Johnston"
     }
