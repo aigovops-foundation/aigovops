@@ -116,7 +116,24 @@
       <p class="text-center text-xs text-charcoal/45">Anonymous by design. We collect no name, email, or personal information, and nothing is sent to a server — your commitment stays private, on this device. <a href="privacy.html" class="underline hover:text-charcoal/70">How we handle privacy</a>.</p>
     </form>
 
-    <div id="successCard" class="hidden bg-white rounded-3xl border-2 border-orchard/30 shadow-sm p-8 sm:p-10 text-center">
+    <!-- `pb-20` on phones is thumb-clearance, not styling — don't fold it back into `p-8`.
+         The Jeeves launcher (.jv-btn) is injected on every page by shared.js, but it is not
+         ours to move: it ships from the Foundation site's jeeves-widget.js and is shared by
+         every AiGovOps property. It is position:fixed at right:20px/bottom:20px, 46px tall,
+         at z-index 2147483000 — so it permanently owns the bottom-right ~141x66px of the
+         viewport and paints above this card.
+
+         The newsletter CTA below is the last thing in the card, so with only `p-8` (32px)
+         beneath it it sat inside that 66px band: at 390px the CTA spans x 88-302 against the
+         launcher's x 249-370, and 54px of the target was covered by a button that opens
+         Jeeves instead. Reserving 80px (20 + 46 + breathing room) means the CTA can never sit
+         closer to the bottom of the screen than the launcher's own height, so whenever the
+         card is scrolled fully into view the target is clear.
+
+         Phones only: `sm:pb-10` restores the desktop padding, where the card is centred and
+         narrow while the launcher stays hard right and they never share horizontal space
+         (at 1280px the card ends at x 976, the launcher starts at x 1139). -->
+    <div id="successCard" class="hidden bg-white rounded-3xl border-2 border-orchard/30 shadow-sm p-8 pb-20 sm:p-10 sm:pb-10 text-center">
       <div class="mx-auto w-16 h-16 rounded-full bg-orchard/10 grid place-items-center mb-5">
         <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#2E7D4F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
       </div>
