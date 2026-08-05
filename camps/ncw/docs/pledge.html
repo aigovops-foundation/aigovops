@@ -127,6 +127,21 @@
         <a href="resources.html" class="inline-flex justify-center items-center rounded-full bg-orchard hover:bg-orchard-dark transition-colors text-white font-600 px-6 py-3">Get the free toolkit</a>
         <button id="signAnother" class="inline-flex justify-center items-center rounded-full bg-cream-deep hover:bg-cream-deep/70 transition-colors text-charcoal font-600 px-6 py-3">Sign another</button>
       </div>
+
+      <!-- A SEPARATE, OPT-IN CHOICE — deliberately alongside the pledge, never inside it.
+           The pledge itself still collects nothing: no field here, no request, no record. This
+           is an outbound link, and Substack does its own asking on its own domain under its own
+           consent. That is what keeps `tests/api/pledge-anonymity.test.mjs` green while still
+           giving someone who just committed a way to hear what happens next.
+           It sits BELOW the primary actions on purpose: an ask, not a toll gate. -->
+      <div class="mt-8 pt-6 border-t border-charcoal/10">
+        <p class="text-charcoal/70 text-[15px] max-w-md mx-auto">Want to hear what the region does next? The weekly note is a separate, optional thing — we still don't know who signed.</p>
+        <a href="https://aigovops.substack.com" target="_blank" rel="noopener noreferrer"
+           class="mt-4 inline-flex justify-center items-center gap-2 rounded-full bg-charcoal hover:bg-charcoal/85 transition-colors text-cream font-600 px-6 py-3 text-[15px]">
+          Get the weekly note
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 </section>
