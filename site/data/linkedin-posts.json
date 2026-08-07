@@ -1,6 +1,62 @@
 {
-  "updated": "2026-08-06T07:52:14Z",
+  "updated": "2026-08-07T07:29:57Z",
   "bob": [
+    {
+      "title": "Most organizations rush into AI adoption without scrutinizing vendor algorithms, leaving massive blind spots in compliance and eth...",
+      "link": "https://www.linkedin.com/posts/bobrapp_most-organizations-rush-into-ai-adoption-activity-7491252797137395712-ZbEA",
+      "date": "Thu, 06 Aug 2026 22:04:08 GMT",
+      "summary": "Most organizations rush into AI adoption without scrutinizing vendor algorithms, leaving massive blind spots in compliance and ethics. Problem: Blind vendor procurement introduces unchecked algorithmic risks and regulatory non-compliance. Solutions: Implement rigorous third-party",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: Unchecked AI deployments create unforeseen societal risks, regulatory blind spots, and ethical failures. Solutions: Imple...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-unchecked-ai-deployments-create-activity-7491252791609364482-EbgW",
+      "date": "Thu, 06 Aug 2026 22:04:06 GMT",
+      "summary": "Problem: Unchecked AI deployments create unforeseen societal risks, regulatory blind spots, and ethical failures. Solutions: Implement rigorous Algorithmic Impact Assessments (AIAs) to systematically evaluate risks before deployment. Summary: AIAs bridge the gap between high-leve",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: Fragmented AI oversight leaves organizations vulnerable to compliance risks and ethical blind spots. Solutions: Discover...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-fragmented-ai-oversight-leaves-organizations-activity-7491252691814354944-Dnqq",
+      "date": "Thu, 06 Aug 2026 22:03:42 GMT",
+      "summary": "Problem: Fragmented AI oversight leaves organizations vulnerable to compliance risks and ethical blind spots. Solutions: Discover how the Beacon Tool and our 12 Maturity Model Frameworks provide structured, actionable navigation for responsible AI deployment. Summary: Standardize",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: Autonomous AI agents operating in recursive loops can bypass initial static guardrails, leading to unpredicted runaway be...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-responsibleai-agenticai-activity-7491252296597630976-rt_I",
+      "date": "Thu, 06 Aug 2026 22:02:08 GMT",
+      "summary": "Problem: Autonomous AI agents operating in recursive loops can bypass initial static guardrails, leading to unpredicted runaway behaviors and systemic risks as documented by NIST \\( Implement real-time dynamic circuit breakers, continuous policy-as-code v",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: AI models fail unpredictably against novel adversarial exploits without rigorous stress testing. Solutions: Implement con...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-ai-models-fail-unpredictably-against-activity-7491117063793561600-b68i",
+      "date": "Thu, 06 Aug 2026 13:04:46 GMT",
+      "summary": "Problem: AI models fail unpredictably against novel adversarial exploits without rigorous stress testing. Solutions: Implement continuous AI red teaming following NIST guidelines ( Summary: Proactive stress testing exposes vulnerabilities before deployme",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Unlocking the black box of AI is no longer optional—it is imperative for effective governance. Join our 'Level Up Your AI Governan...",
+      "link": "https://www.linkedin.com/posts/bobrapp_unlocking-the-black-box-of-ai-is-no-longer-activity-7491116716576489473-NG3P",
+      "date": "Thu, 06 Aug 2026 13:03:23 GMT",
+      "summary": "Unlocking the black box of AI is no longer optional—it is imperative for effective governance. Join our 'Level Up Your AI Governance' campaign as we dive deep into AI Explainability (XAI) to make complex models transparent and interpretable. Subscribe to our Luma calendar at http",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Level up your AI governance strategy through active virtual collaboration and global online meetups. Join our upcoming sessions on...",
+      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-strategy-through-activity-7491116118317727746-xhc9",
+      "date": "Thu, 06 Aug 2026 13:01:01 GMT",
+      "summary": "Level up your AI governance strategy through active virtual collaboration and global online meetups. Join our upcoming sessions on our Luma calendar at to connect with industry peers and experts. Virtual Governance Checklist: - Register early on our Luma",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Problem: Navigating AI governance alone isolates professionals from vital global perspectives. Solutions: Join our After Hours Net...",
       "link": "https://www.linkedin.com/posts/bobrapp_problem-navigating-ai-governance-alone-isolates-activity-7490890219831975936-hrft",
@@ -24,65 +80,41 @@
       "summary": "Problem: Fragmented regulations and rapid AI deployment create critical compliance gaps worldwide. Solutions: Our 2026 Global Trend Roundup unites 10,000+ professionals across 17 countries to establish actionable frameworks. Summary: Navigating multi-jurisdictional policies requi",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: Static compliance documents fail to govern dynamic AI models effectively in fast-moving environments. Solutions: Adopt Go...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-static-compliance-documents-fail-activity-7490889919406526464-ZVc0",
-      "date": "Wed, 05 Aug 2026 22:02:11 GMT",
-      "summary": "Problem: Static compliance documents fail to govern dynamic AI models effectively in fast-moving environments. Solutions: Adopt Governance-as-Code to automate compliance guardrails directly into CI/CD deployment pipelines. Summary: Embedding rules into code bridges the gap betwee",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: Healthcare AI deployment often outpaces regulatory oversight, risking patient safety and model drift in critical clinical...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-healthcare-ai-deployment-often-outpaces-activity-7490754321970606080-0nkt",
-      "date": "Wed, 05 Aug 2026 13:03:22 GMT",
-      "summary": "Problem: Healthcare AI deployment often outpaces regulatory oversight, risking patient safety and model drift in critical clinical environments. Solutions: Join our upcoming healthcare AI governance meetups to establish robust, real-world evaluation frameworks. Summary: We bring",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: Unchecked bias in machine learning models leads to real-world discrimination. Solutions: Implement robust fairness testin...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-unchecked-bias-in-machine-learning-activity-7490754312038559744-t9vl",
-      "date": "Wed, 05 Aug 2026 13:03:19 GMT",
-      "summary": "Problem: Unchecked bias in machine learning models leads to real-world discrimination. Solutions: Implement robust fairness testing and automated bias auditing frameworks ( Summary: Structured evaluation is essential for responsible AI deployment. Checkl",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Executives often struggle to measure ROI and mitigate risks in AI deployments due to a lack of clear governance metrics. To solve...",
-      "link": "https://www.linkedin.com/posts/bobrapp_executives-often-struggle-to-measure-roi-activity-7490754224566390784-BIdz",
-      "date": "Wed, 05 Aug 2026 13:02:59 GMT",
-      "summary": "Executives often struggle to measure ROI and mitigate risks in AI deployments due to a lack of clear governance metrics. To solve this, implement structured KPIs, leverage curated research frameworks, and participate in expert-led events. Discover upcoming sessions on our Luma ca",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Navigating AI compliance in silos leaves organizations vulnerable to unseen risks and fragmented frameworks. Problem: Building eff...",
-      "link": "https://www.linkedin.com/posts/bobrapp_navigating-ai-compliance-in-silos-leaves-activity-7490753987269332992-b_49",
-      "date": "Wed, 05 Aug 2026 13:02:02 GMT",
-      "summary": "Navigating AI compliance in silos leaves organizations vulnerable to unseen risks and fragmented frameworks. Problem: Building effective AI governance without global peer perspectives leads to costly blind spots. Solutions: Plug into a robust global ecosystem of 10,000+ AI govern",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: Getting to Yes at deployment is not the finish line. When an autonomous agent goes rogue post-deployment, static complian...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-responsibleai-aicompliance-activity-7490753805983154177-SPD9",
-      "date": "Wed, 05 Aug 2026 13:01:19 GMT",
-      "summary": "Problem: Getting to Yes at deployment is not the finish line. When an autonomous agent goes rogue post-deployment, static compliance checks fail. Solutions: Implement continuous runtime monitoring and an agentic kill switch to maintain control ( Summary:",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "In the race to deploy AI, 'Jake' ignores guardrails while 'Maria' insists on compliance. This \"governance gap\" is a liability that...",
-      "link": "https://www.linkedin.com/posts/bobrapp_in-the-race-to-deploy-ai-jake-ignores-activity-7490527739490246656-xI09",
-      "date": "Tue, 04 Aug 2026 22:03:00 GMT",
-      "summary": "In the race to deploy AI, 'Jake' ignores guardrails while 'Maria' insists on compliance. This \"governance gap\" is a liability that creates technical debt and regulatory risk. At our upcoming NCW AI Camp on August 11, 2026, we bridge this by turning Maria’s rules into Jake’s code—",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "80 Missed LI messages?!\nTeach me to take 5 days off of LinkedIn to do a road trip with my son.\n\nThis week I drove 2,455 miles in a Mustang Mach E Rally (EV) with my son.  He starts grad school at the…",
+      "link": "https://www.linkedin.com/posts/rkjohnston_80-missed-li-messages-teach-me-to-take-activity-7491255490782437376-Sf9I",
+      "date": "Thu, 06 Aug 2026 22:14:50 GMT",
+      "summary": "80 Missed LI messages?! Teach me to take 5 days off of LinkedIn to do a road trip with my son. This week I drove 2,455 miles in a Mustang Mach E Rally (EV) with my son. He starts grad school at the Clemson ICAR (International Center for Automotive Research). Yes, excited and prou",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Quantum computing has a marketing problem. Too many specs, not enough story.\n\nI’m hiring a VP of Product Marketing for IonQ’s Compute business in Bothell, WA to change that. You’ll turn complex…",
+      "link": "https://www.linkedin.com/posts/jhenshaw_quantum-computing-has-a-marketing-problem-activity-7491168148121939968-5aPX",
+      "date": "Thu, 06 Aug 2026 16:27:46 GMT",
+      "summary": "Quantum computing has a marketing problem. Too many specs, not enough story. I’m hiring a VP of Product Marketing for IonQ’s Compute business in Bothell, WA to change that. You’ll turn complex technology into a compelling market narrative, challenge the thinking and build the fun",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "I worked with a healthcare CEO for three years.\n\nOn paper: Extraordinary.\nBoard adored her. \nInvestors trusted her.\n\nBehind the scenes: She hadn't slept in four years.\nShe missed her son’s birthdays.…",
+      "link": "https://www.linkedin.com/posts/kellyameerbott_i-worked-with-a-healthcare-ceo-for-three-activity-7491101731746000897-Coci",
+      "date": "Thu, 06 Aug 2026 12:03:51 GMT",
+      "summary": "I worked with a healthcare CEO for three years. On paper: Extraordinary. Board adored her. Investors trusted her. Behind the scenes: She hadn't slept in four years. She missed her son’s birthdays. Her marriage was “structurally sound, emotionally bankrupt.” She told me: “I don’t",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "But we need the votes from this community before Aug 23rd.",
+      "link": "https://www.linkedin.com/posts/sally-revell_sxsw2027-aileadership-futureofwork-activity-7490973806904098816-8Nv0",
+      "date": "Thu, 06 Aug 2026 03:35:31 GMT",
+      "summary": "SXSW 2027, we’re ready. But we need the votes from this community before Aug 23rd. We’re proposing a panel on one of the most important conversations in AI right now: Leading in AI: The Human Transformation Behind the Tech. The “How do we adopt AI?” era is over. Now it’s we’re in",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "We had a great time participating in the The AI Collective panel at Seattle Tech Week.  Anna, thank you for the awesome pics and great key points.",
       "link": "https://www.linkedin.com/posts/rkjohnston_we-had-a-great-time-participating-in-the-activity-7490929889995292672-AkWz",
@@ -108,50 +140,18 @@
       "author": "Ken Johnston"
     },
     {
+      "title": "We are bringing 4 women with us to MIT!",
+      "link": "https://www.linkedin.com/posts/sally-revell_womeninai-womenintech-nocode-activity-7490769127490646017-xFNW",
+      "date": "Wed, 05 Aug 2026 14:02:12 GMT",
+      "summary": "We are bringing 4 women with us to MIT! Next month I am walking into MIT with Hannah Siegertsz, and yes, we’re giving away 4 passes to come to the AI-Powered Women conference with us. I’m so honored to share this opportunity as the chapter lead for AI-Powered Women Seattle. Septe",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
       "title": "You can tell real positioning from a mood board with one test. Real positioning names a competitor.\n\nTwo of them, actually. The one you intend to take customers from, by name, and the one you are…",
       "link": "https://www.linkedin.com/posts/yenanderson_you-can-tell-real-positioning-from-a-mood-activity-7490761221827153920-z-KE",
       "date": "Wed, 05 Aug 2026 13:30:47 GMT",
       "summary": "You can tell real positioning from a mood board with one test. Real positioning names a competitor. Two of them, actually. The one you intend to take customers from, by name, and the one you are content to lose to, on purpose. A founder who can say both has made an actual decisio",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "My feed is full of Seattle Tech Week takeaways. \nI didn't write down a single one. ‼️  \n\nWhat I'm keeping from this week are the feelings. \n\nThe disorientation before it started. The anxiety right… | Nigel Sharp 🚂",
-      "link": "https://www.linkedin.com/posts/nigelsharp_my-feed-is-full-of-seattle-tech-week-takeaways-activity-7490649249123061760-bX8h",
-      "date": "Wed, 05 Aug 2026 06:05:50 GMT",
-      "summary": "",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "We recently hosted a VC AMA with Madrona Managing Director Tim Porter, who spent time at AI House sharing insights and advice for founders. Some of the key takeaways from the discussion with AI House…",
-      "link": "https://www.linkedin.com/posts/aihouse_we-recently-hosted-a-vc-ama-with-madrona-activity-7490481693066289152--Nvx",
-      "date": "Tue, 04 Aug 2026 19:00:02 GMT",
-      "summary": "We recently hosted a VC AMA with Madrona Managing Director Tim Porter, who spent time at AI House sharing insights and advice for founders. Some of the key takeaways from the discussion with AI House Incubator Managing Director Yifan Zhang: 1. \"Repeatability\" beats a big forecast",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Behind every summit that actually works is a group of partners who believed in it before the doors ever opened. 🤍\n\nNow that the dust has settled on our B.E.L.L.E and World Digital Technology Academy…",
-      "link": "https://www.linkedin.com/posts/lenka-h-72700945_behind-every-summit-that-actually-works-is-activity-7490168936513044481-Ga4R",
-      "date": "Mon, 03 Aug 2026 22:17:15 GMT",
-      "summary": "Behind every summit that actually works is a group of partners who believed in it before the doors ever opened. 🤍 Now that the dust has settled on our B.E.L.L.E and World Digital Technology Academy (WDTA) Seattle AI Summit, I want to give our sponsors the moment they deserve — be",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Another Seattle Tech Week  gone in a blur. I think the mirror-balloon entrance to AI House’s BBQ perfectly encapsulates how I was feeling by the end!\n\nExcellent to see old friends and colleagues, and…",
-      "link": "https://www.linkedin.com/posts/mbenua_another-seattle-tech-week-gone-in-a-blur-activity-7490102916192628737-LTYA",
-      "date": "Mon, 03 Aug 2026 17:54:55 GMT",
-      "summary": "Another Seattle Tech Week gone in a blur. I think the mirror-balloon entrance to AI House’s BBQ perfectly encapsulates how I was feeling by the end! Excellent to see old friends and colleagues, and to make a couple exceptional new ones. Life moves fast when you’re booting up an A",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Seattle Tech Week is always special!\n\nSeattle is a city of quiet, thoughtful, heads-down builders. But for one week, all that creativity, ambition, and care comes alive in the open. There is a sense…",
-      "link": "https://www.linkedin.com/posts/priyankakulkarni11_seattle-tech-week-is-always-special-seattle-activity-7490081552496816128-rXEP",
-      "date": "Mon, 03 Aug 2026 16:30:01 GMT",
-      "summary": "Seattle Tech Week is always special! Seattle is a city of quiet, thoughtful, heads-down builders. But for one week, all that creativity, ambition, and care comes alive in the open. There is a sense of collective momentum, of seeing how far we have all come and what we are buildin",
       "image": null,
       "author": "Ken Johnston"
     }
