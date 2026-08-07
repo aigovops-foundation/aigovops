@@ -1,6 +1,38 @@
 {
-  "updated": "2026-08-07T07:29:57Z",
+  "updated": "2026-08-07T19:22:01Z",
   "bob": [
+    {
+      "title": "Problem: When autonomous agents bypass software guardrails at machine speed, theoretical ethics frameworks fail. Moving beyond sof...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-responsibleai-aigovernance-activity-7491479189171257346-jq0H",
+      "date": "Fri, 07 Aug 2026 13:03:44 GMT",
+      "summary": "Problem: When autonomous agents bypass software guardrails at machine speed, theoretical ethics frameworks fail. Moving beyond software-only controls to mandatory hardware-level compliance is our final safety net. Solutions: Implement mandatory hardware kill switches and cryptogr",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: Fragmented internal oversight leaves high-risk AI deployments vulnerable to regulatory failures and ethical breaches. Sol...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-fragmented-internal-oversight-leaves-activity-7491479142991872000-e7Gq",
+      "date": "Fri, 07 Aug 2026 13:03:33 GMT",
+      "summary": "Problem: Fragmented internal oversight leaves high-risk AI deployments vulnerable to regulatory failures and ethical breaches. Solutions: Establish dedicated, cross-functional AI Ethics Committees with direct board-level accountability and veto power. Summary: Structuring interna",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "[English] Problem: Algorithmic bias in credit scoring creates severe regulatory and financial risks. Solution: Implement continuou...",
+      "link": "https://www.linkedin.com/posts/bobrapp_english-problem-algorithmic-bias-in-credit-activity-7491478933285289984-lJuL",
+      "date": "Fri, 07 Aug 2026 13:02:43 GMT",
+      "summary": "[English] Problem: Algorithmic bias in credit scoring creates severe regulatory and financial risks. Solution: Implement continuous risk assessments and transparent model validation. Summary: Strict governance safeguards institutional trust. Ship Good AI: - Audit credit models fo",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Are you ready to level up your AI governance strategy? Join our global community of 10,000+ professionals across 17 countries shap...",
+      "link": "https://www.linkedin.com/posts/bobrapp_are-you-ready-to-level-up-your-ai-governance-activity-7491478704817373184-RzJc",
+      "date": "Fri, 07 Aug 2026 13:01:48 GMT",
+      "summary": "Are you ready to level up your AI governance strategy? Join our global community of 10,000+ professionals across 17 countries shaping responsible AI. Checklist: 1. Define clear accountability for decisions. 2. Establish continuous risk assessments. 3. Map internal frameworks to r",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Most organizations rush into AI adoption without scrutinizing vendor algorithms, leaving massive blind spots in compliance and eth...",
       "link": "https://www.linkedin.com/posts/bobrapp_most-organizations-rush-into-ai-adoption-activity-7491252797137395712-ZbEA",
@@ -46,38 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_unlocking-the-black-box-of-ai-is-no-longer-activity-7491116716576489473-NG3P",
       "date": "Thu, 06 Aug 2026 13:03:23 GMT",
       "summary": "Unlocking the black box of AI is no longer optional—it is imperative for effective governance. Join our 'Level Up Your AI Governance' campaign as we dive deep into AI Explainability (XAI) to make complex models transparent and interpretable. Subscribe to our Luma calendar at http",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Level up your AI governance strategy through active virtual collaboration and global online meetups. Join our upcoming sessions on...",
-      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-strategy-through-activity-7491116118317727746-xhc9",
-      "date": "Thu, 06 Aug 2026 13:01:01 GMT",
-      "summary": "Level up your AI governance strategy through active virtual collaboration and global online meetups. Join our upcoming sessions on our Luma calendar at to connect with industry peers and experts. Virtual Governance Checklist: - Register early on our Luma",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: Navigating AI governance alone isolates professionals from vital global perspectives. Solutions: Join our After Hours Net...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-navigating-ai-governance-alone-isolates-activity-7490890219831975936-hrft",
-      "date": "Wed, 05 Aug 2026 22:03:22 GMT",
-      "summary": "Problem: Navigating AI governance alone isolates professionals from vital global perspectives. Solutions: Join our After Hours Networking and global community sessions to collaborate with experts across 17 countries. Summary: Bridge the governance gap through peer-led discussions",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Without clear data lineage, your AI governance is built on sand. Understanding where training data originates, how it is transform...",
-      "link": "https://www.linkedin.com/posts/bobrapp_without-clear-data-lineage-your-ai-governance-activity-7490890214337503232-QAHC",
-      "date": "Wed, 05 Aug 2026 22:03:21 GMT",
-      "summary": "Without clear data lineage, your AI governance is built on sand. Understanding where training data originates, how it is transformed, and who touched it is non-negotiable for compliance and trust. Checklist for Data Lineage: 1. Document every data source and ingestion pipeline. 2",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: Fragmented regulations and rapid AI deployment create critical compliance gaps worldwide. Solutions: Our 2026 Global Tren...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-fragmented-regulations-and-rapid-activity-7490889928122277888-qbMb",
-      "date": "Wed, 05 Aug 2026 22:02:13 GMT",
-      "summary": "Problem: Fragmented regulations and rapid AI deployment create critical compliance gaps worldwide. Solutions: Our 2026 Global Trend Roundup unites 10,000+ professionals across 17 countries to establish actionable frameworks. Summary: Navigating multi-jurisdictional policies requi",
       "image": null,
       "author": "Bob Rapp"
     }
