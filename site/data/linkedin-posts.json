@@ -1,6 +1,30 @@
 {
-  "updated": "2026-08-07T19:22:01Z",
+  "updated": "2026-08-08T07:20:46Z",
   "bob": [
+    {
+      "title": "Problem: As organizations rush to train AI models on synthetic data to bypass scarcity and privacy hurdles, unvalidated data gener...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-as-organizations-rush-to-train-ai-activity-7491614974730194945-cXYH",
+      "date": "Fri, 07 Aug 2026 22:03:17 GMT",
+      "summary": "Problem: As organizations rush to train AI models on synthetic data to bypass scarcity and privacy hurdles, unvalidated data generation introduces silent model collapse and poisoned outputs. Solutions: Implement strict quality assurance protocols, audit distribution drifts, and t",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: Static PDF compliance frameworks cannot keep pace with rapid AI code deployments. Solutions: Shift to Governance-as-Code...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-static-pdf-compliance-frameworks-activity-7491614966249132032-ICB8",
+      "date": "Fri, 07 Aug 2026 22:03:15 GMT",
+      "summary": "Problem: Static PDF compliance frameworks cannot keep pace with rapid AI code deployments. Solutions: Shift to Governance-as-Code and embed automated compliance directly into your CI/CD pipelines. Summary: Continuous integration ensures every model update meets safety standards b",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: Traditional AI audit logs can be easily tampered with, leaving organizations vulnerable to undetected model drift and mal...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-traditional-ai-audit-logs-can-be-activity-7491614812624424960-JymS",
+      "date": "Fri, 07 Aug 2026 22:02:39 GMT",
+      "summary": "Problem: Traditional AI audit logs can be easily tampered with, leaving organizations vulnerable to undetected model drift and malicious alterations. Solutions: Implement cryptographic audit trails and immutable logging to ensure absolute transparency and traceability. Summary: S",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Problem: When autonomous agents bypass software guardrails at machine speed, theoretical ethics frameworks fail. Moving beyond sof...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-responsibleai-aigovernance-activity-7491479189171257346-jq0H",
@@ -56,33 +80,33 @@
       "summary": "Problem: Fragmented AI oversight leaves organizations vulnerable to compliance risks and ethical blind spots. Solutions: Discover how the Beacon Tool and our 12 Maturity Model Frameworks provide structured, actionable navigation for responsible AI deployment. Summary: Standardize",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: Autonomous AI agents operating in recursive loops can bypass initial static guardrails, leading to unpredicted runaway be...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-responsibleai-agenticai-activity-7491252296597630976-rt_I",
-      "date": "Thu, 06 Aug 2026 22:02:08 GMT",
-      "summary": "Problem: Autonomous AI agents operating in recursive loops can bypass initial static guardrails, leading to unpredicted runaway behaviors and systemic risks as documented by NIST \\( Implement real-time dynamic circuit breakers, continuous policy-as-code v",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: AI models fail unpredictably against novel adversarial exploits without rigorous stress testing. Solutions: Implement con...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-ai-models-fail-unpredictably-against-activity-7491117063793561600-b68i",
-      "date": "Thu, 06 Aug 2026 13:04:46 GMT",
-      "summary": "Problem: AI models fail unpredictably against novel adversarial exploits without rigorous stress testing. Solutions: Implement continuous AI red teaming following NIST guidelines ( Summary: Proactive stress testing exposes vulnerabilities before deployme",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Unlocking the black box of AI is no longer optional—it is imperative for effective governance. Join our 'Level Up Your AI Governan...",
-      "link": "https://www.linkedin.com/posts/bobrapp_unlocking-the-black-box-of-ai-is-no-longer-activity-7491116716576489473-NG3P",
-      "date": "Thu, 06 Aug 2026 13:03:23 GMT",
-      "summary": "Unlocking the black box of AI is no longer optional—it is imperative for effective governance. Join our 'Level Up Your AI Governance' campaign as we dive deep into AI Explainability (XAI) to make complex models transparent and interpretable. Subscribe to our Luma calendar at http",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "\"AI is NOT taking your jobs!\" ... Yes, you heard me. AI is NOT taking your jobs, repeat it - Guess who's trying to convince you differently?",
+      "link": "https://www.linkedin.com/posts/leighfelton_ai-is-not-taking-your-jobs-yes-you-activity-7491545850930925568-V1wd",
+      "date": "Fri, 07 Aug 2026 17:28:37 GMT",
+      "summary": "",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "In 2022, I landed in the PNW for the first time and discovered one of the most overlooked, talent-rich ecosystems in the world. \n\nCrazy to think that this was our 4th annual Seattle Venture Day event…",
+      "link": "https://www.linkedin.com/posts/pablo-casilimas-1707a9113_in-2022-i-landed-in-the-pnw-for-the-first-activity-7491545195138969600-RoFm",
+      "date": "Fri, 07 Aug 2026 17:26:01 GMT",
+      "summary": "",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "During my AI Engineering Internship at Veeam Software, I not only worked on improving enterprise RAG retrieval systems through Python-based experimentation and search optimization, but also took an…",
+      "link": "https://www.linkedin.com/posts/vanesha-hari-7119161ab_during-my-ai-engineering-internship-at-veeam-activity-7491353624552542208--oiS",
+      "date": "Fri, 07 Aug 2026 04:44:47 GMT",
+      "summary": "During my AI Engineering Internship at Veeam Software, I not only worked on improving enterprise RAG retrieval systems through Python-based experimentation and search optimization, but also took an active role in the intern community. I organized a volunteer donation drive suppor",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "80 Missed LI messages?!\nTeach me to take 5 days off of LinkedIn to do a road trip with my son.\n\nThis week I drove 2,455 miles in a Mustang Mach E Rally (EV) with my son.  He starts grad school at the…",
       "link": "https://www.linkedin.com/posts/rkjohnston_80-missed-li-messages-teach-me-to-take-activity-7491255490782437376-Sf9I",
@@ -108,6 +132,14 @@
       "author": "Ken Johnston"
     },
     {
+      "title": "Thank you so much to The AI Collective Seattle Tech Week Tristan Ingold Bhola Chhetri Ken Johnston and many others for h",
+      "link": "https://www.linkedin.com/posts/sierrawest_aigovernance-liquidlearn-responsibleai-activity-7491006524098564097-Od_u",
+      "date": "Thu, 06 Aug 2026 05:45:31 GMT",
+      "summary": "Thank you so much to The AI Collective Seattle Tech Week Tristan Ingold Bhola Chhetri Ken Johnston and many others for hosting a great session on AI Governance and visibility in your organization. One of my biggest takeaways from the session was that the conversation has shifted",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
       "title": "But we need the votes from this community before Aug 23rd.",
       "link": "https://www.linkedin.com/posts/sally-revell_sxsw2027-aileadership-futureofwork-activity-7490973806904098816-8Nv0",
       "date": "Thu, 06 Aug 2026 03:35:31 GMT",
@@ -128,30 +160,6 @@
       "link": "https://www.linkedin.com/posts/anna-echols_seattletechweek-aigovops-activity-7490801166549680128-_fTA",
       "date": "Wed, 05 Aug 2026 16:09:30 GMT",
       "summary": "After two hours on AI governance on Friday, I left with a question I can't shake: what if governance is just another thing that has to be adopted? We tend to treat governance as a document, a policy, or a gate you pass through. But a policy nobody actually uses is just a PDF. Gov",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "#aiagents #generativeai #productionai #artificialintelligence #softwareengineering #aws #salesforce #pinterest #seattledataai | Seattle Data AI & Security",
-      "link": "https://www.linkedin.com/posts/seattle-data-ai-and-security_aiagents-generativeai-productionai-activity-7490791362167226369-4czT",
-      "date": "Wed, 05 Aug 2026 15:30:33 GMT",
-      "summary": "𝗔𝗜 𝗔𝗴𝗲𝗻𝘁𝘀 𝗶𝗻 𝘁𝗵𝗲 𝗪𝗶𝗹𝗱 | 𝗕𝘂𝗶𝗹𝗱𝗶𝗻𝗴, 𝗦𝗰𝗮𝗹𝗶𝗻𝗴 & 𝗗𝗲𝗽𝗹𝗼𝘆𝗶𝗻𝗴 𝗶𝗻 𝗣𝗿𝗼𝗱𝘂𝗰𝘁𝗶𝗼𝗻 𝗕𝗲𝗹𝗹𝗲𝘃𝘂𝗲 𝗖𝗶𝘁𝘆 𝗛𝗮𝗹𝗹 | 𝗔𝘂𝗴𝘂𝘀𝘁 𝟭𝟮 | 𝟰:𝟯𝟬𝗽𝗺 - 𝟴:𝟬𝟬𝗽𝗺 Building an AI agent is only the beginning. The real challenge is making it reliable, observable, secure, and production-ready. Join Seattle Data, AI & Security fo",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "We are bringing 4 women with us to MIT!",
-      "link": "https://www.linkedin.com/posts/sally-revell_womeninai-womenintech-nocode-activity-7490769127490646017-xFNW",
-      "date": "Wed, 05 Aug 2026 14:02:12 GMT",
-      "summary": "We are bringing 4 women with us to MIT! Next month I am walking into MIT with Hannah Siegertsz, and yes, we’re giving away 4 passes to come to the AI-Powered Women conference with us. I’m so honored to share this opportunity as the chapter lead for AI-Powered Women Seattle. Septe",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "You can tell real positioning from a mood board with one test. Real positioning names a competitor.\n\nTwo of them, actually. The one you intend to take customers from, by name, and the one you are…",
-      "link": "https://www.linkedin.com/posts/yenanderson_you-can-tell-real-positioning-from-a-mood-activity-7490761221827153920-z-KE",
-      "date": "Wed, 05 Aug 2026 13:30:47 GMT",
-      "summary": "You can tell real positioning from a mood board with one test. Real positioning names a competitor. Two of them, actually. The one you intend to take customers from, by name, and the one you are content to lose to, on purpose. A founder who can say both has made an actual decisio",
       "image": null,
       "author": "Ken Johnston"
     }
