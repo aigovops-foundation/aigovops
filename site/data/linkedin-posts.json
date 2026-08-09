@@ -1,6 +1,46 @@
 {
-  "updated": "2026-08-08T19:12:12Z",
+  "updated": "2026-08-09T07:21:20Z",
   "bob": [
+    {
+      "title": "When an autonomous model fails or leaks data, waiting for a committee is not an option. Without incident response playbooks, organ...",
+      "link": "https://www.linkedin.com/posts/bobrapp_when-an-autonomous-model-fails-or-leaks-data-activity-7491977273470922752-WO9W",
+      "date": "Sat, 08 Aug 2026 22:02:56 GMT",
+      "summary": "When an autonomous model fails or leaks data, waiting for a committee is not an option. Without incident response playbooks, organizations scramble, worsening fallout. Solution: Implement rigorous AI Incident Response Playbooks for immediate triage and containment. Summary: Proac",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: When you get to yes, the real work begins. Models drift, prompts mutate, and rogue behavior emerges in production telemet...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-aiethics-aigovernance-activity-7491977237001486336-kfeV",
+      "date": "Sat, 08 Aug 2026 22:02:48 GMT",
+      "summary": "Problem: When you get to yes, the real work begins. Models drift, prompts mutate, and rogue behavior emerges in production telemetry before your team notices. Solutions: Deploy real-time governance telemetry. Implement continuous drift monitoring across behavior, latency, and out",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "ENGLISH PROBLEM Autonomous cyber tests may start narrowly, then reach production, sensitive data, users, or third parties. That is...",
+      "link": "https://www.linkedin.com/posts/bobrapp_english-problem-autonomous-cyber-tests-may-activity-7491977050438914048-50Bp",
+      "date": "Sat, 08 Aug 2026 22:02:03 GMT",
+      "summary": "ENGLISH PROBLEM Autonomous cyber tests may start narrowly, then reach production, sensitive data, users, or third parties. That is real-world scope creep. SOLUTIONS Before launch, define access, targets, time limits, stop conditions, and escalation. Require human approval for cha",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: As autonomous AI systems scale, unverified vulnerabilities expose organizations to severe operational and regulatory risk...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-as-autonomous-ai-systems-scale-activity-7491976735069065216-qRHE",
+      "date": "Sat, 08 Aug 2026 22:00:48 GMT",
+      "summary": "Problem: As autonomous AI systems scale, unverified vulnerabilities expose organizations to severe operational and regulatory risks. Solutions: Master AI Red Teaming and Stress Testing Protocols by joining our expert sessions on Luma at Summary: Proacti",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: Automated AI systems deployed without operationalized human oversight create severe governance blind spots and operationa...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-automated-ai-systems-deployed-without-activity-7491976651854131200-1f8P",
+      "date": "Sat, 08 Aug 2026 22:00:28 GMT",
+      "summary": "Problem: Automated AI systems deployed without operationalized human oversight create severe governance blind spots and operational risks. Solutions: Implementing robust Human-in-the-Loop design patterns that embed clear escalation pathways, decision gates, and audit trails direc",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Problem: As EU AI Act implementation deadlines loom, organizations struggle to bridge the gap between high-level policy and daily...",
       "link": "https://www.linkedin.com/posts/bobrapp_problem-as-eu-ai-act-implementation-deadlines-activity-7491841717898338304-Uij9",
@@ -38,46 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_problem-as-organizations-rush-to-train-ai-activity-7491614974730194945-cXYH",
       "date": "Fri, 07 Aug 2026 22:03:17 GMT",
       "summary": "Problem: As organizations rush to train AI models on synthetic data to bypass scarcity and privacy hurdles, unvalidated data generation introduces silent model collapse and poisoned outputs. Solutions: Implement strict quality assurance protocols, audit distribution drifts, and t",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: Static PDF compliance frameworks cannot keep pace with rapid AI code deployments. Solutions: Shift to Governance-as-Code...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-static-pdf-compliance-frameworks-activity-7491614966249132032-ICB8",
-      "date": "Fri, 07 Aug 2026 22:03:15 GMT",
-      "summary": "Problem: Static PDF compliance frameworks cannot keep pace with rapid AI code deployments. Solutions: Shift to Governance-as-Code and embed automated compliance directly into your CI/CD pipelines. Summary: Continuous integration ensures every model update meets safety standards b",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: Traditional AI audit logs can be easily tampered with, leaving organizations vulnerable to undetected model drift and mal...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-traditional-ai-audit-logs-can-be-activity-7491614812624424960-JymS",
-      "date": "Fri, 07 Aug 2026 22:02:39 GMT",
-      "summary": "Problem: Traditional AI audit logs can be easily tampered with, leaving organizations vulnerable to undetected model drift and malicious alterations. Solutions: Implement cryptographic audit trails and immutable logging to ensure absolute transparency and traceability. Summary: S",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: When autonomous agents bypass software guardrails at machine speed, theoretical ethics frameworks fail. Moving beyond sof...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-responsibleai-aigovernance-activity-7491479189171257346-jq0H",
-      "date": "Fri, 07 Aug 2026 13:03:44 GMT",
-      "summary": "Problem: When autonomous agents bypass software guardrails at machine speed, theoretical ethics frameworks fail. Moving beyond software-only controls to mandatory hardware-level compliance is our final safety net. Solutions: Implement mandatory hardware kill switches and cryptogr",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: Fragmented internal oversight leaves high-risk AI deployments vulnerable to regulatory failures and ethical breaches. Sol...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-fragmented-internal-oversight-leaves-activity-7491479142991872000-e7Gq",
-      "date": "Fri, 07 Aug 2026 13:03:33 GMT",
-      "summary": "Problem: Fragmented internal oversight leaves high-risk AI deployments vulnerable to regulatory failures and ethical breaches. Solutions: Establish dedicated, cross-functional AI Ethics Committees with direct board-level accountability and veto power. Summary: Structuring interna",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "[English] Problem: Algorithmic bias in credit scoring creates severe regulatory and financial risks. Solution: Implement continuou...",
-      "link": "https://www.linkedin.com/posts/bobrapp_english-problem-algorithmic-bias-in-credit-activity-7491478933285289984-lJuL",
-      "date": "Fri, 07 Aug 2026 13:02:43 GMT",
-      "summary": "[English] Problem: Algorithmic bias in credit scoring creates severe regulatory and financial risks. Solution: Implement continuous risk assessments and transparent model validation. Summary: Strict governance safeguards institutional trust. Ship Good AI: - Audit credit models fo",
       "image": null,
       "author": "Bob Rapp"
     }
