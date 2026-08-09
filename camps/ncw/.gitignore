@@ -24,3 +24,4 @@ test-results/
 .playwright/
 *.log
 
+tools/video/stage/

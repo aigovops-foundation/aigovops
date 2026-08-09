@@ -115,6 +115,10 @@ jobs:
       # is what kept this job red from 2026-08-08). Path correctness for those
       # refs is still enforced, by existence check rather than by download.
       - run: python3 scripts/check_row_links.py
+      # The videos moved to Spaces on 2026-08-09, which made them EXTERNAL urls — and linkinator
+      # skips external. Without this, a rename or delete on the Spaces side would silently blank a
+      # video with nothing failing. Ranged GET, so it also proves seeking works.
+      - run: python3 scripts/check_video_links.py
 
   # ---------------------------------------------------------------
   # 5. Build summary — friendly green check on the PR.
