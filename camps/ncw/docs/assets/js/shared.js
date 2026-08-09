@@ -282,12 +282,11 @@
   });
 })();
 
-/* Jeeves corner assistant — the same governed helper that lives on every AiGovOps site. */
-(function () {
-  if (document.querySelector('script[src*="jeeves-widget.js"]')) return;
-  window.JEEVES_SITE = "learning";
-  var s = document.createElement("script");
-  s.src = "https://www.aigovops-foundation.com/jeeves-widget.js";
-  s.defer = true;
-  document.body.appendChild(s);
-})();
+/* Jeeves corner assistant — REMOVED 2026-08-09, ahead of the NCW AI Expo.
+   It used to auto-mount here on every page. The estate hid it everywhere a visitor lands:
+   the community platform gated its injector to admin.html (Omni-Rapp #336) and the Foundation
+   site did the same (#99). A camp attendee meeting a floating agent on one property and not
+   the next is the inconsistency a room of first-time visitors would actually notice.
+   jeeves-widget.js still ships from the Foundation origin for the steward surfaces — nothing
+   about it was deleted, this site simply no longer loads it.
+   To restore: re-add the loader below and the <script> tag in docs/index.html. */

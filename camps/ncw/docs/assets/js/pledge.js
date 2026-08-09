@@ -116,6 +116,162 @@
     }).join("");
   }
 
+  /* ============================================================
+     Where to park the page after someone commits.
+
+     PRESENTATION ONLY. Everything below measures boxes and sets
+     window.scrollY. It reads no field, stores nothing, and sends
+     nothing — the anonymity guarantee above is untouched.
+
+     The success card is 917-1129px tall on a phone against a 568-823px
+     viewport, so no scroll position can show all of it. Two things must
+     both hold wherever we stop:
+
+       1. "Thank you for committing." is on screen. Otherwise a fresh
+          signer gets no confirmation that anything happened at all.
+       2. No action in the card (toolkit / sign-another / weekly-note /
+          community) sits under the floating Jeeves launcher. That
+          launcher is not ours to move: shared.js injects it from the
+          Foundation site's jeeves-widget.js and every AiGovOps property
+          shares it. It is position:fixed at right:20px/bottom:20px,
+          46px tall, at z-index 2147483000 — so it permanently owns the
+          bottom-right ~141x66px of the viewport and paints above this
+          card. A thumb aiming at a covered CTA opens Jeeves instead.
+
+     No single scrollIntoView() option satisfies both, because which
+     element lands in the launcher's band is a function of
+     cardHeight - viewportHeight, and that differs on every phone:
+
+       block:"center"  (what we used to do) — satisfies (1) only on the
+                       taller phones, and parks "Get the weekly note"
+                       under the launcher on 360x640 (49x33px),
+                       375x667 (42x32px) and 390x664 (34x22px).
+       block:"end"     — satisfies (2) on every size, but scrolls the
+                       confirmation off the top of the card entirely.
+       block:"start"   — satisfies (1), but drops "Get the free toolkit"
+                       into the band on 320x568 and the community link
+                       on 412x823.
+
+     So we solve for the position instead of guessing at it: start from
+     "confirmation just below the top of the screen, showing as much of
+     the card underneath it as will fit", then slide the page by the
+     smallest amount that lifts every action clear of the launcher,
+     staying inside the range that keeps the confirmation on screen.
+
+     Desktop is deliberately left alone. Where the whole card fits on
+     screen, centring it already shows the confirmation and all four
+     actions at once, and the centred, narrow card never shares a column
+     with the hard-right launcher — so that path still calls the same
+     scrollIntoView({block:"center"}) it always did.
+     ============================================================ */
+
+  // Never land flush against the launcher — leave a thumb's worth of air.
+  var LAUNCHER_MARGIN = 8;
+  // How far below the top of the screen the confirmation should sit.
+  var CONFIRM_TOP_GAP = 16;
+
+  /* The launcher's live rect once the widget has loaded. If it hasn't
+     (blocked, offline, or still in flight), fall back to the geometry it
+     ships with, so a late arrival still finds a layout that clears it. */
+  function launcherKeepOut() {
+    var el = document.querySelector(".jv-btn");
+    var r = el && el.getBoundingClientRect();
+    if (!r || !r.width || !r.height) {
+      r = { left: window.innerWidth - 141, right: window.innerWidth - 20,
+            top: window.innerHeight - 66, bottom: window.innerHeight - 20 };
+    }
+    return { left: r.left - LAUNCHER_MARGIN, right: r.right + LAUNCHER_MARGIN,
+             top: r.top - LAUNCHER_MARGIN, bottom: r.bottom + LAUNCHER_MARGIN };
+  }
+
+  /* For each action in the card, the span of document scrollTop values that
+     would leave it sitting under the launcher. Actions that never share the
+     launcher's column contribute nothing. */
+  function blockedSpans(card) {
+    var ko = launcherKeepOut();
+    var sy = window.scrollY;
+    var spans = [];
+    Array.prototype.forEach.call(card.querySelectorAll("a[href], button"), function (el) {
+      var r = el.getBoundingClientRect();
+      if (!r.width || !r.height) return;
+      if (r.right <= ko.left || r.left >= ko.right) return;
+      var top = sy + r.top;
+      spans.push([top - ko.bottom, top + r.height - ko.top]);
+    });
+    return spans;
+  }
+
+  function clearsLauncher(spans, s) {
+    return spans.every(function (b) { return s <= b[0] || s >= b[1]; });
+  }
+
+  /* What scrollIntoView({block:"center"}) will land on. Used only as a
+     predicate — when it comes out clear we hand off to the real
+     scrollIntoView, so desktop's resting position is unchanged to the
+     pixel and a rounding error here can never move it. */
+  function centredScrollTop(card) {
+    var cs = getComputedStyle(document.documentElement);
+    var pad = function (v) { var n = parseFloat(v); return isNaN(n) ? 0 : n; };
+    var top = pad(cs.scrollPaddingTop);
+    var bottom = pad(cs.scrollPaddingBottom);
+    var port = window.innerHeight - top - bottom;
+    var r = card.getBoundingClientRect();
+    return window.scrollY + r.top - top - (port - r.height) / 2;
+  }
+
+  /* Returns the document scrollTop to rest at, or null if the page cannot
+     satisfy (1) at all — in which case the caller leaves scrolling alone. */
+  function restingScrollTop(card, spans) {
+    var vh = window.innerHeight;
+    var sy = window.scrollY;
+    var maxScroll = Math.max(0, document.documentElement.scrollHeight - vh);
+    var clamp = function (v, lo, hi) { return Math.max(lo, Math.min(hi, v)); };
+
+    // The card's first h3 is the "Thank you for committing." confirmation.
+    var heading = card.querySelector("h3");
+    if (!heading) return null;
+    var hr = heading.getBoundingClientRect();
+    var headTop = sy + hr.top;
+
+    // Scroll positions that keep the whole confirmation inside the viewport.
+    var lo = Math.max(0, Math.ceil(headTop + hr.height - vh));
+    var hi = Math.min(maxScroll, Math.floor(headTop));
+    if (hi < lo) return null;
+
+    var want = clamp(headTop - CONFIRM_TOP_GAP, lo, hi);
+    if (clearsLauncher(spans, want)) return want;
+
+    // Otherwise the nearest scroll position on the edge of a blocked span
+    // that clears every action and still shows the confirmation.
+    var best = null;
+    spans.forEach(function (b) {
+      [Math.floor(b[0]), Math.ceil(b[1])].forEach(function (edge) {
+        var s = clamp(edge, lo, hi);
+        if (!clearsLauncher(spans, s)) return;
+        if (best === null || Math.abs(s - want) < Math.abs(best - want)) best = s;
+      });
+    });
+    return best === null ? want : best;
+  }
+
+  function settleOnSuccess(card) {
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var behavior = reduce ? "auto" : "smooth";
+    var spans = blockedSpans(card);
+
+    // Desktop, and any viewport tall enough to hold the whole card: keep
+    // centring it, exactly as before.
+    if (card.offsetHeight <= window.innerHeight &&
+        clearsLauncher(spans, centredScrollTop(card))) {
+      card.scrollIntoView({ behavior: behavior, block: "center" });
+      return;
+    }
+
+    var top = restingScrollTop(card, spans);
+    if (top === null) { card.scrollIntoView({ behavior: behavior, block: "start" }); return; }
+    window.scrollTo({ top: top, behavior: behavior });
+  }
+
   /* ---- anonymous, local-only commitment ---- */
   function initForm() {
     var form = document.getElementById("pledgeForm");
@@ -135,7 +291,7 @@
       form.classList.add("hidden");
       if (success) {
         success.classList.remove("hidden");
-        success.scrollIntoView({ behavior: "smooth", block: "center" });
+        settleOnSuccess(success);
       }
       form.reset();
     });

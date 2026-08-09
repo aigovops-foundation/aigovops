@@ -132,7 +132,14 @@
 
          Phones only: `sm:pb-10` restores the desktop padding, where the card is centred and
          narrow while the launcher stays hard right and they never share horizontal space
-         (at 1280px the card ends at x 976, the launcher starts at x 1139). -->
+         (at 1280px the card ends at x 976, the launcher starts at x 1139).
+
+         This padding governs where the card ENDS, so on its own it only ever protected the
+         read-to-end position. The other position that matters — where the page comes to rest
+         the instant someone commits — is handled in pledge.js (settleOnSuccess), because a
+         card 917-1129px tall on a 568-823px screen puts a different element in the launcher's
+         band on every phone, and no fixed scroll anchor clears all of them. Both mechanisms
+         are load-bearing: keep this padding, and keep that function. -->
     <div id="successCard" class="hidden bg-white rounded-3xl border-2 border-orchard/30 shadow-sm p-8 pb-20 sm:p-10 sm:pb-10 text-center">
       <div class="mx-auto w-16 h-16 rounded-full bg-orchard/10 grid place-items-center mb-5">
         <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#2E7D4F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
