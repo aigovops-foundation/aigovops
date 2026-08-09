@@ -110,6 +110,11 @@ jobs:
           cache: "npm"
       - run: npm ci --no-audit --no-fund
       - run: npm run test:links
+      # linkinator skips heavy media (it FETCHES every link; 306MB of video times
+      # out a CI runner at the 10s budget and reports false "broken" links — that
+      # is what kept this job red from 2026-08-08). Path correctness for those
+      # refs is still enforced, by existence check rather than by download.
+      - run: python3 scripts/check_row_links.py
 
   # ---------------------------------------------------------------
   # 5. Build summary — friendly green check on the PR.

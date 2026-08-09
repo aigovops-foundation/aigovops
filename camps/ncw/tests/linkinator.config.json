@@ -6,6 +6,7 @@
   "skip": [
     "^https?://(?!localhost|127\\.0\\.0\\.1)",
     "mailto:",
-    "tel:"
+    "tel:",
+    "\\.(mp4|webm|mov|zip|pptx|docx)$"
   ]
 }
