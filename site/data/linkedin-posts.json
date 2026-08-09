@@ -1,6 +1,46 @@
 {
-  "updated": "2026-08-09T07:21:20Z",
+  "updated": "2026-08-09T19:14:49Z",
   "bob": [
+    {
+      "title": "Problem: Organizations rushing to deploy AI often lack internal policy frameworks, leading to hidden biases, security vulnerabilit...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-organizations-rushing-to-deploy-activity-7492204031264731136-9fWw",
+      "date": "Sun, 09 Aug 2026 13:03:59 GMT",
+      "summary": "Problem: Organizations rushing to deploy AI often lack internal policy frameworks, leading to hidden biases, security vulnerabilities, and regulatory penalties. Solutions: Implement comprehensive AI Policy Development Frameworks that establish clear guardrails, define accountabil",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "One click can now carry far more than a message. PROBLEM Weaponized email AI assistants can scale impersonation, context-aware phi...",
+      "link": "https://www.linkedin.com/posts/bobrapp_levelupyouraigovernance-aigovops-aigovernance-activity-7492203821759299584-cT2V",
+      "date": "Sun, 09 Aug 2026 13:03:10 GMT",
+      "summary": "One click can now carry far more than a message. PROBLEM Weaponized email AI assistants can scale impersonation, context-aware phishing, and fraudulent workflow requests. Living-off-the-land attacks are harder to detect because they abuse trusted tools already inside the environm",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: Getting to 'Yes' during AI deployment is only the beginning. When an autonomous agentic AI breaks through its guardrails...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-aigovernance-responsibleai-activity-7492203656243728385-3Hsm",
+      "date": "Sun, 09 Aug 2026 13:02:30 GMT",
+      "summary": "Problem: Getting to 'Yes' during AI deployment is only the beginning. When an autonomous agentic AI breaks through its guardrails and goes rogue in production, standard incident response playbooks fail instantly. Solutions: Implementing multi-layered incident response frameworks",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: Rushing AI adoption without rigorous vendor diligence exposes organizations to unseen compliance and security blind spots...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-rushing-ai-adoption-without-rigorous-activity-7492203654981189632-X81Z",
+      "date": "Sun, 09 Aug 2026 13:02:30 GMT",
+      "summary": "Problem: Rushing AI adoption without rigorous vendor diligence exposes organizations to unseen compliance and security blind spots. Solutions: Adopt structured Responsible AI Procurement frameworks to evaluate third-party risk proactively. Summary: Secure your AI supply chain thr",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Generative AI and LLMs introduce unprecedented governance challenges, from hallucinations to systemic IP risks. Without robust gua...",
+      "link": "https://www.linkedin.com/posts/bobrapp_generative-ai-and-llms-introduce-unprecedented-activity-7492203384117063680-Myh_",
+      "date": "Sun, 09 Aug 2026 13:01:25 GMT",
+      "summary": "Generative AI and LLMs introduce unprecedented governance challenges, from hallucinations to systemic IP risks. Without robust guardrails, organizations risk severe compliance failures under frameworks like the EU AI Act ( Problem: Uncontrolled LLM deplo",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "When an autonomous model fails or leaks data, waiting for a committee is not an option. Without incident response playbooks, organ...",
       "link": "https://www.linkedin.com/posts/bobrapp_when-an-autonomous-model-fails-or-leaks-data-activity-7491977273470922752-WO9W",
@@ -40,49 +80,17 @@
       "summary": "Problem: Automated AI systems deployed without operationalized human oversight create severe governance blind spots and operational risks. Solutions: Implementing robust Human-in-the-Loop design patterns that embed clear escalation pathways, decision gates, and audit trails direc",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: As EU AI Act implementation deadlines loom, organizations struggle to bridge the gap between high-level policy and daily...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-as-eu-ai-act-implementation-deadlines-activity-7491841717898338304-Uij9",
-      "date": "Sat, 08 Aug 2026 13:04:17 GMT",
-      "summary": "Problem: As EU AI Act implementation deadlines loom, organizations struggle to bridge the gap between high-level policy and daily engineering workflows. Solutions: Leverage expert frameworks and interactive sessions via our Luma calendar at to master you",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Cross-border AI compliance is broken. Conflicting multi-jurisdictional mandates trap innovation. Solutions: Implement modular gove...",
-      "link": "https://www.linkedin.com/posts/bobrapp_cross-border-ai-compliance-is-broken-conflicting-activity-7491841615670640640-fiKW",
-      "date": "Sat, 08 Aug 2026 13:03:53 GMT",
-      "summary": "Cross-border AI compliance is broken. Conflicting multi-jurisdictional mandates trap innovation. Solutions: Implement modular governance frameworks mapped to the EU AI Act and global standards. Summary: Harmonized frameworks ensure seamless international operations. Ship Good AI:",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "One agent may access HR; another may analyze finance. Together, they can create an unauthorized cross-domain path—at machine speed...",
-      "link": "https://www.linkedin.com/posts/bobrapp_one-agent-may-access-hr-another-may-analyze-activity-7491841363001556992-d1Hm",
-      "date": "Sat, 08 Aug 2026 13:02:53 GMT",
-      "summary": "One agent may access HR; another may analyze finance. Together, they can create an unauthorized cross-domain path—at machine speed. PROBLEM Agent-to-agent exploitation is an authorization gap: delegation can expand identity, purpose, scope, and trust. SOLUTIONS Bound domains. Enf",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Without strict version control for ML models, rollback and reproducibility are just guessing games. Level up your AI governance by...",
-      "link": "https://www.linkedin.com/posts/bobrapp_without-strict-version-control-for-ml-models-activity-7491841327479824384-GQuN",
-      "date": "Sat, 08 Aug 2026 13:02:44 GMT",
-      "summary": "Without strict version control for ML models, rollback and reproducibility are just guessing games. Level up your AI governance by tracking every training run, dataset slice, and weight artifact. Subscribe to the calendar and save your spot for our sessions on the Luma calendar:",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: As organizations rush to train AI models on synthetic data to bypass scarcity and privacy hurdles, unvalidated data gener...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-as-organizations-rush-to-train-ai-activity-7491614974730194945-cXYH",
-      "date": "Fri, 07 Aug 2026 22:03:17 GMT",
-      "summary": "Problem: As organizations rush to train AI models on synthetic data to bypass scarcity and privacy hurdles, unvalidated data generation introduces silent model collapse and poisoned outputs. Solutions: Implement strict quality assurance protocols, audit distribution drifts, and t",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "Problem: Rushing AI adoption without rigorous vendor diligence exposes organizations to unseen compliance and security blind spots.\n\nSolutions: Adopt structured Responsible AI Procurement frameworks…",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-rushing-ai-adoption-without-rigorous-activity-7492203654981189632-X81Z",
+      "date": "Sun, 09 Aug 2026 13:02:30 GMT",
+      "summary": "Problem: Rushing AI adoption without rigorous vendor diligence exposes organizations to unseen compliance and security blind spots. Solutions: Adopt structured Responsible AI Procurement frameworks to evaluate third-party risk proactively. Summary: Secure your AI supply chain thr",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "Okay that video stops the scroll and then the story moves the heart and the mind.",
       "link": "https://www.linkedin.com/posts/rkjohnston_okay-that-video-stops-the-scroll-and-then-activity-7491904954484346880-ZEth",
@@ -152,14 +160,6 @@
       "link": "https://www.linkedin.com/posts/vanesha-hari-7119161ab_during-my-ai-engineering-internship-at-veeam-activity-7491353624552542208--oiS",
       "date": "Fri, 07 Aug 2026 04:44:47 GMT",
       "summary": "During my AI Engineering Internship at Veeam Software, I not only worked on improving enterprise RAG retrieval systems through Python-based experimentation and search optimization, but also took an active role in the intern community. I organized a volunteer donation drive suppor",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "80 Missed LI messages?!\nTeach me to take 5 days off of LinkedIn to do a road trip with my son.\n\nThis week I drove 2,455 miles in a Mustang Mach E Rally (EV) with my son.  He starts grad school at the…",
-      "link": "https://www.linkedin.com/posts/rkjohnston_80-missed-li-messages-teach-me-to-take-activity-7491255490782437376-Sf9I",
-      "date": "Thu, 06 Aug 2026 22:14:50 GMT",
-      "summary": "80 Missed LI messages?! Teach me to take 5 days off of LinkedIn to do a road trip with my son. This week I drove 2,455 miles in a Mustang Mach E Rally (EV) with my son. He starts grad school at the Clemson ICAR (International Center for Automotive Research). Yes, excited and prou",
       "image": null,
       "author": "Ken Johnston"
     }
