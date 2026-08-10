@@ -1,6 +1,38 @@
 {
-  "updated": "2026-08-09T19:14:49Z",
+  "updated": "2026-08-10T07:31:39Z",
   "bob": [
+    {
+      "title": "Problem: Organizations deploy AI rapidly without clear metrics to measure governance maturity, leaving executives blind to complia...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-organizations-deploy-ai-rapidly-activity-7492339772170956800-nyOU",
+      "date": "Sun, 09 Aug 2026 22:03:23 GMT",
+      "summary": "Problem: Organizations deploy AI rapidly without clear metrics to measure governance maturity, leaving executives blind to compliance failures, ethical drift, and regulatory risk. Solutions: Establish robust executive KPIs and metrics dashboards to track model compliance, risk re",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "OWASP GenAI Top 10 — LLM06:2025 Excessive Agency is a governance warning: an agent may be helpful yet have too much power. Problem...",
+      "link": "https://www.linkedin.com/posts/bobrapp_owasp-genai-top-10-llm062025-excessive-activity-7492339748087357440-o3GG",
+      "date": "Sun, 09 Aug 2026 22:03:17 GMT",
+      "summary": "OWASP GenAI Top 10 — LLM06:2025 Excessive Agency is a governance warning: an agent may be helpful yet have too much power. Problem / 问题: Excessive tools, permissions, or autonomy can turn a wrong or manipulated output into real-world action. 工具、权限或自主性过度，可能把错误或被操纵的输出变成现实行动。 Ship G",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "When an AI model denies a mortgage or distorts credit scoring based on biased training data, the impact on human lives is immediat...",
+      "link": "https://www.linkedin.com/posts/bobrapp_when-an-ai-model-denies-a-mortgage-or-distorts-activity-7492339626368589824-UBZd",
+      "date": "Sun, 09 Aug 2026 22:02:48 GMT",
+      "summary": "When an AI model denies a mortgage or distorts credit scoring based on biased training data, the impact on human lives is immediate. Financial institutions face immense regulatory pressure to ensure their automated systems are transparent, fair, and fully accountable. Join us as",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Navigating AI regulatory reporting and disclosure can feel like walking through a maze blindfolded. Maintaining transparency and c...",
+      "link": "https://www.linkedin.com/posts/bobrapp_navigating-ai-regulatory-reporting-and-disclosure-activity-7492339135882608640-06qy",
+      "date": "Sun, 09 Aug 2026 22:00:51 GMT",
+      "summary": "Navigating AI regulatory reporting and disclosure can feel like walking through a maze blindfolded. Maintaining transparency and compliance isn't just about checking boxes—it is about building verifiable trust. Problem: Fragmented disclosure standards and opaque model behaviors l",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Problem: Organizations rushing to deploy AI often lack internal policy frameworks, leading to hidden biases, security vulnerabilit...",
       "link": "https://www.linkedin.com/posts/bobrapp_problem-organizations-rushing-to-deploy-activity-7492204031264731136-9fWw",
@@ -48,41 +80,41 @@
       "summary": "When an autonomous model fails or leaks data, waiting for a committee is not an option. Without incident response playbooks, organizations scramble, worsening fallout. Solution: Implement rigorous AI Incident Response Playbooks for immediate triage and containment. Summary: Proac",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: When you get to yes, the real work begins. Models drift, prompts mutate, and rogue behavior emerges in production telemet...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-aiethics-aigovernance-activity-7491977237001486336-kfeV",
-      "date": "Sat, 08 Aug 2026 22:02:48 GMT",
-      "summary": "Problem: When you get to yes, the real work begins. Models drift, prompts mutate, and rogue behavior emerges in production telemetry before your team notices. Solutions: Deploy real-time governance telemetry. Implement continuous drift monitoring across behavior, latency, and out",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "ENGLISH PROBLEM Autonomous cyber tests may start narrowly, then reach production, sensitive data, users, or third parties. That is...",
-      "link": "https://www.linkedin.com/posts/bobrapp_english-problem-autonomous-cyber-tests-may-activity-7491977050438914048-50Bp",
-      "date": "Sat, 08 Aug 2026 22:02:03 GMT",
-      "summary": "ENGLISH PROBLEM Autonomous cyber tests may start narrowly, then reach production, sensitive data, users, or third parties. That is real-world scope creep. SOLUTIONS Before launch, define access, targets, time limits, stop conditions, and escalation. Require human approval for cha",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: As autonomous AI systems scale, unverified vulnerabilities expose organizations to severe operational and regulatory risk...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-as-autonomous-ai-systems-scale-activity-7491976735069065216-qRHE",
-      "date": "Sat, 08 Aug 2026 22:00:48 GMT",
-      "summary": "Problem: As autonomous AI systems scale, unverified vulnerabilities expose organizations to severe operational and regulatory risks. Solutions: Master AI Red Teaming and Stress Testing Protocols by joining our expert sessions on Luma at Summary: Proacti",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: Automated AI systems deployed without operationalized human oversight create severe governance blind spots and operationa...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-automated-ai-systems-deployed-without-activity-7491976651854131200-1f8P",
-      "date": "Sat, 08 Aug 2026 22:00:28 GMT",
-      "summary": "Problem: Automated AI systems deployed without operationalized human oversight create severe governance blind spots and operational risks. Solutions: Implementing robust Human-in-the-Loop design patterns that embed clear escalation pathways, decision gates, and audit trails direc",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "OWASP GenAI Top 10 — LLM06:2025 Excessive Agency is a governance warning: an agent may be helpful yet have too much power.\n\nProblem / 问题: Excessive tools, permissions, or autonomy can turn a wrong or…",
+      "link": "https://www.linkedin.com/posts/bobrapp_owasp-genai-top-10-llm062025-excessive-activity-7492339748087357440-o3GG",
+      "date": "Sun, 09 Aug 2026 22:03:17 GMT",
+      "summary": "OWASP GenAI Top 10 — LLM06:2025 Excessive Agency is a governance warning: an agent may be helpful yet have too much power. Problem / 问题: Excessive tools, permissions, or autonomy can turn a wrong or manipulated output into real-world action. 工具、权限或自主性过度，可能把错误或被操纵的输出变成现实行动。 Ship G",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "See this panel in #RAI from my friend Ruth kikin-Gil",
+      "link": "https://www.linkedin.com/posts/rkjohnston_sxsw-rai-activity-7492328716803391488-GV5y",
+      "date": "Sun, 09 Aug 2026 21:19:27 GMT",
+      "summary": "It #SXSW voting time. See this panel in #RAI from my friend Ruth kikin-Gil",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "One click can now carry far more than a message.",
+      "link": "https://www.linkedin.com/posts/bobrapp_levelupyouraigovernance-aigovops-aigovernance-activity-7492203821759299584-cT2V",
+      "date": "Sun, 09 Aug 2026 13:03:09 GMT",
+      "summary": "One click can now carry far more than a message. PROBLEM Weaponized email AI assistants can scale impersonation, context-aware phishing, and fraudulent workflow requests. Living-off-the-land attacks are harder to detect because they abuse trusted tools already inside the environm",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Problem: Getting to 'Yes' during AI deployment is only the beginning.",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-aigovernance-responsibleai-activity-7492203656243728385-3Hsm",
+      "date": "Sun, 09 Aug 2026 13:02:30 GMT",
+      "summary": "Problem: Getting to 'Yes' during AI deployment is only the beginning. When an autonomous agentic AI breaks through its guardrails and goes rogue in production, standard incident response playbooks fail instantly. Solutions: Implementing multi-layered incident response frameworks",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "Problem: Rushing AI adoption without rigorous vendor diligence exposes organizations to unseen compliance and security blind spots.\n\nSolutions: Adopt structured Responsible AI Procurement frameworks…",
       "link": "https://www.linkedin.com/posts/bobrapp_problem-rushing-ai-adoption-without-rigorous-activity-7492203654981189632-X81Z",
@@ -92,74 +124,26 @@
       "author": "Ken Johnston"
     },
     {
+      "title": "When an autonomous model fails or leaks data, waiting for a committee is not an option. Without incident response playbooks, organizations scramble, worsening fallout.\n\nSolution: Implement rigorous…",
+      "link": "https://www.linkedin.com/posts/bobrapp_when-an-autonomous-model-fails-or-leaks-data-activity-7491977273470922752-WO9W",
+      "date": "Sat, 08 Aug 2026 22:02:56 GMT",
+      "summary": "When an autonomous model fails or leaks data, waiting for a committee is not an option. Without incident response playbooks, organizations scramble, worsening fallout. Solution: Implement rigorous AI Incident Response Playbooks for immediate triage and containment. Summary: Proac",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Problem: When you get to yes, the real work begins.",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-aiethics-aigovernance-activity-7491977237001486336-kfeV",
+      "date": "Sat, 08 Aug 2026 22:02:47 GMT",
+      "summary": "Problem: When you get to yes, the real work begins. Models drift, prompts mutate, and rogue behavior emerges in production telemetry before your team notices. Solutions: Deploy real-time governance telemetry. Implement continuous drift monitoring across behavior, latency, and out",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
       "title": "Okay that video stops the scroll and then the story moves the heart and the mind.",
       "link": "https://www.linkedin.com/posts/rkjohnston_okay-that-video-stops-the-scroll-and-then-activity-7491904954484346880-ZEth",
       "date": "Sat, 08 Aug 2026 17:15:34 GMT",
       "summary": "",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Seattle Tech Week: Episode 2 🔥 The next three days were more practical and deep dive conversations about AI governance, ",
-      "link": "https://www.linkedin.com/posts/jiyae-choi_seattletechweek-aigovernance-trustandsafety-activity-7491644353644269568-sEDI",
-      "date": "Sat, 08 Aug 2026 00:00:02 GMT",
-      "summary": "Seattle Tech Week: Episode 2 🔥 The next three days were more practical and deep dive conversations about AI governance, security, and identity. 📍 AI and Cybersecurity (Ken DeMaria, Robert Renzulli) - What makes AI dangerous? Speed and scale. - Separating signal from noise and kno",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Problem: Static PDF compliance frameworks cannot keep pace with rapid AI code deployments.\n\nSolutions: Shift to Governance-as-Code and embed automated compliance directly into your CI/CD…",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-static-pdf-compliance-frameworks-activity-7491614966249132032-ICB8",
-      "date": "Fri, 07 Aug 2026 22:03:15 GMT",
-      "summary": "Problem: Static PDF compliance frameworks cannot keep pace with rapid AI code deployments. Solutions: Shift to Governance-as-Code and embed automated compliance directly into your CI/CD pipelines. Summary: Continuous integration ensures every model update meets safety standards b",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "NomadicML's largest & busiest Physical AI event yet! ✅ \nBig thanks to Andra Keay and the Silicon Valley Robotics for co-hosting August 2026's Bots/Bevs/Devs event. We loved our speakers' content and…",
-      "link": "https://www.linkedin.com/posts/mstfbl_nomadicmls-largest-busiest-physical-ai-activity-7491579324433600512-0tDU",
-      "date": "Fri, 07 Aug 2026 19:41:38 GMT",
-      "summary": "NomadicML's largest & busiest Physical AI event yet! ✅ Big thanks to Andra Keay and the Silicon Valley Robotics for co-hosting August 2026's Bots/Bevs/Devs event. We loved our speakers' content and look forward to co-hosting the next ones. Kevin Peterson, David Noursi, Abhishek B",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "\"AI is NOT taking your jobs!\" ... Yes, you heard me. AI is NOT taking your jobs, repeat it - Guess who's trying to convince you differently?",
-      "link": "https://www.linkedin.com/posts/leighfelton_ai-is-not-taking-your-jobs-yes-you-activity-7491545850930925568-V1wd",
-      "date": "Fri, 07 Aug 2026 17:28:37 GMT",
-      "summary": "",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "In 2022, I landed in the PNW for the first time and discovered one of the most overlooked, talent-rich ecosystems in the world. \n\nCrazy to think that this was our 4th annual Seattle Venture Day event…",
-      "link": "https://www.linkedin.com/posts/pablo-casilimas-1707a9113_in-2022-i-landed-in-the-pnw-for-the-first-activity-7491545195138969600-RoFm",
-      "date": "Fri, 07 Aug 2026 17:26:01 GMT",
-      "summary": "",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Seattle Tech Week started on a Monday night with pickleball in SoDo and ended, five days later, somewhere between a rooftop happy hour, a Lake Union cruise, and a Mariners game. \n\nIn between: roughly…",
-      "link": "https://www.linkedin.com/posts/madrona-ventures_seattle-tech-week-started-on-a-monday-night-activity-7491522952987832320-6cqQ",
-      "date": "Fri, 07 Aug 2026 15:57:38 GMT",
-      "summary": "Seattle Tech Week started on a Monday night with pickleball in SoDo and ended, five days later, somewhere between a rooftop happy hour, a Lake Union cruise, and a Mariners game. In between: roughly 250 events across boardrooms, incubators, coworking spaces, an Amtrak train, pickl",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "𝗧𝗵𝗲 𝗯𝗶𝗴𝗴𝗲𝘀𝘁 𝗯𝗮𝗿𝗿𝗶𝗲𝗿𝘀 𝘁𝗼 𝗔𝗜 𝘁𝗿𝗮𝗻𝘀𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻 𝘂𝘀𝘂𝗮𝗹𝗹𝘆 𝗮𝗿𝗲𝗻'𝘁 𝘁𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹. 𝗧𝗵𝗲𝘆'𝗿𝗲 𝗹𝗲𝗮𝗱𝗲𝗿𝘀𝗵𝗶𝗽 𝗮𝗻𝗱 𝗽𝗲𝗼𝗽𝗹𝗲.\n\nTechnology is…",
-      "link": "https://www.linkedin.com/posts/doraboussias_%F0%9D%97%A7%F0%9D%97%B5%F0%9D%97%B2-%F0%9D%97%AF%F0%9D%97%B6%F0%9D%97%B4%F0%9D%97%B4%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81-%F0%9D%97%AF%F0%9D%97%AE%F0%9D%97%BF%F0%9D%97%BF%F0%9D%97%B6%F0%9D%97%B2%F0%9D%97%BF%F0%9D%98%80-%F0%9D%98%81-activity-7491504686680956928-XbSu",
-      "date": "Fri, 07 Aug 2026 14:45:03 GMT",
-      "summary": "",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "During my AI Engineering Internship at Veeam Software, I not only worked on improving enterprise RAG retrieval systems through Python-based experimentation and search optimization, but also took an…",
-      "link": "https://www.linkedin.com/posts/vanesha-hari-7119161ab_during-my-ai-engineering-internship-at-veeam-activity-7491353624552542208--oiS",
-      "date": "Fri, 07 Aug 2026 04:44:47 GMT",
-      "summary": "During my AI Engineering Internship at Veeam Software, I not only worked on improving enterprise RAG retrieval systems through Python-based experimentation and search optimization, but also took an active role in the intern community. I organized a volunteer donation drive suppor",
       "image": null,
       "author": "Ken Johnston"
     }
