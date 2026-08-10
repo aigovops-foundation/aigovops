@@ -1,6 +1,30 @@
 {
-  "updated": "2026-08-10T07:31:39Z",
+  "updated": "2026-08-10T19:22:14Z",
   "bob": [
+    {
+      "title": "Level Up Your AI Governance: Cryptographic Audit Trails and Immutable Logging Problem: As organizations deploy autonomous AI syste...",
+      "link": "https://ae.linkedin.com/posts/bobrapp_level-up-your-ai-governance-cryptographic-activity-7492566583693856768-DKR6",
+      "date": "Mon, 10 Aug 2026 13:04:39 GMT",
+      "summary": "Level Up Your AI Governance: Cryptographic Audit Trails and Immutable Logging Problem: As organizations deploy autonomous AI systems, proving compliance and tracking decision lineage becomes nearly impossible without tamper-proof records. Solutions: Implementing cryptographic aud",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "One AI action. Two accountable reviewers. No silent handoff. PROBLEM Multi-agency guidance fails when ownership stops at the docum...",
+      "link": "https://www.linkedin.com/posts/bobrapp_one-ai-action-two-accountable-reviewers-activity-7492566579868618752-cTWH",
+      "date": "Mon, 10 Aug 2026 13:04:38 GMT",
+      "summary": "One AI action. Two accountable reviewers. No silent handoff. PROBLEM Multi-agency guidance fails when ownership stops at the document. Use the “Rule of Two” as an operational pattern: require two independent checks before a high-impact AI action proceeds. It is not a universal le",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "External AI audits are arriving. Is your organization prepared to prove compliance, data provenance, and model safety? Master the...",
+      "link": "https://www.linkedin.com/posts/bobrapp_external-ai-audits-are-arriving-is-your-activity-7492566357562175488-noO6",
+      "date": "Mon, 10 Aug 2026 13:03:45 GMT",
+      "summary": "External AI audits are arriving. Is your organization prepared to prove compliance, data provenance, and model safety? Master the framework at our upcoming events. Subscribe to our Luma calendar at to save your spot. [AUDIT READINESS CHECKLIST] 1. Map al",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Problem: Organizations deploy AI rapidly without clear metrics to measure governance maturity, leaving executives blind to complia...",
       "link": "https://www.linkedin.com/posts/bobrapp_problem-organizations-deploy-ai-rapidly-activity-7492339772170956800-nyOU",
@@ -56,30 +80,6 @@
       "summary": "Problem: Getting to 'Yes' during AI deployment is only the beginning. When an autonomous agentic AI breaks through its guardrails and goes rogue in production, standard incident response playbooks fail instantly. Solutions: Implementing multi-layered incident response frameworks",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: Rushing AI adoption without rigorous vendor diligence exposes organizations to unseen compliance and security blind spots...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-rushing-ai-adoption-without-rigorous-activity-7492203654981189632-X81Z",
-      "date": "Sun, 09 Aug 2026 13:02:30 GMT",
-      "summary": "Problem: Rushing AI adoption without rigorous vendor diligence exposes organizations to unseen compliance and security blind spots. Solutions: Adopt structured Responsible AI Procurement frameworks to evaluate third-party risk proactively. Summary: Secure your AI supply chain thr",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Generative AI and LLMs introduce unprecedented governance challenges, from hallucinations to systemic IP risks. Without robust gua...",
-      "link": "https://www.linkedin.com/posts/bobrapp_generative-ai-and-llms-introduce-unprecedented-activity-7492203384117063680-Myh_",
-      "date": "Sun, 09 Aug 2026 13:01:25 GMT",
-      "summary": "Generative AI and LLMs introduce unprecedented governance challenges, from hallucinations to systemic IP risks. Without robust guardrails, organizations risk severe compliance failures under frameworks like the EU AI Act ( Problem: Uncontrolled LLM deplo",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "When an autonomous model fails or leaks data, waiting for a committee is not an option. Without incident response playbooks, organ...",
-      "link": "https://www.linkedin.com/posts/bobrapp_when-an-autonomous-model-fails-or-leaks-data-activity-7491977273470922752-WO9W",
-      "date": "Sat, 08 Aug 2026 22:02:56 GMT",
-      "summary": "When an autonomous model fails or leaks data, waiting for a committee is not an option. Without incident response playbooks, organizations scramble, worsening fallout. Solution: Implement rigorous AI Incident Response Playbooks for immediate triage and containment. Summary: Proac",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
@@ -128,22 +128,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_when-an-autonomous-model-fails-or-leaks-data-activity-7491977273470922752-WO9W",
       "date": "Sat, 08 Aug 2026 22:02:56 GMT",
       "summary": "When an autonomous model fails or leaks data, waiting for a committee is not an option. Without incident response playbooks, organizations scramble, worsening fallout. Solution: Implement rigorous AI Incident Response Playbooks for immediate triage and containment. Summary: Proac",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Problem: When you get to yes, the real work begins.",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-aiethics-aigovernance-activity-7491977237001486336-kfeV",
-      "date": "Sat, 08 Aug 2026 22:02:47 GMT",
-      "summary": "Problem: When you get to yes, the real work begins. Models drift, prompts mutate, and rogue behavior emerges in production telemetry before your team notices. Solutions: Deploy real-time governance telemetry. Implement continuous drift monitoring across behavior, latency, and out",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Okay that video stops the scroll and then the story moves the heart and the mind.",
-      "link": "https://www.linkedin.com/posts/rkjohnston_okay-that-video-stops-the-scroll-and-then-activity-7491904954484346880-ZEth",
-      "date": "Sat, 08 Aug 2026 17:15:34 GMT",
-      "summary": "",
       "image": null,
       "author": "Ken Johnston"
     }
