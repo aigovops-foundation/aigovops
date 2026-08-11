@@ -1,6 +1,54 @@
 {
-  "updated": "2026-08-10T19:22:14Z",
+  "updated": "2026-08-11T07:26:53Z",
   "bob": [
+    {
+      "title": "#AIGovernance #HealthTech #ClinicalAI #EUAIAct #PatientSafety #ResponsibleAI Clinical AI needs governance, not just accuracy. L’IA...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-healthtech-clinicalai-activity-7492717142488932352-ieko",
+      "date": "Mon, 10 Aug 2026 23:02:55 GMT",
+      "summary": "#AIGovernance #HealthTech #ClinicalAI #EUAIAct #PatientSafety #ResponsibleAI Clinical AI needs governance, not just accuracy. L’IA clinique a besoin de gouvernance, pas seulement de précision. [EN] Problem: A model may be 95% accurate overall yet fail on the population before you",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Your vendor’s AI risk is still your risk. NIST AI RMF 1.0 offers a practical lens: GOVERN, MAP, MEASURE, MANAGE. The real test is...",
+      "link": "https://www.linkedin.com/posts/bobrapp_your-vendors-ai-risk-is-still-your-risk-activity-7492701935888945152-UjPA",
+      "date": "Mon, 10 Aug 2026 22:02:29 GMT",
+      "summary": "Your vendor’s AI risk is still your risk. NIST AI RMF 1.0 offers a practical lens: GOVERN, MAP, MEASURE, MANAGE. The real test is what happens after the contract is signed. PROBLEM A completed questionnaire is not continuous oversight. Model updates, subcontractors, data drift, i",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "The gap between AI theory and real-world classroom implementation is wide. On August 11, we bridge it at the NCW AI in Action Camp...",
+      "link": "https://www.linkedin.com/posts/bobrapp_the-gap-between-ai-theory-and-real-world-activity-7492701935129604096-8C56",
+      "date": "Mon, 10 Aug 2026 22:02:29 GMT",
+      "summary": "The gap between AI theory and real-world classroom implementation is wide. On August 11, we bridge it at the NCW AI in Action Camp. Join 35 hands-on mini-camps focused on \"Cool Tools. Cool Schools.\" This is your final call to move beyond talk and start building practical, ethical",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Navigating multiple global AI regulations is one of the toughest challenges facing organizations today. Ensuring cross-border comp...",
+      "link": "https://www.linkedin.com/posts/bobrapp_navigating-multiple-global-ai-regulations-activity-7492701760600453120-DaA1",
+      "date": "Mon, 10 Aug 2026 22:01:47 GMT",
+      "summary": "Navigating multiple global AI regulations is one of the toughest challenges facing organizations today. Ensuring cross-border compliance and interoperability requires more than just checking boxes, it demands a unified, community-driven framework. Join our upcoming sessions on th",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Governing open-source AI deployments and third-party weights presents a unique challenge in transparency and risk management. Prob...",
+      "link": "https://www.linkedin.com/posts/bobrapp_governing-open-source-ai-deployments-and-activity-7492701750903177217-16X0",
+      "date": "Mon, 10 Aug 2026 22:01:45 GMT",
+      "summary": "Governing open-source AI deployments and third-party weights presents a unique challenge in transparency and risk management. Problem: Unverified open-source models introduce hidden vulnerabilities and compliance risks. Solutions: Implement robust third-party weight auditing and",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "#AIGovernance #AISecurity #EUAIAct #NISTAIRMF 🚨 Identity is not permission in multi-agent systems. EN Problem: Authenticated ≠ aut...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-aisecurity-euaiact-activity-7492626590850375680-zSkI",
+      "date": "Mon, 10 Aug 2026 17:03:06 GMT",
+      "summary": "#AIGovernance #AISecurity #EUAIAct #NISTAIRMF 🚨 Identity is not permission in multi-agent systems. EN Problem: Authenticated ≠ authorized across domains. Implicit trust creates confused-deputy attacks, escalation, and hidden data access. Solutions: Delegate explicitly. Use least",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Level Up Your AI Governance: Cryptographic Audit Trails and Immutable Logging Problem: As organizations deploy autonomous AI syste...",
       "link": "https://ae.linkedin.com/posts/bobrapp_level-up-your-ai-governance-cryptographic-activity-7492566583693856768-DKR6",
@@ -32,102 +80,54 @@
       "summary": "Problem: Organizations deploy AI rapidly without clear metrics to measure governance maturity, leaving executives blind to compliance failures, ethical drift, and regulatory risk. Solutions: Establish robust executive KPIs and metrics dashboards to track model compliance, risk re",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "OWASP GenAI Top 10 — LLM06:2025 Excessive Agency is a governance warning: an agent may be helpful yet have too much power. Problem...",
-      "link": "https://www.linkedin.com/posts/bobrapp_owasp-genai-top-10-llm062025-excessive-activity-7492339748087357440-o3GG",
-      "date": "Sun, 09 Aug 2026 22:03:17 GMT",
-      "summary": "OWASP GenAI Top 10 — LLM06:2025 Excessive Agency is a governance warning: an agent may be helpful yet have too much power. Problem / 问题: Excessive tools, permissions, or autonomy can turn a wrong or manipulated output into real-world action. 工具、权限或自主性过度，可能把错误或被操纵的输出变成现实行动。 Ship G",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "When an AI model denies a mortgage or distorts credit scoring based on biased training data, the impact on human lives is immediat...",
-      "link": "https://www.linkedin.com/posts/bobrapp_when-an-ai-model-denies-a-mortgage-or-distorts-activity-7492339626368589824-UBZd",
-      "date": "Sun, 09 Aug 2026 22:02:48 GMT",
-      "summary": "When an AI model denies a mortgage or distorts credit scoring based on biased training data, the impact on human lives is immediate. Financial institutions face immense regulatory pressure to ensure their automated systems are transparent, fair, and fully accountable. Join us as",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Navigating AI regulatory reporting and disclosure can feel like walking through a maze blindfolded. Maintaining transparency and c...",
-      "link": "https://www.linkedin.com/posts/bobrapp_navigating-ai-regulatory-reporting-and-disclosure-activity-7492339135882608640-06qy",
-      "date": "Sun, 09 Aug 2026 22:00:51 GMT",
-      "summary": "Navigating AI regulatory reporting and disclosure can feel like walking through a maze blindfolded. Maintaining transparency and compliance isn't just about checking boxes—it is about building verifiable trust. Problem: Fragmented disclosure standards and opaque model behaviors l",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: Organizations rushing to deploy AI often lack internal policy frameworks, leading to hidden biases, security vulnerabilit...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-organizations-rushing-to-deploy-activity-7492204031264731136-9fWw",
-      "date": "Sun, 09 Aug 2026 13:03:59 GMT",
-      "summary": "Problem: Organizations rushing to deploy AI often lack internal policy frameworks, leading to hidden biases, security vulnerabilities, and regulatory penalties. Solutions: Implement comprehensive AI Policy Development Frameworks that establish clear guardrails, define accountabil",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "One click can now carry far more than a message. PROBLEM Weaponized email AI assistants can scale impersonation, context-aware phi...",
-      "link": "https://www.linkedin.com/posts/bobrapp_levelupyouraigovernance-aigovops-aigovernance-activity-7492203821759299584-cT2V",
-      "date": "Sun, 09 Aug 2026 13:03:10 GMT",
-      "summary": "One click can now carry far more than a message. PROBLEM Weaponized email AI assistants can scale impersonation, context-aware phishing, and fraudulent workflow requests. Living-off-the-land attacks are harder to detect because they abuse trusted tools already inside the environm",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: Getting to 'Yes' during AI deployment is only the beginning. When an autonomous agentic AI breaks through its guardrails...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-aigovernance-responsibleai-activity-7492203656243728385-3Hsm",
-      "date": "Sun, 09 Aug 2026 13:02:30 GMT",
-      "summary": "Problem: Getting to 'Yes' during AI deployment is only the beginning. When an autonomous agentic AI breaks through its guardrails and goes rogue in production, standard incident response playbooks fail instantly. Solutions: Implementing multi-layered incident response frameworks",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "Can't wait for tomorrow.",
+      "link": "https://www.linkedin.com/posts/rkjohnston_cant-wait-for-tomorrow-activity-7492726025945174016-Nj3q",
+      "date": "Mon, 10 Aug 2026 23:38:13 GMT",
+      "summary": "Can't wait for tomorrow.",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "The gap between AI theory and real-world classroom implementation is wide. On August 11, we bridge it at the NCW AI in Action Camp. Join 35 hands-on mini-camps focused on \"Cool Tools. Cool Schools.\"…",
+      "link": "https://www.linkedin.com/posts/bobrapp_the-gap-between-ai-theory-and-real-world-activity-7492701935129604096-8C56",
+      "date": "Mon, 10 Aug 2026 22:02:29 GMT",
+      "summary": "The gap between AI theory and real-world classroom implementation is wide. On August 11, we bridge it at the NCW AI in Action Camp. Join 35 hands-on mini-camps focused on \"Cool Tools. Cool Schools.\" This is your final call to move beyond talk and start building practical, ethical",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Founder Spotlight Series Part 2! 🔦🔍\n\nToday we are highlighting Danielle Dantche the CEO & Founder of Suede!",
+      "link": "https://www.linkedin.com/posts/aihouse_founder-spotlight-series-part-2-today-activity-7492655792890994688-TaJ9",
+      "date": "Mon, 10 Aug 2026 18:59:08 GMT",
+      "summary": "",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "New Cars, Used Cars, Car Dealers, Prices & Reviews | Cars.com",
+      "link": "https://www.linkedin.com/posts/tom-mereckis-6651562_new-cars-used-cars-car-dealers-prices-activity-7492654843757694976-VgtL",
+      "date": "Mon, 10 Aug 2026 18:55:22 GMT",
+      "summary": "My company, Cars Commerce (cars.com and much more) is newly hiring a CISO. No JD yet; just getting this out there early. Reply directly to me with interest. No recruiters please. Thanks!",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "One AI action. Two accountable reviewers. No silent handoff.\n\nPROBLEM\nMulti-agency guidance fails when ownership stops at the document. Use the “Rule of Two” as an operational pattern: require two…",
+      "link": "https://www.linkedin.com/posts/bobrapp_one-ai-action-two-accountable-reviewers-activity-7492566579868618752-cTWH",
+      "date": "Mon, 10 Aug 2026 13:04:38 GMT",
+      "summary": "One AI action. Two accountable reviewers. No silent handoff. PROBLEM Multi-agency guidance fails when ownership stops at the document. Use the “Rule of Two” as an operational pattern: require two independent checks before a high-impact AI action proceeds. It is not a universal le",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "OWASP GenAI Top 10 — LLM06:2025 Excessive Agency is a governance warning: an agent may be helpful yet have too much power.\n\nProblem / 问题: Excessive tools, permissions, or autonomy can turn a wrong or…",
       "link": "https://www.linkedin.com/posts/bobrapp_owasp-genai-top-10-llm062025-excessive-activity-7492339748087357440-o3GG",
       "date": "Sun, 09 Aug 2026 22:03:17 GMT",
       "summary": "OWASP GenAI Top 10 — LLM06:2025 Excessive Agency is a governance warning: an agent may be helpful yet have too much power. Problem / 问题: Excessive tools, permissions, or autonomy can turn a wrong or manipulated output into real-world action. 工具、权限或自主性过度，可能把错误或被操纵的输出变成现实行动。 Ship G",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "See this panel in #RAI from my friend Ruth kikin-Gil",
-      "link": "https://www.linkedin.com/posts/rkjohnston_sxsw-rai-activity-7492328716803391488-GV5y",
-      "date": "Sun, 09 Aug 2026 21:19:27 GMT",
-      "summary": "It #SXSW voting time. See this panel in #RAI from my friend Ruth kikin-Gil",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "One click can now carry far more than a message.",
-      "link": "https://www.linkedin.com/posts/bobrapp_levelupyouraigovernance-aigovops-aigovernance-activity-7492203821759299584-cT2V",
-      "date": "Sun, 09 Aug 2026 13:03:09 GMT",
-      "summary": "One click can now carry far more than a message. PROBLEM Weaponized email AI assistants can scale impersonation, context-aware phishing, and fraudulent workflow requests. Living-off-the-land attacks are harder to detect because they abuse trusted tools already inside the environm",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Problem: Getting to 'Yes' during AI deployment is only the beginning.",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-aigovernance-responsibleai-activity-7492203656243728385-3Hsm",
-      "date": "Sun, 09 Aug 2026 13:02:30 GMT",
-      "summary": "Problem: Getting to 'Yes' during AI deployment is only the beginning. When an autonomous agentic AI breaks through its guardrails and goes rogue in production, standard incident response playbooks fail instantly. Solutions: Implementing multi-layered incident response frameworks",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Problem: Rushing AI adoption without rigorous vendor diligence exposes organizations to unseen compliance and security blind spots.\n\nSolutions: Adopt structured Responsible AI Procurement frameworks…",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-rushing-ai-adoption-without-rigorous-activity-7492203654981189632-X81Z",
-      "date": "Sun, 09 Aug 2026 13:02:30 GMT",
-      "summary": "Problem: Rushing AI adoption without rigorous vendor diligence exposes organizations to unseen compliance and security blind spots. Solutions: Adopt structured Responsible AI Procurement frameworks to evaluate third-party risk proactively. Summary: Secure your AI supply chain thr",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "When an autonomous model fails or leaks data, waiting for a committee is not an option. Without incident response playbooks, organizations scramble, worsening fallout.\n\nSolution: Implement rigorous…",
-      "link": "https://www.linkedin.com/posts/bobrapp_when-an-autonomous-model-fails-or-leaks-data-activity-7491977273470922752-WO9W",
-      "date": "Sat, 08 Aug 2026 22:02:56 GMT",
-      "summary": "When an autonomous model fails or leaks data, waiting for a committee is not an option. Without incident response playbooks, organizations scramble, worsening fallout. Solution: Implement rigorous AI Incident Response Playbooks for immediate triage and containment. Summary: Proac",
       "image": null,
       "author": "Ken Johnston"
     }
