@@ -1,6 +1,38 @@
 {
-  "updated": "2026-08-11T07:26:53Z",
+  "updated": "2026-08-11T19:23:35Z",
   "bob": [
+    {
+      "title": "When an AI system fails or drifts into unintended behavior, waiting for a committee review is not an option. You need rigorous AI...",
+      "link": "https://www.linkedin.com/posts/bobrapp_when-an-ai-system-fails-or-drifts-into-unintended-activity-7492928961463709696-LtIk",
+      "date": "Tue, 11 Aug 2026 13:04:36 GMT",
+      "summary": "When an AI system fails or drifts into unintended behavior, waiting for a committee review is not an option. You need rigorous AI Incident Response Playbooks. 🐾 EN: AI governance without an incident response plan is like navigating without a compass. Discover how to build robust,",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Live from the NCW AI in Action Camp: Implementing AI Governance Rules. Problem: Ethics in schools don't stop data leaks or bias. S...",
+      "link": "https://www.linkedin.com/posts/bobrapp_live-from-the-ncw-ai-in-action-camp-implementing-activity-7492928897844690944-fYA2",
+      "date": "Tue, 11 Aug 2026 13:04:21 GMT",
+      "summary": "Live from the NCW AI in Action Camp: Implementing AI Governance Rules. Problem: Ethics in schools don't stop data leaks or bias. Static policies fail during deployment. Solution: We use \"Governance-as-Code\" to turn policies into technical guardrails for student safety per OECD Pr",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Making the business case for AI governance isn't just about compliance; it's about unlocking long-term ROI and mitigating operatio...",
+      "link": "https://fr.linkedin.com/posts/bobrapp_making-the-business-case-for-ai-governance-activity-7492928885609721857-7ody",
+      "date": "Tue, 11 Aug 2026 13:04:18 GMT",
+      "summary": "Making the business case for AI governance isn't just about compliance; it's about unlocking long-term ROI and mitigating operational risks. Join our 'Level Up Your AI Governance' campaign to learn how to measure and prove the value of responsible AI. Save your spot on our Luma c",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Data can be synthetic—and still be untrustworthy. PROBLEM | PROBLEMA No lineage from source to model means no reliable explanation...",
+      "link": "https://www.linkedin.com/posts/bobrapp_data-can-be-syntheticand-still-be-untrustworthy-activity-7492928809738919938-BcDj",
+      "date": "Tue, 11 Aug 2026 13:04:00 GMT",
+      "summary": "Data can be synthetic—and still be untrustworthy. PROBLEM | PROBLEMA No lineage from source to model means no reliable explanation or proof of quality. Sin linaje, no hay explicación ni prueba fiable. Synthetic data can hide bias, leakage, drift, and bad labels. Los datos sintéti",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "#AIGovernance #HealthTech #ClinicalAI #EUAIAct #PatientSafety #ResponsibleAI Clinical AI needs governance, not just accuracy. L’IA...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-healthtech-clinicalai-activity-7492717142488932352-ieko",
@@ -46,38 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-aisecurity-euaiact-activity-7492626590850375680-zSkI",
       "date": "Mon, 10 Aug 2026 17:03:06 GMT",
       "summary": "#AIGovernance #AISecurity #EUAIAct #NISTAIRMF 🚨 Identity is not permission in multi-agent systems. EN Problem: Authenticated ≠ authorized across domains. Implicit trust creates confused-deputy attacks, escalation, and hidden data access. Solutions: Delegate explicitly. Use least",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Level Up Your AI Governance: Cryptographic Audit Trails and Immutable Logging Problem: As organizations deploy autonomous AI syste...",
-      "link": "https://ae.linkedin.com/posts/bobrapp_level-up-your-ai-governance-cryptographic-activity-7492566583693856768-DKR6",
-      "date": "Mon, 10 Aug 2026 13:04:39 GMT",
-      "summary": "Level Up Your AI Governance: Cryptographic Audit Trails and Immutable Logging Problem: As organizations deploy autonomous AI systems, proving compliance and tracking decision lineage becomes nearly impossible without tamper-proof records. Solutions: Implementing cryptographic aud",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "One AI action. Two accountable reviewers. No silent handoff. PROBLEM Multi-agency guidance fails when ownership stops at the docum...",
-      "link": "https://www.linkedin.com/posts/bobrapp_one-ai-action-two-accountable-reviewers-activity-7492566579868618752-cTWH",
-      "date": "Mon, 10 Aug 2026 13:04:38 GMT",
-      "summary": "One AI action. Two accountable reviewers. No silent handoff. PROBLEM Multi-agency guidance fails when ownership stops at the document. Use the “Rule of Two” as an operational pattern: require two independent checks before a high-impact AI action proceeds. It is not a universal le",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "External AI audits are arriving. Is your organization prepared to prove compliance, data provenance, and model safety? Master the...",
-      "link": "https://www.linkedin.com/posts/bobrapp_external-ai-audits-are-arriving-is-your-activity-7492566357562175488-noO6",
-      "date": "Mon, 10 Aug 2026 13:03:45 GMT",
-      "summary": "External AI audits are arriving. Is your organization prepared to prove compliance, data provenance, and model safety? Master the framework at our upcoming events. Subscribe to our Luma calendar at to save your spot. [AUDIT READINESS CHECKLIST] 1. Map al",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: Organizations deploy AI rapidly without clear metrics to measure governance maturity, leaving executives blind to complia...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-organizations-deploy-ai-rapidly-activity-7492339772170956800-nyOU",
-      "date": "Sun, 09 Aug 2026 22:03:23 GMT",
-      "summary": "Problem: Organizations deploy AI rapidly without clear metrics to measure governance maturity, leaving executives blind to compliance failures, ethical drift, and regulatory risk. Solutions: Establish robust executive KPIs and metrics dashboards to track model compliance, risk re",
       "image": null,
       "author": "Bob Rapp"
     }
