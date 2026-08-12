@@ -1,6 +1,46 @@
 {
-  "updated": "2026-08-11T19:23:35Z",
+  "updated": "2026-08-12T07:30:41Z",
   "bob": [
+    {
+      "title": "Accuracy is not governance. An opaque correlation can deny coverage—and create fairness, regulatory, and reputational risk. ENGLIS...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-insurtech-underwriting-activity-7493079236635885569-RJN2",
+      "date": "Tue, 11 Aug 2026 23:01:45 GMT",
+      "summary": "Accuracy is not governance. An opaque correlation can deny coverage—and create fairness, regulatory, and reputational risk. ENGLISH Problem: Unvalidated or discriminatory proxies can shape underwriting. Solutions: Document data and logic; test group impact; explain adverse decisi",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Vetting third-party AI vendors requires evaluating algorithmic transparency, data provenance, and bias. Join our 'Level Up Your AI...",
+      "link": "https://www.linkedin.com/posts/bobrapp_vetting-third-party-ai-vendors-requires-evaluating-activity-7493064393241419776-2UQi",
+      "date": "Tue, 11 Aug 2026 22:02:46 GMT",
+      "summary": "Vetting third-party AI vendors requires evaluating algorithmic transparency, data provenance, and bias. Join our 'Level Up Your AI Governance' campaign. Subscribe to our Luma calendar at to save your spot! Checklist - AI Vendor Risk: 1. Audit third-party",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: Unchecked Generative AI and LLM deployments expose organizations to severe hallucination risks, IP violations, and regula...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-unchecked-generative-ai-and-llm-activity-7493064294134145024-GjZg",
+      "date": "Tue, 11 Aug 2026 22:02:22 GMT",
+      "summary": "Problem: Unchecked Generative AI and LLM deployments expose organizations to severe hallucination risks, IP violations, and regulatory non-compliance. Solutions: Implement structured governance-as-code frameworks, establish multi-tiered oversight models, and audit training datase",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "PROBLEM An AI system can be accurate—and still be unsafe, unfair, or impossible to challenge. If people cannot understand how an o...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-an-ai-system-can-be-accurateand-activity-7493064145672585217-1vUT",
+      "date": "Tue, 11 Aug 2026 22:01:47 GMT",
+      "summary": "PROBLEM An AI system can be accurate—and still be unsafe, unfair, or impossible to challenge. If people cannot understand how an outcome was reached, “trust” becomes a marketing claim. SOLUTIONS Use an Algorithmic Impact Assessment before deployment: identify affected groups, for",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "🧑‍💼 Fair Hiring Starts With AI Governance / निष्पक्ष भर्ती AI शासन से शुरू होती है [EN] Problem: Historical data can encode bias, rejecting qual...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-hrtech-ethicalai-activity-7492988873237504000-lotz",
+      "date": "Tue, 11 Aug 2026 17:02:40 GMT",
+      "summary": "🧑‍💼 Fair Hiring Starts With AI Governance / निष्पक्ष भर्ती AI शासन से शुरू होती है [EN] Problem: Historical data can encode bias, rejecting qualified candidates without explanation. Solutions: Audit subgroup outcomes; log provenance, labels and changes; keep humans accountable; r",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "When an AI system fails or drifts into unintended behavior, waiting for a committee review is not an option. You need rigorous AI...",
       "link": "https://www.linkedin.com/posts/bobrapp_when-an-ai-system-fails-or-drifts-into-unintended-activity-7492928961463709696-LtIk",
@@ -40,49 +80,17 @@
       "summary": "#AIGovernance #HealthTech #ClinicalAI #EUAIAct #PatientSafety #ResponsibleAI Clinical AI needs governance, not just accuracy. L’IA clinique a besoin de gouvernance, pas seulement de précision. [EN] Problem: A model may be 95% accurate overall yet fail on the population before you",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "Your vendor’s AI risk is still your risk. NIST AI RMF 1.0 offers a practical lens: GOVERN, MAP, MEASURE, MANAGE. The real test is...",
-      "link": "https://www.linkedin.com/posts/bobrapp_your-vendors-ai-risk-is-still-your-risk-activity-7492701935888945152-UjPA",
-      "date": "Mon, 10 Aug 2026 22:02:29 GMT",
-      "summary": "Your vendor’s AI risk is still your risk. NIST AI RMF 1.0 offers a practical lens: GOVERN, MAP, MEASURE, MANAGE. The real test is what happens after the contract is signed. PROBLEM A completed questionnaire is not continuous oversight. Model updates, subcontractors, data drift, i",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "The gap between AI theory and real-world classroom implementation is wide. On August 11, we bridge it at the NCW AI in Action Camp...",
-      "link": "https://www.linkedin.com/posts/bobrapp_the-gap-between-ai-theory-and-real-world-activity-7492701935129604096-8C56",
-      "date": "Mon, 10 Aug 2026 22:02:29 GMT",
-      "summary": "The gap between AI theory and real-world classroom implementation is wide. On August 11, we bridge it at the NCW AI in Action Camp. Join 35 hands-on mini-camps focused on \"Cool Tools. Cool Schools.\" This is your final call to move beyond talk and start building practical, ethical",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Navigating multiple global AI regulations is one of the toughest challenges facing organizations today. Ensuring cross-border comp...",
-      "link": "https://www.linkedin.com/posts/bobrapp_navigating-multiple-global-ai-regulations-activity-7492701760600453120-DaA1",
-      "date": "Mon, 10 Aug 2026 22:01:47 GMT",
-      "summary": "Navigating multiple global AI regulations is one of the toughest challenges facing organizations today. Ensuring cross-border compliance and interoperability requires more than just checking boxes, it demands a unified, community-driven framework. Join our upcoming sessions on th",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Governing open-source AI deployments and third-party weights presents a unique challenge in transparency and risk management. Prob...",
-      "link": "https://www.linkedin.com/posts/bobrapp_governing-open-source-ai-deployments-and-activity-7492701750903177217-16X0",
-      "date": "Mon, 10 Aug 2026 22:01:45 GMT",
-      "summary": "Governing open-source AI deployments and third-party weights presents a unique challenge in transparency and risk management. Problem: Unverified open-source models introduce hidden vulnerabilities and compliance risks. Solutions: Implement robust third-party weight auditing and",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "#AIGovernance #AISecurity #EUAIAct #NISTAIRMF 🚨 Identity is not permission in multi-agent systems. EN Problem: Authenticated ≠ aut...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-aisecurity-euaiact-activity-7492626590850375680-zSkI",
-      "date": "Mon, 10 Aug 2026 17:03:06 GMT",
-      "summary": "#AIGovernance #AISecurity #EUAIAct #NISTAIRMF 🚨 Identity is not permission in multi-agent systems. EN Problem: Authenticated ≠ authorized across domains. Implicit trust creates confused-deputy attacks, escalation, and hidden data access. Solutions: Delegate explicitly. Use least",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "At the recent CDOIQ Program 2026 Conference, I had the most AMAZING time talking, laughing, debating, conspiring and simply connecting!\n\nSincerely appreciate the chat with Arvind Murali M.B.A., M.S…",
+      "link": "https://www.linkedin.com/posts/leighfelton_at-the-recent-cdoiq-program-2026-conference-activity-7492969935699083264-OmPj",
+      "date": "Tue, 11 Aug 2026 15:47:25 GMT",
+      "summary": "At the recent CDOIQ Program 2026 Conference, I had the most AMAZING time talking, laughing, debating, conspiring and simply connecting! Sincerely appreciate the chat with Arvind Murali M.B.A., M.S, highlighting the work of the AI for Job Security Foundation, and the mission to em",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "Can't wait for tomorrow.",
       "link": "https://www.linkedin.com/posts/rkjohnston_cant-wait-for-tomorrow-activity-7492726025945174016-Nj3q",
@@ -96,6 +104,14 @@
       "link": "https://www.linkedin.com/posts/bobrapp_the-gap-between-ai-theory-and-real-world-activity-7492701935129604096-8C56",
       "date": "Mon, 10 Aug 2026 22:02:29 GMT",
       "summary": "The gap between AI theory and real-world classroom implementation is wide. On August 11, we bridge it at the NCW AI in Action Camp. Join 35 hands-on mini-camps focused on \"Cool Tools. Cool Schools.\" This is your final call to move beyond talk and start building practical, ethical",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Governing open-source AI deployments and third-party weights presents a unique challenge in transparency and risk management. Problem: Unverified open-source models introduce hidden vulnerabilities…",
+      "link": "https://www.linkedin.com/posts/bobrapp_governing-open-source-ai-deployments-and-activity-7492701750903177217-16X0",
+      "date": "Mon, 10 Aug 2026 22:01:45 GMT",
+      "summary": "Governing open-source AI deployments and third-party weights presents a unique challenge in transparency and risk management. Problem: Unverified open-source models introduce hidden vulnerabilities and compliance risks. Solutions: Implement robust third-party weight auditing and",
       "image": null,
       "author": "Ken Johnston"
     },
@@ -120,14 +136,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_one-ai-action-two-accountable-reviewers-activity-7492566579868618752-cTWH",
       "date": "Mon, 10 Aug 2026 13:04:38 GMT",
       "summary": "One AI action. Two accountable reviewers. No silent handoff. PROBLEM Multi-agency guidance fails when ownership stops at the document. Use the “Rule of Two” as an operational pattern: require two independent checks before a high-impact AI action proceeds. It is not a universal le",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "OWASP GenAI Top 10 — LLM06:2025 Excessive Agency is a governance warning: an agent may be helpful yet have too much power.\n\nProblem / 问题: Excessive tools, permissions, or autonomy can turn a wrong or…",
-      "link": "https://www.linkedin.com/posts/bobrapp_owasp-genai-top-10-llm062025-excessive-activity-7492339748087357440-o3GG",
-      "date": "Sun, 09 Aug 2026 22:03:17 GMT",
-      "summary": "OWASP GenAI Top 10 — LLM06:2025 Excessive Agency is a governance warning: an agent may be helpful yet have too much power. Problem / 问题: Excessive tools, permissions, or autonomy can turn a wrong or manipulated output into real-world action. 工具、权限或自主性过度，可能把错误或被操纵的输出变成现实行动。 Ship G",
       "image": null,
       "author": "Ken Johnston"
     }
