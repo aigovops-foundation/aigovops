@@ -1,6 +1,38 @@
 {
-  "updated": "2026-08-12T07:30:41Z",
+  "updated": "2026-08-12T19:23:55Z",
   "bob": [
+    {
+      "title": "🛒 Personalization Without Governance Is a Risk / 没有治理的个性化是一种风险 Problem / 问题: Conversion-first recommendation and pricing engines c...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-retailai-ecommerce-activity-7493351166785912832-tF3K",
+      "date": "Wed, 12 Aug 2026 17:02:18 GMT",
+      "summary": "🛒 Personalization Without Governance Is a Risk / 没有治理的个性化是一种风险 Problem / 问题: Conversion-first recommendation and pricing engines can exploit vulnerability, create unfair price differences, and erode trust. Solutions / 解决方案: Set ethical boundaries; audit fairness and explainabilit",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Leadership is where AI governance becomes real—or theatre. PROBLEM No owner, evidence, or stop authority? That is not governance....",
+      "link": "https://www.linkedin.com/posts/bobrapp_leadership-is-where-ai-governance-becomes-activity-7493291745238077440-I2xm",
+      "date": "Wed, 12 Aug 2026 13:06:11 GMT",
+      "summary": "Leadership is where AI governance becomes real—or theatre. PROBLEM No owner, evidence, or stop authority? That is not governance. SOLUTION Use the Three-Yes Test: Safe per NIST AI RMF—map risks and controls. Compliant per EU AI Act—assess use, roles, evidence, and oversight. Pro-",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Audit panic is usually a data problem—not an audit problem. ENGLISH PROBLEM When evidence lives in emails, spreadsheets, and memor...",
+      "link": "https://fr.linkedin.com/posts/bobrapp_audit-panic-is-usually-a-data-problemnot-activity-7493291643391979520--Arr",
+      "date": "Wed, 12 Aug 2026 13:05:46 GMT",
+      "summary": "Audit panic is usually a data problem—not an audit problem. ENGLISH PROBLEM When evidence lives in emails, spreadsheets, and memory, regulatory reporting becomes slow and fragile. SOLUTIONS Build continuous evidence collection. For every material AI decision, capture: • Data prov",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Assessing organizational readiness for AI deployment is no longer optional. Where does your maturity stand? Problem: Ad-hoc AI ado...",
+      "link": "https://www.linkedin.com/posts/bobrapp_assessing-organizational-readiness-for-ai-activity-7493291394070073344-i1y7",
+      "date": "Wed, 12 Aug 2026 13:04:47 GMT",
+      "summary": "Assessing organizational readiness for AI deployment is no longer optional. Where does your maturity stand? Problem: Ad-hoc AI adoption without governance leads to massive compliance risks and fragmented safety oversight. Solution: Utilize structured AI Governance Maturity Framew",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Accuracy is not governance. An opaque correlation can deny coverage—and create fairness, regulatory, and reputational risk. ENGLIS...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-insurtech-underwriting-activity-7493079236635885569-RJN2",
@@ -48,41 +80,17 @@
       "summary": "When an AI system fails or drifts into unintended behavior, waiting for a committee review is not an option. You need rigorous AI Incident Response Playbooks. 🐾 EN: AI governance without an incident response plan is like navigating without a compass. Discover how to build robust,",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "Live from the NCW AI in Action Camp: Implementing AI Governance Rules. Problem: Ethics in schools don't stop data leaks or bias. S...",
-      "link": "https://www.linkedin.com/posts/bobrapp_live-from-the-ncw-ai-in-action-camp-implementing-activity-7492928897844690944-fYA2",
-      "date": "Tue, 11 Aug 2026 13:04:21 GMT",
-      "summary": "Live from the NCW AI in Action Camp: Implementing AI Governance Rules. Problem: Ethics in schools don't stop data leaks or bias. Static policies fail during deployment. Solution: We use \"Governance-as-Code\" to turn policies into technical guardrails for student safety per OECD Pr",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Making the business case for AI governance isn't just about compliance; it's about unlocking long-term ROI and mitigating operatio...",
-      "link": "https://fr.linkedin.com/posts/bobrapp_making-the-business-case-for-ai-governance-activity-7492928885609721857-7ody",
-      "date": "Tue, 11 Aug 2026 13:04:18 GMT",
-      "summary": "Making the business case for AI governance isn't just about compliance; it's about unlocking long-term ROI and mitigating operational risks. Join our 'Level Up Your AI Governance' campaign to learn how to measure and prove the value of responsible AI. Save your spot on our Luma c",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Data can be synthetic—and still be untrustworthy. PROBLEM | PROBLEMA No lineage from source to model means no reliable explanation...",
-      "link": "https://www.linkedin.com/posts/bobrapp_data-can-be-syntheticand-still-be-untrustworthy-activity-7492928809738919938-BcDj",
-      "date": "Tue, 11 Aug 2026 13:04:00 GMT",
-      "summary": "Data can be synthetic—and still be untrustworthy. PROBLEM | PROBLEMA No lineage from source to model means no reliable explanation or proof of quality. Sin linaje, no hay explicación ni prueba fiable. Synthetic data can hide bias, leakage, drift, and bad labels. Los datos sintéti",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "#AIGovernance #HealthTech #ClinicalAI #EUAIAct #PatientSafety #ResponsibleAI Clinical AI needs governance, not just accuracy. L’IA...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-healthtech-clinicalai-activity-7492717142488932352-ieko",
-      "date": "Mon, 10 Aug 2026 23:02:55 GMT",
-      "summary": "#AIGovernance #HealthTech #ClinicalAI #EUAIAct #PatientSafety #ResponsibleAI Clinical AI needs governance, not just accuracy. L’IA clinique a besoin de gouvernance, pas seulement de précision. [EN] Problem: A model may be 95% accurate overall yet fail on the population before you",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "Wow. This has been one of the craziest few weeks of my life.\n\nI got the honor of traveling all around the country for the Anthropic Hard Conversations campaign.\n\nThis last Saturday I pulled a 21-hour… | AJ Green",
+      "link": "https://www.linkedin.com/posts/aj-green-ai_wow-this-has-been-one-of-the-craziest-few-activity-7493008610193649664-ZvN1",
+      "date": "Tue, 11 Aug 2026 18:21:06 GMT",
+      "summary": "Wow. This has been one of the craziest few weeks of my life. I got the honor of traveling all around the country for the Anthropic Hard Conversations campaign. This last Saturday I pulled a 21-hour day. 3am out the door to fly to SF. Hosted a hackathon at 10am at Unlimit's new of",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "At the recent CDOIQ Program 2026 Conference, I had the most AMAZING time talking, laughing, debating, conspiring and simply connecting!\n\nSincerely appreciate the chat with Arvind Murali M.B.A., M.S…",
       "link": "https://www.linkedin.com/posts/leighfelton_at-the-recent-cdoiq-program-2026-conference-activity-7492969935699083264-OmPj",
@@ -132,10 +140,10 @@
       "author": "Ken Johnston"
     },
     {
-      "title": "One AI action. Two accountable reviewers. No silent handoff.\n\nPROBLEM\nMulti-agency guidance fails when ownership stops at the document. Use the “Rule of Two” as an operational pattern: require two…",
-      "link": "https://www.linkedin.com/posts/bobrapp_one-ai-action-two-accountable-reviewers-activity-7492566579868618752-cTWH",
-      "date": "Mon, 10 Aug 2026 13:04:38 GMT",
-      "summary": "One AI action. Two accountable reviewers. No silent handoff. PROBLEM Multi-agency guidance fails when ownership stops at the document. Use the “Rule of Two” as an operational pattern: require two independent checks before a high-impact AI action proceeds. It is not a universal le",
+      "title": "Transform's most powerful insights don't stay on the mainstage.",
+      "link": "https://www.linkedin.com/posts/hr-transform_behindthekeynote-jonlevy-teamintelligence-activity-7492611658889179136-xuJm",
+      "date": "Mon, 10 Aug 2026 16:03:45 GMT",
+      "summary": "Transform's most powerful insights don't stay on the mainstage. Behind the Keynote is our editorial series turning our biggest event conversations into year-round learning. Next up: Jon Levy, Founder & Chief Scientist of Influencers In this exclusive interview, Jon explains why i",
       "image": null,
       "author": "Ken Johnston"
     }
