@@ -1,6 +1,46 @@
 {
-  "updated": "2026-08-12T19:23:55Z",
+  "updated": "2026-08-13T07:30:14Z",
   "bob": [
+    {
+      "title": "🏭 Industrial AI needs governance at the edge. الذكاء الاصطناعي الصناعي يحتاج إلى حوكمة عند الحافة. #AIGovernance #Manufacturing #I...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-manufacturing-industrialai-activity-7493441620751699968-WqQa",
+      "date": "Wed, 12 Aug 2026 23:01:44 GMT",
+      "summary": "🏭 Industrial AI needs governance at the edge. الذكاء الاصطناعي الصناعي يحتاج إلى حوكمة عند الحافة. #AIGovernance #Manufacturing #IndustrialAI #Industry40 #EUAIAct #ResponsibleAI ENGLISH Problem: Factory AI can fail from model drift, degraded sensors, or stale/biased data—with no",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI incidents do not wait for the perfect meeting. A playbook matters only if people can execute it under pressure. A tabletop exer...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-incidents-do-not-wait-for-the-perfect-activity-7493427001249325057-NEdt",
+      "date": "Wed, 12 Aug 2026 22:03:38 GMT",
+      "summary": "AI incidents do not wait for the perfect meeting. A playbook matters only if people can execute it under pressure. A tabletop exercise turns “we have a process” into evidence. In Post 10 of Level Up Your AI Governance, use a realistic scenario: harmful output, data exposure, mode",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI governance breaks at handoffs: each function sees only part of the risk. Enterprise roundtables connect those views through sha...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-breaks-at-handoffs-each-function-activity-7493426892960792576-c0qV",
+      "date": "Wed, 12 Aug 2026 22:03:12 GMT",
+      "summary": "AI governance breaks at handoffs: each function sees only part of the risk. Enterprise roundtables connect those views through shared evidence, accountable owners, and production-ready decisions. 2/16 • Level Up Your AI Governance THREE-YES TEST □ Make it Safe. □ Make it Complian",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Deploying an AI model is only the starting line. Without continuous training and rigorous post-deployment validation, even the mos...",
+      "link": "https://www.linkedin.com/posts/bobrapp_deploying-an-ai-model-is-only-the-starting-activity-7493426682922553345-lHR3",
+      "date": "Wed, 12 Aug 2026 22:02:22 GMT",
+      "summary": "Deploying an AI model is only the starting line. Without continuous training and rigorous post-deployment validation, even the most robust systems drift into bias, hallucinations, and compliance failures. Checklist: Continuous Validation & Post-Deployment - Establish automated dr",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Educators at the NCW AI Camp are moving beyond just testing tools—they are building the rules. Problem: Many educational instituti...",
+      "link": "https://www.linkedin.com/posts/bobrapp_educators-at-the-ncw-ai-camp-are-moving-beyond-activity-7493426274451947520-uOcx",
+      "date": "Wed, 12 Aug 2026 22:00:45 GMT",
+      "summary": "Educators at the NCW AI Camp are moving beyond just testing tools—they are building the rules. Problem: Many educational institutions fall into the \"tool trap,\" deploying AI apps without a central governance strategy. This fragmented approach creates massive compliance gaps and s",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "🛒 Personalization Without Governance Is a Risk / 没有治理的个性化是一种风险 Problem / 问题: Conversion-first recommendation and pricing engines c...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-retailai-ecommerce-activity-7493351166785912832-tF3K",
@@ -40,49 +80,57 @@
       "summary": "Accuracy is not governance. An opaque correlation can deny coverage—and create fairness, regulatory, and reputational risk. ENGLISH Problem: Unvalidated or discriminatory proxies can shape underwriting. Solutions: Document data and logic; test group impact; explain adverse decisi",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "Vetting third-party AI vendors requires evaluating algorithmic transparency, data provenance, and bias. Join our 'Level Up Your AI...",
-      "link": "https://www.linkedin.com/posts/bobrapp_vetting-third-party-ai-vendors-requires-evaluating-activity-7493064393241419776-2UQi",
-      "date": "Tue, 11 Aug 2026 22:02:46 GMT",
-      "summary": "Vetting third-party AI vendors requires evaluating algorithmic transparency, data provenance, and bias. Join our 'Level Up Your AI Governance' campaign. Subscribe to our Luma calendar at to save your spot! Checklist - AI Vendor Risk: 1. Audit third-party",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: Unchecked Generative AI and LLM deployments expose organizations to severe hallucination risks, IP violations, and regula...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-unchecked-generative-ai-and-llm-activity-7493064294134145024-GjZg",
-      "date": "Tue, 11 Aug 2026 22:02:22 GMT",
-      "summary": "Problem: Unchecked Generative AI and LLM deployments expose organizations to severe hallucination risks, IP violations, and regulatory non-compliance. Solutions: Implement structured governance-as-code frameworks, establish multi-tiered oversight models, and audit training datase",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "PROBLEM An AI system can be accurate—and still be unsafe, unfair, or impossible to challenge. If people cannot understand how an o...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-an-ai-system-can-be-accurateand-activity-7493064145672585217-1vUT",
-      "date": "Tue, 11 Aug 2026 22:01:47 GMT",
-      "summary": "PROBLEM An AI system can be accurate—and still be unsafe, unfair, or impossible to challenge. If people cannot understand how an outcome was reached, “trust” becomes a marketing claim. SOLUTIONS Use an Algorithmic Impact Assessment before deployment: identify affected groups, for",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "🧑‍💼 Fair Hiring Starts With AI Governance / निष्पक्ष भर्ती AI शासन से शुरू होती है [EN] Problem: Historical data can encode bias, rejecting qual...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-hrtech-ethicalai-activity-7492988873237504000-lotz",
-      "date": "Tue, 11 Aug 2026 17:02:40 GMT",
-      "summary": "🧑‍💼 Fair Hiring Starts With AI Governance / निष्पक्ष भर्ती AI शासन से शुरू होती है [EN] Problem: Historical data can encode bias, rejecting qualified candidates without explanation. Solutions: Audit subgroup outcomes; log provenance, labels and changes; keep humans accountable; r",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "When an AI system fails or drifts into unintended behavior, waiting for a committee review is not an option. You need rigorous AI...",
-      "link": "https://www.linkedin.com/posts/bobrapp_when-an-ai-system-fails-or-drifts-into-unintended-activity-7492928961463709696-LtIk",
-      "date": "Tue, 11 Aug 2026 13:04:36 GMT",
-      "summary": "When an AI system fails or drifts into unintended behavior, waiting for a committee review is not an option. You need rigorous AI Incident Response Playbooks. 🐾 EN: AI governance without an incident response plan is like navigating without a compass. Discover how to build robust,",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "Enterprise AI Summit — Charlotte, NC · Oct 7–8, 2026",
+      "link": "https://www.linkedin.com/posts/realgenekim_enterprise-ai-summit-charlotte-nc-oct-activity-7493456862709981184-SpeK",
+      "date": "Thu, 13 Aug 2026 00:02:18 GMT",
+      "summary": "Some of you may know that this weekend, swyx of Latent Space and AI Engineer fame, announced his “Kill My SaaS in one weekend” contest, where you could win $10K to replace his $40K/year SaaS. On Saturday morning, I learned that it was to replace their conference CFP software. OMG",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "AI governance breaks at handoffs: each function sees only part of the risk.\n\nEnterprise roundtables connect those views through shared evidence, accountable owners, and production-ready…",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-breaks-at-handoffs-each-function-activity-7493426892960792576-c0qV",
+      "date": "Wed, 12 Aug 2026 22:03:12 GMT",
+      "summary": "AI governance breaks at handoffs: each function sees only part of the risk. Enterprise roundtables connect those views through shared evidence, accountable owners, and production-ready decisions. 2/16 • Level Up Your AI Governance THREE-YES TEST □ Make it Safe. □ Make it Complian",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Educators at the NCW AI Camp are moving beyond just testing tools—they are building the rules.\n\nProblem: Many educational institutions fall into the \"tool trap,\" deploying AI apps without a central…",
+      "link": "https://www.linkedin.com/posts/bobrapp_educators-at-the-ncw-ai-camp-are-moving-beyond-activity-7493426274451947520-uOcx",
+      "date": "Wed, 12 Aug 2026 22:00:45 GMT",
+      "summary": "Educators at the NCW AI Camp are moving beyond just testing tools—they are building the rules. Problem: Many educational institutions fall into the \"tool trap,\" deploying AI apps without a central governance strategy. This fragmented approach creates massive compliance gaps and s",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "The Seattle In Person event has filled but there is still room to join us online.",
+      "link": "https://www.linkedin.com/posts/rkjohnston_aigovops-devops-rai-activity-7493411448577220608-mFPm",
+      "date": "Wed, 12 Aug 2026 21:01:50 GMT",
+      "summary": "The Seattle In Person event has filled but there is still room to join us online. AiGovOps Foundation, OneSixOne Ventures, Pablo Casilimas, #AiGovOps #DevOps, #RAI #ResponsibleAI #AIGovernance",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "You know who's not freaking out over the watermarking in #Claude?",
+      "link": "https://www.linkedin.com/posts/dsmontague_claude-ai-activity-7493351686187552768-pRgT",
+      "date": "Wed, 12 Aug 2026 17:04:22 GMT",
+      "summary": "You know who's not freaking out over the watermarking in #Claude? This guy. Why? Because I don't use #AI to create my content. I do it the old-fashioned way, sitting at my keyboard and staring at a blank white screen asking the Lord above to unlock my brain and help know what to",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Shout-out to the startup founders who shared what they are building at our latest Founder Showcase! We love hosting these events at AI House as a way for founders to build connections with other…",
+      "link": "https://www.linkedin.com/posts/aihouse_shout-out-to-the-startup-founders-who-shared-activity-7493066366464217088-E6vp",
+      "date": "Tue, 11 Aug 2026 22:10:36 GMT",
+      "summary": "Shout-out to the startup founders who shared what they are building at our latest Founder Showcase! We love hosting these events at AI House as a way for founders to build connections with other entrepreneurs, demo in front of a group, and get feedback. There is so much talent in",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "Wow. This has been one of the craziest few weeks of my life.\n\nI got the honor of traveling all around the country for the Anthropic Hard Conversations campaign.\n\nThis last Saturday I pulled a 21-hour… | AJ Green",
       "link": "https://www.linkedin.com/posts/aj-green-ai_wow-this-has-been-one-of-the-craziest-few-activity-7493008610193649664-ZvN1",
@@ -104,46 +152,6 @@
       "link": "https://www.linkedin.com/posts/rkjohnston_cant-wait-for-tomorrow-activity-7492726025945174016-Nj3q",
       "date": "Mon, 10 Aug 2026 23:38:13 GMT",
       "summary": "Can't wait for tomorrow.",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "The gap between AI theory and real-world classroom implementation is wide. On August 11, we bridge it at the NCW AI in Action Camp. Join 35 hands-on mini-camps focused on \"Cool Tools. Cool Schools.\"…",
-      "link": "https://www.linkedin.com/posts/bobrapp_the-gap-between-ai-theory-and-real-world-activity-7492701935129604096-8C56",
-      "date": "Mon, 10 Aug 2026 22:02:29 GMT",
-      "summary": "The gap between AI theory and real-world classroom implementation is wide. On August 11, we bridge it at the NCW AI in Action Camp. Join 35 hands-on mini-camps focused on \"Cool Tools. Cool Schools.\" This is your final call to move beyond talk and start building practical, ethical",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Governing open-source AI deployments and third-party weights presents a unique challenge in transparency and risk management. Problem: Unverified open-source models introduce hidden vulnerabilities…",
-      "link": "https://www.linkedin.com/posts/bobrapp_governing-open-source-ai-deployments-and-activity-7492701750903177217-16X0",
-      "date": "Mon, 10 Aug 2026 22:01:45 GMT",
-      "summary": "Governing open-source AI deployments and third-party weights presents a unique challenge in transparency and risk management. Problem: Unverified open-source models introduce hidden vulnerabilities and compliance risks. Solutions: Implement robust third-party weight auditing and",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Founder Spotlight Series Part 2! 🔦🔍\n\nToday we are highlighting Danielle Dantche the CEO & Founder of Suede!",
-      "link": "https://www.linkedin.com/posts/aihouse_founder-spotlight-series-part-2-today-activity-7492655792890994688-TaJ9",
-      "date": "Mon, 10 Aug 2026 18:59:08 GMT",
-      "summary": "",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "New Cars, Used Cars, Car Dealers, Prices & Reviews | Cars.com",
-      "link": "https://www.linkedin.com/posts/tom-mereckis-6651562_new-cars-used-cars-car-dealers-prices-activity-7492654843757694976-VgtL",
-      "date": "Mon, 10 Aug 2026 18:55:22 GMT",
-      "summary": "My company, Cars Commerce (cars.com and much more) is newly hiring a CISO. No JD yet; just getting this out there early. Reply directly to me with interest. No recruiters please. Thanks!",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Transform's most powerful insights don't stay on the mainstage.",
-      "link": "https://www.linkedin.com/posts/hr-transform_behindthekeynote-jonlevy-teamintelligence-activity-7492611658889179136-xuJm",
-      "date": "Mon, 10 Aug 2026 16:03:45 GMT",
-      "summary": "Transform's most powerful insights don't stay on the mainstage. Behind the Keynote is our editorial series turning our biggest event conversations into year-round learning. Next up: Jon Levy, Founder & Chief Scientist of Influencers In this exclusive interview, Jon explains why i",
       "image": null,
       "author": "Ken Johnston"
     }
