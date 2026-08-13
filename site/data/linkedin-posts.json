@@ -1,6 +1,38 @@
 {
-  "updated": "2026-08-13T07:30:14Z",
+  "updated": "2026-08-13T19:23:58Z",
   "bob": [
+    {
+      "title": "#AIGovernance #SmartGrid #EnergyAI ⚡ Smart-grid AI is energy security—not a checkbox. / L’IA des réseaux intelligents est la sécur...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-smartgrid-energyai-activity-7493713908051005441-mzGs",
+      "date": "Thu, 13 Aug 2026 17:03:42 GMT",
+      "summary": "#AIGovernance #SmartGrid #EnergyAI ⚡ Smart-grid AI is energy security—not a checkbox. / L’IA des réseaux intelligents est la sécurité énergétique—pas une case. PROBLEM / PROBLÈME AI can fail or be compromised in generation, load balancing and stability: outages, damage and safety",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: Black-box AI systems hide critical logic, exposing organizations to undetected bias, privacy violations, and regulatory p...",
+      "link": "https://fr.linkedin.com/posts/bobrapp_problem-black-box-ai-systems-hide-critical-activity-7493654083317227520-jOkj",
+      "date": "Thu, 13 Aug 2026 13:05:59 GMT",
+      "summary": "Problem: Black-box AI systems hide critical logic, exposing organizations to undetected bias, privacy violations, and regulatory penalties under frameworks like the EU AI Act ( Solutions: Implement transparent explainability and structured governance fra",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Open-source AI is not governance-free AI. Problem: “Open” ≠ “trusted.” Third-party weights may have unclear provenance, licensing,...",
+      "link": "https://www.linkedin.com/posts/bobrapp_open-source-ai-is-not-governance-free-ai-activity-7493653958796808192-Vuyd",
+      "date": "Thu, 13 Aug 2026 13:05:29 GMT",
+      "summary": "Open-source AI is not governance-free AI. Problem: “Open” ≠ “trusted.” Third-party weights may have unclear provenance, licensing, evaluation, or change history. Solutions: Verify source and license. Pin artifact + hash. Record use limits, tests, controls, monitoring, rollback, a",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Clinical AI should never be governed from a slide deck alone. Healthcare meetups turn policy into practice. Clinicians, patients,...",
+      "link": "https://www.linkedin.com/posts/bobrapp_clinical-ai-should-never-be-governed-from-activity-7493653889188134912-sn26",
+      "date": "Thu, 13 Aug 2026 13:05:13 GMT",
+      "summary": "Clinical AI should never be governed from a slide deck alone. Healthcare meetups turn policy into practice. Clinicians, patients, compliance, safety, and technical teams can challenge clinical decision-support assumptions before deployment. Problem: A model can be accurate yet un",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "🏭 Industrial AI needs governance at the edge. الذكاء الاصطناعي الصناعي يحتاج إلى حوكمة عند الحافة. #AIGovernance #Manufacturing #I...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-manufacturing-industrialai-activity-7493441620751699968-WqQa",
@@ -48,41 +80,49 @@
       "summary": "🛒 Personalization Without Governance Is a Risk / 没有治理的个性化是一种风险 Problem / 问题: Conversion-first recommendation and pricing engines can exploit vulnerability, create unfair price differences, and erode trust. Solutions / 解决方案: Set ethical boundaries; audit fairness and explainabilit",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "Leadership is where AI governance becomes real—or theatre. PROBLEM No owner, evidence, or stop authority? That is not governance....",
-      "link": "https://www.linkedin.com/posts/bobrapp_leadership-is-where-ai-governance-becomes-activity-7493291745238077440-I2xm",
-      "date": "Wed, 12 Aug 2026 13:06:11 GMT",
-      "summary": "Leadership is where AI governance becomes real—or theatre. PROBLEM No owner, evidence, or stop authority? That is not governance. SOLUTION Use the Three-Yes Test: Safe per NIST AI RMF—map risks and controls. Compliant per EU AI Act—assess use, roles, evidence, and oversight. Pro-",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Audit panic is usually a data problem—not an audit problem. ENGLISH PROBLEM When evidence lives in emails, spreadsheets, and memor...",
-      "link": "https://fr.linkedin.com/posts/bobrapp_audit-panic-is-usually-a-data-problemnot-activity-7493291643391979520--Arr",
-      "date": "Wed, 12 Aug 2026 13:05:46 GMT",
-      "summary": "Audit panic is usually a data problem—not an audit problem. ENGLISH PROBLEM When evidence lives in emails, spreadsheets, and memory, regulatory reporting becomes slow and fragile. SOLUTIONS Build continuous evidence collection. For every material AI decision, capture: • Data prov",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Assessing organizational readiness for AI deployment is no longer optional. Where does your maturity stand? Problem: Ad-hoc AI ado...",
-      "link": "https://www.linkedin.com/posts/bobrapp_assessing-organizational-readiness-for-ai-activity-7493291394070073344-i1y7",
-      "date": "Wed, 12 Aug 2026 13:04:47 GMT",
-      "summary": "Assessing organizational readiness for AI deployment is no longer optional. Where does your maturity stand? Problem: Ad-hoc AI adoption without governance leads to massive compliance risks and fragmented safety oversight. Solution: Utilize structured AI Governance Maturity Framew",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Accuracy is not governance. An opaque correlation can deny coverage—and create fairness, regulatory, and reputational risk. ENGLIS...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-insurtech-underwriting-activity-7493079236635885569-RJN2",
-      "date": "Tue, 11 Aug 2026 23:01:45 GMT",
-      "summary": "Accuracy is not governance. An opaque correlation can deny coverage—and create fairness, regulatory, and reputational risk. ENGLISH Problem: Unvalidated or discriminatory proxies can shape underwriting. Solutions: Document data and logic; test group impact; explain adverse decisi",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "Since becoming a farmer, I've picked up a new obsession: honey bees.\n\nAmazing creatures — and we humans can't live without them.\n\nLast summer I signed up for what I like to call \"Bees as a Service.\"…",
+      "link": "https://www.linkedin.com/posts/joy-chik_since-becoming-a-farmer-ive-picked-up-a-activity-7493682884608720896-q1yv",
+      "date": "Thu, 13 Aug 2026 15:00:26 GMT",
+      "summary": "Since becoming a farmer, I've picked up a new obsession: honey bees. Amazing creatures — and we humans can't live without them. Last summer I signed up for what I like to call \"Bees as a Service.\" Two backyard hives, installed and managed by a local beekeeper. These are the defin",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "#ai #aiagents #agenticai #aiengineering #observability #aisecurity… | Seattle Data AI & Security",
+      "link": "https://www.linkedin.com/posts/seattle-data-ai-and-security_ai-aiagents-agenticai-activity-7493682856796356608-grJ6",
+      "date": "Thu, 13 Aug 2026 15:00:19 GMT",
+      "summary": "𝗪𝗵𝗮𝘁 𝗮𝗻 𝗶𝗻𝗰𝗿𝗲𝗱𝗶𝗯𝗹𝗲 𝗲𝘃𝗲𝗻𝗶𝗻𝗴 𝗮𝘁 𝗦𝗲𝗮𝘁𝘁𝗹𝗲 𝗗𝗮𝘁𝗮, 𝗔𝗜 & 𝗦𝗲𝗰𝘂𝗿𝗶𝘁𝘆! Over 𝟭𝟬𝟬+ 𝗽𝗿𝗼𝗳𝗲𝘀𝘀𝗶𝗼𝗻𝗮𝗹𝘀, leaders, students, and innovators joined us at Bellevue City Hall for an evening of insightful conversations around AI Agents in Production - from autonomous observability and agent evaluation to",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Problem: Black-box AI systems hide critical logic, exposing organizations to undetected bias, privacy violations, and regulatory penalties under frameworks like the EU AI Act…",
+      "link": "https://fr.linkedin.com/posts/bobrapp_problem-black-box-ai-systems-hide-critical-activity-7493654083317227520-jOkj",
+      "date": "Thu, 13 Aug 2026 13:05:59 GMT",
+      "summary": "Problem: Black-box AI systems hide critical logic, exposing organizations to undetected bias, privacy violations, and regulatory penalties under frameworks like the EU AI Act ( Solutions: Implement transparent explainability and structured governance fra",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Clinical AI should never be governed from a slide deck alone.\n\nHealthcare meetups turn policy into practice. Clinicians, patients, compliance, safety, and technical teams can challenge clinical…",
+      "link": "https://www.linkedin.com/posts/bobrapp_clinical-ai-should-never-be-governed-from-activity-7493653889188134912-sn26",
+      "date": "Thu, 13 Aug 2026 13:05:12 GMT",
+      "summary": "Clinical AI should never be governed from a slide deck alone. Healthcare meetups turn policy into practice. Clinicians, patients, compliance, safety, and technical teams can challenge clinical decision-support assumptions before deployment. Problem: A model can be accurate yet un",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "\"Should I do it?\" she asked.\n\nMy only question back: \"Will it bring you joy?\"\n\nThe local Alaska coffee shop offered her $15 an hour to bake pastries.\n\nShe's been wanting to get back to some kind of… | Nick Mann",
+      "link": "https://www.linkedin.com/posts/nick-mann-coach_should-i-do-it-she-asked-my-only-question-activity-7493648824763043840-Lr9a",
+      "date": "Thu, 13 Aug 2026 12:45:05 GMT",
+      "summary": "\"Should I do it?\" she asked. My only question back: \"Will it bring you joy?\" The local Alaska coffee shop offered her $15 an hour to bake pastries. She's been wanting to get back to some kind of work now that our daughter is almost 3. She couldn't imagine going back into the insu",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "Enterprise AI Summit — Charlotte, NC · Oct 7–8, 2026",
       "link": "https://www.linkedin.com/posts/realgenekim_enterprise-ai-summit-charlotte-nc-oct-activity-7493456862709981184-SpeK",
@@ -120,38 +160,6 @@
       "link": "https://www.linkedin.com/posts/dsmontague_claude-ai-activity-7493351686187552768-pRgT",
       "date": "Wed, 12 Aug 2026 17:04:22 GMT",
       "summary": "You know who's not freaking out over the watermarking in #Claude? This guy. Why? Because I don't use #AI to create my content. I do it the old-fashioned way, sitting at my keyboard and staring at a blank white screen asking the Lord above to unlock my brain and help know what to",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Shout-out to the startup founders who shared what they are building at our latest Founder Showcase! We love hosting these events at AI House as a way for founders to build connections with other…",
-      "link": "https://www.linkedin.com/posts/aihouse_shout-out-to-the-startup-founders-who-shared-activity-7493066366464217088-E6vp",
-      "date": "Tue, 11 Aug 2026 22:10:36 GMT",
-      "summary": "Shout-out to the startup founders who shared what they are building at our latest Founder Showcase! We love hosting these events at AI House as a way for founders to build connections with other entrepreneurs, demo in front of a group, and get feedback. There is so much talent in",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Wow. This has been one of the craziest few weeks of my life.\n\nI got the honor of traveling all around the country for the Anthropic Hard Conversations campaign.\n\nThis last Saturday I pulled a 21-hour… | AJ Green",
-      "link": "https://www.linkedin.com/posts/aj-green-ai_wow-this-has-been-one-of-the-craziest-few-activity-7493008610193649664-ZvN1",
-      "date": "Tue, 11 Aug 2026 18:21:06 GMT",
-      "summary": "Wow. This has been one of the craziest few weeks of my life. I got the honor of traveling all around the country for the Anthropic Hard Conversations campaign. This last Saturday I pulled a 21-hour day. 3am out the door to fly to SF. Hosted a hackathon at 10am at Unlimit's new of",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "At the recent CDOIQ Program 2026 Conference, I had the most AMAZING time talking, laughing, debating, conspiring and simply connecting!\n\nSincerely appreciate the chat with Arvind Murali M.B.A., M.S…",
-      "link": "https://www.linkedin.com/posts/leighfelton_at-the-recent-cdoiq-program-2026-conference-activity-7492969935699083264-OmPj",
-      "date": "Tue, 11 Aug 2026 15:47:25 GMT",
-      "summary": "At the recent CDOIQ Program 2026 Conference, I had the most AMAZING time talking, laughing, debating, conspiring and simply connecting! Sincerely appreciate the chat with Arvind Murali M.B.A., M.S, highlighting the work of the AI for Job Security Foundation, and the mission to em",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Can't wait for tomorrow.",
-      "link": "https://www.linkedin.com/posts/rkjohnston_cant-wait-for-tomorrow-activity-7492726025945174016-Nj3q",
-      "date": "Mon, 10 Aug 2026 23:38:13 GMT",
-      "summary": "Can't wait for tomorrow.",
       "image": null,
       "author": "Ken Johnston"
     }
