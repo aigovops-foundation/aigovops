@@ -1,6 +1,38 @@
 {
-  "updated": "2026-08-13T19:23:58Z",
+  "updated": "2026-08-14T07:30:45Z",
   "bob": [
+    {
+      "title": "Leadership accountability is a release gate—not a slogan. DAY 1 — FOUNDERS FORUM Run the Three-Yes Test before approval: SAFE: Nam...",
+      "link": "https://fr.linkedin.com/posts/bobrapp_leadership-accountability-is-a-release-gatenot-activity-7493909468292771840-BPNJ",
+      "date": "Fri, 14 Aug 2026 06:00:47 GMT",
+      "summary": "Leadership accountability is a release gate—not a slogan. DAY 1 — FOUNDERS FORUM Run the Three-Yes Test before approval: SAFE: Name harms, owners, and tests. COMPLIANT: Map obligations to evidence. PRO-HUMANITY: Define beneficiaries and a right to say no. SHIP GOOD AI • Assign on",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Resilient supply chains need AI governance. / लचीली आपूर्ति श्रृंखलाओं के लिए AI शासन आवश्यक है। Problem / समस्या: AI routing, inventory, and procu...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-supplychain-logistics-activity-7493804257209458688-KTMa",
+      "date": "Thu, 13 Aug 2026 23:02:43 GMT",
+      "summary": "Resilient supply chains need AI governance. / लचीली आपूर्ति श्रृंखलाओं के लिए AI शासन आवश्यक है। Problem / समस्या: AI routing, inventory, and procurement can fail during geopolitical, weather, or supplier shocks when trained on rigid history. / कठोर ऐतिहासिक डेटा पर प्रशिक्षित AI",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "After-hours conversations are not “just networking.” They are where governance becomes practical: the candid failure story, the ha...",
+      "link": "https://www.linkedin.com/posts/bobrapp_after-hours-conversations-are-not-just-networking-activity-7493789404566732800-JpXK",
+      "date": "Thu, 13 Aug 2026 22:03:42 GMT",
+      "summary": "After-hours conversations are not “just networking.” They are where governance becomes practical: the candid failure story, the hallway question, and the introduction to someone solving the same problem in another jurisdiction. Join Post 4/16: After Hours Networking & Informal Re",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "A board resolution can authorize responsible AI. It cannot operate it. PROBLEM Policies stop at principles; teams still lack owner...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-board-resolution-can-authorize-responsible-activity-7493789239025913856-Cc31",
+      "date": "Thu, 13 Aug 2026 22:03:02 GMT",
+      "summary": "A board resolution can authorize responsible AI. It cannot operate it. PROBLEM Policies stop at principles; teams still lack owners, evidence rules, escalation paths, and release gates. SOLUTIONS Use a traceable chain: Board resolution → owner → risk thresholds → controls → playb",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "#AIGovernance #SmartGrid #EnergyAI ⚡ Smart-grid AI is energy security—not a checkbox. / L’IA des réseaux intelligents est la sécur...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-smartgrid-energyai-activity-7493713908051005441-mzGs",
@@ -48,41 +80,33 @@
       "summary": "AI incidents do not wait for the perfect meeting. A playbook matters only if people can execute it under pressure. A tabletop exercise turns “we have a process” into evidence. In Post 10 of Level Up Your AI Governance, use a realistic scenario: harmful output, data exposure, mode",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "AI governance breaks at handoffs: each function sees only part of the risk. Enterprise roundtables connect those views through sha...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-breaks-at-handoffs-each-function-activity-7493426892960792576-c0qV",
-      "date": "Wed, 12 Aug 2026 22:03:12 GMT",
-      "summary": "AI governance breaks at handoffs: each function sees only part of the risk. Enterprise roundtables connect those views through shared evidence, accountable owners, and production-ready decisions. 2/16 • Level Up Your AI Governance THREE-YES TEST □ Make it Safe. □ Make it Complian",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Deploying an AI model is only the starting line. Without continuous training and rigorous post-deployment validation, even the mos...",
-      "link": "https://www.linkedin.com/posts/bobrapp_deploying-an-ai-model-is-only-the-starting-activity-7493426682922553345-lHR3",
-      "date": "Wed, 12 Aug 2026 22:02:22 GMT",
-      "summary": "Deploying an AI model is only the starting line. Without continuous training and rigorous post-deployment validation, even the most robust systems drift into bias, hallucinations, and compliance failures. Checklist: Continuous Validation & Post-Deployment - Establish automated dr",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Educators at the NCW AI Camp are moving beyond just testing tools—they are building the rules. Problem: Many educational instituti...",
-      "link": "https://www.linkedin.com/posts/bobrapp_educators-at-the-ncw-ai-camp-are-moving-beyond-activity-7493426274451947520-uOcx",
-      "date": "Wed, 12 Aug 2026 22:00:45 GMT",
-      "summary": "Educators at the NCW AI Camp are moving beyond just testing tools—they are building the rules. Problem: Many educational institutions fall into the \"tool trap,\" deploying AI apps without a central governance strategy. This fragmented approach creates massive compliance gaps and s",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "🛒 Personalization Without Governance Is a Risk / 没有治理的个性化是一种风险 Problem / 问题: Conversion-first recommendation and pricing engines c...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-retailai-ecommerce-activity-7493351166785912832-tF3K",
-      "date": "Wed, 12 Aug 2026 17:02:18 GMT",
-      "summary": "🛒 Personalization Without Governance Is a Risk / 没有治理的个性化是一种风险 Problem / 问题: Conversion-first recommendation and pricing engines can exploit vulnerability, create unfair price differences, and erode trust. Solutions / 解决方案: Set ethical boundaries; audit fairness and explainabilit",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "Check out my good friend and thought leader Jason Arbon along with Joe Colantonio as they talk about Testing and AI.\n\nI think about it this way.  We finally have developers generating tests with…",
+      "link": "https://www.linkedin.com/posts/rkjohnston_check-out-my-good-friend-and-thought-leader-activity-7493779637865537536--e_0",
+      "date": "Thu, 13 Aug 2026 21:24:53 GMT",
+      "summary": "Check out my good friend and thought leader Jason Arbon along with Joe Colantonio as they talk about Testing and AI. I think about it this way. We finally have developers generating tests with their code but they do it by simply vibe coding and then at the end write, \"Oh yeah and",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "AI works best when it starts with people, purpose, and a problem worth solving.\n\nThat was one of the biggest takeaways from the 2026 AI Expo.\n\nThis week, educators, small business owners, healthcare…",
+      "link": "https://www.linkedin.com/posts/ncwtechalliance_ai-works-best-when-it-starts-with-people-activity-7493733613134340096-6lJA",
+      "date": "Thu, 13 Aug 2026 18:22:00 GMT",
+      "summary": "AI works best when it starts with people, purpose, and a problem worth solving. That was one of the biggest takeaways from the 2026 AI Expo. This week, educators, small business owners, healthcare providers, technology leaders, nonprofits, government agencies, agriculture organiz",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Member #20 has officially joined The SWELL Incubator, and it’s the incredible Nicole Doyle!",
+      "link": "https://www.linkedin.com/posts/sally-revell_theswell-startupecosystem-womenentrepreneurs-activity-7493719857327169537-nqDQ",
+      "date": "Thu, 13 Aug 2026 17:27:21 GMT",
+      "summary": "Member #20 has officially joined The SWELL Incubator, and it’s the incredible Nicole Doyle! 🚀 Nicole is the definition of a startup powerhouse. Between founding Aspir (an AI-powered founder co-pilot) and running the Seattle Founder Institute (FI), she is an operator, mentor, and",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "Since becoming a farmer, I've picked up a new obsession: honey bees.\n\nAmazing creatures — and we humans can't live without them.\n\nLast summer I signed up for what I like to call \"Bees as a Service.\"…",
       "link": "https://www.linkedin.com/posts/joy-chik_since-becoming-a-farmer-ive-picked-up-a-activity-7493682884608720896-q1yv",
@@ -136,30 +160,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-breaks-at-handoffs-each-function-activity-7493426892960792576-c0qV",
       "date": "Wed, 12 Aug 2026 22:03:12 GMT",
       "summary": "AI governance breaks at handoffs: each function sees only part of the risk. Enterprise roundtables connect those views through shared evidence, accountable owners, and production-ready decisions. 2/16 • Level Up Your AI Governance THREE-YES TEST □ Make it Safe. □ Make it Complian",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Educators at the NCW AI Camp are moving beyond just testing tools—they are building the rules.\n\nProblem: Many educational institutions fall into the \"tool trap,\" deploying AI apps without a central…",
-      "link": "https://www.linkedin.com/posts/bobrapp_educators-at-the-ncw-ai-camp-are-moving-beyond-activity-7493426274451947520-uOcx",
-      "date": "Wed, 12 Aug 2026 22:00:45 GMT",
-      "summary": "Educators at the NCW AI Camp are moving beyond just testing tools—they are building the rules. Problem: Many educational institutions fall into the \"tool trap,\" deploying AI apps without a central governance strategy. This fragmented approach creates massive compliance gaps and s",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "The Seattle In Person event has filled but there is still room to join us online.",
-      "link": "https://www.linkedin.com/posts/rkjohnston_aigovops-devops-rai-activity-7493411448577220608-mFPm",
-      "date": "Wed, 12 Aug 2026 21:01:50 GMT",
-      "summary": "The Seattle In Person event has filled but there is still room to join us online. AiGovOps Foundation, OneSixOne Ventures, Pablo Casilimas, #AiGovOps #DevOps, #RAI #ResponsibleAI #AIGovernance",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "You know who's not freaking out over the watermarking in #Claude?",
-      "link": "https://www.linkedin.com/posts/dsmontague_claude-ai-activity-7493351686187552768-pRgT",
-      "date": "Wed, 12 Aug 2026 17:04:22 GMT",
-      "summary": "You know who's not freaking out over the watermarking in #Claude? This guy. Why? Because I don't use #AI to create my content. I do it the old-fashioned way, sitting at my keyboard and staring at a blank white screen asking the Lord above to unlock my brain and help know what to",
       "image": null,
       "author": "Ken Johnston"
     }
