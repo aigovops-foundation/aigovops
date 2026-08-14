@@ -1,6 +1,38 @@
 {
-  "updated": "2026-08-14T07:30:45Z",
+  "updated": "2026-08-14T19:21:02Z",
   "bob": [
+    {
+      "title": "🏙️ Smart city AI can optimize traffic, safety, zoning, and public resources. Without accountability, it can scale bias, privacy los...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-smartcity-urbanplanning-activity-7494076463680303104-uU_i",
+      "date": "Fri, 14 Aug 2026 17:04:22 GMT",
+      "summary": "🏙️ Smart city AI can optimize traffic, safety, zoning, and public resources. Without accountability, it can scale bias, privacy loss, and systemic failure. PROBLEM Urban AI affects rights and daily life. Opaque models are not neutral infrastructure. SOLUTIONS Assess civic and rig",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Day 2 | Enterprise Roundtables Silos make AI governance slow—and unsafe. Bring legal, security, product, data, engineering and pol...",
+      "link": "https://www.linkedin.com/posts/bobrapp_day-2-enterprise-roundtables-silos-make-activity-7494046028602667008-7tEM",
+      "date": "Fri, 14 Aug 2026 15:03:26 GMT",
+      "summary": "Day 2 | Enterprise Roundtables Silos make AI governance slow—and unsafe. Bring legal, security, product, data, engineering and policy into one room. Use one live use case to turn competing views into shared, testable controls. Three-Yes Test: Is it Safe? Compliant? Pro-Humanity?",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI governance is not a cost center. It is the operating system for capturing AI value without unmanaged risk. Problem Leadership h...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-is-not-a-cost-center-it-is-activity-7494016183051083776-c72R",
+      "date": "Fri, 14 Aug 2026 13:04:50 GMT",
+      "summary": "AI governance is not a cost center. It is the operating system for capturing AI value without unmanaged risk. Problem Leadership hears “governance” as delay when the business outcome is invisible. Solutions Make the case operational: • Tie controls to faster approvals, less rewor",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI governance cannot be globally responsible if learning is locally gated. Online meetups make practical governance accessible acr...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-cannot-be-globally-responsible-activity-7494015196428955648-xAOf",
+      "date": "Fri, 14 Aug 2026 13:00:55 GMT",
+      "summary": "AI governance cannot be globally responsible if learning is locally gated. Online meetups make practical governance accessible across time zones. Practitioners can compare controls, ask hard questions, and turn policy into repeatable action—without travel or one dominant perspect",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Leadership accountability is a release gate—not a slogan. DAY 1 — FOUNDERS FORUM Run the Three-Yes Test before approval: SAFE: Nam...",
       "link": "https://fr.linkedin.com/posts/bobrapp_leadership-accountability-is-a-release-gatenot-activity-7493909468292771840-BPNJ",
@@ -48,46 +80,70 @@
       "summary": "Problem: Black-box AI systems hide critical logic, exposing organizations to undetected bias, privacy violations, and regulatory penalties under frameworks like the EU AI Act ( Solutions: Implement transparent explainability and structured governance fra",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "Open-source AI is not governance-free AI. Problem: “Open” ≠ “trusted.” Third-party weights may have unclear provenance, licensing,...",
-      "link": "https://www.linkedin.com/posts/bobrapp_open-source-ai-is-not-governance-free-ai-activity-7493653958796808192-Vuyd",
-      "date": "Thu, 13 Aug 2026 13:05:29 GMT",
-      "summary": "Open-source AI is not governance-free AI. Problem: “Open” ≠ “trusted.” Third-party weights may have unclear provenance, licensing, evaluation, or change history. Solutions: Verify source and license. Pin artifact + hash. Record use limits, tests, controls, monitoring, rollback, a",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Clinical AI should never be governed from a slide deck alone. Healthcare meetups turn policy into practice. Clinicians, patients,...",
-      "link": "https://www.linkedin.com/posts/bobrapp_clinical-ai-should-never-be-governed-from-activity-7493653889188134912-sn26",
-      "date": "Thu, 13 Aug 2026 13:05:13 GMT",
-      "summary": "Clinical AI should never be governed from a slide deck alone. Healthcare meetups turn policy into practice. Clinicians, patients, compliance, safety, and technical teams can challenge clinical decision-support assumptions before deployment. Problem: A model can be accurate yet un",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "🏭 Industrial AI needs governance at the edge. الذكاء الاصطناعي الصناعي يحتاج إلى حوكمة عند الحافة. #AIGovernance #Manufacturing #I...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-manufacturing-industrialai-activity-7493441620751699968-WqQa",
-      "date": "Wed, 12 Aug 2026 23:01:44 GMT",
-      "summary": "🏭 Industrial AI needs governance at the edge. الذكاء الاصطناعي الصناعي يحتاج إلى حوكمة عند الحافة. #AIGovernance #Manufacturing #IndustrialAI #Industry40 #EUAIAct #ResponsibleAI ENGLISH Problem: Factory AI can fail from model drift, degraded sensors, or stale/biased data—with no",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI incidents do not wait for the perfect meeting. A playbook matters only if people can execute it under pressure. A tabletop exer...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-incidents-do-not-wait-for-the-perfect-activity-7493427001249325057-NEdt",
-      "date": "Wed, 12 Aug 2026 22:03:38 GMT",
-      "summary": "AI incidents do not wait for the perfect meeting. A playbook matters only if people can execute it under pressure. A tabletop exercise turns “we have a process” into evidence. In Post 10 of Level Up Your AI Governance, use a realistic scenario: harmful output, data exposure, mode",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "I love to learn and it was great to learn at the AI & Cybersecurity event hosted by OneSixOne Ventures and AiGovOps Foundation.\n\nGovernance is critical to the use, growth, and adoption of AI by…",
+      "link": "https://www.linkedin.com/posts/jgproduct_i-love-to-learn-and-it-was-great-to-learn-activity-7494093741927100418-emS0",
+      "date": "Fri, 14 Aug 2026 18:13:02 GMT",
+      "summary": "I love to learn and it was great to learn at the AI & Cybersecurity event hosted by OneSixOne Ventures and AiGovOps Foundation. Governance is critical to the use, growth, and adoption of AI by enterprises and corporations, as well as consumers. Cybersecurity has been slightly ove",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Wonderful evening spent with operators, investors, and founders in Belltown.  So much buzz on building the future.  The sky is the limit - it’s overwhelming.  Amazing that there is so much talent… | John Flemming",
+      "link": "https://www.linkedin.com/posts/john-flemming-bellevue-wa-representative-office-148b2610_wonderful-evening-spent-with-operators-investors-activity-7494049681426161664-AZ5Z",
+      "date": "Fri, 14 Aug 2026 15:17:57 GMT",
+      "summary": "Wonderful evening spent with operators, investors, and founders in Belltown. So much buzz on building the future. The sky is the limit - it’s overwhelming. Amazing that there is so much talent right here in the Seattle area building for companies HQ’d in other domiciles. CIBC Inn",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Day 2 | Enterprise Roundtables\n\nSilos make AI governance slow—and unsafe. Bring legal, security, product, data, engineering and policy into one room. Use one live use case to turn competing views…",
+      "link": "https://www.linkedin.com/posts/bobrapp_day-2-enterprise-roundtables-silos-make-activity-7494046028602667008-7tEM",
+      "date": "Fri, 14 Aug 2026 15:03:26 GMT",
+      "summary": "Day 2 | Enterprise Roundtables Silos make AI governance slow—and unsafe. Bring legal, security, product, data, engineering and policy into one room. Use one live use case to turn competing views into shared, testable controls. Three-Yes Test: Is it Safe? Compliant? Pro-Humanity?",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "What a fun and insightful discussion on the future of identity and cyber in the AI era.\n\nVanessa Pegueros served as CISO of DocuSign for nearly 6 years where she saw them grow revenue from…",
+      "link": "https://www.linkedin.com/posts/pablo-casilimas-1707a9113_what-a-fun-and-insightful-discussion-on-the-activity-7494045289851277313-U3Wd",
+      "date": "Fri, 14 Aug 2026 15:00:30 GMT",
+      "summary": "What a fun and insightful discussion on the future of identity and cyber in the AI era. Vanessa Pegueros served as CISO of DocuSign for nearly 6 years where she saw them grow revenue from $50m-$700m. Scott Roberts was previously CISO for Coinbase cloud & currently CISO at UiPath.",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "AI governance cannot be globally responsible if learning is locally gated.\n\nOnline meetups make practical governance accessible across time zones. Practitioners can compare controls, ask hard…",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-cannot-be-globally-responsible-activity-7494015196428955648-xAOf",
+      "date": "Fri, 14 Aug 2026 13:00:55 GMT",
+      "summary": "AI governance cannot be globally responsible if learning is locally gated. Online meetups make practical governance accessible across time zones. Practitioners can compare controls, ask hard questions, and turn policy into repeatable action—without travel or one dominant perspect",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "After-hours conversations are not “just networking.”\n\nThey are where governance becomes practical: the candid failure story, the hallway question, and the introduction to someone solving the same…",
+      "link": "https://www.linkedin.com/posts/bobrapp_after-hours-conversations-are-not-just-networking-activity-7493789404566732800-JpXK",
+      "date": "Thu, 13 Aug 2026 22:03:42 GMT",
+      "summary": "After-hours conversations are not “just networking.” They are where governance becomes practical: the candid failure story, the hallway question, and the introduction to someone solving the same problem in another jurisdiction. Join Post 4/16: After Hours Networking & Informal Re",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "Check out my good friend and thought leader Jason Arbon along with Joe Colantonio as they talk about Testing and AI.\n\nI think about it this way.  We finally have developers generating tests with…",
       "link": "https://www.linkedin.com/posts/rkjohnston_check-out-my-good-friend-and-thought-leader-activity-7493779637865537536--e_0",
       "date": "Thu, 13 Aug 2026 21:24:53 GMT",
       "summary": "Check out my good friend and thought leader Jason Arbon along with Joe Colantonio as they talk about Testing and AI. I think about it this way. We finally have developers generating tests with their code but they do it by simply vibe coding and then at the end write, \"Oh yeah and",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Kelly Wright grew Tableau's sales org from $0 to $850M, then ran GTM as President and COO at Gong. She joined us at AI House to talk go-to-market advice for founders. Some key takeaways:\n\n— AI is…",
+      "link": "https://www.linkedin.com/posts/aihouse_kelly-wright-grew-tableaus-sales-org-from-activity-7493752078666768384-XUCq",
+      "date": "Thu, 13 Aug 2026 19:35:23 GMT",
+      "summary": "Kelly Wright grew Tableau's sales org from $0 to $850M, then ran GTM as President and COO at Gong. She joined us at AI House to talk go-to-market advice for founders. Some key takeaways: — AI is leveling the playing field. Expertise, speed, even your codebase — all easier to copy",
       "image": null,
       "author": "Ken Johnston"
     },
@@ -104,62 +160,6 @@
       "link": "https://www.linkedin.com/posts/sally-revell_theswell-startupecosystem-womenentrepreneurs-activity-7493719857327169537-nqDQ",
       "date": "Thu, 13 Aug 2026 17:27:21 GMT",
       "summary": "Member #20 has officially joined The SWELL Incubator, and it’s the incredible Nicole Doyle! 🚀 Nicole is the definition of a startup powerhouse. Between founding Aspir (an AI-powered founder co-pilot) and running the Seattle Founder Institute (FI), she is an operator, mentor, and",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Since becoming a farmer, I've picked up a new obsession: honey bees.\n\nAmazing creatures — and we humans can't live without them.\n\nLast summer I signed up for what I like to call \"Bees as a Service.\"…",
-      "link": "https://www.linkedin.com/posts/joy-chik_since-becoming-a-farmer-ive-picked-up-a-activity-7493682884608720896-q1yv",
-      "date": "Thu, 13 Aug 2026 15:00:26 GMT",
-      "summary": "Since becoming a farmer, I've picked up a new obsession: honey bees. Amazing creatures — and we humans can't live without them. Last summer I signed up for what I like to call \"Bees as a Service.\" Two backyard hives, installed and managed by a local beekeeper. These are the defin",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "#ai #aiagents #agenticai #aiengineering #observability #aisecurity… | Seattle Data AI & Security",
-      "link": "https://www.linkedin.com/posts/seattle-data-ai-and-security_ai-aiagents-agenticai-activity-7493682856796356608-grJ6",
-      "date": "Thu, 13 Aug 2026 15:00:19 GMT",
-      "summary": "𝗪𝗵𝗮𝘁 𝗮𝗻 𝗶𝗻𝗰𝗿𝗲𝗱𝗶𝗯𝗹𝗲 𝗲𝘃𝗲𝗻𝗶𝗻𝗴 𝗮𝘁 𝗦𝗲𝗮𝘁𝘁𝗹𝗲 𝗗𝗮𝘁𝗮, 𝗔𝗜 & 𝗦𝗲𝗰𝘂𝗿𝗶𝘁𝘆! Over 𝟭𝟬𝟬+ 𝗽𝗿𝗼𝗳𝗲𝘀𝘀𝗶𝗼𝗻𝗮𝗹𝘀, leaders, students, and innovators joined us at Bellevue City Hall for an evening of insightful conversations around AI Agents in Production - from autonomous observability and agent evaluation to",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Problem: Black-box AI systems hide critical logic, exposing organizations to undetected bias, privacy violations, and regulatory penalties under frameworks like the EU AI Act…",
-      "link": "https://fr.linkedin.com/posts/bobrapp_problem-black-box-ai-systems-hide-critical-activity-7493654083317227520-jOkj",
-      "date": "Thu, 13 Aug 2026 13:05:59 GMT",
-      "summary": "Problem: Black-box AI systems hide critical logic, exposing organizations to undetected bias, privacy violations, and regulatory penalties under frameworks like the EU AI Act ( Solutions: Implement transparent explainability and structured governance fra",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Clinical AI should never be governed from a slide deck alone.\n\nHealthcare meetups turn policy into practice. Clinicians, patients, compliance, safety, and technical teams can challenge clinical…",
-      "link": "https://www.linkedin.com/posts/bobrapp_clinical-ai-should-never-be-governed-from-activity-7493653889188134912-sn26",
-      "date": "Thu, 13 Aug 2026 13:05:12 GMT",
-      "summary": "Clinical AI should never be governed from a slide deck alone. Healthcare meetups turn policy into practice. Clinicians, patients, compliance, safety, and technical teams can challenge clinical decision-support assumptions before deployment. Problem: A model can be accurate yet un",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "\"Should I do it?\" she asked.\n\nMy only question back: \"Will it bring you joy?\"\n\nThe local Alaska coffee shop offered her $15 an hour to bake pastries.\n\nShe's been wanting to get back to some kind of… | Nick Mann",
-      "link": "https://www.linkedin.com/posts/nick-mann-coach_should-i-do-it-she-asked-my-only-question-activity-7493648824763043840-Lr9a",
-      "date": "Thu, 13 Aug 2026 12:45:05 GMT",
-      "summary": "\"Should I do it?\" she asked. My only question back: \"Will it bring you joy?\" The local Alaska coffee shop offered her $15 an hour to bake pastries. She's been wanting to get back to some kind of work now that our daughter is almost 3. She couldn't imagine going back into the insu",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Enterprise AI Summit — Charlotte, NC · Oct 7–8, 2026",
-      "link": "https://www.linkedin.com/posts/realgenekim_enterprise-ai-summit-charlotte-nc-oct-activity-7493456862709981184-SpeK",
-      "date": "Thu, 13 Aug 2026 00:02:18 GMT",
-      "summary": "Some of you may know that this weekend, swyx of Latent Space and AI Engineer fame, announced his “Kill My SaaS in one weekend” contest, where you could win $10K to replace his $40K/year SaaS. On Saturday morning, I learned that it was to replace their conference CFP software. OMG",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "AI governance breaks at handoffs: each function sees only part of the risk.\n\nEnterprise roundtables connect those views through shared evidence, accountable owners, and production-ready…",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-breaks-at-handoffs-each-function-activity-7493426892960792576-c0qV",
-      "date": "Wed, 12 Aug 2026 22:03:12 GMT",
-      "summary": "AI governance breaks at handoffs: each function sees only part of the risk. Enterprise roundtables connect those views through shared evidence, accountable owners, and production-ready decisions. 2/16 • Level Up Your AI Governance THREE-YES TEST □ Make it Safe. □ Make it Complian",
       "image": null,
       "author": "Ken Johnston"
     }
