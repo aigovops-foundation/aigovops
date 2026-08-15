@@ -1,6 +1,46 @@
 {
-  "updated": "2026-08-14T19:21:02Z",
+  "updated": "2026-08-15T07:11:11Z",
   "bob": [
+    {
+      "title": "Clinical AI should sharpen clinical judgment—not replace it. Day 3 | Level Up Your AI Governance Healthcare Meetups connect clinic...",
+      "link": "https://www.linkedin.com/posts/bobrapp_clinical-ai-should-sharpen-clinical-judgmentnot-activity-7494272145133428736-Ordb",
+      "date": "Sat, 15 Aug 2026 06:01:56 GMT",
+      "summary": "Clinical AI should sharpen clinical judgment—not replace it. Day 3 | Level Up Your AI Governance Healthcare Meetups connect clinicians and governance practitioners to examine clinical AI decision support through evidence, context, patient safety, human oversight, and accountabili",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "An AI-generated score can follow a student long after the test ends. Governance must come first. EN Problem: AI proctoring, gradin...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-edtech-educationai-activity-7494166253801041920-2W8w",
+      "date": "Fri, 14 Aug 2026 23:01:10 GMT",
+      "summary": "An AI-generated score can follow a student long after the test ends. Governance must come first. EN Problem: AI proctoring, grading, and personalization can penalize neurodivergent students, misjudge performance, and expose minors’ data. Solutions: Audit subgroups; protect privac",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Opaque AI systems that fail to explain their decisions cause real-world harm, alienating communities and undermining regulatory tr...",
+      "link": "https://www.linkedin.com/posts/bobrapp_opaque-ai-systems-that-fail-to-explain-their-activity-7494151683090878464-9Ea2",
+      "date": "Fri, 14 Aug 2026 22:03:16 GMT",
+      "summary": "Opaque AI systems that fail to explain their decisions cause real-world harm, alienating communities and undermining regulatory trust. When algorithms act as black boxes, compliance officers and policy makers cannot verify fairness or prevent bias. To build accountable AI, organi",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Human-in-the-loop is not a checkbox. It is an operating design decision. PROBLEM A person added somewhere in the workflow does not...",
+      "link": "https://www.linkedin.com/posts/bobrapp_human-in-the-loop-is-not-a-checkbox-it-is-activity-7494151630456549376-Q9Az",
+      "date": "Fri, 14 Aug 2026 22:03:03 GMT",
+      "summary": "Human-in-the-loop is not a checkbox. It is an operating design decision. PROBLEM A person added somewhere in the workflow does not guarantee meaningful oversight. If the reviewer lacks authority, context, time, or a clear escalation path, the system is still effectively autonomou",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI governance maturity should be measurable—not assumed. Die Reife der KI-Governance sollte messbar sein",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-maturity-should-be-measurablenot-activity-7494151571568566272-b664",
+      "date": "Fri, 14 Aug 2026 22:02:49 GMT",
+      "summary": "AI governance maturity should be measurable—not assumed. Die Reife der KI-Governance sollte messbar sein – nicht vorausgesetzt. The Beacon Tool helps teams assess their current state, expose gaps, and agree on the next practical action. Das Beacon Tool hilft Teams, ihren aktuelle",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "🏙️ Smart city AI can optimize traffic, safety, zoning, and public resources. Without accountability, it can scale bias, privacy los...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-smartcity-urbanplanning-activity-7494076463680303104-uU_i",
@@ -40,54 +80,54 @@
       "summary": "Leadership accountability is a release gate—not a slogan. DAY 1 — FOUNDERS FORUM Run the Three-Yes Test before approval: SAFE: Name harms, owners, and tests. COMPLIANT: Map obligations to evidence. PRO-HUMANITY: Define beneficiaries and a right to say no. SHIP GOOD AI • Assign on",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "Resilient supply chains need AI governance. / लचीली आपूर्ति श्रृंखलाओं के लिए AI शासन आवश्यक है। Problem / समस्या: AI routing, inventory, and procu...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-supplychain-logistics-activity-7493804257209458688-KTMa",
-      "date": "Thu, 13 Aug 2026 23:02:43 GMT",
-      "summary": "Resilient supply chains need AI governance. / लचीली आपूर्ति श्रृंखलाओं के लिए AI शासन आवश्यक है। Problem / समस्या: AI routing, inventory, and procurement can fail during geopolitical, weather, or supplier shocks when trained on rigid history. / कठोर ऐतिहासिक डेटा पर प्रशिक्षित AI",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "After-hours conversations are not “just networking.” They are where governance becomes practical: the candid failure story, the ha...",
-      "link": "https://www.linkedin.com/posts/bobrapp_after-hours-conversations-are-not-just-networking-activity-7493789404566732800-JpXK",
-      "date": "Thu, 13 Aug 2026 22:03:42 GMT",
-      "summary": "After-hours conversations are not “just networking.” They are where governance becomes practical: the candid failure story, the hallway question, and the introduction to someone solving the same problem in another jurisdiction. Join Post 4/16: After Hours Networking & Informal Re",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "A board resolution can authorize responsible AI. It cannot operate it. PROBLEM Policies stop at principles; teams still lack owner...",
-      "link": "https://www.linkedin.com/posts/bobrapp_a-board-resolution-can-authorize-responsible-activity-7493789239025913856-Cc31",
-      "date": "Thu, 13 Aug 2026 22:03:02 GMT",
-      "summary": "A board resolution can authorize responsible AI. It cannot operate it. PROBLEM Policies stop at principles; teams still lack owners, evidence rules, escalation paths, and release gates. SOLUTIONS Use a traceable chain: Board resolution → owner → risk thresholds → controls → playb",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "#AIGovernance #SmartGrid #EnergyAI ⚡ Smart-grid AI is energy security—not a checkbox. / L’IA des réseaux intelligents est la sécur...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-smartgrid-energyai-activity-7493713908051005441-mzGs",
-      "date": "Thu, 13 Aug 2026 17:03:42 GMT",
-      "summary": "#AIGovernance #SmartGrid #EnergyAI ⚡ Smart-grid AI is energy security—not a checkbox. / L’IA des réseaux intelligents est la sécurité énergétique—pas une case. PROBLEM / PROBLÈME AI can fail or be compromised in generation, load balancing and stability: outages, damage and safety",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: Black-box AI systems hide critical logic, exposing organizations to undetected bias, privacy violations, and regulatory p...",
-      "link": "https://fr.linkedin.com/posts/bobrapp_problem-black-box-ai-systems-hide-critical-activity-7493654083317227520-jOkj",
-      "date": "Thu, 13 Aug 2026 13:05:59 GMT",
-      "summary": "Problem: Black-box AI systems hide critical logic, exposing organizations to undetected bias, privacy violations, and regulatory penalties under frameworks like the EU AI Act ( Solutions: Implement transparent explainability and structured governance fra",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "An AI-generated score can follow a student long after the test ends.",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-edtech-educationai-activity-7494166253801041920-2W8w",
+      "date": "Fri, 14 Aug 2026 23:01:10 GMT",
+      "summary": "An AI-generated score can follow a student long after the test ends. Governance must come first. EN Problem: AI proctoring, grading, and personalization can penalize neurodivergent students, misjudge performance, and expose minors’ data. Solutions: Audit subgroups; protect privac",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Pablo Casilimas, Bob R., and Christopher Kennamer did a great job hosting our fireside chats and panel.  Between online (yes we streamed) and in the room we had well over 100 people involved.…",
+      "link": "https://www.linkedin.com/posts/rkjohnston_pablo-casilimas-bob-r-and-christopher-activity-7494116371115442176-7pWx",
+      "date": "Fri, 14 Aug 2026 19:42:57 GMT",
+      "summary": "Pablo Casilimas, Bob R., and Christopher Kennamer did a great job hosting our fireside chats and panel. Between online (yes we streamed) and in the room we had well over 100 people involved. Thanks to Vanessa Pegueros, Scott Roberts, Chirag Shah and Jason Needham for being our gu",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "So many amazing people made it out to our joint event yesterday.  AiGovOps Foundation teamed up with OneSixOne Ventures to host an event on AI Cyber and Identity.\n\nA Great deal of conversation around…",
+      "link": "https://www.linkedin.com/posts/rkjohnston_so-many-amazing-people-made-it-out-to-our-activity-7494115210501451776-s-0W",
+      "date": "Fri, 14 Aug 2026 19:38:20 GMT",
+      "summary": "So many amazing people made it out to our joint event yesterday. AiGovOps Foundation teamed up with OneSixOne Ventures to host an event on AI Cyber and Identity. A Great deal of conversation around how the heck do you control those agents that seem to keep wanting to break free.",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "I love to learn and it was great to learn at the AI & Cybersecurity event hosted by OneSixOne Ventures and AiGovOps Foundation.\n\nGovernance is critical to the use, growth, and adoption of AI by…",
       "link": "https://www.linkedin.com/posts/jgproduct_i-love-to-learn-and-it-was-great-to-learn-activity-7494093741927100418-emS0",
       "date": "Fri, 14 Aug 2026 18:13:02 GMT",
       "summary": "I love to learn and it was great to learn at the AI & Cybersecurity event hosted by OneSixOne Ventures and AiGovOps Foundation. Governance is critical to the use, growth, and adoption of AI by enterprises and corporations, as well as consumers. Cybersecurity has been slightly ove",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "🏙️ Smart city AI can optimize traffic, safety, zoning, and public resources.",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovernance-smartcity-urbanplanning-activity-7494076463680303104-uU_i",
+      "date": "Fri, 14 Aug 2026 17:04:22 GMT",
+      "summary": "🏙️ Smart city AI can optimize traffic, safety, zoning, and public resources. Without accountability, it can scale bias, privacy loss, and systemic failure. PROBLEM Urban AI affects rights and daily life. Opaque models are not neutral infrastructure. SOLUTIONS Assess civic and rig",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "One of the most rewarding parts of building Casium is watching people early in their careers step into ownership.\n\nOur interns jumped in to solve real customer problems, removing friction that was…",
+      "link": "https://www.linkedin.com/posts/priyankakulkarni11_one-of-the-most-rewarding-parts-of-building-activity-7494064055456780288-wn4C",
+      "date": "Fri, 14 Aug 2026 16:15:04 GMT",
+      "summary": "One of the most rewarding parts of building Casium is watching people early in their careers step into ownership. Our interns jumped in to solve real customer problems, removing friction that was slowing people down. And during Seattle Tech Week at AI House, whenever someone was",
       "image": null,
       "author": "Ken Johnston"
     },
@@ -116,50 +156,10 @@
       "author": "Ken Johnston"
     },
     {
-      "title": "AI governance cannot be globally responsible if learning is locally gated.\n\nOnline meetups make practical governance accessible across time zones. Practitioners can compare controls, ask hard…",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-cannot-be-globally-responsible-activity-7494015196428955648-xAOf",
-      "date": "Fri, 14 Aug 2026 13:00:55 GMT",
-      "summary": "AI governance cannot be globally responsible if learning is locally gated. Online meetups make practical governance accessible across time zones. Practitioners can compare controls, ask hard questions, and turn policy into repeatable action—without travel or one dominant perspect",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "After-hours conversations are not “just networking.”\n\nThey are where governance becomes practical: the candid failure story, the hallway question, and the introduction to someone solving the same…",
-      "link": "https://www.linkedin.com/posts/bobrapp_after-hours-conversations-are-not-just-networking-activity-7493789404566732800-JpXK",
-      "date": "Thu, 13 Aug 2026 22:03:42 GMT",
-      "summary": "After-hours conversations are not “just networking.” They are where governance becomes practical: the candid failure story, the hallway question, and the introduction to someone solving the same problem in another jurisdiction. Join Post 4/16: After Hours Networking & Informal Re",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Check out my good friend and thought leader Jason Arbon along with Joe Colantonio as they talk about Testing and AI.\n\nI think about it this way.  We finally have developers generating tests with…",
-      "link": "https://www.linkedin.com/posts/rkjohnston_check-out-my-good-friend-and-thought-leader-activity-7493779637865537536--e_0",
-      "date": "Thu, 13 Aug 2026 21:24:53 GMT",
-      "summary": "Check out my good friend and thought leader Jason Arbon along with Joe Colantonio as they talk about Testing and AI. I think about it this way. We finally have developers generating tests with their code but they do it by simply vibe coding and then at the end write, \"Oh yeah and",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Kelly Wright grew Tableau's sales org from $0 to $850M, then ran GTM as President and COO at Gong. She joined us at AI House to talk go-to-market advice for founders. Some key takeaways:\n\n— AI is…",
-      "link": "https://www.linkedin.com/posts/aihouse_kelly-wright-grew-tableaus-sales-org-from-activity-7493752078666768384-XUCq",
-      "date": "Thu, 13 Aug 2026 19:35:23 GMT",
-      "summary": "Kelly Wright grew Tableau's sales org from $0 to $850M, then ran GTM as President and COO at Gong. She joined us at AI House to talk go-to-market advice for founders. Some key takeaways: — AI is leveling the playing field. Expertise, speed, even your codebase — all easier to copy",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "AI works best when it starts with people, purpose, and a problem worth solving.\n\nThat was one of the biggest takeaways from the 2026 AI Expo.\n\nThis week, educators, small business owners, healthcare…",
-      "link": "https://www.linkedin.com/posts/ncwtechalliance_ai-works-best-when-it-starts-with-people-activity-7493733613134340096-6lJA",
-      "date": "Thu, 13 Aug 2026 18:22:00 GMT",
-      "summary": "AI works best when it starts with people, purpose, and a problem worth solving. That was one of the biggest takeaways from the 2026 AI Expo. This week, educators, small business owners, healthcare providers, technology leaders, nonprofits, government agencies, agriculture organiz",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Member #20 has officially joined The SWELL Incubator, and it’s the incredible Nicole Doyle!",
-      "link": "https://www.linkedin.com/posts/sally-revell_theswell-startupecosystem-womenentrepreneurs-activity-7493719857327169537-nqDQ",
-      "date": "Thu, 13 Aug 2026 17:27:21 GMT",
-      "summary": "Member #20 has officially joined The SWELL Incubator, and it’s the incredible Nicole Doyle! 🚀 Nicole is the definition of a startup powerhouse. Between founding Aspir (an AI-powered founder co-pilot) and running the Seattle Founder Institute (FI), she is an operator, mentor, and",
+      "title": "I don’t take on more than 20 clients on the social side of my agency.\n\nAnd it’s very intentional.\n\nI recently had Lisa Woodruff, founder of Organize 365, on How We Profit. \n\nAnd her story hit WAY too… | Hala Taha",
+      "link": "https://www.linkedin.com/posts/htaha_i-dont-take-on-more-than-20-clients-on-the-activity-7494027897985347584-bWF3",
+      "date": "Fri, 14 Aug 2026 13:51:23 GMT",
+      "summary": "I don’t take on more than 20 clients on the social side of my agency. And it’s very intentional. I recently had Lisa Woodruff, founder of Organize 365, on How We Profit. And her story hit WAY too close to home because she learned the SAME lesson I did about service businesses the",
       "image": null,
       "author": "Ken Johnston"
     }
