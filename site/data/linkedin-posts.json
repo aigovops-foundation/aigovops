@@ -1,6 +1,38 @@
 {
-  "updated": "2026-08-17T07:21:25Z",
+  "updated": "2026-08-17T19:12:28Z",
   "bob": [
+    {
+      "title": "Policy that cannot be tested is only a promise. Day 8 — Governance-as-code turns policy intent into versioned, testable, monitored...",
+      "link": "https://pt.linkedin.com/posts/bobrapp_policy-that-cannot-be-tested-is-only-a-promise-activity-7495133203477946369-tho-",
+      "date": "Mon, 17 Aug 2026 15:03:29 GMT",
+      "summary": "Policy that cannot be tested is only a promise. Day 8 — Governance-as-code turns policy intent into versioned, testable, monitored controls. Govern exceptions, preserve audit evidence, retain human judgment, and reassess after material change. Three-Yes Test: Safe. Compliant. Pro",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Healthcare AI needs governance, not hype. PROBLEM: Clinical AI can shape care and trust. Missing clinical, patient, privacy, safet...",
+      "link": "https://www.linkedin.com/posts/bobrapp_healthcare-ai-needs-governance-not-hype-activity-7495103158537416704-eaei",
+      "date": "Mon, 17 Aug 2026 13:04:05 GMT",
+      "summary": "Healthcare AI needs governance, not hype. PROBLEM: Clinical AI can shape care and trust. Missing clinical, patient, privacy, safety, or compliance voices widens the governance gap. SOLUTIONS: Healthcare Meetups connect the people who deploy, regulate, research, and experience med",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "EU AI Act compliance is operational, not paperwork. 90 days: 1–30: Inventory uses, owners, purpose and affected groups; classify r...",
+      "link": "https://www.linkedin.com/posts/bobrapp_eu-ai-act-compliance-is-operational-not-activity-7495103142611636224-nFsX",
+      "date": "Mon, 17 Aug 2026 13:04:01 GMT",
+      "summary": "EU AI Act compliance is operational, not paperwork. 90 days: 1–30: Inventory uses, owners, purpose and affected groups; classify risk. 31–60: Evidence data controls, logs, oversight, transparency and vendor terms. 61–90: Test controls; document decisions; rehearse incidents and r",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "A medical AI can look accurate in a demo and still erode patient trust in practice. Vendor claims are not governance. SOLUTION Hea...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-medical-ai-can-look-accurate-in-a-demo-activity-7495102671478153216-kc5A",
+      "date": "Mon, 17 Aug 2026 13:02:09 GMT",
+      "summary": "A medical AI can look accurate in a demo and still erode patient trust in practice. Vendor claims are not governance. SOLUTION Healthcare Meetups focus on clinical accountability, privacy, safety, compliance, subgroup testing, drift monitoring, override logs, and stop rules. SUMM",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Responsible AI is not a solo function. Builders, compliance leaders, researchers, policymakers, executives, and affected communiti...",
       "link": "https://www.linkedin.com/posts/bobrapp_responsible-ai-is-not-a-solo-function-builders-activity-7494997123730415616-m3fM",
@@ -48,41 +80,25 @@
       "summary": "ENGLISH Founders Forum: 10,000+ AI governance professionals, from policy to practice. Three-Yes Test: Safe—NIST AI RMF. Compliant—EU AI Act + Colorado SB24-205. Pro-Humanity—measure human impact. Ship Good AI: 1) Assign owners. 2) Map impacts. 3) Test. 4) Monitor. 5) Document. Pr",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "ENGLISH AI fails at the edges: ambiguous prompts, unexpected users, tool misuse, privilege escalation, unsafe refusals, and untest...",
-      "link": "https://fr.linkedin.com/posts/bobrapp_english-ai-fails-at-the-edges-ambiguous-activity-7494740560830980097-TQgY",
-      "date": "Sun, 16 Aug 2026 13:03:15 GMT",
-      "summary": "ENGLISH AI fails at the edges: ambiguous prompts, unexpected users, tool misuse, privilege escalation, unsafe refusals, and untested combinations. Red teaming finds failure modes before people pay the price. Post 9/16 | AI Red Teaming & Stress Testing Masterclass Join:",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Policy is only useful when it survives contact with production. That is the purpose of the AiGovOps Founders Forum: connect our 10...",
-      "link": "https://www.linkedin.com/posts/bobrapp_policy-is-only-useful-when-it-survives-contact-activity-7494740514366328832-bewW",
-      "date": "Sun, 16 Aug 2026 13:03:04 GMT",
-      "summary": "Policy is only useful when it survives contact with production. That is the purpose of the AiGovOps Founders Forum: connect our 10,000+ global community of AI governance professionals and turn policy into practice. Use this workflow: Owner → assess impact → test controls → monito",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Global AI governance should not depend on being in the “right” time zone. Our online meetups help practitioners learn across borde...",
-      "link": "https://www.linkedin.com/posts/bobrapp_global-ai-governance-should-not-depend-on-activity-7494634386869493760-eWS2",
-      "date": "Sun, 16 Aug 2026 06:01:21 GMT",
-      "summary": "Global AI governance should not depend on being in the “right” time zone. Our online meetups help practitioners learn across borders, compare regional controls, and turn policy into practice. Join the Luma calendar: Three-Yes Test Safe: identify and mana",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An AI agent without a tested shutdown path is not governed. It is merely trusted. Before deployment, answer:",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-ai-agent-without-a-tested-shutdown-path-activity-7494513809697533952-mof1",
-      "date": "Sat, 15 Aug 2026 22:02:14 GMT",
-      "summary": "An AI agent without a tested shutdown path is not governed. It is merely trusted. Before deployment, answer: • Who can trigger shutdown? • Does it stop queued actions and revoke tokens? • Is the control plane independent of the agent? • What evidence supports recovery? SHIP GOOD",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "AI Cyber and Identity was a smashing success!",
+      "link": "https://www.linkedin.com/posts/rkjohnston_aigovops-activity-7495128574916472832-d7mQ",
+      "date": "Mon, 17 Aug 2026 14:45:05 GMT",
+      "summary": "AI Cyber and Identity was a smashing success! Between in person and the online streaming community we had hundreds register and most made it! Thanks to OneSixOne Ventures for partnering with us at the AiGovOps Foundation to host this joint event. Our location sponsor is the amazi",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Had an amazing time supporting the Cascade Community Markets (https://lnkd.in/gc-jrkyN) annual Gala fund raiser and Farm to Table Dinner.\n\nWas a happy accident really.  We were staying at the Warm…",
+      "link": "https://www.linkedin.com/posts/rkjohnston_had-an-amazing-time-supporting-the-cascade-activity-7495102175295995904-I2T3",
+      "date": "Mon, 17 Aug 2026 13:00:11 GMT",
+      "summary": "Had an amazing time supporting the Cascade Community Markets ( annual Gala fund raiser and Farm to Table Dinner. Was a happy accident really. We were staying at the Warm Sprins Inn & Winery when they said they were hosting the event the next evening if we",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "AI governance becomes operational at the point of decision—not when another policy is filed.\n\nEnterprise Roundtables align product, legal, security, compliance, and engineering around:",
       "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-becomes-operational-at-the-activity-7494876335404785664-toLZ",
@@ -128,30 +144,6 @@
       "link": "https://www.linkedin.com/posts/sally-revell_what-an-incredible-way-to-spend-a-saturday-activity-7494547129189797888-S7cd",
       "date": "Sun, 16 Aug 2026 00:14:38 GMT",
       "summary": "What an incredible way to spend a Saturday. 30 women building in public together! Thank you to the incredible builders who came to Base Camp. Our youngest camper was 14 and built a flyer for her gymnastics app! We built websites, tools, speaker profiles, UI, apps, researched fund",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Policy in PDFs is not operational governance.\n\nGovernance-as-code makes intent repeatable: version controls, test every change, preserve evidence, and govern exceptions—without replacing human…",
-      "link": "https://www.linkedin.com/posts/bobrapp_policy-in-pdfs-is-not-operational-governance-activity-7494513493757427712-X7D8",
-      "date": "Sat, 15 Aug 2026 22:00:58 GMT",
-      "summary": "Policy in PDFs is not operational governance. Governance-as-code makes intent repeatable: version controls, test every change, preserve evidence, and govern exceptions—without replacing human judgment. THREE-YES TEST ☐ Set safety limits and human escalation. ☐ Tie controls to evi",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Amazing networking event provided by OneSixOne Ventures and Pablo Casilimas. The environment they bring and the quality of network are both unmatched. \n\nAdditionally, I also got the privilege to go…",
-      "link": "https://www.linkedin.com/posts/xav%C4%ABer-bertella-98506b324_amazing-networking-event-provided-by-onesixone-activity-7494475511285440512-0B9R",
-      "date": "Sat, 15 Aug 2026 19:30:02 GMT",
-      "summary": "Amazing networking event provided by OneSixOne Ventures and Pablo Casilimas. The environment they bring and the quality of network are both unmatched. Additionally, I also got the privilege to go with Sam Ng, Nikita Vidolova and Oliver Basch. Some amazing individuals who make the",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Two communities I love to support are teaming up.",
-      "link": "https://www.linkedin.com/posts/rkjohnston_two-communities-i-love-to-support-are-teaming-activity-7494419530954301440-uGWc",
-      "date": "Sat, 15 Aug 2026 15:47:36 GMT",
-      "summary": "Two communities I love to support are teaming up.",
       "image": null,
       "author": "Ken Johnston"
     }
