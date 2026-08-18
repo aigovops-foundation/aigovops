@@ -1,6 +1,38 @@
 {
-  "updated": "2026-08-18T07:15:48Z",
+  "updated": "2026-08-18T19:12:09Z",
   "bob": [
+    {
+      "title": "An AI agent should never be its own emergency brake. DAY 10 | LEVEL UP YOUR AI GOVERNANCE Make the kill-switch external to the age...",
+      "link": "https://www.linkedin.com/posts/bobrapp_an-ai-agent-should-never-be-its-own-emergency-activity-7495495466944630784-0uoK",
+      "date": "Tue, 18 Aug 2026 15:02:59 GMT",
+      "summary": "An AI agent should never be its own emergency brake. DAY 10 | LEVEL UP YOUR AI GOVERNANCE Make the kill-switch external to the agent: 1) Revoke access. 2) Stop queued actions. 3) Isolate the agent. 4) Preserve evidence. 5) Assign recovery ownership. THREE-YES TEST Safe: Can we st",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI governance gets stronger when practitioners compare evidence—not when policies sit in folders. ONLINE MEETUPS (EN/ZH) Discuss p...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-gets-stronger-when-practitioners-activity-7495465582176329729-APU-",
+      "date": "Tue, 18 Aug 2026 13:04:14 GMT",
+      "summary": "AI governance gets stronger when practitioners compare evidence—not when policies sit in folders. ONLINE MEETUPS (EN/ZH) Discuss practical controls, accountability, and recovery when AI systems fail. THREE-YES TEST Safe — reduce foreseeable harm. Compliant — show evidence for key",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI can deny credit in milliseconds. Accountability cannot. In financial services, an AI score is not a compliance strategy. Trace...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-can-deny-credit-in-milliseconds-accountability-activity-7495465328295055360-VWjQ",
+      "date": "Tue, 18 Aug 2026 13:03:13 GMT",
+      "summary": "AI can deny credit in milliseconds. Accountability cannot. In financial services, an AI score is not a compliance strategy. Trace the data. Test outcomes. Preserve an audit trail. Give applicants specific, accurate reasons—not “the model said no.” Three-Yes Test ☐ Safe: Monitor d",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI governance improves when practitioners compare what works in production—not when policies stay in slide decks. PROBLEM",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-improves-when-practitioners-activity-7495464689573806080-b-Ot",
+      "date": "Tue, 18 Aug 2026 13:00:41 GMT",
+      "summary": "AI governance improves when practitioners compare what works in production—not when policies stay in slide decks. PROBLEM | 问题 Controls can look complete until failure. Then: Who is accountable? What evidence exists? Was human oversight real? Can we recover and keep governing? SO",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "A red team is not a one-time “gotcha” exercise. It is a release gate. Before deployment, stress-test the whole operating envelope:...",
       "link": "https://www.linkedin.com/posts/bobrapp_a-red-team-is-not-a-one-time-gotcha-exercise-activity-7495359338472079360-LKOO",
@@ -48,41 +80,17 @@
       "summary": "Healthcare AI needs governance, not hype. PROBLEM: Clinical AI can shape care and trust. Missing clinical, patient, privacy, safety, or compliance voices widens the governance gap. SOLUTIONS: Healthcare Meetups connect the people who deploy, regulate, research, and experience med",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "EU AI Act compliance is operational, not paperwork. 90 days: 1–30: Inventory uses, owners, purpose and affected groups; classify r...",
-      "link": "https://www.linkedin.com/posts/bobrapp_eu-ai-act-compliance-is-operational-not-activity-7495103142611636224-nFsX",
-      "date": "Mon, 17 Aug 2026 13:04:01 GMT",
-      "summary": "EU AI Act compliance is operational, not paperwork. 90 days: 1–30: Inventory uses, owners, purpose and affected groups; classify risk. 31–60: Evidence data controls, logs, oversight, transparency and vendor terms. 61–90: Test controls; document decisions; rehearse incidents and r",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "A medical AI can look accurate in a demo and still erode patient trust in practice. Vendor claims are not governance. SOLUTION Hea...",
-      "link": "https://www.linkedin.com/posts/bobrapp_a-medical-ai-can-look-accurate-in-a-demo-activity-7495102671478153216-kc5A",
-      "date": "Mon, 17 Aug 2026 13:02:09 GMT",
-      "summary": "A medical AI can look accurate in a demo and still erode patient trust in practice. Vendor claims are not governance. SOLUTION Healthcare Meetups focus on clinical accountability, privacy, safety, compliance, subgroup testing, drift monitoring, override logs, and stop rules. SUMM",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Responsible AI is not a solo function. Builders, compliance leaders, researchers, policymakers, executives, and affected communiti...",
-      "link": "https://www.linkedin.com/posts/bobrapp_responsible-ai-is-not-a-solo-function-builders-activity-7494997123730415616-m3fM",
-      "date": "Mon, 17 Aug 2026 06:02:45 GMT",
-      "summary": "Responsible AI is not a solo function. Builders, compliance leaders, researchers, policymakers, executives, and affected communities must turn principles into controls that work in the real world. Our 10,000+ global community brings these perspectives together. Find upcoming conv",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An AI agent should never be impossible to stop. A kill switch is tested runtime architecture: revoke access, stop queued actions,...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-ai-agent-should-never-be-impossible-to-activity-7494876401658114048-o46N",
-      "date": "Sun, 16 Aug 2026 22:03:02 GMT",
-      "summary": "An AI agent should never be impossible to stop. A kill switch is tested runtime architecture: revoke access, stop queued actions, isolate the agent, preserve evidence, and require human-approved recovery. Three-Yes Test: Safe? Compliant? Pro-Humanity? SHIP GOOD AI ✓ Separate shut",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "Incredible week of #AIGovOps content: 1.",
+      "link": "https://www.linkedin.com/posts/rkjohnston_aigovops-fridayfailfest-failfest-activity-7495534517563064320-88Ds",
+      "date": "Tue, 18 Aug 2026 17:38:09 GMT",
+      "summary": "Incredible week of #AIGovOps content: 1. Event at AI House with wonderful sponsors 2. First ever podcast - 3. Newsletter that broke into the top 100 on Substack for a little while. Our little community focused on making AI Gooder",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "Let’s talk about change. Today I’ve changed my working location, but I’m also about to change my living location while a bunch of my favorite old colleagues are changing their working locations (RIF…",
       "link": "https://www.linkedin.com/posts/mbenua_lets-talk-about-change-today-ive-changed-activity-7495309894347075586-0qWA",
@@ -144,14 +152,6 @@
       "link": "https://www.linkedin.com/posts/rkjohnston_wenatchetechday-activity-7494802105958846464-Jd_x",
       "date": "Sun, 16 Aug 2026 17:07:49 GMT",
       "summary": "#WenatcheTechDay summary. It's just like Seattle Tech Week but a single day, much much smaller, and no pomp and circumstance. What I loved most about being part of The NCW Tech Alliance AI Expo was the community of people that came out. There were founders with amazing startups l",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Governance maturity is not a checkbox. It is a living scorecard.\n\nPROBLEM / PROBLEM\nA policy can be complete while gaps, owners, evidence, and review triggers remain unclear.\nEine Richtlinie kann…",
-      "link": "https://www.linkedin.com/posts/bobrapp_governance-maturity-is-not-a-checkbox-it-activity-7494770643578630144-e4Hx",
-      "date": "Sun, 16 Aug 2026 15:02:47 GMT",
-      "summary": "Governance maturity is not a checkbox. It is a living scorecard. PROBLEM / PROBLEM A policy can be complete while gaps, owners, evidence, and review triggers remain unclear. Eine Richtlinie kann fertig sein, obwohl Lücken, Verantwortliche, Nachweise und Review-Trigger unklar sind",
       "image": null,
       "author": "Ken Johnston"
     }
