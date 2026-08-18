@@ -1,6 +1,38 @@
 {
-  "updated": "2026-08-17T19:12:28Z",
+  "updated": "2026-08-18T07:15:48Z",
   "bob": [
+    {
+      "title": "A red team is not a one-time “gotcha” exercise. It is a release gate. Before deployment, stress-test the whole operating envelope:...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-red-team-is-not-a-one-time-gotcha-exercise-activity-7495359338472079360-LKOO",
+      "date": "Tue, 18 Aug 2026 06:02:03 GMT",
+      "summary": "A red team is not a one-time “gotcha” exercise. It is a release gate. Before deployment, stress-test the whole operating envelope: • Ambiguous prompts and unexpected users • Tool misuse and privilege escalation • Unsafe refusals and abuse cases • Permissions, recovery paths, and",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Governance gets stronger when the conversation continues after the slides. PROBLEM / 問題 AI risks rarely fit one job title. The mos...",
+      "link": "https://www.linkedin.com/posts/bobrapp_governance-gets-stronger-when-the-conversation-activity-7495239073868124160-jz5w",
+      "date": "Mon, 17 Aug 2026 22:04:10 GMT",
+      "summary": "Governance gets stronger when the conversation continues after the slides. PROBLEM / 問題 AI risks rarely fit one job title. The most useful insight may come from a compliance officer, engineer, researcher, or policymaker in an informal conversation. SOLUTIONS / 解決策 Join AiGovOps A",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "A vendor’s AI risk does not disappear when you outsource it. Before approving a third-party model, API, dataset, or agent, verify...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-vendors-ai-risk-does-not-disappear-when-activity-7495238737862488065-yMs_",
+      "date": "Mon, 17 Aug 2026 22:02:50 GMT",
+      "summary": "A vendor’s AI risk does not disappear when you outsource it. Before approving a third-party model, API, dataset, or agent, verify what enters your system, who can access it, how it changes, and how you can stop it. ENGLISH THREE-YES TEST ✓ Safe: Can we monitor, contain, and deact",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Informal conversations can surface blind spots, compare practical approaches, and turn uncertainty into accountable next steps. Ne...",
+      "link": "https://www.linkedin.com/posts/bobrapp_informal-conversations-can-surface-blind-activity-7495238199930241024-tlxO",
+      "date": "Mon, 17 Aug 2026 22:00:42 GMT",
+      "summary": "Informal conversations can surface blind spots, compare practical approaches, and turn uncertainty into accountable next steps. Networking is not formal review. Keep dissent visible. Capture insights, test assumptions, and route decisions through the proper governance process. アフ",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Policy that cannot be tested is only a promise. Day 8 — Governance-as-code turns policy intent into versioned, testable, monitored...",
       "link": "https://pt.linkedin.com/posts/bobrapp_policy-that-cannot-be-tested-is-only-a-promise-activity-7495133203477946369-tho-",
@@ -48,41 +80,33 @@
       "summary": "An AI agent should never be impossible to stop. A kill switch is tested runtime architecture: revoke access, stop queued actions, isolate the agent, preserve evidence, and require human-approved recovery. Three-Yes Test: Safe? Compliant? Pro-Humanity? SHIP GOOD AI ✓ Separate shut",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "Governance fails when it stays in a policy document. Enterprise Roundtables make it operational. Product, legal, security, complia...",
-      "link": "https://www.linkedin.com/posts/bobrapp_governance-fails-when-it-stays-in-a-policy-activity-7494876339943071744-Y5Sv",
-      "date": "Sun, 16 Aug 2026 22:02:48 GMT",
-      "summary": "Governance fails when it stays in a policy document. Enterprise Roundtables make it operational. Product, legal, security, compliance, and engineering must decide together: Can this AI system deploy—and under what conditions? Make six decisions explicit: • Deployment conditions •",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI governance becomes operational at the point of decision—not when another policy is filed. Enterprise Roundtables align product,...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-becomes-operational-at-the-activity-7494876335404785664-toLZ",
-      "date": "Sun, 16 Aug 2026 22:02:46 GMT",
-      "summary": "AI governance becomes operational at the point of decision—not when another policy is filed. Enterprise Roundtables align product, legal, security, compliance, and engineering around: • Deployment conditions • Risk ownership • Testable, monitored controls • Recovery when systems",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Governance maturity is not a checkbox. It is a living scorecard. PROBLEM / PROBLEM A policy can be complete while gaps, owners, ev...",
-      "link": "https://www.linkedin.com/posts/bobrapp_governance-maturity-is-not-a-checkbox-it-activity-7494770643578630144-e4Hx",
-      "date": "Sun, 16 Aug 2026 15:02:48 GMT",
-      "summary": "Governance maturity is not a checkbox. It is a living scorecard. PROBLEM / PROBLEM A policy can be complete while gaps, owners, evidence, and review triggers remain unclear. Eine Richtlinie kann fertig sein, obwohl Lücken, Verantwortliche, Nachweise und Review-Trigger unklar sind",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "ENGLISH Founders Forum: 10,000+ AI governance professionals, from policy to practice. Three-Yes Test: Safe—NIST AI RMF. Compliant—...",
-      "link": "https://www.linkedin.com/posts/bobrapp_english-founders-forum-10000-ai-governance-activity-7494740725708914688-q_kN",
-      "date": "Sun, 16 Aug 2026 13:03:55 GMT",
-      "summary": "ENGLISH Founders Forum: 10,000+ AI governance professionals, from policy to practice. Three-Yes Test: Safe—NIST AI RMF. Compliant—EU AI Act + Colorado SB24-205. Pro-Humanity—measure human impact. Ship Good AI: 1) Assign owners. 2) Map impacts. 3) Test. 4) Monitor. 5) Document. Pr",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "Let’s talk about change. Today I’ve changed my working location, but I’m also about to change my living location while a bunch of my favorite old colleagues are changing their working locations (RIF…",
+      "link": "https://www.linkedin.com/posts/mbenua_lets-talk-about-change-today-ive-changed-activity-7495309894347075586-0qWA",
+      "date": "Tue, 18 Aug 2026 02:45:35 GMT",
+      "summary": "Let’s talk about change. Today I’ve changed my working location, but I’m also about to change my living location while a bunch of my favorite old colleagues are changing their working locations (RIF season, I suppose!). Change can be uncomfortable, and it can be scary, but I’m a",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Loving your job and who you work with is a choice we all get to make.",
+      "link": "https://www.linkedin.com/posts/sally-revell_womenintech-timetopivot-community-activity-7495268804806094849-PpfA",
+      "date": "Tue, 18 Aug 2026 00:02:18 GMT",
+      "summary": "Loving your job and who you work with is a choice we all get to make. Yes, really you do. It’s taken me 25 years to realize that. And I get to work with incredible women on that journey. Are you feeling like it's time for a change? You're not alone. With the intensity and pace of",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Informal conversations can surface blind spots, compare practical approaches, and turn uncertainty into accountable next steps.\n\nNetworking is not formal review. Keep dissent visible. Capture…",
+      "link": "https://www.linkedin.com/posts/bobrapp_informal-conversations-can-surface-blind-activity-7495238199930241024-tlxO",
+      "date": "Mon, 17 Aug 2026 22:00:42 GMT",
+      "summary": "Informal conversations can surface blind spots, compare practical approaches, and turn uncertainty into accountable next steps. Networking is not formal review. Keep dissent visible. Capture insights, test assumptions, and route decisions through the proper governance process. アフ",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "AI Cyber and Identity was a smashing success!",
       "link": "https://www.linkedin.com/posts/rkjohnston_aigovops-activity-7495128574916472832-d7mQ",
@@ -128,22 +152,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_governance-maturity-is-not-a-checkbox-it-activity-7494770643578630144-e4Hx",
       "date": "Sun, 16 Aug 2026 15:02:47 GMT",
       "summary": "Governance maturity is not a checkbox. It is a living scorecard. PROBLEM / PROBLEM A policy can be complete while gaps, owners, evidence, and review triggers remain unclear. Eine Richtlinie kann fertig sein, obwohl Lücken, Verantwortliche, Nachweise und Review-Trigger unklar sind",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "After a few months off LinkedIn, looking forward to posting lots of material around AI Assurance over the next few months, after the fantastic recent work around Confidence Engineering thanks to…",
-      "link": "https://www.linkedin.com/posts/automation_after-a-few-months-off-linkedin-looking-activity-7494689246243508224-Dac0",
-      "date": "Sun, 16 Aug 2026 09:39:21 GMT",
-      "summary": "",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "What an incredible way to spend a Saturday. 30 women building in public together! \n\nThank you to the incredible builders who came to Base Camp. Our youngest camper was 14 and built a flyer for her…",
-      "link": "https://www.linkedin.com/posts/sally-revell_what-an-incredible-way-to-spend-a-saturday-activity-7494547129189797888-S7cd",
-      "date": "Sun, 16 Aug 2026 00:14:38 GMT",
-      "summary": "What an incredible way to spend a Saturday. 30 women building in public together! Thank you to the incredible builders who came to Base Camp. Our youngest camper was 14 and built a flyer for her gymnastics app! We built websites, tools, speaker profiles, UI, apps, researched fund",
       "image": null,
       "author": "Ken Johnston"
     }
