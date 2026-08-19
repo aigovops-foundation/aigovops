@@ -1,6 +1,46 @@
 {
-  "updated": "2026-08-19T07:15:46Z",
+  "updated": "2026-08-19T19:09:04Z",
   "bob": [
+    {
+      "title": "PROBLEM | 課題 Third-party AI risk begins after procurement: a vendor may change models, subprocess data, or fail silently. SOLUTION...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-%E8%AA%B2%E9%A1%8C-third-party-ai-risk-begins-after-activity-7495857709951651841-XosF",
+      "date": "Wed, 19 Aug 2026 15:02:24 GMT",
+      "summary": "PROBLEM | 課題 Third-party AI risk begins after procurement: a vendor may change models, subprocess data, or fail silently. SOLUTION | 解決策 Map suppliers/dependencies. Contract audit rights, incident notice, data controls, model-change alerts, independent validation, rollback, exit",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Governance-as-Code turns policy into a release control—not a forgotten PDF. PROBLEM / समस्या Policy that cannot run in CI/CD cannot...",
+      "link": "https://www.linkedin.com/posts/bobrapp_governance-as-code-turns-policy-into-a-release-activity-7495827719360913409-n5HM",
+      "date": "Wed, 19 Aug 2026 13:03:14 GMT",
+      "summary": "Governance-as-Code turns policy into a release control—not a forgotten PDF. PROBLEM / समस्या Policy that cannot run in CI/CD cannot stop unsafe changes. CI/CD में न चलने वाली नीति असुरक्षित बदलाव नहीं रोकती। SOLUTIONS / समाधान Version rules as code. Test PRs. Gate releases. Log e",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Governance-as-Code turns AI policy into an executable release control: not a document checked after deployment. Problem / समस्या Whe...",
+      "link": "https://www.linkedin.com/posts/bobrapp_governance-as-code-turns-ai-policy-into-an-activity-7495827463151927296-VOCn",
+      "date": "Wed, 19 Aug 2026 13:02:13 GMT",
+      "summary": "Governance-as-Code turns AI policy into an executable release control: not a document checked after deployment. Problem / समस्या When policy sits outside CI/CD, teams cannot reliably prove what changed, who approved it, or whether rollback works. Solutions / समाधान Version govern",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI should recommend. Humans must still decide—and intervene. Human-in-the-loop is operating design: recommendation → human review...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-should-recommend-humans-must-still-decideand-activity-7495827268246867968-J7Q5",
+      "date": "Wed, 19 Aug 2026 13:01:26 GMT",
+      "summary": "AI should recommend. Humans must still decide—and intervene. Human-in-the-loop is operating design: recommendation → human review → approve/override → audit trail. Before deployment: • Define who can intervene and when. • Make pause, reject, and escalate available. • Log the deci",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Come join a great team doing ground breaking work",
+      "link": "https://www.linkedin.com/posts/bobrapp_staff-data-scientist-activity-7495816060433174528-lFh0",
+      "date": "Wed, 19 Aug 2026 12:16:54 GMT",
+      "summary": "Come join a great team doing ground breaking work",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Compliance is not a binder you assemble at the finish line. Day 11 of Level Up Your AI Governance: use a 90-day readiness sprint—n...",
       "link": "https://www.linkedin.com/posts/bobrapp_compliance-is-not-a-binder-you-assemble-at-activity-7495721417972539392-sZRT",
@@ -32,57 +72,33 @@
       "summary": "AI governance should not end at launch. Beacon is a live operational risk signal: capture evidence, surface risk, set stop thresholds, monitor drift, and escalate uncertainty. Three-Yes Test: Safe. Compliant. Pro-Humanity. SHIP GOOD AI • Capture evidence. • Set stop thresholds. •",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "An AI agent should never be its own emergency brake. DAY 10 | LEVEL UP YOUR AI GOVERNANCE Make the kill-switch external to the age...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-ai-agent-should-never-be-its-own-emergency-activity-7495495466944630784-0uoK",
-      "date": "Tue, 18 Aug 2026 15:02:59 GMT",
-      "summary": "An AI agent should never be its own emergency brake. DAY 10 | LEVEL UP YOUR AI GOVERNANCE Make the kill-switch external to the agent: 1) Revoke access. 2) Stop queued actions. 3) Isolate the agent. 4) Preserve evidence. 5) Assign recovery ownership. THREE-YES TEST Safe: Can we st",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI governance gets stronger when practitioners compare evidence—not when policies sit in folders. ONLINE MEETUPS (EN/ZH) Discuss p...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-gets-stronger-when-practitioners-activity-7495465582176329729-APU-",
-      "date": "Tue, 18 Aug 2026 13:04:14 GMT",
-      "summary": "AI governance gets stronger when practitioners compare evidence—not when policies sit in folders. ONLINE MEETUPS (EN/ZH) Discuss practical controls, accountability, and recovery when AI systems fail. THREE-YES TEST Safe — reduce foreseeable harm. Compliant — show evidence for key",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI can deny credit in milliseconds. Accountability cannot. In financial services, an AI score is not a compliance strategy. Trace...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-can-deny-credit-in-milliseconds-accountability-activity-7495465328295055360-VWjQ",
-      "date": "Tue, 18 Aug 2026 13:03:13 GMT",
-      "summary": "AI can deny credit in milliseconds. Accountability cannot. In financial services, an AI score is not a compliance strategy. Trace the data. Test outcomes. Preserve an audit trail. Give applicants specific, accurate reasons—not “the model said no.” Three-Yes Test ☐ Safe: Monitor d",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI governance improves when practitioners compare what works in production—not when policies stay in slide decks. PROBLEM",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-improves-when-practitioners-activity-7495464689573806080-b-Ot",
-      "date": "Tue, 18 Aug 2026 13:00:41 GMT",
-      "summary": "AI governance improves when practitioners compare what works in production—not when policies stay in slide decks. PROBLEM | 问题 Controls can look complete until failure. Then: Who is accountable? What evidence exists? Was human oversight real? Can we recover and keep governing? SO",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "A red team is not a one-time “gotcha” exercise. It is a release gate. Before deployment, stress-test the whole operating envelope:...",
-      "link": "https://www.linkedin.com/posts/bobrapp_a-red-team-is-not-a-one-time-gotcha-exercise-activity-7495359338472079360-LKOO",
-      "date": "Tue, 18 Aug 2026 06:02:03 GMT",
-      "summary": "A red team is not a one-time “gotcha” exercise. It is a release gate. Before deployment, stress-test the whole operating envelope: • Ambiguous prompts and unexpected users • Tool misuse and privilege escalation • Unsafe refusals and abuse cases • Permissions, recovery paths, and",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Governance gets stronger when the conversation continues after the slides. PROBLEM / 問題 AI risks rarely fit one job title. The mos...",
-      "link": "https://www.linkedin.com/posts/bobrapp_governance-gets-stronger-when-the-conversation-activity-7495239073868124160-jz5w",
-      "date": "Mon, 17 Aug 2026 22:04:10 GMT",
-      "summary": "Governance gets stronger when the conversation continues after the slides. PROBLEM / 問題 AI risks rarely fit one job title. The most useful insight may come from a compliance officer, engineer, researcher, or policymaker in an informal conversation. SOLUTIONS / 解決策 Join AiGovOps A",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "I met Lucas last month and we had a great conversation about AI, Agile, AI risks and failures.",
+      "link": "https://www.linkedin.com/posts/rkjohnston_aigovops-rai-responsibleai-activity-7495876069007298560-KqJc",
+      "date": "Wed, 19 Aug 2026 16:15:21 GMT",
+      "summary": "This is exciting! I met Lucas last month and we had a great conversation about AI, Agile, AI risks and failures. It was a super fun and natural conversation. Check out the podcast now! #AiGovOps, #RAI, #ResponsibleAI, #AIGovernance #GRC, AiGovOps Foundation",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "What happens when companies move so fast to adopt AI that they forget everything they already learned about building tec",
+      "link": "https://www.linkedin.com/posts/riolongacre_artificialintelligence-aigovernance-devops-activity-7495862193478094849-pxyb",
+      "date": "Wed, 19 Aug 2026 15:20:13 GMT",
+      "summary": "What happens when companies move so fast to adopt AI that they forget everything they already learned about building technology safely? In this special Signal & Noise Live episode from AI Con, Executive Voice contributor Lucas Longacre sits down with Ken Johnston, co-founder of t",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Governance-as-Code turns policy into a release control—not a forgotten PDF.\n\nPROBLEM / समस्या\nPolicy that cannot run in CI/CD cannot stop unsafe changes.\nCI/CD में न चलने वाली नीति असुरक्षित बदलाव…",
+      "link": "https://www.linkedin.com/posts/bobrapp_governance-as-code-turns-policy-into-a-release-activity-7495827719360913409-n5HM",
+      "date": "Wed, 19 Aug 2026 13:03:14 GMT",
+      "summary": "Governance-as-Code turns policy into a release control—not a forgotten PDF. PROBLEM / समस्या Policy that cannot run in CI/CD cannot stop unsafe changes. CI/CD में न चलने वाली नीति असुरक्षित बदलाव नहीं रोकती। SOLUTIONS / समाधान Version rules as code. Test PRs. Gate releases. Log e",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "Looks like I'm LIVE on ZOOM this weekend.  We'll have a great discussion.  Probably talk some about AISI incident as well as hugging face.  Who knows.  \n\nWhat should AI remember — and who is…",
       "link": "https://www.linkedin.com/posts/rkjohnston_looks-like-im-live-on-zoom-this-weekend-activity-7495626216515829760-fULR",
@@ -136,30 +152,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-gets-stronger-when-practitioners-activity-7495465582176329729-APU-",
       "date": "Tue, 18 Aug 2026 13:04:14 GMT",
       "summary": "AI governance gets stronger when practitioners compare evidence—not when policies sit in folders. ONLINE MEETUPS (EN/ZH) Discuss practical controls, accountability, and recovery when AI systems fail. THREE-YES TEST Safe — reduce foreseeable harm. Compliant — show evidence for key",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "AI can deny credit in milliseconds. Accountability cannot.\n\nIn financial services, an AI score is not a compliance strategy. Trace the data. Test outcomes. Preserve an audit trail. Give applicants…",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-can-deny-credit-in-milliseconds-accountability-activity-7495465328295055360-VWjQ",
-      "date": "Tue, 18 Aug 2026 13:03:13 GMT",
-      "summary": "AI can deny credit in milliseconds. Accountability cannot. In financial services, an AI score is not a compliance strategy. Trace the data. Test outcomes. Preserve an audit trail. Give applicants specific, accurate reasons—not “the model said no.” Three-Yes Test ☐ Safe: Monitor d",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "AI governance improves when practitioners compare what works in production—not when policies stay in slide decks.\n\nPROBLEM | 问题\nControls can look complete until failure. Then: Who is accountable?…",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-improves-when-practitioners-activity-7495464689573806080-b-Ot",
-      "date": "Tue, 18 Aug 2026 13:00:41 GMT",
-      "summary": "AI governance improves when practitioners compare what works in production—not when policies stay in slide decks. PROBLEM | 问题 Controls can look complete until failure. Then: Who is accountable? What evidence exists? Was human oversight real? Can we recover and keep governing? SO",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Let’s talk about change. Today I’ve changed my working location, but I’m also about to change my living location while a bunch of my favorite old colleagues are changing their working locations (RIF…",
-      "link": "https://www.linkedin.com/posts/mbenua_lets-talk-about-change-today-ive-changed-activity-7495309894347075586-0qWA",
-      "date": "Tue, 18 Aug 2026 02:45:35 GMT",
-      "summary": "Let’s talk about change. Today I’ve changed my working location, but I’m also about to change my living location while a bunch of my favorite old colleagues are changing their working locations (RIF season, I suppose!). Change can be uncomfortable, and it can be scary, but I’m a",
       "image": null,
       "author": "Ken Johnston"
     }
