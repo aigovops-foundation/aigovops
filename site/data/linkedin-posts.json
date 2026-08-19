@@ -1,6 +1,38 @@
 {
-  "updated": "2026-08-18T19:12:09Z",
+  "updated": "2026-08-19T07:15:46Z",
   "bob": [
+    {
+      "title": "Compliance is not a binder you assemble at the finish line. Day 11 of Level Up Your AI Governance: use a 90-day readiness sprint—n...",
+      "link": "https://www.linkedin.com/posts/bobrapp_compliance-is-not-a-binder-you-assemble-at-activity-7495721417972539392-sZRT",
+      "date": "Wed, 19 Aug 2026 06:00:50 GMT",
+      "summary": "Compliance is not a binder you assemble at the finish line. Day 11 of Level Up Your AI Governance: use a 90-day readiness sprint—not a legal deadline—to turn EU AI Act obligations into operating evidence. DAYS 1–30 — INVENTORY Identify every AI system, intended purpose, risk clas",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Editable logs are not audit trails. They are narratives that can be rewritten. Post 14/16: Cryptographic Audit Trails Cryptographi...",
+      "link": "https://www.linkedin.com/posts/bobrapp_editable-logs-are-not-audit-trails-they-activity-7495600919464550401-5nAo",
+      "date": "Tue, 18 Aug 2026 22:02:01 GMT",
+      "summary": "Editable logs are not audit trails. They are narratives that can be rewritten. Post 14/16: Cryptographic Audit Trails Cryptographic audit trails link each event to a tamper-evident hash chain: actor, model/version, policy, action, and result. Immutability does not make AI safe. I",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Your AI system changes in production. Your risk assessment should too. The Beacon Tool turns governance into a live operational si...",
+      "link": "https://www.linkedin.com/posts/bobrapp_your-ai-system-changes-in-production-your-activity-7495600671958802432-OrTV",
+      "date": "Tue, 18 Aug 2026 22:01:02 GMT",
+      "summary": "Your AI system changes in production. Your risk assessment should too. The Beacon Tool turns governance into a live operational signal: capture evidence, surface risk, and decide before a small change becomes a public incident. THREE-YES TEST / TEST DES TROIS OUI SAFE / SÛR — Is",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI governance should not end at launch. Beacon is a live operational risk signal: capture evidence, surface risk, set stop thresho...",
+      "link": "https://fr.linkedin.com/posts/bobrapp_ai-governance-should-not-end-at-launch-activity-7495600657383575552-twGq",
+      "date": "Tue, 18 Aug 2026 22:00:58 GMT",
+      "summary": "AI governance should not end at launch. Beacon is a live operational risk signal: capture evidence, surface risk, set stop thresholds, monitor drift, and escalate uncertainty. Three-Yes Test: Safe. Compliant. Pro-Humanity. SHIP GOOD AI • Capture evidence. • Set stop thresholds. •",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "An AI agent should never be its own emergency brake. DAY 10 | LEVEL UP YOUR AI GOVERNANCE Make the kill-switch external to the age...",
       "link": "https://www.linkedin.com/posts/bobrapp_an-ai-agent-should-never-be-its-own-emergency-activity-7495495466944630784-0uoK",
@@ -48,41 +80,25 @@
       "summary": "Governance gets stronger when the conversation continues after the slides. PROBLEM / 問題 AI risks rarely fit one job title. The most useful insight may come from a compliance officer, engineer, researcher, or policymaker in an informal conversation. SOLUTIONS / 解決策 Join AiGovOps A",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "A vendor’s AI risk does not disappear when you outsource it. Before approving a third-party model, API, dataset, or agent, verify...",
-      "link": "https://www.linkedin.com/posts/bobrapp_a-vendors-ai-risk-does-not-disappear-when-activity-7495238737862488065-yMs_",
-      "date": "Mon, 17 Aug 2026 22:02:50 GMT",
-      "summary": "A vendor’s AI risk does not disappear when you outsource it. Before approving a third-party model, API, dataset, or agent, verify what enters your system, who can access it, how it changes, and how you can stop it. ENGLISH THREE-YES TEST ✓ Safe: Can we monitor, contain, and deact",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Informal conversations can surface blind spots, compare practical approaches, and turn uncertainty into accountable next steps. Ne...",
-      "link": "https://www.linkedin.com/posts/bobrapp_informal-conversations-can-surface-blind-activity-7495238199930241024-tlxO",
-      "date": "Mon, 17 Aug 2026 22:00:42 GMT",
-      "summary": "Informal conversations can surface blind spots, compare practical approaches, and turn uncertainty into accountable next steps. Networking is not formal review. Keep dissent visible. Capture insights, test assumptions, and route decisions through the proper governance process. アフ",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Policy that cannot be tested is only a promise. Day 8 — Governance-as-code turns policy intent into versioned, testable, monitored...",
-      "link": "https://pt.linkedin.com/posts/bobrapp_policy-that-cannot-be-tested-is-only-a-promise-activity-7495133203477946369-tho-",
-      "date": "Mon, 17 Aug 2026 15:03:29 GMT",
-      "summary": "Policy that cannot be tested is only a promise. Day 8 — Governance-as-code turns policy intent into versioned, testable, monitored controls. Govern exceptions, preserve audit evidence, retain human judgment, and reassess after material change. Three-Yes Test: Safe. Compliant. Pro",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Healthcare AI needs governance, not hype. PROBLEM: Clinical AI can shape care and trust. Missing clinical, patient, privacy, safet...",
-      "link": "https://www.linkedin.com/posts/bobrapp_healthcare-ai-needs-governance-not-hype-activity-7495103158537416704-eaei",
-      "date": "Mon, 17 Aug 2026 13:04:05 GMT",
-      "summary": "Healthcare AI needs governance, not hype. PROBLEM: Clinical AI can shape care and trust. Missing clinical, patient, privacy, safety, or compliance voices widens the governance gap. SOLUTIONS: Healthcare Meetups connect the people who deploy, regulate, research, and experience med",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "Looks like I'm LIVE on ZOOM this weekend.  We'll have a great discussion.  Probably talk some about AISI incident as well as hugging face.  Who knows.  \n\nWhat should AI remember — and who is…",
+      "link": "https://www.linkedin.com/posts/rkjohnston_looks-like-im-live-on-zoom-this-weekend-activity-7495626216515829760-fULR",
+      "date": "Tue, 18 Aug 2026 23:42:32 GMT",
+      "summary": "Looks like I'm LIVE on ZOOM this weekend. We'll have a great discussion. Probably talk some about AISI incident as well as hugging face. Who knows. What should AI remember — and who is accountable when AI acts? 🧠 Join us this Saturday for a focused conversation with Ken Johnston",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Second Brain AI Salon Online –02 · Luma",
+      "link": "https://www.linkedin.com/posts/jing-heidi-wu-0a06111b2_second-brain-ai-salon-online-02-luma-activity-7495621941546901504--1TT",
+      "date": "Tue, 18 Aug 2026 23:25:33 GMT",
+      "summary": "What should AI remember — and who is accountable when AI acts? 🧠 Join us this Saturday for a focused conversation with Ken Johnston on AI long-term memory, autonomous agents, trust, and Governance as Code. No long slides, no pitching — just a serious conversation.",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "Incredible week of #AIGovOps content: 1.",
       "link": "https://www.linkedin.com/posts/rkjohnston_aigovops-fridayfailfest-failfest-activity-7495534517563064320-88Ds",
@@ -92,66 +108,58 @@
       "author": "Ken Johnston"
     },
     {
+      "title": "Earlier this summer, I logged off and took a trip to Bolivia. It far exceeded anything I imagined. Bolivia was a wonderful reminder of just how much of the world there is left for me to discover. \n\nI…",
+      "link": "https://www.linkedin.com/posts/slbird_earlier-this-summer-i-logged-off-and-took-activity-7495533560909520896--WA9",
+      "date": "Tue, 18 Aug 2026 17:34:21 GMT",
+      "summary": "Earlier this summer, I logged off and took a trip to Bolivia. It far exceeded anything I imagined. Bolivia was a wonderful reminder of just how much of the world there is left for me to discover. I was truly amazed by the landscapes, the people, the wildlife (viscacha are very cu",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Last Sunday I attended my first Seattle WNBA (Women's National Basketball Association) Sneakerball, and what a fun event for a great cause: promoting Equality!\n\nIt was a luncheon followed by the…",
+      "link": "https://www.linkedin.com/posts/joy-chik_last-sunday-i-attended-my-first-seattle-wnba-activity-7495494845147308032-2pJf",
+      "date": "Tue, 18 Aug 2026 15:00:31 GMT",
+      "summary": "Last Sunday I attended my first Seattle WNBA (Women's National Basketball Association) Sneakerball, and what a fun event for a great cause: promoting Equality! It was a luncheon followed by the Seattle Storm vs. Chicago Sky WNBA regular season game, and I just loved the positive",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Netflix's CPTO was asked what she's hiring more of in the AI era, and she skipped past every typical function name. \n\n\"We need more systems thinkers,\" Elizabeth Stone said in July. \"People who can… | Yen Anderson",
+      "link": "https://www.linkedin.com/posts/yenanderson_netflixs-cpto-was-asked-what-shes-hiring-activity-7495472103673028608-l8T4",
+      "date": "Tue, 18 Aug 2026 13:30:09 GMT",
+      "summary": "Netflix's CPTO was asked what she's hiring more of in the AI era, and she skipped past every typical function name. \"We need more systems thinkers,\" Elizabeth Stone said in July. \"People who can look across all the business domains and abstract: here's the building blocks we're g",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "AI governance gets stronger when practitioners compare evidence—not when policies sit in folders.\n\nONLINE MEETUPS (EN/ZH)\n\nDiscuss practical controls, accountability, and recovery when AI systems…",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-gets-stronger-when-practitioners-activity-7495465582176329729-APU-",
+      "date": "Tue, 18 Aug 2026 13:04:14 GMT",
+      "summary": "AI governance gets stronger when practitioners compare evidence—not when policies sit in folders. ONLINE MEETUPS (EN/ZH) Discuss practical controls, accountability, and recovery when AI systems fail. THREE-YES TEST Safe — reduce foreseeable harm. Compliant — show evidence for key",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "AI can deny credit in milliseconds. Accountability cannot.\n\nIn financial services, an AI score is not a compliance strategy. Trace the data. Test outcomes. Preserve an audit trail. Give applicants…",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-can-deny-credit-in-milliseconds-accountability-activity-7495465328295055360-VWjQ",
+      "date": "Tue, 18 Aug 2026 13:03:13 GMT",
+      "summary": "AI can deny credit in milliseconds. Accountability cannot. In financial services, an AI score is not a compliance strategy. Trace the data. Test outcomes. Preserve an audit trail. Give applicants specific, accurate reasons—not “the model said no.” Three-Yes Test ☐ Safe: Monitor d",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "AI governance improves when practitioners compare what works in production—not when policies stay in slide decks.\n\nPROBLEM | 问题\nControls can look complete until failure. Then: Who is accountable?…",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-improves-when-practitioners-activity-7495464689573806080-b-Ot",
+      "date": "Tue, 18 Aug 2026 13:00:41 GMT",
+      "summary": "AI governance improves when practitioners compare what works in production—not when policies stay in slide decks. PROBLEM | 问题 Controls can look complete until failure. Then: Who is accountable? What evidence exists? Was human oversight real? Can we recover and keep governing? SO",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
       "title": "Let’s talk about change. Today I’ve changed my working location, but I’m also about to change my living location while a bunch of my favorite old colleagues are changing their working locations (RIF…",
       "link": "https://www.linkedin.com/posts/mbenua_lets-talk-about-change-today-ive-changed-activity-7495309894347075586-0qWA",
       "date": "Tue, 18 Aug 2026 02:45:35 GMT",
       "summary": "Let’s talk about change. Today I’ve changed my working location, but I’m also about to change my living location while a bunch of my favorite old colleagues are changing their working locations (RIF season, I suppose!). Change can be uncomfortable, and it can be scary, but I’m a",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Loving your job and who you work with is a choice we all get to make.",
-      "link": "https://www.linkedin.com/posts/sally-revell_womenintech-timetopivot-community-activity-7495268804806094849-PpfA",
-      "date": "Tue, 18 Aug 2026 00:02:18 GMT",
-      "summary": "Loving your job and who you work with is a choice we all get to make. Yes, really you do. It’s taken me 25 years to realize that. And I get to work with incredible women on that journey. Are you feeling like it's time for a change? You're not alone. With the intensity and pace of",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Informal conversations can surface blind spots, compare practical approaches, and turn uncertainty into accountable next steps.\n\nNetworking is not formal review. Keep dissent visible. Capture…",
-      "link": "https://www.linkedin.com/posts/bobrapp_informal-conversations-can-surface-blind-activity-7495238199930241024-tlxO",
-      "date": "Mon, 17 Aug 2026 22:00:42 GMT",
-      "summary": "Informal conversations can surface blind spots, compare practical approaches, and turn uncertainty into accountable next steps. Networking is not formal review. Keep dissent visible. Capture insights, test assumptions, and route decisions through the proper governance process. アフ",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "AI Cyber and Identity was a smashing success!",
-      "link": "https://www.linkedin.com/posts/rkjohnston_aigovops-activity-7495128574916472832-d7mQ",
-      "date": "Mon, 17 Aug 2026 14:45:05 GMT",
-      "summary": "AI Cyber and Identity was a smashing success! Between in person and the online streaming community we had hundreds register and most made it! Thanks to OneSixOne Ventures for partnering with us at the AiGovOps Foundation to host this joint event. Our location sponsor is the amazi",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Had an amazing time supporting the Cascade Community Markets (https://lnkd.in/gc-jrkyN) annual Gala fund raiser and Farm to Table Dinner.\n\nWas a happy accident really.  We were staying at the Warm…",
-      "link": "https://www.linkedin.com/posts/rkjohnston_had-an-amazing-time-supporting-the-cascade-activity-7495102175295995904-I2T3",
-      "date": "Mon, 17 Aug 2026 13:00:11 GMT",
-      "summary": "Had an amazing time supporting the Cascade Community Markets ( annual Gala fund raiser and Farm to Table Dinner. Was a happy accident really. We were staying at the Warm Sprins Inn & Winery when they said they were hosting the event the next evening if we",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "AI governance becomes operational at the point of decision—not when another policy is filed.\n\nEnterprise Roundtables align product, legal, security, compliance, and engineering around:",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-becomes-operational-at-the-activity-7494876335404785664-toLZ",
-      "date": "Sun, 16 Aug 2026 22:02:46 GMT",
-      "summary": "AI governance becomes operational at the point of decision—not when another policy is filed. Enterprise Roundtables align product, legal, security, compliance, and engineering around: • Deployment conditions • Risk ownership • Testable, monitored controls • Recovery when systems",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Last week, I heard about a very prominent tech executive who hired a witch for his new company.\n\nIn a world that is only getting more complex and uncertain, I think we will likely see more of this:… | Allie K. Miller",
-      "link": "https://www.linkedin.com/posts/alliekmiller_last-week-i-heard-about-a-very-prominent-activity-7494823800396509184-CqA4",
-      "date": "Sun, 16 Aug 2026 18:34:01 GMT",
-      "summary": "Last week, I heard about a very prominent tech executive who hired a witch for his new company. In a world that is only getting more complex and uncertain, I think we will likely see more of this: people turning to witches, psychics, or AI for guidance and direction. Anything tha",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "It's just like Seattle Tech Week but a single day, much much smaller, and no pomp and circumstance.",
-      "link": "https://www.linkedin.com/posts/rkjohnston_wenatchetechday-activity-7494802105958846464-Jd_x",
-      "date": "Sun, 16 Aug 2026 17:07:49 GMT",
-      "summary": "#WenatcheTechDay summary. It's just like Seattle Tech Week but a single day, much much smaller, and no pomp and circumstance. What I loved most about being part of The NCW Tech Alliance AI Expo was the community of people that came out. There were founders with amazing startups l",
       "image": null,
       "author": "Ken Johnston"
     }
