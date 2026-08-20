@@ -1,6 +1,38 @@
 {
-  "updated": "2026-08-20T07:17:13Z",
+  "updated": "2026-08-20T19:14:24Z",
   "bob": [
+    {
+      "title": "An “immutable log” is not enough. If nobody independent can verify, restore, and challenge the evidence, you have a record—not acc...",
+      "link": "https://www.linkedin.com/posts/bobrapp_an-immutable-log-is-not-enough-if-nobody-activity-7496220714065252352-Zgm8",
+      "date": "Thu, 20 Aug 2026 15:04:51 GMT",
+      "summary": "An “immutable log” is not enough. If nobody independent can verify, restore, and challenge the evidence, you have a record—not accountability. Cryptographic audit trails link actor, model/version, policy, action, result, and time in a signed, tamper-evident hash chain. Three-Yes",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI governance maturity is not a badge. It is a decision tool. Our 12 maturity-model frameworks help teams: 1) Baseline controls an...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-maturity-is-not-a-badge-it-activity-7496190349296623616-6K2D",
+      "date": "Thu, 20 Aug 2026 13:04:12 GMT",
+      "summary": "AI governance maturity is not a badge. It is a decision tool. Our 12 maturity-model frameworks help teams: 1) Baseline controls and evidence. 2) Choose a framework that fits the context. 3) Log gaps with owners, deadlines, and closure evidence. 4) Reassess after material change.",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI governance maturity is not a badge. It is a decision tool. One framework cannot fit every sector, risk profile, or operating mo...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-maturity-is-not-a-badge-it-activity-7496190190198374400-81jp",
+      "date": "Thu, 20 Aug 2026 13:03:34 GMT",
+      "summary": "AI governance maturity is not a badge. It is a decision tool. One framework cannot fit every sector, risk profile, or operating model. Compare 12 maturity model frameworks to measure your baseline, expose gaps, and choose the next practical step. THREE-YES TEST Safe — Detect, red",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "A credit decision is not explainable if the person affected cannot challenge it. In financial services, “the model said no” is not...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-credit-decision-is-not-explainable-if-the-activity-7496084226614833152-xslr",
+      "date": "Thu, 20 Aug 2026 06:02:30 GMT",
+      "summary": "A credit decision is not explainable if the person affected cannot challenge it. In financial services, “the model said no” is not a reason. Make each decision contestable: • Trace inputs and validate representative populations. • Test fairness and error-rate disparities. • Log m",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Boardrooms need AI governance metrics that drive decisions—not decorative dashboards. Track risk (residual risk, drift, severe iss...",
       "link": "https://www.linkedin.com/posts/bobrapp_boardrooms-need-ai-governance-metrics-that-activity-7495963601350860801-U0Qq",
@@ -48,33 +80,33 @@
       "summary": "Governance-as-Code turns AI policy into an executable release control: not a document checked after deployment. Problem / समस्या When policy sits outside CI/CD, teams cannot reliably prove what changed, who approved it, or whether rollback works. Solutions / समाधान Version govern",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "AI should recommend. Humans must still decide—and intervene. Human-in-the-loop is operating design: recommendation → human review...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-should-recommend-humans-must-still-decideand-activity-7495827268246867968-J7Q5",
-      "date": "Wed, 19 Aug 2026 13:01:26 GMT",
-      "summary": "AI should recommend. Humans must still decide—and intervene. Human-in-the-loop is operating design: recommendation → human review → approve/override → audit trail. Before deployment: • Define who can intervene and when. • Make pause, reject, and escalate available. • Log the deci",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Come join a great team doing ground breaking work",
-      "link": "https://www.linkedin.com/posts/bobrapp_staff-data-scientist-activity-7495816060433174528-lFh0",
-      "date": "Wed, 19 Aug 2026 12:16:54 GMT",
-      "summary": "Come join a great team doing ground breaking work",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Compliance is not a binder you assemble at the finish line. Day 11 of Level Up Your AI Governance: use a 90-day readiness sprint—n...",
-      "link": "https://www.linkedin.com/posts/bobrapp_compliance-is-not-a-binder-you-assemble-at-activity-7495721417972539392-sZRT",
-      "date": "Wed, 19 Aug 2026 06:00:50 GMT",
-      "summary": "Compliance is not a binder you assemble at the finish line. Day 11 of Level Up Your AI Governance: use a 90-day readiness sprint—not a legal deadline—to turn EU AI Act obligations into operating evidence. DAYS 1–30 — INVENTORY Identify every AI system, intended purpose, risk clas",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "Was a great event last week at AI House.  Loved partnering with OneSixOne Ventures and Pablo Casilimas.  Check out the highlight video!",
+      "link": "https://www.linkedin.com/posts/rkjohnston_was-a-great-event-last-week-at-ai-house-activity-7496277708897808386-cp4H",
+      "date": "Thu, 20 Aug 2026 18:51:20 GMT",
+      "summary": "",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "So many learnings about how vulnerable we all are to cyber attacks and the massive opportunities ahead within AI identity & security last week. \n\nOneSixOne Ventures teamed up with AiGovOps…",
+      "link": "https://www.linkedin.com/posts/pablo-casilimas-1707a9113_so-many-learnings-about-how-vulnerable-we-activity-7496242270917099520-ogok",
+      "date": "Thu, 20 Aug 2026 16:30:31 GMT",
+      "summary": "",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Joe Levy posted on LinkedIn",
+      "link": "https://www.linkedin.com/posts/mrjoelevy_the-best-software-vendors-in-the-ai-era-wont-activity-7496215916288835584-_KoK",
+      "date": "Thu, 20 Aug 2026 14:45:47 GMT",
+      "summary": "",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "Thank you to Jerred M., past Flywheel winner and founder of OneCourt, for joining us during the 2026 Flywheel Student Pi",
       "link": "https://www.linkedin.com/posts/ncwtechalliance_flywheelconference-activity-7495993019419209728-6EnJ",
@@ -100,6 +132,14 @@
       "author": "Ken Johnston"
     },
     {
+      "title": "Evidence beats confidence.\n\nENGLISH\nOur Research Library brings together 500+ papers and regulatory frameworks. Compare primary sources, turn requirements into testable controls, and keep decisions…",
+      "link": "https://www.linkedin.com/posts/bobrapp_evidence-beats-confidence-english-our-research-activity-7495963498095505410-2iCQ",
+      "date": "Wed, 19 Aug 2026 22:02:46 GMT",
+      "summary": "Evidence beats confidence. ENGLISH Our Research Library brings together 500+ papers and regulatory frameworks. Compare primary sources, turn requirements into testable controls, and keep decisions traceable. Three-Yes Test: Safe • Compliant • Pro-Humanity SHIP GOOD AI • Verify so",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
       "title": "I met Lucas last month and we had a great conversation about AI, Agile, AI risks and failures.",
       "link": "https://www.linkedin.com/posts/rkjohnston_aigovops-rai-responsibleai-activity-7495876069007298560-KqJc",
       "date": "Wed, 19 Aug 2026 16:15:21 GMT",
@@ -120,38 +160,6 @@
       "link": "https://www.linkedin.com/posts/lucaslongacre_most-companies-arent-failing-at-ai-because-activity-7495858728747900928-ZxJO",
       "date": "Wed, 19 Aug 2026 15:06:27 GMT",
       "summary": "Most companies aren't failing at AI because of the tech. They're failing because they treat AI-generated code differently than shipping standard software. It's like we forgot every lesson learned over the past few decades. I sat down with Ken Johnston — co-founder of the AiGovOps",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "PROBLEM | 課題\nThird-party AI risk begins after procurement: a vendor may change models, subprocess data, or fail silently.\n\nSOLUTION | 解決策\nMap suppliers/dependencies. Contract audit rights, incident…",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-%E8%AA%B2%E9%A1%8C-third-party-ai-risk-begins-after-activity-7495857709951651841-XosF",
-      "date": "Wed, 19 Aug 2026 15:02:24 GMT",
-      "summary": "PROBLEM | 課題 Third-party AI risk begins after procurement: a vendor may change models, subprocess data, or fail silently. SOLUTION | 解決策 Map suppliers/dependencies. Contract audit rights, incident notice, data controls, model-change alerts, independent validation, rollback, exit",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Governance-as-Code turns policy into a release control—not a forgotten PDF.\n\nPROBLEM / समस्या\nPolicy that cannot run in CI/CD cannot stop unsafe changes.\nCI/CD में न चलने वाली नीति असुरक्षित बदलाव…",
-      "link": "https://www.linkedin.com/posts/bobrapp_governance-as-code-turns-policy-into-a-release-activity-7495827719360913409-n5HM",
-      "date": "Wed, 19 Aug 2026 13:03:14 GMT",
-      "summary": "Governance-as-Code turns policy into a release control—not a forgotten PDF. PROBLEM / समस्या Policy that cannot run in CI/CD cannot stop unsafe changes. CI/CD में न चलने वाली नीति असुरक्षित बदलाव नहीं रोकती। SOLUTIONS / समाधान Version rules as code. Test PRs. Gate releases. Log e",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Looks like I'm LIVE on ZOOM this weekend.  We'll have a great discussion.  Probably talk some about AISI incident as well as hugging face.  Who knows.  \n\nWhat should AI remember — and who is…",
-      "link": "https://www.linkedin.com/posts/rkjohnston_looks-like-im-live-on-zoom-this-weekend-activity-7495626216515829760-fULR",
-      "date": "Tue, 18 Aug 2026 23:42:32 GMT",
-      "summary": "Looks like I'm LIVE on ZOOM this weekend. We'll have a great discussion. Probably talk some about AISI incident as well as hugging face. Who knows. What should AI remember — and who is accountable when AI acts? 🧠 Join us this Saturday for a focused conversation with Ken Johnston",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Second Brain AI Salon Online –02 · Luma",
-      "link": "https://www.linkedin.com/posts/jing-heidi-wu-0a06111b2_second-brain-ai-salon-online-02-luma-activity-7495621941546901504--1TT",
-      "date": "Tue, 18 Aug 2026 23:25:33 GMT",
-      "summary": "What should AI remember — and who is accountable when AI acts? 🧠 Join us this Saturday for a focused conversation with Ken Johnston on AI long-term memory, autonomous agents, trust, and Governance as Code. No long slides, no pitching — just a serious conversation.",
       "image": null,
       "author": "Ken Johnston"
     }
