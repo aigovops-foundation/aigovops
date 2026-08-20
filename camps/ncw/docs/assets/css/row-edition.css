@@ -8,3 +8,12 @@
 
 /* Attendee guide and hosted film: same row-edition cards, tuned for an all-morning phone companion. */
 .row-film{padding:1rem}.row-film video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;margin-top:.65rem;border-radius:.7rem;background:#101312;border:1px solid #3a433c}.row-section-intro{margin:-.2rem 0 1rem;line-height:1.6;max-width:75ch}.row-accomplishments{padding-left:1.15rem;margin:.8rem 0 0}.row-accomplishments li{margin:.7rem 0;line-height:1.55}.row-agenda-grid{align-items:start}.row-agenda{margin:.75rem 0 0;padding-left:0;list-style:none}.row-agenda li{border-top:1px solid #e4dfd4;padding:.65rem 0;line-height:1.5}.row-agenda li:first-child{border-top:0;padding-top:0}.row-agenda a,.row-resource-list a{color:#1b4a2e;text-decoration:underline;text-underline-offset:2px;font-weight:700}.row-resource-list{margin:.25rem 0;padding-left:1.2rem}.row-resource-list li{margin:.7rem 0;line-height:1.55}@media print{.row-film video{display:none}.row-film:after{content:"Film available online: rise-from-the-ash-preview.mp4";font-weight:700}}
+
+/* The controls inside a simulated screen are pictures of software, not software. They are
+   marked `disabled` so a keyboard user cannot tab into a button that will never respond and a
+   screen reader announces them as unavailable — which is the truth. These rules keep the
+   drawing looking exactly as it did: the browser's default dimming of a disabled control would
+   otherwise make the teaching screen look broken rather than simulated. */
+.sim-screen button:disabled{opacity:1;color:inherit;cursor:default}
+.mock-quiz button.selected:disabled{background:#23613D;color:#fff}
+.audio-controls button:disabled{background:#23613D;color:#fff}
