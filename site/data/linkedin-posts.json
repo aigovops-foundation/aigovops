@@ -1,6 +1,30 @@
 {
-  "updated": "2026-08-19T19:09:04Z",
+  "updated": "2026-08-20T07:17:13Z",
   "bob": [
+    {
+      "title": "Boardrooms need AI governance metrics that drive decisions—not decorative dashboards. Track risk (residual risk, drift, severe iss...",
+      "link": "https://www.linkedin.com/posts/bobrapp_boardrooms-need-ai-governance-metrics-that-activity-7495963601350860801-U0Qq",
+      "date": "Wed, 19 Aug 2026 22:03:11 GMT",
+      "summary": "Boardrooms need AI governance metrics that drive decisions—not decorative dashboards. Track risk (residual risk, drift, severe issues), compliance (control coverage, evidence age, exceptions), and human impact (incidents, affected groups, appeals, remediation). Three-Yes Test: Sa",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Evidence beats confidence. ENGLISH Our Research Library brings together 500+ papers and regulatory frameworks. Compare primary sou...",
+      "link": "https://www.linkedin.com/posts/bobrapp_evidence-beats-confidence-english-our-research-activity-7495963498095505410-2iCQ",
+      "date": "Wed, 19 Aug 2026 22:02:46 GMT",
+      "summary": "Evidence beats confidence. ENGLISH Our Research Library brings together 500+ papers and regulatory frameworks. Compare primary sources, turn requirements into testable controls, and keep decisions traceable. Three-Yes Test: Safe • Compliant • Pro-Humanity SHIP GOOD AI • Verify so",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI governance gets weaker when teams rely on one source. PROBLEM | المشكلة Different sources define risk and responsibility differ...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-gets-weaker-when-teams-rely-activity-7495963272005795840-DOwU",
+      "date": "Wed, 19 Aug 2026 22:01:52 GMT",
+      "summary": "AI governance gets weaker when teams rely on one source. PROBLEM | المشكلة Different sources define risk and responsibility differently. One citation is not an evidence map. تختلف المصادر في تعريف المخاطر والمسؤولية. الاستشهاد الواحد ليس خريطة أدلة. SOLUTION | الحل The Research L",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "PROBLEM | 課題 Third-party AI risk begins after procurement: a vendor may change models, subprocess data, or fail silently. SOLUTION...",
       "link": "https://www.linkedin.com/posts/bobrapp_problem-%E8%AA%B2%E9%A1%8C-third-party-ai-risk-begins-after-activity-7495857709951651841-XosF",
@@ -48,33 +72,33 @@
       "summary": "Compliance is not a binder you assemble at the finish line. Day 11 of Level Up Your AI Governance: use a 90-day readiness sprint—not a legal deadline—to turn EU AI Act obligations into operating evidence. DAYS 1–30 — INVENTORY Identify every AI system, intended purpose, risk clas",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "Editable logs are not audit trails. They are narratives that can be rewritten. Post 14/16: Cryptographic Audit Trails Cryptographi...",
-      "link": "https://www.linkedin.com/posts/bobrapp_editable-logs-are-not-audit-trails-they-activity-7495600919464550401-5nAo",
-      "date": "Tue, 18 Aug 2026 22:02:01 GMT",
-      "summary": "Editable logs are not audit trails. They are narratives that can be rewritten. Post 14/16: Cryptographic Audit Trails Cryptographic audit trails link each event to a tamper-evident hash chain: actor, model/version, policy, action, and result. Immutability does not make AI safe. I",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Your AI system changes in production. Your risk assessment should too. The Beacon Tool turns governance into a live operational si...",
-      "link": "https://www.linkedin.com/posts/bobrapp_your-ai-system-changes-in-production-your-activity-7495600671958802432-OrTV",
-      "date": "Tue, 18 Aug 2026 22:01:02 GMT",
-      "summary": "Your AI system changes in production. Your risk assessment should too. The Beacon Tool turns governance into a live operational signal: capture evidence, surface risk, and decide before a small change becomes a public incident. THREE-YES TEST / TEST DES TROIS OUI SAFE / SÛR — Is",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI governance should not end at launch. Beacon is a live operational risk signal: capture evidence, surface risk, set stop thresho...",
-      "link": "https://fr.linkedin.com/posts/bobrapp_ai-governance-should-not-end-at-launch-activity-7495600657383575552-twGq",
-      "date": "Tue, 18 Aug 2026 22:00:58 GMT",
-      "summary": "AI governance should not end at launch. Beacon is a live operational risk signal: capture evidence, surface risk, set stop thresholds, monitor drift, and escalate uncertainty. Three-Yes Test: Safe. Compliant. Pro-Humanity. SHIP GOOD AI • Capture evidence. • Set stop thresholds. •",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "Thank you to Jerred M., past Flywheel winner and founder of OneCourt, for joining us during the 2026 Flywheel Student Pi",
+      "link": "https://www.linkedin.com/posts/ncwtechalliance_flywheelconference-activity-7495993019419209728-6EnJ",
+      "date": "Thu, 20 Aug 2026 00:00:05 GMT",
+      "summary": "Thank you to Jerred M., past Flywheel winner and founder of OneCourt, for joining us during the 2026 Flywheel Student Pitch Competition to share A Founding Story. Jerred gave student founders a behind-the-scenes look at what it really takes to build a company, from the first conc",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Had some pretty positive comments on this podcast.  I'm glad we kept it short so I didn't have time to ramble too much!  Thanks again Lucas.",
+      "link": "https://www.linkedin.com/posts/rkjohnston_had-some-pretty-positive-comments-on-this-activity-7495980300695515136-ERVY",
+      "date": "Wed, 19 Aug 2026 23:09:32 GMT",
+      "summary": "Had some pretty positive comments on this podcast. I'm glad we kept it short so I didn't have time to ramble too much! Thanks again Lucas.",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "A few weeks ago I posted about leveraging office hours at AI House to start building something. Six early-stage founders came on as design partners quite quickly. Over next eight weeks, they used it,…",
+      "link": "https://www.linkedin.com/posts/sanjeevinimittal_a-few-weeks-ago-i-posted-about-leveraging-activity-7495965785924857856-3GW8",
+      "date": "Wed, 19 Aug 2026 22:11:52 GMT",
+      "summary": "A few weeks ago I posted about leveraging office hours at AI House to start building something. Six early-stage founders came on as design partners quite quickly. Over next eight weeks, they used it, challenged it, and told us honestly where it fell short. The biggest thing our f",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "I met Lucas last month and we had a great conversation about AI, Agile, AI risks and failures.",
       "link": "https://www.linkedin.com/posts/rkjohnston_aigovops-rai-responsibleai-activity-7495876069007298560-KqJc",
@@ -88,6 +112,22 @@
       "link": "https://www.linkedin.com/posts/riolongacre_artificialintelligence-aigovernance-devops-activity-7495862193478094849-pxyb",
       "date": "Wed, 19 Aug 2026 15:20:13 GMT",
       "summary": "What happens when companies move so fast to adopt AI that they forget everything they already learned about building technology safely? In this special Signal & Noise Live episode from AI Con, Executive Voice contributor Lucas Longacre sits down with Ken Johnston, co-founder of t",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Most companies aren't failing at AI because of the tech.\nThey're failing because they treat AI-generated code differently than shipping standard software. It's like we forgot every lesson learned…",
+      "link": "https://www.linkedin.com/posts/lucaslongacre_most-companies-arent-failing-at-ai-because-activity-7495858728747900928-ZxJO",
+      "date": "Wed, 19 Aug 2026 15:06:27 GMT",
+      "summary": "Most companies aren't failing at AI because of the tech. They're failing because they treat AI-generated code differently than shipping standard software. It's like we forgot every lesson learned over the past few decades. I sat down with Ken Johnston — co-founder of the AiGovOps",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "PROBLEM | 課題\nThird-party AI risk begins after procurement: a vendor may change models, subprocess data, or fail silently.\n\nSOLUTION | 解決策\nMap suppliers/dependencies. Contract audit rights, incident…",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-%E8%AA%B2%E9%A1%8C-third-party-ai-risk-begins-after-activity-7495857709951651841-XosF",
+      "date": "Wed, 19 Aug 2026 15:02:24 GMT",
+      "summary": "PROBLEM | 課題 Third-party AI risk begins after procurement: a vendor may change models, subprocess data, or fail silently. SOLUTION | 解決策 Map suppliers/dependencies. Contract audit rights, incident notice, data controls, model-change alerts, independent validation, rollback, exit",
       "image": null,
       "author": "Ken Johnston"
     },
@@ -112,46 +152,6 @@
       "link": "https://www.linkedin.com/posts/jing-heidi-wu-0a06111b2_second-brain-ai-salon-online-02-luma-activity-7495621941546901504--1TT",
       "date": "Tue, 18 Aug 2026 23:25:33 GMT",
       "summary": "What should AI remember — and who is accountable when AI acts? 🧠 Join us this Saturday for a focused conversation with Ken Johnston on AI long-term memory, autonomous agents, trust, and Governance as Code. No long slides, no pitching — just a serious conversation.",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Incredible week of #AIGovOps content: 1.",
-      "link": "https://www.linkedin.com/posts/rkjohnston_aigovops-fridayfailfest-failfest-activity-7495534517563064320-88Ds",
-      "date": "Tue, 18 Aug 2026 17:38:09 GMT",
-      "summary": "Incredible week of #AIGovOps content: 1. Event at AI House with wonderful sponsors 2. First ever podcast - 3. Newsletter that broke into the top 100 on Substack for a little while. Our little community focused on making AI Gooder",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Earlier this summer, I logged off and took a trip to Bolivia. It far exceeded anything I imagined. Bolivia was a wonderful reminder of just how much of the world there is left for me to discover. \n\nI…",
-      "link": "https://www.linkedin.com/posts/slbird_earlier-this-summer-i-logged-off-and-took-activity-7495533560909520896--WA9",
-      "date": "Tue, 18 Aug 2026 17:34:21 GMT",
-      "summary": "Earlier this summer, I logged off and took a trip to Bolivia. It far exceeded anything I imagined. Bolivia was a wonderful reminder of just how much of the world there is left for me to discover. I was truly amazed by the landscapes, the people, the wildlife (viscacha are very cu",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Last Sunday I attended my first Seattle WNBA (Women's National Basketball Association) Sneakerball, and what a fun event for a great cause: promoting Equality!\n\nIt was a luncheon followed by the…",
-      "link": "https://www.linkedin.com/posts/joy-chik_last-sunday-i-attended-my-first-seattle-wnba-activity-7495494845147308032-2pJf",
-      "date": "Tue, 18 Aug 2026 15:00:31 GMT",
-      "summary": "Last Sunday I attended my first Seattle WNBA (Women's National Basketball Association) Sneakerball, and what a fun event for a great cause: promoting Equality! It was a luncheon followed by the Seattle Storm vs. Chicago Sky WNBA regular season game, and I just loved the positive",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Netflix's CPTO was asked what she's hiring more of in the AI era, and she skipped past every typical function name. \n\n\"We need more systems thinkers,\" Elizabeth Stone said in July. \"People who can… | Yen Anderson",
-      "link": "https://www.linkedin.com/posts/yenanderson_netflixs-cpto-was-asked-what-shes-hiring-activity-7495472103673028608-l8T4",
-      "date": "Tue, 18 Aug 2026 13:30:09 GMT",
-      "summary": "Netflix's CPTO was asked what she's hiring more of in the AI era, and she skipped past every typical function name. \"We need more systems thinkers,\" Elizabeth Stone said in July. \"People who can look across all the business domains and abstract: here's the building blocks we're g",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "AI governance gets stronger when practitioners compare evidence—not when policies sit in folders.\n\nONLINE MEETUPS (EN/ZH)\n\nDiscuss practical controls, accountability, and recovery when AI systems…",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-gets-stronger-when-practitioners-activity-7495465582176329729-APU-",
-      "date": "Tue, 18 Aug 2026 13:04:14 GMT",
-      "summary": "AI governance gets stronger when practitioners compare evidence—not when policies sit in folders. ONLINE MEETUPS (EN/ZH) Discuss practical controls, accountability, and recovery when AI systems fail. THREE-YES TEST Safe — reduce foreseeable harm. Compliant — show evidence for key",
       "image": null,
       "author": "Ken Johnston"
     }
