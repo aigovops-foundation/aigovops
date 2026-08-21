@@ -1,6 +1,38 @@
 {
-  "updated": "2026-08-21T07:17:09Z",
+  "updated": "2026-08-21T19:11:12Z",
   "bob": [
+    {
+      "title": "Boards need a decision story—not a metric dump. What changed? Who may be affected? Which controls worked? What decision is needed?...",
+      "link": "https://www.linkedin.com/posts/bobrapp_boards-need-a-decision-storynot-a-metric-activity-7496583009056395266-yBXG",
+      "date": "Fri, 21 Aug 2026 15:04:29 GMT",
+      "summary": "Boards need a decision story—not a metric dump. What changed? Who may be affected? Which controls worked? What decision is needed? Track risk (residual risk, drift, severe issues), compliance (control coverage, evidence age, exceptions), and human impact (incidents, affected grou",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "No country can govern AI alone. Models, data, vendors and affected communities cross borders. Multi-polar governance combines shar...",
+      "link": "https://fr.linkedin.com/posts/bobrapp_no-country-can-govern-ai-alone-models-activity-7496552729159589888-0hgY",
+      "date": "Fri, 21 Aug 2026 13:04:10 GMT",
+      "summary": "No country can govern AI alone. Models, data, vendors and affected communities cross borders. Multi-polar governance combines shared evidence, local context and distributed accountability. THREE-YES TEST: Safe? Compliant? Pro-Humanity? SHIP GOOD AI • Map affected groups market by",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI crosses borders. Governance must too. This is multi-polar governance: a model may be built in one country, trained on data from...",
+      "link": "https://fr.linkedin.com/posts/bobrapp_ai-crosses-borders-governance-must-too-activity-7496551878621847552-VIQX",
+      "date": "Fri, 21 Aug 2026 13:00:47 GMT",
+      "summary": "AI crosses borders. Governance must too. This is multi-polar governance: a model may be built in one country, trained on data from another, operated by a vendor elsewhere, and affect communities absent from the design table. Accountability must cover the full chain—models, data,",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "The hardest human-in-the-loop moment is not the review. It is the intervention. If a model recommends, can a person pause, reject,...",
+      "link": "https://www.linkedin.com/posts/bobrapp_the-hardest-human-in-the-loop-moment-is-not-activity-7496446662396067841-FYZL",
+      "date": "Fri, 21 Aug 2026 06:02:42 GMT",
+      "summary": "The hardest human-in-the-loop moment is not the review. It is the intervention. If a model recommends, can a person pause, reject, or escalate in seconds—under stress or during an outage? If not, “human oversight” is only a slogan. Design the path: Recommendation → Review → Appro",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Ken is a legend",
       "link": "https://www.linkedin.com/posts/bobrapp_ai-builders-founders-happy-hour-with-dj-activity-7496393044515012608-SgIm",
@@ -46,38 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-maturity-is-not-a-badge-it-activity-7496190190198374400-81jp",
       "date": "Thu, 20 Aug 2026 13:03:34 GMT",
       "summary": "AI governance maturity is not a badge. It is a decision tool. One framework cannot fit every sector, risk profile, or operating model. Compare 12 maturity model frameworks to measure your baseline, expose gaps, and choose the next practical step. THREE-YES TEST Safe — Detect, red",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "A credit decision is not explainable if the person affected cannot challenge it. In financial services, “the model said no” is not...",
-      "link": "https://www.linkedin.com/posts/bobrapp_a-credit-decision-is-not-explainable-if-the-activity-7496084226614833152-xslr",
-      "date": "Thu, 20 Aug 2026 06:02:30 GMT",
-      "summary": "A credit decision is not explainable if the person affected cannot challenge it. In financial services, “the model said no” is not a reason. Make each decision contestable: • Trace inputs and validate representative populations. • Test fairness and error-rate disparities. • Log m",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Boardrooms need AI governance metrics that drive decisions—not decorative dashboards. Track risk (residual risk, drift, severe iss...",
-      "link": "https://www.linkedin.com/posts/bobrapp_boardrooms-need-ai-governance-metrics-that-activity-7495963601350860801-U0Qq",
-      "date": "Wed, 19 Aug 2026 22:03:11 GMT",
-      "summary": "Boardrooms need AI governance metrics that drive decisions—not decorative dashboards. Track risk (residual risk, drift, severe issues), compliance (control coverage, evidence age, exceptions), and human impact (incidents, affected groups, appeals, remediation). Three-Yes Test: Sa",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Evidence beats confidence. ENGLISH Our Research Library brings together 500+ papers and regulatory frameworks. Compare primary sou...",
-      "link": "https://www.linkedin.com/posts/bobrapp_evidence-beats-confidence-english-our-research-activity-7495963498095505410-2iCQ",
-      "date": "Wed, 19 Aug 2026 22:02:46 GMT",
-      "summary": "Evidence beats confidence. ENGLISH Our Research Library brings together 500+ papers and regulatory frameworks. Compare primary sources, turn requirements into testable controls, and keep decisions traceable. Three-Yes Test: Safe • Compliant • Pro-Humanity SHIP GOOD AI • Verify so",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI governance gets weaker when teams rely on one source. PROBLEM | المشكلة Different sources define risk and responsibility differ...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-gets-weaker-when-teams-rely-activity-7495963272005795840-DOwU",
-      "date": "Wed, 19 Aug 2026 22:01:52 GMT",
-      "summary": "AI governance gets weaker when teams rely on one source. PROBLEM | المشكلة Different sources define risk and responsibility differently. One citation is not an evidence map. تختلف المصادر في تعريف المخاطر والمسؤولية. الاستشهاد الواحد ليس خريطة أدلة. SOLUTION | الحل The Research L",
       "image": null,
       "author": "Bob Rapp"
     }
