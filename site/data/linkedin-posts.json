@@ -1,6 +1,30 @@
 {
-  "updated": "2026-08-20T19:14:24Z",
+  "updated": "2026-08-21T07:17:09Z",
   "bob": [
+    {
+      "title": "Ken is a legend",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-builders-founders-happy-hour-with-dj-activity-7496393044515012608-SgIm",
+      "date": "Fri, 21 Aug 2026 02:29:38 GMT",
+      "summary": "Ken is a legend - always great events",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI agents can scale a community. They cannot replace accountable human judgment. LEVEL UP YOUR AI GOVERNANCE",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-agents-can-scale-a-community-they-cannot-activity-7496326378410328064-Hyh3",
+      "date": "Thu, 20 Aug 2026 22:04:44 GMT",
+      "summary": "AI agents can scale a community. They cannot replace accountable human judgment. LEVEL UP YOUR AI GOVERNANCE | 10/16 Automated agents can triage questions, route experts, surface research, and keep conversations moving. Without boundaries, they also scale confusion, bias, and bad",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Community agents should do more than answer quickly. They can triage questions, route experts, surface research, and sustain conve...",
+      "link": "https://www.linkedin.com/posts/bobrapp_community-agents-should-do-more-than-answer-activity-7496326217248215041-2wYU",
+      "date": "Thu, 20 Aug 2026 22:04:05 GMT",
+      "summary": "Community agents should do more than answer quickly. They can triage questions, route experts, surface research, and sustain conversations. But they must not quietly become decision-makers. GOVERNANCE BY DESIGN • Bound permissions: classify and recommend; do not approve or enforc",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "An “immutable log” is not enough. If nobody independent can verify, restore, and challenge the evidence, you have a record—not acc...",
       "link": "https://www.linkedin.com/posts/bobrapp_an-immutable-log-is-not-enough-if-nobody-activity-7496220714065252352-Zgm8",
@@ -56,33 +80,57 @@
       "summary": "AI governance gets weaker when teams rely on one source. PROBLEM | المشكلة Different sources define risk and responsibility differently. One citation is not an evidence map. تختلف المصادر في تعريف المخاطر والمسؤولية. الاستشهاد الواحد ليس خريطة أدلة. SOLUTION | الحل The Research L",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "PROBLEM | 課題 Third-party AI risk begins after procurement: a vendor may change models, subprocess data, or fail silently. SOLUTION...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-%E8%AA%B2%E9%A1%8C-third-party-ai-risk-begins-after-activity-7495857709951651841-XosF",
-      "date": "Wed, 19 Aug 2026 15:02:24 GMT",
-      "summary": "PROBLEM | 課題 Third-party AI risk begins after procurement: a vendor may change models, subprocess data, or fail silently. SOLUTION | 解決策 Map suppliers/dependencies. Contract audit rights, incident notice, data controls, model-change alerts, independent validation, rollback, exit",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Governance-as-Code turns policy into a release control—not a forgotten PDF. PROBLEM / समस्या Policy that cannot run in CI/CD cannot...",
-      "link": "https://www.linkedin.com/posts/bobrapp_governance-as-code-turns-policy-into-a-release-activity-7495827719360913409-n5HM",
-      "date": "Wed, 19 Aug 2026 13:03:14 GMT",
-      "summary": "Governance-as-Code turns policy into a release control—not a forgotten PDF. PROBLEM / समस्या Policy that cannot run in CI/CD cannot stop unsafe changes. CI/CD में न चलने वाली नीति असुरक्षित बदलाव नहीं रोकती। SOLUTIONS / समाधान Version rules as code. Test PRs. Gate releases. Log e",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Governance-as-Code turns AI policy into an executable release control: not a document checked after deployment. Problem / समस्या Whe...",
-      "link": "https://www.linkedin.com/posts/bobrapp_governance-as-code-turns-ai-policy-into-an-activity-7495827463151927296-VOCn",
-      "date": "Wed, 19 Aug 2026 13:02:13 GMT",
-      "summary": "Governance-as-Code turns AI policy into an executable release control: not a document checked after deployment. Problem / समस्या When policy sits outside CI/CD, teams cannot reliably prove what changed, who approved it, or whether rollback works. Solutions / समाधान Version govern",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
+    {
+      "title": "AI Builders & Founders Happy Hour with DJ Sanjeet · Luma",
+      "link": "https://www.linkedin.com/posts/kenm_ai-builders-founders-happy-hour-with-dj-activity-7496345299980914688-nU_9",
+      "date": "Thu, 20 Aug 2026 23:19:55 GMT",
+      "summary": "A couple of announcements. If you’re seeing this, consider it your call to adventure. I have one spot open tonight for a wildly curated rooftop dinner party at a penthouse rooftop in Seattle starting at 6:30 PM after a last-minute drop. The room will include founders behind some",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "Community agents should do more than answer quickly.\n\nThey can triage questions, route experts, surface research, and sustain conversations. But they must not quietly become…",
+      "link": "https://www.linkedin.com/posts/bobrapp_community-agents-should-do-more-than-answer-activity-7496326217248215041-2wYU",
+      "date": "Thu, 20 Aug 2026 22:04:05 GMT",
+      "summary": "Community agents should do more than answer quickly. They can triage questions, route experts, surface research, and sustain conversations. But they must not quietly become decision-makers. GOVERNANCE BY DESIGN • Bound permissions: classify and recommend; do not approve or enforc",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "We just settle on this months meetup theme.",
+      "link": "https://www.linkedin.com/posts/rkjohnston_failfest-activity-7496345952597860352-b46Y",
+      "date": "Thu, 20 Aug 2026 23:22:30 GMT",
+      "summary": "#FAILFEST LIVE! I'm super excited. We just settle on this months meetup theme. We are doing an entire hour of AI Failure stories where we break the case down, point out the fails, and then talk about what the prevention could have/should have been. This is an open call for anyone",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "I attended the Institute for AI Transformation Leaders in AI Summit in Nashville over the past few days, but the most interesting part of the two days definitely happened after the main programming…",
+      "link": "https://www.linkedin.com/posts/asiakwiggins_i-attended-the-institute-for-ai-transformation-activity-7496248951524909056-92mi",
+      "date": "Thu, 20 Aug 2026 16:57:04 GMT",
+      "summary": "I attended the Institute for AI Transformation Leaders in AI Summit in Nashville over the past few days, but the most interesting part of the two days definitely happened after the main programming ended with the thoughtfully curated Think Tank Dinners. They brought together lead",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "I got tired of AI slop this month, so I've been re-reading the favorite physical books on my shelf. \n\nThe one I keep coming back to is Thinking in Systems by Donella Meadows. She drafted it in the… | Yen Anderson",
+      "link": "https://www.linkedin.com/posts/yenanderson_i-got-tired-of-ai-slop-this-month-so-ive-activity-7496182611334139904-1duO",
+      "date": "Thu, 20 Aug 2026 12:33:27 GMT",
+      "summary": "I got tired of AI slop this month, so I've been re-reading the favorite physical books on my shelf. The one I keep coming back to is Thinking in Systems by Donella Meadows. She drafted it in the 1990s and died before it was published in 2008. Reading it now, 18 years later, still",
+      "image": null,
+      "author": "Ken Johnston"
+    },
+    {
+      "title": "The most expensive feedback this leadership team ever received changed nothing.\n \nTheir board chair had put more than forty million dollars into the company. He told the CEO and the president they…",
+      "link": "https://www.linkedin.com/posts/kellyameerbott_the-most-expensive-feedback-this-leadership-activity-7496180969654075392-yA8a",
+      "date": "Thu, 20 Aug 2026 12:26:55 GMT",
+      "summary": "The most expensive feedback this leadership team ever received changed nothing. Their board chair had put more than forty million dollars into the company. He told the CEO and the president they had exactly one problem. They took too long to make decisions. You would think that s",
+      "image": null,
+      "author": "Ken Johnston"
+    },
     {
       "title": "Was a great event last week at AI House.  Loved partnering with OneSixOne Ventures and Pablo Casilimas.  Check out the highlight video!",
       "link": "https://www.linkedin.com/posts/rkjohnston_was-a-great-event-last-week-at-ai-house-activity-7496277708897808386-cp4H",
@@ -96,70 +144,6 @@
       "link": "https://www.linkedin.com/posts/pablo-casilimas-1707a9113_so-many-learnings-about-how-vulnerable-we-activity-7496242270917099520-ogok",
       "date": "Thu, 20 Aug 2026 16:30:31 GMT",
       "summary": "",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Joe Levy posted on LinkedIn",
-      "link": "https://www.linkedin.com/posts/mrjoelevy_the-best-software-vendors-in-the-ai-era-wont-activity-7496215916288835584-_KoK",
-      "date": "Thu, 20 Aug 2026 14:45:47 GMT",
-      "summary": "",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Thank you to Jerred M., past Flywheel winner and founder of OneCourt, for joining us during the 2026 Flywheel Student Pi",
-      "link": "https://www.linkedin.com/posts/ncwtechalliance_flywheelconference-activity-7495993019419209728-6EnJ",
-      "date": "Thu, 20 Aug 2026 00:00:05 GMT",
-      "summary": "Thank you to Jerred M., past Flywheel winner and founder of OneCourt, for joining us during the 2026 Flywheel Student Pitch Competition to share A Founding Story. Jerred gave student founders a behind-the-scenes look at what it really takes to build a company, from the first conc",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Had some pretty positive comments on this podcast.  I'm glad we kept it short so I didn't have time to ramble too much!  Thanks again Lucas.",
-      "link": "https://www.linkedin.com/posts/rkjohnston_had-some-pretty-positive-comments-on-this-activity-7495980300695515136-ERVY",
-      "date": "Wed, 19 Aug 2026 23:09:32 GMT",
-      "summary": "Had some pretty positive comments on this podcast. I'm glad we kept it short so I didn't have time to ramble too much! Thanks again Lucas.",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "A few weeks ago I posted about leveraging office hours at AI House to start building something. Six early-stage founders came on as design partners quite quickly. Over next eight weeks, they used it,…",
-      "link": "https://www.linkedin.com/posts/sanjeevinimittal_a-few-weeks-ago-i-posted-about-leveraging-activity-7495965785924857856-3GW8",
-      "date": "Wed, 19 Aug 2026 22:11:52 GMT",
-      "summary": "A few weeks ago I posted about leveraging office hours at AI House to start building something. Six early-stage founders came on as design partners quite quickly. Over next eight weeks, they used it, challenged it, and told us honestly where it fell short. The biggest thing our f",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Evidence beats confidence.\n\nENGLISH\nOur Research Library brings together 500+ papers and regulatory frameworks. Compare primary sources, turn requirements into testable controls, and keep decisions…",
-      "link": "https://www.linkedin.com/posts/bobrapp_evidence-beats-confidence-english-our-research-activity-7495963498095505410-2iCQ",
-      "date": "Wed, 19 Aug 2026 22:02:46 GMT",
-      "summary": "Evidence beats confidence. ENGLISH Our Research Library brings together 500+ papers and regulatory frameworks. Compare primary sources, turn requirements into testable controls, and keep decisions traceable. Three-Yes Test: Safe • Compliant • Pro-Humanity SHIP GOOD AI • Verify so",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "I met Lucas last month and we had a great conversation about AI, Agile, AI risks and failures.",
-      "link": "https://www.linkedin.com/posts/rkjohnston_aigovops-rai-responsibleai-activity-7495876069007298560-KqJc",
-      "date": "Wed, 19 Aug 2026 16:15:21 GMT",
-      "summary": "This is exciting! I met Lucas last month and we had a great conversation about AI, Agile, AI risks and failures. It was a super fun and natural conversation. Check out the podcast now! #AiGovOps, #RAI, #ResponsibleAI, #AIGovernance #GRC, AiGovOps Foundation",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "What happens when companies move so fast to adopt AI that they forget everything they already learned about building tec",
-      "link": "https://www.linkedin.com/posts/riolongacre_artificialintelligence-aigovernance-devops-activity-7495862193478094849-pxyb",
-      "date": "Wed, 19 Aug 2026 15:20:13 GMT",
-      "summary": "What happens when companies move so fast to adopt AI that they forget everything they already learned about building technology safely? In this special Signal & Noise Live episode from AI Con, Executive Voice contributor Lucas Longacre sits down with Ken Johnston, co-founder of t",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Most companies aren't failing at AI because of the tech.\nThey're failing because they treat AI-generated code differently than shipping standard software. It's like we forgot every lesson learned…",
-      "link": "https://www.linkedin.com/posts/lucaslongacre_most-companies-arent-failing-at-ai-because-activity-7495858728747900928-ZxJO",
-      "date": "Wed, 19 Aug 2026 15:06:27 GMT",
-      "summary": "Most companies aren't failing at AI because of the tech. They're failing because they treat AI-generated code differently than shipping standard software. It's like we forgot every lesson learned over the past few decades. I sat down with Ken Johnston — co-founder of the AiGovOps",
       "image": null,
       "author": "Ken Johnston"
     }
