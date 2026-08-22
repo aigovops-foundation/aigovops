@@ -1,6 +1,22 @@
 {
-  "updated": "2026-08-21T19:11:12Z",
+  "updated": "2026-08-22T07:12:42Z",
   "bob": [
+    {
+      "title": "Agentic AI acts after the prompt ends: planning, using tools, accessing data, and handing off work. Guardrails must run at runtime...",
+      "link": "https://www.linkedin.com/posts/bobrapp_agentic-ai-acts-after-the-prompt-ends-planning-activity-7496688387202994177-bucC",
+      "date": "Fri, 21 Aug 2026 22:03:13 GMT",
+      "summary": "Agentic AI acts after the prompt ends: planning, using tools, accessing data, and handing off work. Guardrails must run at runtime—not only in policy. एजेंटिक AI प्रॉम्प्ट के बाद भी योजना, टूल, डेटा और हैंडऑफ संभालता है। सुरक्षा-नियंत्रण रनटाइम में चलें—सिर्फ नीति में नहीं। THREE",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Agents do more than answer. After a prompt, they plan, use tools, access data, and hand off work. Guardrails must run at runtime—n...",
+      "link": "https://www.linkedin.com/posts/bobrapp_agents-do-more-than-answer-after-a-prompt-activity-7496688124765343744-zAiB",
+      "date": "Fri, 21 Aug 2026 22:02:11 GMT",
+      "summary": "Agents do more than answer. After a prompt, they plan, use tools, access data, and hand off work. Guardrails must run at runtime—not only in a prompt. PROBLEM A safe prompt can still trigger an unsafe action. SOLUTIONS Scope tools and permissions. Log actions, data access, and ha",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Boards need a decision story—not a metric dump. What changed? Who may be affected? Which controls worked? What decision is needed?...",
       "link": "https://www.linkedin.com/posts/bobrapp_boards-need-a-decision-storynot-a-metric-activity-7496583009056395266-yBXG",
@@ -62,22 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_an-immutable-log-is-not-enough-if-nobody-activity-7496220714065252352-Zgm8",
       "date": "Thu, 20 Aug 2026 15:04:51 GMT",
       "summary": "An “immutable log” is not enough. If nobody independent can verify, restore, and challenge the evidence, you have a record—not accountability. Cryptographic audit trails link actor, model/version, policy, action, result, and time in a signed, tamper-evident hash chain. Three-Yes",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI governance maturity is not a badge. It is a decision tool. Our 12 maturity-model frameworks help teams: 1) Baseline controls an...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-maturity-is-not-a-badge-it-activity-7496190349296623616-6K2D",
-      "date": "Thu, 20 Aug 2026 13:04:12 GMT",
-      "summary": "AI governance maturity is not a badge. It is a decision tool. Our 12 maturity-model frameworks help teams: 1) Baseline controls and evidence. 2) Choose a framework that fits the context. 3) Log gaps with owners, deadlines, and closure evidence. 4) Reassess after material change.",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI governance maturity is not a badge. It is a decision tool. One framework cannot fit every sector, risk profile, or operating mo...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-maturity-is-not-a-badge-it-activity-7496190190198374400-81jp",
-      "date": "Thu, 20 Aug 2026 13:03:34 GMT",
-      "summary": "AI governance maturity is not a badge. It is a decision tool. One framework cannot fit every sector, risk profile, or operating model. Compare 12 maturity model frameworks to measure your baseline, expose gaps, and choose the next practical step. THREE-YES TEST Safe — Detect, red",
       "image": null,
       "author": "Bob Rapp"
     }
