@@ -1,6 +1,30 @@
 {
-  "updated": "2026-08-22T07:12:42Z",
+  "updated": "2026-08-22T19:07:17Z",
   "bob": [
+    {
+      "title": "Technical debt hides in missing lineage. If you cannot trace data → model → evaluation → deployment → monitoring → retirement, gov...",
+      "link": "https://www.linkedin.com/posts/bobrapp_technical-debt-hides-in-missing-lineage-activity-7496914924154044416-oVNA",
+      "date": "Sat, 22 Aug 2026 13:03:24 GMT",
+      "summary": "Technical debt hides in missing lineage. If you cannot trace data → model → evaluation → deployment → monitoring → retirement, governance is not auditable. Three-Yes Test: Safe? Compliant? Pro-Humanity? SHIP GOOD AI / اشحن الذكاء الجيد □ Version every artifact. □ Link evidence to",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Retail AI can forecast demand, trigger reorders, and change prices before human review. Speed without governance scales waste, sto...",
+      "link": "https://www.linkedin.com/posts/bobrapp_retail-ai-can-forecast-demand-trigger-reorders-activity-7496914910983929857-6GwJ",
+      "date": "Sat, 22 Aug 2026 13:03:21 GMT",
+      "summary": "Retail AI can forecast demand, trigger reorders, and change prices before human review. Speed without governance scales waste, stockouts, unfair outcomes, and risk. SOLUTIONS Set approval thresholds, impact checks, audit logs, and rollback paths. THREE-YES TEST SAFE: Limit harm;",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI technical debt is a lineage problem. If data → model → evaluation → deployment → monitoring → retirement cannot be traced, fail...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-technical-debt-is-a-lineage-problem-activity-7496914746294636544-5b7s",
+      "date": "Sat, 22 Aug 2026 13:02:41 GMT",
+      "summary": "AI technical debt is a lineage problem. If data → model → evaluation → deployment → monitoring → retirement cannot be traced, failures cannot be explained or reproduced. Missing lineage is a governance liability. PROBLEM / المشكلة Hidden transformations and unversioned models mak",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Agentic AI acts after the prompt ends: planning, using tools, accessing data, and handing off work. Guardrails must run at runtime...",
       "link": "https://www.linkedin.com/posts/bobrapp_agentic-ai-acts-after-the-prompt-ends-planning-activity-7496688387202994177-bucC",
@@ -54,30 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_ai-builders-founders-happy-hour-with-dj-activity-7496393044515012608-SgIm",
       "date": "Fri, 21 Aug 2026 02:29:38 GMT",
       "summary": "Ken is a legend - always great events",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI agents can scale a community. They cannot replace accountable human judgment. LEVEL UP YOUR AI GOVERNANCE",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-agents-can-scale-a-community-they-cannot-activity-7496326378410328064-Hyh3",
-      "date": "Thu, 20 Aug 2026 22:04:44 GMT",
-      "summary": "AI agents can scale a community. They cannot replace accountable human judgment. LEVEL UP YOUR AI GOVERNANCE | 10/16 Automated agents can triage questions, route experts, surface research, and keep conversations moving. Without boundaries, they also scale confusion, bias, and bad",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Community agents should do more than answer quickly. They can triage questions, route experts, surface research, and sustain conve...",
-      "link": "https://www.linkedin.com/posts/bobrapp_community-agents-should-do-more-than-answer-activity-7496326217248215041-2wYU",
-      "date": "Thu, 20 Aug 2026 22:04:05 GMT",
-      "summary": "Community agents should do more than answer quickly. They can triage questions, route experts, surface research, and sustain conversations. But they must not quietly become decision-makers. GOVERNANCE BY DESIGN • Bound permissions: classify and recommend; do not approve or enforc",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An “immutable log” is not enough. If nobody independent can verify, restore, and challenge the evidence, you have a record—not acc...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-immutable-log-is-not-enough-if-nobody-activity-7496220714065252352-Zgm8",
-      "date": "Thu, 20 Aug 2026 15:04:51 GMT",
-      "summary": "An “immutable log” is not enough. If nobody independent can verify, restore, and challenge the evidence, you have a record—not accountability. Cryptographic audit trails link actor, model/version, policy, action, result, and time in a signed, tamper-evident hash chain. Three-Yes",
       "image": null,
       "author": "Bob Rapp"
     }
