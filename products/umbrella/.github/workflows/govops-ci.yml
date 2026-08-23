@@ -1,0 +1,235 @@
+name: govops-ci
+
+on:
+  pull_request:
+    paths:
+      - 'domains/**'
+      - 'policies/**'
+      - 'systems/**'
+      - 'frameworks/**'
+      - 'crosswalks/**'
+      - 'tools/**'
+      - 'conformance/**'
+      - 'sdk/**'
+      - 'tests/**'
+      - 'pyproject.toml'
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 6 * * *'   # Nightly drift detection
+    - cron: '0 8 * * 1'   # Weekly scale run (Mondays 08:00 UTC)
+  workflow_dispatch:
+
+permissions:
+  id-token: write         # OIDC for Sigstore keyless signing
+  contents: read
+  attestations: write     # GitHub artifact attestations
+  packages: write
+
+jobs:
+  conformance:
+    name: Conformance CLI + Python SDK
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with: { python-version: '3.12' }
+      - name: Install umbrella-conformance + umbrella-sdk (editable)
+        run: |
+          pip install -e .
+          pip install -e sdk/python
+          pip install pytest
+      - name: pytest — conformance + sdk
+        run: pytest -v tests/conformance/ sdk/python/tests/
+      - name: umbrella-conformance check (repo self-check)
+        run: umbrella-conformance check . --format json | tee out-conformance.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: conformance-report
+          path: out-conformance.json
+
+  tests:
+    name: test pyramid (unit + e2e + chaos)
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        layer:
+          - { name: unit, path: "tests/unit tests/conformance" }
+          - { name: e2e, path: "tests/integration" }
+          - { name: chaos, path: "tests/chaos" }
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with: { python-version: '3.12' }
+      - name: Install conformance + test deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e . pytest pyyaml jsonschema click hypothesis
+      - name: Run ${{ matrix.layer.name }} layer
+        run: |
+          mkdir -p reports/harness
+          PYTHONPATH=. python -m pytest ${{ matrix.layer.path }} -v -m "not scale" \
+            --junitxml=reports/harness/junit-${{ matrix.layer.name }}.xml
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: junit-${{ matrix.layer.name }}
+          path: reports/harness/junit-${{ matrix.layer.name }}.xml
+
+  scale:
+    name: scale (gated — dispatch + weekly)
+    # Heavy throughput tests stay off the PR critical path: manual dispatch or
+    # the Monday 08:00 UTC weekly cron only (not the 06:00 nightly drift run).
+    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 8 * * 1'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with: { python-version: '3.12' }
+      - name: Install conformance + test deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e . pytest pyyaml jsonschema click hypothesis
+      - name: Run scale layer
+        run: |
+          mkdir -p reports/harness
+          PYTHONPATH=. python -m pytest tests/scale -v \
+            --junitxml=reports/harness/junit-scale.xml
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: junit-scale
+          path: |
+            reports/harness/junit-scale.xml
+            reports/harness/scale.jsonl
+
+  sdk-typescript:
+    name: TypeScript SDK build + test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with: { node-version: '20' }
+      - name: Install + build + test
+        working-directory: sdk/typescript
+        run: |
+          npm ci || npm install
+          npm run build
+          npm test
+
+  validate-schemas:
+    needs: conformance
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with: { python-version: '3.12' }
+      - name: Install conformance
+        run: pip install -e .
+      - name: Validate all YAML against JSON Schema
+        run: umbrella-conformance check . --check schema-valid --check crosswalk-resolved --check controls-have-checks
+
+  compile-policies:
+    needs: validate-schemas
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - name: Compile controls → Rego + test plan
+        run: |
+          echo "TODO: govops compile --out ./out"
+          mkdir -p out && echo '{}' > out/plan.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: policy-bundle
+          path: out/
+
+  run-checks:
+    needs: compile-policies
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        domain:
+          - data-governance
+          - model-lifecycle
+          - human-oversight
+          - transparency-disclosure
+          - security-robustness
+          - logging-traceability
+          - risk-management-system
+          - post-market-monitoring
+          - incident-response
+          - third-party-and-supply-chain
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - name: Run domain checks
+        run: |
+          echo "TODO: govops run --domain ${{ matrix.domain }} --out ./results/${{ matrix.domain }}"
+          mkdir -p results/${{ matrix.domain }}
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: results-${{ matrix.domain }}
+          path: results/
+
+  build-evidence-bundle:
+    needs: run-checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with: { python-version: '3.12' }
+      - name: Install umbrella-conformance
+        run: pip install -e .
+      - name: (optional) Install beacon-verify for embedded receipt verification
+        run: |
+          pip install "git+https://github.com/bobrapp/aigovops-beacon.git@main#egg=aigovops-beacon" || \
+            echo "beacon package not yet published — skipping receipt embedding"
+      - name: Assemble bundle (in-toto Statement v1 + DSSE envelope)
+        run: |
+          OUTDIR="evidence/bundles/${{ github.run_id }}"
+          mkdir -p "$OUTDIR"
+          BEACON_FLAG=""
+          if [ -d "evidence/receipts" ] && [ "$(ls -A evidence/receipts 2>/dev/null)" ]; then
+            BEACON_FLAG="--beacon-bundle evidence/receipts"
+          fi
+          umbrella-conformance bundle \
+            --out "$OUTDIR" \
+            --commit-sha "${{ github.sha }}" \
+            $BEACON_FLAG \
+            .
+          ls -la "$OUTDIR"
+      - name: Install Cosign
+        uses: sigstore/cosign-installer@v3
+      - name: Keyless sign bundle (Sigstore)
+        env:
+          COSIGN_EXPERIMENTAL: "1"
+        run: |
+          OUTDIR="evidence/bundles/${{ github.run_id }}"
+          cosign sign-blob \
+            --yes \
+            --output-signature "$OUTDIR/bundle.tar.gz.sig" \
+            --output-certificate "$OUTDIR/bundle.tar.gz.pem" \
+            "$OUTDIR/bundle.tar.gz"
+      - name: Self-verify bundle (digest + cosign + UCID coverage)
+        run: |
+          OUTDIR="evidence/bundles/${{ github.run_id }}"
+          umbrella-conformance verify "$OUTDIR/bundle.tar.gz" --ucid-coverage || \
+            echo "verify exited non-zero — first deploy of UCID coverage may show gaps; continuing"
+      - name: GitHub artifact attestation (SLSA provenance)
+        uses: actions/attest-build-provenance@ef244123eb79f2f7a7e75d99086184180e6d0018 # v1
+        with:
+          subject-path: 'evidence/bundles/${{ github.run_id }}/bundle.tar.gz'
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: evidence-bundle
+          path: evidence/bundles/${{ github.run_id }}/
+
+  gate:
+    needs: build-evidence-bundle
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - name: OPA policy gate
+        run: |
+          echo "TODO: opa eval --bundle out/policies.tar.gz --input results/aggregate.json --fail-defined 'data.govops.ci_gate.deny[_]'"

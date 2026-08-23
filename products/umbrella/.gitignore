@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.pytest_cache/
+
+# Build / outputs (regeneratable)
+out/
+dist/
+build/
+*.log
+
+# Test harness artifacts (regenerated on every run)
+reports/harness/
+tests/e2e/test-results/
+tests/e2e/playwright-report/
+tests/e2e/.playwright/
+
+# Node
+node_modules/
+*.tsbuildinfo
+sdk/typescript/dist/
+sdk/typescript/node_modules/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Local secrets — NEVER commit
+*.pem
+*.key
+cosign.key
+secrets.local.yaml
+
+# Evidence outputs are signed and published separately; do not commit raw working bundles
+evidence/bundles/*/
+!evidence/bundles/.gitkeep
