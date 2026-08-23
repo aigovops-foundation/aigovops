@@ -1,0 +1,32 @@
+name: dependency-triage
+
+# The trunk adopting the estate's shared dependency triage — ladder row 11a, and the FIRST
+# adoption of this lane anywhere in the estate.
+#
+# It answers what Dependabot does not: not "which version clears the advisory" but "which
+# version still works". It proves a proposed fix by running the verify command, and refuses to
+# recommend the breaking kind.
+#
+# `verify_command: npm test` is the point of the lane, not decoration — a fix that clears an
+# advisory and reddens the suite is not a fix. This repo's `npm test` is scoped to its
+# workspaces (shared, packages/*, jeeves), so the check runs against what the trunk actually
+# builds.
+#
+# Weekly rather than on every push: an advisory appearing is a calendar event, not a code event,
+# and running it per-push would say the same thing forty times a day.
+
+on:
+  schedule:
+    - cron: "30 12 * * 1"   # Mondays 12:30 UTC
+  workflow_dispatch:
+
+permissions: { contents: read }
+
+jobs:
+  dep-triage:
+    uses: aigovops-foundation/aigovops-library-june-ken-bob/.github/workflows/reusable-dependency-triage.yml@main
+    with:
+      working_directory: "."
+      node_version: "20"
+      audit_level: "high"
+      verify_command: "npm test"

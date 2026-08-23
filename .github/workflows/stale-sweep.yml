@@ -1,0 +1,25 @@
+name: stale-sweep
+
+# The trunk adopting the estate's shared stale sweep — ladder row 11a.
+#
+# Four products were merged into this repo in one night. Branches and PRs that belonged to those
+# products' old homes are exactly the kind of thing that goes quiet and stays quiet. This is a
+# REPORT, not a gate: it reports and does not fail, because deciding a branch is dead is a
+# human's call, not a schedule's.
+#
+# 14:30 UTC on the 1st — thirty minutes after the Library's.
+
+on:
+  schedule:
+    - cron: "30 14 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  stale:
+    uses: aigovops-foundation/aigovops-library-june-ken-bob/.github/workflows/reusable-stale-sweep.yml@main
+    with:
+      fail_on_findings: false

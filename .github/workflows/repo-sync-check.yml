@@ -1,0 +1,20 @@
+name: repo-sync-check
+
+# The trunk adopting the estate's shared repo-sync check — ladder row 11a.
+#
+# It answers the one question a repo cannot answer about itself from inside CI: is anything that
+# matters living ONLY on somebody's laptop? That question got sharper the night four products
+# were subtree-merged here from four separate homes.
+#
+# Mondays 13:30 UTC — thirty minutes after the Library's.
+
+on:
+  schedule:
+    - cron: "30 13 * * 1"
+  workflow_dispatch:
+
+permissions: { contents: read }
+
+jobs:
+  repo-sync:
+    uses: aigovops-foundation/aigovops-library-june-ken-bob/.github/workflows/reusable-repo-sync-check.yml@main
