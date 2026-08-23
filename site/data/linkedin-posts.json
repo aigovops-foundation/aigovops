@@ -1,6 +1,30 @@
 {
-  "updated": "2026-08-23T07:13:29Z",
+  "updated": "2026-08-23T19:07:29Z",
   "bob": [
+    {
+      "title": "A transparent AI system is not one that reveals everything. It is one that makes the right things understandable to the people aff...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-transparent-ai-system-is-not-one-that-reveals-activity-7497277306072174592--AMw",
+      "date": "Sun, 23 Aug 2026 13:03:22 GMT",
+      "summary": "A transparent AI system is not one that reveals everything. It is one that makes the right things understandable to the people affected by its decisions. AI ethics means more than a principles document. Make sure people can understand what the system decides, which data and assum",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI ethics is not a promise. It is a path people can inspect. Meaningful transparency makes five things understandable to affected...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-ethics-is-not-a-promise-it-is-a-path-activity-7497277252250853376-Le6B",
+      "date": "Sun, 23 Aug 2026 13:03:10 GMT",
+      "summary": "AI ethics is not a promise. It is a path people can inspect. Meaningful transparency makes five things understandable to affected people: • What decision was made—and why • Which assumptions shaped it • Where uncertainty remains • How to challenge or appeal it • Who is accountabl",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Telecom AI agents can dispute bills, change plans, and decide whom to retain. That is delegated authority over money, access, and...",
+      "link": "https://www.linkedin.com/posts/bobrapp_telecom-ai-agents-can-dispute-bills-change-activity-7497277221494083584-1zde",
+      "date": "Sun, 23 Aug 2026 13:03:02 GMT",
+      "summary": "Telecom AI agents can dispute bills, change plans, and decide whom to retain. That is delegated authority over money, access, and fairness—not “just support.” Problem Without guardrails, agents can alter terms, waive fees inconsistently, or prioritize retention over the customer.",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Problem / समस्या: Legal AI agents can review contracts, negotiate clauses, and research law—but semi-autonomy may create commitments...",
       "link": "https://www.linkedin.com/posts/bobrapp_problem-%E0%A4%B8%E0%A4%AE%E0%A4%B8%E0%A4%AF-legal-ai-agents-can-review-activity-7497050632810565632-XvNI",
@@ -54,30 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_agentic-ai-acts-after-the-prompt-ends-planning-activity-7496688387202994177-bucC",
       "date": "Fri, 21 Aug 2026 22:03:13 GMT",
       "summary": "Agentic AI acts after the prompt ends: planning, using tools, accessing data, and handing off work. Guardrails must run at runtime—not only in policy. एजेंटिक AI प्रॉम्प्ट के बाद भी योजना, टूल, डेटा और हैंडऑफ संभालता है। सुरक्षा-नियंत्रण रनटाइम में चलें—सिर्फ नीति में नहीं। THREE",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Agents do more than answer. After a prompt, they plan, use tools, access data, and hand off work. Guardrails must run at runtime—n...",
-      "link": "https://www.linkedin.com/posts/bobrapp_agents-do-more-than-answer-after-a-prompt-activity-7496688124765343744-zAiB",
-      "date": "Fri, 21 Aug 2026 22:02:11 GMT",
-      "summary": "Agents do more than answer. After a prompt, they plan, use tools, access data, and hand off work. Guardrails must run at runtime—not only in a prompt. PROBLEM A safe prompt can still trigger an unsafe action. SOLUTIONS Scope tools and permissions. Log actions, data access, and ha",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Boards need a decision story—not a metric dump. What changed? Who may be affected? Which controls worked? What decision is needed?...",
-      "link": "https://www.linkedin.com/posts/bobrapp_boards-need-a-decision-storynot-a-metric-activity-7496583009056395266-yBXG",
-      "date": "Fri, 21 Aug 2026 15:04:29 GMT",
-      "summary": "Boards need a decision story—not a metric dump. What changed? Who may be affected? Which controls worked? What decision is needed? Track risk (residual risk, drift, severe issues), compliance (control coverage, evidence age, exceptions), and human impact (incidents, affected grou",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "No country can govern AI alone. Models, data, vendors and affected communities cross borders. Multi-polar governance combines shar...",
-      "link": "https://fr.linkedin.com/posts/bobrapp_no-country-can-govern-ai-alone-models-activity-7496552729159589888-0hgY",
-      "date": "Fri, 21 Aug 2026 13:04:10 GMT",
-      "summary": "No country can govern AI alone. Models, data, vendors and affected communities cross borders. Multi-polar governance combines shared evidence, local context and distributed accountability. THREE-YES TEST: Safe? Compliant? Pro-Humanity? SHIP GOOD AI • Map affected groups market by",
       "image": null,
       "author": "Bob Rapp"
     }
