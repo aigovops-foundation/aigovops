@@ -1,6 +1,30 @@
 {
-  "updated": "2026-08-22T19:07:17Z",
+  "updated": "2026-08-23T07:13:29Z",
   "bob": [
+    {
+      "title": "Problem / समस्या: Legal AI agents can review contracts, negotiate clauses, and research law—but semi-autonomy may create commitments...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-%E0%A4%B8%E0%A4%AE%E0%A4%B8%E0%A4%AF-legal-ai-agents-can-review-activity-7497050632810565632-XvNI",
+      "date": "Sat, 22 Aug 2026 22:02:39 GMT",
+      "summary": "Problem / समस्या: Legal AI agents can review contracts, negotiate clauses, and research law—but semi-autonomy may create commitments without approval. / कानूनी AI एजेंट अनुबंधों की समीक्षा, क्लॉज़ पर बातचीत और शोध कर सकते हैं—पर अर्ध-स्वायत्तता बिना अनुमोदन प्रतिबद्धता बना सकती ह",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "ENGLISH A policy PDF states intent. It cannot prove operational control. Compliance-as-Code turns policy into versioned, testable...",
+      "link": "https://www.linkedin.com/posts/bobrapp_english-a-policy-pdf-states-intent-it-cannot-activity-7497050586819813376-VPKA",
+      "date": "Sat, 22 Aug 2026 22:02:28 GMT",
+      "summary": "ENGLISH A policy PDF states intent. It cannot prove operational control. Compliance-as-Code turns policy into versioned, testable rules and an automated audit trail. Record: model/version, input context, decision, reviewer, exception, timestamp. Summary: Evidence must be queryabl",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Policy should not live in a PDF no one can test. Compliance-as-code makes governance executable: map requirements to controls, run...",
+      "link": "https://www.linkedin.com/posts/bobrapp_policy-should-not-live-in-a-pdf-no-one-can-activity-7497050180127547392-gmKz",
+      "date": "Sat, 22 Aug 2026 22:00:51 GMT",
+      "summary": "Policy should not live in a PDF no one can test. Compliance-as-code makes governance executable: map requirements to controls, run them in the delivery pipeline, and preserve evidence automatically. A useful audit trail records the model/version, input context, decision, reviewer",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Technical debt hides in missing lineage. If you cannot trace data → model → evaluation → deployment → monitoring → retirement, gov...",
       "link": "https://www.linkedin.com/posts/bobrapp_technical-debt-hides-in-missing-lineage-activity-7496914924154044416-oVNA",
@@ -54,30 +78,6 @@
       "link": "https://fr.linkedin.com/posts/bobrapp_no-country-can-govern-ai-alone-models-activity-7496552729159589888-0hgY",
       "date": "Fri, 21 Aug 2026 13:04:10 GMT",
       "summary": "No country can govern AI alone. Models, data, vendors and affected communities cross borders. Multi-polar governance combines shared evidence, local context and distributed accountability. THREE-YES TEST: Safe? Compliant? Pro-Humanity? SHIP GOOD AI • Map affected groups market by",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI crosses borders. Governance must too. This is multi-polar governance: a model may be built in one country, trained on data from...",
-      "link": "https://fr.linkedin.com/posts/bobrapp_ai-crosses-borders-governance-must-too-activity-7496551878621847552-VIQX",
-      "date": "Fri, 21 Aug 2026 13:00:47 GMT",
-      "summary": "AI crosses borders. Governance must too. This is multi-polar governance: a model may be built in one country, trained on data from another, operated by a vendor elsewhere, and affect communities absent from the design table. Accountability must cover the full chain—models, data,",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "The hardest human-in-the-loop moment is not the review. It is the intervention. If a model recommends, can a person pause, reject,...",
-      "link": "https://www.linkedin.com/posts/bobrapp_the-hardest-human-in-the-loop-moment-is-not-activity-7496446662396067841-FYZL",
-      "date": "Fri, 21 Aug 2026 06:02:42 GMT",
-      "summary": "The hardest human-in-the-loop moment is not the review. It is the intervention. If a model recommends, can a person pause, reject, or escalate in seconds—under stress or during an outage? If not, “human oversight” is only a slogan. Design the path: Recommendation → Review → Appro",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Ken is a legend",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-builders-founders-happy-hour-with-dj-activity-7496393044515012608-SgIm",
-      "date": "Fri, 21 Aug 2026 02:29:38 GMT",
-      "summary": "Ken is a legend - always great events",
       "image": null,
       "author": "Bob Rapp"
     }
