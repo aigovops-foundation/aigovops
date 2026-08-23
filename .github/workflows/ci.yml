@@ -2,6 +2,13 @@ name: ci
 on:
   push:
   pull_request:
+
+# Least privilege, declared. An inherited default is an UNKNOWN permission set, and the estate's
+# policies/autonomy.yaml treats unknown as not-green. This lane only reads the repo to test it.
+# Added with the row 11a adoptions: it would be odd to wire five least-privileged lanes into a
+# repo whose own CI still ran on whatever the default happened to be.
+permissions: { contents: read }
+
 jobs:
   test:
     runs-on: ubuntu-latest
