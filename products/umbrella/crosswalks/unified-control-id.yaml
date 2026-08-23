@@ -1,0 +1,60 @@
+apiVersion: govops.aigovops.org/v1
+kind: Crosswalk
+metadata:
+  name: unified-control-id
+  description: |
+    Unified Control Identifier (UCID) registry — pivot mapping from a single
+    normative obligation to NIST AI RMF / EU AI Act / ISO 42001 citations,
+    implementing controls, and Beacon runtime evidence.
+
+    Governance, statuses, and change procedure: see UCID-REGISTRY.md at repo root.
+  designated_expert: bobrapp
+  registry_doc: UCID-REGISTRY.md
+
+ucids:
+  - id: UCID-DATA-BIAS-001
+    title: Dataset bias examination
+    status: provisional
+    created: 2026-04-12
+    proposer: bobrapp
+    nist_ai_rmf: [MEASURE-2.11, MAP-2.3, MANAGE-2.3]
+    eu_ai_act:
+      articles: ["10(2)(f)", "10(3)"]
+      annex_iv: ["2(d)", "2(g)"]
+    iso_42001: ["A.7.4"]
+    implementing_controls: [DG-002]
+
+  - id: UCID-OVERSIGHT-001
+    title: Human oversight measures
+    status: provisional
+    created: 2026-04-12
+    proposer: bobrapp
+    nist_ai_rmf: [GOVERN-3.2, MANAGE-2.4]
+    eu_ai_act:
+      articles: ["14"]
+      annex_iv: ["2(e)", "3"]
+    implementing_controls: [HO-001]
+    planned_controls: [HO-002, HO-003]
+
+  - id: UCID-LOG-001
+    title: Automatic logging of events
+    status: provisional
+    created: 2026-04-12
+    proposer: bobrapp
+    nist_ai_rmf: [MEASURE-2.8, MANAGE-4.1]
+    eu_ai_act:
+      articles: ["12", "19"]
+    implementing_controls: [LOG-001]
+    planned_controls: [LOG-002]
+
+  - id: UCID-SEC-ROBUST-001
+    title: Security and adversarial robustness
+    status: provisional
+    created: 2026-04-12
+    proposer: bobrapp
+    nist_ai_rmf: [MEASURE-2.7, MANAGE-2.2]
+    eu_ai_act:
+      articles: ["15"]
+      annex_iv: ["2(g)"]
+    iso_42001: ["A.8.2"]
+    implementing_controls: [SR-001]
