@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aigovops-foundation.github.io/aigovops-vendor-rfi/sitemap.xml
