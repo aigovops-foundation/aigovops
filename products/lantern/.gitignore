@@ -1,0 +1,28 @@
+
+# Editors
+# Lantern working files
+# Node
+# Python
+*.bundle.local.json
+*.egg-info/
+*.log
+*.py[cod]
+*.pyc
+.DS_Store
+.coverage
+.idea/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.venv/
+.vscode/
+/tmp/
+__pycache__/
+build/
+dist/
+htmlcov/
+node_modules/
+venv/
+
+# mkdocs build output (rendered from docs/, not source)
+site/
