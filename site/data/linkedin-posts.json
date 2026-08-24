@@ -1,6 +1,30 @@
 {
-  "updated": "2026-08-24T07:23:19Z",
+  "updated": "2026-08-24T19:13:38Z",
   "bob": [
+    {
+      "title": "An AI-generated grade can look precise—and still be wrong. AI may support auto-grading, personalized learning, admissions, and stu...",
+      "link": "https://www.linkedin.com/posts/bobrapp_an-ai-generated-grade-can-look-preciseand-activity-7497639848070217728-0ruc",
+      "date": "Mon, 24 Aug 2026 13:03:59 GMT",
+      "summary": "An AI-generated grade can look precise—and still be wrong. AI may support auto-grading, personalized learning, admissions, and student support. But scores shape opportunity and futures. Governance must protect human judgment, transparency, and appeal. THREE-YES TEST SAFE: Test bi",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "A polished vendor demo is not evidence of a governable AI system. Problem: Procurement buys on claims; governance inherits missing...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-polished-vendor-demo-is-not-evidence-of-activity-7497639741539082240-4NjD",
+      "date": "Mon, 24 Aug 2026 13:03:34 GMT",
+      "summary": "A polished vendor demo is not evidence of a governable AI system. Problem: Procurement buys on claims; governance inherits missing documents, unclear subcontractors, and untestable controls. A contract is not a control unless verifiable. Solution: Require model/system cards, inte",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "ENGLISH Prompts, system instructions, policy bundles, and evaluation sets are governed production artifacts—not copy. Govern them:...",
+      "link": "https://www.linkedin.com/posts/bobrapp_english-prompts-system-instructions-policy-activity-7497639615462563840-aMty",
+      "date": "Mon, 24 Aug 2026 13:03:04 GMT",
+      "summary": "ENGLISH Prompts, system instructions, policy bundles, and evaluation sets are governed production artifacts—not copy. Govern them: assign an owner; code-review changes; sign versions; gate approval; separate author/approver/deployer; record provenance; enable rollback; detect dri",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Principles matter. Practice proves them. The Global Summit celebrates our community’s move from AI governance declarations to deli...",
       "link": "https://fr.linkedin.com/posts/bobrapp_principles-matter-practice-proves-them-activity-7497412944557752320-VY7q",
@@ -54,30 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_telecom-ai-agents-can-dispute-bills-change-activity-7497277221494083584-1zde",
       "date": "Sun, 23 Aug 2026 13:03:02 GMT",
       "summary": "Telecom AI agents can dispute bills, change plans, and decide whom to retain. That is delegated authority over money, access, and fairness—not “just support.” Problem Without guardrails, agents can alter terms, waive fees inconsistently, or prioritize retention over the customer.",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem / समस्या: Legal AI agents can review contracts, negotiate clauses, and research law—but semi-autonomy may create commitments...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-%E0%A4%B8%E0%A4%AE%E0%A4%B8%E0%A4%AF-legal-ai-agents-can-review-activity-7497050632810565632-XvNI",
-      "date": "Sat, 22 Aug 2026 22:02:39 GMT",
-      "summary": "Problem / समस्या: Legal AI agents can review contracts, negotiate clauses, and research law—but semi-autonomy may create commitments without approval. / कानूनी AI एजेंट अनुबंधों की समीक्षा, क्लॉज़ पर बातचीत और शोध कर सकते हैं—पर अर्ध-स्वायत्तता बिना अनुमोदन प्रतिबद्धता बना सकती ह",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "ENGLISH A policy PDF states intent. It cannot prove operational control. Compliance-as-Code turns policy into versioned, testable...",
-      "link": "https://www.linkedin.com/posts/bobrapp_english-a-policy-pdf-states-intent-it-cannot-activity-7497050586819813376-VPKA",
-      "date": "Sat, 22 Aug 2026 22:02:28 GMT",
-      "summary": "ENGLISH A policy PDF states intent. It cannot prove operational control. Compliance-as-Code turns policy into versioned, testable rules and an automated audit trail. Record: model/version, input context, decision, reviewer, exception, timestamp. Summary: Evidence must be queryabl",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Policy should not live in a PDF no one can test. Compliance-as-code makes governance executable: map requirements to controls, run...",
-      "link": "https://www.linkedin.com/posts/bobrapp_policy-should-not-live-in-a-pdf-no-one-can-activity-7497050180127547392-gmKz",
-      "date": "Sat, 22 Aug 2026 22:00:51 GMT",
-      "summary": "Policy should not live in a PDF no one can test. Compliance-as-code makes governance executable: map requirements to controls, run them in the delivery pipeline, and preserve evidence automatically. A useful audit trail records the model/version, input context, decision, reviewer",
       "image": null,
       "author": "Bob Rapp"
     }
