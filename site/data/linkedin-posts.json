@@ -1,6 +1,22 @@
 {
-  "updated": "2026-08-24T19:13:38Z",
+  "updated": "2026-08-25T07:17:40Z",
   "bob": [
+    {
+      "title": "LEVEL UP YOUR AI GOVERNANCE | 2/16 If people cannot access the explanation, contest the outcome, or use an alternative channel, ov...",
+      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-216-if-people-activity-7497775649928069121-fWmB",
+      "date": "Mon, 24 Aug 2026 22:03:37 GMT",
+      "summary": "LEVEL UP YOUR AI GOVERNANCE | 2/16 If people cannot access the explanation, contest the outcome, or use an alternative channel, oversight is theoretical. Problem Technical metrics can exclude people with disabilities, limited connectivity, language barriers, or different communic",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI governance fails when everyone is consulted—but nobody can decide. PROBLEM Product, security, privacy, legal, compliance, opera...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-fails-when-everyone-is-consultedbut-activity-7497775397552439298-BXsJ",
+      "date": "Mon, 24 Aug 2026 22:02:37 GMT",
+      "summary": "AI governance fails when everyone is consulted—but nobody can decide. PROBLEM Product, security, privacy, legal, compliance, operations, and affected-person representatives may collaborate without approval rights. That is ambiguity, not governance. SOLUTIONS For each material dec",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "An AI-generated grade can look precise—and still be wrong. AI may support auto-grading, personalized learning, admissions, and stu...",
       "link": "https://www.linkedin.com/posts/bobrapp_an-ai-generated-grade-can-look-preciseand-activity-7497639848070217728-0ruc",
@@ -62,22 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_a-transparent-ai-system-is-not-one-that-reveals-activity-7497277306072174592--AMw",
       "date": "Sun, 23 Aug 2026 13:03:22 GMT",
       "summary": "A transparent AI system is not one that reveals everything. It is one that makes the right things understandable to the people affected by its decisions. AI ethics means more than a principles document. Make sure people can understand what the system decides, which data and assum",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI ethics is not a promise. It is a path people can inspect. Meaningful transparency makes five things understandable to affected...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-ethics-is-not-a-promise-it-is-a-path-activity-7497277252250853376-Le6B",
-      "date": "Sun, 23 Aug 2026 13:03:10 GMT",
-      "summary": "AI ethics is not a promise. It is a path people can inspect. Meaningful transparency makes five things understandable to affected people: • What decision was made—and why • Which assumptions shaped it • Where uncertainty remains • How to challenge or appeal it • Who is accountabl",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Telecom AI agents can dispute bills, change plans, and decide whom to retain. That is delegated authority over money, access, and...",
-      "link": "https://www.linkedin.com/posts/bobrapp_telecom-ai-agents-can-dispute-bills-change-activity-7497277221494083584-1zde",
-      "date": "Sun, 23 Aug 2026 13:03:02 GMT",
-      "summary": "Telecom AI agents can dispute bills, change plans, and decide whom to retain. That is delegated authority over money, access, and fairness—not “just support.” Problem Without guardrails, agents can alter terms, waive fees inconsistently, or prioritize retention over the customer.",
       "image": null,
       "author": "Bob Rapp"
     }
