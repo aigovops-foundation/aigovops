@@ -1,6 +1,30 @@
 {
-  "updated": "2026-08-25T07:17:40Z",
+  "updated": "2026-08-25T19:12:56Z",
   "bob": [
+    {
+      "title": "An automated benefits decision can be efficient: and devastating when wrong. PROBLEM Eligibility and fraud-detection AI can affect...",
+      "link": "https://www.linkedin.com/posts/bobrapp_an-automated-benefits-decision-can-be-efficient-activity-7498002595802734593-vzk5",
+      "date": "Tue, 25 Aug 2026 13:05:25 GMT",
+      "summary": "An automated benefits decision can be efficient: and devastating when wrong. PROBLEM Eligibility and fraud-detection AI can affect access to essential support. Accuracy alone is not justice. SOLUTIONS Use AI to assist caseworkers, not replace them. Require understandable reasons,",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "A policy no one can apply is documentation, not governance. Problem Responsible-AI principles fail when people lack role-based tra...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-policy-no-one-can-apply-is-documentation-activity-7498002501279928320-Rlhv",
+      "date": "Tue, 25 Aug 2026 13:05:02 GMT",
+      "summary": "A policy no one can apply is documentation, not governance. Problem Responsible-AI principles fail when people lack role-based training for pressure. Predictable risks become production surprises. Solutions Train developers in threat modeling and evaluation; product owners in dec",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "A green dashboard is not accountability when its evidence has never been tested. Activity = policies, reviews, training, tickets....",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-green-dashboard-is-not-accountability-when-activity-7498002207724806144-xv0Y",
+      "date": "Tue, 25 Aug 2026 13:03:52 GMT",
+      "summary": "A green dashboard is not accountability when its evidence has never been tested. Activity = policies, reviews, training, tickets. Effectiveness = outcomes. Scorecard (D/O/T/A = denominator/owner/threshold/action): Pass passed/tested|control|≥95%|fix; Detect+contain hrs/incident|o",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "LEVEL UP YOUR AI GOVERNANCE | 2/16 If people cannot access the explanation, contest the outcome, or use an alternative channel, ov...",
       "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-216-if-people-activity-7497775649928069121-fWmB",
@@ -54,30 +78,6 @@
       "link": "https://fr.linkedin.com/posts/bobrapp_ai-governance-is-not-a-solo-exercise-it-activity-7497412886093283328-2SHJ",
       "date": "Sun, 23 Aug 2026 22:02:07 GMT",
       "summary": "AI governance is not a solo exercise. It is a global practice—built by people who research, regulate, deploy, test, and live with AI’s consequences. The Level Up Your AI Governance Global Summit & Community Celebration brings that community together to turn principles into practi",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Factory-floor AI can predict a failure. But prediction is not permission. If an anomaly could trigger an autonomous shutdown or a...",
-      "link": "https://www.linkedin.com/posts/bobrapp_factory-floor-ai-can-predict-a-failure-but-activity-7497412840547459072-MS1z",
-      "date": "Sun, 23 Aug 2026 22:01:56 GMT",
-      "summary": "Factory-floor AI can predict a failure. But prediction is not permission. If an anomaly could trigger an autonomous shutdown or a quality hold, governance must define the decision path: Detect anomaly → human review → controlled action → evidence. Three-Yes Test: Is it Safe? Comp",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Consent is not a document, checkbox, or PDF. It is a live, revocable control plane. A signed form or old settings flag does not st...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7497406355184746496-MOwN",
-      "date": "Sun, 23 Aug 2026 21:36:10 GMT",
-      "summary": "Consent is not a document, checkbox, or PDF. It is a live, revocable control plane. A signed form or old settings flag does not stop a pipeline; enforcement must happen at the point of use. PROBLEM Consent is collected once, then forgotten. Data keeps flowing into training, retri",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "A transparent AI system is not one that reveals everything. It is one that makes the right things understandable to the people aff...",
-      "link": "https://www.linkedin.com/posts/bobrapp_a-transparent-ai-system-is-not-one-that-reveals-activity-7497277306072174592--AMw",
-      "date": "Sun, 23 Aug 2026 13:03:22 GMT",
-      "summary": "A transparent AI system is not one that reveals everything. It is one that makes the right things understandable to the people affected by its decisions. AI ethics means more than a principles document. Make sure people can understand what the system decides, which data and assum",
       "image": null,
       "author": "Bob Rapp"
     }
