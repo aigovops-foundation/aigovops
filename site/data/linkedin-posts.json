@@ -1,6 +1,30 @@
 {
-  "updated": "2026-08-25T19:12:56Z",
+  "updated": "2026-08-26T07:17:36Z",
   "bob": [
+    {
+      "title": "An impact assessment should change a decision—not decorate a launch packet. Problem Assessments often happen after architecture, v...",
+      "link": "https://www.linkedin.com/posts/bobrapp_an-impact-assessment-should-change-a-decisionnot-activity-7498137824563748865-rXPQ",
+      "date": "Tue, 25 Aug 2026 22:02:46 GMT",
+      "summary": "An impact assessment should change a decision—not decorate a launch packet. Problem Assessments often happen after architecture, vendors, and deadlines are fixed. Without affected voices and stop conditions, they become performative. Solutions Start with the decision and affected",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Agent memory is a data store—not a magic notebook. Set boundaries before deployment: • Session context = temporary, interaction-sc...",
+      "link": "https://www.linkedin.com/posts/bobrapp_agent-memory-is-a-data-storenot-a-magic-activity-7498137714085543936-EsB5",
+      "date": "Tue, 25 Aug 2026 22:02:20 GMT",
+      "summary": "Agent memory is a data store—not a magic notebook. Set boundaries before deployment: • Session context = temporary, interaction-scoped. • Durable memory = purpose-bound, time-limited, auto-deleted. • Inferred preferences = labeled, reviewable, correctable. • Sensitive attributes",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "PROBLEM Recommendation engines do more than predict clicks. They decide what people see, which products get discovered, and which...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-recommendation-engines-do-more-than-activity-7498137689272078354-x_ya",
+      "date": "Tue, 25 Aug 2026 22:02:14 GMT",
+      "summary": "PROBLEM Recommendation engines do more than predict clicks. They decide what people see, which products get discovered, and which voices gain reach. Ranking is a governance decision: not just an optimization problem. SOLUTION THREE-YES TEST: Is it Safe, Compliant, and Pro-Humanit",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "An automated benefits decision can be efficient: and devastating when wrong. PROBLEM Eligibility and fraud-detection AI can affect...",
       "link": "https://www.linkedin.com/posts/bobrapp_an-automated-benefits-decision-can-be-efficient-activity-7498002595802734593-vzk5",
@@ -54,30 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_a-polished-vendor-demo-is-not-evidence-of-activity-7497639741539082240-4NjD",
       "date": "Mon, 24 Aug 2026 13:03:34 GMT",
       "summary": "A polished vendor demo is not evidence of a governable AI system. Problem: Procurement buys on claims; governance inherits missing documents, unclear subcontractors, and untestable controls. A contract is not a control unless verifiable. Solution: Require model/system cards, inte",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "ENGLISH Prompts, system instructions, policy bundles, and evaluation sets are governed production artifacts—not copy. Govern them:...",
-      "link": "https://www.linkedin.com/posts/bobrapp_english-prompts-system-instructions-policy-activity-7497639615462563840-aMty",
-      "date": "Mon, 24 Aug 2026 13:03:04 GMT",
-      "summary": "ENGLISH Prompts, system instructions, policy bundles, and evaluation sets are governed production artifacts—not copy. Govern them: assign an owner; code-review changes; sign versions; gate approval; separate author/approver/deployer; record provenance; enable rollback; detect dri",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Principles matter. Practice proves them. The Global Summit celebrates our community’s move from AI governance declarations to deli...",
-      "link": "https://fr.linkedin.com/posts/bobrapp_principles-matter-practice-proves-them-activity-7497412944557752320-VY7q",
-      "date": "Sun, 23 Aug 2026 22:02:21 GMT",
-      "summary": "Principles matter. Practice proves them. The Global Summit celebrates our community’s move from AI governance declarations to delivery: evidence, shared learning, governance-as-code, and accountable implementation. Join us: THREE-YES TEST Ask: Is it Safe",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI governance is not a solo exercise. It is a global practice—built by people who research, regulate, deploy, test, and live with...",
-      "link": "https://fr.linkedin.com/posts/bobrapp_ai-governance-is-not-a-solo-exercise-it-activity-7497412886093283328-2SHJ",
-      "date": "Sun, 23 Aug 2026 22:02:07 GMT",
-      "summary": "AI governance is not a solo exercise. It is a global practice—built by people who research, regulate, deploy, test, and live with AI’s consequences. The Level Up Your AI Governance Global Summit & Community Celebration brings that community together to turn principles into practi",
       "image": null,
       "author": "Bob Rapp"
     }
