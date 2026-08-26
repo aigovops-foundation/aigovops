@@ -1,6 +1,38 @@
 {
-  "updated": "2026-08-26T07:17:36Z",
+  "updated": "2026-08-26T19:34:18Z",
   "bob": [
+    {
+      "title": "Love the leadership we are seeing in AiGovOps Foundation with Joe Braidwood and GLACIS Technologies leading the way",
+      "link": "https://www.linkedin.com/posts/bobrapp_love-the-leadership-we-are-seeing-in-aigovops-activity-7498409860183592960-CW6y",
+      "date": "Wed, 26 Aug 2026 16:03:44 GMT",
+      "summary": "Love the leadership we are seeing in AiGovOps Foundation with Joe Braidwood and GLACIS Technologies leading the way",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Assigning a human reviewer is not oversight when the interface nudges them to click “approve.” PROBLEM Automation bias turns revie...",
+      "link": "https://www.linkedin.com/posts/bobrapp_assigning-a-human-reviewer-is-not-oversight-activity-7498364821394886656-AYKF",
+      "date": "Wed, 26 Aug 2026 13:04:46 GMT",
+      "summary": "Assigning a human reviewer is not oversight when the interface nudges them to click “approve.” PROBLEM Automation bias turns review into rubber-stamping when confidence is opaque, queues are overloaded, or disagreement feels costly. SOLUTIONS Calibrate confidence. Prompt for coun",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "An AI agent can optimize a shift. It cannot absorb the human cost of denied leave, missed rest, or incorrect pay. HR payroll, sche...",
+      "link": "https://www.linkedin.com/posts/bobrapp_an-ai-agent-can-optimize-a-shift-it-cannot-activity-7498364643824877568-oGoY",
+      "date": "Wed, 26 Aug 2026 13:04:04 GMT",
+      "summary": "An AI agent can optimize a shift. It cannot absorb the human cost of denied leave, missed rest, or incorrect pay. HR payroll, scheduling, and workforce agents need governance—not blind automation. PROBLEM Sensitive workforce data and opaque decisions can create unfair schedules,",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "LEVEL UP YOUR AI GOVERNANCE | 5/16 Bad lineage turns a defensible model into an unanswerable decision. Problem Without collection...",
+      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-516-bad-lineage-activity-7498363908014096384--CKA",
+      "date": "Wed, 26 Aug 2026 13:01:09 GMT",
+      "summary": "LEVEL UP YOUR AI GOVERNANCE | 5/16 Bad lineage turns a defensible model into an unanswerable decision. Problem Without collection context, consent, transformations, exclusions, and quality, teams cannot defend or correct outcomes. Solutions Track provenance machine-readably from",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "An impact assessment should change a decision—not decorate a launch packet. Problem Assessments often happen after architecture, v...",
       "link": "https://www.linkedin.com/posts/bobrapp_an-impact-assessment-should-change-a-decisionnot-activity-7498137824563748865-rXPQ",
@@ -46,38 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_a-green-dashboard-is-not-accountability-when-activity-7498002207724806144-xv0Y",
       "date": "Tue, 25 Aug 2026 13:03:52 GMT",
       "summary": "A green dashboard is not accountability when its evidence has never been tested. Activity = policies, reviews, training, tickets. Effectiveness = outcomes. Scorecard (D/O/T/A = denominator/owner/threshold/action): Pass passed/tested|control|≥95%|fix; Detect+contain hrs/incident|o",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "LEVEL UP YOUR AI GOVERNANCE | 2/16 If people cannot access the explanation, contest the outcome, or use an alternative channel, ov...",
-      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-216-if-people-activity-7497775649928069121-fWmB",
-      "date": "Mon, 24 Aug 2026 22:03:37 GMT",
-      "summary": "LEVEL UP YOUR AI GOVERNANCE | 2/16 If people cannot access the explanation, contest the outcome, or use an alternative channel, oversight is theoretical. Problem Technical metrics can exclude people with disabilities, limited connectivity, language barriers, or different communic",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI governance fails when everyone is consulted—but nobody can decide. PROBLEM Product, security, privacy, legal, compliance, opera...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-fails-when-everyone-is-consultedbut-activity-7497775397552439298-BXsJ",
-      "date": "Mon, 24 Aug 2026 22:02:37 GMT",
-      "summary": "AI governance fails when everyone is consulted—but nobody can decide. PROBLEM Product, security, privacy, legal, compliance, operations, and affected-person representatives may collaborate without approval rights. That is ambiguity, not governance. SOLUTIONS For each material dec",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An AI-generated grade can look precise—and still be wrong. AI may support auto-grading, personalized learning, admissions, and stu...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-ai-generated-grade-can-look-preciseand-activity-7497639848070217728-0ruc",
-      "date": "Mon, 24 Aug 2026 13:03:59 GMT",
-      "summary": "An AI-generated grade can look precise—and still be wrong. AI may support auto-grading, personalized learning, admissions, and student support. But scores shape opportunity and futures. Governance must protect human judgment, transparency, and appeal. THREE-YES TEST SAFE: Test bi",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "A polished vendor demo is not evidence of a governable AI system. Problem: Procurement buys on claims; governance inherits missing...",
-      "link": "https://www.linkedin.com/posts/bobrapp_a-polished-vendor-demo-is-not-evidence-of-activity-7497639741539082240-4NjD",
-      "date": "Mon, 24 Aug 2026 13:03:34 GMT",
-      "summary": "A polished vendor demo is not evidence of a governable AI system. Problem: Procurement buys on claims; governance inherits missing documents, unclear subcontractors, and untestable controls. A contract is not a control unless verifiable. Solution: Require model/system cards, inte",
       "image": null,
       "author": "Bob Rapp"
     }
