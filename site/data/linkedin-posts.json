@@ -1,6 +1,30 @@
 {
-  "updated": "2026-08-26T19:34:18Z",
+  "updated": "2026-08-27T10:15:55Z",
   "bob": [
+    {
+      "title": "Evidence should travel. Machine-readable governance records move across systems and audits—not into paperwork. Require: stable ide...",
+      "link": "https://fr.linkedin.com/posts/bobrapp_evidence-should-travel-machine-readable-activity-7498500382285910016-UwP8",
+      "date": "Wed, 26 Aug 2026 22:03:27 GMT",
+      "summary": "Evidence should travel. Machine-readable governance records move across systems and audits—not into paperwork. Require: stable identifiers; control-to-evidence links; timestamps; provenance; schema versioning; access controls; cryptographic integrity; human-readable explanations;",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Autonomous vehicles earn trust when operators can show what happened, why the system acted, and how risk was controlled. PROBLEM T...",
+      "link": "https://www.linkedin.com/posts/bobrapp_autonomous-vehicles-earn-trust-when-operators-activity-7498500297594499073-ujlS",
+      "date": "Wed, 26 Aug 2026 22:03:06 GMT",
+      "summary": "Autonomous vehicles earn trust when operators can show what happened, why the system acted, and how risk was controlled. PROBLEM Telemetry without decision logs cannot support safety review or regulatory reporting. SOLUTIONS • Set operating limits and human-override paths. • Log",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "An incident plan that begins with “find legal” is already late. Problem AI incidents span privacy, safety, discrimination, securit...",
+      "link": "https://www.linkedin.com/posts/bobrapp_an-incident-plan-that-begins-with-find-legal-activity-7498500130107514881-GJCy",
+      "date": "Wed, 26 Aug 2026 22:02:26 GMT",
+      "summary": "An incident plan that begins with “find legal” is already late. Problem AI incidents span privacy, safety, discrimination, security, and service denial. Without severity thresholds, preserved evidence, decision authority, and notification paths, impact grows while teams improvise",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Love the leadership we are seeing in AiGovOps Foundation with Joe Braidwood and GLACIS Technologies leading the way",
       "link": "https://www.linkedin.com/posts/bobrapp_love-the-leadership-we-are-seeing-in-aigovops-activity-7498409860183592960-CW6y",
@@ -54,30 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_problem-recommendation-engines-do-more-than-activity-7498137689272078354-x_ya",
       "date": "Tue, 25 Aug 2026 22:02:14 GMT",
       "summary": "PROBLEM Recommendation engines do more than predict clicks. They decide what people see, which products get discovered, and which voices gain reach. Ranking is a governance decision: not just an optimization problem. SOLUTION THREE-YES TEST: Is it Safe, Compliant, and Pro-Humanit",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An automated benefits decision can be efficient: and devastating when wrong. PROBLEM Eligibility and fraud-detection AI can affect...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-automated-benefits-decision-can-be-efficient-activity-7498002595802734593-vzk5",
-      "date": "Tue, 25 Aug 2026 13:05:25 GMT",
-      "summary": "An automated benefits decision can be efficient: and devastating when wrong. PROBLEM Eligibility and fraud-detection AI can affect access to essential support. Accuracy alone is not justice. SOLUTIONS Use AI to assist caseworkers, not replace them. Require understandable reasons,",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "A policy no one can apply is documentation, not governance. Problem Responsible-AI principles fail when people lack role-based tra...",
-      "link": "https://www.linkedin.com/posts/bobrapp_a-policy-no-one-can-apply-is-documentation-activity-7498002501279928320-Rlhv",
-      "date": "Tue, 25 Aug 2026 13:05:02 GMT",
-      "summary": "A policy no one can apply is documentation, not governance. Problem Responsible-AI principles fail when people lack role-based training for pressure. Predictable risks become production surprises. Solutions Train developers in threat modeling and evaluation; product owners in dec",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "A green dashboard is not accountability when its evidence has never been tested. Activity = policies, reviews, training, tickets....",
-      "link": "https://www.linkedin.com/posts/bobrapp_a-green-dashboard-is-not-accountability-when-activity-7498002207724806144-xv0Y",
-      "date": "Tue, 25 Aug 2026 13:03:52 GMT",
-      "summary": "A green dashboard is not accountability when its evidence has never been tested. Activity = policies, reviews, training, tickets. Effectiveness = outcomes. Scorecard (D/O/T/A = denominator/owner/threshold/action): Pass passed/tested|control|≥95%|fix; Detect+contain hrs/incident|o",
       "image": null,
       "author": "Bob Rapp"
     }
