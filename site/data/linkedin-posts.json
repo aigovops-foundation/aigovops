@@ -1,6 +1,30 @@
 {
-  "updated": "2026-08-27T10:15:55Z",
+  "updated": "2026-08-27T22:22:21Z",
   "bob": [
+    {
+      "title": "An AI agent can detect a signal in seconds. That does not mean it should block a user or isolate a system without governed authori...",
+      "link": "https://www.linkedin.com/posts/bobrapp_an-ai-agent-can-detect-a-signal-in-seconds-activity-7498727180407902208-caV_",
+      "date": "Thu, 27 Aug 2026 13:04:39 GMT",
+      "summary": "An AI agent can detect a signal in seconds. That does not mean it should block a user or isolate a system without governed authority. Cybersecurity automated response should connect detection, SOC triage, blocking actions, and incident-response agents to confidence thresholds, hu",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "An audit is not a PDF produced at the end. It is the ability to prove what happened. Problem Retrospective evidence, omitted failu...",
+      "link": "https://www.linkedin.com/posts/bobrapp_an-audit-is-not-a-pdf-produced-at-the-end-activity-7498726884298395648-f40C",
+      "date": "Thu, 27 Aug 2026 13:03:29 GMT",
+      "summary": "An audit is not a PDF produced at the end. It is the ability to prove what happened. Problem Retrospective evidence, omitted failures and dissent, and confusing a control description with operation create audit theater. Solutions Start an evidence register at system inception. Re",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Broad roles are not agent controls. An AI agent should not get “CRM access.” Give it a narrowly defined action, then control the c...",
+      "link": "https://www.linkedin.com/posts/bobrapp_broad-roles-are-not-agent-controls-an-ai-activity-7498726463785877504-EoaT",
+      "date": "Thu, 27 Aug 2026 13:01:49 GMT",
+      "summary": "Broad roles are not agent controls. An AI agent should not get “CRM access.” Give it a narrowly defined action, then control the consequences: • Allowlist tools. • Validate arguments and constraints. • Authorize at resource level. • Enforce rate and spend limits. • Add dry-run mo",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Evidence should travel. Machine-readable governance records move across systems and audits—not into paperwork. Require: stable ide...",
       "link": "https://fr.linkedin.com/posts/bobrapp_evidence-should-travel-machine-readable-activity-7498500382285910016-UwP8",
@@ -54,30 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-516-bad-lineage-activity-7498363908014096384--CKA",
       "date": "Wed, 26 Aug 2026 13:01:09 GMT",
       "summary": "LEVEL UP YOUR AI GOVERNANCE | 5/16 Bad lineage turns a defensible model into an unanswerable decision. Problem Without collection context, consent, transformations, exclusions, and quality, teams cannot defend or correct outcomes. Solutions Track provenance machine-readably from",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An impact assessment should change a decision—not decorate a launch packet. Problem Assessments often happen after architecture, v...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-impact-assessment-should-change-a-decisionnot-activity-7498137824563748865-rXPQ",
-      "date": "Tue, 25 Aug 2026 22:02:46 GMT",
-      "summary": "An impact assessment should change a decision—not decorate a launch packet. Problem Assessments often happen after architecture, vendors, and deadlines are fixed. Without affected voices and stop conditions, they become performative. Solutions Start with the decision and affected",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Agent memory is a data store—not a magic notebook. Set boundaries before deployment: • Session context = temporary, interaction-sc...",
-      "link": "https://www.linkedin.com/posts/bobrapp_agent-memory-is-a-data-storenot-a-magic-activity-7498137714085543936-EsB5",
-      "date": "Tue, 25 Aug 2026 22:02:20 GMT",
-      "summary": "Agent memory is a data store—not a magic notebook. Set boundaries before deployment: • Session context = temporary, interaction-scoped. • Durable memory = purpose-bound, time-limited, auto-deleted. • Inferred preferences = labeled, reviewable, correctable. • Sensitive attributes",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "PROBLEM Recommendation engines do more than predict clicks. They decide what people see, which products get discovered, and which...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-recommendation-engines-do-more-than-activity-7498137689272078354-x_ya",
-      "date": "Tue, 25 Aug 2026 22:02:14 GMT",
-      "summary": "PROBLEM Recommendation engines do more than predict clicks. They decide what people see, which products get discovered, and which voices gain reach. Ranking is a governance decision: not just an optimization problem. SOLUTION THREE-YES TEST: Is it Safe, Compliant, and Pro-Humanit",
       "image": null,
       "author": "Bob Rapp"
     }
