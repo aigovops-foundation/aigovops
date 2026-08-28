@@ -1,6 +1,46 @@
 {
-  "updated": "2026-08-27T22:22:21Z",
+  "updated": "2026-08-28T10:30:37Z",
   "bob": [
+    {
+      "title": "Thanks Corey - great to have you as a community leader in the aigovops space!",
+      "link": "https://www.linkedin.com/posts/bobrapp_ken-johnston-substack-activity-7499016868368777216-du46",
+      "date": "Fri, 28 Aug 2026 08:15:46 GMT",
+      "summary": "Thanks Corey - great to have you as a community leader in the aigovops space!",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Always a great event -",
+      "link": "https://www.linkedin.com/posts/bobrapp_always-a-great-event-activity-7498936736048209920-xUdj",
+      "date": "Fri, 28 Aug 2026 02:57:21 GMT",
+      "summary": "Always a great event -",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "An AVM can estimate a home’s value in seconds. That does not make its recommendation fair, explainable, or ready to automate. For...",
+      "link": "https://fr.linkedin.com/posts/bobrapp_an-avm-can-estimate-a-homes-value-in-seconds-activity-7498862622037966848-VtQK",
+      "date": "Thu, 27 Aug 2026 22:02:51 GMT",
+      "summary": "An AVM can estimate a home’s value in seconds. That does not make its recommendation fair, explainable, or ready to automate. For valuation, mortgage pre-approval, and underwriting AI, governance must travel with the decision: • Trace property, market, financial, and credit data",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Policy is not operational readiness until people rehearse it. Tabletop scenario: an AI system produces harmful, inconsistent outpu...",
+      "link": "https://www.linkedin.com/posts/bobrapp_policy-is-not-operational-readiness-until-activity-7498862614312157184-LWRi",
+      "date": "Thu, 27 Aug 2026 22:02:49 GMT",
+      "summary": "Policy is not operational readiness until people rehearse it. Tabletop scenario: an AI system produces harmful, inconsistent outputs. Run the exercise: • Identify who can pause the system. • Test the contact tree and escalation SLOs. • Preserve prompts, outputs, logs, and model/v",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "“Same model” is often a dangerous assumption. Problem Providers may change weights, retrieval, prompts, safety behavior, or infras...",
+      "link": "https://www.linkedin.com/posts/bobrapp_same-model-is-often-a-dangerous-assumption-activity-7498862614207193088-bMGu",
+      "date": "Thu, 27 Aug 2026 22:02:49 GMT",
+      "summary": "“Same model” is often a dangerous assumption. Problem Providers may change weights, retrieval, prompts, safety behavior, or infrastructure without changing the product name. Accuracy, refusals, latency, privacy exposure, and affected groups can shift. Solutions Set change trigger",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "An AI agent can detect a signal in seconds. That does not mean it should block a user or isolate a system without governed authori...",
       "link": "https://www.linkedin.com/posts/bobrapp_an-ai-agent-can-detect-a-signal-in-seconds-activity-7498727180407902208-caV_",
@@ -38,46 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_autonomous-vehicles-earn-trust-when-operators-activity-7498500297594499073-ujlS",
       "date": "Wed, 26 Aug 2026 22:03:06 GMT",
       "summary": "Autonomous vehicles earn trust when operators can show what happened, why the system acted, and how risk was controlled. PROBLEM Telemetry without decision logs cannot support safety review or regulatory reporting. SOLUTIONS • Set operating limits and human-override paths. • Log",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An incident plan that begins with “find legal” is already late. Problem AI incidents span privacy, safety, discrimination, securit...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-incident-plan-that-begins-with-find-legal-activity-7498500130107514881-GJCy",
-      "date": "Wed, 26 Aug 2026 22:02:26 GMT",
-      "summary": "An incident plan that begins with “find legal” is already late. Problem AI incidents span privacy, safety, discrimination, security, and service denial. Without severity thresholds, preserved evidence, decision authority, and notification paths, impact grows while teams improvise",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Love the leadership we are seeing in AiGovOps Foundation with Joe Braidwood and GLACIS Technologies leading the way",
-      "link": "https://www.linkedin.com/posts/bobrapp_love-the-leadership-we-are-seeing-in-aigovops-activity-7498409860183592960-CW6y",
-      "date": "Wed, 26 Aug 2026 16:03:44 GMT",
-      "summary": "Love the leadership we are seeing in AiGovOps Foundation with Joe Braidwood and GLACIS Technologies leading the way",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Assigning a human reviewer is not oversight when the interface nudges them to click “approve.” PROBLEM Automation bias turns revie...",
-      "link": "https://www.linkedin.com/posts/bobrapp_assigning-a-human-reviewer-is-not-oversight-activity-7498364821394886656-AYKF",
-      "date": "Wed, 26 Aug 2026 13:04:46 GMT",
-      "summary": "Assigning a human reviewer is not oversight when the interface nudges them to click “approve.” PROBLEM Automation bias turns review into rubber-stamping when confidence is opaque, queues are overloaded, or disagreement feels costly. SOLUTIONS Calibrate confidence. Prompt for coun",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An AI agent can optimize a shift. It cannot absorb the human cost of denied leave, missed rest, or incorrect pay. HR payroll, sche...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-ai-agent-can-optimize-a-shift-it-cannot-activity-7498364643824877568-oGoY",
-      "date": "Wed, 26 Aug 2026 13:04:04 GMT",
-      "summary": "An AI agent can optimize a shift. It cannot absorb the human cost of denied leave, missed rest, or incorrect pay. HR payroll, scheduling, and workforce agents need governance—not blind automation. PROBLEM Sensitive workforce data and opaque decisions can create unfair schedules,",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "LEVEL UP YOUR AI GOVERNANCE | 5/16 Bad lineage turns a defensible model into an unanswerable decision. Problem Without collection...",
-      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-516-bad-lineage-activity-7498363908014096384--CKA",
-      "date": "Wed, 26 Aug 2026 13:01:09 GMT",
-      "summary": "LEVEL UP YOUR AI GOVERNANCE | 5/16 Bad lineage turns a defensible model into an unanswerable decision. Problem Without collection context, consent, transformations, exclusions, and quality, teams cannot defend or correct outcomes. Solutions Track provenance machine-readably from",
       "image": null,
       "author": "Bob Rapp"
     }
