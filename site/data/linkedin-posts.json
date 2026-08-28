@@ -1,83 +1,67 @@
 {
-  "updated": "2026-08-28T10:30:37Z",
+  "updated": "2026-08-28T21:50:49Z",
   "bob": [
+    {
+      "title": "Great advice ai roles should be carefully crafted and measured before hire",
+      "link": "https://www.linkedin.com/posts/bobrapp_great-advice-ai-roles-should-be-carefully-activity-7499149363055710208-YLJR",
+      "date": "Fri, 28 Aug 2026 17:02:16 GMT",
+      "summary": "Great advice ai roles should be carefully crafted and measured before hire",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Andreas Horn this is a builders builder love",
+      "link": "https://www.linkedin.com/posts/bobrapp_andreas-horn-this-is-a-builders-builder-love-activity-7499149054589726721-Qfde",
+      "date": "Fri, 28 Aug 2026 17:01:02 GMT",
+      "summary": "Andreas Horn this is a builders builder love",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Like this thinking Joe Levy Joe Braidwood Corey Scherrer Ken Johnston Stacy Tatem Bill Anderson Parker Jones",
+      "link": "https://www.linkedin.com/posts/bobrapp_github-danieldoderleingenesis-protocol-activity-7499148776545308672-UlDM",
+      "date": "Fri, 28 Aug 2026 16:59:56 GMT",
+      "summary": "Like this thinking Joe Levy Joe Braidwood Corey Scherrer Ken Johnston Stacy Tatem Bill Anderson Parker Jones",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Legendary team Aaron Goldfeder is one of the best leaders I know",
+      "link": "https://www.linkedin.com/posts/bobrapp_legendary-team-aaron-goldfeder-is-one-of-activity-7499148412630581248-Ga2n",
+      "date": "Fri, 28 Aug 2026 16:58:29 GMT",
+      "summary": "Legendary team Aaron Goldfeder is one of the best leaders I know",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Open-source is not governance-free. オープンソースでも統治が必要です。 PROBLEM / 問題 Fine-tuning can obscure provenance, license duties, derivatives...",
+      "link": "https://www.linkedin.com/posts/bobrapp_open-source-is-not-governance-free-%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9-activity-7499089454050033665-KPAm",
+      "date": "Fri, 28 Aug 2026 13:04:12 GMT",
+      "summary": "Open-source is not governance-free. オープンソースでも統治が必要です。 PROBLEM / 問題 Fine-tuning can obscure provenance, license duties, derivatives, and evidence. / ファインチューニングで、出所・義務・派生版・証拠が曖昧になります。 SOLUTIONS / 解決策 Log the base model, data, code, weights, license, changes, lineage, tests, approve",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Shadow AI is often a demand signal before it becomes a security incident. Problem Unapproved tools solve real workflow problems. P...",
+      "link": "https://www.linkedin.com/posts/bobrapp_shadow-ai-is-often-a-demand-signal-before-activity-7499089382604201984-JN7r",
+      "date": "Fri, 28 Aug 2026 13:03:55 GMT",
+      "summary": "Shadow AI is often a demand signal before it becomes a security incident. Problem Unapproved tools solve real workflow problems. Punitive-only responses drive use underground; open access risks confidential data and ownerless decisions. Solutions Use privacy-respecting telemetry",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Public availability is not independent validation. Before adopting an open-source model, verify:",
+      "link": "https://www.linkedin.com/posts/bobrapp_public-availability-is-not-independent-validation-activity-7499089195265765377-GSo-",
+      "date": "Fri, 28 Aug 2026 13:03:10 GMT",
+      "summary": "Public availability is not independent validation. Before adopting an open-source model, verify: • Provenance and license obligations. • Maintainer identity, release security, and advisories. • Model-weight hashes and artifact integrity. • Known limitations and reproducible evalu",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Thanks Corey - great to have you as a community leader in the aigovops space!",
       "link": "https://www.linkedin.com/posts/bobrapp_ken-johnston-substack-activity-7499016868368777216-du46",
       "date": "Fri, 28 Aug 2026 08:15:46 GMT",
       "summary": "Thanks Corey - great to have you as a community leader in the aigovops space!",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Always a great event -",
-      "link": "https://www.linkedin.com/posts/bobrapp_always-a-great-event-activity-7498936736048209920-xUdj",
-      "date": "Fri, 28 Aug 2026 02:57:21 GMT",
-      "summary": "Always a great event -",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An AVM can estimate a home’s value in seconds. That does not make its recommendation fair, explainable, or ready to automate. For...",
-      "link": "https://fr.linkedin.com/posts/bobrapp_an-avm-can-estimate-a-homes-value-in-seconds-activity-7498862622037966848-VtQK",
-      "date": "Thu, 27 Aug 2026 22:02:51 GMT",
-      "summary": "An AVM can estimate a home’s value in seconds. That does not make its recommendation fair, explainable, or ready to automate. For valuation, mortgage pre-approval, and underwriting AI, governance must travel with the decision: • Trace property, market, financial, and credit data",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Policy is not operational readiness until people rehearse it. Tabletop scenario: an AI system produces harmful, inconsistent outpu...",
-      "link": "https://www.linkedin.com/posts/bobrapp_policy-is-not-operational-readiness-until-activity-7498862614312157184-LWRi",
-      "date": "Thu, 27 Aug 2026 22:02:49 GMT",
-      "summary": "Policy is not operational readiness until people rehearse it. Tabletop scenario: an AI system produces harmful, inconsistent outputs. Run the exercise: • Identify who can pause the system. • Test the contact tree and escalation SLOs. • Preserve prompts, outputs, logs, and model/v",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "“Same model” is often a dangerous assumption. Problem Providers may change weights, retrieval, prompts, safety behavior, or infras...",
-      "link": "https://www.linkedin.com/posts/bobrapp_same-model-is-often-a-dangerous-assumption-activity-7498862614207193088-bMGu",
-      "date": "Thu, 27 Aug 2026 22:02:49 GMT",
-      "summary": "“Same model” is often a dangerous assumption. Problem Providers may change weights, retrieval, prompts, safety behavior, or infrastructure without changing the product name. Accuracy, refusals, latency, privacy exposure, and affected groups can shift. Solutions Set change trigger",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An AI agent can detect a signal in seconds. That does not mean it should block a user or isolate a system without governed authori...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-ai-agent-can-detect-a-signal-in-seconds-activity-7498727180407902208-caV_",
-      "date": "Thu, 27 Aug 2026 13:04:39 GMT",
-      "summary": "An AI agent can detect a signal in seconds. That does not mean it should block a user or isolate a system without governed authority. Cybersecurity automated response should connect detection, SOC triage, blocking actions, and incident-response agents to confidence thresholds, hu",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An audit is not a PDF produced at the end. It is the ability to prove what happened. Problem Retrospective evidence, omitted failu...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-audit-is-not-a-pdf-produced-at-the-end-activity-7498726884298395648-f40C",
-      "date": "Thu, 27 Aug 2026 13:03:29 GMT",
-      "summary": "An audit is not a PDF produced at the end. It is the ability to prove what happened. Problem Retrospective evidence, omitted failures and dissent, and confusing a control description with operation create audit theater. Solutions Start an evidence register at system inception. Re",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Broad roles are not agent controls. An AI agent should not get “CRM access.” Give it a narrowly defined action, then control the c...",
-      "link": "https://www.linkedin.com/posts/bobrapp_broad-roles-are-not-agent-controls-an-ai-activity-7498726463785877504-EoaT",
-      "date": "Thu, 27 Aug 2026 13:01:49 GMT",
-      "summary": "Broad roles are not agent controls. An AI agent should not get “CRM access.” Give it a narrowly defined action, then control the consequences: • Allowlist tools. • Validate arguments and constraints. • Authorize at resource level. • Enforce rate and spend limits. • Add dry-run mo",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Evidence should travel. Machine-readable governance records move across systems and audits—not into paperwork. Require: stable ide...",
-      "link": "https://fr.linkedin.com/posts/bobrapp_evidence-should-travel-machine-readable-activity-7498500382285910016-UwP8",
-      "date": "Wed, 26 Aug 2026 22:03:27 GMT",
-      "summary": "Evidence should travel. Machine-readable governance records move across systems and audits—not into paperwork. Require: stable identifiers; control-to-evidence links; timestamps; provenance; schema versioning; access controls; cryptographic integrity; human-readable explanations;",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Autonomous vehicles earn trust when operators can show what happened, why the system acted, and how risk was controlled. PROBLEM T...",
-      "link": "https://www.linkedin.com/posts/bobrapp_autonomous-vehicles-earn-trust-when-operators-activity-7498500297594499073-ujlS",
-      "date": "Wed, 26 Aug 2026 22:03:06 GMT",
-      "summary": "Autonomous vehicles earn trust when operators can show what happened, why the system acted, and how risk was controlled. PROBLEM Telemetry without decision logs cannot support safety review or regulatory reporting. SOLUTIONS • Set operating limits and human-override paths. • Log",
       "image": null,
       "author": "Bob Rapp"
     }
