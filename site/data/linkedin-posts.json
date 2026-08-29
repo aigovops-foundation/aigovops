@@ -1,6 +1,46 @@
 {
-  "updated": "2026-08-29T07:06:18Z",
+  "updated": "2026-08-29T19:07:42Z",
   "bob": [
+    {
+      "title": "Love to chat great idea Ken Johnston Joe Braidwood",
+      "link": "https://www.linkedin.com/posts/bobrapp_love-to-chat-great-idea-ken-johnston-joe-activity-7499518356048351233-eaya",
+      "date": "Sat, 29 Aug 2026 17:28:30 GMT",
+      "summary": "Love to chat great idea Ken Johnston Joe Braidwood",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Responsible AI governance includes knowing when to stop—not only how to launch. Retire for unacceptable risk, obsolete purpose/per...",
+      "link": "https://www.linkedin.com/posts/bobrapp_responsible-ai-governance-includes-knowing-activity-7499451904733917184-SF_m",
+      "date": "Sat, 29 Aug 2026 13:04:27 GMT",
+      "summary": "Responsible AI governance includes knowing when to stop—not only how to launch. Retire for unacceptable risk, obsolete purpose/performance, legal or contractual duty, excess cost, or a validated safer successor. Exit evidence: validate the successor; notify users and regulators a",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "⚡ AI can forecast demand, coordinate renewables, and automate demand response across the grid. Without governance, forecasts can b...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-can-forecast-demand-coordinate-renewables-activity-7499451860953628673-aKMo",
+      "date": "Sat, 29 Aug 2026 13:04:17 GMT",
+      "summary": "⚡ AI can forecast demand, coordinate renewables, and automate demand response across the grid. Without governance, forecasts can become unsafe actions. PROBLEM Data drifts. Conditions change. Operators carry the consequence. SOLUTION Keep the loop explicit: forecast → human overs",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "If governance counts only model accuracy, it may miss costs beyond the product team. PROBLEM Training and inference consume energy...",
+      "link": "https://www.linkedin.com/posts/bobrapp_if-governance-counts-only-model-accuracy-activity-7499451753965297664-vjWm",
+      "date": "Sat, 29 Aug 2026 13:03:51 GMT",
+      "summary": "If governance counts only model accuracy, it may miss costs beyond the product team. PROBLEM Training and inference consume energy, water, hardware, and capacity. Measure impacts to compare alternatives and stop inefficient automation scaling. SOLUTIONS Track lifecycle compute an",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Worth a read - \"an agent escaped\" is quite different than what this author - and the data seems to support",
+      "link": "https://www.linkedin.com/posts/bobrapp_human-layers-hello-eve-substack-activity-7499416771787972609-VZaR",
+      "date": "Sat, 29 Aug 2026 10:44:51 GMT",
+      "summary": "Worth a read - \"an agent escaped\" is quite different than what this author - and the data seems to support - \"700 agents escaped and held a hacking party\" seems much closer to the truth Ken Johnston Joe Braidwood",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Level up AI governance: compliance agents should accelerate reporting—not automate accountability. Agents can monitor controls, tr...",
       "link": "https://www.linkedin.com/posts/bobrapp_level-up-ai-governance-compliance-agents-activity-7499224978890878977-msfZ",
@@ -30,38 +70,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_great-advice-ai-roles-should-be-carefully-activity-7499149363055710208-YLJR",
       "date": "Fri, 28 Aug 2026 17:02:16 GMT",
       "summary": "Great advice ai roles should be carefully crafted and measured before hire",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Andreas Horn this is a builders builder love",
-      "link": "https://www.linkedin.com/posts/bobrapp_andreas-horn-this-is-a-builders-builder-love-activity-7499149054589726721-Qfde",
-      "date": "Fri, 28 Aug 2026 17:01:02 GMT",
-      "summary": "Andreas Horn this is a builders builder love",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Like this thinking Joe Levy Joe Braidwood Corey Scherrer Ken Johnston Stacy Tatem Bill Anderson Parker Jones",
-      "link": "https://www.linkedin.com/posts/bobrapp_github-danieldoderleingenesis-protocol-activity-7499148776545308672-UlDM",
-      "date": "Fri, 28 Aug 2026 16:59:56 GMT",
-      "summary": "Like this thinking Joe Levy Joe Braidwood Corey Scherrer Ken Johnston Stacy Tatem Bill Anderson Parker Jones",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Legendary team Aaron Goldfeder is one of the best leaders I know",
-      "link": "https://www.linkedin.com/posts/bobrapp_legendary-team-aaron-goldfeder-is-one-of-activity-7499148412630581248-Ga2n",
-      "date": "Fri, 28 Aug 2026 16:58:29 GMT",
-      "summary": "Legendary team Aaron Goldfeder is one of the best leaders I know",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Open-source is not governance-free. オープンソースでも統治が必要です。 PROBLEM / 問題 Fine-tuning can obscure provenance, license duties, derivatives...",
-      "link": "https://www.linkedin.com/posts/bobrapp_open-source-is-not-governance-free-%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9-activity-7499089454050033665-KPAm",
-      "date": "Fri, 28 Aug 2026 13:04:12 GMT",
-      "summary": "Open-source is not governance-free. オープンソースでも統治が必要です。 PROBLEM / 問題 Fine-tuning can obscure provenance, license duties, derivatives, and evidence. / ファインチューニングで、出所・義務・派生版・証拠が曖昧になります。 SOLUTIONS / 解決策 Log the base model, data, code, weights, license, changes, lineage, tests, approve",
       "image": null,
       "author": "Bob Rapp"
     }
