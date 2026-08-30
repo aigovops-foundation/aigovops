@@ -1,6 +1,30 @@
 {
-  "updated": "2026-08-30T07:06:42Z",
+  "updated": "2026-08-30T19:07:34Z",
   "bob": [
+    {
+      "title": "Untrusted AI tasks must not inherit production privileges. Sandbox any task that runs code, accesses files/tools/network, or handl...",
+      "link": "https://www.linkedin.com/posts/bobrapp_untrusted-ai-tasks-must-not-inherit-production-activity-7499813674929287168-pNk7",
+      "date": "Sun, 30 Aug 2026 13:02:00 GMT",
+      "summary": "Untrusted AI tasks must not inherit production privileges. Sandbox any task that runs code, accesses files/tools/network, or handles sensitive data. SAFE • COMPLIANT • PRO-HUMANITY Contain it with an isolated filesystem, restricted network egress, resource quotas, no ambient cred",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "A person cannot meaningfully challenge a decision they cannot identify, understand, or route to a responsible human. Problem Gener...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-person-cannot-meaningfully-challenge-a-activity-7499813385807679488-qec5",
+      "date": "Sun, 30 Aug 2026 13:00:51 GMT",
+      "summary": "A person cannot meaningfully challenge a decision they cannot identify, understand, or route to a responsible human. Problem Generic explanations after the fact are insufficient. People need decision-specific reasons, relevant inputs, uncertainty, consequences, and a path to corr",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Consent is not a checkbox. It is a lifecycle—and revocation is a production event. PROBLEM When consent is withdrawn but caches, v...",
+      "link": "https://www.linkedin.com/posts/bobrapp_consent-is-not-a-checkbox-it-is-a-lifecycleand-activity-7499813369890193408-BKt1",
+      "date": "Sun, 30 Aug 2026 13:00:47 GMT",
+      "summary": "Consent is not a checkbox. It is a lifecycle—and revocation is a production event. PROBLEM When consent is withdrawn but caches, vector stores, backups, or vendors still process the data, governance failed in reality. SOLUTIONS Encode purpose, minimization, retention, and revocat",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "In civic information, a plausible answer can be more dangerous than an obvious error. Problem AI-generated messages can impersonat...",
       "link": "https://www.linkedin.com/posts/bobrapp_in-civic-information-a-plausible-answer-activity-7499587506473086976-dp5Y",
@@ -38,30 +62,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_responsible-ai-governance-includes-knowing-activity-7499451904733917184-SF_m",
       "date": "Sat, 29 Aug 2026 13:04:27 GMT",
       "summary": "Responsible AI governance includes knowing when to stop—not only how to launch. Retire for unacceptable risk, obsolete purpose/performance, legal or contractual duty, excess cost, or a validated safer successor. Exit evidence: validate the successor; notify users and regulators a",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "⚡ AI can forecast demand, coordinate renewables, and automate demand response across the grid. Without governance, forecasts can b...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-can-forecast-demand-coordinate-renewables-activity-7499451860953628673-aKMo",
-      "date": "Sat, 29 Aug 2026 13:04:17 GMT",
-      "summary": "⚡ AI can forecast demand, coordinate renewables, and automate demand response across the grid. Without governance, forecasts can become unsafe actions. PROBLEM Data drifts. Conditions change. Operators carry the consequence. SOLUTION Keep the loop explicit: forecast → human overs",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "If governance counts only model accuracy, it may miss costs beyond the product team. PROBLEM Training and inference consume energy...",
-      "link": "https://www.linkedin.com/posts/bobrapp_if-governance-counts-only-model-accuracy-activity-7499451753965297664-vjWm",
-      "date": "Sat, 29 Aug 2026 13:03:51 GMT",
-      "summary": "If governance counts only model accuracy, it may miss costs beyond the product team. PROBLEM Training and inference consume energy, water, hardware, and capacity. Measure impacts to compare alternatives and stop inefficient automation scaling. SOLUTIONS Track lifecycle compute an",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Worth a read - \"an agent escaped\" is quite different than what this author - and the data seems to support",
-      "link": "https://www.linkedin.com/posts/bobrapp_human-layers-hello-eve-substack-activity-7499416771787972609-VZaR",
-      "date": "Sat, 29 Aug 2026 10:44:51 GMT",
-      "summary": "Worth a read - \"an agent escaped\" is quite different than what this author - and the data seems to support - \"700 agents escaped and held a hacking party\" seems much closer to the truth Ken Johnston Joe Braidwood",
       "image": null,
       "author": "Bob Rapp"
     }
