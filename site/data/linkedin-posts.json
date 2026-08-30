@@ -1,6 +1,30 @@
 {
-  "updated": "2026-08-29T19:07:42Z",
+  "updated": "2026-08-30T07:06:42Z",
   "bob": [
+    {
+      "title": "In civic information, a plausible answer can be more dangerous than an obvious error. Problem AI-generated messages can impersonat...",
+      "link": "https://www.linkedin.com/posts/bobrapp_in-civic-information-a-plausible-answer-activity-7499587506473086976-dp5Y",
+      "date": "Sat, 29 Aug 2026 22:03:17 GMT",
+      "summary": "In civic information, a plausible answer can be more dangerous than an obvious error. Problem AI-generated messages can impersonate trusted sources, target vulnerable audiences, suppress participation, or distort time-sensitive public information. Solutions Require provenance and",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Synthetic media can look authentic in seconds. Trust cannot be restored that quickly. Every AI-generated or AI-edited image, video...",
+      "link": "https://www.linkedin.com/posts/bobrapp_synthetic-media-can-look-authentic-in-seconds-activity-7499587495815438336-EJZO",
+      "date": "Sat, 29 Aug 2026 22:03:15 GMT",
+      "summary": "Synthetic media can look authentic in seconds. Trust cannot be restored that quickly. Every AI-generated or AI-edited image, video, audio clip, and article needs a traceable story: • Where did it originate? • What changed—and which model changed it? • Was consent obtained? • Who",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "RAG is only as trustworthy as its knowledge sources. Poison one document, and a confident answer can become a scalable incident. G...",
+      "link": "https://www.linkedin.com/posts/bobrapp_rag-is-only-as-trustworthy-as-its-knowledge-activity-7499587004431716352-4e5c",
+      "date": "Sat, 29 Aug 2026 22:01:17 GMT",
+      "summary": "RAG is only as trustworthy as its knowledge sources. Poison one document, and a confident answer can become a scalable incident. Govern the knowledge base: • Allowlist sources; name owners; apply trust labels. • Sign content and review ingestion. • Screen for prompt injection; ma",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Love to chat great idea Ken Johnston Joe Braidwood",
       "link": "https://www.linkedin.com/posts/bobrapp_love-to-chat-great-idea-ken-johnston-joe-activity-7499518356048351233-eaya",
@@ -38,38 +62,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_human-layers-hello-eve-substack-activity-7499416771787972609-VZaR",
       "date": "Sat, 29 Aug 2026 10:44:51 GMT",
       "summary": "Worth a read - \"an agent escaped\" is quite different than what this author - and the data seems to support - \"700 agents escaped and held a hacking party\" seems much closer to the truth Ken Johnston Joe Braidwood",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Level up AI governance: compliance agents should accelerate reporting—not automate accountability. Agents can monitor controls, tr...",
-      "link": "https://www.linkedin.com/posts/bobrapp_level-up-ai-governance-compliance-agents-activity-7499224978890878977-msfZ",
-      "date": "Fri, 28 Aug 2026 22:02:44 GMT",
-      "summary": "Level up AI governance: compliance agents should accelerate reporting—not automate accountability. Agents can monitor controls, triage AML alerts, assemble evidence, and draft filings. Keep humans responsible for material decisions. THREE-YES TEST / اختبار نعم الثلاثي Safe: Detec",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "ENGLISH AI agent identity is accountability—not a shared API key. Bind every action to agent/version, delegated principal, scope,...",
-      "link": "https://www.linkedin.com/posts/bobrapp_english-ai-agent-identity-is-accountabilitynot-activity-7499224833965072384-qK6f",
-      "date": "Fri, 28 Aug 2026 22:02:09 GMT",
-      "summary": "ENGLISH AI agent identity is accountability—not a shared API key. Bind every action to agent/version, delegated principal, scope, expiry and signed receipt. SHIP GOOD AI ✓ Issue short-lived, least-privilege credentials ✓ Log the delegation chain ✓ Sign receipts ✓ Verify independe",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Vulnerability is not a checkbox in a risk register. It changes the control design. PROBLEM AI systems serving children or people i...",
-      "link": "https://www.linkedin.com/posts/bobrapp_vulnerability-is-not-a-checkbox-in-a-risk-activity-7499224815694782464-uyXy",
-      "date": "Fri, 28 Aug 2026 22:02:05 GMT",
-      "summary": "Vulnerability is not a checkbox in a risk register. It changes the control design. PROBLEM AI systems serving children or people in crisis can exploit dependency, misread context, or make persuasive output disproportionately harmful. Adult-user assumptions are insufficient. SOLUT",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Great advice ai roles should be carefully crafted and measured before hire",
-      "link": "https://www.linkedin.com/posts/bobrapp_great-advice-ai-roles-should-be-carefully-activity-7499149363055710208-YLJR",
-      "date": "Fri, 28 Aug 2026 17:02:16 GMT",
-      "summary": "Great advice ai roles should be carefully crafted and measured before hire",
       "image": null,
       "author": "Bob Rapp"
     }
