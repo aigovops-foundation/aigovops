@@ -1,6 +1,30 @@
 {
-  "updated": "2026-08-30T19:07:34Z",
+  "updated": "2026-08-31T07:13:58Z",
   "bob": [
+    {
+      "title": "An insurance AI decision is not “just a score.” It can influence coverage, claim value, and access to appeal. Govern the evidence...",
+      "link": "https://www.linkedin.com/posts/bobrapp_an-insurance-ai-decision-is-not-just-a-score-activity-7499949868229038080-M8PE",
+      "date": "Sun, 30 Aug 2026 22:03:11 GMT",
+      "summary": "An insurance AI decision is not “just a score.” It can influence coverage, claim value, and access to appeal. Govern the evidence chain: • Underwriting: record relevant inputs and provenance. • Adjudication: test fairness, consistency, and human override. • Appeals: provide reaso",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Red teaming is not a one-time demo. It is a repeatable control-effectiveness program. Define threat hypotheses and representative...",
+      "link": "https://www.linkedin.com/posts/bobrapp_red-teaming-is-not-a-one-time-demo-it-is-activity-7499949816387395584-mO93",
+      "date": "Sun, 30 Aug 2026 22:02:59 GMT",
+      "summary": "Red teaming is not a one-time demo. It is a repeatable control-effectiveness program. Define threat hypotheses and representative scenarios. Log severity-weighted findings with reproducible exploit steps and evidence—not screenshots or assertions. Assign remediation owners; retes",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Your AI risk surface is larger than your direct vendor list. Problem Foundation models, cloud regions, data brokers, evaluators, o...",
+      "link": "https://www.linkedin.com/posts/bobrapp_your-ai-risk-surface-is-larger-than-your-activity-7499949593225289728-itdp",
+      "date": "Sun, 30 Aug 2026 22:02:05 GMT",
+      "summary": "Your AI risk surface is larger than your direct vendor list. Problem Foundation models, cloud regions, data brokers, evaluators, or moderation services may sit beneath many products. Concentration and hidden subcontractors create correlated failure and fragile recovery. Solutions",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Untrusted AI tasks must not inherit production privileges. Sandbox any task that runs code, accesses files/tools/network, or handl...",
       "link": "https://www.linkedin.com/posts/bobrapp_untrusted-ai-tasks-must-not-inherit-production-activity-7499813674929287168-pNk7",
@@ -46,22 +70,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_rag-is-only-as-trustworthy-as-its-knowledge-activity-7499587004431716352-4e5c",
       "date": "Sat, 29 Aug 2026 22:01:17 GMT",
       "summary": "RAG is only as trustworthy as its knowledge sources. Poison one document, and a confident answer can become a scalable incident. Govern the knowledge base: • Allowlist sources; name owners; apply trust labels. • Sign content and review ingestion. • Screen for prompt injection; ma",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Love to chat great idea Ken Johnston Joe Braidwood",
-      "link": "https://www.linkedin.com/posts/bobrapp_love-to-chat-great-idea-ken-johnston-joe-activity-7499518356048351233-eaya",
-      "date": "Sat, 29 Aug 2026 17:28:30 GMT",
-      "summary": "Love to chat great idea Ken Johnston Joe Braidwood",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Responsible AI governance includes knowing when to stop—not only how to launch. Retire for unacceptable risk, obsolete purpose/per...",
-      "link": "https://www.linkedin.com/posts/bobrapp_responsible-ai-governance-includes-knowing-activity-7499451904733917184-SF_m",
-      "date": "Sat, 29 Aug 2026 13:04:27 GMT",
-      "summary": "Responsible AI governance includes knowing when to stop—not only how to launch. Retire for unacceptable risk, obsolete purpose/performance, legal or contractual duty, excess cost, or a validated safer successor. Exit evidence: validate the successor; notify users and regulators a",
       "image": null,
       "author": "Bob Rapp"
     }
