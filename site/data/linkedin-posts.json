@@ -1,6 +1,22 @@
 {
-  "updated": "2026-08-31T07:13:58Z",
+  "updated": "2026-08-31T19:08:10Z",
   "bob": [
+    {
+      "title": "Agent-to-agent messages are not trusted by default. Treat every instruction as untrusted data until validated. Set explicit bounda...",
+      "link": "https://www.linkedin.com/posts/bobrapp_agent-to-agent-messages-are-not-trusted-by-activity-7500177349762732033-PuaJ",
+      "date": "Mon, 31 Aug 2026 13:07:07 GMT",
+      "summary": "Agent-to-agent messages are not trusted by default. Treat every instruction as untrusted data until validated. Set explicit boundaries: • Use typed, allowlisted schemas. • Authenticate the sender and preserve provenance. • Require nonce, timestamp, and expiry for replay protectio",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Testing with real data can create the very privacy risk governance is meant to prevent. Problem Realistic evaluation can expose pr...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7500176853291208704-evi8",
+      "date": "Mon, 31 Aug 2026 13:05:08 GMT",
+      "summary": "Testing with real data can create the very privacy risk governance is meant to prevent. Problem Realistic evaluation can expose production records to notebooks, vendors, shared systems, and longer retention. De-identification can fail when records are linkable or rare. Solutions",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "An insurance AI decision is not “just a score.” It can influence coverage, claim value, and access to appeal. Govern the evidence...",
       "link": "https://www.linkedin.com/posts/bobrapp_an-insurance-ai-decision-is-not-just-a-score-activity-7499949868229038080-M8PE",
@@ -54,22 +70,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_in-civic-information-a-plausible-answer-activity-7499587506473086976-dp5Y",
       "date": "Sat, 29 Aug 2026 22:03:17 GMT",
       "summary": "In civic information, a plausible answer can be more dangerous than an obvious error. Problem AI-generated messages can impersonate trusted sources, target vulnerable audiences, suppress participation, or distort time-sensitive public information. Solutions Require provenance and",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Synthetic media can look authentic in seconds. Trust cannot be restored that quickly. Every AI-generated or AI-edited image, video...",
-      "link": "https://www.linkedin.com/posts/bobrapp_synthetic-media-can-look-authentic-in-seconds-activity-7499587495815438336-EJZO",
-      "date": "Sat, 29 Aug 2026 22:03:15 GMT",
-      "summary": "Synthetic media can look authentic in seconds. Trust cannot be restored that quickly. Every AI-generated or AI-edited image, video, audio clip, and article needs a traceable story: • Where did it originate? • What changed—and which model changed it? • Was consent obtained? • Who",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "RAG is only as trustworthy as its knowledge sources. Poison one document, and a confident answer can become a scalable incident. G...",
-      "link": "https://www.linkedin.com/posts/bobrapp_rag-is-only-as-trustworthy-as-its-knowledge-activity-7499587004431716352-4e5c",
-      "date": "Sat, 29 Aug 2026 22:01:17 GMT",
-      "summary": "RAG is only as trustworthy as its knowledge sources. Poison one document, and a confident answer can become a scalable incident. Govern the knowledge base: • Allowlist sources; name owners; apply trust labels. • Sign content and review ingestion. • Screen for prompt injection; ma",
       "image": null,
       "author": "Bob Rapp"
     }
