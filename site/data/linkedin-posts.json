@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-01T07:07:17Z",
+  "updated": "2026-09-01T19:09:17Z",
   "bob": [
+    {
+      "title": "AI-assisted phishing needs evidence, not intuition. PROBLEM: Response can lose prompts, headers, custody, reporter safety, ownersh...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-assisted-phishing-needs-evidence-not-activity-7500539860592631808-Ps_s",
+      "date": "Tue, 01 Sep 2026 13:07:36 GMT",
+      "summary": "AI-assisted phishing needs evidence, not intuition. PROBLEM: Response can lose prompts, headers, custody, reporter safety, ownership. SOLUTIONS: Preserve prompt/header, time, URL, attachment; classify suspected/probable/confirmed; protect reporter; assign owner; close with lesson",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "High-impact healthcare-adjacent AI needs disclosure—not consent or approval. 高影響のヘルスケア関連AIには開示が必要です。同意や承認とは別です。 PROBLEM / 問題 Witho...",
+      "link": "https://www.linkedin.com/posts/bobrapp_high-impact-healthcare-adjacent-ai-needs-activity-7500539504361947136-ZM-A",
+      "date": "Tue, 01 Sep 2026 13:06:11 GMT",
+      "summary": "High-impact healthcare-adjacent AI needs disclosure—not consent or approval. 高影響のヘルスケア関連AIには開示が必要です。同意や承認とは別です。 PROBLEM / 問題 Without notice, people cannot question AI-influenced decisions. 通知がなければ、AIが影響した決定を問い直せません。 SOLUTIONS / 解決策 At point of use: identify AI; name the human dec",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "A great event this Thursday in Seattle ai house",
       "link": "https://www.linkedin.com/posts/bobrapp_a-great-event-this-thursday-in-seattle-ai-activity-7500374431429496832-NBV_",
@@ -62,22 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_your-ai-risk-surface-is-larger-than-your-activity-7499949593225289728-itdp",
       "date": "Sun, 30 Aug 2026 22:02:05 GMT",
       "summary": "Your AI risk surface is larger than your direct vendor list. Problem Foundation models, cloud regions, data brokers, evaluators, or moderation services may sit beneath many products. Concentration and hidden subcontractors create correlated failure and fragile recovery. Solutions",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Untrusted AI tasks must not inherit production privileges. Sandbox any task that runs code, accesses files/tools/network, or handl...",
-      "link": "https://www.linkedin.com/posts/bobrapp_untrusted-ai-tasks-must-not-inherit-production-activity-7499813674929287168-pNk7",
-      "date": "Sun, 30 Aug 2026 13:02:00 GMT",
-      "summary": "Untrusted AI tasks must not inherit production privileges. Sandbox any task that runs code, accesses files/tools/network, or handles sensitive data. SAFE • COMPLIANT • PRO-HUMANITY Contain it with an isolated filesystem, restricted network egress, resource quotas, no ambient cred",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "A person cannot meaningfully challenge a decision they cannot identify, understand, or route to a responsible human. Problem Gener...",
-      "link": "https://www.linkedin.com/posts/bobrapp_a-person-cannot-meaningfully-challenge-a-activity-7499813385807679488-qec5",
-      "date": "Sun, 30 Aug 2026 13:00:51 GMT",
-      "summary": "A person cannot meaningfully challenge a decision they cannot identify, understand, or route to a responsible human. Problem Generic explanations after the fact are insufficient. People need decision-specific reasons, relevant inputs, uncertainty, consequences, and a path to corr",
       "image": null,
       "author": "Bob Rapp"
     }
