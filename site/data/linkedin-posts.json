@@ -1,6 +1,30 @@
 {
-  "updated": "2026-08-31T19:08:10Z",
+  "updated": "2026-09-01T07:07:17Z",
   "bob": [
+    {
+      "title": "A great event this Thursday in Seattle ai house",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-great-event-this-thursday-in-seattle-ai-activity-7500374431429496832-NBV_",
+      "date": "Tue, 01 Sep 2026 02:10:15 GMT",
+      "summary": "A great event this Thursday in Seattle ai house",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "An acquisition can transfer more than systems and contracts. It can transfer hidden AI risk. Before combining environments, make g...",
+      "link": "https://www.linkedin.com/posts/bobrapp_an-acquisition-can-transfer-more-than-systems-activity-7500312159759884288-PZ58",
+      "date": "Mon, 31 Aug 2026 22:02:48 GMT",
+      "summary": "An acquisition can transfer more than systems and contracts. It can transfer hidden AI risk. Before combining environments, make governance due diligence operational: • Inventory every model, agent, dataset, workflow, and undocumented use. • Map legal bases, permissions, retentio",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Responsible AI becomes operational only when leadership accepts, or rejects, specific residual risks. PROBLEM Dashboards show adop...",
+      "link": "https://www.linkedin.com/posts/bobrapp_responsible-ai-becomes-operational-only-when-activity-7500311651959742465-mCak",
+      "date": "Mon, 31 Aug 2026 22:00:47 GMT",
+      "summary": "Responsible AI becomes operational only when leadership accepts, or rejects, specific residual risks. PROBLEM Dashboards show adoption, not the decisions AI makes, who can stop it, unresolved exceptions, or harm signals. Accountability disappears into status reporting. SOLUTIONS",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Agent-to-agent messages are not trusted by default. Treat every instruction as untrusted data until validated. Set explicit bounda...",
       "link": "https://www.linkedin.com/posts/bobrapp_agent-to-agent-messages-are-not-trusted-by-activity-7500177349762732033-PuaJ",
@@ -54,22 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_a-person-cannot-meaningfully-challenge-a-activity-7499813385807679488-qec5",
       "date": "Sun, 30 Aug 2026 13:00:51 GMT",
       "summary": "A person cannot meaningfully challenge a decision they cannot identify, understand, or route to a responsible human. Problem Generic explanations after the fact are insufficient. People need decision-specific reasons, relevant inputs, uncertainty, consequences, and a path to corr",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Consent is not a checkbox. It is a lifecycle—and revocation is a production event. PROBLEM When consent is withdrawn but caches, v...",
-      "link": "https://www.linkedin.com/posts/bobrapp_consent-is-not-a-checkbox-it-is-a-lifecycleand-activity-7499813369890193408-BKt1",
-      "date": "Sun, 30 Aug 2026 13:00:47 GMT",
-      "summary": "Consent is not a checkbox. It is a lifecycle—and revocation is a production event. PROBLEM When consent is withdrawn but caches, vector stores, backups, or vendors still process the data, governance failed in reality. SOLUTIONS Encode purpose, minimization, retention, and revocat",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "In civic information, a plausible answer can be more dangerous than an obvious error. Problem AI-generated messages can impersonat...",
-      "link": "https://www.linkedin.com/posts/bobrapp_in-civic-information-a-plausible-answer-activity-7499587506473086976-dp5Y",
-      "date": "Sat, 29 Aug 2026 22:03:17 GMT",
-      "summary": "In civic information, a plausible answer can be more dangerous than an obvious error. Problem AI-generated messages can impersonate trusted sources, target vulnerable audiences, suppress participation, or distort time-sensitive public information. Solutions Require provenance and",
       "image": null,
       "author": "Bob Rapp"
     }
