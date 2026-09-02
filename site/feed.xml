@@ -5,13 +5,21 @@
     <link>https://www.aigovops-foundation.com</link>
     <description>The latest posts from Ken Johnston and Bob Rapp on AI governance, policy-as-code, and open-source compliance tooling.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Sep 2026 17:09:35 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 17:11:15 +0000</lastBuildDate>
     <atom:link href="https://www.aigovops-foundation.com/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://www.aigovops-foundation.com/images/logo.png</url>
       <title>AiGovOps Foundation</title>
       <link>https://www.aigovops-foundation.com</link>
     </image>
+    <item><!-- content -->
+      <title>The ten-minute Gate Check — is this AI agent ready to run?</title>
+      <link>https://www.aigovops-foundation.com/blog/the-ten-minute-gate-check.html</link>
+      <guid isPermaLink="true">https://www.aigovops-foundation.com/blog/the-ten-minute-gate-check.html</guid>
+      <pubDate>Wed, 02 Sep 2026 09:00:00 +0000</pubDate>
+      <dc:creator>Bob Rapp</dc:creator>
+      <description>Ten yes/no questions a manager can answer about an AI agent this week, each with the evidence to point at, ending in a card you keep. No account, no maybe.</description>
+    </item>
     <item>
       <title>Countdown to June 4th: 2 Days to go!</title>
       <link>https://www.linkedin.com/posts/rkjohnston_devops-aigovops-devops-activity-7467655570754306052-_4fd</link>
