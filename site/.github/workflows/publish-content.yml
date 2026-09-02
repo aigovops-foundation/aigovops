@@ -1,0 +1,41 @@
+name: publish-content
+
+# Drop a story in content/stories/ and it publishes. This renders Markdown into the blog, the
+# blog index and the RSS feed, and commits the result to main — GitHub Pages serves main, so the
+# post is live within a minute. Same shape as fetch-linkedin-posts.yml (an automated commit of
+# generated files). Hand-made posts are never touched.
+
+on:
+  push:
+    branches: [main]
+    paths: ["content/**", "scripts/build_content.py"]
+  workflow_dispatch:
+
+concurrency:
+  group: publish-content
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet markdown
+      - name: Render stories
+        run: python3 scripts/build_content.py
+      - name: Commit what changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add blog/ blog.html feed.xml
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Publish stories from content/ [automated $(date -u +%Y-%m-%d)]"
+            git push
+          fi
