@@ -7,6 +7,7 @@ three things out, no HTML, no PR, no test suite:
 |---|---|
 | Copy `_TEMPLATE.md` to `2026-10-doing-ai-better.md`, fill in title/date, write | `blog/doing-ai-better.html` is rendered from the same skeleton as every hand-made post |
 | Commit it (or hand it to Jeeves, who commits it for you) | a card appears at the top of `blog.html`; `feed.xml` gets the item; GitHub Pages is live within a minute |
+| Nothing | `content/drafts/<slug>.newsletter.md` (subject + lead + link) and `<slug>.linkedin.md` (hook + body under 1,300 chars + link + three hashtags) are written for you. Both end on the Gate Check, tagged `src=newsletter` / `src=linkedin`, so the funnel knows which path a reader took. Paste, don't rewrite. |
 
 Front matter: `title` and `date` (YYYY-MM-DD) are required. `author`, `summary`, `image`, `slug` are optional.
 Files starting with `_` are ignored. Re-saving a file re-renders it; nothing is duplicated.

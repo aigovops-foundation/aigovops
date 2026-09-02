@@ -26,13 +26,15 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install --quiet markdown
-      - name: Render stories
+      - name: Self-test the pipeline (throwaway copy; nothing real is touched)
+        run: python3 scripts/test_build_content.py
+      - name: Render stories + newsletter and LinkedIn drafts
         run: python3 scripts/build_content.py
       - name: Commit what changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add blog/ blog.html feed.xml
+          git add blog/ blog.html feed.xml content/drafts/
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else

@@ -39,6 +39,13 @@ FEED = os.path.join(ROOT, "feed.xml")
 SITE = "https://www.aigovops-foundation.com"
 DEFAULT_IMAGE = f"{SITE}/images/logo.png"
 START, END = "<!-- content:start -->", "<!-- content:end -->"
+# ONE PATH (2026-09-02): every story also becomes a newsletter section and a LinkedIn draft, written
+# to content/drafts/<slug>.newsletter.md and <slug>.linkedin.md. Both end on the same door — the
+# ten-minute Gate Check — tagged with the channel, so the funnel can say which path brought people.
+DRAFTS = os.path.join(ROOT, "content", "drafts")
+GATE_CHECK = "https://community.aigovops-foundation.com/gate-check.html"
+LINKEDIN_LIMIT = 1300
+HASHTAGS = "#AIGovernance #AiGovOps #ResponsibleAI"
 
 
 def parse(path):
@@ -151,6 +158,60 @@ def update_feed(metas):
     open(FEED, "w", encoding="utf-8").write(t)
 
 
+def _plain(md_text):
+    """Markdown → plain sentences for a social/email draft (no headings, links become their text)."""
+    t = re.sub(r"^#+\s.*$", "", md_text, flags=re.M)
+    t = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", t)
+    t = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", t)
+    t = re.sub(r"[*_`>]", "", t)
+    # a paragraph wrapped at 90 columns in the editor is one paragraph on LinkedIn
+    return [re.sub(r"\s*\n\s*", " ", p.strip()) for p in re.split(r"\n\s*\n", t) if p.strip()]
+
+
+def _trim(text, limit):
+    if len(text) <= limit:
+        return text
+    cut = text[: limit - 1]
+    cut = cut[: max(cut.rfind(". "), cut.rfind(" "))].rstrip(" ,;:—-")
+    return cut + "…"
+
+
+def newsletter_draft(meta):
+    url = f"{SITE}/blog/{meta['slug']}.html?src=newsletter"
+    paras = _plain(meta["body_md"])
+    lead = " ".join(paras[:2])
+    return (f"Subject: {meta['title']}\n\n"
+            f"{_trim(lead, 700)}\n\n"
+            f"Read the whole story: {url}\n\n"
+            f"Ten minutes, no account — the Gate Check: {GATE_CHECK}?src=newsletter\n\n"
+            f"— {meta['author']}, AiGovOps Foundation\n")
+
+
+def linkedin_draft(meta):
+    url = f"{SITE}/blog/{meta['slug']}.html?src=linkedin"
+    paras = _plain(meta["body_md"])
+    tail = (f"\n\nFull story: {url}\n"
+            f"Ten minutes, no account — the Gate Check: {GATE_CHECK}?src=linkedin\n\n{HASHTAGS}\n")
+    hook = meta["title"].strip()
+    room = LINKEDIN_LIMIT - len(hook) - 2 - len(tail)
+    body = _trim(" ".join(paras[:3]), room)
+    return f"{hook}\n\n{body}{tail}"
+
+
+def write_drafts(metas):
+    os.makedirs(DRAFTS, exist_ok=True)
+    keep = set()
+    for m in metas:
+        for kind, fn in (("newsletter", newsletter_draft), ("linkedin", linkedin_draft)):
+            p = os.path.join(DRAFTS, f"{m['slug']}.{kind}.md")
+            open(p, "w", encoding="utf-8").write(fn(m))
+            keep.add(os.path.basename(p))
+    # a story that was removed takes its drafts with it (never a stale draft for a dead story)
+    for f in glob.glob(os.path.join(DRAFTS, "*.md")):
+        if os.path.basename(f) not in keep and not os.path.basename(f).startswith("_") and os.path.basename(f).upper() != "README.MD":
+            os.remove(f)
+
+
 def main():
     files = sorted(f for f in glob.glob(os.path.join(STORIES, "*.md")) if not os.path.basename(f).startswith("_") and os.path.basename(f).upper() != "README.MD")
     metas = sorted((parse(f) for f in files), key=lambda m: m["date"], reverse=True)
@@ -161,7 +222,8 @@ def main():
         print(f"build_content: blog/{m['slug']}.html  ({m['date']}, {m['minutes']} min, {m['author']})")
     update_index(metas)          # zero stories -> an empty marker block, never a stale card
     update_feed(metas)
-    print(f"build_content: {len(metas)} story/stories → blog.html cards + feed.xml")
+    write_drafts(metas)
+    print(f"build_content: {len(metas)} story/stories → blog.html cards + feed.xml + content/drafts/ (newsletter + LinkedIn)")
     return 0
 
 
