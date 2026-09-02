@@ -1,6 +1,30 @@
 {
-  "updated": "2026-09-01T19:09:17Z",
+  "updated": "2026-09-02T07:08:36Z",
   "bob": [
+    {
+      "title": "Love this Joe Heitzeberg",
+      "link": "https://www.linkedin.com/posts/bobrapp_love-this-joe-heitzeberg-activity-7500753543713406976-2UyA",
+      "date": "Wed, 02 Sep 2026 03:16:42 GMT",
+      "summary": "Love this Joe Heitzeberg",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Synthetic media is a marketing-governance decision—not just a creative shortcut. Before shipping an AI person, voice, product imag...",
+      "link": "https://www.linkedin.com/posts/bobrapp_synthetic-media-is-a-marketing-governance-activity-7500674863402229760-SeBk",
+      "date": "Tue, 01 Sep 2026 22:04:03 GMT",
+      "summary": "Synthetic media is a marketing-governance decision—not just a creative shortcut. Before shipping an AI person, voice, product image or copy: 1. Could customers mistake it for a person, result or endorsement? If yes, disclose at use. 2. Is a likeness or voice involved? Get documen",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI slop is an authenticity-governance issue: platforms decide what to amplify, review, restrict, or restore. PROBLEM / PROBLÈME Cl...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-slop-is-an-authenticity-governance-issue-activity-7500674823342170112-zmSl",
+      "date": "Tue, 01 Sep 2026 22:03:54 GMT",
+      "summary": "AI slop is an authenticity-governance issue: platforms decide what to amplify, review, restrict, or restore. PROBLEM / PROBLÈME Classifiers miss abuse or flag legitimate work / manquent des abus ou pénalisent du contenu légitime. SOLUTIONS / SOLUTIONS Layer classifier + human ver",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "AI-assisted phishing needs evidence, not intuition. PROBLEM: Response can lose prompts, headers, custody, reporter safety, ownersh...",
       "link": "https://www.linkedin.com/posts/bobrapp_ai-assisted-phishing-needs-evidence-not-activity-7500539860592631808-Ps_s",
@@ -54,30 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7500176853291208704-evi8",
       "date": "Mon, 31 Aug 2026 13:05:08 GMT",
       "summary": "Testing with real data can create the very privacy risk governance is meant to prevent. Problem Realistic evaluation can expose production records to notebooks, vendors, shared systems, and longer retention. De-identification can fail when records are linkable or rare. Solutions",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An insurance AI decision is not “just a score.” It can influence coverage, claim value, and access to appeal. Govern the evidence...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-insurance-ai-decision-is-not-just-a-score-activity-7499949868229038080-M8PE",
-      "date": "Sun, 30 Aug 2026 22:03:11 GMT",
-      "summary": "An insurance AI decision is not “just a score.” It can influence coverage, claim value, and access to appeal. Govern the evidence chain: • Underwriting: record relevant inputs and provenance. • Adjudication: test fairness, consistency, and human override. • Appeals: provide reaso",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Red teaming is not a one-time demo. It is a repeatable control-effectiveness program. Define threat hypotheses and representative...",
-      "link": "https://www.linkedin.com/posts/bobrapp_red-teaming-is-not-a-one-time-demo-it-is-activity-7499949816387395584-mO93",
-      "date": "Sun, 30 Aug 2026 22:02:59 GMT",
-      "summary": "Red teaming is not a one-time demo. It is a repeatable control-effectiveness program. Define threat hypotheses and representative scenarios. Log severity-weighted findings with reproducible exploit steps and evidence—not screenshots or assertions. Assign remediation owners; retes",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Your AI risk surface is larger than your direct vendor list. Problem Foundation models, cloud regions, data brokers, evaluators, o...",
-      "link": "https://www.linkedin.com/posts/bobrapp_your-ai-risk-surface-is-larger-than-your-activity-7499949593225289728-itdp",
-      "date": "Sun, 30 Aug 2026 22:02:05 GMT",
-      "summary": "Your AI risk surface is larger than your direct vendor list. Problem Foundation models, cloud regions, data brokers, evaluators, or moderation services may sit beneath many products. Concentration and hidden subcontractors create correlated failure and fragile recovery. Solutions",
       "image": null,
       "author": "Bob Rapp"
     }
