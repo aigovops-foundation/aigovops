@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-02T07:08:36Z",
+  "updated": "2026-09-02T19:09:09Z",
   "bob": [
+    {
+      "title": "AI disclosure is not a label. It is a moment of clarity. PROBLEM “AI-generated” may be visible yet misunderstood. People need cont...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-disclosure-is-not-a-label-it-is-a-moment-activity-7500901832114733059-Q_ek",
+      "date": "Wed, 02 Sep 2026 13:05:57 GMT",
+      "summary": "AI disclosure is not a label. It is a moment of clarity. PROBLEM “AI-generated” may be visible yet misunderstood. People need context before they rely, decide, or share. SOLUTION Disclose at the interaction or decision point. Explain AI’s role in plain language. Make notices cons",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Agents need action budgets: not just rate limits. PROBLEM Unbounded tokens, API calls, spend, runtime, retries, or records process...",
+      "link": "https://www.linkedin.com/posts/bobrapp_agents-need-action-budgets-not-just-rate-activity-7500901753073143809-5j9V",
+      "date": "Wed, 02 Sep 2026 13:05:38 GMT",
+      "summary": "Agents need action budgets: not just rate limits. PROBLEM Unbounded tokens, API calls, spend, runtime, retries, or records processed create runaway cost, loops, and data overreach. Rate limits only slow traffic. SOLUTIONS Set per-task ceilings. Alert on anomalies. Gracefully stop",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Love this Joe Heitzeberg",
       "link": "https://www.linkedin.com/posts/bobrapp_love-this-joe-heitzeberg-activity-7500753543713406976-2UyA",
@@ -62,22 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_responsible-ai-becomes-operational-only-when-activity-7500311651959742465-mCak",
       "date": "Mon, 31 Aug 2026 22:00:47 GMT",
       "summary": "Responsible AI becomes operational only when leadership accepts, or rejects, specific residual risks. PROBLEM Dashboards show adoption, not the decisions AI makes, who can stop it, unresolved exceptions, or harm signals. Accountability disappears into status reporting. SOLUTIONS",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Agent-to-agent messages are not trusted by default. Treat every instruction as untrusted data until validated. Set explicit bounda...",
-      "link": "https://www.linkedin.com/posts/bobrapp_agent-to-agent-messages-are-not-trusted-by-activity-7500177349762732033-PuaJ",
-      "date": "Mon, 31 Aug 2026 13:07:07 GMT",
-      "summary": "Agent-to-agent messages are not trusted by default. Treat every instruction as untrusted data until validated. Set explicit boundaries: • Use typed, allowlisted schemas. • Authenticate the sender and preserve provenance. • Require nonce, timestamp, and expiry for replay protectio",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Testing with real data can create the very privacy risk governance is meant to prevent. Problem Realistic evaluation can expose pr...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7500176853291208704-evi8",
-      "date": "Mon, 31 Aug 2026 13:05:08 GMT",
-      "summary": "Testing with real data can create the very privacy risk governance is meant to prevent. Problem Realistic evaluation can expose production records to notebooks, vendors, shared systems, and longer retention. De-identification can fail when records are linkable or rare. Solutions",
       "image": null,
       "author": "Bob Rapp"
     }
