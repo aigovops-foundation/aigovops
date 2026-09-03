@@ -1,6 +1,30 @@
 {
-  "updated": "2026-09-03T07:07:41Z",
+  "updated": "2026-09-03T19:08:07Z",
   "bob": [
+    {
+      "title": "True Joe Braidwood Ken Johnston",
+      "link": "https://www.linkedin.com/posts/bobrapp_true-joe-braidwood-ken-johnston-activity-7501332212034949121-ZOr1",
+      "date": "Thu, 03 Sep 2026 17:36:07 GMT",
+      "summary": "True Joe Braidwood Ken Johnston",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Transparency is not proven by publishing a notice. It is proven when affected people understand it well enough to make an informed...",
+      "link": "https://www.linkedin.com/posts/bobrapp_transparency-is-not-proven-by-publishing-activity-7501264369289191426-fHw-",
+      "date": "Thu, 03 Sep 2026 13:06:32 GMT",
+      "summary": "Transparency is not proven by publishing a notice. It is proven when affected people understand it well enough to make an informed choice. Test disclosures with real users: • Ask for the meaning in their own words. • Test notice timing before, during, and after the interaction. •",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Safe recovery ≠ silent retry. PROBLEM: Tool failure leaves state uncertain; repeating a payment, approval or message can duplicate...",
+      "link": "https://www.linkedin.com/posts/bobrapp_safe-recovery-silent-retry-problem-tool-activity-7501263815049732097-Q1MF",
+      "date": "Thu, 03 Sep 2026 13:04:20 GMT",
+      "summary": "Safe recovery ≠ silent retry. PROBLEM: Tool failure leaves state uncertain; repeating a payment, approval or message can duplicate harm. SOLUTIONS: Make side effects idempotent. Bound retries with backoff and time/attempt caps. Log intent, outcome, checkpoints. Use compensating t",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Always well worth the time - Ken is a great host and finder of amazing founder and funder talent",
       "link": "https://www.linkedin.com/posts/bobrapp_ai-leaders-dinner-pickle-ball-luma-activity-7501102834872999936-DyWH",
@@ -46,30 +70,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_love-this-joe-heitzeberg-activity-7500753543713406976-2UyA",
       "date": "Wed, 02 Sep 2026 03:16:42 GMT",
       "summary": "Love this Joe Heitzeberg",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Synthetic media is a marketing-governance decision—not just a creative shortcut. Before shipping an AI person, voice, product imag...",
-      "link": "https://www.linkedin.com/posts/bobrapp_synthetic-media-is-a-marketing-governance-activity-7500674863402229760-SeBk",
-      "date": "Tue, 01 Sep 2026 22:04:03 GMT",
-      "summary": "Synthetic media is a marketing-governance decision—not just a creative shortcut. Before shipping an AI person, voice, product image or copy: 1. Could customers mistake it for a person, result or endorsement? If yes, disclose at use. 2. Is a likeness or voice involved? Get documen",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI slop is an authenticity-governance issue: platforms decide what to amplify, review, restrict, or restore. PROBLEM / PROBLÈME Cl...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-slop-is-an-authenticity-governance-issue-activity-7500674823342170112-zmSl",
-      "date": "Tue, 01 Sep 2026 22:03:54 GMT",
-      "summary": "AI slop is an authenticity-governance issue: platforms decide what to amplify, review, restrict, or restore. PROBLEM / PROBLÈME Classifiers miss abuse or flag legitimate work / manquent des abus ou pénalisent du contenu légitime. SOLUTIONS / SOLUTIONS Layer classifier + human ver",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI-assisted phishing needs evidence, not intuition. PROBLEM: Response can lose prompts, headers, custody, reporter safety, ownersh...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-assisted-phishing-needs-evidence-not-activity-7500539860592631808-Ps_s",
-      "date": "Tue, 01 Sep 2026 13:07:36 GMT",
-      "summary": "AI-assisted phishing needs evidence, not intuition. PROBLEM: Response can lose prompts, headers, custody, reporter safety, ownership. SOLUTIONS: Preserve prompt/header, time, URL, attachment; classify suspected/probable/confirmed; protect reporter; assign owner; close with lesson",
       "image": null,
       "author": "Bob Rapp"
     }
