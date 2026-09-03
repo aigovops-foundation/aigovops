@@ -24,7 +24,7 @@
   "dependencies": {
     "better-sqlite3": "^11.5.0",
     "cors": "^2.8.5",
-    "express": "^4.21.1",
+    "express": "^5.2.1",
     "helmet": "^8.0.0",
     "morgan": "^1.10.0",
     "tweetnacl": "^1.0.3",
