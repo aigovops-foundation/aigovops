@@ -1,6 +1,30 @@
 {
-  "updated": "2026-09-02T19:09:09Z",
+  "updated": "2026-09-03T07:07:41Z",
   "bob": [
+    {
+      "title": "Always well worth the time - Ken is a great host and finder of amazing founder and funder talent",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-leaders-dinner-pickle-ball-luma-activity-7501102834872999936-DyWH",
+      "date": "Thu, 03 Sep 2026 02:24:40 GMT",
+      "summary": "Always well worth the time - Ken is a great host and finder of amazing founder and funder talent",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Transparency is not a PDF. It is a repeatable operating playbook. PROBLEM A notice can exist while people still do not understand...",
+      "link": "https://www.linkedin.com/posts/bobrapp_transparency-is-not-a-pdf-it-is-a-repeatable-activity-7501036956450070529-xran",
+      "date": "Wed, 02 Sep 2026 22:02:53 GMT",
+      "summary": "Transparency is not a PDF. It is a repeatable operating playbook. PROBLEM A notice can exist while people still do not understand the AI, its limits, or how to challenge an outcome. SOLUTIONS Inventory use cases → classify materiality → choose notice patterns → test comprehension",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Automated restrictions need a real appeal route: not just a button. PROBLEM: Bot, spam and impersonation controls create false pos...",
+      "link": "https://www.linkedin.com/posts/bobrapp_automated-restrictions-need-a-real-appeal-activity-7501036781233152000-dsB4",
+      "date": "Wed, 02 Sep 2026 22:02:11 GMT",
+      "summary": "Automated restrictions need a real appeal route: not just a button. PROBLEM: Bot, spam and impersonation controls create false positives. “Restricted” is not a reason; an inbox is not independent review. SOLUTIONS: Give reason + evidence; accept appeals; use independent review; s",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "AI disclosure is not a label. It is a moment of clarity. PROBLEM “AI-generated” may be visible yet misunderstood. People need cont...",
       "link": "https://www.linkedin.com/posts/bobrapp_ai-disclosure-is-not-a-label-it-is-a-moment-activity-7500901832114733059-Q_ek",
@@ -46,38 +70,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_ai-assisted-phishing-needs-evidence-not-activity-7500539860592631808-Ps_s",
       "date": "Tue, 01 Sep 2026 13:07:36 GMT",
       "summary": "AI-assisted phishing needs evidence, not intuition. PROBLEM: Response can lose prompts, headers, custody, reporter safety, ownership. SOLUTIONS: Preserve prompt/header, time, URL, attachment; classify suspected/probable/confirmed; protect reporter; assign owner; close with lesson",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "High-impact healthcare-adjacent AI needs disclosure—not consent or approval. 高影響のヘルスケア関連AIには開示が必要です。同意や承認とは別です。 PROBLEM / 問題 Witho...",
-      "link": "https://www.linkedin.com/posts/bobrapp_high-impact-healthcare-adjacent-ai-needs-activity-7500539504361947136-ZM-A",
-      "date": "Tue, 01 Sep 2026 13:06:11 GMT",
-      "summary": "High-impact healthcare-adjacent AI needs disclosure—not consent or approval. 高影響のヘルスケア関連AIには開示が必要です。同意や承認とは別です。 PROBLEM / 問題 Without notice, people cannot question AI-influenced decisions. 通知がなければ、AIが影響した決定を問い直せません。 SOLUTIONS / 解決策 At point of use: identify AI; name the human dec",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "A great event this Thursday in Seattle ai house",
-      "link": "https://www.linkedin.com/posts/bobrapp_a-great-event-this-thursday-in-seattle-ai-activity-7500374431429496832-NBV_",
-      "date": "Tue, 01 Sep 2026 02:10:15 GMT",
-      "summary": "A great event this Thursday in Seattle ai house",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An acquisition can transfer more than systems and contracts. It can transfer hidden AI risk. Before combining environments, make g...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-acquisition-can-transfer-more-than-systems-activity-7500312159759884288-PZ58",
-      "date": "Mon, 31 Aug 2026 22:02:48 GMT",
-      "summary": "An acquisition can transfer more than systems and contracts. It can transfer hidden AI risk. Before combining environments, make governance due diligence operational: • Inventory every model, agent, dataset, workflow, and undocumented use. • Map legal bases, permissions, retentio",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Responsible AI becomes operational only when leadership accepts, or rejects, specific residual risks. PROBLEM Dashboards show adop...",
-      "link": "https://www.linkedin.com/posts/bobrapp_responsible-ai-becomes-operational-only-when-activity-7500311651959742465-mCak",
-      "date": "Mon, 31 Aug 2026 22:00:47 GMT",
-      "summary": "Responsible AI becomes operational only when leadership accepts, or rejects, specific residual risks. PROBLEM Dashboards show adoption, not the decisions AI makes, who can stop it, unresolved exceptions, or harm signals. Accountability disappears into status reporting. SOLUTIONS",
       "image": null,
       "author": "Bob Rapp"
     }
