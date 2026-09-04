@@ -1,6 +1,30 @@
 {
-  "updated": "2026-09-03T19:08:07Z",
+  "updated": "2026-09-04T07:07:07Z",
   "bob": [
+    {
+      "title": "Truth speed must be backed by policy to keep us safe for good ai to prevent bad ai",
+      "link": "https://www.linkedin.com/posts/bobrapp_truth-speed-must-be-backed-by-policy-to-keep-activity-7501403915070922752-MCXe",
+      "date": "Thu, 03 Sep 2026 22:21:03 GMT",
+      "summary": "Truth speed must be backed by policy to keep us safe for good ai to prevent bad ai",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "One convincing message can cross borders before a security team sees it. PROBLEM AI-powered phishing scales fake recruiters, clone...",
+      "link": "https://www.linkedin.com/posts/bobrapp_one-convincing-message-can-cross-borders-activity-7501399371272450048-kjqn",
+      "date": "Thu, 03 Sep 2026 22:02:59 GMT",
+      "summary": "One convincing message can cross borders before a security team sees it. PROBLEM AI-powered phishing scales fake recruiters, cloned executives, MFA bypasses, and trusted-looking impersonation across jurisdictions and time zones. SOLUTIONS • Verify the person, device, and purpose",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Level Up Your AI Governance: monitor disclosure quality after release. PROBLEM Transparency fails quietly: missed notices, broken...",
+      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-monitor-disclosure-activity-7501398985702563841-Q8eU",
+      "date": "Thu, 03 Sep 2026 22:01:27 GMT",
+      "summary": "Level Up Your AI Governance: monitor disclosure quality after release. PROBLEM Transparency fails quietly: missed notices, broken markers, stale language, recurring questions or complaints, confused handoffs, and inaccessible notices. SOLUTIONS Measure weekly. Alert on any broken",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "True Joe Braidwood Ken Johnston",
       "link": "https://www.linkedin.com/posts/bobrapp_true-joe-braidwood-ken-johnston-activity-7501332212034949121-ZOr1",
@@ -46,30 +70,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_automated-restrictions-need-a-real-appeal-activity-7501036781233152000-dsB4",
       "date": "Wed, 02 Sep 2026 22:02:11 GMT",
       "summary": "Automated restrictions need a real appeal route: not just a button. PROBLEM: Bot, spam and impersonation controls create false positives. “Restricted” is not a reason; an inbox is not independent review. SOLUTIONS: Give reason + evidence; accept appeals; use independent review; s",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI disclosure is not a label. It is a moment of clarity. PROBLEM “AI-generated” may be visible yet misunderstood. People need cont...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-disclosure-is-not-a-label-it-is-a-moment-activity-7500901832114733059-Q_ek",
-      "date": "Wed, 02 Sep 2026 13:05:57 GMT",
-      "summary": "AI disclosure is not a label. It is a moment of clarity. PROBLEM “AI-generated” may be visible yet misunderstood. People need context before they rely, decide, or share. SOLUTION Disclose at the interaction or decision point. Explain AI’s role in plain language. Make notices cons",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Agents need action budgets: not just rate limits. PROBLEM Unbounded tokens, API calls, spend, runtime, retries, or records process...",
-      "link": "https://www.linkedin.com/posts/bobrapp_agents-need-action-budgets-not-just-rate-activity-7500901753073143809-5j9V",
-      "date": "Wed, 02 Sep 2026 13:05:38 GMT",
-      "summary": "Agents need action budgets: not just rate limits. PROBLEM Unbounded tokens, API calls, spend, runtime, retries, or records processed create runaway cost, loops, and data overreach. Rate limits only slow traffic. SOLUTIONS Set per-task ceilings. Alert on anomalies. Gracefully stop",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Love this Joe Heitzeberg",
-      "link": "https://www.linkedin.com/posts/bobrapp_love-this-joe-heitzeberg-activity-7500753543713406976-2UyA",
-      "date": "Wed, 02 Sep 2026 03:16:42 GMT",
-      "summary": "Love this Joe Heitzeberg",
       "image": null,
       "author": "Bob Rapp"
     }
