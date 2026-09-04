@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-04T07:07:07Z",
+  "updated": "2026-09-04T19:07:51Z",
   "bob": [
+    {
+      "title": "One user experience. Different legal obligations. Global AI products need transparency controls that stay consistent for users whi...",
+      "link": "https://fr.linkedin.com/posts/bobrapp_one-user-experience-different-legal-obligations-activity-7501626183768363008-_lEH",
+      "date": "Fri, 04 Sep 2026 13:04:16 GMT",
+      "summary": "One user experience. Different legal obligations. Global AI products need transparency controls that stay consistent for users while adapting to EU, US state, and Asian requirements. Build the control: Map obligations. Detect jurisdiction signals. Apply approved labels. Trigger l",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "An agent can pass technical permission checks—and still exceed semantic intent. Problem / المشكلة: “May call CRM” can become “may...",
+      "link": "https://www.linkedin.com/posts/bobrapp_an-agent-can-pass-technical-permission-checksand-activity-7501626034203652097-cPfq",
+      "date": "Fri, 04 Sep 2026 13:03:40 GMT",
+      "summary": "An agent can pass technical permission checks—and still exceed semantic intent. Problem / المشكلة: “May call CRM” can become “may export data.” الصلاحية لا تساوي القصد. Solutions / الحلول: Use task-scoped tool allowlists; limit blast radius; sandbox execution; deny networks by de",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Truth speed must be backed by policy to keep us safe for good ai to prevent bad ai",
       "link": "https://www.linkedin.com/posts/bobrapp_truth-speed-must-be-backed-by-policy-to-keep-activity-7501403915070922752-MCXe",
@@ -62,14 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_transparency-is-not-a-pdf-it-is-a-repeatable-activity-7501036956450070529-xran",
       "date": "Wed, 02 Sep 2026 22:02:53 GMT",
       "summary": "Transparency is not a PDF. It is a repeatable operating playbook. PROBLEM A notice can exist while people still do not understand the AI, its limits, or how to challenge an outcome. SOLUTIONS Inventory use cases → classify materiality → choose notice patterns → test comprehension",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Automated restrictions need a real appeal route: not just a button. PROBLEM: Bot, spam and impersonation controls create false pos...",
-      "link": "https://www.linkedin.com/posts/bobrapp_automated-restrictions-need-a-real-appeal-activity-7501036781233152000-dsB4",
-      "date": "Wed, 02 Sep 2026 22:02:11 GMT",
-      "summary": "Automated restrictions need a real appeal route: not just a button. PROBLEM: Bot, spam and impersonation controls create false positives. “Restricted” is not a reason; an inbox is not independent review. SOLUTIONS: Give reason + evidence; accept appeals; use independent review; s",
       "image": null,
       "author": "Bob Rapp"
     }
