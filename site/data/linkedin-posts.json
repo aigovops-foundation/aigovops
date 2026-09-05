@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-05T07:06:17Z",
+  "updated": "2026-09-05T19:07:16Z",
   "bob": [
+    {
+      "title": "Level Up Your AI Governance: transparency fails when ownership is implicit. Owner map / 负责人地图:",
+      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-transparency-activity-7501989051223396352-T8HQ",
+      "date": "Sat, 05 Sep 2026 13:06:10 GMT",
+      "summary": "Level Up Your AI Governance: transparency fails when ownership is implicit. Owner map / 负责人地图: • Communications — drafts disclosures / 起草披露 • Product — approves wording / 批准措辞 • Legal — checks claims / 核查声明 • Engineering — verifies markers + version / 验证标识与版本 • Accessibility — te",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Long-lived agent credentials turn small errors into durable compromise. Les identifiants d’agent longue durée transforment de peti...",
+      "link": "https://www.linkedin.com/posts/bobrapp_long-lived-agent-credentials-turn-small-errors-activity-7501988806049386497-S9BA",
+      "date": "Sat, 05 Sep 2026 13:05:12 GMT",
+      "summary": "Long-lived agent credentials turn small errors into durable compromise. Les identifiants d’agent longue durée transforment de petites erreurs en compromission durable. SOLUTIONS / SOLUTIONS Use workload identity, short-lived audience-restricted tokens, automatic rotation, central",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Jonathan G. Blanco 🛠 Ken Johnston amazing night aizii will be very big",
       "link": "https://www.linkedin.com/posts/bobrapp_jonathan-g-blanco-ken-johnston-amazing-activity-7501813075860250624-unuY",
@@ -54,22 +70,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_one-convincing-message-can-cross-borders-activity-7501399371272450048-kjqn",
       "date": "Thu, 03 Sep 2026 22:02:59 GMT",
       "summary": "One convincing message can cross borders before a security team sees it. PROBLEM AI-powered phishing scales fake recruiters, cloned executives, MFA bypasses, and trusted-looking impersonation across jurisdictions and time zones. SOLUTIONS • Verify the person, device, and purpose",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Level Up Your AI Governance: monitor disclosure quality after release. PROBLEM Transparency fails quietly: missed notices, broken...",
-      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-monitor-disclosure-activity-7501398985702563841-Q8eU",
-      "date": "Thu, 03 Sep 2026 22:01:27 GMT",
-      "summary": "Level Up Your AI Governance: monitor disclosure quality after release. PROBLEM Transparency fails quietly: missed notices, broken markers, stale language, recurring questions or complaints, confused handoffs, and inaccessible notices. SOLUTIONS Measure weekly. Alert on any broken",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "True Joe Braidwood Ken Johnston",
-      "link": "https://www.linkedin.com/posts/bobrapp_true-joe-braidwood-ken-johnston-activity-7501332212034949121-ZOr1",
-      "date": "Thu, 03 Sep 2026 17:36:07 GMT",
-      "summary": "True Joe Braidwood Ken Johnston",
       "image": null,
       "author": "Bob Rapp"
     }
