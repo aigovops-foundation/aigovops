@@ -1,6 +1,30 @@
 {
-  "updated": "2026-09-04T19:07:51Z",
+  "updated": "2026-09-05T07:06:17Z",
   "bob": [
+    {
+      "title": "Jonathan G. Blanco 🛠 Ken Johnston amazing night aizii will be very big",
+      "link": "https://www.linkedin.com/posts/bobrapp_jonathan-g-blanco-ken-johnston-amazing-activity-7501813075860250624-unuY",
+      "date": "Sat, 05 Sep 2026 01:26:54 GMT",
+      "summary": "Jonathan G. Blanco 🛠 Ken Johnston amazing night aizii will be very big",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Fallback is not a safety net. A replacement model or tool can silently change risk, data handling, accuracy, and authorization. Pr...",
+      "link": "https://www.linkedin.com/posts/bobrapp_fallback-is-not-a-safety-net-a-replacement-activity-7501761607476211712-UtNI",
+      "date": "Fri, 04 Sep 2026 22:02:23 GMT",
+      "summary": "Fallback is not a safety net. A replacement model or tool can silently change risk, data handling, accuracy, and authorization. Problem → It may cross a data boundary or lack a control the primary had. Solutions → Keep a pre-approved fallback matrix. Test capability parity, data",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "A familiar voice or video is not authorization. Problem Deepfakes can make executive approvals and payment requests look real. Rec...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-familiar-voice-or-video-is-not-authorization-activity-7501761507895025664-Bso2",
+      "date": "Fri, 04 Sep 2026 22:01:59 GMT",
+      "summary": "A familiar voice or video is not authorization. Problem Deepfakes can make executive approvals and payment requests look real. Recognition is not a control. Solution • Pre-register channels, callback numbers and beneficiary details. • Confirm through two independent channels; nev",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "One user experience. Different legal obligations. Global AI products need transparency controls that stay consistent for users whi...",
       "link": "https://fr.linkedin.com/posts/bobrapp_one-user-experience-different-legal-obligations-activity-7501626183768363008-_lEH",
@@ -46,38 +70,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_true-joe-braidwood-ken-johnston-activity-7501332212034949121-ZOr1",
       "date": "Thu, 03 Sep 2026 17:36:07 GMT",
       "summary": "True Joe Braidwood Ken Johnston",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Transparency is not proven by publishing a notice. It is proven when affected people understand it well enough to make an informed...",
-      "link": "https://www.linkedin.com/posts/bobrapp_transparency-is-not-proven-by-publishing-activity-7501264369289191426-fHw-",
-      "date": "Thu, 03 Sep 2026 13:06:32 GMT",
-      "summary": "Transparency is not proven by publishing a notice. It is proven when affected people understand it well enough to make an informed choice. Test disclosures with real users: • Ask for the meaning in their own words. • Test notice timing before, during, and after the interaction. •",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Safe recovery ≠ silent retry. PROBLEM: Tool failure leaves state uncertain; repeating a payment, approval or message can duplicate...",
-      "link": "https://www.linkedin.com/posts/bobrapp_safe-recovery-silent-retry-problem-tool-activity-7501263815049732097-Q1MF",
-      "date": "Thu, 03 Sep 2026 13:04:20 GMT",
-      "summary": "Safe recovery ≠ silent retry. PROBLEM: Tool failure leaves state uncertain; repeating a payment, approval or message can duplicate harm. SOLUTIONS: Make side effects idempotent. Bound retries with backoff and time/attempt caps. Log intent, outcome, checkpoints. Use compensating t",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Always well worth the time - Ken is a great host and finder of amazing founder and funder talent",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-leaders-dinner-pickle-ball-luma-activity-7501102834872999936-DyWH",
-      "date": "Thu, 03 Sep 2026 02:24:40 GMT",
-      "summary": "Always well worth the time - Ken is a great host and finder of amazing founder and funder talent",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Transparency is not a PDF. It is a repeatable operating playbook. PROBLEM A notice can exist while people still do not understand...",
-      "link": "https://www.linkedin.com/posts/bobrapp_transparency-is-not-a-pdf-it-is-a-repeatable-activity-7501036956450070529-xran",
-      "date": "Wed, 02 Sep 2026 22:02:53 GMT",
-      "summary": "Transparency is not a PDF. It is a repeatable operating playbook. PROBLEM A notice can exist while people still do not understand the AI, its limits, or how to challenge an outcome. SOLUTIONS Inventory use cases → classify materiality → choose notice patterns → test comprehension",
       "image": null,
       "author": "Bob Rapp"
     }
