@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-06T07:06:27Z",
+  "updated": "2026-09-06T19:07:17Z",
   "bob": [
+    {
+      "title": "Malicious AI skills are software supply-chain risk—not “just prompts.” Problem | 问题 Typosquats can alter agent behavior. Missing p...",
+      "link": "https://www.linkedin.com/posts/bobrapp_malicious-ai-skills-are-software-supply-chain-activity-7502350865060716544-mloD",
+      "date": "Sun, 06 Sep 2026 13:03:53 GMT",
+      "summary": "Malicious AI skills are software supply-chain risk—not “just prompts.” Problem | 问题 Typosquats can alter agent behavior. Missing provenance, dependency review, hashes, or revocation makes installs guesswork. 仿冒包可改变智能体行为；缺少来源、依赖审查、哈希或撤销，部署只能靠猜。 Solutions | 解决方案 Governance-as-code",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Level up your AI governance: an inaccessible AI notice is not transparency. It is a barrier. Problem Without screen-reader labels,...",
+      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-an-inaccessible-activity-7502350623380701184--t6W",
+      "date": "Sun, 06 Sep 2026 13:02:56 GMT",
+      "summary": "Level up your AI governance: an inaccessible AI notice is not transparency. It is a barrier. Problem Without screen-reader labels, captions, contrast, plain language, language choice, non-visual signals, and keyboard access, people may miss disclosure or lose their route to appea",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "A label can be present—and still deceive. PROBLEM Labels fail when they are easy to miss, misleading, premature, or stripped durin...",
       "link": "https://www.linkedin.com/posts/bobrapp_a-label-can-be-presentand-still-deceive-activity-7502124088312840193-Wutp",
@@ -54,22 +70,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_a-familiar-voice-or-video-is-not-authorization-activity-7501761507895025664-Bso2",
       "date": "Fri, 04 Sep 2026 22:01:59 GMT",
       "summary": "A familiar voice or video is not authorization. Problem Deepfakes can make executive approvals and payment requests look real. Recognition is not a control. Solution • Pre-register channels, callback numbers and beneficiary details. • Confirm through two independent channels; nev",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "One user experience. Different legal obligations. Global AI products need transparency controls that stay consistent for users whi...",
-      "link": "https://fr.linkedin.com/posts/bobrapp_one-user-experience-different-legal-obligations-activity-7501626183768363008-_lEH",
-      "date": "Fri, 04 Sep 2026 13:04:16 GMT",
-      "summary": "One user experience. Different legal obligations. Global AI products need transparency controls that stay consistent for users while adapting to EU, US state, and Asian requirements. Build the control: Map obligations. Detect jurisdiction signals. Apply approved labels. Trigger l",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An agent can pass technical permission checks—and still exceed semantic intent. Problem / المشكلة: “May call CRM” can become “may...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-agent-can-pass-technical-permission-checksand-activity-7501626034203652097-cPfq",
-      "date": "Fri, 04 Sep 2026 13:03:40 GMT",
-      "summary": "An agent can pass technical permission checks—and still exceed semantic intent. Problem / المشكلة: “May call CRM” can become “may export data.” الصلاحية لا تساوي القصد. Solutions / الحلول: Use task-scoped tool allowlists; limit blast radius; sandbox execution; deny networks by de",
       "image": null,
       "author": "Bob Rapp"
     }
