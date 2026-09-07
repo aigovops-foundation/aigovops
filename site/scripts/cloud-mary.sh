@@ -33,10 +33,11 @@ for arg in "$@"; do
     --scale)        TIERS+=("scale"); RUN_ALL=false ;;
     --chaos)        TIERS+=("chaos"); RUN_ALL=false ;;
     --docs)         TIERS+=("docs");  RUN_ALL=false ;;
+    --message)      TIERS+=("message"); RUN_ALL=false ;;
     --skip-network) SKIP_NETWORK=true ;;
   esac
 done
-[ "$RUN_ALL" = "true" ] && TIERS=("unit" "design" "security" "privacy" "arch" "e2e" "dns" "uptime" "errors" "happy" "ux" "a11y" "i18n" "scale" "chaos" "docs")
+[ "$RUN_ALL" = "true" ] && TIERS=("unit" "design" "security" "privacy" "arch" "e2e" "dns" "uptime" "errors" "happy" "ux" "a11y" "i18n" "scale" "chaos" "docs" "message")
 
 cd "$REPO" || { echo "❌ Cannot cd to $REPO"; exit 1; }
 
@@ -234,6 +235,12 @@ if [[ " ${TIERS[*]} " =~ " docs " ]]; then
   run_tier "docs" \
     "bash scripts/test-docs.sh" \
     "📄  Documentation"
+fi
+
+if [[ " ${TIERS[*]} " =~ " message " ]]; then
+  run_tier "message" \
+    "bash scripts/test-message.sh" \
+    "🗣️  Message lint"
 fi
 
 # ── Summary Report ─────────────────────────────────────────────────────────

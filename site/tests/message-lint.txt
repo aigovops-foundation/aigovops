@@ -1,0 +1,13 @@
+# Retired public vocabulary — redesign 2026-09 ("One Message, Four Services"). Visible text only.
+# Kept in runbooks and code; off public copy. Add a phrase here and message-lint fails any page that says it.
+three-yes
+pro-humanity
+garden, not a platform
+the porch
+shelves
+agents do the bureaucracy
+humans hold the keys
+ship good
+evidence beats confidence
+# Pending decision 1 (Tuesday 9 Sept): the footer's "keep the garden of humanity growing" — add
+# "garden of humanity" below once the one-message copy pass (plan 1.1) lands.

@@ -37,6 +37,18 @@ jobs:
       - name: Run unit tests v3
         run: node scripts/test-unit-v3.js
 
+  # ── Tier 1b: Message lint (promise · path · proof — plan 1.1/1.2) ───────
+  message:
+    name: 🗣️ Message Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.11'
+      - name: One public vocabulary; Gate Check on every page
+        run: python3 scripts/test-message.py
+
   # ── Tier 2: Accessibility ─────────────────────────────────────────────────
   a11y:
     name: ♿ Accessibility Tests
