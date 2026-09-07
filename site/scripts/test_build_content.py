@@ -41,6 +41,7 @@ def load(root):
     bc.DRAFTS = os.path.join(root, "content", "drafts")
     bc.FOUNDERS_MD = os.path.join(root, "content", "founders.md")
     bc.FOUNDERS_HTML = os.path.join(root, "founders.html")
+    bc.TRANSLATIONS = os.path.join(root, "content", "translations")
     return bc
 
 
@@ -131,6 +132,34 @@ def main():
     check("idempotent (second render identical)", open(os.path.join(tmp, "founders.html"), encoding="utf-8").read() == before)
     check("frame untouched (speaking section + links)", 'class="speaking-section"' in fh and "founder-link primary" in fh)
     shutil.rmtree(tmp, ignore_errors=True)
+    print("[translations] Spanish story pages via a pluggable translator, cached (plan 3.3)")
+    tmp2 = tempfile.mkdtemp(prefix="build-content-es-")
+    for f in ("blog.html", "feed.xml"):
+        shutil.copy(os.path.join(ROOT, f), tmp2)
+    os.makedirs(os.path.join(tmp2, "blog")); shutil.copy(os.path.join(ROOT, "blog", "what-is-aigovops.html"), os.path.join(tmp2, "blog"))
+    os.makedirs(os.path.join(tmp2, "content", "stories"))
+    open(os.path.join(tmp2, "content", "stories", "2026-09-a-test-story.md"), "w", encoding="utf-8").write(STORY)
+    bc2 = load(tmp2)
+    calls = []
+    def fake(text, lang):
+        calls.append(lang)
+        return text.replace("title: A test story about gates", "title: Una historia de prueba sobre puertas").replace("The first paragraph", "El primer párrafo")
+    bc2.TRANSLATOR = fake
+    check("pipeline runs with translations", bc2.main() == 0)
+    es = os.path.join(tmp2, "blog", "es", "a-test-story.html")
+    check("Spanish page rendered under blog/es/", os.path.exists(es))
+    e = open(es, encoding="utf-8").read() if os.path.exists(es) else ""
+    check("Spanish page has lang=es, translated title, English back-link", '<html lang="es">' in e and "Una historia de prueba" in e and 'hreflang="en"' in e)
+    check("English page links to Spanish", 'hreflang="es"' in open(os.path.join(tmp2, "blog", "a-test-story.html"), encoding="utf-8").read())
+    check("translation cached", os.path.exists(os.path.join(tmp2, "content", "translations", "a-test-story.es.md")))
+    bc2.main()
+    check("second build uses the cache (translator not called again)", calls == ["es"])
+    bc2.TRANSLATOR = lambda text, lang: None
+    shutil.rmtree(os.path.join(tmp2, "content", "translations")); shutil.rmtree(os.path.join(tmp2, "blog", "es"))
+    bc2.main()
+    check("no translation available → no Spanish page, no stub", not os.path.exists(es))
+    shutil.rmtree(tmp2, ignore_errors=True)
+
 
     print(f"BUILD CONTENT: {_p} passed, {_f} failed")
     return 1 if _f else 0

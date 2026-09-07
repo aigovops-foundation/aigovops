@@ -50,6 +50,14 @@ HASHTAGS = "#AIGovernance #AiGovOps #ResponsibleAI"
 
 def parse(path):
     raw = open(path, encoding="utf-8").read()
+    meta = parse_text(raw, path=path)
+    meta["path"] = path
+    return meta
+
+
+def parse_text(raw, slug=None, date=None, image=None, path="<text>"):
+    """Front matter + body → meta. Used for story files and for their cached translations (which keep
+    the English slug, date and image so the Spanish page sits beside the English one)."""
     m = re.match(r"^---\s*\n(.*?)\n---\s*\n(.*)$", raw, re.S)
     if not m:
         raise SystemExit(f"{path}: needs front matter (--- title/date --- then the story)")
@@ -62,10 +70,16 @@ def parse(path):
     for k in ("title", "date"):
         if not meta.get(k):
             raise SystemExit(f"{path}: front matter needs '{k}:'")
+    if date:
+        meta["date"] = date
     dt.date.fromisoformat(meta["date"])            # validates YYYY-MM-DD
     base = os.path.splitext(os.path.basename(path))[0]
+    if slug:
+        meta["slug"] = slug
     meta.setdefault("slug", re.sub(r"[^a-z0-9]+", "-", re.sub(r"^\d{4}-\d{2}(-\d{2})?-", "", base).lower()).strip("-"))
     meta.setdefault("author", "Ken Johnston")
+    if image:
+        meta["image"] = image
     meta.setdefault("image", DEFAULT_IMAGE)
     first_para = next((p.strip() for p in re.split(r"\n\s*\n", body) if p.strip() and not p.strip().startswith("#")), "")
     meta.setdefault("summary", re.sub(r"[*_`\[\]()>#]", "", first_para)[:220])
@@ -293,6 +307,85 @@ def render_founders():
     return n
 
 
+# ── Spanish story pages (plan step 3.3) ───────────────────────────────────────────────────────
+# The site speaks EN/ES. Every story also renders as blog/es/<slug>.html, translated once by Claude
+# Haiku (ANTHROPIC_API_KEY in the publish workflow) and CACHED at content/translations/<slug>.es.md so a
+# rebuild never re-spends or drifts. Terms that must not be translated are pinned in GLOSSARY. With no
+# key and no cache the Spanish page is simply not produced (and the build says so) — never a machine
+# stub passed off as a translation. TRANSLATOR is pluggable so the test can swap in a fake.
+TRANSLATIONS = os.path.join(ROOT, "content", "translations")
+LANGS = ["es"]
+GLOSSARY = ["Gate Check", "Beacon", "Umbrella", "Lantern", "AiGovOps", "Ship safe AI — never unsafe AI", "Tuesday Letter"]
+TRANSLATOR = None   # callable(text, lang) -> text
+
+
+def _claude_translate(text, lang):
+    import json as _json
+    import urllib.request
+    key = os.environ.get("ANTHROPIC_API_KEY")
+    if not key:
+        return None
+    names = {"es": "Spanish"}
+    sysmsg = (f"Translate the following Markdown story into natural {names.get(lang, lang)} for AI-governance practitioners. "
+              "Keep Markdown structure, links and the YAML front matter keys exactly; translate the values of title and summary. "
+              "Never translate these terms: " + ", ".join(GLOSSARY) + ". Return only the translated Markdown.")
+    body = _json.dumps({"model": os.environ.get("TRANSLATE_MODEL", "claude-haiku-4-5"), "max_tokens": 6000,
+                        "system": sysmsg, "messages": [{"role": "user", "content": text}]}).encode()
+    req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=body, headers={
+        "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json"})
+    with urllib.request.urlopen(req, timeout=120) as r:
+        out = _json.loads(r.read())
+    return "".join(c.get("text", "") for c in out.get("content", []) if c.get("type") == "text").strip() or None
+
+
+def translated_markdown(meta, lang):
+    """Cached translation of the whole story file (front matter + body) or None."""
+    os.makedirs(TRANSLATIONS, exist_ok=True)
+    cache = os.path.join(TRANSLATIONS, f"{meta['slug']}.{lang}.md")
+    if os.path.exists(cache):
+        return open(cache, encoding="utf-8").read()
+    src = open(meta["path"], encoding="utf-8").read() if meta.get("path") and os.path.exists(meta["path"]) else None
+    if not src:
+        return None
+    fn = TRANSLATOR or _claude_translate
+    try:
+        out = fn(src, lang)
+    except Exception:  # noqa: BLE001 — a translation hiccup skips the language, never breaks the build
+        out = None
+    if not out or not out.lstrip().startswith("---"):
+        return None
+    open(cache, "w", encoding="utf-8").write(out)
+    return out
+
+
+def render_translations(metas):
+    """blog/<lang>/<slug>.html for every story with a translation; cross-links EN <-> lang. Returns count."""
+    n = 0
+    for m in metas:
+        for lang in LANGS:
+            md = translated_markdown(m, lang)
+            if not md:
+                continue
+            tm = parse_text(md, m["slug"], m["date"], m.get("image"))
+            page = render_post(tm)
+            page = page.replace('<html lang="en">', f'<html lang="{lang}">', 1)
+            page = page.replace(f'{SITE}/blog/{m["slug"]}.html', f'{SITE}/blog/{lang}/{m["slug"]}.html')
+            page = page.replace('href="../', 'href="../../').replace('src="../', 'src="../../')
+            page = page.replace('<div class="post-body"', f'<p class="lang-switch"><a href="../{m["slug"]}.html" hreflang="en">Read in English →</a></p>\n  <div class="post-body"', 1)
+            outdir = os.path.join(ROOT, "blog", lang); os.makedirs(outdir, exist_ok=True)
+            open(os.path.join(outdir, f"{m['slug']}.html"), "w", encoding="utf-8").write(page)
+            # back-link on the English page
+            en = os.path.join(ROOT, "blog", f"{m['slug']}.html")
+            if os.path.exists(en):
+                e = open(en, encoding="utf-8").read()
+                link = f'<p class="lang-switch"><a href="{lang}/{m["slug"]}.html" hreflang="{lang}">Leer en español →</a></p>'
+                if 'class="lang-switch"' not in e:
+                    e = e.replace('<div class="post-body"', link + '\n  <div class="post-body"', 1)
+                    open(en, "w", encoding="utf-8").write(e)
+            n += 1
+    return n
+
+
 def main():
     files = sorted(f for f in glob.glob(os.path.join(STORIES, "*.md")) if not os.path.basename(f).startswith("_") and os.path.basename(f).upper() != "README.MD")
     metas = sorted((parse(f) for f in files), key=lambda m: m["date"], reverse=True)
@@ -304,6 +397,9 @@ def main():
     update_index(metas)          # zero stories -> an empty marker block, never a stale card
     update_feed(metas)
     write_drafts(metas)
+    nt = render_translations(metas)
+    if nt:
+        print(f"build_content: {nt} translated story page(s) under blog/<lang>/")
     nf = render_founders()
     if nf:
         print(f"build_content: founders.html — {nf} region(s) rendered from content/founders.md")

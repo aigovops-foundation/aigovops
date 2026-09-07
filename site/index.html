@@ -217,6 +217,12 @@
         <span class="action-hint">Read the Library — three shelves →</span>
       </a>
 
+      <a href="https://community.aigovops-foundation.com/gate-check.html?src=home-hero" target="_blank" rel="noopener" class="action-card action-gate" onclick="if(window.plausible)plausible('Home: Gate Check')">
+        <span class="action-icon">✅</span>
+        <span class="action-label">Come Try</span>
+        <span class="action-hint">The ten-minute Gate Check — no account →</span>
+      </a>
+
     </div>
     <p class="hero-quiet-links" style="margin-top:14px;font-size:0.92rem;">
       Or <button onclick="window.SCHEDULE && window.SCHEDULE.open()" aria-label="Schedule a call with a community leader" style="cursor:pointer;background:none;border:none;padding:0;font:inherit;color:inherit;text-decoration:underline;">schedule a call with a community leader</button>
@@ -468,7 +474,7 @@ function handleNewsletterSubmit(e) {
   const email = document.getElementById('newsletterEmail').value.trim();
   const msg   = document.getElementById('newsletterMsg');
   if (!email) return;
-  const url = 'https://aigovops.substack.com/subscribe?email=' + encodeURIComponent(email);
+  const url = 'https://aigovops.substack.com/subscribe?utm_source=site-newsletter&utm_medium=form&email=' + encodeURIComponent(email);
   window.open(url, '_blank', 'noopener');
   msg.textContent = 'Opening Substack — confirm your subscription there ✓';
   msg.style.color = 'rgba(255,255,255,.7)';
