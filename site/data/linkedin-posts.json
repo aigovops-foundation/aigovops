@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-07T07:15:01Z",
+  "updated": "2026-09-07T19:08:17Z",
   "bob": [
+    {
+      "title": "Browser-use agents can click “Send,” “Publish,” or “Delete” on live sites. Prompts are not controls. PROBLEM Changed pages, leaked...",
+      "link": "https://www.linkedin.com/posts/bobrapp_browser-use-agents-can-click-send-publish-activity-7502713525774106626-XLv2",
+      "date": "Mon, 07 Sep 2026 13:04:58 GMT",
+      "summary": "Browser-use agents can click “Send,” “Publish,” or “Delete” on live sites. Prompts are not controls. PROBLEM Changed pages, leaked credentials, and clickjacking can turn valid intent into harm. SOLUTIONS • Allowlist domains/routes. • Isolate credentials. • Preview target, paramet",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Your face is not a free-to-use asset. Synthetic likenesses of employees, customers, experts, and public figures need specific auth...",
+      "link": "https://www.linkedin.com/posts/bobrapp_your-face-is-not-a-free-to-use-asset-synthetic-activity-7502713441477107713-g-rP",
+      "date": "Mon, 07 Sep 2026 13:04:38 GMT",
+      "summary": "Your face is not a free-to-use asset. Synthetic likenesses of employees, customers, experts, and public figures need specific authorization—not a vague release. Before publication, log: • Scope: face, voice, body; training, avatar, edit, endorsement. • Time: start, expiry, renewa",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "An AI support bot must hand off when risk rises—not after another failed reply. PROBLEM Routine customer/employee assistance is no...",
       "link": "https://www.linkedin.com/posts/bobrapp_an-ai-support-bot-must-hand-off-when-risk-activity-7502486507463581696-JJBn",
@@ -62,22 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_long-lived-agent-credentials-turn-small-errors-activity-7501988806049386497-S9BA",
       "date": "Sat, 05 Sep 2026 13:05:12 GMT",
       "summary": "Long-lived agent credentials turn small errors into durable compromise. Les identifiants d’agent longue durée transforment de petites erreurs en compromission durable. SOLUTIONS / SOLUTIONS Use workload identity, short-lived audience-restricted tokens, automatic rotation, central",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Jonathan G. Blanco 🛠 Ken Johnston amazing night aizii will be very big",
-      "link": "https://www.linkedin.com/posts/bobrapp_jonathan-g-blanco-ken-johnston-amazing-activity-7501813075860250624-unuY",
-      "date": "Sat, 05 Sep 2026 01:26:54 GMT",
-      "summary": "Jonathan G. Blanco 🛠 Ken Johnston amazing night aizii will be very big",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Fallback is not a safety net. A replacement model or tool can silently change risk, data handling, accuracy, and authorization. Pr...",
-      "link": "https://www.linkedin.com/posts/bobrapp_fallback-is-not-a-safety-net-a-replacement-activity-7501761607476211712-UtNI",
-      "date": "Fri, 04 Sep 2026 22:02:23 GMT",
-      "summary": "Fallback is not a safety net. A replacement model or tool can silently change risk, data handling, accuracy, and authorization. Problem → It may cross a data boundary or lack a control the primary had. Solutions → Keep a pre-approved fallback matrix. Test capability parity, data",
       "image": null,
       "author": "Bob Rapp"
     }
