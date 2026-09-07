@@ -100,3 +100,17 @@ User accounts, CMS, community forum, e-commerce beyond donations, languages beyo
 5. Portuguese BR / French / German i18n
 6. Frameworks expansion to 60+
 7. Interactive OVERT 1.0 protocol explorer
+
+
+## Labor-Day-Big-Redesign (7 September 2026)
+
+This site's job narrowed to one message and one CTA. **Message:** Ship safe AI — never unsafe AI;
+get to yes, stay at yes, recover to yes; prove it in ten minutes. **CTA:** the ten-minute Gate Check,
+on every page (footers since #113, `src=site-footer`). **Target shape:** nine pages — home,
+get/stay/recover-to-yes, gate-check, library, community, founders, support (+ blog) — every folded
+page a redirect, nothing deleted from git. **Content is files:** `content/stories/*.md` publishes
+everywhere; `content/founders.md` renders the founders page (#114). **Guard:** `scripts/test-message.py`
+(promise on every page, Gate Check on every footer, retired vocabulary blocked; allowlist only shrinks).
+
+Programme of record: Omni `docs/PRD-LABOR-DAY-BIG-REDESIGN.md`, `jeeves design`; tracker artifact
+"AiGovOps Redesign Plan"; issues #103–#112 here.
