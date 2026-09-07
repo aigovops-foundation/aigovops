@@ -212,6 +212,87 @@ def write_drafts(metas):
             os.remove(f)
 
 
+# ── Founders from a file (plan step 2.3, Labor-Day-Big-Redesign) ─────────────────────────────
+# content/founders.md is the source of truth for each founder's title, bio and the "In their words"
+# quotes. The build rewrites ONLY those regions of founders.html (the page's frame, links and
+# speaking section stay hand-authored), so Ken edits a text file and never HTML.
+FOUNDERS_MD = os.path.join(ROOT, "content", "founders.md")
+FOUNDERS_HTML = os.path.join(ROOT, "founders.html")
+QUOTES_START, QUOTES_END = "<!-- founders:quotes:start -->", "<!-- founders:quotes:end -->"
+
+
+def parse_founders(md_text):
+    """→ {"ken": {title, hook, bio:[paras]}, "bob": {...}, "quotes": [(who, text)]}"""
+    out = {"quotes": []}
+    cur, key = None, None
+    for raw in md_text.splitlines():
+        line = raw.rstrip()
+        if line.startswith("## "):
+            h = line[3:].strip().lower()
+            key = "ken" if h.startswith("ken") else "bob" if h.startswith("bob") else "quotes" if "words" in h else None
+            if key in ("ken", "bob"):
+                out[key] = {"title": "", "hook": "", "bio": []}
+            cur = key
+            continue
+        if cur in ("ken", "bob"):
+            if line.startswith("Title:"):
+                out[cur]["title"] = line[6:].strip()
+            elif line.startswith("Hook:"):
+                out[cur]["hook"] = line[5:].strip()
+            elif line.strip():
+                out[cur]["bio"].append(line.strip())
+        elif cur == "quotes" and line.startswith("- "):
+            who, _, text = line[2:].partition(":")
+            out["quotes"].append((who.strip(), text.strip().strip('"')))
+    return out
+
+
+def _esc(t):
+    return t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def _inline(t):
+    t = _esc(t)
+    t = re.sub(r"\*([^*]+)\*", r"<em>\1</em>", t)
+    return t
+
+
+def render_founders():
+    """Rewrite founders.html's title/bio/quotes regions from content/founders.md. No file → no-op.
+    Returns the number of regions rewritten."""
+    if not (os.path.exists(FOUNDERS_MD) and os.path.exists(FOUNDERS_HTML)):
+        return 0
+    data = parse_founders(open(FOUNDERS_MD, encoding="utf-8").read())
+    html = open(FOUNDERS_HTML, encoding="utf-8").read()
+    n = 0
+    for who in ("ken", "bob"):
+        f = data.get(who)
+        if not f or not f["bio"]:
+            continue
+        sec = re.search(r'(<section class="founder-section" id="%s">.*?</section>)' % who, html, re.S)
+        if not sec:
+            continue
+        block = sec.group(1)
+        new = re.sub(r'<p class="founder-title">.*?</p>', '<p class="founder-title">' + _esc(f["title"]) + "</p>", block, count=1, flags=re.S)
+        bio = "\n".join("          <p>" + _inline(p) + "</p>" for p in f["bio"])
+        if f["hook"]:
+            bio += '\n          <p class="founder-hook"><em>&ldquo;' + _esc(f["hook"]) + '&rdquo;</em></p>'
+        new = re.sub(r'<div class="founder-bio">.*?</div>', '<div class="founder-bio">\n' + bio + "\n        </div>", new, count=1, flags=re.S)
+        html = html.replace(block, new, 1)
+        n += 1
+    if data["quotes"]:
+        items = "\n".join('        <blockquote class="founder-quote"><p>&ldquo;' + _esc(q) + '&rdquo;</p><cite>' + _esc(w) + "</cite></blockquote>" for w, q in data["quotes"])
+        section = (QUOTES_START + '\n  <section class="founder-words" id="in-their-words">\n    <div class="container">\n      <h2>In their words</h2>\n'
+                   + items + "\n    </div>\n  </section>\n  " + QUOTES_END)
+        if QUOTES_START in html and QUOTES_END in html:
+            html = html[:html.index(QUOTES_START)] + section + html[html.index(QUOTES_END) + len(QUOTES_END):]
+        else:
+            html = html.replace('  <section class="speaking-section">', section + '\n  <section class="speaking-section">', 1)
+        n += 1
+    open(FOUNDERS_HTML, "w", encoding="utf-8").write(html)
+    return n
+
+
 def main():
     files = sorted(f for f in glob.glob(os.path.join(STORIES, "*.md")) if not os.path.basename(f).startswith("_") and os.path.basename(f).upper() != "README.MD")
     metas = sorted((parse(f) for f in files), key=lambda m: m["date"], reverse=True)
@@ -223,6 +304,9 @@ def main():
     update_index(metas)          # zero stories -> an empty marker block, never a stale card
     update_feed(metas)
     write_drafts(metas)
+    nf = render_founders()
+    if nf:
+        print(f"build_content: founders.html — {nf} region(s) rendered from content/founders.md")
     print(f"build_content: {len(metas)} story/stories → blog.html cards + feed.xml + content/drafts/ (newsletter + LinkedIn)")
     return 0
 

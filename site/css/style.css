@@ -445,3 +445,11 @@ address a:hover { color: var(--white); }
 /* AiGovOps assistant (js/chat.js) temporarily hidden (June 2026): it conflicts with the
    Jeeves widget — two chat bubbles in the same corner. Re-enable by removing this block. */
 #chatBubble, #chatWindow { display: none !important; }
+
+/* Founders from a file (plan 2.3) */
+.founder-hook { margin-top: 14px; font-size: 1.05rem; }
+.founder-words { padding: 44px 0; }
+.founder-words h2 { text-align: center; margin-bottom: 22px; }
+.founder-quote { max-width: 60ch; margin: 0 auto 14px; padding: 12px 18px; border-left: 3px solid var(--accent, #1d9e75); }
+.founder-quote p { margin: 0 0 4px; font-size: 1.08rem; }
+.founder-quote cite { font-style: normal; font-size: .85rem; color: #6a6a80; }

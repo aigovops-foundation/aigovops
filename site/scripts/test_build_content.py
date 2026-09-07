@@ -39,6 +39,8 @@ def load(root):
     bc.BLOG_INDEX = os.path.join(root, "blog.html")
     bc.FEED = os.path.join(root, "feed.xml")
     bc.DRAFTS = os.path.join(root, "content", "drafts")
+    bc.FOUNDERS_MD = os.path.join(root, "content", "founders.md")
+    bc.FOUNDERS_HTML = os.path.join(root, "founders.html")
     return bc
 
 
@@ -110,7 +112,26 @@ def main():
     check("removed story → no feed item", "<item><!-- content -->" not in open(os.path.join(tmp, "feed.xml"), encoding="utf-8").read())
     check("removed story → no drafts", not os.path.exists(os.path.join(tmp, "content", "drafts", "a-test-story.linkedin.md")))
 
+    print("[founders] founders.html renders from content/founders.md (plan 2.3)")
+    os.makedirs(os.path.join(tmp, "content"), exist_ok=True)
+    shutil.copy(os.path.join(ROOT, "founders.html"), tmp)
+    open(os.path.join(tmp, "content", "founders.md"), "w", encoding="utf-8").write(
+        "# Founders\n\n## Ken Johnston\n\nTitle: Tester turned governor\nHook: A receipt for every action.\n\nKen para one with *emphasis*.\n\nKen para two.\n\n"
+        "## Bob Rapp\n\nTitle: Gate keeper\nHook: Maybe is expensive.\n\nBob para one.\n\n## In their words\n\n- Bob: \"Policies describe. Code decides.\"\n- Ken: \"Beacon proves it.\"\n")
+    n = bc.render_founders()
+    fh = open(os.path.join(tmp, "founders.html"), encoding="utf-8").read()
+    check("three regions rendered", n == 3)
+    check("titles replaced", "Tester turned governor" in fh and "Gate keeper" in fh)
+    check("bios replaced with emphasis rendered", "Ken para one with <em>emphasis</em>." in fh and "Bob para one." in fh)
+    check("hooks rendered", "A receipt for every action." in fh and "Maybe is expensive." in fh)
+    check("quotes section present with cites", fh.count('class="founder-quote"') == 2 and "<cite>Bob</cite>" in fh)
+    check("old bio text gone", "Complete the Governance 101" not in fh and "spent his career at the intersection" not in fh)
+    before = fh
+    bc.render_founders()
+    check("idempotent (second render identical)", open(os.path.join(tmp, "founders.html"), encoding="utf-8").read() == before)
+    check("frame untouched (speaking section + links)", 'class="speaking-section"' in fh and "founder-link primary" in fh)
     shutil.rmtree(tmp, ignore_errors=True)
+
     print(f"BUILD CONTENT: {_p} passed, {_f} failed")
     return 1 if _f else 0
 
