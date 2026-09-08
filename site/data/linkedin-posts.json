@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-08T07:07:04Z",
+  "updated": "2026-09-08T19:08:57Z",
   "bob": [
+    {
+      "title": "An AI agent should never be a mystery—especially when a customer is frustrated. Disclose at first contact. Keep an “AI agent” cue...",
+      "link": "https://www.linkedin.com/posts/bobrapp_an-ai-agent-should-never-be-a-mysteryespecially-activity-7503075651579699201-Snuq",
+      "date": "Tue, 08 Sep 2026 13:03:56 GMT",
+      "summary": "An AI agent should never be a mystery—especially when a customer is frustrated. Disclose at first contact. Keep an “AI agent” cue visible throughout. At handoff, name who is taking over and preserve the transcript. Offer a human escalation path. Then test it: can a real person re",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI job scams are governance failures. Problem → Fake recruiters impersonate staff, weaponize tests, expose candidate data, and ena...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-job-scams-are-governance-failures-problem-activity-7503075518188105728-sWd5",
+      "date": "Tue, 08 Sep 2026 13:03:24 GMT",
+      "summary": "AI job scams are governance failures. Problem → Fake recruiters impersonate staff, weaponize tests, expose candidate data, and enable employment fraud. Solutions → Verify identity/domain and roles officially; isolate tests; minimize data; publish reporting/response plans. Candida",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "An account can be compromised—and still leave an AI assistant a way back in. PROBLEM Credentials reset? Not enough. Persistence ma...",
       "link": "https://www.linkedin.com/posts/bobrapp_an-account-can-be-compromisedand-still-leave-activity-7502848796847046656-7AKV",
@@ -62,22 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-an-inaccessible-activity-7502350623380701184--t6W",
       "date": "Sun, 06 Sep 2026 13:02:56 GMT",
       "summary": "Level up your AI governance: an inaccessible AI notice is not transparency. It is a barrier. Problem Without screen-reader labels, captions, contrast, plain language, language choice, non-visual signals, and keyboard access, people may miss disclosure or lose their route to appea",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "A label can be present—and still deceive. PROBLEM Labels fail when they are easy to miss, misleading, premature, or stripped durin...",
-      "link": "https://www.linkedin.com/posts/bobrapp_a-label-can-be-presentand-still-deceive-activity-7502124088312840193-Wutp",
-      "date": "Sat, 05 Sep 2026 22:02:45 GMT",
-      "summary": "A label can be present—and still deceive. PROBLEM Labels fail when they are easy to miss, misleading, premature, or stripped during reuse. Test placement, persistence after screenshot/copy, mobile rendering, localization, and interpretation under time pressure. SOLUTIONS Three-Ye",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "A compromised employee account can weaponize its AI assistant: without breaking the model. Problem: It can reconnoiter systems, im...",
-      "link": "https://www.linkedin.com/posts/bobrapp_a-compromised-employee-account-can-weaponize-activity-7502123805784428544-1b0U",
-      "date": "Sat, 05 Sep 2026 22:01:38 GMT",
-      "summary": "A compromised employee account can weaponize its AI assistant: without breaking the model. Problem: It can reconnoiter systems, impersonate colleagues, persist, and exfiltrate data. Govern the asset identity, session, and stop authority. Solutions: Enforce governed identity + lea",
       "image": null,
       "author": "Bob Rapp"
     }
