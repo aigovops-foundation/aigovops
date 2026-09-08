@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-07T19:08:17Z",
+  "updated": "2026-09-08T07:07:04Z",
   "bob": [
+    {
+      "title": "An account can be compromised—and still leave an AI assistant a way back in. PROBLEM Credentials reset? Not enough. Persistence ma...",
+      "link": "https://www.linkedin.com/posts/bobrapp_an-account-can-be-compromisedand-still-leave-activity-7502848796847046656-7AKV",
+      "date": "Mon, 07 Sep 2026 22:02:29 GMT",
+      "summary": "An account can be compromised—and still leave an AI assistant a way back in. PROBLEM Credentials reset? Not enough. Persistence may hide in rules, forwarding, scheduled actions, delegated access, app permissions, or hidden UI changes. SOLUTIONS Snapshot each state. Alert on drift",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Level Up Your AI Governance: AI is not an editorial owner. When AI generates public-interest information without human editorial c...",
+      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-ai-is-not-an-activity-7502848697492373504-B_E-",
+      "date": "Mon, 07 Sep 2026 22:02:06 GMT",
+      "summary": "Level Up Your AI Governance: AI is not an editorial owner. When AI generates public-interest information without human editorial control, transparency is not a footnote. It is an operating control. PROBLEM Who verified the sources? Who can pause publication? Who corrects errors?",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Browser-use agents can click “Send,” “Publish,” or “Delete” on live sites. Prompts are not controls. PROBLEM Changed pages, leaked...",
       "link": "https://www.linkedin.com/posts/bobrapp_browser-use-agents-can-click-send-publish-activity-7502713525774106626-XLv2",
@@ -62,22 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_a-compromised-employee-account-can-weaponize-activity-7502123805784428544-1b0U",
       "date": "Sat, 05 Sep 2026 22:01:38 GMT",
       "summary": "A compromised employee account can weaponize its AI assistant: without breaking the model. Problem: It can reconnoiter systems, impersonate colleagues, persist, and exfiltrate data. Govern the asset identity, session, and stop authority. Solutions: Enforce governed identity + lea",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Level Up Your AI Governance: transparency fails when ownership is implicit. Owner map / 负责人地图:",
-      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-transparency-activity-7501989051223396352-T8HQ",
-      "date": "Sat, 05 Sep 2026 13:06:10 GMT",
-      "summary": "Level Up Your AI Governance: transparency fails when ownership is implicit. Owner map / 负责人地图: • Communications — drafts disclosures / 起草披露 • Product — approves wording / 批准措辞 • Legal — checks claims / 核查声明 • Engineering — verifies markers + version / 验证标识与版本 • Accessibility — te",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Long-lived agent credentials turn small errors into durable compromise. Les identifiants d’agent longue durée transforment de peti...",
-      "link": "https://www.linkedin.com/posts/bobrapp_long-lived-agent-credentials-turn-small-errors-activity-7501988806049386497-S9BA",
-      "date": "Sat, 05 Sep 2026 13:05:12 GMT",
-      "summary": "Long-lived agent credentials turn small errors into durable compromise. Les identifiants d’agent longue durée transforment de petites erreurs en compromission durable. SOLUTIONS / SOLUTIONS Use workload identity, short-lived audience-restricted tokens, automatic rotation, central",
       "image": null,
       "author": "Bob Rapp"
     }
