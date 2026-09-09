@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-09T07:07:15Z",
+  "updated": "2026-09-09T19:08:09Z",
   "bob": [
+    {
+      "title": "An AI outcome is not contestable because a “contact us” form exists. PROBLEM Contestability means challenge, review, and correctio...",
+      "link": "https://www.linkedin.com/posts/bobrapp_an-ai-outcome-is-not-contestable-because-activity-7503438030850916352-6Zfa",
+      "date": "Wed, 09 Sep 2026 13:03:54 GMT",
+      "summary": "An AI outcome is not contestable because a “contact us” form exists. PROBLEM Contestability means challenge, review, and correction—not complaint intake or an escalation SLO. Without notice, reasons, evidence, authority, pause rules, and deadlines, review is theatre. SOLUTIONS Pr",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Stale data can make a compliant AI system produce unsafe decisions. Treat freshness as an executable control:",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-responsibleai-activity-7503437817746903041-ru92",
+      "date": "Wed, 09 Sep 2026 13:03:03 GMT",
+      "summary": "Stale data can make a compliant AI system produce unsafe decisions. Treat freshness as an executable control: • Define maximum age by use case. • Validate timestamps at inference. • Quarantine expired inputs. • Alert the named owner. • Preserve immutable evidence of every excepti",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "AI disclosure is a governance decision—not a content label. Problem A final output cannot explain why notice was given—or withheld...",
       "link": "https://www.linkedin.com/posts/bobrapp_ai-disclosure-is-a-governance-decisionnot-activity-7503211150369693696-x2vS",
@@ -62,22 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_your-face-is-not-a-free-to-use-asset-synthetic-activity-7502713441477107713-g-rP",
       "date": "Mon, 07 Sep 2026 13:04:38 GMT",
       "summary": "Your face is not a free-to-use asset. Synthetic likenesses of employees, customers, experts, and public figures need specific authorization—not a vague release. Before publication, log: • Scope: face, voice, body; training, avatar, edit, endorsement. • Time: start, expiry, renewa",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An AI support bot must hand off when risk rises—not after another failed reply. PROBLEM Routine customer/employee assistance is no...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-ai-support-bot-must-hand-off-when-risk-activity-7502486507463581696-JJBn",
-      "date": "Sun, 06 Sep 2026 22:02:53 GMT",
-      "summary": "An AI support bot must hand off when risk rises—not after another failed reply. PROBLEM Routine customer/employee assistance is not high-stakes support. SOLUTIONS Trigger immediate human takeover for: • repeated misunderstanding or distress; • legal, financial, health, employment",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Level Up Your AI Governance: open egress is not autonomy. It is unreviewed agency. PROBLEM A sandbox controls execution—not networ...",
-      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-open-egress-activity-7502486484529303552-_aKf",
-      "date": "Sun, 06 Sep 2026 22:02:47 GMT",
-      "summary": "Level Up Your AI Governance: open egress is not autonomy. It is unreviewed agency. PROBLEM A sandbox controls execution—not network paths. Implicit egress can leak data or reach changed domains. SOLUTIONS Deny by default. Allow exact endpoints. Enforce proxy/domain controls. Log",
       "image": null,
       "author": "Bob Rapp"
     }
