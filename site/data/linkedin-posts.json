@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-08T19:08:57Z",
+  "updated": "2026-09-09T07:07:15Z",
   "bob": [
+    {
+      "title": "AI disclosure is a governance decision—not a content label. Problem A final output cannot explain why notice was given—or withheld...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-disclosure-is-a-governance-decisionnot-activity-7503211150369693696-x2vS",
+      "date": "Tue, 08 Sep 2026 22:02:21 GMT",
+      "summary": "AI disclosure is a governance decision—not a content label. Problem A final output cannot explain why notice was given—or withheld. Without the reasoning, the decision is hard to defend. Solutions Record: material AI involvement; decision owner; rule; audience impact; notice; exc",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Human approval is not a checkbox. If an agent acts before review, lacks context, ignores rejection, or resumes after timeout, the...",
+      "link": "https://www.linkedin.com/posts/bobrapp_human-approval-is-not-a-checkbox-if-an-activity-7503211118748848128-Thhw",
+      "date": "Tue, 08 Sep 2026 22:02:14 GMT",
+      "summary": "Human approval is not a checkbox. If an agent acts before review, lacks context, ignores rejection, or resumes after timeout, the human is a witness—not a control. 问题 | Problem 不能及时停止行动的审批，不是控制。 / Approval that cannot stop action in time is not control. 解决方案 | Solutions Approve b",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "An AI agent should never be a mystery—especially when a customer is frustrated. Disclose at first contact. Keep an “AI agent” cue...",
       "link": "https://www.linkedin.com/posts/bobrapp_an-ai-agent-should-never-be-a-mysteryespecially-activity-7503075651579699201-Snuq",
@@ -62,22 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-open-egress-activity-7502486484529303552-_aKf",
       "date": "Sun, 06 Sep 2026 22:02:47 GMT",
       "summary": "Level Up Your AI Governance: open egress is not autonomy. It is unreviewed agency. PROBLEM A sandbox controls execution—not network paths. Implicit egress can leak data or reach changed domains. SOLUTIONS Deny by default. Allow exact endpoints. Enforce proxy/domain controls. Log",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Malicious AI skills are software supply-chain risk—not “just prompts.” Problem | 问题 Typosquats can alter agent behavior. Missing p...",
-      "link": "https://www.linkedin.com/posts/bobrapp_malicious-ai-skills-are-software-supply-chain-activity-7502350865060716544-mloD",
-      "date": "Sun, 06 Sep 2026 13:03:53 GMT",
-      "summary": "Malicious AI skills are software supply-chain risk—not “just prompts.” Problem | 问题 Typosquats can alter agent behavior. Missing provenance, dependency review, hashes, or revocation makes installs guesswork. 仿冒包可改变智能体行为；缺少来源、依赖审查、哈希或撤销，部署只能靠猜。 Solutions | 解决方案 Governance-as-code",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Level up your AI governance: an inaccessible AI notice is not transparency. It is a barrier. Problem Without screen-reader labels,...",
-      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-an-inaccessible-activity-7502350623380701184--t6W",
-      "date": "Sun, 06 Sep 2026 13:02:56 GMT",
-      "summary": "Level up your AI governance: an inaccessible AI notice is not transparency. It is a barrier. Problem Without screen-reader labels, captions, contrast, plain language, language choice, non-visual signals, and keyboard access, people may miss disclosure or lose their route to appea",
       "image": null,
       "author": "Bob Rapp"
     }
