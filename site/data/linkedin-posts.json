@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-09T19:08:09Z",
+  "updated": "2026-09-10T07:07:08Z",
   "bob": [
+    {
+      "title": "PROBLEM If builders approve their own AI, assurance is a checkbox—not independence. SOLUTIONS Separate build, approve, operate, an...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-if-builders-approve-their-own-ai-activity-7503573434845671425-UqJh",
+      "date": "Wed, 09 Sep 2026 22:01:57 GMT",
+      "summary": "PROBLEM If builders approve their own AI, assurance is a checkbox—not independence. SOLUTIONS Separate build, approve, operate, and challenge. Bar conflicts. Require qualified reviewers with evidence access and challenge rights. Escalate unresolved disagreements; rotate reviewers",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "An API upgrade can quietly change an AI system’s meaning, permissions, or safety behavior. Govern version skew explicitly: pin sup...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-policyascode-activity-7503573401341587456-gry9",
+      "date": "Wed, 09 Sep 2026 22:01:49 GMT",
+      "summary": "An API upgrade can quietly change an AI system’s meaning, permissions, or safety behavior. Govern version skew explicitly: pin supported versions, validate schemas, run compatibility tests, define deprecation windows, block unknown responses, and log the policy version used for e",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "An AI outcome is not contestable because a “contact us” form exists. PROBLEM Contestability means challenge, review, and correctio...",
       "link": "https://www.linkedin.com/posts/bobrapp_an-ai-outcome-is-not-contestable-because-activity-7503438030850916352-6Zfa",
@@ -62,22 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-ai-is-not-an-activity-7502848697492373504-B_E-",
       "date": "Mon, 07 Sep 2026 22:02:06 GMT",
       "summary": "Level Up Your AI Governance: AI is not an editorial owner. When AI generates public-interest information without human editorial control, transparency is not a footnote. It is an operating control. PROBLEM Who verified the sources? Who can pause publication? Who corrects errors?",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Browser-use agents can click “Send,” “Publish,” or “Delete” on live sites. Prompts are not controls. PROBLEM Changed pages, leaked...",
-      "link": "https://www.linkedin.com/posts/bobrapp_browser-use-agents-can-click-send-publish-activity-7502713525774106626-XLv2",
-      "date": "Mon, 07 Sep 2026 13:04:58 GMT",
-      "summary": "Browser-use agents can click “Send,” “Publish,” or “Delete” on live sites. Prompts are not controls. PROBLEM Changed pages, leaked credentials, and clickjacking can turn valid intent into harm. SOLUTIONS • Allowlist domains/routes. • Isolate credentials. • Preview target, paramet",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Your face is not a free-to-use asset. Synthetic likenesses of employees, customers, experts, and public figures need specific auth...",
-      "link": "https://www.linkedin.com/posts/bobrapp_your-face-is-not-a-free-to-use-asset-synthetic-activity-7502713441477107713-g-rP",
-      "date": "Mon, 07 Sep 2026 13:04:38 GMT",
-      "summary": "Your face is not a free-to-use asset. Synthetic likenesses of employees, customers, experts, and public figures need specific authorization—not a vague release. Before publication, log: • Scope: face, voice, body; training, avatar, edit, endorsement. • Time: start, expiry, renewa",
       "image": null,
       "author": "Bob Rapp"
     }
