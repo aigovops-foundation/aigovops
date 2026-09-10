@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-10T07:07:08Z",
+  "updated": "2026-09-10T19:07:43Z",
   "bob": [
+    {
+      "title": "Level Up Your AI Governance #6: Localization-as-Code A system can be technically accurate yet fail local law, language, culture, o...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-inclusiveai-activity-7503800548836581376-Do4o",
+      "date": "Thu, 10 Sep 2026 13:04:25 GMT",
+      "summary": "Level Up Your AI Governance #6: Localization-as-Code A system can be technically accurate yet fail local law, language, culture, or accessibility expectations. Encode jurisdiction and locale rules: approved languages, data residency, disclosure text, escalation contacts, date and",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem AI pilots become permanent by default when approvals have no expiry. This is use-case authorization—not model retirement o...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-ai-pilots-become-permanent-by-default-activity-7503800479223586816-J7-K",
+      "date": "Thu, 10 Sep 2026 13:04:08 GMT",
+      "summary": "Problem AI pilots become permanent by default when approvals have no expiry. This is use-case authorization—not model retirement or generic change management. Solutions Set an approval expiry, sunset owner, usage-volume limit and reassessment criteria. Require renewal evidence. I",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "PROBLEM If builders approve their own AI, assurance is a checkbox—not independence. SOLUTIONS Separate build, approve, operate, an...",
       "link": "https://www.linkedin.com/posts/bobrapp_problem-if-builders-approve-their-own-ai-activity-7503573434845671425-UqJh",
@@ -62,22 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_ai-job-scams-are-governance-failures-problem-activity-7503075518188105728-sWd5",
       "date": "Tue, 08 Sep 2026 13:03:24 GMT",
       "summary": "AI job scams are governance failures. Problem → Fake recruiters impersonate staff, weaponize tests, expose candidate data, and enable employment fraud. Solutions → Verify identity/domain and roles officially; isolate tests; minimize data; publish reporting/response plans. Candida",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An account can be compromised—and still leave an AI assistant a way back in. PROBLEM Credentials reset? Not enough. Persistence ma...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-account-can-be-compromisedand-still-leave-activity-7502848796847046656-7AKV",
-      "date": "Mon, 07 Sep 2026 22:02:29 GMT",
-      "summary": "An account can be compromised—and still leave an AI assistant a way back in. PROBLEM Credentials reset? Not enough. Persistence may hide in rules, forwarding, scheduled actions, delegated access, app permissions, or hidden UI changes. SOLUTIONS Snapshot each state. Alert on drift",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Level Up Your AI Governance: AI is not an editorial owner. When AI generates public-interest information without human editorial c...",
-      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-ai-is-not-an-activity-7502848697492373504-B_E-",
-      "date": "Mon, 07 Sep 2026 22:02:06 GMT",
-      "summary": "Level Up Your AI Governance: AI is not an editorial owner. When AI generates public-interest information without human editorial control, transparency is not a footnote. It is an operating control. PROBLEM Who verified the sources? Who can pause publication? Who corrects errors?",
       "image": null,
       "author": "Bob Rapp"
     }
