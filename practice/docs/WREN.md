@@ -57,7 +57,7 @@ person. She signs nothing; a host does.
 
 | Level | Wren's part | Wren's last line |
 |---|---|---|
-| **Get ready** | The readiness walk: five questions, one Wren Card, one worksheet opened for you | *You're a 100. Here's the worksheet. Thursday is the 17th, 09:00.* |
+| **Get ready** | The readiness walk: five questions, one Wren Card, one worksheet opened for you | *You're a 100. Here's the worksheet. Thursday is the 17th, 09:00 Pacific.* |
 | **100 Begin** | Sits beside the worksheet: a tier in one sentence when you hover; reads the receipt back in the lens you picked; puts the hash on your Gate Card | *Bring this Thursday. The first five minutes are for receipts.* |
 | **200 Retrofit** | Pairs you with a 100 for Thursday; turns your four sentences into the story draft; opens the catalog PR | *Your policy is a PR. You're paired with Dana on Thursday.* |
 | **300 Hold** | Reminds the named approver a hold is waiting and when it decays; shows the coverage number and asks "out of how many?" | *A hold decays in 6 hours. Pick a bundle to verify before Thursday.* |
@@ -117,7 +117,7 @@ jacket can become the Foundation mark.
 | **Level** | Start at **100** anyway. The founders take the ladder first, in order, so the marks on Thursday mean the same thing for everyone after. |
 | **Path** | Both — you wrote the YAML; write the sentence too, and check they say the same thing |
 | **Your lens** | Engineer. Wren picks **regulator** as the lens that is not your own |
-| **Thursday** | **17 September, 09:00** — the cohort call is on the calendar (Ken hosts). Bring the bundle. |
+| **Thursday** | **17 September, 09:00 Pacific** — the cohort call is on the calendar (Ken hosts). Bring the bundle. |
 | **Show it to** | Ken. His mark is the first `practice.mark` receipt the ledger ever holds. |
 | **Worksheet** | [Level 100 · Begin](https://aigovops-foundation.github.io/practice/levels/100-begin/WORKSHEET.html) — 45 minutes, nothing installed |
 

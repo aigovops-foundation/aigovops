@@ -28,6 +28,11 @@
   .nav b{font:600 16px var(--sans);margin-right:auto}
   .nav a{color:var(--ink);text-decoration:none}.nav a:hover{color:var(--green-ink);text-decoration:underline}
   /* hero */
+  body.focused .hero, body.focused #problem > h2, body.focused #problem > .lead, body.focused #doors, body.focused #flow, body.focused .nolb-sec, body.focused .back{display:none}
+  body.focused #problem{padding-top:28px}
+  .hour .back{margin:0 0 14px;font-size:14px}.hour .back a{color:var(--chalk-dim)}
+  .fold{margin-top:8px;border-top:1px solid var(--line);padding-top:12px}
+  .fold summary{cursor:pointer;font:600 15px var(--sans);color:var(--green-ink);padding:8px 0}
   .hero{position:relative;background:var(--board-2) center/cover no-repeat;color:var(--chalk);min-height:420px;display:flex;align-items:flex-end;isolation:isolate}
   .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,28,28,.9) 0%,rgba(20,28,28,.6) 48%,rgba(20,28,28,.1) 80%);z-index:-1}
   .hero .wrap{padding-block:56px 40px;width:100%}
@@ -103,7 +108,7 @@
 <body>
 <div class="wrap nav" role="navigation" aria-label="Practice">
   <b>☕ The AiGovOps Foundation café</b>
-  <a href="#problem">Your problem</a>
+  <a href="https://www.aigovops-foundation.com/#problem">The doors</a>
   <a href="#flow">How it builds</a>
   <a href="MANIFESTO.html">The manifesto</a>
   <a href="docs/THURSDAY.html">Thursday</a>
@@ -127,6 +132,7 @@
   <div class="hour" id="hour" aria-live="polite"></div>
 </section>
 
+<details class="fold wrap" id="more"><summary>Everything else — how it builds, no one left behind, the back room</summary>
 <section id="flow" class="wrap">
   <h2>How it all builds — one loop, nothing twice</h2>
   <p class="lead">Whatever door you came through, the same six objects carry you round the loop, and each one is made once, in one place. Nothing here is a second copy of something else.</p>
@@ -141,7 +147,7 @@
   </table></div>
 </section>
 
-<section class="wrap">
+<section class="wrap nolb-sec">
   <h2>No one left behind</h2>
   <p class="lead">"I don't know yet" is always an answer, and it always pairs you with someone. Each of these still ends in a receipt and a mark.</p>
   <div class="nolb">
@@ -171,6 +177,7 @@
     </ul>
   </div>
 </section>
+</details>
 
 <footer>
   <div class="wrap">
@@ -189,7 +196,7 @@
      caseId:"VH-001", caseName:"Air Canada", caseLine:"In 2022 Air Canada's chatbot told a grieving passenger he could claim a bereavement fare after travelling. The policy said the opposite. The tribunal held the airline to its chatbot's word.",
      leave:"a rule in your own words, one decision against it, and a real signed receipt made in your browser",
      time:"45 minutes · nothing installed", ws:"levels/100-begin/WORKSHEET.html",
-     receipt:"Beacon's browser demo — a key made in front of you, receipts signed, a bundle with VERIFY.md",
+     receipt:"Beacon in worksheet mode — one button; a key made in front of you, receipts signed, the three values on screen",
      wren:"Bring the bundle hash Thursday. The first five minutes are for receipts."},
     {id:"ship", level:"200", name:"Retrofit", gate:"the policy gates",
      q:"I have a bot or an agent already, and I'm not sure it's safe to ship.",
@@ -234,12 +241,13 @@
     const wsHref = d.ws.startsWith('http')?d.ws:P+d.ws;
     hour.innerHTML=`<div>
       <h3>Your first hour — ${d.level==='start'?'start here':'level '+d.level+', '+d.name}</h3>
+      <p class="back"><a href="https://www.aigovops-foundation.com/#problem">← not this one? the other doors</a></p>
       <p class="case"><b>${d.caseId} · ${d.caseName}.</b> ${d.caseLine}</p>
       <ol class="steps">
         <li><i>1</i><div><b>Read the case</b> <span>— write one line saying what the AI did that mattered.</span></div></li>
         <li><i>2</i><div><b>Declare the gate</b> <span>— ${d.gate}: a rule in plain words, or three lines of YAML; both are the same gate.</span></div></li>
         <li><i>3</i><div><b>Prove it</b> <span>— ${d.receipt}.</span></div></li>
-        <li><i>4</i><div><b>Return</b> <span>— <a href="${P}docs/THURSDAY.html">${fmt(thu)}, 09:00</a>: show it to one person and say your rule. A host marks it.</span></div></li>
+        <li><i>4</i><div><b>Return</b> <span>— <a href="${P}docs/THURSDAY.html">${fmt(thu)}, 09:00 Pacific</a>: show it to one person and say your rule. A host marks it.</span></div></li>
       </ol>
       <a class="cta" href="${wsHref}">${d.level==='start'?'Run the ten-minute Gate Check →':'Open the level '+d.level+' worksheet → '+d.time}</a>
       <p class="wsay">“${d.wren}”</p>
@@ -249,21 +257,21 @@
       <label>How do you like to write a rule?<select id="c-path"><option>in plain words</option><option>as code</option><option>show me both</option></select></label>
       <label>Which lens is yours?<select id="c-lens"><option>engineer</option><option>compliance</option><option>auditor</option><option>regulator</option><option>none yet</option></select></label>
       <label>Who will you show it to?<input id="c-who" placeholder="a colleague · the cohort · I don't know yet"></label>
-      <div class="kv"><span>Thursday</span><b>${fmt(thu)}, 09:00</b></div>
+      <div class="kv"><span>Thursday</span><b>${fmt(thu)}, 09:00 Pacific</b></div>
       <div class="row"><button class="primary" id="c-copy" type="button">Copy my card</button><a href="${wsHref}"><button type="button">Open the worksheet</button></a></div>
       <p class="note" id="c-note">Nothing is stored. Your card lives in your clipboard and on your Gate Card if you choose to share it.</p>
     </div>`;
     document.getElementById('c-copy').addEventListener('click',()=>{
       const path=document.getElementById('c-path').value, lens=document.getElementById('c-lens').value, who=document.getElementById('c-who').value||"I don't know yet — pair me";
       const notMine={engineer:'regulator',compliance:'engineer',auditor:'engineer',regulator:'engineer','none yet':'regulator'}[lens];
-      const txt=`WREN CARD · ${d.level==='start'?'start':'level '+d.level+' '+d.name} · path: ${path} · lens: ${lens} (not your own: ${notMine}) · Thursday ${fmt(thu)} 09:00 · show it to: ${who}\nWorksheet: ${wsHref}\nWren: ${d.wren}`;
+      const txt=`WREN CARD · ${d.level==='start'?'start':'level '+d.level+' '+d.name} · path: ${path} · lens: ${lens} (not your own: ${notMine}) · Thursday ${fmt(thu)} 09:00 Pacific · show it to: ${who}\nWorksheet: ${wsHref}\nWren: ${d.wren}`;
       const done=()=>{document.getElementById('c-note').textContent='Copied. Paste it anywhere you keep things; bring it Thursday.';};
       if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done,()=>{prompt('Your card:',txt);});} else {prompt('Your card:',txt);}
     });
     hour.classList.add('on'); if(!hour.dataset.first){hour.dataset.first='1';} hour.scrollIntoView({behavior:'smooth',block:'nearest'});
   }
   doors.addEventListener('click',e=>{const b=e.target.closest('.door'); if(!b) return; doors.querySelectorAll('.door').forEach(x=>x.setAttribute('aria-pressed','false')); b.setAttribute('aria-pressed','true'); render(DOORS.find(d=>d.id===b.dataset.id)); if(history.replaceState) history.replaceState(null,'','#'+b.dataset.id);});
-  const h=location.hash.replace('#',''); const pre=DOORS.find(d=>d.id===h); if(pre){doors.querySelector(`[data-id="${h}"]`).setAttribute('aria-pressed','true'); render(pre);}
+  const h=location.hash.replace('#',''); const pre=DOORS.find(d=>d.id===h); if(pre){document.body.classList.add('focused'); doors.querySelector(`[data-id="${h}"]`).setAttribute('aria-pressed','true'); render(pre); window.scrollTo(0,0);}
 })();
 </script>
 </body>

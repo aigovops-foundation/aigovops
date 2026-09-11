@@ -3,6 +3,12 @@
 *Adopted 11 September 2026 (advice item 6). The mark ritual works before the ledger exists; when
 `practice.mark` receipts land (Library #88), the line below becomes the receipt's human-readable form.*
 
+## Next Thursday
+
+**Thursday 17 September 2026 · 09:00 Pacific (16:00 UTC)** · Ken hosts · join from the
+[community events page](https://community.aigovops-foundation.com/events.html) — the link is posted there the
+morning of. Bring a receipt, or come to watch one. *(A host updates this line each week.)*
+
 ## Run-of-show (60 minutes, Ken hosts until a 400 does)
 
 | Minute | What happens | Who |

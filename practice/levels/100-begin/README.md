@@ -20,7 +20,7 @@ All five parts, once each:
 | **Decide** | Propose one action — the default scenario is a grant-drafting agent trying to send an email — and watch the gate answer: allow, constrain, hold, or deny | Beacon, in the browser |
 | **Prove** | Download `bundle-<hash>.zip`. Inside is the signed receipt and `VERIFY.md`. It contains no payload — only hashes | Beacon, in the browser |
 | **Read** | Click your lens — engineer, compliance, auditor, regulator — and read the same receipt four ways | Lantern, rendered in the page |
-| **Return** | Your bundle hash goes on your Gate Card. The page's last line: *Bring it Thursday 09:00 — the first five minutes are for receipts.* | the Community |
+| **Return** | Your bundle hash goes on your Gate Card. The page's last line: *Bring it Thursday 09:00 Pacific — the first five minutes are for receipts.* | the Community |
 
 ## Take-home
 

@@ -80,11 +80,12 @@ real decision receipt. Today the decision is yours on paper; the receipt in step
 
 ### 5 · Prove — get a real signed receipt (10 min) — live
 
-Open Beacon's home page: **aigovops-foundation.github.io/aigovops-beacon/**. It runs entirely in your
-browser: it generates an Ed25519 key, discovers a sample inventory, signs each receipt with canonical
-JCS, and assembles a downloadable evidence bundle. Nothing is sent anywhere.
+Open **[Beacon in worksheet mode](https://aigovops-foundation.github.io/aigovops-beacon/?worksheet=100)**. One
+button: it generates an Ed25519 key in your browser, signs each receipt with canonical JCS, assembles a
+downloadable evidence bundle, and shows the three values below on screen with a copy button. Nothing is
+sent anywhere. (The bundle's `VERIFY.md` carries the same values.)
 
-Download the bundle. Open it. Find `VERIFY.md` and the receipts file. Copy:
+Copy:
 
 - Key fingerprint: __________________________
 - Bundle hash: __________________________
@@ -104,7 +105,7 @@ Answer: ______________________________________________________________
 ### 7 · Return (5 min) — live
 
 Put the bundle hash on your Gate Card (run the ten-minute Gate Check on the community site if you have
-not). Then: **bring it Thursday 09:00** — the first five minutes are for receipts. Show it to one person
+not). Then: **bring it Thursday 09:00 Pacific** — the first five minutes are for receipts. Show it to one person
 and say the rule you wrote.
 
 That is level 100. A host marks it. A bundle nobody has seen is not a 100 yet.
@@ -117,7 +118,7 @@ That is level 100. A host marks it. A bundle nobody has seen is not a 100 yet.
 | have a phone only | The public cases page and Beacon's demo both run on a phone. The bundle downloads to your phone; `VERIFY.md` opens in any text viewer. |
 | read Spanish | [Esta hoja en español](../../docs/es/levels/100-begin/WORKSHEET.md) · [el manifiesto](../../docs/es/MANIFESTO.md). Say so on the Wren Card and a Spanish-speaking host pairs with you. |
 | have ten minutes, not 45 | Do steps 1, 3 (one sentence, plain words) and 5. That is a receipt. Steps 2, 4, 6 and 7 fit on Thursday. |
-| cannot do Thursdays | Post the bundle hash in the cohort thread with your one sentence. A host marks asynchronously; ask Wren for the next second-hour Thursday (proposed for people who cannot make 09:00). |
+| cannot do Thursdays | Post the bundle hash in the cohort thread with your one sentence. A host marks asynchronously; ask Wren for the next second-hour Thursday (proposed for people who cannot make 09:00 Pacific). |
 | don't know what a tier is | Hover the tier in the worksheet on Pages, or ask Wren: one sentence each. C2 is "a promise to a person". |
 
 ---
