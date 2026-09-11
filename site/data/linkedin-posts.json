@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-11T07:07:03Z",
+  "updated": "2026-09-11T19:09:09Z",
   "bob": [
+    {
+      "title": "AI governance fails when “we use AI” is the whole record. PROBLEM One AI use case needs its own living processing register—not a c...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-fails-when-we-use-ai-is-the-activity-7504162906645770240-MfuS",
+      "date": "Fri, 11 Sep 2026 13:04:18 GMT",
+      "summary": "AI governance fails when “we use AI” is the whole record. PROBLEM One AI use case needs its own living processing register—not a consent-revocation log, legal hold, dataset-lineage file, or localization plan. SOLUTIONS Record purpose, lawful basis, data categories, sources, recip",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Not every AI change deserves the same review: but every material change deserves a reasoned decision. Score impact across model be...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-changemanagement-activity-7504162827751063552-kqYb",
+      "date": "Fri, 11 Sep 2026 13:03:59 GMT",
+      "summary": "Not every AI change deserves the same review: but every material change deserves a reasoned decision. Score impact across model behavior, data, users, jurisdiction, autonomy, and reversibility. Route the score to the right approver, testing depth, monitoring period, and communica",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "ENGLISH PROBLEM A legal requirement is not a control. “We comply” is meaningless without ownership, evidence, and review. SOLUTION...",
       "link": "https://www.linkedin.com/posts/bobrapp_english-problem-a-legal-requirement-is-not-activity-7503936106476900352-9xeO",
@@ -62,22 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-responsibleai-activity-7503437817746903041-ru92",
       "date": "Wed, 09 Sep 2026 13:03:03 GMT",
       "summary": "Stale data can make a compliant AI system produce unsafe decisions. Treat freshness as an executable control: • Define maximum age by use case. • Validate timestamps at inference. • Quarantine expired inputs. • Alert the named owner. • Preserve immutable evidence of every excepti",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI disclosure is a governance decision—not a content label. Problem A final output cannot explain why notice was given—or withheld...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-disclosure-is-a-governance-decisionnot-activity-7503211150369693696-x2vS",
-      "date": "Tue, 08 Sep 2026 22:02:21 GMT",
-      "summary": "AI disclosure is a governance decision—not a content label. Problem A final output cannot explain why notice was given—or withheld. Without the reasoning, the decision is hard to defend. Solutions Record: material AI involvement; decision owner; rule; audience impact; notice; exc",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Human approval is not a checkbox. If an agent acts before review, lacks context, ignores rejection, or resumes after timeout, the...",
-      "link": "https://www.linkedin.com/posts/bobrapp_human-approval-is-not-a-checkbox-if-an-activity-7503211118748848128-Thhw",
-      "date": "Tue, 08 Sep 2026 22:02:14 GMT",
-      "summary": "Human approval is not a checkbox. If an agent acts before review, lacks context, ignores rejection, or resumes after timeout, the human is a witness—not a control. 问题 | Problem 不能及时停止行动的审批，不是控制。 / Approval that cannot stop action in time is not control. 解决方案 | Solutions Approve b",
       "image": null,
       "author": "Bob Rapp"
     }
