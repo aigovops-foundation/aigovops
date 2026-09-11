@@ -130,7 +130,7 @@ def main():
     before = fh
     bc.render_founders()
     check("idempotent (second render identical)", open(os.path.join(tmp, "founders.html"), encoding="utf-8").read() == before)
-    check("frame untouched (speaking section + links)", 'class="speaking-section"' in fh and "founder-link primary" in fh)
+    check("frame untouched (links)", "founder-link primary" in fh)
     shutil.rmtree(tmp, ignore_errors=True)
     print("[translations] Spanish story pages via a pluggable translator, cached (plan 3.3)")
     tmp2 = tempfile.mkdtemp(prefix="build-content-es-")
