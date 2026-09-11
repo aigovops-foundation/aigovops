@@ -1,7 +1,8 @@
-# Level 100 — the one rule. A three-line subset of the Umbrella policy schema (PRD v1 §8).
-# The Gate Check page starts with this filled in; change any line and watch the decision change.
+# Level 100 — the one rule, as code. Three lines of the Umbrella policy schema (PRD v1 §8).
+# Plain-words form (FailFest VH-001): "The company stands behind every statement its AI makes to a
+# customer and verifies policy answers against the source of truth."
 policy: begin-v1
 controls:
-  - action: email.send
-    tier: C3
-    decision: hold
+  - action: customer.reply
+    tier: C2
+    decision: constrain      # allowed only with a verified policy source attached

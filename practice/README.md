@@ -1,13 +1,29 @@
-# Open-Source-Unified-Sept-2026
+# AiGovOps Practice — Fall 2026 Release
 
-**One practice, four levels, four gates, three tools, one community — and the marks are the credential.**
-AiGovOps Foundation · Programme: Labor-Day-Big-Redesign · Started 11 September 2026 · Status: **decide** · PRD v3
+**One practice, four levels, four gates, three engines, one community — one hour of value at every level,
+whatever your skills. The marks are the credential, and the credential is a receipt.**
+AiGovOps Foundation · Release train `fall-2026` · `practice` **v1.0.0-rc.1** · 11 September 2026 · Apache-2.0
 
-This is the working project for unifying the Foundation's **whole estate** — the site, the Library, Beacon,
-Umbrella, Lantern, Omni, NCW Camp, the Vendor RFI, the Matchmaker, the Letter — around the **member**, at
-whatever level of policy skill or technical skill they arrive with. Nothing here is live and no code in
-any repo has changed. When approved, the public name proposed for this repo is
-`aigovops-foundation/practice` (see [Decision 7](docs/DECISIONS.md)).
+**Start here:** read the [one-page manifesto](MANIFESTO.md), then open the worksheet for your level.
+Each takes an hour or less, runs on a real FailFest case, and ends with something you can show on Thursday.
+
+| Level | Worksheet | Checklist | Time | Install |
+|---|---|---|---|---|
+| 100 Begin | [WORKSHEET](levels/100-begin/WORKSHEET.md) | [CHECKLIST](levels/100-begin/CHECKLIST.md) | 45 min | none |
+| 200 Retrofit | [WORKSHEET](levels/200-retrofit/WORKSHEET.md) | [CHECKLIST](levels/200-retrofit/CHECKLIST.md) | 60 min | one `pip install` |
+| 300 Hold | [WORKSHEET](levels/300-hold/WORKSHEET.md) | [CHECKLIST](levels/300-hold/CHECKLIST.md) | 60 min today; a week of traffic in Fall | none today |
+| 400 Prove | [WORKSHEET](levels/400-prove/WORKSHEET.md) | [CHECKLIST](levels/400-prove/CHECKLIST.md) | 60 min + the Thursday you host | none |
+
+**The hero of this tale is the standard.** Everything here conforms to [OVERT](https://overt.is/), the open
+standard for runtime trust written and stewarded by [Glacis Technologies](https://www.glacis.io/), under
+its royalty-free covenant. The Foundation does not issue standards; it implements this one, teaches it,
+and builds the community that carries it to everyone the market will not reach.
+
+This repo unifies the Foundation's **whole estate** — the site, the Library, Beacon, Umbrella, Lantern,
+`aigovops` (Open Source v4), Omni, NCW Camp, the Vendor RFI, the Matchmaker, the Letter — around the
+**member**. The GitHub repos are the source of truth; the website is the door. Engine code has not
+changed in this release; see [`RELEASE.md`](RELEASE.md) for what is live today and what the Fall
+release lands, and for the correct version of every repo.
 
 ## The idea in four sentences
 
@@ -45,6 +61,9 @@ evidence — the two sentences never merge.
 
 ## Documents
 
+- [`MANIFESTO.md`](MANIFESTO.md) — the one-page checklist manifesto (printable: [`docs/MANIFESTO.pdf`](docs/MANIFESTO.pdf)).
+- [`RELEASE.md`](RELEASE.md) — the Fall 2026 release train: versions, live vs fall, the release checklist. [`CHANGELOG.md`](CHANGELOG.md) · [`VERSION`](VERSION).
+- [`catalog/`](catalog/) — practitioners' policies, by PR.
 - [`docs/PRD-OPEN-SOURCE-UNIFIED.md`](docs/PRD-OPEN-SOURCE-UNIFIED.md) — **PRD v3**, whole-estate
   edition. The four gates, the ladder built on corpus cases, the credential (D10), Glacis alignment (D11),
   the ninety days by level.
@@ -59,9 +78,8 @@ evidence — the two sentences never merge.
   thinking, preserved verbatim. Its architecture (the rule, tiers C0–C4, the assurance ladder, the OVERT
   posture, policy schema, receipt, requirements, adversarial suite) is adopted by v2 and v3 unchanged.
 - [`docs/DECISIONS.md`](docs/DECISIONS.md) — the eleven decisions for Bob and Ken, in review order.
-- [`levels/`](levels/) — one kit per level: who it is for, the tools, the exercise, the take-home, the return.
-- [`scripts/humans.sh`](scripts/humans.sh) — Bob's single paste script: places this project locally and,
-  after one y/N, creates the org repo.
+- [`levels/`](levels/) — one kit per level: README (who, tools, return), WORKSHEET (the hour), CHECKLIST (one page), `policy.yaml`.
+- [`scripts/humans.sh`](scripts/humans.sh) — the founders' single paste script: local commit, org repo, release tag.
 
 ## The three engines (unchanged names, unchanged taglines)
 
