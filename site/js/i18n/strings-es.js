@@ -51,7 +51,7 @@ window.I18N = {
   footer: { marks: 'Apache-2.0 · Conforme a OVERT · NIST AI RMF · Ley de IA de la UE · ISO/IEC 42001 · Fundación 501(c)(3)' },
   path: { title: 'Un camino, tres pasos', more: 'Todo lo demás está una página más allá:' },
   resources: { eyebrow: 'El tercer nivel', h1: 'Recursos.', sub: 'Todo lo del sitio que no es el camino — guardado, enlazado una vez, nunca en medio.' },
-  newsletter: { title: 'Mantente al frente de la gobernanza de IA.', sub: 'Perspectivas sobre automatización de cumplimiento, cambios regulatorios y noticias de la comunidad — semanalmente en Substack.', cta: 'O lee el archivo en Substack →' },
+  newsletter: { title: 'La Carta del martes.', sub: 'Una historia de la práctica, las marcas de la semana por nivel, la cuenta atrás hasta el 2 de diciembre de 2027. Ningún otro envío, nunca.', fine: 'Entregada por Substack. Date de baja cuando quieras.', cta: 'O lee el archivo en Substack →' },
   chatbot: { welcome: '$ aigovops --help', ready: 'Listo. Puedo ayudarte con marcos de gobernanza, programar una llamada, nuestro boletín, herramientas (Beacon, Umbrella), o lo último de Ken y Bob. ¿En qué estás trabajando?' },
   chips: { frameworks: '⚖️ ¿Qué marcos aplican?', meeting: '📆 Programar llamada', support: '💚 Apoyar / Donar', newsletter: '📰 Boletín', event: '📅 Próximo evento', ken: "💡 Posts de Ken", bob: "💡 Posts de Bob", opensource: '💻 Código abierto', beacon: '🔦 Beacon', umbrella: '☂️ Umbrella' },
   footer: { tagline: 'Gobernanza versionada como código. Probada antes del despliegue.', global: 'Seattle, WA · Comunidad Global' },

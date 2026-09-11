@@ -51,7 +51,7 @@ window.I18N = {
   footer: { marks: 'Apache-2.0 · Conforms to OVERT · NIST AI RMF · EU AI Act · ISO/IEC 42001 · 501(c)(3) Foundation' },
   path: { title: 'One path, three steps', more: 'Everything else is one page further:' },
   resources: { eyebrow: 'The third level', h1: 'Resources.', sub: 'Everything on the site that is not the one path — kept, linked once, never in the way.' },
-  newsletter: { title: 'Stay ahead of AI governance.', sub: 'Insights on compliance automation, regulatory shifts, and community news — weekly on Substack.', cta: 'Or read the archive on Substack →' },
+  newsletter: { title: 'The Tuesday Letter.', sub: 'One story from the practice, the week’s marks by level, the countdown to 2 December 2027. No other sends, ever.', fine: 'Delivered by Substack. Unsubscribe any time.', cta: 'Or read the archive on Substack →' },
   chatbot: { welcome: '$ aigovops --help', ready: 'Ready. I can help with governance frameworks, scheduling a call, our newsletter, tools (Beacon, Umbrella), or the latest from Ken & Bob. What are you working on?' },
   chips: { frameworks: '⚖️ Which frameworks apply?', meeting: '📆 Schedule a Call', support: '💚 Support / Donate', newsletter: '📰 Newsletter', event: '📅 Next Event', ken: "💡 Ken's posts", bob: "💡 Bob's posts", opensource: '💻 Open Source', beacon: '🔦 Beacon', umbrella: '☂️ Umbrella' },
   footer: { tagline: 'Governance Versioned Like Code. Tested Before Deployment.', global: 'Seattle, WA · Global Community' },
