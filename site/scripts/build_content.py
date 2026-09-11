@@ -37,7 +37,7 @@ TEMPLATE = os.path.join(ROOT, "blog", "what-is-aigovops.html")
 BLOG_INDEX = os.path.join(ROOT, "blog.html")
 FEED = os.path.join(ROOT, "feed.xml")
 SITE = "https://www.aigovops-foundation.com"
-DEFAULT_IMAGE = f"{SITE}/images/logo.png"
+DEFAULT_IMAGE = f"{SITE}/images/story-default.png"
 START, END = "<!-- content:start -->", "<!-- content:end -->"
 # ONE PATH (2026-09-02): every story also becomes a newsletter section and a LinkedIn draft, written
 # to content/drafts/<slug>.newsletter.md and <slug>.linkedin.md. Both end on the same door — the
