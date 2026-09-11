@@ -170,7 +170,7 @@ for p in sorted(glob.glob("*.html")):
         continue
     labels = [re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", a)).strip()
               for a in re.findall(r"<a\b[^>]*>(.*?)</a>", m.group(1), re.S)]
-    missing = [w for w in ("Library", "Open source", "Community")
+    missing = [w for w in ("Library", "Open source", "Join")
                if w not in labels]
     if missing:
         print(f"three-doors nav: {p}|missing from main-nav: {', '.join(missing)}")
