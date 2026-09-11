@@ -1,27 +1,32 @@
 # Decisions for Bob and Ken
 
-Review order. Decisions 1–5 are from PRD v1 (10 Sept) and are taken first because v2 depends on them.
-Decisions 6–9 are v2's. Each is recorded as a `design mark` step once taken. Nothing is live until then.
+Review order. Decisions 1–5 are from PRD v1 (10 Sept) and are taken first because everything after
+depends on them. Decisions 6–11 are v3's. Each is recorded as a `design mark` step once taken. Nothing is
+live until then.
 
 | # | Decision | Recommendation | Where argued |
 |---|---|---|---|
 | 1 | Project boundaries: A, B or C | **C** — Umbrella declares · Beacon decides-and-proves · Lantern reads | v1 §4 |
-| 2 | One assurance ladder for systems | Adopt OVERT's four levels; own the gate coverage number; drop A0–A5 | v1 §6 |
-| 3 | Posture toward OVERT and Glacis | Compatible, independent, not dependent; publish conformance first, talk after | v1 §7 |
-| 4 | The three reference implementations | Grant assistant · Matchmaker (retrofit) · university coding agent (GitHub Action) | v1 §10 |
-| 5 | The ninety days and the exclusion list | Approved as amended by Decision 9 | v1 §14 → v2 §8 |
-| 6 | **The practitioner ladder** — four levels, three rules | Adopt 100 Begin · 200 Retrofit · 300 Hold · 400 Prove; every level is the whole loop; levels are marked by hosts; no level is ever a system claim | v2 §4 |
-| 7 | **One front door** | New repo `aigovops-foundation/practice` holding the four kits; no meta-CLI; `reference/` folds into the kits; the 100 bundle must verify with the 400 tool | v2 §5 |
-| 8 | **The return** — the practitioner ledger | Opt-in, hash-only, revocable; `beacon share` is the only new command; host marks are the only way a level changes | v2 §6 |
-| 9 | **The ninety days by level** | P0 ships level 100 whole; P1 ships 200 and 300; P2 ships 400. Exclusions extended: no badge, credential or exam | v2 §8 |
+| 2 | One assurance ladder for systems | Adopt OVERT's AALs verbatim; own the gate coverage number; drop A0–A5 | v1 §6 → v3 §4 |
+| 3 | Posture toward OVERT and Glacis | Compatible, independent, not dependent; publish first, talk after | v1 §7 → v3 §8 |
+| 4 | The three reference implementations | Grant assistant · Matchmaker (retrofit) · university coding agent (GitHub Action) — folded into the 100, 200 and 400 kits | v1 §10, v2 §5 |
+| 5 | The ninety days and the exclusion list | Approved as amended by Decision 9 | v1 §14 → v3 §11 |
+| 6 | **The practitioner ladder, revised** | Four levels; each owns one of the four gates (pre-pend · policy · operate · audit); each built on named corpus cases from the hardest domains; each maps to an OVERT AAL pattern under the two-sentence rule (person vs system) | v3 §4 |
+| 7 | **One front door** | `aigovops-foundation/practice`; no meta-CLI; two paths (plain words, code) to byte-identical receipts | v2 §5, v3 §5 |
+| 8 | **The return** | `beacon share`; opt-in hash-only ledger; host marks are the only level changes | v2 §6, v3 §6 |
+| 9 | **The ninety days by level, revised** | P0 ships 100 whole (+ profile ask day 1, criteria for 100/200 to the Review Circle by day 20); P1 ships 200 + 300 (+ credential v1 minted); P2 ships 400 (+ joint story). Exclusion list rewritten: people-credential in; system certification, exam selling, IAP operation, standards issuing out | v3 §11 |
+| 10 | **The credential** | AiGovOps Practitioner — policy-as-code readiness, 100–400. Performance-based on corpus cases, host-marked, ledger-minted as a receipt, free to attempt, never sold. Reverses v2's "no badge"; keeps ADR-0001's line by redrawing it: community credentials people, the standard's process certifies systems. Readiness promise dated to 2 Dec 2027 | v3 §7 |
+| 11 | **Glacis and Joe** | Lock in. Five asks, cheapest first: sign the profile; read the criteria in the Review Circle; the 100 page as the v1 launch artifact; a joint story on the first outside verification; the IAP question, later. The note goes in Ken's voice on day 1 with Bob's yes | v3 §8, GLACIS-ALIGNMENT.md |
 
-## Open questions carried from v1
+## Open questions carried
 
-- Ken: approach Glacis about a liaison before or after publishing conformance? Recommendation: after.
-- Ken: the copy words (site #103) and NCW (site #108) — both touch the level 100 page copy.
+- Ken: the copy words (site #103) and NCW (site #108) — both touch the level 100 page.
+- Ken: send the Glacis note? (needs Bob's yes; draft in GLACIS-ALIGNMENT.md §7).
+- Bob: is Glean-Mastery Foundation-scoped? If yes its daily-lesson format is the kit template; if not, only the idea is reused.
+- Both: the readiness promise's wording — *"a 300 can take an Annex III-class system to the operate-gate pattern before 2 December 2027"* — is this a sentence you will say on stage?
 
 ## Who does what by Friday, if approved 16 September
 
-- **Ken:** the Thursday five-minute receipt slot (copy and the run-of-show); the host rota copy; Appendix A one-pager read for voice.
-- **Bob:** T10 in the Library (day 1, blocks everything); create `aigovops-foundation/practice` from this project (`scripts/humans.sh`); the level 100 page as one site PR; the Appendix B copy sweep as one PR after Decision 6.
-- **Design agent:** `design mark` for each decision; republish the Redesign Plan artifact; open the P0 issues in Omni and the site under milestone "Redesign P0".
+- **Ken:** the Glacis note; the Thursday five-minute receipt slot and host-rota copy; Appendix A read for voice; which four cases lead the site copy.
+- **Bob:** T10 in the Library (day 1); create `aigovops-foundation/practice` from this project (`scripts/humans.sh`); the level 100 page as one site PR; the Beacon README AAL/IAP correction; the copy sweep after D6/D10.
+- **Design agent:** `design mark` for each decision; republish the Redesign Plan artifact; open the P0 issues in Omni and the site under "Redesign P0"; the ledger schema for `practice.*` receipts.

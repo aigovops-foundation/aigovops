@@ -1,7 +1,9 @@
 # Level 400 — Prove it to a stranger
 
+> **v3:** owns the **audit gate** · built on **VH-013 Robodebt**, **VH-003 Toeslagenaffaire** and **VH-088 Post Office Horizon** · maps to the **AAL-4 Cryptographic Attestation** pattern · mark by two 400s or a founder. Full activity: [`docs/MEMBER-ACTIVITIES.md`](../../docs/MEMBER-ACTIVITIES.md#level-400--prove-it-to-a-stranger--owns-the-audit-gate--ongoing)
+
 **Ongoing. Verify offline, claim honestly, contribute upstream, host.**
-Status: **decide** — this kit describes what ships in P2 (days 61–90) if PRD v2 is approved.
+Status: **decide** — this kit describes what ships in P2 (days 61–90) if PRD v3 is approved.
 
 ## Who arrives here
 
@@ -39,5 +41,5 @@ as approver — the same hold-and-release shape as a C3, applied to people). The
 
 ## What this level is not
 
-Not a badge, not a credential, not an exam, not a certification business. Levels are marks made by hosts
-on Thursday (PRD v2 §8, exclusion list).
+Not a system certification, not an exam, not sold. It *is* a practitioner credential: marks made by hosts
+on Thursday, minted as receipts on the ledger, free to attempt (PRD v3 D10 and the §11 exclusion list).
