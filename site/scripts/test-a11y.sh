@@ -111,15 +111,10 @@ check_html   "$REPO/css/style.css" "Updated muted color present"              'm
 check_absent "$REPO/css/style.css" "Old low-contrast hero sub absent (#c4c0e0)" '#c4c0e0'
 
 echo ""
-echo "  [brand upgrade — toolkit & badges]"
-check_html "$REPO/index.html" "Toolkit section present"             'toolkit-section'
-# M14 dead-simple: the porch toolkit band is one line + link; the trio lives on Stay at Yes
-check_html "$REPO/index.html" "Toolkit band links to the open-source trio" 'href="open-source.html#toolkit"'
-check_html "$REPO/index.html" "Beacon toolkit card (Scanner)"      'Scanner.*Signer\|aigovops-beacon'
-check_html "$REPO/index.html" "Lantern named in the toolkit line"  'Umbrella compiles\|Lantern reads'
-check_html "$REPO/index.html" "Lantern name present"               'Lantern'
-check_html "$REPO/index.html" "Toolkit links accessible"           'toolkit-link'
-check_html "$REPO/index.html" "Compliance badge strip present"     'badge-strip'
+echo "  [brand — the licence and the standard, once]"
+check_html "$REPO/index.html" "Footer marks line present"           'footer-marks'
+check_html "$REPO/index.html" "OVERT named in the footer"            'Conforms to OVERT'
+check_html "$REPO/index.html" "Footer marks line present"           'footer-marks'
 check_html "$REPO/index.html" "Apache-2.0 badge"                   'Apache-2.0'
 check_html "$REPO/index.html" "OVERT badge"                        'OVERT'
 check_html "$REPO/index.html" "NIST AI RMF badge"                  'NIST AI RMF'

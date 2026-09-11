@@ -88,3 +88,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 @media (prefers-reduced-motion: reduce) {
   .hero .action-card, .cafe-door, .pillar-card, .way, .tool, .btn { transition: none !important; transform: none !important; }
 }
+
+/* the licence and the standard, said once */
+.site-footer .footer-marks { font-family: var(--wc-mono); font-size: var(--wc-label-floor); letter-spacing: .08em; text-transform: uppercase; color: var(--garden-on-dark-dim); margin: 6px 0 10px; }

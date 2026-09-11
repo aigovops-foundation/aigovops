@@ -77,8 +77,6 @@
     .ten-note { display: block; margin-top: 14px; font-size: .92rem; color: var(--garden-ink-soft, #55524a); }
     @media (max-width: 600px) { .cafe-head { flex-direction: column; } }
     /* the toolkit band, reduced to one line (the trio lives on Stay at Yes) */
-    .toolkit-section .toolkit-line { color: rgba(255,255,255,0.75); font-size: .95rem; max-width: 720px; margin: 0 auto; text-align: center; line-height: 1.7; }
-    .toolkit-section .toolkit-line .toolkit-link { white-space: nowrap; }
   </style>
   <script src="js/i18n/i18n.js"></script>
   <!-- Plausible Analytics — privacy-first, GDPR-compliant, no cookie banner -->
@@ -257,16 +255,16 @@
     <div class="cafe-head">
       <img src="images/wren/wren-112.jpg" alt="Wren, the practitioner at the table" width="56" height="56" class="cafe-wren" />
       <div>
-        <h2 class="section-title" id="cafe-title" style="text-align:left;margin-bottom:4px">What brought you in?</h2>
-        <p class="cafe-lead">Wren keeps the table by the door. Say what happened — or what you are afraid will happen — and leave in an hour with a rule in your own words, a signed receipt, and a Thursday. Every door below is a real case from the hundred verified AI harms.</p>
+        <h2 class="section-title" id="cafe-title" style="text-align:left;margin-bottom:4px" data-i18n="cafe.title">What brought you in?</h2>
+        <p class="cafe-lead" data-i18n="cafe.lead">Wren keeps the table by the door. Say what happened — or what you are afraid will happen — and leave in an hour with a rule in your own words, a signed receipt, and a Thursday. Every door below is a real case from the hundred verified AI harms.</p>
       </div>
     </div>
     <div class="cafe-doors">
-      <a class="cafe-door" href="https://aigovops-foundation.github.io/practice/#promise" onclick="if(window.plausible)plausible('Cafe: 100')"><span class="cafe-lv">Level 100 · Begin · 45 min</span><q>An AI told someone something it shouldn't have — and now we're on the hook.</q><small>Air Canada, 2022. A rule, one decision, a real signed receipt in your browser.</small></a>
-      <a class="cafe-door" href="https://aigovops-foundation.github.io/practice/#ship" onclick="if(window.plausible)plausible('Cafe: 200')"><span class="cafe-lv">Level 200 · Retrofit · 60 min</span><q>I have a bot or an agent already, and I'm not sure it's safe to ship.</q><small>The $1 Chevy; Knight Capital. Your rule in CI, refusing the merge on weakening.</small></a>
-      <a class="cafe-door" href="https://aigovops-foundation.github.io/practice/#running" onclick="if(window.plausible)plausible('Cafe: 300')"><span class="cafe-lv">Level 300 · Hold · 60 min</span><q>It's already running, and nobody can say who's watching it or how to stop it.</q><small>Arup; Cigna PXDX; nH Predict. Holds for a named human, and the decay arithmetic.</small></a>
-      <a class="cafe-door" href="https://aigovops-foundation.github.io/practice/#prove" onclick="if(window.plausible)plausible('Cafe: 400')"><span class="cafe-lv">Level 400 · Prove it · 60 min + a Thursday</span><q>Someone needs proof of what the AI actually did — a regulator, a court, a board.</q><small>Robodebt; Toeslagenaffaire; Horizon. Verify evidence you did not make, offline.</small></a>
-      <a class="cafe-door cafe-door-start" href="#ten" onclick="if(window.plausible)plausible('Cafe: not sure')"><span class="cafe-lv">Start here · 10 min</span><q>I'm not sure what my problem is — I just know AI is in the building.</q><small>Start with the ten minutes below. No account; you keep the card.</small></a>
+      <a class="cafe-door" href="https://aigovops-foundation.github.io/practice/#promise" onclick="if(window.plausible)plausible('Cafe: 100')"><span class="cafe-lv" data-i18n="cafe.l100">Level 100 · Begin · 45 min</span><q data-i18n="cafe.q100">An AI told someone something it shouldn't have — and now we're on the hook.</q><small data-i18n="cafe.s100">Air Canada, 2022. A rule, one decision, a real signed receipt in your browser.</small></a>
+      <a class="cafe-door" href="https://aigovops-foundation.github.io/practice/#ship" onclick="if(window.plausible)plausible('Cafe: 200')"><span class="cafe-lv" data-i18n="cafe.l200">Level 200 · Retrofit · 60 min</span><q data-i18n="cafe.q200">I have a bot or an agent already, and I'm not sure it's safe to ship.</q><small data-i18n="cafe.s200">The $1 Chevy; Knight Capital. Your rule in CI, refusing the merge on weakening.</small></a>
+      <a class="cafe-door" href="https://aigovops-foundation.github.io/practice/#running" onclick="if(window.plausible)plausible('Cafe: 300')"><span class="cafe-lv" data-i18n="cafe.l300">Level 300 · Hold · 60 min</span><q data-i18n="cafe.q300">It's already running, and nobody can say who's watching it or how to stop it.</q><small data-i18n="cafe.s300">Arup; Cigna PXDX; nH Predict. Holds for a named human, and the decay arithmetic.</small></a>
+      <a class="cafe-door" href="https://aigovops-foundation.github.io/practice/#prove" onclick="if(window.plausible)plausible('Cafe: 400')"><span class="cafe-lv" data-i18n="cafe.l400">Level 400 · Prove it · 60 min + a Thursday</span><q data-i18n="cafe.q400">Someone needs proof of what the AI actually did — a regulator, a court, a board.</q><small data-i18n="cafe.s400">Robodebt; Toeslagenaffaire; Horizon. Verify evidence you did not make, offline.</small></a>
+      <a class="cafe-door cafe-door-start" href="#ten" onclick="if(window.plausible)plausible('Cafe: not sure')"><span class="cafe-lv" data-i18n="cafe.lstart">Start here · 10 min</span><q data-i18n="cafe.qstart">I'm not sure what my problem is — I just know AI is in the building.</q><small data-i18n="cafe.sstart">Start with the ten minutes below. No account; you keep the card.</small></a>
     </div>
   </div>
 </section>
@@ -274,11 +272,11 @@
 <!-- TEN MINUTES — the one thing to do first -->
 <section class="section-mid ten-section" id="ten" aria-labelledby="ten-title">
   <div class="container">
-    <h2 class="section-title" id="ten-title">Ten minutes to get started</h2>
+    <h2 class="section-title" id="ten-title" data-i18n="ten.title">Ten minutes to get started</h2>
     <ol class="ten-steps">
-      <li><b>Run the Gate Check.</b> Ten questions about one AI you know. No account, nothing installed.</li>
-      <li><b>Keep the Gate Card.</b> Your verdict and your gaps — never your answers. It is your first receipt.</li>
-      <li><b>Pick the door that stung.</b> One hour on a real case; a rule in your own words; a signed receipt; then Thursday at 09:00, where a host marks it.</li>
+      <li data-i18n-html="ten.s1"><b>Run the Gate Check.</b> Ten questions about one AI you know. No account, nothing installed.</li>
+      <li data-i18n-html="ten.s2"><b>Keep the Gate Card.</b> Your verdict and your gaps — never your answers. It is your first receipt.</li>
+      <li data-i18n-html="ten.s3"><b>Pick the door that stung.</b> One hour on a real case; a rule in your own words; a signed receipt; then Thursday at 09:00, where a host marks it.</li>
     </ol>
     <p class="ten-cta"><a href="https://community.aigovops-foundation.com/gate-check.html?src=home-ten" target="_blank" rel="noopener" class="btn btn-primary" onclick="if(window.plausible)plausible('Home: Ten minutes')">Run the ten-minute Gate Check →</a> <span class="ten-note">Then everything else on this site is one click away: <a href="library.html">the Library</a> to read, <a href="open-source.html">the open source</a> to build, <a href="community.html">the community</a> to return to.</span></p>
   </div>
@@ -341,13 +339,6 @@
   </div>
 </section>
 
-<!-- TOOLKIT — one line; the full trio lives on Stay at Yes (M14 dead-simple) -->
-<section class="toolkit-section">
-  <div class="container">
-    <p class="toolkit-line">The Open-Source Toolkit — <a href="https://aigovops-foundation.github.io/aigovops-beacon/" target="_blank" rel="noopener" class="toolkit-link">Beacon</a> signs the evidence, <a href="https://aigovops-foundation.github.io/umbrella-govops/" target="_blank" rel="noopener" class="toolkit-link">Umbrella</a> compiles it into executable controls, <a href="https://github.com/aigovops-foundation/aigovops-lantern" target="_blank" rel="noopener" class="toolkit-link">Lantern</a> reads it back — Beacon signs, Lantern reads, Umbrella compiles. All Apache-2.0.
-      <a href="open-source.html#toolkit" class="toolkit-link">Explore the open source <span class="toolkit-arrow">→</span></a></p>
-  </div>
-</section>
 
 <!-- NEWSLETTER CTA -->
 <section class="section-dark newsletter-section">
@@ -366,19 +357,6 @@
   </div>
 </section>
 
-<!-- COMPLIANCE BADGE STRIP -->
-<div class="badge-strip">
-  <div class="container badge-strip-inner">
-    <span class="badge-pill"><span class="dot"></span>Apache-2.0</span>
-    <span class="badge-pill"><span class="dot"></span>OVERT</span>
-    <span class="badge-pill"><span class="dot"></span>NIST AI RMF</span>
-    <span class="badge-pill"><span class="dot"></span>EU AI Act</span>
-    <span class="badge-pill"><span class="dot"></span>ISO/IEC 42001</span>
-    <span class="badge-pill"><span class="dot dot-amber"></span>UNESCO-Aligned</span>
-    <span class="badge-pill"><span class="dot dot-amber"></span>WCAG 2.2 AA · Target</span>
-    <span class="badge-pill"><span class="dot"></span>501(c)(3) Foundation</span>
-  </div>
-</div>
 
 <!-- FOOTER -->
 <footer class="site-footer">
@@ -419,6 +397,7 @@
       </a>
       <p>Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes. Prove it in ten minutes.</p>
       <p class="footer-gate"><a href="https://community.aigovops-foundation.com/gate-check.html?src=site-footer" onclick="if(window.plausible)plausible('Gate Check: footer')">Ten minutes, no account — run the Gate Check →</a></p>
+      <p class="footer-marks" data-i18n="footer.marks">Apache-2.0 · Conforms to OVERT · NIST AI RMF · EU AI Act · ISO/IEC 42001 · 501(c)(3) Foundation</p>
       <p>Governance Versioned Like Code. Tested Before Deployment.</p>
       <address>Seattle, WA 98104 · Global Community &bull;
         <a href="mailto:bob.rapp@aigovops.community">bob.rapp@aigovops.community</a> &bull;

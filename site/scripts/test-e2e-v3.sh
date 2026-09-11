@@ -84,9 +84,9 @@ echo "$HOME" | grep -q "main-content"      && check "main-content anchor present
 
 echo ""
 echo "  [Brand upgrade]"
-echo "$HOME" | grep -q "toolkit-section"   && check "Toolkit section present"          "ok" || check "Toolkit section present"           "not found"
-echo "$HOME" | grep -q "badge-strip"       && check "Compliance badge strip present"   "ok" || check "Compliance badge strip present"    "not found"
-echo "$HOME" | grep -q "badge-pill"        && check "Badge pills present"              "ok" || check "Badge pills present"               "not found"
+echo "$HOME" | grep -q "footer-marks"      && check "Footer marks line present"        "ok" || check "Footer marks line present"         "not found"
+echo "$HOME" | grep -q "open-source.html"  && check "Open source in the nav"           "ok" || check "Open source in the nav"            "not found"
+echo "$HOME" | grep -q "library.html"      && check "Library in the nav"               "ok" || check "Library in the nav"                "not found"
 echo "$HOME" | grep -q "OVERT"             && check "OVERT badge"                      "ok" || check "OVERT badge"                       "not found"
 echo "$HOME" | grep -q "frameworks"        && check "Frameworks intent in chatbot"     "ok" || check "Frameworks intent in chatbot"      "not found"
 echo "$HOME" | grep -q "aigovops --help"   && check "CLI chatbot welcome"              "ok" || check "CLI chatbot welcome"               "not found"
