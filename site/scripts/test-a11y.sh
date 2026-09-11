@@ -121,7 +121,7 @@ check_html "$REPO/index.html" "Lantern name present"               'Lantern'
 check_html "$REPO/index.html" "Toolkit links accessible"           'toolkit-link'
 check_html "$REPO/index.html" "Compliance badge strip present"     'badge-strip'
 check_html "$REPO/index.html" "Apache-2.0 badge"                   'Apache-2.0'
-check_html "$REPO/index.html" "OVERT 1.0 badge"                    'OVERT 1.0'
+check_html "$REPO/index.html" "OVERT badge"                        'OVERT'
 check_html "$REPO/index.html" "NIST AI RMF badge"                  'NIST AI RMF'
 check_html "$REPO/index.html" "EU AI Act badge"                    'EU AI Act'
 

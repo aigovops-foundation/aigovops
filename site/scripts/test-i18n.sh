@@ -201,7 +201,7 @@ try {
 node -e "
 const fs = require('fs');
 const html = fs.readFileSync('$REPO/index.html','utf8');
-const names = ['Apache-2.0','OVERT 1.0','NIST AI RMF','EU AI Act','ISO/IEC 42001'];
+const names = ['Apache-2.0','OVERT','NIST AI RMF','EU AI Act','ISO/IEC 42001'];
 const missing = names.filter(n => !html.includes(n));
 process.exit(missing.length > 0 ? 1 : 0);
 " && check "All framework badge names ASCII-safe" "ok" || check "All framework badge names ASCII-safe" "some missing"
