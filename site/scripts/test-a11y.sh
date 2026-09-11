@@ -114,7 +114,7 @@ echo ""
 echo "  [brand upgrade — toolkit & badges]"
 check_html "$REPO/index.html" "Toolkit section present"             'toolkit-section'
 # M14 dead-simple: the porch toolkit band is one line + link; the trio lives on Stay at Yes
-check_html "$REPO/index.html" "Toolkit band links to the Stay at Yes trio" 'href="stay-at-yes.html#toolkit"'
+check_html "$REPO/index.html" "Toolkit band links to the open-source trio" 'href="open-source.html#toolkit"'
 check_html "$REPO/index.html" "Beacon toolkit card (Scanner)"      'Scanner.*Signer\|aigovops-beacon'
 check_html "$REPO/index.html" "Lantern named in the toolkit line"  'Umbrella compiles\|Lantern reads'
 check_html "$REPO/index.html" "Lantern name present"               'Lantern'

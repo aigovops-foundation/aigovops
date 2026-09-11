@@ -188,14 +188,14 @@ error_soft_404 "$SITE/" "There isn't a GitHub Pages site here"
 echo ""
 
 # ── ALPHA — VENDOR RFI INTEGRATION (M13: lives on stay-at-yes.html) ────────
-echo "  [Alpha — Vendor RFI (stay-at-yes.html)]"
-ALPHA=$(body "$SITE/stay-at-yes.html")
+echo "  [Alpha — Vendor RFI (open-source.html)]"
+ALPHA=$(body "$SITE/open-source.html")
 echo "$ALPHA" | grep -q "aigovops-vendor-rfi" \
   && check "alpha page links the Vendor RFI" "ok" \
   || check "alpha page links the Vendor RFI" "link missing"
 echo "$ALPHA" | grep -q "aigovops-vendor-rfi/comparison.html" \
-  && check "stay-at-yes carries the live RFI comparison embed" "ok" \
-  || check "stay-at-yes carries the live RFI comparison embed" "embed missing"
+  && check "open-source carries the live RFI comparison embed" "ok" \
+  || check "open-source carries the live RFI comparison embed" "embed missing"
 RFI="https://aigovops-foundation.github.io/aigovops-vendor-rfi"
 for p in "/" "/training.html" "/comparison.html"; do
   code=$(http_code "$RFI$p")

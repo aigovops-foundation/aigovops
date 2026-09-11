@@ -1,11 +1,11 @@
 window.I18N = {
   lang: 'es',
-  nav: { home: 'Inicio', blog: 'Blog' },
+  nav: { library: 'Biblioteca', opensource: 'Código abierto', home: 'Inicio', blog: 'Blog' },
   hero: {
     eyebrow: 'Fundación AiGovOps · Política como Código',
     h1: 'Despliega IA segura.<br>Nunca IA insegura.',
     movements: '<span class="mv"><b>Llegar al Sí</b> — antes de desplegar</span> <span class="mv-sep" aria-hidden="true">·</span> <span class="mv"><b>Mantener el Sí</b> — mientras funciona</span> <span class="mv-sep" aria-hidden="true">·</span> <span class="mv"><b>Recuperar el Sí</b> — cuando falla</span>',
-    sub: 'Gobernanza como código que hace que la IA sea segura para decir sí — construida en abierto, demostrada en diez minutos. Ven a ver. Ven a unirte.',
+    sub: 'Gobernanza como código para que decir sí a la IA sea seguro — construida en abierto, probada en diez minutos. Siéntate: ¿qué te trajo aquí?',
   },
   community: {
     eyebrow: 'Gratis · Sin tarjeta · Un fundador te da la bienvenida personalmente',

@@ -143,8 +143,8 @@ done
 # must offer the three movement labels + Join (admin.html's reduced console
 # nav is the documented exception, mirroring the ux tier).
 echo ""
-echo "  [M13 three-doors — movement hubs exist; nav carries the three doors + Join]"
-for hub in get-to-yes.html stay-at-yes.html recover-to-yes.html; do
+echo "  [Home + one level — the hubs exist; nav carries Library, Open source + Join]"
+for hub in library.html open-source.html community.html; do
   if [ -f "$REPO/$hub" ] && ! grep -q 'http-equiv="refresh"' "$REPO/$hub"; then
     check "movement hub exists (not a stub): $hub" "ok"
   else
@@ -170,7 +170,7 @@ for p in sorted(glob.glob("*.html")):
         continue
     labels = [re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", a)).strip()
               for a in re.findall(r"<a\b[^>]*>(.*?)</a>", m.group(1), re.S)]
-    missing = [w for w in ("Get to Yes", "Stay at Yes", "Recover to Yes", "Join")
+    missing = [w for w in ("Library", "Open source", "Join")
                if w not in labels]
     if missing:
         print(f"three-doors nav: {p}|missing from main-nav: {', '.join(missing)}")

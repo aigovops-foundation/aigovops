@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AiGovOps Foundation — Ship Safe AI. Never Unsafe AI.</title>
 <link rel="canonical" href="https://www.aigovops-foundation.com/" />
-  <meta name="description" content="Ship safe AI — never unsafe AI. Get to yes, stay at yes, recover to yes: governance as code, verifiable evidence, and proof in ten minutes." />
+  <meta name="description" content="Ship safe AI — never unsafe AI. Sit down at the AiGovOps Foundation café: say what brought you in, run the ten-minute Gate Check, and leave in an hour with a rule, a signed receipt and a Thursday." />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
@@ -54,6 +54,26 @@
     .hero .hero-quiet-links:last-of-type a:last-of-type:hover {
       transform: none; box-shadow: none; color: var(--porch-orange-ink) !important;
     }
+
+    /* ── the café (11 Sept 2026) ── */
+    .cafe-section { padding: 56px 0; }
+    .cafe-head { display: flex; gap: 18px; align-items: flex-start; max-width: 860px; margin: 0 auto 26px; }
+    .cafe-wren { width: 56px; height: 56px; border-radius: 50%; border: 2px solid var(--garden-gold, #E8B54A); flex: none; }
+    .cafe-lead { color: var(--garden-ink-soft, #55524a); font-size: 1rem; line-height: 1.6; margin: 0; max-width: 62ch; }
+    .cafe-doors { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+    .cafe-door { display: grid; gap: 6px; background: #fff; border: 1px solid rgba(43,43,40,.14); border-radius: 14px; padding: 18px 20px; text-decoration: none; color: inherit; transition: border-color .15s, transform .15s; }
+    .cafe-door:hover, .cafe-door:focus-visible { border-color: var(--garden-green, #2E7D4F); transform: translateY(-2px); outline: none; }
+    .cafe-door q { quotes: "“" "”"; font-family: var(--porch-serif, var(--garden-serif, Georgia, serif)); font-style: italic; font-size: 1.12rem; line-height: 1.3; color: var(--garden-charcoal, #2b2b28); }
+    .cafe-door small { color: var(--garden-ink-soft, #55524a); font-size: .86rem; line-height: 1.5; }
+    .cafe-lv { font: 600 11px 'Courier New', monospace; letter-spacing: .1em; text-transform: uppercase; color: var(--garden-green-ink, #1F5E3A); }
+    .cafe-door-start { background: var(--garden-deep-cream, #F3EBDD); }
+    .ten-section { padding: 56px 0; }
+    .ten-steps { max-width: 760px; margin: 0 auto 22px; padding-left: 1.4em; line-height: 1.7; font-size: 1.02rem; }
+    .ten-steps li { margin-bottom: 8px; }
+    .ten-steps b { color: var(--garden-charcoal, #2b2b28); }
+    .ten-cta { text-align: center; margin: 0; }
+    .ten-note { display: block; margin-top: 14px; font-size: .92rem; color: var(--garden-ink-soft, #55524a); }
+    @media (max-width: 600px) { .cafe-head { flex-direction: column; } }
     /* the toolkit band, reduced to one line (the trio lives on Stay at Yes) */
     .toolkit-section .toolkit-line { color: rgba(255,255,255,0.75); font-size: .95rem; max-width: 720px; margin: 0 auto; text-align: center; line-height: 1.7; }
     .toolkit-section .toolkit-line .toolkit-link { white-space: nowrap; }
@@ -170,9 +190,8 @@
     </a>
     <nav class="main-nav">
       <a href="index.html" class="active" data-i18n="nav.home">Home</a>
-      <a href="get-to-yes.html">Get to Yes</a>
-      <a href="stay-at-yes.html">Stay at Yes</a>
-      <a href="recover-to-yes.html">Recover to Yes</a>
+      <a href="library.html" data-i18n="nav.library">Library</a>
+      <a href="open-source.html" data-i18n="nav.opensource">Open source</a>
       <a href="blog.html" data-i18n="nav.blog">Blog</a>
       <a href="community.html" class="nav-join">Join</a>
     </nav>
@@ -190,16 +209,11 @@
     <p class="hero-eyebrow" data-i18n="hero.eyebrow">AiGovOps Foundation &nbsp;·&nbsp; Policy as Code</p>
     <h1 data-i18n-html="hero.h1">Ship Safe AI.<br>Never Unsafe AI.</h1>
     <p class="hero-movements" data-i18n-html="hero.movements"><span class="mv"><b>Get to Yes</b> — before you ship</span> <span class="mv-sep" aria-hidden="true">·</span> <span class="mv"><b>Stay at Yes</b> — while it runs</span> <span class="mv-sep" aria-hidden="true">·</span> <span class="mv"><b>Recover to Yes</b> — when it breaks</span></p>
-    <p class="hero-sub" data-i18n="hero.sub">Governance as code that makes AI safe to say yes to — built in the open, proven in ten minutes. Come see. Come join.</p>
+    <p class="hero-sub" data-i18n="hero.sub">Governance as code that makes AI safe to say yes to — built in the open, proven in ten minutes. Sit down: what brought you in?</p>
 
     <!-- M6 porch: painted garden band + movement markers (decorative only) -->
     <div class="porch-hero-band" aria-hidden="true">
-      <img src="images/porch/hero-garden.jpg" alt="" width="2400" height="780" loading="eager" />
-    </div>
-    <div class="porch-band-markers" aria-hidden="true">
-      <img src="images/porch/marker-seedling.png" alt="" width="108" height="108" />
-      <img src="images/porch/marker-watering-can.png" alt="" width="108" height="108" />
-      <img src="images/porch/marker-new-shoot.png" alt="" width="108" height="108" />
+      <img src="images/wren/cafe.jpg" alt="" width="1600" height="900" loading="eager" />
     </div>
 
     <!-- TWO DOORS (M14 dead-simple) -->
@@ -211,7 +225,7 @@
         <span class="action-hint">Enter the governed community →</span>
       </a>
 
-      <a href="https://community.aigovops-foundation.com/library/" target="_blank" rel="noopener" class="action-card action-beacon" onclick="if(window.plausible)plausible('Home: Read the Library')">
+      <a href="library.html" class="action-card action-beacon" onclick="if(window.plausible)plausible('Home: Read the Library')">
         <span class="action-icon">📚</span>
         <span class="action-label">Come See</span>
         <span class="action-hint">Read the Library — get to yes, stay at yes, recover to yes →</span>
@@ -227,19 +241,50 @@
     <p class="hero-quiet-links" style="margin-top:14px;font-size:0.92rem;">
       Or <button onclick="window.SCHEDULE && window.SCHEDULE.open()" aria-label="Schedule a call with a community leader" style="cursor:pointer;background:none;border:none;padding:0;font:inherit;color:inherit;text-decoration:underline;">schedule a call with a community leader</button>
       &nbsp;·&nbsp; <a href="https://aigovops.substack.com/" target="_blank" rel="noopener">Newsletter</a>
-      &nbsp;·&nbsp; <a href="https://aigovops-foundation.github.io/practice/" onclick="if(window.plausible)plausible('Home: Practice')">start the practice at the café — say what brought you in, leave in an hour with a receipt</a>
-      &nbsp;·&nbsp; explore <a href="https://aigovops-foundation.github.io/aigovops-beacon/" target="_blank" rel="noopener">Beacon</a> &amp;
-      <a href="https://aigovops-foundation.github.io/umbrella-govops/" target="_blank" rel="noopener">Umbrella</a>
-      &nbsp;·&nbsp; tend the garden: <a href="community.html#ways-to-contribute" onclick="if(window.plausible)plausible('Home: Give time')">give time</a>
+      &nbsp;·&nbsp; <a href="community.html#ways-to-contribute" onclick="if(window.plausible)plausible('Home: Give time')">give time</a>
       &nbsp;·&nbsp; <a href="support.html" onclick="if(window.plausible)plausible('Home: Give money')">give money</a>
     </p>
+  </div>
+</section>
+
+
+<!-- THE CAFÉ — start with your problem (11 Sept 2026: the café is the home page) -->
+<section class="section-light cafe-section" id="problem" aria-labelledby="cafe-title">
+  <div class="container">
+    <div class="cafe-head">
+      <img src="images/wren/wren-112.jpg" alt="Wren, the practitioner at the table" width="56" height="56" class="cafe-wren" />
+      <div>
+        <h2 class="section-title" id="cafe-title" style="text-align:left;margin-bottom:4px">What brought you in?</h2>
+        <p class="cafe-lead">Wren keeps the table by the door. Say what happened — or what you are afraid will happen — and leave in an hour with a rule in your own words, a signed receipt, and a Thursday. Every door below is a real case from the hundred verified AI harms.</p>
+      </div>
+    </div>
+    <div class="cafe-doors">
+      <a class="cafe-door" href="https://aigovops-foundation.github.io/practice/#promise" onclick="if(window.plausible)plausible('Cafe: 100')"><span class="cafe-lv">Level 100 · Begin · 45 min</span><q>An AI told someone something it shouldn't have — and now we're on the hook.</q><small>Air Canada, 2022. A rule, one decision, a real signed receipt in your browser.</small></a>
+      <a class="cafe-door" href="https://aigovops-foundation.github.io/practice/#ship" onclick="if(window.plausible)plausible('Cafe: 200')"><span class="cafe-lv">Level 200 · Retrofit · 60 min</span><q>I have a bot or an agent already, and I'm not sure it's safe to ship.</q><small>The $1 Chevy; Knight Capital. Your rule in CI, refusing the merge on weakening.</small></a>
+      <a class="cafe-door" href="https://aigovops-foundation.github.io/practice/#running" onclick="if(window.plausible)plausible('Cafe: 300')"><span class="cafe-lv">Level 300 · Hold · 60 min</span><q>It's already running, and nobody can say who's watching it or how to stop it.</q><small>Arup; Cigna PXDX; nH Predict. Holds for a named human, and the decay arithmetic.</small></a>
+      <a class="cafe-door" href="https://aigovops-foundation.github.io/practice/#prove" onclick="if(window.plausible)plausible('Cafe: 400')"><span class="cafe-lv">Level 400 · Prove it · 60 min + a Thursday</span><q>Someone needs proof of what the AI actually did — a regulator, a court, a board.</q><small>Robodebt; Toeslagenaffaire; Horizon. Verify evidence you did not make, offline.</small></a>
+      <a class="cafe-door cafe-door-start" href="https://community.aigovops-foundation.com/gate-check.html?src=home-cafe" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Cafe: Gate Check')"><span class="cafe-lv">Start here · 10 min</span><q>I'm not sure what my problem is — I just know AI is in the building.</q><small>The ten-minute Gate Check. No account. You keep the card.</small></a>
+    </div>
+  </div>
+</section>
+
+<!-- TEN MINUTES — the one thing to do first -->
+<section class="section-mid ten-section" id="ten" aria-labelledby="ten-title">
+  <div class="container">
+    <h2 class="section-title" id="ten-title">Ten minutes to get started</h2>
+    <ol class="ten-steps">
+      <li><b>Run the Gate Check.</b> Ten questions about one AI you know. No account, nothing installed.</li>
+      <li><b>Keep the Gate Card.</b> Your verdict and your gaps — never your answers. It is your first receipt.</li>
+      <li><b>Pick the door that stung.</b> One hour on a real case; a rule in your own words; a signed receipt; then Thursday at 09:00, where a host marks it.</li>
+    </ol>
+    <p class="ten-cta"><a href="https://community.aigovops-foundation.com/gate-check.html?src=home-ten" target="_blank" rel="noopener" class="btn btn-primary" onclick="if(window.plausible)plausible('Home: Ten minutes')">Run the ten-minute Gate Check →</a> <span class="ten-note">Then everything else on this site is one click away: <a href="library.html">the Library</a> to read, <a href="open-source.html">the open source</a> to build, <a href="community.html">the community</a> to return to.</span></p>
   </div>
 </section>
 
 <!-- CORE PILLARS -->
 <section class="section-light pillars-section">
   <div class="container">
-    <h2 class="section-title" data-i18n="pillars.title">Our Core Pillars</h2>
+    <h2 class="section-title" data-i18n="pillars.title">The four gates — one rule, four moments</h2>
     <div class="pillars-grid">
       <div class="pillar-card">
         <span class="pillar-num">01</span>
@@ -294,24 +339,10 @@
 </section>
 
 <!-- TOOLKIT — one line; the full trio lives on Stay at Yes (M14 dead-simple) -->
-<!-- ANNOUNCEMENT: DataCenter-Ai-And-Social-Tradeoffs -->
-<section class="section-light" style="padding:36px 0" aria-label="New published artifact">
-  <div class="container" style="max-width:900px">
-    <div style="background:#fff;border:1px solid rgba(43,43,40,.14);border-radius:16px;padding:22px 26px;box-shadow:0 10px 26px -14px rgba(78,60,32,.3);display:flex;gap:18px;align-items:center;flex-wrap:wrap">
-      <span style="font:600 11px 'Courier New',monospace;letter-spacing:.1em;text-transform:uppercase;background:#E4EADB;color:#1F5E3A;border:1px solid #2E7D4F;border-radius:999px;padding:4px 10px;white-space:nowrap">New · published artifact</span>
-      <div style="flex:1;min-width:250px">
-        <strong style="font-size:1.02rem">Data Centers, AI &amp; Social Trade-offs</strong>
-        <p style="margin:4px 0 0;font-size:.9rem;color:var(--muted);line-height:1.55">An interactive, source-verified calculator that puts AI's energy, carbon and water costs on the same table as phones, streaming, cars, heating, beef and steel — every fact carries 4+ sources, and the math reads like a 6th-grade worksheet.</p>
-      </div>
-      <a href="https://datacenter-ai-tradeoffs.pplx.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="white-space:nowrap" onclick="if(window.plausible)plausible('Home: Tradeoffs calculator click')">Try the calculator →</a>
-    </div>
-  </div>
-</section>
-
 <section class="toolkit-section">
   <div class="container">
-    <p class="toolkit-line">The Open-Source Toolkit — Beacon signs the evidence, Umbrella compiles it into executable controls, Lantern reads it back. All Apache-2.0.
-      <a href="stay-at-yes.html#toolkit" class="toolkit-link">Explore the toolkit on Stay at Yes <span class="toolkit-arrow">→</span></a></p>
+    <p class="toolkit-line">The Open-Source Toolkit — <a href="https://aigovops-foundation.github.io/aigovops-beacon/" target="_blank" rel="noopener" class="toolkit-link">Beacon</a> signs the evidence, <a href="https://aigovops-foundation.github.io/umbrella-govops/" target="_blank" rel="noopener" class="toolkit-link">Umbrella</a> compiles it into executable controls, <a href="https://github.com/aigovops-foundation/aigovops-lantern" target="_blank" rel="noopener" class="toolkit-link">Lantern</a> reads it back — Beacon signs, Lantern reads, Umbrella compiles. All Apache-2.0.
+      <a href="open-source.html#toolkit" class="toolkit-link">Explore the open source <span class="toolkit-arrow">→</span></a></p>
   </div>
 </section>
 
@@ -394,21 +425,15 @@
     </div>
         <nav class="footer-nav">
       <a href="index.html">Home</a>
-      <a href="get-to-yes.html">Get to Yes</a>
-      <a href="stay-at-yes.html">Stay at Yes</a>
-      <a href="recover-to-yes.html">Recover to Yes</a>
+      <a href="library.html">Library</a>
+      <a href="open-source.html">Open source</a>
+      <a href="community.html">Community</a>
       <a href="https://community.aigovops-foundation.com" target="_blank" rel="noopener">Community platform</a>
-      <a href="https://community.aigovops-foundation.com/library/" target="_blank" rel="noopener">Library</a>
-      <a href="https://aigovops-foundation.github.io/aigovops-beacon/" target="_blank" rel="noopener">Beacon</a>
-      <a href="https://aigovops-foundation.github.io/umbrella-govops/" target="_blank" rel="noopener">Umbrella</a>
-      <a href="https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/" target="_blank" rel="noopener">NCW AI Camp</a>
       <a href="blog.html">Blog</a>
-      <a href="frameworks.html">Frameworks</a>
+      <a href="founders.html">Founders</a>
       <a href="support.html">Support</a>
-      <a href="index.html">Ask — the concierge</a>
-      <a href="founders.html">Press</a>
-      <a href="founders.html#ken">Ken Johnston</a>
-      <a href="founders.html#bob">Bob Rapp</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
       <a href="/feed.xml">RSS</a>
       <a href="https://aigovops.substack.com/" target="_blank" rel="noopener">Newsletter</a>
     </nav>

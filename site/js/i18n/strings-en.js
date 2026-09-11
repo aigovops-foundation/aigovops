@@ -1,11 +1,11 @@
 window.I18N = {
   lang: 'en',
-  nav: { home: 'Home', blog: 'Blog' },
+  nav: { library: 'Library', opensource: 'Open source', home: 'Home', blog: 'Blog' },
   hero: {
     eyebrow: 'AiGovOps Foundation · Policy as Code',
     h1: 'Ship Safe AI.<br>Never Unsafe AI.',
     movements: '<span class="mv"><b>Get to Yes</b> — before you ship</span> <span class="mv-sep" aria-hidden="true">·</span> <span class="mv"><b>Stay at Yes</b> — while it runs</span> <span class="mv-sep" aria-hidden="true">·</span> <span class="mv"><b>Recover to Yes</b> — when it breaks</span>',
-    sub: 'Governance as code that makes AI safe to say yes to — built in the open, proven in ten minutes. Come see. Come join.',
+    sub: 'Governance as code that makes AI safe to say yes to — built in the open, proven in ten minutes. Sit down: what brought you in?',
   },
   community: {
     eyebrow: 'Free · No card · A founder welcomes you personally',
