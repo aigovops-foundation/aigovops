@@ -4,7 +4,11 @@
 whatever your skills. The marks are the credential, and the credential is a receipt.**
 AiGovOps Foundation · Release train `fall-2026` · `practice` **v1.0.0-rc.1** · 11 September 2026 · Apache-2.0
 
-**Start here:** read the [one-page manifesto](MANIFESTO.md), then open the worksheet for your level.
+**Start with Wren.** She sits at the table by the door of the Foundation coffee shop and asks five
+questions — what you have, how you like to write a rule, your lens, your Thursday, who you'll show — and
+hands you a card with your level and your worksheet. Until her check ships, [her card is filled in by
+hand](docs/WREN.md#bobs-wren-card--practitioner-1); the questions are the same. Then read the
+[one-page manifesto](MANIFESTO.md) ([en español](docs/es/MANIFESTO.md)) and open the worksheet for your level.
 Each takes an hour or less, runs on a real FailFest case, and ends with something you can show on Thursday.
 
 | Level | Worksheet | Checklist | Time | Install |
@@ -46,6 +50,13 @@ path and a code path to the same receipt. No level adds a new tool name. A level
 practice; a system's assurance is its OVERT AAL and its gate coverage number, claimed by that system's
 evidence — the two sentences never merge.
 
+## No one left behind
+
+Every worksheet ends with a table for the person the plan forgot: no computer, phone only, Spanish, ten
+minutes instead of an hour, no Thursday, no agent of your own, code but no policy words, policy words but
+no code. Each row ends in a receipt and a mark all the same. "I don't know yet" is always an answer, and
+it always pairs you with someone. [The journey, drawn](docs/JOURNEY.md).
+
 ## The four gates
 
 | Gate | When | Movement | Engine |
@@ -80,6 +91,7 @@ evidence — the two sentences never merge.
 - [`docs/DECISIONS.md`](docs/DECISIONS.md) — the eleven decisions for Bob and Ken; decided by Bob 11 Sept.
 - [`docs/CHANGES-2026-09-11.md`](docs/CHANGES-2026-09-11.md) — everything that changed on release day, and why.
 - [`docs/WREN.md`](docs/WREN.md) — Wren, the practitioner at the table: the voice, the readiness walk, the art brief, and Bob's Wren Card.
+- [`docs/JOURNEY.md`](docs/JOURNEY.md) — the one loop, drawn, with the objects that hold it together and the rules that keep it simple.
 - [`levels/`](levels/) — one kit per level: README (who, tools, return), WORKSHEET (the hour), CHECKLIST (one page), `policy.yaml`.
 - [`scripts/humans.sh`](scripts/humans.sh) — the founders' single paste script: local commit, org repo, release tag.
 

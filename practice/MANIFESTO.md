@@ -1,6 +1,6 @@
 # The AiGovOps Practitioner Manifesto
 
-*One page. Print it. Bring it Thursday.* · Fall 2026 Release · AiGovOps Foundation · Apache-2.0
+*One page. Print it. Bring it Thursday. If any of it is unclear, ask Wren — she sits at the table by the door.* · Fall 2026 Release · AiGovOps Foundation · Apache-2.0
 
 **This tale has a hero, and it is not us.** The hero is the open standard that made runtime proof
 possible — **OVERT**, written and stewarded by Glacis Technologies — and the people who decided that a
@@ -18,12 +18,14 @@ can verify offline, without an account and without trusting us.
 
 ## The four gates — the same rule at four moments
 
-| | Gate | When | Movement |
-|---|---|---|---|
-| ☐ | **Pre-pend** | before a single action runs | Get to Yes |
-| ☐ | **Policy** | before a rule or a system ships | Get to Yes |
-| ☐ | **Operate** | while it runs, in real time | Stay at Yes |
-| ☐ | **Audit** | after — on demand, on incident | Recover to Yes |
+| Gate | When | Movement |
+|---|---|---|
+| **Pre-pend** | before a single action runs | Get to Yes |
+| **Policy** | before a rule or a system ships | Get to Yes |
+| **Operate** | while it runs, in real time | Stay at Yes |
+| **Audit** | after — on demand, on incident | Recover to Yes |
+
+- [ ] pre-pend  - [ ] policy  - [ ] operate  - [ ] audit — *which does your system have today?*
 
 ## The five parts of the practice — at every level
 
@@ -32,12 +34,14 @@ can verify offline, without an account and without trusting us.
 
 ## The ladder — one hour or less, whatever your skills
 
-| | Level | You will | Built on |
-|---|---|---|---|
-| ☐ | **100 Begin** | gate one action and hold one receipt — nothing installed | Air Canada's chatbot |
-| ☐ | **200 Retrofit** | gate one agent of your own and put the rule in CI | the $1 Chevy · Knight Capital |
-| ☐ | **300 Hold** | hold, budget and bind identity under real traffic; state a coverage number | Arup · Cigna PXDX · nH Predict |
-| ☐ | **400 Prove** | verify a stranger's evidence offline; host a Thursday | Robodebt · Toeslagenaffaire · Horizon |
+| Level | You will | Built on |
+|---|---|---|
+| **100 Begin** | gate one action and hold one receipt — nothing installed | Air Canada's chatbot |
+| **200 Retrofit** | gate one agent of your own and put the rule in CI | the $1 Chevy · Knight Capital |
+| **300 Hold** | hold, budget and bind identity under real traffic; state a coverage number | Arup · Cigna PXDX · nH Predict |
+| **400 Prove** | verify a stranger's evidence offline; host a Thursday | Robodebt · Toeslagenaffaire · Horizon |
+
+- [ ] 100  - [ ] 200  - [ ] 300  - [ ] 400 — *a host marks; you tick.*
 
 Every activity has a **plain-words path** and a **code path** to the same receipt. A level describes a
 *person's* practice, never a system's assurance — a system's assurance is its OVERT level and its gate
@@ -45,16 +49,16 @@ coverage, claimed by that system's evidence.
 
 ## The practitioner's checklist
 
-- ☐ I can say the rule from memory, and say what "consequential" means for my system.
-- ☐ I have written one gate in plain words and seen it as code.
-- ☐ I have put one real action through a gate and kept the receipt.
-- ☐ I have read a receipt in a lens that is not my own.
-- ☐ I have shown a receipt to another person.
-- ☐ I know which of the four gates my system is missing today.
-- ☐ I have named the human who releases a hold, and how long a hold lives before it decays to no.
-- ☐ I know my system's coverage number, or I know that I do not.
-- ☐ I have verified evidence I did not make, on a machine that was not online.
-- ☐ I have brought someone else to Thursday.
+- [ ] I can say the rule from memory, and say what "consequential" means for my system.
+- [ ] I have written one gate in plain words and seen it as code.
+- [ ] I have put one real action through a gate and kept the receipt.
+- [ ] I have read a receipt in a lens that is not my own.
+- [ ] I have shown a receipt to another person.
+- [ ] I know which of the four gates my system is missing today.
+- [ ] I have named the human who releases a hold, and how long a hold lives before it decays to no.
+- [ ] I know my system's coverage number, or I know that I do not.
+- [ ] I have verified evidence I did not make, on a machine that was not online.
+- [ ] I have brought someone else to Thursday.
 
 ## What we promise
 

@@ -7,6 +7,8 @@ Watsonville / Fullpath**) and the deploy that lost $440M in 45 minutes (**VH-056
 them; the code path writes YAML and reads the sentences back.
 **Train:** Fall 2026 · **live** works today; **fall** lands in the Fall release.
 
+> **Wren says:** if you don't have an agent of your own, borrow the Matchmaker (the worked example) — the worksheet counts the same. If Python scares you, do steps 1–3 on paper and pair with a code-path 200 on Thursday.
+
 | Step | Minutes | Status |
 |---|---|---|
 | 1 Read both cases | 5 | live |
@@ -105,6 +107,16 @@ Either way, record the one receipt: seq ____ · decision ______ · action hash _
 Open a PR that adds your `policy.yaml` to this repo under `catalog/<your-system>/` (fall: the Umbrella
 catalog). Write four sentences for the story pipeline: what the agent does, what it must never do, what
 the gate said, what changed. Thursday: pair with a 100 and watch them get their first receipt.
+
+## No one left behind
+
+| If you… | Then… |
+|---|---|
+| have no agent of your own | Borrow the Matchmaker worked example in this directory. Retrofitting a borrowed agent is the same practice; the mark says so. |
+| cannot install anything (locked-down laptop) | Do steps 1–3 and 7 on paper; pair with a code-path 200 on Thursday who runs steps 4–6 with you on their machine. Your policy is still yours. |
+| write policy but not code | Write the three sentences; the YAML template beside this worksheet has one line to change per sentence. Wren reads the YAML back to you as sentences. |
+| write code but not policy | Fill the YAML; then read it aloud as sentences to one person before Thursday. If they frown, the rule is wrong, not the listener. |
+| have ten minutes | Step 2 only — the three consequential actions, tiered. That table is the level's real work; the rest is typing. |
 
 ---
 

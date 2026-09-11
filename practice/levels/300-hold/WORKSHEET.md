@@ -8,6 +8,8 @@ operate gate lands. **Skills needed:** either path. This level is mostly judgmen
 what you decide here.
 **Train:** Fall 2026 · **live** works today; **fall** lands in P1.
 
+> **Wren says:** this level is judgment, not tooling. Everything until *Fall* is pen and paper. Do the Cigna arithmetic out loud — *out of how many?* — and bring the number, or the honest "cannot count yet".
+
 | Step | Minutes | Status |
 |---|---|---|
 | 1 Read the three cases | 8 | live |
@@ -101,6 +103,16 @@ ______ %. If you cannot count them, write **"cannot count yet"** — that is a f
 Take a bundle from the catalog that you did not make. Before Thursday, read it in the auditor lens and
 verify it by its `VERIFY.md`. Say on Thursday what you found. Mentor a 200 through step 4 of their
 worksheet.
+
+## No one left behind
+
+| If you… | Then… |
+|---|---|
+| run no traffic yet | Everything on this worksheet before *Fall* is tabletop. Do it on last month's logs, or on the Cigna numbers in the case. |
+| have no approver to name | That is the finding. Write "nobody at 02:00 on Sunday — so it denies" and bring it; a 300 without an approver is a system that fails closed correctly. |
+| cannot count coverage | Write "cannot count yet." It is the most common honest answer at 300 and it is marked the same. |
+| are not technical | Steps 2, 3, 4 and 7 need no tool at all; they need you to name people, hours and numbers. Skip 5 and 6 until Thursday. |
+| find the cases upsetting | They are. Pick one of the three, not all; the mark asks for the hold and the arithmetic, not for reading every case. |
 
 ---
 

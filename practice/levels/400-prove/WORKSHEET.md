@@ -8,6 +8,8 @@ could independently verify (**VH-088, Post Office Horizon**).
 **Skills needed:** either path — the audit gate is about independence, not tooling.
 **Train:** Fall 2026 · **live** works today; **fall** lands in P2.
 
+> **Wren says:** the audit gate is about independence, not skill. Any 300 can verify a stranger's bundle by its own VERIFY.md on a phone in airplane mode. Hosting is the hard part; the run-of-show is written for you.
+
 | Step | Minutes | Status |
 |---|---|---|
 | 1 Read the three cases | 8 | live |
@@ -105,6 +107,15 @@ step 2; then marks. Your Thursday: ____________ (date).
 Mark a 300's step — you are the approver; the mark is a receipt with your key. Land one contributor's
 PR. Write the four-sentence story: what you verified, what you found, what you filed upstream, who you
 marked.
+
+## No one left behind
+
+| If you… | Then… |
+|---|---|
+| have no stranger's bundle | Ask Wren for one from the catalog, or take Beacon's demo bundle that a 100 made on Thursday. Independence is about who made it, not how far away they are. |
+| cannot host in person | Host the asynchronous Thursday (the second-hour slot): read out the receipts in the thread, mark, and write the four sentences. It counts. |
+| are not comfortable filing upstream | File the corpus case to AIID or the OECD monitor instead of the spec; a host can co-sign a spec issue with you. |
+| are a policy person, not an engineer | The premise gate (step 3) is the level's heart and it is two sentences a minister could read. Write those; a code-path 400 types them. |
 
 ---
 
