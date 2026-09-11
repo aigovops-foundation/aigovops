@@ -28,13 +28,15 @@ jobs:
       - run: pip install --quiet markdown
       - name: Self-test the pipeline (throwaway copy; nothing real is touched)
         run: python3 scripts/test_build_content.py
-      - name: Render stories + newsletter and LinkedIn drafts
+      - name: Render stories + newsletter and LinkedIn drafts (Spanish pages translate once, then cache)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python3 scripts/build_content.py
       - name: Commit what changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add blog/ blog.html feed.xml content/drafts/
+          git add blog/ blog.html feed.xml content/drafts/ content/translations/
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
