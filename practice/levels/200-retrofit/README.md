@@ -1,6 +1,6 @@
 # Level 200 — Retrofit
 
-> **v3:** owns the **policy gates** · built on **VH-022 Chevrolet of Watsonville** (your agent) and **VH-056 Knight Capital** (your pipeline) · maps to the **AAL-2 Process Records** pattern · mark by a 300+. Full activity: [`docs/MEMBER-ACTIVITIES.md`](../../docs/MEMBER-ACTIVITIES.md#level-200--retrofit--owns-the-policy-gates--30-minutes--one-install)
+> **v3:** owns the **policy gates** · built on **VH-022 Chevrolet of Watsonville** (your agent) and **VH-056 Knight Capital** (your pipeline) · maps to the **AAL-2 Process Records** pattern · mark by a 300+. Full activity: [`docs/MEMBER-ACTIVITIES.md`](../../docs/reference/MEMBER-ACTIVITIES.md#level-200--retrofit--owns-the-policy-gates--30-minutes--one-install)
 
 **Thirty minutes. Gate one real agent of your own.**
 Status: **decide** — this kit describes what ships in P1 (days 31–60) if PRD v3 is approved.

@@ -1,6 +1,6 @@
 # Level 400 — Prove it to a stranger
 
-> **v3:** owns the **audit gate** · built on **VH-013 Robodebt**, **VH-003 Toeslagenaffaire** and **VH-088 Post Office Horizon** · maps to the **AAL-4 Cryptographic Attestation** pattern · mark by two 400s or a founder. Full activity: [`docs/MEMBER-ACTIVITIES.md`](../../docs/MEMBER-ACTIVITIES.md#level-400--prove-it-to-a-stranger--owns-the-audit-gate--ongoing)
+> **v3:** owns the **audit gate** · built on **VH-013 Robodebt**, **VH-003 Toeslagenaffaire** and **VH-088 Post Office Horizon** · maps to the **AAL-4 Cryptographic Attestation** pattern · mark by two 400s or a founder. Full activity: [`docs/MEMBER-ACTIVITIES.md`](../../docs/reference/MEMBER-ACTIVITIES.md#level-400--prove-it-to-a-stranger--owns-the-audit-gate--ongoing)
 
 **Ongoing. Verify offline, claim honestly, contribute upstream, host.**
 Status: **decide** — this kit describes what ships in P2 (days 61–90) if PRD v3 is approved.

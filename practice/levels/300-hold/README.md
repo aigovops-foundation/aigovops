@@ -1,6 +1,6 @@
 # Level 300 — Hold
 
-> **v3:** owns the **operate gate** · built on **VH-015 Arup** (the hold), **VH-035 Cigna PXDX** (aggregation) and **VH-011 nH Predict** (clinical judgment) · agent identity binding (F15) · maps to the **AAL-3 Automated Monitoring** pattern · mark by a 400. Full activity: [`docs/MEMBER-ACTIVITIES.md`](../../docs/MEMBER-ACTIVITIES.md#level-300--hold--owns-the-operate-gate--a-week-of-real-traffic)
+> **v3:** owns the **operate gate** · built on **VH-015 Arup** (the hold), **VH-035 Cigna PXDX** (aggregation) and **VH-011 nH Predict** (clinical judgment) · agent identity binding (F15) · maps to the **AAL-3 Automated Monitoring** pattern · mark by a 400. Full activity: [`docs/MEMBER-ACTIVITIES.md`](../../docs/reference/MEMBER-ACTIVITIES.md#level-300--hold--owns-the-operate-gate--a-week-of-real-traffic)
 
 **A week of real traffic. Humans in the loop, budgets, and the broker.**
 Status: **decide** — this kit describes what ships in P1 (days 31–60) if PRD v3 is approved.

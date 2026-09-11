@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The AiGovOps Foundation café — start with your problem</title>
+<meta name="description" content="Wren welcomes you to the AiGovOps Foundation café. Say what brought you in; leave in an hour with a rule, a signed receipt and a Thursday. Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes. Prove it in ten minutes.">
+<link rel="canonical" href="https://aigovops-foundation.github.io/practice/">
+<meta property="og:title" content="The AiGovOps Foundation café">
+<meta property="og:description" content="Sit down. What brought you in? One problem, one hour, one receipt, one Thursday.">
+<meta property="og:image" content="https://aigovops-foundation.github.io/practice/docs/wren/wren-coffee-shop-public.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --board:#22302f;--board-2:#1a2626;--chalk:#efe9d8;--chalk-dim:#b3ad9d;--chalk-line:rgba(239,233,216,.18);
+    --amber:#e0ac48;--green:#2a8a6a;--green-ink:#1d6b52;--coffee:#6b4a35;
+    --page:#fbfaf6;--page-2:#f1eee6;--ink:#1d1f1e;--mute:#6a6d69;--line:#dcd8cc;
+    --display:"Fraunces",Georgia,"Times New Roman",serif;--sans:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;--mono:"IBM Plex Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--page);color:var(--ink);font:16px/1.55 var(--sans)}
+  a{color:var(--green-ink)}
+  .wrap{max-width:1040px;margin:0 auto;padding-inline:20px}
+  /* nav */
+  .nav{display:flex;flex-wrap:wrap;gap:.3rem 1.3rem;align-items:baseline;padding-block:14px;font-size:14px}
+  .nav b{font:600 16px var(--sans);margin-right:auto}
+  .nav a{color:var(--ink);text-decoration:none}.nav a:hover{color:var(--green-ink);text-decoration:underline}
+  /* hero */
+  .hero{position:relative;background:var(--board-2) center/cover no-repeat;color:var(--chalk);min-height:420px;display:flex;align-items:flex-end;isolation:isolate}
+  .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,28,28,.9) 0%,rgba(20,28,28,.6) 48%,rgba(20,28,28,.1) 80%);z-index:-1}
+  .hero .wrap{padding-block:56px 40px;width:100%}
+  .kick{font:500 12px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin:0 0 10px}
+  .hero h1{font:500 clamp(34px,5.2vw,58px)/1.02 var(--display);margin:0;letter-spacing:-.02em;max-width:12em;text-wrap:balance}
+  .hero h1 em{font-style:italic;color:var(--amber)}
+  .hero p{max-width:34em;margin:16px 0 0;color:var(--chalk);font-size:17px;text-wrap:pretty}
+  .hero .wren{display:flex;gap:12px;align-items:center;margin-top:22px;font:italic 500 19px/1.3 var(--display)}
+  .hero .wren img{width:48px;height:48px;border-radius:50%;border:2px solid var(--amber)}
+  /* problems */
+  section{padding-block:44px}
+  h2{font:700 clamp(24px,3vw,32px)/1.1 var(--display);margin:0 0 6px;letter-spacing:-.01em;text-wrap:balance}
+  .lead{color:var(--mute);margin:0 0 22px;max-width:62ch}
+  .doors{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+  .door{text-align:left;background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 18px;cursor:pointer;font:inherit;color:inherit;display:grid;gap:6px;transition:border-color .15s,transform .15s}
+  .door:hover{border-color:var(--green)}.door:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+  .door[aria-pressed="true"]{border-color:var(--green);box-shadow:0 0 0 3px rgba(42,138,106,.18)}
+  .door q{font:italic 500 19px/1.3 var(--display);quotes:"“" "”";display:block}
+  .door small{color:var(--mute)}
+  .door .lv{font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--green-ink)}
+  /* hour panel */
+  .hour{margin-top:22px;background:var(--board);color:var(--chalk);border-radius:12px;padding:26px 28px;display:none;grid-template-columns:1.2fr .8fr;gap:28px}
+  .hour.on{display:grid}
+  .hour h3{font:500 26px/1.15 var(--display);margin:0 0 4px}
+  .hour .case{color:var(--chalk-dim);margin:0 0 16px;font-size:15px}
+  .hour .case b{color:var(--chalk);font-weight:600}
+  .steps{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+  .steps li{display:grid;grid-template-columns:2.2em 1fr;gap:10px;align-items:baseline;border-top:1px solid var(--chalk-line);padding-top:8px}
+  .steps li i{font:500 13px var(--mono);color:var(--amber);font-style:normal}
+  .steps li b{font-weight:600}
+  .steps li span{color:var(--chalk-dim)}
+  .steps a{color:var(--chalk)}
+  .hour .cta{display:inline-block;margin-top:18px;background:var(--amber);color:var(--board-2);font-weight:600;text-decoration:none;padding:12px 18px;border-radius:8px}
+  .hour .cta:hover{filter:brightness(1.06)}
+  .hour .wsay{font:italic 500 18px/1.35 var(--display);color:var(--chalk);border-left:3px solid var(--amber);padding-left:14px;margin-top:20px}
+  /* card */
+  .card{background:#fff;color:var(--ink);border-radius:10px;padding:18px 20px;display:grid;gap:10px;align-content:start;position:relative}
+  .card:before{content:"WREN CARD";position:absolute;right:16px;top:14px;font:500 11px var(--mono);letter-spacing:.12em;color:var(--mute)}
+  .card h4{margin:0;font:700 20px/1.1 var(--display)}
+  .card label{display:grid;gap:4px;font-size:13px;color:var(--mute)}
+  .card select,.card input{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--page);color:var(--ink)}
+  .card .kv{display:grid;grid-template-columns:6em 1fr;gap:8px;border-bottom:1px dashed var(--line);padding-bottom:6px;font-size:14px}
+  .card .kv span{color:var(--mute)}.card .kv b{font-weight:600}
+  .card .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+  .card button{font:600 13px var(--sans);padding:8px 12px;border-radius:6px;border:1px solid var(--line);background:var(--page);color:var(--ink);cursor:pointer}
+  .card button.primary{background:var(--green);border-color:var(--green);color:#fff}
+  .card button:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+  .card .note{font-size:12px;color:var(--mute);margin:0}
+  /* flow */
+  .flow{display:flex;flex-wrap:wrap;gap:8px 6px;align-items:center;font:500 16px var(--display);margin:0 0 18px}
+  .flow span{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 14px}
+  .flow i{color:var(--amber);font-style:normal}
+  table{border-collapse:collapse;width:100%;font-size:14px}
+  th,td{text-align:left;padding:9px 10px;border-top:1px solid var(--line);vertical-align:top}
+  th{font:600 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mute);border-top:0}
+  td b{font-weight:600}
+  .tablewrap{overflow-x:auto}
+  .nolb{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+  .nolb div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:14px}
+  .nolb b{display:block;font-weight:600;margin-bottom:2px}
+  .nolb span{color:var(--mute)}
+  /* back room */
+  .back{background:var(--page-2)}
+  .back ul{columns:2;column-gap:32px;margin:0;padding-left:18px;font-size:14px}
+  .back li{break-inside:avoid;margin-bottom:6px}
+  /* footer */
+  footer{background:var(--board-2);color:var(--chalk-dim);padding-block:28px;font-size:14px}
+  footer p{margin:0 0 6px}footer b{color:var(--chalk)}footer a{color:var(--chalk)}
+  @media (max-width:700px){.hour{grid-template-columns:1fr}.back ul{columns:1}.hero{min-height:360px}}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.door{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap nav" role="navigation" aria-label="Practice">
+  <b>☕ The AiGovOps Foundation café</b>
+  <a href="#problem">Your problem</a>
+  <a href="#flow">How it builds</a>
+  <a href="MANIFESTO.html">The manifesto</a>
+  <a href="docs/THURSDAY.html">Thursday</a>
+  <a href="https://www.aigovops-foundation.com/">The Foundation</a>
+  <a href="https://github.com/aigovops-foundation/practice">GitHub</a>
+</div>
+
+<header class="hero" style="background-image:url('docs/wren/wren-coffee-shop-public.jpg')">
+  <div class="wrap">
+    <p class="kick">Fall 2026 Release · one practice, four levels, four gates, one Thursday</p>
+    <h1>Sit down. <em>What brought you in?</em></h1>
+    <p>This is the front door of the whole AiGovOps practice. You do not need an account, a tool, or a policy background. Say what happened — or what you are afraid will happen — and leave in an hour with a rule in your own words, a signed receipt, and a Thursday to bring it to.</p>
+    <div class="wren"><img src="docs/wren/wren-112.jpg" alt="Wren, the practitioner at the table"><span>Trust the data, not the vibes. Pick the one below that sounds most like you — I'll pour.</span></div>
+  </div>
+</header>
+
+<section id="problem" class="wrap">
+  <h2>Start with your problem</h2>
+  <p class="lead">Every one of these is a real case from the Foundation's hundred verified AI harms. Pick yours; the hour below is built on it.</p>
+  <div class="doors" id="doors"></div>
+  <div class="hour" id="hour" aria-live="polite"></div>
+</section>
+
+<section id="flow" class="wrap">
+  <h2>How it all builds — one loop, nothing twice</h2>
+  <p class="lead">Whatever door you came through, the same six objects carry you round the loop, and each one is made once, in one place. Nothing here is a second copy of something else.</p>
+  <div class="flow"><span>your problem</span><i>→</i><span>Wren Card</span><i>→</i><span>worksheet</span><i>→</i><span>receipt</span><i>→</i><span>Thursday</span><i>→</i><span>the Tuesday Letter</span><i>→</i><span>next level, or host</span></div>
+  <div class="tablewrap"><table>
+    <tr><th>Object</th><th>Made where</th><th>Carries</th><th>Never carries</th></tr>
+    <tr><td><b>Wren Card</b></td><td>here, above</td><td>your problem's level, your path, your lens, your Thursday, who you'll show</td><td>your name until you choose; any content</td></tr>
+    <tr><td><b>Worksheet</b></td><td>one per level, on these pages</td><td>the case, seven steps, both paths, the ten-minute version, the "no one left behind" table</td><td>a second tool name; a step that does not exist yet unmarked</td></tr>
+    <tr><td><b>Receipt</b></td><td>Beacon, in your browser (100) · your CI (200) · your broker (300) · offline (400)</td><td>hashes, decision, tier, policy hash, key id</td><td>prompts, outputs, payloads, personal data</td></tr>
+    <tr><td><b>Mark</b></td><td>Thursday, by a host</td><td><code>MARK · level · name · hash12 · host · date</code></td><td>who you are, unless you show it</td></tr>
+    <tr><td><b>The Letter line</b></td><td>Tuesday</td><td>marks by level, the countdown to 2 Dec 2027</td><td>identities</td></tr>
+  </table></div>
+</section>
+
+<section class="wrap">
+  <h2>No one left behind</h2>
+  <p class="lead">"I don't know yet" is always an answer, and it always pairs you with someone. Each of these still ends in a receipt and a mark.</p>
+  <div class="nolb">
+    <div><b>No computer</b><span>Steps 1–4 on paper; a host lends a laptop on Thursday. The key is made in front of you.</span></div>
+    <div><b>A phone only</b><span>The cases and Beacon's demo run on a phone; VERIFY.md opens in any text viewer.</span></div>
+    <div><b>Spanish</b><span><a href="docs/es/MANIFESTO.html">El manifiesto</a> · <a href="docs/es/levels/100-begin/WORKSHEET.html">la hoja del nivel 100</a>. Say so on your card; a Spanish-speaking host pairs with you.</span></div>
+    <div><b>Ten minutes, not an hour</b><span>Every worksheet names the three steps that still produce a receipt.</span></div>
+    <div><b>Cannot do Thursdays</b><span>Post the hash and your sentence in the cohort thread; a host marks asynchronously.</span></div>
+    <div><b>No agent of your own</b><span>Level 100 needs only a browser. Level 200 pairs you with someone who has one.</span></div>
+  </div>
+</section>
+
+<section class="back">
+  <div class="wrap">
+    <h2>The back room</h2>
+    <p class="lead">Everything else lives behind the counter, made once and linked from here — never repeated on this page.</p>
+    <ul>
+      <li><a href="MANIFESTO.html">The manifesto</a> — the one page you bring to Thursday (<a href="docs/MANIFESTO.pdf">PDF</a> · <a href="docs/es/MANIFESTO.html">español</a>)</li>
+      <li><a href="docs/THURSDAY.html">Thursday</a> — the run-of-show and the mark line</li>
+      <li><a href="docs/WREN.html">Wren</a> — who she is, her three rules, the art</li>
+      <li><a href="docs/FLOW.html">The flow</a> — what folded into what, and why nothing is twice</li>
+      <li><a href="RELEASE.html">The Fall 2026 Release</a> — versions, live vs fall, the release checklist (<a href="CHANGELOG.html">changelog</a>)</li>
+      <li><a href="catalog/">The catalog</a> — practitioners' policies, by pull request</li>
+      <li><a href="docs/practitioners/bob-100.html">Practitioner #1</a> — Bob's 100, started · <a href="docs/practitioners/STRANGER-INVITE.html">the stranger's invitation</a></li>
+      <li><a href="docs/reference/">Reference</a> — the PRDs, the decisions, the estate map, the standards map, the Glacis note, the release-day record</li>
+      <li><a href="https://overt.is/">OVERT</a> — the open standard everything here conforms to, stewarded by <a href="https://www.glacis.io/">Glacis</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><b>Ship safe AI — never unsafe AI:</b> get to yes, stay at yes, recover to yes. Prove it in ten minutes.</p>
+    <p><a href="https://community.aigovops-foundation.com/gate-check.html?src=cafe">Run the ten-minute Gate Check</a> · <a href="https://www.aigovops-foundation.com/community.html">The community</a> · <a href="https://www.aigovops-foundation.com/">AiGovOps Foundation</a> · <a href="https://github.com/aigovops-foundation/practice">practice v1.0.0-rc.1</a> · Apache-2.0</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const P = "https://aigovops-foundation.github.io/practice/";
+  const DOORS = [
+    {id:"promise", level:"100", name:"Begin", gate:"the pre-pend gate",
+     q:"An AI told someone something it shouldn't have — and now we're on the hook.",
+     hint:"a chatbot, an assistant, an answer about policy or price",
+     caseId:"VH-001", caseName:"Air Canada", caseLine:"In 2022 Air Canada's chatbot told a grieving passenger he could claim a bereavement fare after travelling. The policy said the opposite. The tribunal held the airline to its chatbot's word.",
+     leave:"a rule in your own words, one decision against it, and a real signed receipt made in your browser",
+     time:"45 minutes · nothing installed", ws:"levels/100-begin/WORKSHEET.html",
+     receipt:"Beacon's browser demo — a key made in front of you, receipts signed, a bundle with VERIFY.md",
+     wren:"Bring the bundle hash Thursday. The first five minutes are for receipts."},
+    {id:"ship", level:"200", name:"Retrofit", gate:"the policy gates",
+     q:"I have a bot or an agent already, and I'm not sure it's safe to ship.",
+     hint:"a script, an agent, an automation that acts for you",
+     caseId:"VH-022 · VH-056", caseName:"the $1 Chevy · Knight Capital", caseLine:"A dealership's chatbot agreed to sell a Tahoe for a dollar; a trading firm's deploy lost $440M in 45 minutes. Both shipped without a rule that could refuse.",
+     leave:"your policy in the catalog, a rule in CI that refuses the merge on weakening, and a diff a colleague can read",
+     time:"60 minutes · one install", ws:"levels/200-retrofit/WORKSHEET.html",
+     receipt:"a CI run that refused a downgrade, and the chain of receipts behind it",
+     wren:"Your policy is a pull request. I'll pair you with a 100 on Thursday."},
+    {id:"running", level:"300", name:"Hold", gate:"the operate gate",
+     q:"It's already running, and nobody can say who's watching it or how to stop it.",
+     hint:"agents that touch people, money or rights, in production",
+     caseId:"VH-015 · VH-035 · VH-011", caseName:"Arup · Cigna PXDX · nH Predict", caseLine:"A deepfake call moved $25M; an insurer's algorithm denied 300,000 claims in two months; a benefits model overruled doctors. None had a hold a human could catch.",
+     leave:"holds for a named human, the decay arithmetic, and a coverage number you can defend — or an honest \"cannot count yet\"",
+     time:"60 minutes today · a week of traffic in Fall", ws:"levels/300-hold/WORKSHEET.html",
+     receipt:"a hold that decayed on schedule, in the chain, with the number of actions it covered",
+     wren:"A hold decays in hours. Pick the one action you'd least like to explain, and gate that first."},
+    {id:"prove", level:"400", name:"Prove it", gate:"the audit gate",
+     q:"Someone needs proof of what the AI actually did — a regulator, a court, a board.",
+     hint:"an incident, an audit, a request you can't answer with a dashboard",
+     caseId:"VH-013 · VH-003 · VH-088", caseName:"Robodebt · Toeslagenaffaire · Horizon", caseLine:"Three governments' systems accused hundreds of thousands of people, and nobody could reproduce what the systems had done. The evidence should have been a bundle, not a memory.",
+     leave:"a verification of evidence you did not make, on a machine with no network, with your name on it — and a Thursday you hosted",
+     time:"60 minutes · the Thursday you host", ws:"levels/400-prove/WORKSHEET.html",
+     receipt:"an offline verification statement of someone else's bundle",
+     wren:"Read a stranger's bundle first. Then host. Marks are receipts; nothing said on the call is in one."},
+    {id:"unsure", level:"start", name:"Not sure yet", gate:"the ten-minute Gate Check",
+     q:"I'm not sure what my problem is — I just know AI is in the building.",
+     hint:"ten minutes, no account, a card you keep",
+     caseId:"today's case", caseName:"FailFest", caseLine:"Every Friday the Foundation reads one verified harm and names the gate that would have caught it. Ten questions tell you where you stand.",
+     leave:"a Gate Card — your verdict, your gaps, and the first level that fits",
+     time:"10 minutes · nothing installed", ws:"https://community.aigovops-foundation.com/gate-check.html?src=cafe",
+     receipt:"the Gate Card itself — it carries your verdict and gaps, never your answers",
+     wren:"Ten minutes. Then come back to this page and pick the door that stung."}
+  ];
+  const doors=document.getElementById('doors'), hour=document.getElementById('hour');
+  DOORS.forEach(d=>{const b=document.createElement('button'); b.className='door'; b.type='button'; b.setAttribute('aria-pressed','false'); b.dataset.id=d.id;
+    b.innerHTML=`<span class="lv">${d.level==='start'?'start here':'level '+d.level+' · '+d.name}</span><q>${d.q}</q><small>${d.hint}</small>`; doors.appendChild(b);});
+  function nextThursday(){const n=new Date(); const d=new Date(n); const day=n.getDay(); let add=(4-day+7)%7; if(add===0 && n.getHours()>=10) add=7; if(add===0) add=0; d.setDate(n.getDate()+add); return d;}
+  function fmt(d){return d.toLocaleDateString('en-US',{weekday:'long',day:'numeric',month:'long'});}
+  function render(d){
+    const thu=nextThursday();
+    const wsHref = d.ws.startsWith('http')?d.ws:P+d.ws;
+    hour.innerHTML=`<div>
+      <h3>Your first hour — ${d.level==='start'?'start here':'level '+d.level+', '+d.name}</h3>
+      <p class="case"><b>${d.caseId} · ${d.caseName}.</b> ${d.caseLine}</p>
+      <ol class="steps">
+        <li><i>1</i><div><b>Read the case</b> <span>— write one line saying what the AI did that mattered.</span></div></li>
+        <li><i>2</i><div><b>Declare the gate</b> <span>— ${d.gate}: a rule in plain words, or three lines of YAML; both are the same gate.</span></div></li>
+        <li><i>3</i><div><b>Prove it</b> <span>— ${d.receipt}.</span></div></li>
+        <li><i>4</i><div><b>Return</b> <span>— <a href="${P}docs/THURSDAY.html">${fmt(thu)}, 09:00</a>: show it to one person and say your rule. A host marks it.</span></div></li>
+      </ol>
+      <a class="cta" href="${wsHref}">${d.level==='start'?'Run the ten-minute Gate Check →':'Open the level '+d.level+' worksheet → '+d.time}</a>
+      <p class="wsay">“${d.wren}”</p>
+    </div>
+    <div class="card"><h4>Your card</h4>
+      <div class="kv"><span>Level</span><b>${d.level==='start'?'start — the Gate Check':d.level+' · '+d.name}</b></div>
+      <label>How do you like to write a rule?<select id="c-path"><option>in plain words</option><option>as code</option><option>show me both</option></select></label>
+      <label>Which lens is yours?<select id="c-lens"><option>engineer</option><option>compliance</option><option>auditor</option><option>regulator</option><option>none yet</option></select></label>
+      <label>Who will you show it to?<input id="c-who" placeholder="a colleague · the cohort · I don't know yet"></label>
+      <div class="kv"><span>Thursday</span><b>${fmt(thu)}, 09:00</b></div>
+      <div class="row"><button class="primary" id="c-copy" type="button">Copy my card</button><a href="${wsHref}"><button type="button">Open the worksheet</button></a></div>
+      <p class="note" id="c-note">Nothing is stored. Your card lives in your clipboard and on your Gate Card if you choose to share it.</p>
+    </div>`;
+    document.getElementById('c-copy').addEventListener('click',()=>{
+      const path=document.getElementById('c-path').value, lens=document.getElementById('c-lens').value, who=document.getElementById('c-who').value||"I don't know yet — pair me";
+      const notMine={engineer:'regulator',compliance:'engineer',auditor:'engineer',regulator:'engineer','none yet':'regulator'}[lens];
+      const txt=`WREN CARD · ${d.level==='start'?'start':'level '+d.level+' '+d.name} · path: ${path} · lens: ${lens} (not your own: ${notMine}) · Thursday ${fmt(thu)} 09:00 · show it to: ${who}\nWorksheet: ${wsHref}\nWren: ${d.wren}`;
+      const done=()=>{document.getElementById('c-note').textContent='Copied. Paste it anywhere you keep things; bring it Thursday.';};
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done,()=>{prompt('Your card:',txt);});} else {prompt('Your card:',txt);}
+    });
+    hour.classList.add('on'); if(!hour.dataset.first){hour.dataset.first='1';} hour.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+  doors.addEventListener('click',e=>{const b=e.target.closest('.door'); if(!b) return; doors.querySelectorAll('.door').forEach(x=>x.setAttribute('aria-pressed','false')); b.setAttribute('aria-pressed','true'); render(DOORS.find(d=>d.id===b.dataset.id)); if(history.replaceState) history.replaceState(null,'','#'+b.dataset.id);});
+  const h=location.hash.replace('#',''); const pre=DOORS.find(d=>d.id===h); if(pre){doors.querySelector(`[data-id="${h}"]`).setAttribute('aria-pressed','true'); render(pre);}
+})();
+</script>
+</body>
+</html>

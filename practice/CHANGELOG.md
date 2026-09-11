@@ -17,6 +17,7 @@ the release contract.
 - `docs/PRD-PREPEND-PROVE-IT-GATE.md` — PRD v1 preserved verbatim as the source thinking.
 
 ### Decided
+- 11 Sept (evening): **the café** — `index.html` is the front door: Wren asks what brought you in; five doors on real cases; the Wren Card built in the browser. Consolidation: checklists are the worksheets' last page (`CHECKLIST.md` removed); `FLOW.md` → `docs/FLOW.md` (one object, one home); the PRDs, decisions and maps moved to `docs/reference/`; `README.md` is a short pointer.
 - 11 Sept: Bob — yes to D1–D11 and the redesign's R1–R11 via the Decision Sheet; executed the same morning (see docs/DECISIONS.md). Ken's column open.
 
 ## [0.2.0] — 2026-09-11 (morning)

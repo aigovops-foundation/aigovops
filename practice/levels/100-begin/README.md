@@ -1,6 +1,6 @@
 # Level 100 — Begin
 
-> **v3:** owns the **pre-pend gate** · built on **VH-001 Air Canada** (alt VH-010 Mata v. Avianca) · maps to the **AAL-1 Policy Documentation** pattern · plain-words and code paths · mark = `practice.mark` by any host. Full activity: [`docs/MEMBER-ACTIVITIES.md`](../../docs/MEMBER-ACTIVITIES.md#level-100--begin--owns-the-pre-pend-gate--10-minutes--nothing-installed)
+> **v3:** owns the **pre-pend gate** · built on **VH-001 Air Canada** (alt VH-010 Mata v. Avianca) · maps to the **AAL-1 Policy Documentation** pattern · plain-words and code paths · mark = `practice.mark` by any host. Full activity: [`docs/MEMBER-ACTIVITIES.md`](../../docs/reference/MEMBER-ACTIVITIES.md#level-100--begin--owns-the-pre-pend-gate--10-minutes--nothing-installed)
 
 **Ten minutes. Nothing installed. The whole practice in miniature.**
 Status: **decide** — this kit describes what ships in P0 (days 1–30) if PRD v3 is approved.
