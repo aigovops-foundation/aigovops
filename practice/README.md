@@ -5,6 +5,7 @@ whatever your skills. The marks are the credential, and the credential is a rece
 AiGovOps Foundation · Release train `fall-2026` · `practice` **v1.0.0-rc.1** · 11 September 2026 · Apache-2.0
 
 **Start here:** read the [one-page manifesto](MANIFESTO.md), then open the worksheet for your level.
+Read it as pages at **[aigovops-foundation.github.io/practice](https://aigovops-foundation.github.io/practice/)**; this repo is the source of truth.
 Each takes an hour or less, runs on a real FailFest case, and ends with something you can show on Thursday.
 
 | Level | Worksheet | Checklist | Time | Install |
