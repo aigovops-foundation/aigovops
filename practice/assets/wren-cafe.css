@@ -1,0 +1,51 @@
+/* Wren Café — the AiGovOps design system on the practice pages (Primer + this layer).
+ * Source of truth: the site's design/wren-cafe/DESIGN-SYSTEM.md. Values are the site's, verbatim. */
+:root {
+  --wc-cream: #FAF7F0; --wc-deep-cream: #F1EAD8; --wc-deeper: #E9DFC6;
+  --wc-charcoal: #2B2B28; --wc-ink-soft: #4C4A42;
+  --wc-green: #2E7D4F; --wc-green-ink: #1F5E3A; --wc-green-deep: #0F4A2C;
+  --wc-orange: #E07A2A; --wc-orange-ink: #9C4E12; --wc-gold: #E8B54A;
+  --wc-line: rgba(43,43,40,.14); --wc-card-line: rgba(43,43,40,.08);
+  --wc-board: #22302F; --wc-board-2: #1A2626; --wc-chalk: #EFE9D8; --wc-chalk-dim: #B3AD9D; --wc-chalk-line: rgba(239,233,216,.18);
+  --wc-amber: #E0AC48; --wc-coffee: #6B4A35;
+  --wc-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --wc-sans: "Source Sans 3", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --wc-mono: "IBM Plex Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+  --wc-r-pill: 999px; --wc-r-card: 14px; --wc-r-door: 1.4rem;
+  --wc-shadow: 0 18px 40px -18px rgba(78,60,32,.35); --wc-shadow-sm: 0 10px 26px -14px rgba(78,60,32,.3);
+}
+html, body { background: var(--wc-cream); }
+body, .markdown-body { font-family: var(--wc-sans); color: var(--wc-charcoal); font-size: 17px; line-height: 1.6; }
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4 { font-family: var(--wc-serif); font-optical-sizing: auto; color: var(--wc-charcoal); border-bottom: 0; }
+.markdown-body h1 { font-weight: 560; letter-spacing: -.015em; line-height: 1.08; font-size: 2.4rem; }
+.markdown-body h2 { font-weight: 700; font-size: 1.7rem; line-height: 1.2; margin-top: 2.2em; padding-bottom: .3em; border-bottom: 1px solid var(--wc-line); }
+.markdown-body h3 { font-weight: 600; font-size: 1.25rem; }
+.markdown-body p, .markdown-body li, .markdown-body td { color: var(--wc-ink-soft); }
+.markdown-body strong, .markdown-body b { color: var(--wc-charcoal); }
+.markdown-body a { color: var(--wc-green-ink); text-decoration: underline; text-underline-offset: .18em; text-decoration-color: rgba(31,94,58,.35); }
+.markdown-body a:hover { color: var(--wc-green-deep); text-decoration-color: currentColor; }
+.markdown-body code, .markdown-body pre, .markdown-body kbd { font-family: var(--wc-mono); font-size: .88em; }
+.markdown-body code { background: var(--wc-deep-cream); color: var(--wc-charcoal); border-radius: 6px; padding: .12em .4em; }
+.markdown-body pre { background: var(--wc-board); color: var(--wc-chalk); border-radius: var(--wc-r-card); padding: 16px 18px; }
+.markdown-body pre code { background: transparent; color: inherit; padding: 0; }
+.markdown-body blockquote { border-left: 3px solid var(--wc-amber); color: var(--wc-coffee); font-family: var(--wc-serif); font-style: italic; font-size: 1.05em; padding: .2em 0 .2em 1em; margin: 1.2em 0; }
+.markdown-body table { border-collapse: collapse; width: 100%; font-size: .95em; }
+.markdown-body table th { font-family: var(--wc-mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--wc-ink-soft); background: transparent; border: 0; border-bottom: 1px solid var(--wc-line); text-align: left; padding: 8px 10px; }
+.markdown-body table td { border: 0; border-bottom: 1px solid var(--wc-card-line); padding: 9px 10px; vertical-align: top; }
+.markdown-body table tr { background: transparent !important; }
+.markdown-body hr { border: 0; border-top: 1px solid var(--wc-line); margin: 2.4em 0; }
+.markdown-body input[type="checkbox"] { accent-color: var(--wc-green); width: 1.05em; height: 1.05em; }
+.markdown-body img { max-width: 100%; border-radius: var(--wc-r-card); }
+.container-lg { max-width: 880px; }
+/* the practice nav + footer (the layout) */
+.practice-nav { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; align-items: baseline; font-size: 15px; margin-bottom: 1.6rem; padding-bottom: .8rem; border-bottom: 1px solid var(--wc-line); }
+.practice-nav a { color: var(--wc-ink-soft); text-decoration: none; }
+.practice-nav a:hover { color: var(--wc-green-deep); text-decoration: underline; }
+.practice-nav b { font-family: var(--wc-serif); font-size: 17px; font-weight: 600; }
+.practice-nav b a { color: var(--wc-charcoal); }
+.practice-foot { border-top: 1px solid var(--wc-line); margin-top: 3rem; padding-top: 1rem; font-size: 14.5px; color: var(--wc-ink-soft); }
+.practice-foot p { margin: 0 0 .4rem; }
+.practice-foot strong { color: var(--wc-charcoal); }
+/* one focus ring */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--wc-gold); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
