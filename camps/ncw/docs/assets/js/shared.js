@@ -184,7 +184,7 @@
               </ul>
             </div>
           </div>
-          <p class="mt-14 pt-10 border-t border-cream/15 font-serif italic text-cream/85 text-[15.5px] max-w-2xl">Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes, and keep the garden of humanity growing.</p>
+          <p class="mt-14 pt-10 border-t border-cream/15 font-serif italic text-cream/85 text-[15.5px] max-w-2xl">Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes. Prove it in ten minutes.</p>
           <div class="mt-8 grid sm:grid-cols-2 gap-x-10 gap-y-8">
             <nav aria-label="Explore the estate">
               <span class="aig-ef-h block font-700 text-xs uppercase tracking-[0.16em] text-cream/45 mb-4">Explore the estate</span>
