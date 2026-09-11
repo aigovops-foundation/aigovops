@@ -109,43 +109,34 @@
     </div>
   </section>
 
-  <section class="section" style="background:var(--garden-cream)">
-    <div class="container" style="max-width:640px">
-      <h2 data-i18n="community.join_title">What happens when you join</h2>
-      <ol style="line-height:1.9;font-size:1rem;color:var(--garden-ink-soft);padding-left:1.2em">
-        <li><b style="color:var(--garden-charcoal)">Sign in with your email.</b> No password, no card — a sign-in link does it.</li>
-        <li><b style="color:var(--garden-charcoal)">A founder welcomes you in.</b> Ken or Bob personally — usually quickly.</li>
-        <li><b style="color:var(--garden-charcoal)">The Library opens.</b> The cases, the test, the gates live — and Thursday at 09:00, where receipts are shown and marks are made.</li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="section" id="practice" style="background:var(--light)">
-    <div class="container" style="max-width:640px">
-      <h2 data-i18n="community.practice_title">The practice — start at the café</h2>
-      <p class="section-sub">Wren asks what brought you in and hands you a card. Four levels, one hour each, on real cases; a host marks it on Thursday. <a href="https://aigovops-foundation.github.io/practice/">Sit down →</a> &nbsp;·&nbsp; <a href="open-source.html#practice">The four levels, the manifesto and the engines →</a></p>
-    </div>
-  </section>
-
-  <section class="section" id="ways-to-contribute" style="background:var(--light)">
+  <section class="section wc-path-section" id="path" style="background:var(--garden-cream)">
     <div class="container">
-      <h2 data-i18n="community.give_title">Give time — six ways to help</h2>
-      <p class="section-sub">Every contribution — code, documentation, feedback, or funding — matters.</p>
-      <div class="ways-grid">
-        <div class="way"><div class="way-icon"><svg class="wc-icon" aria-hidden="true"><use href="#wc-code"></use></svg></div><div class="way-title">Write code</div><div class="way-desc">Pick an open issue on <a href="https://github.com/aigovops-foundation/aigovops-beacon/issues" target="_blank" rel="noopener">Beacon</a>, <a href="https://github.com/aigovops-foundation/umbrella-govops/issues" target="_blank" rel="noopener">Umbrella</a>, <a href="https://github.com/aigovops-foundation/aigovops-lantern/issues" target="_blank" rel="noopener">Lantern</a>, or <a href="https://github.com/aigovops-foundation" target="_blank" rel="noopener">any foundation repo</a>. First-time contributors welcome.</div></div>
-        <div class="way"><div class="way-icon"><svg class="wc-icon" aria-hidden="true"><use href="#wc-book"></use></svg></div><div class="way-title">Improve docs</div><div class="way-desc">Documentation is governance. Help make the OVERT spec and the tool guides clearer for new practitioners.</div></div>
-        <div class="way"><div class="way-icon"><svg class="wc-icon" aria-hidden="true"><use href="#wc-scale"></use></svg></div><div class="way-title">Map frameworks</div><div class="way-desc">Know a regulation not in our frameworks explorer? Open a PR to add it — 40+ frameworks and growing.</div></div>
-        <div class="way"><div class="way-icon"><svg class="wc-icon" aria-hidden="true"><use href="#wc-globe"></use></svg></div><div class="way-title">Translate</div><div class="way-desc">The site has EN/ES i18n support. Help extend to additional languages — especially for underserved markets.</div></div>
-        <div class="way"><div class="way-icon"><svg class="wc-icon" aria-hidden="true"><use href="#wc-megaphone"></use></svg></div><div class="way-title">Spread the word</div><div class="way-desc">Star the repos on GitHub, share the newsletter, or cite OVERT in your own governance work.</div></div>
-        <div class="way"><div class="way-icon"><svg class="wc-icon" aria-hidden="true"><use href="#wc-heart"></use></svg></div><div class="way-title">Fund the standard</div><div class="way-desc">GitHub Sponsors and Open Collective. Even a coffee keeps the CI running.</div></div>
+      <h2 class="section-title" style="text-align:center" data-i18n="path.title">One path, three steps</h2>
+      <p class="section-sub" style="text-align:center;max-width:62ch;margin:0 auto 28px">Join, come on Thursday, give an hour. That is the whole of it.</p>
+      <div class="wc-path">
+      <div class="wc-step">
+        <span class="wc-step-n">1</span>
+        <span class="wc-eyebrow">Join</span>
+        <h3>Sign in with your email</h3>
+        <p>No password, no card — a sign-in link does it. A founder welcomes the week’s cohort; the Library opens.</p>
+        <a class="btn btn-primary" href="https://community.aigovops-foundation.com/signin.html" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Community: step 1')">Join free →</a>
       </div>
-    </div>
-  </section>
-
-  <section class="section" style="background:var(--garden-deep-cream);text-align:center">
-    <div class="container">
-      <p style="font-size:.95rem;color:var(--garden-ink-soft)">Prefer to give another way?
-        <a href="support.html" style="color:var(--garden-green-ink);font-weight:600">Give money &rarr;</a></p>
+      <div class="wc-step">
+        <span class="wc-step-n">2</span>
+        <span class="wc-eyebrow">Return</span>
+        <h3>Thursday at 09:00</h3>
+        <p>Bring a receipt from the café’s worksheet, or come to watch one. The first five minutes are for receipts; a host marks levels.</p>
+        <a class="btn btn-outline" href="https://aigovops-foundation.github.io/practice/docs/THURSDAY.html" onclick="if(window.plausible)plausible('Community: step 2')">The run-of-show →</a>
+      </div>
+      <div class="wc-step">
+        <span class="wc-step-n">3</span>
+        <span class="wc-eyebrow">Give</span>
+        <h3>One hour, one open issue</h3>
+        <p>Pick an issue on Beacon, Umbrella, Lantern or the practice. First-time contributors welcome; every merged change leaves a receipt.</p>
+        <a class="btn btn-outline" href="https://github.com/aigovops-foundation" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Community: step 3')">Pick an issue →</a>
+      </div>
+      </div>
+      <p class="wc-more"><span data-i18n="path.more">Everything else is one page further:</span> the other ways to help, giving money, the newsletter, the practice. <a href="resources.html#community">Resources →</a></p>
     </div>
   </section>
 </main>

@@ -91,3 +91,24 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 /* the licence and the standard, said once */
 .site-footer .footer-marks { font-family: var(--wc-mono); font-size: var(--wc-label-floor); letter-spacing: .08em; text-transform: uppercase; color: var(--garden-on-dark-dim); margin: 6px 0 10px; }
+
+/* the one path — three steps, one action each */
+.wc-path { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.wc-step { background: #fff; border: 1px solid var(--wc-card-line); border-radius: var(--wc-r-card); box-shadow: var(--wc-shadow-sm); padding: 24px 22px 22px; display: flex; flex-direction: column; gap: 8px; position: relative; }
+.wc-step-n { position: absolute; top: 18px; right: 20px; font-family: var(--wc-serif); font-size: 1.6rem; font-weight: 500; color: var(--wc-orange-ink); line-height: 1; }
+.wc-eyebrow { font-family: var(--wc-mono); font-size: var(--wc-label-floor); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--wc-green-ink); }
+.wc-step h3 { font-family: var(--wc-serif); font-size: 1.25rem; font-weight: 600; margin: 0; color: var(--wc-charcoal); padding-right: 2rem; }
+.wc-step p { margin: 0 0 8px; color: var(--wc-ink-soft); font-size: .95rem; line-height: 1.55; flex: 1; }
+.wc-step .btn { align-self: flex-start; }
+.wc-more { text-align: center; color: var(--wc-ink-soft); font-size: .95rem; margin: 26px auto 0; max-width: 70ch; line-height: 1.6; }
+.wc-more a { font-weight: 600; color: var(--wc-green-ink); }
+.wc-resources h2 { font-family: var(--wc-serif); font-size: 1.5rem; margin: 2.2rem 0 .6rem; padding-bottom: .3rem; border-bottom: 1px solid var(--wc-line); }
+.wc-resources h2:first-child { margin-top: 0; }
+.wc-resources h2 a { color: var(--wc-charcoal); text-decoration: none; }
+.wc-resources h2 a:hover { color: var(--wc-green-deep); }
+.wc-resources ul { list-style: none; margin: 0; padding: 0; }
+.wc-resources li { padding: 8px 0; border-bottom: 1px solid var(--wc-card-line); color: var(--wc-ink-soft); line-height: 1.55; }
+.wc-resources li a { font-weight: 600; color: var(--wc-green-ink); }
+.wc-resources .wc-note { color: var(--wc-ink-soft); font-size: .95rem; line-height: 1.6; margin: 10px 0 6px; }
+.wc-quotes li { font-family: var(--wc-serif); font-style: italic; color: var(--wc-coffee); }
+@media (max-width: 720px) { .wc-path { grid-template-columns: 1fr; } }

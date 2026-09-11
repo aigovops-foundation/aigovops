@@ -347,15 +347,15 @@ checkTrue('deploy.yml.disabled preserved', fs.existsSync(path.join(__dirname,'..
 // ── Alpha: Vendor RFI integration (project 2 of 2) ────────────────────────
 // M13 three doors: the alpha deep-dives moved wholesale to stay-at-yes.html
 // (alpha.html is now a redirect stub).
-console.log('\n  [Alpha — Vendor RFI (open-source.html)]');
-const alphaHtml = fs.readFileSync(path.join(__dirname, '../open-source.html'), 'utf8');
+console.log('\n  [Alpha — Vendor RFI (resources.html)]');
+const alphaHtml = fs.readFileSync(path.join(__dirname, '../resources.html'), 'utf8');
 const RFI = 'https://aigovops-foundation.github.io/aigovops-vendor-rfi';
-checkTrue('open-source.html has the Vendor RFI section',          alphaHtml.includes('Vendor RFI'));
+checkTrue('resources.html has the Vendor RFI entry',          alphaHtml.includes('Vendor RFI'));
 checkTrue('alpha links to the Vendor RFI hub',             alphaHtml.includes(`${RFI}/`));
 checkTrue('alpha links to audit training',                 alphaHtml.includes(`${RFI}/training.html`));
 checkTrue('alpha links to the 50-vendor comparison',       alphaHtml.includes(`${RFI}/comparison.html`));
 checkTrue('Vendor RFI links open in a new tab safely',     alphaHtml.includes(`href="${RFI}/" target="_blank" rel="noopener"`));
-checkTrue('open-source carries the live RFI embed',        alphaHtml.includes('aigovops-vendor-rfi/comparison.html') && alphaHtml.includes('aigovops-agent-vendor-rfi'));
+checkTrue('resources links the RFI comparison and credits its agent', alphaHtml.includes('aigovops-vendor-rfi/comparison.html') && alphaHtml.includes('aigovops-agent-vendor-rfi'));
 checkTrue('Vendor RFI credits its governing agent',        alphaHtml.includes('aigovops-agent-vendor-rfi'));
 checkFalse('Alpha uses the canonical org copy (no personal fork URL)', alphaHtml.includes('bobrapp.github.io/aigov'));
 checkFalse('Alpha does not relink the retired /vendor-rfi-alpha bundle', alphaHtml.includes('/vendor-rfi-alpha/'));
