@@ -22,7 +22,7 @@ check() {
   fi
 }
 
-CREED="Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes, and keep the garden of humanity growing."
+CREED="Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes. Prove it in ten minutes."
 TOKENS="$REPO/design/aigovops-july-2026/tokens.css"
 GARDEN="$REPO/css/garden.css"
 

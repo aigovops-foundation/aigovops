@@ -319,7 +319,7 @@ checkTrue('Support give rail keeps the $500 gift',        supportHtml.includes('
 checkFalse('Parked-state apology copy is gone',           supportHtml.includes('checkout is being set up'));
 checkTrue('Support giving CTAs are parked (data-orig)',   supportHtml.includes('data-orig='));
 checkFalse('No live GitHub Sponsors / Open Collective link', /href="https:\/\/(github\.com\/sponsors|opencollective\.com)/.test(supportHtml));
-checkTrue('Press page has EIN pending placeholder',       pressHtml.includes('IRS EIN') || pressHtml.includes('EIN'));
+checkTrue('Press folded into founders (redirect stub, decision 3)', pressHtml.includes('http-equiv="refresh"') && pressHtml.includes('founders.html'));
 checkTrue('Cloudflare deploy instructions in wrangler',   fs.existsSync(path.join(__dirname,'../functions/wrangler.toml')) && fs.readFileSync(path.join(__dirname,'../functions/wrangler.toml'),'utf8').includes('wrangler deploy'));
 
 // ── PR #9: Wix blog content migration ──────────────────────────────────────

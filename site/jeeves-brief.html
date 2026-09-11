@@ -1,107 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
+  <meta charset="UTF-8" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://plausible.io https://www.aigovops-foundation.com https://community.aigovops-foundation.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://aigovops-foundation.github.io https://buy.stripe.com; connect-src 'self' https://plausible.io https://community.aigovops-foundation.com https://raw.githubusercontent.com; object-src 'none'; base-uri 'self'">
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Jeeves — the governed fleet · one-page brief · AiGovOps</title>
-<link rel="canonical" href="https://www.aigovops-foundation.com/jeeves-brief.html" />
-<meta name="description" content="A one-page brief: how the AiGovOps fleet runs itself under Jeeves, with a human holding every irreversible move." />
-<meta property="og:title" content="Jeeves — the governed fleet · one-page brief · AiGovOps" />
-<meta property="og:description" content="A one-page brief: how the AiGovOps fleet runs itself under Jeeves, with a human holding every irreversible move." />
-<meta property="og:image" content="https://www.aigovops-foundation.com/images/founders.jpg" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23071a12'/%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%231d9e75' stroke-width='1.5'/%3E%3Cpath d='M11 20 L16 9 L21 20 Z' fill='%230f6e56'/%3E%3C/svg%3E" />
-<style>
-  /* garden-warm skin (M6b): the brief keeps its own token set, re-pointed to garden values */
-  :root{--navy:#2B2B28;--ink:#4C4A42;--teal:#1F5E3A;--teal2:#2E7D4F;--wash:#F1EAD8;--page:#FAF7F0;--card:#fff;--line:rgba(43,43,40,.14);--muted:#4C4A42;--green:#1F5E3A;--amber:#9C4E12;
-    --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--serif:Georgia,"Times New Roman",serif;}
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--page);color:var(--ink);font-family:var(--font);line-height:1.5;font-size:14px;-webkit-font-smoothing:antialiased}
-  .sheet{max-width:820px;margin:18px auto;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 10px 26px -14px rgba(78,60,32,.3)}
-  .top{background:linear-gradient(135deg,#2E7D4F,#0F4A2C 70%);color:#fff;padding:20px 28px}
-  .brand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-  .brand b{font-size:14px;font-weight:600}
-  .brand span{display:block;font-size:10.5px;color:#F4FAF4;letter-spacing:.14em;text-transform:uppercase}
-  h1{font-family:var(--serif);font-weight:700;font-size:1.7rem;margin:0 0 4px;color:#fff}
-  .top p{margin:0;color:#F4FAF4;font-size:.95rem;max-width:620px}
-  .body{padding:22px 28px 26px}
-  h2{font-size:.78rem;text-transform:uppercase;letter-spacing:.13em;color:var(--teal);margin:0 0 10px;font-weight:700}
-  .lead{font-size:1.02rem;color:var(--navy);margin:0 0 20px;line-height:1.55}
-  .lead b{color:var(--teal)}
-  .cols{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-  @media(max-width:620px){.cols{grid-template-columns:1fr}}
-  .law{display:flex;gap:11px;margin:0 0 11px}
-  .law .v{flex:0 0 22px;height:22px;border-radius:6px;display:grid;place-items:center;font-weight:700;font-size:12px;color:#fff}
-  .law .t{font-size:13px}
-  .law .t b{color:var(--navy)}
-  ul.live{list-style:none;margin:0;padding:0}
-  ul.live li{position:relative;padding:4px 0 4px 22px;font-size:13px}
-  ul.live li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:700}
-  .pill{display:inline-block;background:var(--wash);color:var(--teal);font-size:11px;font-weight:600;padding:2px 9px;border-radius:6px;margin:0 4px 4px 0}
-  .key{background:var(--wash);border-radius:10px;padding:13px 16px;margin:20px 0 0}
-  .key b{color:var(--navy)}
-  .stats{display:flex;gap:24px;flex-wrap:wrap;margin:18px 0 0;border-top:1px solid var(--line);padding-top:16px}
-  .stat .n{font-family:var(--serif);font-weight:700;font-size:1.5rem;color:var(--teal)}
-  .stat .l{font-size:11.5px;color:var(--muted)}
-  .foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center;border-top:1px solid var(--line);margin-top:18px;padding-top:14px;font-size:12.5px;color:var(--muted)}
-  .foot a{color:var(--teal);text-decoration:none;font-weight:600}
-  @media print{body{background:#fff}.sheet{border:0;margin:0;max-width:100%}.top{-webkit-print-color-adjust:exact;print-color-adjust:exact}.noprint{display:none}}
-  /* a11y pack */
-  a:focus-visible,button:focus-visible,summary:focus-visible,[role="button"]:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--teal,#1d9e75);outline-offset:2px}
-  @media (prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
-</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ask — page moved | AiGovOps Foundation</title>
+  <meta http-equiv="refresh" content="2;url=index.html" />
+  <meta name="robots" content="noindex" />
+  <link rel="canonical" href="https://www.aigovops-foundation.com/index.html" />
+  <meta name="description" content="The Jeeves pages folded into the Ask widget — the same concierge, one door." />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- M6b garden-warm skin (shared system) -->
+  <link rel="stylesheet" href="css/garden.css" />
+  <style>
+    /* ── Redirect stub — garden chrome-lite (M11 pattern · M13 three doors) ── */
+    .stub-main { background: var(--garden-deep-cream); min-height: 60vh; display: flex; align-items: center; text-align: center; padding: 64px 24px; position: relative; overflow: hidden; }
+    .stub-main::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(480px 220px at 10% 115%, rgba(232,181,74,.28), transparent 70%), radial-gradient(460px 220px at 92% -15%, rgba(46,125,79,.16), transparent 70%); }
+    .stub-main .container { position: relative; max-width: 560px; margin: 0 auto; }
+    .stub-eyebrow { font-size: .72rem; font-weight: 600; font-family: 'Courier New', monospace; text-transform: uppercase; letter-spacing: .16em; color: var(--garden-green-ink); margin-bottom: 12px; }
+    .stub-main h1 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 600; color: var(--garden-charcoal); margin-bottom: 12px; }
+    .stub-main p { color: var(--garden-ink-soft); font-size: 1rem; line-height: 1.6; margin-bottom: 28px; }
+    .stub-pill { display: inline-flex; align-items: center; gap: 8px; background: var(--garden-green); color: #fff; text-decoration: none; border-radius: 999px; padding: 13px 26px; font-size: .95rem; font-weight: 600; transition: background .15s; }
+    .stub-pill:hover { background: var(--garden-green-deep); }
+    .stub-note { font-size: .8rem; margin-top: 18px; margin-bottom: 0; }
+    .stub-footer { background: var(--garden-cream); border-top: 1px solid var(--garden-line); padding: 24px; text-align: center; }
+    .stub-footer .creed { font-family: var(--garden-serif, Georgia, serif); font-style: italic; font-size: .88rem; color: var(--garden-ink-soft); margin: 0 0 6px; }
+    .stub-footer .fine { font-size: .78rem; color: var(--garden-ink-soft); margin: 0; }
+  </style>
 </head>
 <body>
-<div class="sheet">
-  <div class="top">
-    <div class="brand">
-      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#071a12"/><circle cx="16" cy="16" r="14" fill="none" stroke="#1d9e75" stroke-width="1.4"/><path d="M11 20 L16 9 L21 20 Z" fill="#0f6e56"/><circle cx="22" cy="9" r="2.4" fill="#5dcaa5"/></svg>
-      <div><b>AiGovOps Foundation</b><span>Jeeves · the governed fleet</span></div>
-    </div>
-    <h1>The site runs itself. Humans hold the keys.</h1>
-    <p>A multi-agent operation where everything reversible happens automatically — and every irreversible move pauses for a named human.</p>
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo-link" aria-label="AiGovOps Foundation home">
+      <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="height:38px;width:38px;flex-shrink:0">
+        <title>AiGovOps Foundation</title>
+        <circle cx="100" cy="100" r="96" fill="#071a12"/>
+        <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+        <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+        <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
+        <ellipse cx="100" cy="57" rx="4" ry="6" fill="#9fe1cb" opacity="0.95"/>
+        <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+      </svg>
+    </a>
   </div>
-  <div class="body">
-    <p class="lead">A master agent, <b>Jeeves</b>, takes a plain-English goal, plans it, and dispatches a fleet of departments to do the work. A cryptographic <b>gate</b> sits on every action: reversible work proceeds on its own; anything irreversible holds for a steward. The result is a platform that runs ~99% on its own, with a human in the loop exactly — and only — where it counts.</p>
+</header>
 
-    <div class="cols">
-      <div>
-        <h2>The one law</h2>
-        <div class="law"><span class="v" style="background:var(--green)">1</span><span class="t"><b>Proceed.</b> The effect is reversible (a draft, a read, an un-publish). No human needed.</span></div>
-        <div class="law"><span class="v" style="background:var(--amber)">?</span><span class="t"><b>Hold for a steward.</b> The effect is irreversible — send, pay, deploy, delete. Waits for Ken or Bob.</span></div>
-        <div class="law"><span class="v" style="background:#7c867f">0</span><span class="t"><b>Stop.</b> Unsafe or unreviewed. It does not run.</span></div>
-        <p style="font-size:12.5px;color:var(--muted);margin:12px 0 0">Agents have no ambient authority — every effect goes through the gate, and every one that runs is Ed25519-signed into an auditable ledger.</p>
-      </div>
-      <div>
-        <h2>Live in production today</h2>
-        <ul class="live">
-          <li>Jeeves plans goals with Claude, validated step-by-step</li>
-          <li>9 departments; one ? queue for all held actions</li>
-          <li>Approve / deny from the cockpit, Slack, or Telegram</li>
-          <li>Runs itself on a 15-minute tick; backups + peer sync</li>
-          <li>An ops runbook that flags only what needs a human</li>
-        </ul>
-        <div style="margin-top:12px">
-          <span class="pill">no ambient authority</span><span class="pill">signed receipts</span><span class="pill">sandboxed tools</span><span class="pill">steward-only admin</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="key"><b>Why it matters.</b> Devin, Claude, and OpenAI agents are powerful but bounded by prompts and a sandbox. AiGovOps adds a cryptographically enforced reversibility boundary: no irreversible action — public or private — happens without a named human. That is the moat, and it is what makes "mostly automatic" safe.</div>
-
-    <div class="stats">
-      <div class="stat"><div class="n">~99%</div><div class="l">of work runs without a human</div></div>
-      <div class="stat"><div class="n">60s</div><div class="l">scoped token per approved action</div></div>
-      <div class="stat"><div class="n">2</div><div class="l">people who hold every key (Ken &amp; Bob)</div></div>
-      <div class="stat"><div class="n">0</div><div class="l">irreversible actions taken unattended</div></div>
-    </div>
-
-    <div class="foot">
-      <span>© 2026 AiGovOps Foundation — a 501(c)(3) nonprofit. Apache-2.0.</span>
-      <span class="noprint"><a href="jeeves-estate.html">▶ See the fleet run, live →</a> &nbsp;·&nbsp; <a href="https://community.aigovops-foundation.com/" target="_blank" rel="noopener">See it live ↗</a></span>
-    </div>
+<main id="main-content" class="stub-main">
+  <div class="container">
+    <p class="stub-eyebrow">This page moved</p>
+    <h1>Jeeves is now one surface: Ask, on every page.</h1>
+    <p>The Jeeves pages folded into the Ask widget — the same concierge, one door.</p>
+    <a class="stub-pill" href="index.html">Go home and ask &rarr;</a>
+    <p class="stub-note">Ship safe AI — never unsafe AI. If you are not redirected in a moment, use the button.</p>
   </div>
-</div>
-<footer role="contentinfo" style="padding:20px 24px;text-align:center;font-style:italic;font-size:.85rem;opacity:.75">Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes, and keep the garden of humanity growing.</footer>
+</main>
+
+<footer class="site-footer stub-footer" role="contentinfo">
+  <div class="container">
+    <p class="creed">Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes. Prove it in ten minutes.</p>
+      <p class="footer-gate"><a href="https://community.aigovops-foundation.com/gate-check.html?src=site-footer" onclick="if(window.plausible)plausible('Gate Check: footer')">Ten minutes, no account — run the Gate Check →</a></p>
+    <p class="fine">© 2026 AiGovOps Foundation — 501(c)(3) Nonprofit</p>
+  </div>
+</footer>
 </body>
 </html>

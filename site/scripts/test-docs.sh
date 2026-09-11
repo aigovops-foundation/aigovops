@@ -113,7 +113,7 @@ check_contains "scripts/cloud-mary.sh" "Orchestrator has --errors flag" "--error
 check_contains "scripts/cloud-mary.sh" "Orchestrator has --design flag" "--design)"
 check_contains "scripts/cloud-mary.sh" "Orchestrator has --happy flag"  "--happy)"
 check_contains "scripts/test-design.sh" "Design tier checks token drift"   "Token drift"
-check_contains "scripts/test-design.sh" "Design tier checks footer creed"  "keep the garden of humanity growing"
+check_contains "scripts/test-design.sh" "Design tier checks footer creed"  "Prove it in ten minutes."
 check_contains "scripts/test-happy.sh"  "Happy tier walks the Stripe path" "buy.stripe.com"
 check_contains "scripts/test-happy.sh"  "Happy tier checks the membership wall" "/api/auth/verify"
 check_contains "scripts/lib/health-checks.sh" "Lib detects redirect loops" "error_no_redirect_loop"

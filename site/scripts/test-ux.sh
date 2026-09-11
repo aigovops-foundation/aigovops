@@ -107,7 +107,7 @@ for p in NON_STUBS:
 section("Creed footer present (presence only — design tier checks the words)")
 for p in pages:
     emit(f"creed present: {p}",
-         "ok" if "keep the garden of humanity growing" in read(p) else "creed footer missing")
+         "ok" if "Prove it in ten minutes." in read(p) else "creed footer missing")
 
 # ── 5. viewport meta ──────────────────────────────────────────────────────
 section("Viewport meta everywhere")
