@@ -57,7 +57,7 @@ check_html "$REPO/index.html" "Chat close button aria-label"       'aria-label="
 
 echo ""
 echo "  [index.html — Action Cards]"
-check_html "$REPO/index.html" "Schedule button aria-label"         'aria-label="Schedule a call with a community leader"'
+check_html "$REPO/index.html" "Wren portrait has alt text"          'alt="Wren, the practitioner at the table"'
 check_html "$REPO/index.html" "Hero SVG aria-hidden (decorative)"  'aria-hidden="true"'
 # M14 dead-simple: Newsletter demoted from action card to a quiet hero link
 check_html "$REPO/index.html" "Newsletter quiet link has visible text" '>Newsletter</a>'
