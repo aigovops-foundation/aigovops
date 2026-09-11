@@ -15,6 +15,7 @@ window.I18N = {
     join_title: 'Qué pasa cuando te unes',
     practice_title: 'La práctica — cuatro niveles, una hora cada uno',
     practice_sub: 'Sea cual sea tu habilidad en políticas o en tecnología, empieza donde estás. Cada nivel ejecuta las cuatro compuertas — antes de una acción, antes de que una regla se publique, mientras se ejecuta y después — sobre un caso real de los 100 daños verificados, y termina con algo que puedes mostrar el jueves. Construida sobre OVERT, el estándar abierto de Glacis Technologies.',
+    cafe: 'Empieza en el café — di qué te trajo aquí',
     l100: '100 · Empezar — 45 min, nada que instalar',
     l200: '200 · Adaptar — 60 min, una instalación',
     l300: '300 · Retener — 60 min hoy',

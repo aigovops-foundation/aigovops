@@ -15,6 +15,7 @@ window.I18N = {
     join_title: 'What happens when you join',
     practice_title: 'The practice — four levels, one hour each',
     practice_sub: 'Whatever your policy skill or your technical skill, start where you are. Every level runs the four gates — before an action, before a rule ships, while it runs, and after — on a real case from the 100 verified harms, and ends with something you can show on Thursday. Built on OVERT, the open standard from Glacis Technologies.',
+    cafe: 'Start at the café — say what brought you in',
     l100: '100 · Begin — 45 min, nothing installed',
     l200: '200 · Retrofit — 60 min, one install',
     l300: '300 · Hold — 60 min today',
