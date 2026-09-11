@@ -93,6 +93,7 @@ it always pairs you with someone. [The journey, drawn](docs/JOURNEY.md).
 - [`docs/WREN.md`](docs/WREN.md) — Wren, the practitioner at the table: the voice, the readiness walk, the art brief, and Bob's Wren Card.
 - [`docs/JOURNEY.md`](docs/JOURNEY.md) — the one loop, drawn, with the objects that hold it together and the rules that keep it simple.
 - [`docs/THURSDAY.md`](docs/THURSDAY.md) — the run-of-show and the mark line (the receipt until the receipt exists).
+- [`docs/practitioners/`](docs/practitioners/) — practitioner #1's worksheet, started ([Bob's 100](docs/practitioners/bob-100.md)), and [the stranger's invitation](docs/practitioners/STRANGER-INVITE.md) (practice #1, the release gate).
 - [`levels/`](levels/) — one kit per level: README (who, tools, return), WORKSHEET (the hour), CHECKLIST (one page), `policy.yaml`.
 - [`scripts/humans.sh`](scripts/humans.sh) — the founders' single paste script: local commit, org repo, release tag.
 
