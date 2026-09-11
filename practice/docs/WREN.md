@@ -12,7 +12,7 @@ chalkboard behind her already carries the whole voice of the practice: *Trust th
 If it's not measured, it didn't cause an incident — someone, probably. Governance > guessing. Human in
 the loop — out for coffee. Metrics or it didn't happen. 97% confidence… out of how many?*
 
-![Wren at the coffee shop](wren/wren-coffee-shop.jpg)
+![Wren at the coffee shop](wren/wren-coffee-shop-public.jpg)
 
 From the Fall release on, Wren is the face of the one concierge surface the redesign left: **Ask**
 (decision R4). In public copy the surface is **"Ask Wren"**; Jeeves stays the name of the agent estate in
@@ -62,7 +62,7 @@ person. She signs nothing; a host does.
 | **200 Retrofit** | Pairs you with a 100 for Thursday; turns your four sentences into the story draft; opens the catalog PR | *Your policy is a PR. You're paired with Dana on Thursday.* |
 | **300 Hold** | Reminds the named approver a hold is waiting and when it decays; shows the coverage number and asks "out of how many?" | *A hold decays in 6 hours. Pick a bundle to verify before Thursday.* |
 | **400 Prove** | Keeps the host rota; drafts the run-of-show; files the upstream issue with the case number | *Your Thursday is the 8th. Here's the run-of-show.* |
-| **Every Thursday** | Reads out who is showing a receipt, whose mark is due, who hosts next | *Marks are receipts. Nothing you said today is in one.* |
+| **Every Thursday** | Reads out who is showing a receipt, whose mark is due, who hosts next — the run-of-show and the mark line are in [`THURSDAY.md`](THURSDAY.md) | *Marks are receipts. Nothing you said today is in one.* |
 
 ## The readiness walk — "Get ready with Wren"
 
@@ -94,8 +94,9 @@ host marks.
 6. **Pouring for someone else** — the 400 who hosts (the host rota).
 
 Sizes: 64 px (widget), 200 px (cards), and one 1200 × 630 shop variant for the default story image.
-Two notes on the existing art before it goes public: the **CMU** sticker on the laptop is someone else's
-mark — swap it for the lantern; and the *AI* patch on the jacket can become the Foundation mark.
+Two notes on the existing art: the **CMU** sticker on the laptop was someone else's mark — `wren-coffee-shop-public.jpg`
+carries the lantern in its place (the original is kept beside it for Ken's redraw); and the *AI* patch on the
+jacket can become the Foundation mark.
 
 ## Where it lives
 

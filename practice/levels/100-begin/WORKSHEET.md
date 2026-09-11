@@ -115,7 +115,7 @@ That is level 100. A host marks it. A bundle nobody has seen is not a 100 yet.
 |---|---|
 | have no computer | Do steps 1–4 on the printed worksheet. On Thursday a host lends you a laptop for step 5 — the receipt is still yours, signed with a key made in front of you. |
 | have a phone only | The public cases page and Beacon's demo both run on a phone. The bundle downloads to your phone; `VERIFY.md` opens in any text viewer. |
-| read Spanish | The manifesto is in `docs/es/`; the worksheet's Spanish version follows the same path (`docs/es/levels/100`). Say so on the Wren Card and a Spanish-speaking host pairs with you. |
+| read Spanish | [Esta hoja en español](../../docs/es/levels/100-begin/WORKSHEET.md) · [el manifiesto](../../docs/es/MANIFESTO.md). Say so on the Wren Card and a Spanish-speaking host pairs with you. |
 | have ten minutes, not 45 | Do steps 1, 3 (one sentence, plain words) and 5. That is a receipt. Steps 2, 4, 6 and 7 fit on Thursday. |
 | cannot do Thursdays | Post the bundle hash in the cohort thread with your one sentence. A host marks asynchronously; ask Wren for the next second-hour Thursday (proposed for people who cannot make 09:00). |
 | don't know what a tier is | Hover the tier in the worksheet on Pages, or ask Wren: one sentence each. C2 is "a promise to a person". |

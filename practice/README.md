@@ -13,7 +13,7 @@ Each takes an hour or less, runs on a real FailFest case, and ends with somethin
 
 | Level | Worksheet | Checklist | Time | Install |
 |---|---|---|---|---|
-| 100 Begin | [WORKSHEET](levels/100-begin/WORKSHEET.md) | [CHECKLIST](levels/100-begin/CHECKLIST.md) | 45 min | none |
+| 100 Begin | [WORKSHEET](levels/100-begin/WORKSHEET.md) · [español](docs/es/levels/100-begin/WORKSHEET.md) | [CHECKLIST](levels/100-begin/CHECKLIST.md) | 45 min | none |
 | 200 Retrofit | [WORKSHEET](levels/200-retrofit/WORKSHEET.md) | [CHECKLIST](levels/200-retrofit/CHECKLIST.md) | 60 min | one `pip install` |
 | 300 Hold | [WORKSHEET](levels/300-hold/WORKSHEET.md) | [CHECKLIST](levels/300-hold/CHECKLIST.md) | 60 min today; a week of traffic in Fall | none today |
 | 400 Prove | [WORKSHEET](levels/400-prove/WORKSHEET.md) | [CHECKLIST](levels/400-prove/CHECKLIST.md) | 60 min + the Thursday you host | none |
@@ -92,6 +92,7 @@ it always pairs you with someone. [The journey, drawn](docs/JOURNEY.md).
 - [`docs/CHANGES-2026-09-11.md`](docs/CHANGES-2026-09-11.md) — everything that changed on release day, and why.
 - [`docs/WREN.md`](docs/WREN.md) — Wren, the practitioner at the table: the voice, the readiness walk, the art brief, and Bob's Wren Card.
 - [`docs/JOURNEY.md`](docs/JOURNEY.md) — the one loop, drawn, with the objects that hold it together and the rules that keep it simple.
+- [`docs/THURSDAY.md`](docs/THURSDAY.md) — the run-of-show and the mark line (the receipt until the receipt exists).
 - [`levels/`](levels/) — one kit per level: README (who, tools, return), WORKSHEET (the hour), CHECKLIST (one page), `policy.yaml`.
 - [`scripts/humans.sh`](scripts/humans.sh) — the founders' single paste script: local commit, org repo, release tag.
 
