@@ -2,8 +2,8 @@
 
 **PRD v3 — draft for review · whole-estate edition**
 Owner: Bob Rapp · Reviewers: Bob Rapp, Ken Johnston · Date: 11 September 2026
-Programme: Labor-Day-Big-Redesign · Project: Open-Source-Unified-Sept-2026 · Status: **decide**
-(nothing here is live; no code has changed)
+Programme: Labor-Day-Big-Redesign · Project: Open-Source-Unified-Sept-2026 · Status: **decided by Bob, 11 Sept 2026 (all eleven); Ken's column open**
+(the practice repo and the site are live as rc.1; engines unchanged except one sentence in Beacon's STANDARDS.md)
 Supersedes: v2 (11 Sept, morning — the ladder) and, on persona, packaging and roadmap,
 [`PRD-PREPEND-PROVE-IT-GATE.md`](PRD-PREPEND-PROVE-IT-GATE.md) (v1, 10 Sept). v1's architecture — the
 rule, the tiers, the receipt, the policy schema, requirements F1–F10 / N1–N7, the adversarial suite — is

@@ -16,8 +16,8 @@ the release contract.
 - `docs/PRD-OPEN-SOURCE-UNIFIED.md` v3 (whole-estate), `ESTATE-MAP.md`, `STANDARDS-MAP.md`, `GLACIS-ALIGNMENT.md`, `MEMBER-ACTIVITIES.md`, `DECISIONS.md`.
 - `docs/PRD-PREPEND-PROVE-IT-GATE.md` — PRD v1 preserved verbatim as the source thinking.
 
-### Decided (pending 16 September marks)
-- D6–D11: the ladder on four gates and corpus cases; one front door; the return; the ninety days by level; the practitioner credential; alignment with Glacis.
+### Decided
+- 11 Sept: Bob — yes to D1–D11 and the redesign's R1–R11 via the Decision Sheet; executed the same morning (see docs/DECISIONS.md). Ken's column open.
 
 ## [0.2.0] — 2026-09-11 (morning)
 - PRD v2: the practitioner ladder (100–400), five parts, level kits.

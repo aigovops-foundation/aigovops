@@ -1,5 +1,7 @@
 # Decisions for Bob and Ken
 
+> **Decided — Bob, 11 September 2026, via the Decision Sheet: yes to all eleven** (and to the redesign's R1–R11). Ken's column is open on the sheet. R3 carries two edits: `f-ai-friday.html` and `frameworks.html` stay public until the Library has a public view. R7 (NCW redirect) and R11's Parker/Ken items wait for their owners. Executed the same morning: site #123 (creed, fold), Camp #53 + Library #89 (creed), Beacon #57 (STANDARDS.md line, D10), Omni #420 (auto-admit verified live, bulk import guard, cohort welcome pipeline); marks on the droplet: 4.1 live, 4.4 live, 0.1/0.2/2.4 noted; the Joe draft sent to Ken (D11).
+
 Review order. Decisions 1–5 are from PRD v1 (10 Sept) and are taken first because everything after
 depends on them. Decisions 6–11 are v3's. Each is recorded as a `design mark` step once taken. Nothing is
 live until then.

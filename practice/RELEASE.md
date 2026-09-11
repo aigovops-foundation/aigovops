@@ -47,7 +47,7 @@ GitHub Pages and in the repos. Fall means the Fall release lands it (P0/P1/P2 in
 
 ## Release checklist (the train leaves when every box is ticked)
 
-- ☐ Decisions 6–11 marked (`design mark`) — 16 September
+- ☑ Decisions 6–11 — Bob's yes, 11 September (Decision Sheet); Ken's column open
 - ☐ Profile `aigovops-beacon.v1` signed, or every public page says *targeting OVERT 1.1; registration pending*
 - ☐ T10 green in the Library
 - ☐ One stranger finishes the 100 worksheet in under an hour, unaided, and comes Thursday
