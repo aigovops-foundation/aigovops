@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+  <style>
+    .practice-nav{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;align-items:baseline;font-size:14px;margin-bottom:1.5rem}
+    .practice-nav b{font-size:16px}
+    .practice-foot{border-top:1px solid #d0d7de;margin-top:3rem;padding-top:1rem;font-size:14px;color:#57606a}
+    .practice-foot p{margin:0 0 .4rem}
+  </style>
+</head>
+<body>
+  <a id="skip-to-content" href="#content" class="sr-only sr-only-focusable">Skip to the content.</a>
+  <div class="container-lg px-3 my-5 markdown-body">
+    <nav class="practice-nav" aria-label="Practice">
+      <b><a href="{{ "/" | relative_url }}">AiGovOps Practice</a></b>
+      <a href="{{ "/MANIFESTO.html" | relative_url }}">Manifesto</a>
+      <a href="{{ "/levels/100-begin/WORKSHEET.html" | relative_url }}">100</a>
+      <a href="{{ "/levels/200-retrofit/WORKSHEET.html" | relative_url }}">200</a>
+      <a href="{{ "/levels/300-hold/WORKSHEET.html" | relative_url }}">300</a>
+      <a href="{{ "/levels/400-prove/WORKSHEET.html" | relative_url }}">400</a>
+      <a href="{{ "/docs/THURSDAY.html" | relative_url }}">Thursday</a>
+      <a href="https://www.aigovops-foundation.com/community.html#practice">Community</a>
+      <a href="https://github.com/aigovops-foundation/practice">GitHub</a>
+    </nav>
+    <main id="content">{{ content }}</main>
+    <footer class="practice-foot">
+      <p><strong>Ship safe AI — never unsafe AI:</strong> get to yes, stay at yes, recover to yes. Prove it in ten minutes.</p>
+      <p><a href="https://community.aigovops-foundation.com/gate-check.html?src=practice-pages">Run the ten-minute Gate Check</a> · <a href="https://www.aigovops-foundation.com/">AiGovOps Foundation</a> · <a href="https://overt.is/">Conforms to OVERT</a> · <a href="https://github.com/aigovops-foundation/practice/blob/main/RELEASE.md">Fall 2026 Release</a></p>
+    </footer>
+  </div>
+  <script src="{{ "/assets/js/anchor.min.js" | relative_url }}"></script>
+  <script>anchors.add();</script>
+</body>
+</html>
