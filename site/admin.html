@@ -13,8 +13,9 @@
   <!-- M6b garden-warm skin (shared system) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/garden.css" />
+  <link rel="stylesheet" href="css/wren-cafe.css" />
   <style>
     /* ── Admin cockpit — garden-warm skin (M6b); chrome only, no behavior ── */
     :root { --teal-accessible: #1F5E3A; --muted: var(--garden-ink-soft); }
@@ -71,7 +72,7 @@
       <a href="library.html" data-i18n="nav.library">Library</a>
       <a href="open-source.html" data-i18n="nav.opensource">Open source</a>
       <a href="blog.html" data-i18n="nav.blog">Blog</a>
-      <a href="community.html" class="nav-join">Join</a>
+      <a href="community.html" class="nav-join">Community</a>
     </nav>
   </div>
 </header>
@@ -139,8 +140,8 @@
         <div class="card">
           <h3>The library</h3>
           <div class="dom">aigovops-library-june-ken-bob</div>
-          <div class="row"><span class="k">Live</span><span class="v"><a href="https://community.aigovops-foundation.com/library/" target="_blank" rel="noopener">Live site ↗</a></span></div>
-          <div class="row"><span class="k">Repo</span><span class="v"><a href="https://github.com/aigovops-foundation/aigovops-library-june-ken-bob" target="_blank" rel="noopener">GitHub ↗</a></span></div>
+          <div class="row"><span class="k">Live</span><span class="v"><a href="https://community.aigovops-foundation.com/library/" target="_blank" rel="noopener">Live site <span aria-hidden="true">↗</span></a></span></div>
+          <div class="row"><span class="k">Repo</span><span class="v"><a href="https://github.com/aigovops-foundation/aigovops-library-june-ken-bob" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></span></div>
           <div class="row"><span class="k">Deploy</span><span class="v">push to <code>main</code> → <code>pages.yml</code></span></div>
           <div class="row"><span class="k">Manage</span><span class="v links"><a href="https://github.com/aigovops-foundation/aigovops-library-june-ken-bob/actions" target="_blank" rel="noopener">Actions</a></span></div>
         </div>
@@ -148,8 +149,8 @@
         <div class="card">
           <h3>The Foundation site</h3>
           <div class="dom">www.aigovops-foundation.com</div>
-          <div class="row"><span class="k">Live</span><span class="v"><a href="https://www.aigovops-foundation.com" target="_blank" rel="noopener">www.aigovops-foundation.com ↗</a></span></div>
-          <div class="row"><span class="k">Repo</span><span class="v"><a href="https://github.com/aigovops-foundation/aigovops-foundation-site-redesign-June2026-ken-and-bob" target="_blank" rel="noopener">GitHub ↗</a></span></div>
+          <div class="row"><span class="k">Live</span><span class="v"><a href="https://www.aigovops-foundation.com" target="_blank" rel="noopener">www.aigovops-foundation.com <span aria-hidden="true">↗</span></a></span></div>
+          <div class="row"><span class="k">Repo</span><span class="v"><a href="https://github.com/aigovops-foundation/aigovops-foundation-site-redesign-June2026-ken-and-bob" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></span></div>
           <div class="row"><span class="k">Deploy</span><span class="v">PR + Cloud-Mary review → Pages</span></div>
           <div class="row"><span class="k">Manage</span><span class="v links"><a href="https://github.com/aigovops-foundation/aigovops-foundation-site-redesign-June2026-ken-and-bob/pulls" target="_blank" rel="noopener">Pulls</a><a href="https://github.com/aigovops-foundation/aigovops-foundation-site-redesign-June2026-ken-and-bob/actions" target="_blank" rel="noopener">Actions</a></span></div>
         </div>
@@ -157,8 +158,8 @@
         <div class="card">
           <h3>The membership community</h3>
           <div class="dom">community.aigovops-foundation.com</div>
-          <div class="row"><span class="k">Live</span><span class="v"><a href="https://community.aigovops-foundation.com/" target="_blank" rel="noopener">the garden ↗</a></span></div>
-          <div class="row"><span class="k">Repo</span><span class="v"><a href="https://github.com/aigovops-foundation/Omni-Rapp-June-2026" target="_blank" rel="noopener">Omni-Rapp ↗</a></span></div>
+          <div class="row"><span class="k">Live</span><span class="v"><a href="https://community.aigovops-foundation.com/" target="_blank" rel="noopener">the garden <span aria-hidden="true">↗</span></a></span></div>
+          <div class="row"><span class="k">Repo</span><span class="v"><a href="https://github.com/aigovops-foundation/Omni-Rapp-June-2026" target="_blank" rel="noopener">Omni-Rapp <span aria-hidden="true">↗</span></a></span></div>
           <div class="row"><span class="k">Deploy</span><span class="v"><code>scripts/ship.sh</code> → droplet (rsync + restart)</span></div>
           <div class="row"><span class="k">Manage</span><span class="v links"><a href="https://community.aigovops-foundation.com/steward.html" target="_blank" rel="noopener">Steward tools</a><a href="https://community.aigovops-foundation.com/admin.html" target="_blank" rel="noopener">Admin</a><a href="https://community.aigovops-foundation.com/signin.html" target="_blank" rel="noopener">Sign in</a></span></div>
         </div>
@@ -166,8 +167,8 @@
         <div class="card">
           <h3>The learning camp</h3>
           <div class="dom">aigovops-foundation.github.io/aigovops-ncw-ai-camp</div>
-          <div class="row"><span class="k">Live</span><span class="v"><a href="https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/" target="_blank" rel="noopener">NCW AI Camp ↗</a></span></div>
-          <div class="row"><span class="k">Repo</span><span class="v"><a href="https://github.com/aigovops-foundation/aigovops-ncw-ai-camp" target="_blank" rel="noopener">GitHub ↗</a></span></div>
+          <div class="row"><span class="k">Live</span><span class="v"><a href="https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/" target="_blank" rel="noopener">NCW AI Camp <span aria-hidden="true">↗</span></a></span></div>
+          <div class="row"><span class="k">Repo</span><span class="v"><a href="https://github.com/aigovops-foundation/aigovops-ncw-ai-camp" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></span></div>
           <div class="row"><span class="k">Deploy</span><span class="v">PR → CI (1 review) → Pages</span></div>
           <div class="row"><span class="k">Manage</span><span class="v links"><a href="https://github.com/aigovops-foundation/aigovops-ncw-ai-camp/pulls" target="_blank" rel="noopener">Pulls</a><a href="https://github.com/aigovops-foundation/aigovops-ncw-ai-camp/actions" target="_blank" rel="noopener">Actions</a></span></div>
         </div>
@@ -187,8 +188,8 @@
         </div>
         <div class="card">
           <h3>GitHub org</h3>
-          <div class="row"><span class="k">Org</span><span class="v"><a href="https://github.com/aigovops-foundation" target="_blank" rel="noopener">aigovops-foundation ↗</a></span></div>
-          <div class="row"><span class="k">Security</span><span class="v"><a href="https://github.com/orgs/aigovops-foundation/security/risk" target="_blank" rel="noopener">Dependabot / risk ↗</a></span></div>
+          <div class="row"><span class="k">Org</span><span class="v"><a href="https://github.com/aigovops-foundation" target="_blank" rel="noopener">aigovops-foundation <span aria-hidden="true">↗</span></a></span></div>
+          <div class="row"><span class="k">Security</span><span class="v"><a href="https://github.com/orgs/aigovops-foundation/security/risk" target="_blank" rel="noopener">Dependabot / risk <span aria-hidden="true">↗</span></a></span></div>
         </div>
       </div>
     </div>

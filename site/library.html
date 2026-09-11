@@ -17,8 +17,9 @@
   <!-- M6b garden-warm skin (shared system) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/garden.css" />
+  <link rel="stylesheet" href="css/wren-cafe.css" />
   <script src="js/i18n/i18n.js"></script>
   <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
   <style>
@@ -100,6 +101,7 @@
   </style>
 </head>
 <body>
+<svg id="wc-sprite" xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="wc-cup" viewBox="0 0 24 24"><path d="M4 8h12v6a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5z"/><path d="M16 10h2a2 2 0 0 1 0 4h-2"/><path d="M8 3v2M11 3v2"/></symbol><symbol id="wc-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></symbol><symbol id="wc-receipt" viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></symbol><symbol id="wc-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol><symbol id="wc-wrench" viewBox="0 0 24 24"><path d="M14 4l6 6-8 8H6v-6z"/><path d="M12 6l6 6"/></symbol><symbol id="wc-hand" viewBox="0 0 24 24"><path d="M8 13V6a1.5 1.5 0 0 1 3 0v6"/><path d="M11 12V5a1.5 1.5 0 0 1 3 0v7"/><path d="M14 12V7a1.5 1.5 0 0 1 3 0v6"/><path d="M17 13a1.5 1.5 0 0 1 3 0v3a6 6 0 0 1-6 6h-2a6 6 0 0 1-5-3l-3-5a1.5 1.5 0 0 1 2.6-1.5L8 14"/></symbol><symbol id="wc-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></symbol><symbol id="wc-book" viewBox="0 0 24 24"><path d="M4 5h6a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H4z"/><path d="M20 5h-6a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h7z"/></symbol><symbol id="wc-leaf" viewBox="0 0 24 24"><path d="M12 3c3 3 4 6 4 9a4 4 0 0 1-8 0c0-3 1-6 4-9z"/><path d="M12 16v5M8 21h8"/></symbol><symbol id="wc-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></symbol><symbol id="wc-code" viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4"/><path d="M16 8l4 4-4 4"/><path d="M14 5l-4 14"/></symbol><symbol id="wc-scale" viewBox="0 0 24 24"><path d="M12 3v18M5 21h14"/><path d="M4 8h16"/><path d="M7 8l-3 6a3 3 0 0 0 6 0z"/><path d="M17 8l-3 6a3 3 0 0 0 6 0z"/></symbol><symbol id="wc-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"/></symbol><symbol id="wc-megaphone" viewBox="0 0 24 24"><path d="M4 10v4h3l7 4V6l-7 4z"/><path d="M17 9a4 4 0 0 1 0 6"/></symbol><symbol id="wc-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></symbol><symbol id="wc-repeat" viewBox="0 0 24 24"><path d="M4 9a5 5 0 0 1 5-5h9"/><path d="M15 1l3 3-3 3"/><path d="M20 15a5 5 0 0 1-5 5H6"/><path d="M9 23l-3-3 3-3"/></symbol><symbol id="wc-pen" viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M13 7l3 3"/></symbol><symbol id="wc-flag" viewBox="0 0 24 24"><path d="M5 21V4"/><path d="M5 4h12l-3 4 3 4H5"/></symbol><symbol id="wc-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol><symbol id="wc-atom" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)"/></symbol><symbol id="wc-cap" viewBox="0 0 24 24"><path d="M2 9l10-4 10 4-10 4z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></symbol><symbol id="wc-tent" viewBox="0 0 24 24"><path d="M3 20L12 4l9 16z"/><path d="M12 12l-4 8M12 12l4 8"/></symbol><symbol id="wc-lantern" viewBox="0 0 24 24"><path d="M9 6h6l2 4v6l-2 4H9l-2-4v-6z"/><path d="M12 3v3M12 20v1"/><path d="M12 9v5"/></symbol><symbol id="wc-umbrella" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 18 0z"/><path d="M12 12v6a2 2 0 0 0 4 0"/><path d="M12 3v1"/></symbol><symbol id="wc-clipboard" viewBox="0 0 24 24"><path d="M7 5h10v16H7z"/><path d="M9 3h6v4H9z"/><path d="M10 12h4M10 16h4"/></symbol><symbol id="wc-calendar" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></symbol><symbol id="wc-briefcase" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M9 8V5h6v3"/><path d="M3 13h18"/></symbol><symbol id="wc-news" viewBox="0 0 24 24"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 8h3v9a2 2 0 0 1-2 2"/><path d="M7 9h7M7 13h7"/></symbol><symbol id="wc-sprout" viewBox="0 0 24 24"><path d="M12 21v-8"/><path d="M12 13c0-4 3-6 7-6 0 4-3 6-7 6z"/><path d="M12 15c0-3-2.5-5-6-5 0 3 2.5 5 6 5z"/></symbol></svg>
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <header class="site-header">
   <div class="container nav-inner">
@@ -119,7 +121,7 @@
       <a href="library.html" data-i18n="nav.library">Library</a>
       <a href="open-source.html" data-i18n="nav.opensource">Open source</a>
       <a href="blog.html" data-i18n="nav.blog">Blog</a>
-      <a href="community.html" class="nav-join">Join</a>
+      <a href="community.html" class="nav-join">Community</a>
     </nav>
     <div class="lang-toggle" aria-label="Language selector">
       <button class="lang-btn lang-active" data-lang="en" onclick="window.I18N_SET('en')">EN</button>
@@ -135,7 +137,7 @@
       <p class="hero-eyebrow">Come see · the Library</p>
       <h1>The Library.</h1>
       <p>One hundred verified AI harms, each with the gate that would have caught it. The practitioner test. The gates, live. Forty frameworks. Free to read — join with an email, nothing more.</p>
-      <p style="margin-top:26px"><a href="https://community.aigovops-foundation.com/library/" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:1.05rem;padding:14px 34px;border-radius:999px" onclick="if(window.plausible)plausible('Library: Read the Library')">📖 Read the Library — join free →</a> <a href="https://community.aigovops-foundation.com/gate-check.html?src=get-to-yes" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:1.05rem;padding:14px 30px;border-radius:999px;margin-left:8px" onclick="if(window.plausible)plausible('Gate Check: get-to-yes')">Run the ten-minute Gate Check →</a></p>
+      <p style="margin-top:26px"><a href="https://community.aigovops-foundation.com/library/" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:1.05rem;padding:14px 34px;border-radius:999px" onclick="if(window.plausible)plausible('Library: Read the Library')"><svg class="wc-icon" aria-hidden="true"><use href="#wc-book"></use></svg> Read the Library — join free →</a> <a href="https://community.aigovops-foundation.com/gate-check.html?src=get-to-yes" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:1.05rem;padding:14px 30px;border-radius:999px;margin-left:8px" onclick="if(window.plausible)plausible('Gate Check: get-to-yes')">Run the ten-minute Gate Check →</a></p>
     </div>
   </section>
 
@@ -143,19 +145,19 @@
     <div class="container">
       <h2 class="section-title" style="text-align:center">What is inside</h2>
       <div class="asset-primary" style="margin-bottom:18px">
-        <h3 style="font-size:1.2rem;margin:0 0 6px">📚 The Library</h3>
+        <h3 style="font-size:1.2rem;margin:0 0 6px"><svg class="wc-icon" aria-hidden="true"><use href="#wc-book"></use></svg> The Library</h3>
         <p class="role">The members&rsquo; Library: the corpus, the test, FailFest, the gates live, the durability plan and the quantum wing — the governed core everything else on this site reads from. Joining costs registration, never money or secrecy.</p>
         <a class="asset-quiet" href="https://github.com/aigovops-foundation/aigovops-library-june-ken-bob" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Get to Yes: Library source')">or read the public source on GitHub →</a>
       </div>
       <div class="asset" style="max-width:760px;margin:0 auto">
         <h3>Also on the way in</h3>
         <ul style="list-style:none;margin:8px 0 0;padding:0;line-height:2;font-size:.92rem;color:var(--garden-ink-soft)">
-          <li>⚖️ <a class="go" href="frameworks.html">Which frameworks apply to you? →</a> 40 global frameworks, filterable by region, industry, and risk.</li>
-          <li>🎓 <a class="go" href="https://bobrapp.github.io/Glean-Mastery/" target="_blank" rel="noopener">Training — Glean-Mastery →</a> Eight weeks, 56 lessons, free and public.</li>
-          <li>🏕️ <a class="go" href="https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/" target="_blank" rel="noopener">The learning camp →</a> The on-ramp — the NCW AI Expo, public and free.</li>
-          <li>🛡️ <a class="go" href="https://community.aigovops-foundation.com/library/durability-plan.html" target="_blank" rel="noopener">The durability plan →</a> How the Library outlives its authors — in the members&rsquo; Library.</li>
-          <li>👀 <a class="go" href="https://community.aigovops-foundation.com/library/gates.html" target="_blank" rel="noopener">The gates, live →</a> Watch a proposal earn a 1, a 0 or a ?; the <a href="https://community.aigovops-foundation.com/library/watch-gates.html" target="_blank" rel="noopener">recorded walkthrough</a> if you have five minutes.</li>
-          <li>⚛️ <a class="go" href="https://community.aigovops-foundation.com/library/aigovops-for-quantum/" target="_blank" rel="noopener">The quantum wing →</a> AiGovOps for Quantum, in the members&rsquo; Library.</li>
+          <li><svg class="wc-icon" aria-hidden="true"><use href="#wc-scale"></use></svg> <a class="go" href="frameworks.html">Which frameworks apply to you? →</a> 40 global frameworks, filterable by region, industry, and risk.</li>
+          <li><svg class="wc-icon" aria-hidden="true"><use href="#wc-cap"></use></svg> <a class="go" href="https://bobrapp.github.io/Glean-Mastery/" target="_blank" rel="noopener">Training — Glean-Mastery →</a> Eight weeks, 56 lessons, free and public.</li>
+          <li><svg class="wc-icon" aria-hidden="true"><use href="#wc-tent"></use></svg> <a class="go" href="https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/" target="_blank" rel="noopener">The learning camp →</a> The on-ramp — the NCW AI Expo, public and free.</li>
+          <li><svg class="wc-icon" aria-hidden="true"><use href="#wc-shield"></use></svg> <a class="go" href="https://community.aigovops-foundation.com/library/durability-plan.html" target="_blank" rel="noopener">The durability plan →</a> How the Library outlives its authors — in the members&rsquo; Library.</li>
+          <li><svg class="wc-icon" aria-hidden="true"><use href="#wc-eye"></use></svg> <a class="go" href="https://community.aigovops-foundation.com/library/gates.html" target="_blank" rel="noopener">The gates, live →</a> Watch a proposal earn a 1, a 0 or a ?; the <a href="https://community.aigovops-foundation.com/library/watch-gates.html" target="_blank" rel="noopener">recorded walkthrough</a> if you have five minutes.</li>
+          <li><svg class="wc-icon" aria-hidden="true"><use href="#wc-atom"></use></svg> <a class="go" href="https://community.aigovops-foundation.com/library/aigovops-for-quantum/" target="_blank" rel="noopener">The quantum wing →</a> AiGovOps for Quantum, in the members&rsquo; Library.</li>
         </ul>
       </div>
     </div>
@@ -166,17 +168,17 @@
     <div class="container">
       <h2 class="section-title" style="text-align:center">The cases</h2>
       <div class="corpus-card" style="margin-bottom:18px">
-        <h3 style="font-size:1.2rem;margin:0 0 6px">🔁 #F-AI-Friday — 100 verified AI-harm cases</h3>
+        <h3 style="font-size:1.2rem;margin:0 0 6px"><svg class="wc-icon" aria-hidden="true"><use href="#wc-repeat"></use></svg> #F-AI-Friday — 100 verified AI-harm cases</h3>
         <p style="margin:0 0 8px">Real, source-cited AI failures from 1999 to 2025, re-verified across 6 review turns. No padding, no vibes — each case carries the gate that would have caught it. <a class="go" href="f-ai-friday.html" onclick="if(window.plausible)plausible('Library: F-AI-Friday corpus')">Read the 100 cases — public, no account →</a></p>
       </div>
       <div class="rec-assets">
         <div class="rec-asset">
-          <h3>📝 The practitioner test</h3>
+          <h3><svg class="wc-icon" aria-hidden="true"><use href="#wc-pen"></use></svg> The practitioner test</h3>
           <div class="role">10 questions drawn from the corpus: read the case, pick the gate verdict, see the answer. In the members&rsquo; Library — join free.</div>
           <a class="go" href="https://community.aigovops-foundation.com/library/practitioner.html" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Recover: practitioner test')">Take the test →</a>
         </div>
         <div class="rec-asset">
-          <h3>🎪 #FridayFailFest</h3>
+          <h3><svg class="wc-icon" aria-hidden="true"><use href="#wc-flag"></use></svg> #FridayFailFest</h3>
           <div class="role">The Library&rsquo;s daily rotation through the same corpus — one verified harm case a day. In the members&rsquo; Library — join free.</div>
           <a class="go" href="https://community.aigovops-foundation.com/library/failfest.html" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Recover: FailFest')">Visit FailFest →</a>
         </div>
@@ -201,7 +203,7 @@
   <section class="section" style="background:var(--white);text-align:center">
     <div class="container">
       <p style="margin:0;font-size:.95rem;color:var(--garden-ink-soft)">
-        <a href="community.html" style="color:var(--garden-green-ink);font-weight:600" onclick="if(window.plausible)plausible('Get to Yes: Come join')">🌿 Come join — free registration →</a>
+        <a href="community.html" style="color:var(--garden-green-ink);font-weight:600" onclick="if(window.plausible)plausible('Get to Yes: Come join')"><svg class="wc-icon" aria-hidden="true"><use href="#wc-leaf"></use></svg> Come join — free registration →</a>
         &nbsp;·
       </p>
     </div>
