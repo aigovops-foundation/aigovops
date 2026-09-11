@@ -5,7 +5,6 @@ whatever your skills. The marks are the credential, and the credential is a rece
 AiGovOps Foundation · Release train `fall-2026` · `practice` **v1.0.0-rc.1** · 11 September 2026 · Apache-2.0
 
 **Start here:** read the [one-page manifesto](MANIFESTO.md), then open the worksheet for your level.
-Read it as pages at **[aigovops-foundation.github.io/practice](https://aigovops-foundation.github.io/practice/)**; this repo is the source of truth.
 Each takes an hour or less, runs on a real FailFest case, and ends with something you can show on Thursday.
 
 | Level | Worksheet | Checklist | Time | Install |
@@ -78,7 +77,9 @@ evidence — the two sentences never merge.
 - [`docs/PRD-PREPEND-PROVE-IT-GATE.md`](docs/PRD-PREPEND-PROVE-IT-GATE.md) — PRD v1 (10 Sept), the source
   thinking, preserved verbatim. Its architecture (the rule, tiers C0–C4, the assurance ladder, the OVERT
   posture, policy schema, receipt, requirements, adversarial suite) is adopted by v2 and v3 unchanged.
-- [`docs/DECISIONS.md`](docs/DECISIONS.md) — the eleven decisions for Bob and Ken, in review order.
+- [`docs/DECISIONS.md`](docs/DECISIONS.md) — the eleven decisions for Bob and Ken; decided by Bob 11 Sept.
+- [`docs/CHANGES-2026-09-11.md`](docs/CHANGES-2026-09-11.md) — everything that changed on release day, and why.
+- [`docs/WREN.md`](docs/WREN.md) — Wren, the practitioner at the table: the voice, the readiness walk, the art brief, and Bob's Wren Card.
 - [`levels/`](levels/) — one kit per level: README (who, tools, return), WORKSHEET (the hour), CHECKLIST (one page), `policy.yaml`.
 - [`scripts/humans.sh`](scripts/humans.sh) — the founders' single paste script: local commit, org repo, release tag.
 
