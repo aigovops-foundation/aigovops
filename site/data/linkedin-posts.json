@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-11T19:09:09Z",
+  "updated": "2026-09-12T07:06:05Z",
   "bob": [
+    {
+      "title": "Governance begins before the model reaches production. Put acceptance gates into procurement: intended use, prohibited use, data h...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-aiacquisition-activity-7504298530208026624-nrH8",
+      "date": "Fri, 11 Sep 2026 22:03:13 GMT",
+      "summary": "Governance begins before the model reaches production. Put acceptance gates into procurement: intended use, prohibited use, data handling, audit access, incident notice, subcontractors, update controls, exit support, and measurable performance commitments. A signed contract is no",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI benefit-sharing is a go/no-go governance review—not a values statement. PROBLEM Efficiency can shift costs to displaced workers...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-benefit-sharing-is-a-gono-go-governance-activity-7504298465712287747-X29c",
+      "date": "Fri, 11 Sep 2026 22:02:57 GMT",
+      "summary": "AI benefit-sharing is a go/no-go governance review—not a values statement. PROBLEM Efficiency can shift costs to displaced workers, frontline staff, and people with less access. Accuracy and ROI miss who gains, bears errors, or is excluded. SOLUTIONS Record beneficiaries/value, d",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "AI governance fails when “we use AI” is the whole record. PROBLEM One AI use case needs its own living processing register—not a c...",
       "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-fails-when-we-use-ai-is-the-activity-7504162906645770240-MfuS",
@@ -62,22 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-policyascode-activity-7503573401341587456-gry9",
       "date": "Wed, 09 Sep 2026 22:01:49 GMT",
       "summary": "An API upgrade can quietly change an AI system’s meaning, permissions, or safety behavior. Govern version skew explicitly: pin supported versions, validate schemas, run compatibility tests, define deprecation windows, block unknown responses, and log the policy version used for e",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An AI outcome is not contestable because a “contact us” form exists. PROBLEM Contestability means challenge, review, and correctio...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-ai-outcome-is-not-contestable-because-activity-7503438030850916352-6Zfa",
-      "date": "Wed, 09 Sep 2026 13:03:54 GMT",
-      "summary": "An AI outcome is not contestable because a “contact us” form exists. PROBLEM Contestability means challenge, review, and correction—not complaint intake or an escalation SLO. Without notice, reasons, evidence, authority, pause rules, and deadlines, review is theatre. SOLUTIONS Pr",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Stale data can make a compliant AI system produce unsafe decisions. Treat freshness as an executable control:",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-responsibleai-activity-7503437817746903041-ru92",
-      "date": "Wed, 09 Sep 2026 13:03:03 GMT",
-      "summary": "Stale data can make a compliant AI system produce unsafe decisions. Treat freshness as an executable control: • Define maximum age by use case. • Validate timestamps at inference. • Quarantine expired inputs. • Alert the named owner. • Preserve immutable evidence of every excepti",
       "image": null,
       "author": "Bob Rapp"
     }
