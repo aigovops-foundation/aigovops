@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-12T07:06:05Z",
+  "updated": "2026-09-12T19:07:12Z",
   "bob": [
+    {
+      "title": "Translation is not deployment readiness. A model can pass evaluation yet fail the place where people depend on it. PROBLEM Before...",
+      "link": "https://www.linkedin.com/posts/bobrapp_translation-is-not-deployment-readiness-activity-7504524898405351424-iZkO",
+      "date": "Sat, 12 Sep 2026 13:02:43 GMT",
+      "summary": "Translation is not deployment readiness. A model can pass evaluation yet fail the place where people depend on it. PROBLEM Before expansion, validate local institutions, reliable infrastructure, service access, cultural context, remedy channels, and region-specific harms—not only",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Latency is a governance variable when delays pressure people into unsafe overrides—or cause an agent to act on outdated context. S...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-responsibleai-activity-7504524445403799552-tVxg",
+      "date": "Sat, 12 Sep 2026 13:00:55 GMT",
+      "summary": "Latency is a governance variable when delays pressure people into unsafe overrides—or cause an agent to act on outdated context. Set budgets by risk tier, measure end-to-end latency, pause when context expires, escalate predictable misses, and preserve timing evidence for review.",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Governance begins before the model reaches production. Put acceptance gates into procurement: intended use, prohibited use, data h...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-aiacquisition-activity-7504298530208026624-nrH8",
@@ -62,22 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_problem-ai-pilots-become-permanent-by-default-activity-7503800479223586816-J7-K",
       "date": "Thu, 10 Sep 2026 13:04:08 GMT",
       "summary": "Problem AI pilots become permanent by default when approvals have no expiry. This is use-case authorization—not model retirement or generic change management. Solutions Set an approval expiry, sunset owner, usage-volume limit and reassessment criteria. Require renewal evidence. I",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "PROBLEM If builders approve their own AI, assurance is a checkbox—not independence. SOLUTIONS Separate build, approve, operate, an...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-if-builders-approve-their-own-ai-activity-7503573434845671425-UqJh",
-      "date": "Wed, 09 Sep 2026 22:01:57 GMT",
-      "summary": "PROBLEM If builders approve their own AI, assurance is a checkbox—not independence. SOLUTIONS Separate build, approve, operate, and challenge. Bar conflicts. Require qualified reviewers with evidence access and challenge rights. Escalate unresolved disagreements; rotate reviewers",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An API upgrade can quietly change an AI system’s meaning, permissions, or safety behavior. Govern version skew explicitly: pin sup...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-policyascode-activity-7503573401341587456-gry9",
-      "date": "Wed, 09 Sep 2026 22:01:49 GMT",
-      "summary": "An API upgrade can quietly change an AI system’s meaning, permissions, or safety behavior. Govern version skew explicitly: pin supported versions, validate schemas, run compatibility tests, define deprecation windows, block unknown responses, and log the policy version used for e",
       "image": null,
       "author": "Bob Rapp"
     }
