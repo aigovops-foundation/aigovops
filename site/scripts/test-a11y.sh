@@ -46,14 +46,7 @@ check_html "$REPO/index.html" "HTML lang attribute"                '<html lang="
 
 echo ""
 echo "  [index.html — Chatbot Accessibility]"
-check_html "$REPO/index.html" "Chat bubble role=button"            'role="button"'
-check_html "$REPO/index.html" "Chat bubble aria-label (open)"      'aria-label="Open AiGovOps assistant"'
-check_html "$REPO/index.html" "Chat bubble tabindex=0"             'tabindex="0"'
-check_html "$REPO/index.html" "Chat window role=dialog"            'role="dialog"'
-check_html "$REPO/index.html" "Chat window aria-modal"             'aria-modal="true"'
-check_html "$REPO/index.html" "Chat window aria-label"             'aria-label="AiGovOps Assistant"'
 check_html "$REPO/index.html" "Chat messages aria-live=polite"     'aria-live="polite"'
-check_html "$REPO/index.html" "Chat close button aria-label"       'aria-label="Close assistant"'
 
 echo ""
 echo "  [index.html — Action Cards]"
@@ -73,9 +66,6 @@ check_html "$REPO/index.html" "Apple touch icon linked"            'apple-touch-
 
 echo ""
 echo "  [index.html — Forms & Inputs]"
-check_html "$REPO/index.html" "Chat input has aria-label"          'aria-label="Your message"'
-check_html "$REPO/index.html" "Chat send button has aria-label"    'aria-label="Send"'
-check_html "$REPO/index.html" "Chat form autocomplete=off"         'autocomplete="off"'
 
 echo ""
 echo "  [css/style.css — Accessibility Styles]"
@@ -121,9 +111,8 @@ check_html "$REPO/index.html" "NIST AI RMF badge"                  'NIST AI RMF'
 check_html "$REPO/index.html" "EU AI Act badge"                    'EU AI Act'
 
 echo ""
-echo "  [brand upgrade — CLI chatbot & teal]"
-check_html "$REPO/index.html" "CLI chatbot welcome present"        'aigovops --help'
-check_html "$REPO/index.html" "Frameworks chip in chatbot"         'data-intent="frameworks"'
+echo "  [one voice at the door — no assistant widget on the home page (Walk run 2)]"
+check_absent "$REPO/index.html" "No chat bubble on the home page" 'id="chatBubble"'
 check_html "$REPO/css/style.css" "Teal CSS variable defined"       '\-\-teal:'
 check_html "$REPO/css/style.css" "Teal-accessible defined"         'teal-accessible'
 check_html "$REPO/css/style.css" "Monospace eyebrow CSS"           'Courier New.*eyebrow\|eyebrow.*Courier'

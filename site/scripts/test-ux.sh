@@ -14,7 +14,7 @@
 #      with a note until the widget ships (M12b)
 # Standalone/self-contained pages (no site chrome by design — matches the
 # design tier's console exemption): status.html, jeeves-brief/console/estate,
-# f-ai-friday.html (landing page, no site nav — tracked as an M12 finding).
+# f-ai-friday.html carries the café nav (Walk run 2) and is checked like any page.
 # Run: bash scripts/test-ux.sh
 
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -45,7 +45,7 @@ STUBS      = {p for p in pages if re.search(r'http-equiv="refresh"', read(p), re
 NON_STUBS  = [p for p in pages if p not in STUBS]
 # Standalone/self-contained pages: no site chrome by design (see header note).
 STANDALONE = {"status.html", "jeeves-brief.html", "jeeves-console.html",
-              "jeeves-estate.html", "f-ai-friday.html"}
+              "jeeves-estate.html"}
 CONSOLES   = {"admin.html"}  # carries a reduced console nav on purpose
 
 def emit(label, result="ok"): print(f"{label}|{result}")

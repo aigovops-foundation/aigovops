@@ -5,7 +5,7 @@ window.I18N = {
     eyebrow: 'Fundación AiGovOps · Política como Código',
     h1: 'Despliega IA segura.<br>Nunca IA insegura.',
     movements: '<span class="mv"><b>Llegar al Sí</b> — antes de desplegar</span> <span class="mv-sep" aria-hidden="true">·</span> <span class="mv"><b>Mantener el Sí</b> — mientras funciona</span> <span class="mv-sep" aria-hidden="true">·</span> <span class="mv"><b>Recuperar el Sí</b> — cuando falla</span>',
-    sub: 'Gobernanza como código para que decir sí a la IA sea seguro — construida en abierto, probada en diez minutos. Siéntate: ¿qué te trajo aquí?',
+    sub: 'Gobernanza como código para que decir sí a la IA sea seguro — construida en abierto, probada en diez minutos.',
   },
   community: {
     eyebrow: 'Cada jueves · 09:00 (hora del Pacífico) · Ken anfitrión',
@@ -41,7 +41,7 @@ window.I18N = {
     title: 'Diez minutos para empezar',
     s1: '<b>Haz el Gate Check.</b> Diez preguntas sobre una IA que conozcas. Sin cuenta, sin instalar nada.',
     s2: '<b>Guarda la Gate Card.</b> Tu veredicto y tus huecos — nunca tus respuestas. Es tu primer recibo.',
-    s3: '<b>Elige la puerta que te dolió.</b> Una hora sobre un caso real; una regla en tus palabras; un recibo firmado; y el jueves a las 09:00, donde un anfitrión lo marca.',
+    s3: '<b>Elige la puerta que te dolió.</b> Una hora sobre un caso real; una regla en tus palabras; un recibo firmado; y el jueves a las 09:00 (hora del Pacífico), donde un anfitrión lo marca.',
   },
   library: { eyebrow: 'Ven a ver · la Biblioteca', h1: 'La Biblioteca.', sub: 'Cien daños verificados de la IA, cada uno con la compuerta que lo habría evitado. La prueba del practicante. Las compuertas, en vivo. Cuarenta marcos. Gratis para leer — únete con un correo, nada más.', inside: 'Qué hay dentro', cases: 'Los casos', gatelaw: 'Una sola ley de compuertas lo atraviesa todo.' },
   opensource: { eyebrow: 'Ven a probar · el código abierto', h1: 'Código abierto.', practice: 'Cuatro niveles. Una hora cada uno. Las marcas son la credencial.', engines: 'Tres motores. Una cadena de evidencia verificable.', live: 'Míralo funcionar — en vivo, aquí mismo' },

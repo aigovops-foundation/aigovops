@@ -5,7 +5,7 @@ window.I18N = {
     eyebrow: 'AiGovOps Foundation · Policy as Code',
     h1: 'Ship Safe AI.<br>Never Unsafe AI.',
     movements: '<span class="mv"><b>Get to Yes</b> — before you ship</span> <span class="mv-sep" aria-hidden="true">·</span> <span class="mv"><b>Stay at Yes</b> — while it runs</span> <span class="mv-sep" aria-hidden="true">·</span> <span class="mv"><b>Recover to Yes</b> — when it breaks</span>',
-    sub: 'Governance as code that makes AI safe to say yes to — built in the open, proven in ten minutes. Sit down: what brought you in?',
+    sub: 'Governance as code that makes AI safe to say yes to — built in the open, proven in ten minutes.',
   },
   community: {
     eyebrow: 'Every Thursday · 09:00 Pacific · Ken hosts',
@@ -41,7 +41,7 @@ window.I18N = {
     title: 'Ten minutes to get started',
     s1: '<b>Run the Gate Check.</b> Ten questions about one AI you know. No account, nothing installed.',
     s2: '<b>Keep the Gate Card.</b> Your verdict and your gaps — never your answers. It is your first receipt.',
-    s3: '<b>Pick the door that stung.</b> One hour on a real case; a rule in your own words; a signed receipt; then Thursday at 09:00, where a host marks it.',
+    s3: '<b>Pick the door that stung.</b> One hour on a real case; a rule in your own words; a signed receipt; then Thursday at 09:00 Pacific, where a host marks it.',
   },
   library: { eyebrow: 'Come see · the Library', h1: 'The Library.', sub: 'One hundred verified AI harms, each with the gate that would have caught it. The practitioner test. The gates, live. Forty frameworks. Free to read — join with an email, nothing more.', inside: 'What is inside', cases: 'The cases', gatelaw: 'One gate law runs through everything.' },
   opensource: { eyebrow: 'Come try · the open source', h1: 'Open source.', practice: 'Four levels. One hour each. The marks are the credential.', engines: 'Three engines. One verifiable evidence chain.', live: 'Watch it run — live, right here' },
