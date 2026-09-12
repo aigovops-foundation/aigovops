@@ -21,7 +21,7 @@ palabras llanas o el camino en código en el paso 3; los dos terminan en el mism
 
 ### 1 · Lee el caso (5 min) — hoy
 
-Abre [los 100 casos](https://www.aigovops-foundation.com/f-ai-friday.html) (públicos, sin cuenta) o FailFest en la Biblioteca y busca
+Abre [los 100 casos](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-001) (públicos, sin cuenta) o FailFest en la Biblioteca y busca
 **VH-001**. En 2022, el chatbot del sitio web de Air Canada le dijo a un pasajero en duelo que podía
 solicitar una tarifa por fallecimiento *después* de viajar. La política decía lo contrario. Él confió en
 la respuesta; la aerolínea se negó; el tribunal obligó a la aerolínea a cumplir la palabra de su chatbot
@@ -119,7 +119,7 @@ Eso es el nivel 100. Un anfitrión lo marca. Un paquete que nadie ha visto todav
 | no tienes computadora | Haz los pasos 1–4 en la hoja impresa. El jueves un anfitrión te presta una laptop para el paso 5 — el recibo sigue siendo tuyo, firmado con una clave creada delante de ti. |
 | solo tienes teléfono | La página pública de casos y la demo de Beacon funcionan en un teléfono. El paquete se descarga a tu teléfono; `VERIFY.md` se abre en cualquier visor de texto. |
 | tienes diez minutos, no 45 | Haz los pasos 1, 3 (una frase, en palabras llanas) y 5. Eso es un recibo. Los pasos 2, 4, 6 y 7 caben el jueves. |
-| no puedes los jueves | Publica el hash del paquete en el hilo de la cohorte con tu frase. Un anfitrión marca de forma asíncrona; pregúntale a Wren por el próximo jueves de segunda hora (propuesto para quienes no pueden a las 09:00 (hora del Pacífico)). |
+| no puedes los jueves | Escribe el hash del paquete y tu frase en tu Wren Card y [envíalo a una persona](https://community.aigovops-foundation.com/help.html). Un anfitrión marca de forma asíncrona; pregúntale a Wren por el próximo jueves de segunda hora (propuesto para quienes no pueden a las 09:00 (hora del Pacífico)). |
 | no sabes qué es un nivel de consecuencia | Pasa el cursor por el nivel en la hoja publicada, o pregúntale a Wren: una frase por cada uno. C2 es "una promesa a una persona". |
 
 ---

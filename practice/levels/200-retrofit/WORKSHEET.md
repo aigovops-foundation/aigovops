@@ -1,6 +1,6 @@
 # Level 200 · Retrofit — worksheet
 
-**Scenarios:** the bot that agreed to sell a Tahoe for $1 (FailFest **VH-022, Chevrolet of
+**Scenarios:** the bot that agreed to sell a Tahoe for $1 ([FailFest](https://www.aigovops-foundation.com/f-ai-friday.html) **VH-022, Chevrolet of
 Watsonville / Fullpath**) and the deploy that lost $440M in 45 minutes (**VH-056, Knight Capital**).
 **Time:** 60 minutes. **Install:** Python 3.11+, git; one `pip install` from source.
 **Skills needed:** either. The plain-words path writes the rules as sentences and lets the tools render

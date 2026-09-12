@@ -1,6 +1,6 @@
 # Level 300 · Hold — worksheet
 
-**Scenarios:** HK$200M wired after a video call full of deepfaked colleagues (FailFest **VH-015,
+**Scenarios:** HK$200M wired after a video call full of deepfaked colleagues ([FailFest](https://www.aigovops-foundation.com/f-ai-friday.html) **VH-015,
 Arup**); 300,000 claims denied in two months at 1.2 seconds each (**VH-035, Cigna PXDX**); an
 algorithm overruling clinicians on coverage (**VH-011, UnitedHealth nH Predict**).
 **Time:** 60 minutes today (tabletop + policy + self-audit); then a week of real traffic when the

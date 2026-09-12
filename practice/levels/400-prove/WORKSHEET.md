@@ -1,6 +1,6 @@
 # Level 400 · Prove it to a stranger — worksheet
 
-**Scenarios:** 470,000 unlawful debts raised on an averaging formula nobody had validated (FailFest
+**Scenarios:** 470,000 unlawful debts raised on an averaging formula nobody had validated ([FailFest](https://www.aigovops-foundation.com/f-ai-friday.html)
 **VH-013, Robodebt**); 26,000–35,000 families branded fraudsters and a government fallen
 (**VH-003, the toeslagenaffaire**); twenty years of postmasters prosecuted on software output nobody
 could independently verify (**VH-088, Post Office Horizon**).
