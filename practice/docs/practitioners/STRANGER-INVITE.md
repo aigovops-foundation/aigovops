@@ -13,7 +13,7 @@ It is a worksheet: forty-five minutes, nothing to install, one real case (the ai
 made a promise the company had to keep). You write one rule in plain words, decide one action against
 it, and make one signed receipt in your browser. That is all.
 
-https://aigovops-foundation.github.io/practice/levels/100-begin/WORKSHEET.html
+https://practice.aigovops-foundation.com/levels/100-begin/WORKSHEET.html
 
 Do it on your own — please don't ask us anything until you're done; the point is to see whether it
 works without us. Then bring the receipt on the next Thursday at 15:00 Pacific (the link is on the

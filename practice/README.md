@@ -1,6 +1,6 @@
 # AiGovOps Practice — Fall 2026 Release
 
-**Start at the café: [aigovops-foundation.github.io/practice](https://aigovops-foundation.github.io/practice/).**
+**Start at the café: [practice.aigovops-foundation.com](https://practice.aigovops-foundation.com/).**
 Wren asks what brought you in. Five doors, each a real case from the Foundation's hundred verified AI
 harms. Pick one; leave in an hour with a rule in your own words, a signed receipt, and a Thursday.
 

@@ -119,7 +119,7 @@ jacket can become the Foundation mark.
 | **Your lens** | Engineer. Wren picks **regulator** as the lens that is not your own |
 | **Thursday** | **17 September, 15:00 Pacific** — the cohort call is on the calendar (Ken hosts). Bring the bundle. |
 | **Show it to** | Ken. His mark is the first `practice.mark` receipt the ledger ever holds. |
-| **Worksheet** | [Level 100 · Begin](https://aigovops-foundation.github.io/practice/levels/100-begin/WORKSHEET.html) — 45 minutes, nothing installed |
+| **Worksheet** | [Level 100 · Begin](https://practice.aigovops-foundation.com/levels/100-begin/WORKSHEET.html) — 45 minutes, nothing installed |
 
 **Your next four Thursdays**
 
