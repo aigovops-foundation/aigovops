@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-13T07:06:10Z",
+  "updated": "2026-09-13T19:07:25Z",
   "bob": [
+    {
+      "title": "When an AI incident triggers litigation or regulatory review, deleting logs on schedule can destroy the evidence you need. Encode...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-governanceascode-activity-7504887567822168064-N0iD",
+      "date": "Sun, 13 Sep 2026 13:03:50 GMT",
+      "summary": "When an AI incident triggers litigation or regulatory review, deleting logs on schedule can destroy the evidence you need. Encode legal holds: identify affected systems, freeze relevant records, name custodians, restrict deletion, record scope and start time, and require authoriz",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Post-launch accessibility failures are governance signals: not edge cases. PROBLEM Acceptance is a snapshot. After release, collec...",
+      "link": "https://www.linkedin.com/posts/bobrapp_post-launch-accessibility-failures-are-governance-activity-7504887372258373632-hlqk",
+      "date": "Sun, 13 Sep 2026 13:03:04 GMT",
+      "summary": "Post-launch accessibility failures are governance signals: not edge cases. PROBLEM Acceptance is a snapshot. After release, collect feedback; use an AT/browser/task taxonomy; triage severity; assign an owner; fix; regression-test; notify users; publish limitations. SHIP GOOD AI •",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "An AI complaint channel is not a mailbox. It is a governed path from harm to remedy. PROBLEM If people cannot report safely—or nev...",
       "link": "https://www.linkedin.com/posts/bobrapp_an-ai-complaint-channel-is-not-a-mailbox-activity-7504660660169887744-IqA1",
@@ -62,22 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-changemanagement-activity-7504162827751063552-kqYb",
       "date": "Fri, 11 Sep 2026 13:03:59 GMT",
       "summary": "Not every AI change deserves the same review: but every material change deserves a reasoned decision. Score impact across model behavior, data, users, jurisdiction, autonomy, and reversibility. Route the score to the right approver, testing depth, monitoring period, and communica",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "ENGLISH PROBLEM A legal requirement is not a control. “We comply” is meaningless without ownership, evidence, and review. SOLUTION...",
-      "link": "https://www.linkedin.com/posts/bobrapp_english-problem-a-legal-requirement-is-not-activity-7503936106476900352-9xeO",
-      "date": "Thu, 10 Sep 2026 22:03:04 GMT",
-      "summary": "ENGLISH PROBLEM A legal requirement is not a control. “We comply” is meaningless without ownership, evidence, and review. SOLUTIONS Build an obligation register. Map every applicable requirement to: control objective, accountable owner, implementation artifact, evidence location,",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "“Trust us” is not a safety case. Build an explicit argument: intended use, hazards, controls, evidence, assumptions, residual risk...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-safetycase-activity-7503936085631115264-PY-w",
-      "date": "Thu, 10 Sep 2026 22:02:59 GMT",
-      "summary": "“Trust us” is not a safety case. Build an explicit argument: intended use, hazards, controls, evidence, assumptions, residual risk, and approval authority. Version the argument alongside the system. When the model, data, context, or operating environment changes, trigger reassess",
       "image": null,
       "author": "Bob Rapp"
     }
