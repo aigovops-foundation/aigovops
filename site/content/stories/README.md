@@ -15,3 +15,7 @@ Files starting with `_` are ignored. Re-saving a file re-renders it; nothing is 
 The renderer is `scripts/build_content.py`; the workflow is `.github/workflows/publish-content.yml`.
 Hand-made posts and cards are never touched — generated cards live between the
 `<!-- content:start -->` / `<!-- content:end -->` markers in `blog.html`.
+
+## Dates and holds
+
+A story publishes on its `date` (the Tuesday cron). Add `hold: true` to the front matter to keep it out of every output — blog, feed, drafts — until the line is removed. The daily runbook email sets and clears this when Ken or Bob replies NO / YES.

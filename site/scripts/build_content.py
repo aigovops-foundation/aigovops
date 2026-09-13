@@ -394,9 +394,15 @@ def main():
     # nobody at the keyboard. Drafts (newsletter + LinkedIn) are written a week ahead so Monday's
     # paste into Substack is ready. PUBLISH_UNTIL=YYYY-MM-DD overrides (the self-test uses it).
     until = dt.date.fromisoformat(os.environ.get("PUBLISH_UNTIL") or dt.date.today().isoformat())
-    metas = [m for m in allm if dt.date.fromisoformat(m["date"]) <= until]
-    ahead = [m for m in allm if dt.date.fromisoformat(m["date"]) <= until + dt.timedelta(days=7)]
-    for m in allm:
+    # `hold: true` in the front matter keeps a story out of every output until someone removes it —
+    # the daily runbook email sets it when Ken or Bob replies NO to "publish?".
+    held = [m for m in allm if str(m.get("hold", "")).lower() in ("true", "yes", "1")]
+    live = [m for m in allm if m not in held]
+    metas = [m for m in live if dt.date.fromisoformat(m["date"]) <= until]
+    ahead = [m for m in live if dt.date.fromisoformat(m["date"]) <= until + dt.timedelta(days=7)]
+    for m in held:
+        print(f"build_content: {m['slug']} is HELD (hold: true) — not published, no drafts")
+    for m in live:
         if m not in metas:
             print(f"build_content: {m['slug']} waits until {m['date']}")
     os.makedirs(os.path.join(ROOT, "blog"), exist_ok=True)
