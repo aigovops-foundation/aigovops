@@ -16,7 +16,7 @@ it, and make one signed receipt in your browser. That is all.
 https://aigovops-foundation.github.io/practice/levels/100-begin/WORKSHEET.html
 
 Do it on your own — please don't ask us anything until you're done; the point is to see whether it
-works without us. Then bring the receipt on Thursday 17 September at 09:00 Pacific (the link is on the
+works without us. Then bring the receipt on the next Thursday at 09:00 Pacific (the link is on the
 calendar) or reply with the bundle hash and the one sentence you wrote.
 
 Note every place you hesitated. Each one is a bug in the worksheet, not in you.

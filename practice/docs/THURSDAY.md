@@ -2,11 +2,13 @@
 
 ## Next Thursday
 
-**Thursday 17 September 2026 · 09:00 Pacific (16:00 UTC)** · Ken hosts.
+<p class="thursday-next"><strong><span data-thursday="date">the next Thursday</span> · <span data-thursday="time">09:00 Pacific</span></strong> · <span data-thursday="host">Ken</span> hosts.</p>
 
-**Join:** the host posts the meeting link **here** and on the
-[community events page](https://community.aigovops-foundation.com/events.html) by 08:45 Pacific on the day;
-until then this line is the promise. Bring a receipt, or come to watch one. *(A host updates this line each week.)*
+<p><strong>Join:</strong> <a data-thursday="join" href="https://community.aigovops-foundation.com/events.html">the link is on the community events page</a>.
+Bring a receipt, or come to watch one. The date above is computed; the link is set once in
+<code>assets/thursday.js</code> and every Thursday page reads it.</p>
+
+<script src="../assets/thursday.js"></script>
 
 ## Run-of-show (60 minutes, Ken hosts until a 400 does)
 
