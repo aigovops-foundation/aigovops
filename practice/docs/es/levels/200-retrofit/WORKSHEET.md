@@ -117,7 +117,7 @@ dijo la puerta, qué cambió. Jueves: empareja con un 100 y acompáñale a su pr
 | escribes política pero no código | Escribe las tres frases; la plantilla YAML junto a esta hoja tiene una línea que cambiar por frase. Wren te lee el YAML de vuelta como frases. |
 | escribes código pero no política | Rellena el YAML; después léelo en voz alta como frases a una persona antes del jueves. Si frunce el ceño, la regla está mal, no quien escucha. |
 | tienes diez minutos | Solo el paso 2 — las tres acciones con consecuencias, con nivel. Esa tabla es el verdadero trabajo del nivel; el resto es teclear. |
-| lees español | Dilo en tu Wren Card y un anfitrión hispanohablante se empareja contigo. El jueves es a las 09:00 (hora del Pacífico). |
+| lees español | Dilo en tu Wren Card y un anfitrión hispanohablante se empareja contigo. El jueves es a las 15:00 (hora del Pacífico). |
 
 ---
 

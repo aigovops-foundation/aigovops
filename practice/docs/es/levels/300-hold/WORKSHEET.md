@@ -113,7 +113,7 @@ hoja.
 | no puedes contar la cobertura | Escribe "todavía no puedo contar". Es la respuesta honesta más común en el 300 y se marca igual. |
 | no eres técnico | Los pasos 2, 3, 4 y 7 no necesitan ninguna herramienta; necesitan que nombres personas, horas y números. Salta el 5 y el 6 hasta el jueves. |
 | los casos te resultan duros | Lo son. Elige uno de los tres, no todos; la marca pide el hold y la aritmética, no leer cada caso. |
-| lees español | Dilo en tu Wren Card y un anfitrión hispanohablante se empareja contigo. El jueves es a las 09:00 (hora del Pacífico). |
+| lees español | Dilo en tu Wren Card y un anfitrión hispanohablante se empareja contigo. El jueves es a las 15:00 (hora del Pacífico). |
 
 ---
 

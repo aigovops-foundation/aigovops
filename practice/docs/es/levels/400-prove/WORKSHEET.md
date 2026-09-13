@@ -116,7 +116,7 @@ marcaste.
 | no puedes anfitrionar en persona | Anfitriona el jueves asíncrono (la franja de la segunda hora): lee los recibos en el hilo, marca y escribe las cuatro frases. Cuenta. |
 | no te sientes cómodo presentando aguas arriba | Presenta el caso del corpus a AIID o al monitor de la OCDE en vez de a la especificación; un anfitrión puede cofirmar contigo un issue de la especificación. |
 | eres de política, no ingeniero | La puerta de la premisa (paso 3) es el corazón del nivel y son dos frases que un ministro podría leer. Escríbelas; un 400 de la vía de código las teclea. |
-| lees español | Dilo en tu Wren Card y un anfitrión hispanohablante se empareja contigo. El jueves es a las 09:00 (hora del Pacífico). |
+| lees español | Dilo en tu Wren Card y un anfitrión hispanohablante se empareja contigo. El jueves es a las 15:00 (hora del Pacífico). |
 
 ---
 

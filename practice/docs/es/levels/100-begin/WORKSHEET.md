@@ -109,7 +109,7 @@ Respuesta: ______________________________________________________________
 ### 7 · Devuelve (5 min) — hoy
 
 Pon el hash del paquete en tu Gate Card (haz el Gate Check de diez minutos en el sitio de la comunidad
-si aún no lo hiciste). Luego: **tráelo el jueves a las 09:00 (hora del Pacífico)** — los primeros cinco minutos son para los
+si aún no lo hiciste). Luego: **tráelo el jueves a las 15:00 (hora del Pacífico)** — los primeros cinco minutos son para los
 recibos. Muéstraselo a una persona y di la regla que escribiste.
 
 Eso es el nivel 100. Un anfitrión lo marca. Un paquete que nadie ha visto todavía no es un 100.
@@ -121,7 +121,7 @@ Eso es el nivel 100. Un anfitrión lo marca. Un paquete que nadie ha visto todav
 | no tienes computadora | Haz los pasos 1–4 en la hoja impresa. El jueves un anfitrión te presta una laptop para el paso 5 — el recibo sigue siendo tuyo, firmado con una clave creada delante de ti. |
 | solo tienes teléfono | La página pública de casos y la demo de Beacon funcionan en un teléfono. El paquete se descarga a tu teléfono; `VERIFY.md` se abre en cualquier visor de texto. |
 | tienes diez minutos, no 45 | Haz los pasos 1, 3 (una frase, en palabras llanas) y 5. Eso es un recibo. Los pasos 2, 4, 6 y 7 caben el jueves. |
-| no puedes los jueves | Escribe el hash del paquete y tu frase en tu Wren Card y [envíalo a una persona](https://community.aigovops-foundation.com/help.html). Un anfitrión marca de forma asíncrona; pregúntale a Wren por el próximo jueves de segunda hora (propuesto para quienes no pueden a las 09:00 (hora del Pacífico)). |
+| no puedes los jueves | Escribe el hash del paquete y tu frase en tu Wren Card y [envíalo a una persona](https://community.aigovops-foundation.com/help.html). Un anfitrión marca de forma asíncrona; pregúntale a Wren por el próximo jueves de segunda hora (propuesto para quienes no pueden a las 15:00 (hora del Pacífico)). |
 | no sabes qué es un nivel de consecuencia | Pasa el cursor por el nivel en la hoja publicada, o pregúntale a Wren: una frase por cada uno. C2 es "una promesa a una persona". |
 
 ---

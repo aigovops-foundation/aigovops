@@ -103,7 +103,7 @@ Answer: ______________________________________________________________
 ### 7 · Return (5 min)
 
 Put the bundle hash on your Gate Card (run the ten-minute Gate Check on the community site if you have
-not). Then: **bring it Thursday 09:00 Pacific** — the first five minutes are for receipts. Show it to one person
+not). Then: **bring it Thursday 15:00 Pacific** — the first five minutes are for receipts. Show it to one person
 and say the rule you wrote.
 
 That is level 100. A host marks it. A bundle nobody has seen is not a 100 yet.

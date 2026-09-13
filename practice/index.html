@@ -241,7 +241,7 @@
   const doors=document.getElementById('doors'), hour=document.getElementById('hour');
   DOORS.forEach(d=>{const b=document.createElement('button'); b.className='door'; b.type='button'; b.setAttribute('aria-pressed','false'); b.dataset.id=d.id;
     b.innerHTML=`<span class="lv">${d.level==='start'?'start here':'level '+d.level+' · '+d.name}</span><q>${d.q}</q><small>${d.hint}</small>`; doors.appendChild(b);});
-  function nextThursday(){const n=new Date(); const d=new Date(n); const day=n.getDay(); let add=(4-day+7)%7; if(add===0 && n.getHours()>=10) add=7; if(add===0) add=0; d.setDate(n.getDate()+add); return d;}
+  function nextThursday(){const n=new Date(); const d=new Date(n); const day=n.getDay(); let add=(4-day+7)%7; if(add===0 && n.getHours()>=16) add=7; if(add===0) add=0; d.setDate(n.getDate()+add); return d;}
   function fmt(d){return d.toLocaleDateString('en-US',{weekday:'long',day:'numeric',month:'long'});}
   function render(d){
     const thu=nextThursday();
@@ -254,7 +254,7 @@
         <li><i>1</i><div><b>Read the case</b> <span>— write one line saying what the AI did that mattered.</span></div></li>
         <li><i>2</i><div><b>Declare the gate</b> <span>— ${d.gate}: a rule in plain words, or three lines of YAML; both are the same gate.</span></div></li>
         <li><i>3</i><div><b>Prove it</b> <span>— ${d.receipt}.</span></div></li>
-        <li><i>4</i><div><b>Return</b> <span>— <a href="${P}docs/THURSDAY.html">${fmt(thu)}, 09:00 Pacific</a>: show it to one person and say your rule. A host marks it.</span></div></li>
+        <li><i>4</i><div><b>Return</b> <span>— <a href="${P}docs/THURSDAY.html">${fmt(thu)}, 15:00 Pacific</a>: show it to one person and say your rule. A host marks it.</span></div></li>
       </ol>
       <a class="cta" href="${wsHref}">${d.level==='start'?'Run the ten-minute Gate Check →':'Open the level '+d.level+' worksheet → '+d.time}</a>
       <p class="wsay">“${d.wren}”</p>
@@ -264,14 +264,14 @@
       <label>How do you like to write a rule?<select id="c-path"><option>in plain words</option><option>as code</option><option>show me both</option></select></label>
       <label>Which lens is yours?<select id="c-lens"><option>engineer</option><option>compliance</option><option>auditor</option><option>regulator</option><option>none yet</option></select></label>
       <label>Who will you show it to?<input id="c-who" placeholder="a colleague · the cohort · I don't know yet"></label>
-      <div class="kv"><span>Thursday</span><b>${fmt(thu)}, 09:00 Pacific</b></div>
+      <div class="kv"><span>Thursday</span><b>${fmt(thu)}, 15:00 Pacific</b></div>
       <div class="row"><button class="primary" id="c-copy" type="button">Copy my card</button><button id="c-save" type="button">Keep it (.md)</button><a href="${wsHref}"><button type="button">Open the worksheet</button></a></div>
       <p class="note" id="c-note">Nothing is stored here. Keep the card as a file, or paste it into the notes on your Gate Card — it is the same card, one person.</p>
     </div>`;
     const cardText=()=>{
       const path=document.getElementById('c-path').value, lens=document.getElementById('c-lens').value, who=document.getElementById('c-who').value||"I don't know yet — pair me";
       const notMine={engineer:'regulator',compliance:'engineer',auditor:'engineer',regulator:'engineer','none yet':'regulator'}[lens];
-      return `# Wren Card\n\n- Level: ${d.level==='start'?'start — the Gate Check':'level '+d.level+' · '+d.name}\n- Path: ${path}\n- Lens: ${lens} (not your own: ${notMine})\n- Thursday: ${fmt(thu)}, 09:00 Pacific\n- Show it to: ${who}\n- Worksheet: ${wsHref}\n\n> ${d.wren}\n\nReceipt (fill in after step 5): key fingerprint ______ · bundle hash ______ · receipts ____\n`;
+      return `# Wren Card\n\n- Level: ${d.level==='start'?'start — the Gate Check':'level '+d.level+' · '+d.name}\n- Path: ${path}\n- Lens: ${lens} (not your own: ${notMine})\n- Thursday: ${fmt(thu)}, 15:00 Pacific\n- Show it to: ${who}\n- Worksheet: ${wsHref}\n\n> ${d.wren}\n\nReceipt (fill in after step 5): key fingerprint ______ · bundle hash ______ · receipts ____\n`;
     };
     document.getElementById('c-save').addEventListener('click',()=>{
       const blob=new Blob([cardText()],{type:'text/markdown'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=`wren-card-${d.level==='start'?'start':d.level}.md`; document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(a.href),1000);
@@ -280,7 +280,7 @@
     document.getElementById('c-copy').addEventListener('click',()=>{
       const path=document.getElementById('c-path').value, lens=document.getElementById('c-lens').value, who=document.getElementById('c-who').value||"I don't know yet — pair me";
       const notMine={engineer:'regulator',compliance:'engineer',auditor:'engineer',regulator:'engineer','none yet':'regulator'}[lens];
-      const txt=`WREN CARD · ${d.level==='start'?'start':'level '+d.level+' '+d.name} · path: ${path} · lens: ${lens} (not your own: ${notMine}) · Thursday ${fmt(thu)} 09:00 Pacific · show it to: ${who}\nWorksheet: ${wsHref}\nWren: ${d.wren}`;
+      const txt=`WREN CARD · ${d.level==='start'?'start':'level '+d.level+' '+d.name} · path: ${path} · lens: ${lens} (not your own: ${notMine}) · Thursday ${fmt(thu)} 15:00 Pacific · show it to: ${who}\nWorksheet: ${wsHref}\nWren: ${d.wren}`;
       const done=()=>{document.getElementById('c-note').textContent='Copied. Paste it anywhere you keep things; bring it Thursday.';};
       if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done,()=>{prompt('Your card:',txt);});} else {prompt('Your card:',txt);}
     });

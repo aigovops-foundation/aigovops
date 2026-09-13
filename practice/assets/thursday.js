@@ -3,13 +3,13 @@
  * THE ONLY LINE A HOST EVER EDITS IS joinUrl BELOW. Paste the recurring meeting link once; every
  * page that shows Thursday (the practice café, docs/THURSDAY, the Foundation's Thursday page, the
  * community platform's events card) reads this file and renders the next Thursday's date itself —
- * 09:00 Pacific, with the UTC hour worked out for daylight-saving — so nothing goes stale and nobody
+ * 15:00 Pacific, with the UTC hour worked out for daylight-saving — so nothing goes stale and nobody
  * updates a line each week.
  */
 window.THURSDAY = {
-  joinUrl: "",            // ← paste the recurring meeting link here (Google Meet / Zoom). Empty = "posted by 08:45 Pacific".
+  joinUrl: "",            // ← paste the recurring meeting link here (Google Meet / Zoom). Empty = "posted by 14:45 Pacific".
   host: "Ken",
-  hourPacific: 9
+  hourPacific: 15
 };
 
 (function () {
@@ -25,9 +25,9 @@ window.THURSDAY = {
     if (wd === "Thursday" && !(i === 0 && hourIn(d) >= cfg.hourPacific + 1)) break;
     d = new Date(d.getTime() + 864e5);
   }
-  // The UTC hour of 09:00 Pacific on that day (16 in summer, 17 in winter).
+  // The UTC hour of 15:00 Pacific on that day (22 in summer, 23 in winter).
   var utcHour = null, day = ymd(d);
-  [16, 17, 15, 18].some(function (h) { var t = new Date(day + "T" + (h < 10 ? "0" + h : h) + ":00:00Z"); if (hourIn(t) === cfg.hourPacific) { utcHour = h; return true; } });
+  [22, 23, 21, 0, 16, 17, 15, 18, 19, 20, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].some(function (h) { var t = new Date(day + "T" + (h < 10 ? "0" + h : h) + ":00:00Z"); if (hourIn(t) === cfg.hourPacific) { utcHour = h; return true; } });
 
   var dateStr = fmt(d, { weekday: "long", day: "numeric", month: "long", year: "numeric" });
   var timeStr = (cfg.hourPacific < 10 ? "0" : "") + cfg.hourPacific + ":00 Pacific" + (utcHour !== null ? " (" + utcHour + ":00 UTC)" : "");
@@ -39,7 +39,7 @@ window.THURSDAY = {
     document.querySelectorAll('[data-thursday="line"]').forEach(function (el) { el.textContent = dateStr + " · " + timeStr + " · " + cfg.host + " hosts"; });
     document.querySelectorAll('[data-thursday="join"]').forEach(function (el) {
       if (cfg.joinUrl) { el.setAttribute("href", cfg.joinUrl); el.textContent = "Join the call →"; el.removeAttribute("aria-disabled"); }
-      else { el.textContent = "Join link — posted here by 08:45 Pacific on the day"; el.setAttribute("aria-disabled", "true"); if (!el.getAttribute("href")) el.setAttribute("href", "#"); }
+      else { el.textContent = "Join link — posted here by 14:45 Pacific on the day"; el.setAttribute("aria-disabled", "true"); if (!el.getAttribute("href")) el.setAttribute("href", "#"); }
     });
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", render); else render();

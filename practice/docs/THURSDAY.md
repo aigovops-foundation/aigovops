@@ -2,7 +2,7 @@
 
 ## Next Thursday
 
-<p class="thursday-next"><strong><span data-thursday="date">the next Thursday</span> · <span data-thursday="time">09:00 Pacific</span></strong> · <span data-thursday="host">Ken</span> hosts.</p>
+<p class="thursday-next"><strong><span data-thursday="date">the next Thursday</span> · <span data-thursday="time">15:00 Pacific</span></strong> · <span data-thursday="host">Ken</span> hosts.</p>
 
 <p><strong>Join:</strong> <a data-thursday="join" href="https://community.aigovops-foundation.com/events.html">the link is on the community events page</a>.
 Bring a receipt, or come to watch one. The date above is computed; the link is set once in
@@ -22,7 +22,7 @@ Bring a receipt, or come to watch one. The date above is computed; the link is s
 | 50–58 | **Marks.** The host reads each mark aloud (the line below). | the host |
 | 58–60 | Who hosts next; who is pairing with whom; the Tuesday Letter line. | the host |
 
-The second-hour Thursday (for people who cannot make 09:00 Pacific) is proposed, not yet on the calendar; say so on your Wren Card and a host pairs you.
+The second-hour Thursday (for people who cannot make 15:00 Pacific) is proposed, not yet on the calendar; say so on your Wren Card and a host pairs you.
 
 ## The mark line — the receipt until the receipt exists
 
