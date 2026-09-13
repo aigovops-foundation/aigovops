@@ -43,5 +43,9 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "Publish stories from content/ [automated $(date -u +%Y-%m-%d)]"
-            git push
+            # Two merges a minute apart once made this push non-fast-forward (2026-09-13); rebase and retry.
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push && break
+              echo "push attempt $i failed; retrying"; sleep 15
+            done
           fi
