@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-12T19:07:12Z",
+  "updated": "2026-09-13T07:06:10Z",
   "bob": [
+    {
+      "title": "An AI complaint channel is not a mailbox. It is a governed path from harm to remedy. PROBLEM If people cannot report safely—or nev...",
+      "link": "https://www.linkedin.com/posts/bobrapp_an-ai-complaint-channel-is-not-a-mailbox-activity-7504660660169887744-IqA1",
+      "date": "Sat, 12 Sep 2026 22:02:11 GMT",
+      "summary": "An AI complaint channel is not a mailbox. It is a governed path from harm to remedy. PROBLEM If people cannot report safely—or never learn what happened—feedback becomes theatre. This is not accessibility acceptance or consent revocation. It is post-decision accountability. SOLUT",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Consent is not permanent permission. When someone withdraws consent, the change must reach prompts, retrieval, training pipelines,...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-digitaltrust-activity-7504660645712392193-FP7A",
+      "date": "Sat, 12 Sep 2026 22:02:08 GMT",
+      "summary": "Consent is not permanent permission. When someone withdraws consent, the change must reach prompts, retrieval, training pipelines, exports, caches, and downstream vendors. Encode revocation events, propagation deadlines, verification checks, named owners, and immutable evidence o",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Translation is not deployment readiness. A model can pass evaluation yet fail the place where people depend on it. PROBLEM Before...",
       "link": "https://www.linkedin.com/posts/bobrapp_translation-is-not-deployment-readiness-activity-7504524898405351424-iZkO",
@@ -62,22 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-safetycase-activity-7503936085631115264-PY-w",
       "date": "Thu, 10 Sep 2026 22:02:59 GMT",
       "summary": "“Trust us” is not a safety case. Build an explicit argument: intended use, hazards, controls, evidence, assumptions, residual risk, and approval authority. Version the argument alongside the system. When the model, data, context, or operating environment changes, trigger reassess",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Level Up Your AI Governance #6: Localization-as-Code A system can be technically accurate yet fail local law, language, culture, o...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-inclusiveai-activity-7503800548836581376-Do4o",
-      "date": "Thu, 10 Sep 2026 13:04:25 GMT",
-      "summary": "Level Up Your AI Governance #6: Localization-as-Code A system can be technically accurate yet fail local law, language, culture, or accessibility expectations. Encode jurisdiction and locale rules: approved languages, data residency, disclosure text, escalation contacts, date and",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem AI pilots become permanent by default when approvals have no expiry. This is use-case authorization—not model retirement o...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-ai-pilots-become-permanent-by-default-activity-7503800479223586816-J7-K",
-      "date": "Thu, 10 Sep 2026 13:04:08 GMT",
-      "summary": "Problem AI pilots become permanent by default when approvals have no expiry. This is use-case authorization—not model retirement or generic change management. Solutions Set an approval expiry, sunset owner, usage-volume limit and reassessment criteria. Require renewal evidence. I",
       "image": null,
       "author": "Bob Rapp"
     }
