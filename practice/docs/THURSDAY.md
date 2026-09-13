@@ -38,6 +38,12 @@ Rules: a mark names a level, never a system; the hash is the artifact's, never i
 permission" means the person said yes on the call; a mark can be corrected by the same host in the next
 recap. When `practice.mark` receipts exist, the host's line is generated from the receipt, not typed.
 
+## What the host writes after
+
+One file, ten minutes: `docs/thursdays/YYYY-MM-DD.md` from the template — the mark lines, one paragraph
+of what stung, who hosts next, the pairs. The Monday keeper turns it into Tuesday's story. No file,
+no Thursday story; the queued corpus case goes instead.
+
 ## What the host brings
 
 - The manifesto, printed, one per table.

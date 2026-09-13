@@ -80,6 +80,8 @@ Escribe la restricción que aplicaste: _______________________________________
 ejecuta sobre tu regla con un recibo de decisión real. Hoy la decisión es tuya sobre el papel; el recibo
 del paso 5 es real.
 
+**En la página:** [decídelo aquí](https://community.aigovops-foundation.com/decide.html) — las mismas cuatro opciones y un recibo de decisión con un hash que copias en tu Wren Card. Sin firmar; el firmado es el paso 5.
+
 ### 5 · Prueba — consigue un recibo real y firmado (10 min) — hoy
 
 Abre **[Beacon en modo hoja de trabajo](https://aigovops-foundation.github.io/aigovops-beacon/?worksheet=100)**. Un
@@ -125,4 +127,4 @@ Eso es el nivel 100. Un anfitrión lo marca. Un paquete que nadie ha visto todav
 ---
 
 **Para llevar:** `bundle-<hash>.zip` con `VERIFY.md`; tu regla en dos formas; una respuesta desde una lente.
-**Siguiente:** [Nivel 200 — Adaptar](../../../../levels/200-retrofit/WORKSHEET.md) (en inglés por ahora), cuando tengas un agente propio.
+**Siguiente:** [Nivel 200 — Adaptar](../200-retrofit/WORKSHEET.md), cuando tengas un agente propio.

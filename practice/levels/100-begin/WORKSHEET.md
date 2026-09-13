@@ -74,7 +74,7 @@ travel.* Decide it against your rule and circle one:
 
 Write the constraint you applied: _______________________________________
 
-*Today the decision is yours on paper; the receipt in step 5 is real.*
+**On the page:** [decide it here](https://community.aigovops-foundation.com/decide.html) — the same four choices, and a decision receipt with a hash you copy onto your Wren Card. Unsigned; the signed one is step 5.
 
 ### 5 · Prove — get a real signed receipt (10 min)
 
