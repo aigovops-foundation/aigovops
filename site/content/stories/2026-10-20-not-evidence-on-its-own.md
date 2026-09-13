@@ -48,7 +48,7 @@ the audit gate is a practice you hold for other people, not a thing you finish f
 ## The hour
 
 This is the fourth door in the café. Read Robodebt, Toeslagenaffaire and Horizon; verify a
-stranger's bundle offline; write the regulator's view; bring your statement on Thursday at 09:00
+stranger's bundle offline; write the regulator's view; bring your statement on Thursday at 15:00
 Pacific, where a host marks it — and then host the next one.
 
 The figures were never the evidence. Sit down. What brought you in?

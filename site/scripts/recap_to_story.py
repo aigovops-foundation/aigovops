@@ -87,7 +87,7 @@ def render(r, tuesday):
     if r["pairs"] and not r["pairs"].lower().startswith("first name — first name"):
         lines += ["## Pairs", "", r["pairs"], ""]
     lines += ["## Next Thursday", "",
-              (f"{r['next']} hosts. " if r["next"] else "") + "09:00 Pacific; the first five minutes are for receipts. Bring one, or come to watch one.", "",
+              (f"{r['next']} hosts. " if r["next"] else "") + "15:00 Pacific; the first five minutes are for receipts. Bring one, or come to watch one.", "",
               "Sit down. What brought you in?", "",
               "— [The café](https://www.aigovops-foundation.com/?src=letter#problem) · [Thursday](https://aigovops-foundation.github.io/practice/docs/THURSDAY.html) · [the run-of-show](https://aigovops-foundation.github.io/practice/docs/THURSDAY.html#run-of-show-60-minutes-ken-hosts-until-a-400-does)", ""]
     return "\n".join(lines)

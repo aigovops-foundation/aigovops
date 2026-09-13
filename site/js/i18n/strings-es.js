@@ -8,7 +8,7 @@ window.I18N = {
     sub: 'Gobernanza como código para que decir sí a la IA sea seguro — construida en abierto, probada en diez minutos.',
   },
   community: {
-    eyebrow: 'Cada jueves · 09:00 (hora del Pacífico) · Ken anfitrión',
+    eyebrow: 'Cada jueves · 15:00 (hora del Pacífico) · Ken anfitrión',
     h1: 'Jueves.',
     sub: 'Los primeros cinco minutos son para los recibos. Muestra el tuyo a una persona y di la regla que escribiste; un anfitrión marca tu nivel. Luego el caso de la semana, y quién será anfitrión la próxima vez.',
     cta: 'Únete gratis — y ven el jueves →',
@@ -41,7 +41,7 @@ window.I18N = {
     title: 'Diez minutos para empezar',
     s1: '<b>Haz el Gate Check.</b> Diez preguntas sobre una IA que conozcas. Sin cuenta, sin instalar nada.',
     s2: '<b>Guarda la Gate Card.</b> Tu veredicto y tus huecos — nunca tus respuestas. Es tu primer recibo.',
-    s3: '<b>Elige la puerta que te dolió.</b> Una hora sobre un caso real; una regla en tus palabras; un recibo firmado; y el jueves a las 09:00 (hora del Pacífico), donde un anfitrión lo marca.',
+    s3: '<b>Elige la puerta que te dolió.</b> Una hora sobre un caso real; una regla en tus palabras; un recibo firmado; y el jueves a las 15:00 (hora del Pacífico), donde un anfitrión lo marca.',
   },
   library: { eyebrow: 'Ven a ver · la Biblioteca', h1: 'La Biblioteca.', sub: 'Cien daños verificados de la IA, cada uno con la compuerta que lo habría evitado. La prueba del practicante. Las compuertas, en vivo. Cuarenta marcos. Gratis para leer — únete con un correo, nada más.', inside: 'Qué hay dentro', cases: 'Los casos', gatelaw: 'Una sola ley de compuertas lo atraviesa todo.' },
   opensource: { eyebrow: 'Ven a probar · el código abierto', h1: 'Código abierto.', practice: 'Cuatro niveles. Una hora cada uno. Las marcas son la credencial.', engines: 'Tres motores. Una cadena de evidencia verificable.', live: 'Míralo funcionar — en vivo, aquí mismo' },

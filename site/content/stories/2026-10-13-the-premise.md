@@ -49,7 +49,7 @@ shown on day one.
 This is the fourth door in the café — *someone needs proof of what the AI actually did — a
 regulator, a court, a board.* Sixty minutes, then the Thursday you host. Read Robodebt,
 Toeslagenaffaire and Horizon; verify a stranger's bundle offline; write the premise gate; then bring
-your verification statement on Thursday at 09:00 Pacific.
+your verification statement on Thursday at 15:00 Pacific.
 
 The notice was never the problem. Sit down. What brought you in?
 

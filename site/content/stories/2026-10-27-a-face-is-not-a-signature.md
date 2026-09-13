@@ -46,7 +46,7 @@ is not a hold.
 
 This is the third door in the café — *it's already running, and nobody can say who's watching it or
 how to stop it.* Sixty minutes on paper: read Arup, Cigna and nH Predict; write the hold with its
-human, channel and expiry; do the arithmetic; name the identity; then bring it on Thursday at 09:00
+human, channel and expiry; do the arithmetic; name the identity; then bring it on Thursday at 15:00
 Pacific, where a host marks it.
 
 The faces were perfect. The channel was theirs. Sit down. What brought you in?

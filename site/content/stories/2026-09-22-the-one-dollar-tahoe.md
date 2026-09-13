@@ -54,7 +54,7 @@ record before it ships.
 This is the second door in the café — *I have a bot or an agent already, and I'm not sure it's safe
 to ship.* The hour is sixty minutes and one install. You read this case and Knight Capital, list
 your agent's three consequential actions, write the policy, validate it, change one line, and watch
-the diff. Then you bring it on Thursday at 09:00 Pacific, where a host marks it.
+the diff. Then you bring it on Thursday at 15:00 Pacific, where a host marks it.
 
 If you do not have a bot yet, take the first door instead, or run the ten-minute Gate Check and keep
 the card. Either way: the rule goes outside the model. Sit down. What brought you in?

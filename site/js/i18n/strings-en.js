@@ -8,7 +8,7 @@ window.I18N = {
     sub: 'Governance as code that makes AI safe to say yes to — built in the open, proven in ten minutes.',
   },
   community: {
-    eyebrow: 'Every Thursday · 09:00 Pacific · Ken hosts',
+    eyebrow: 'Every Thursday · 15:00 Pacific · Ken hosts',
     h1: 'Thursday.',
     sub: 'The first five minutes are for receipts. Show yours to one person and say the rule you wrote; a host marks your level. Then the case of the week, and who hosts next.',
     cta: 'Join free — then come Thursday →',
@@ -41,7 +41,7 @@ window.I18N = {
     title: 'Ten minutes to get started',
     s1: '<b>Run the Gate Check.</b> Ten questions about one AI you know. No account, nothing installed.',
     s2: '<b>Keep the Gate Card.</b> Your verdict and your gaps — never your answers. It is your first receipt.',
-    s3: '<b>Pick the door that stung.</b> One hour on a real case; a rule in your own words; a signed receipt; then Thursday at 09:00 Pacific, where a host marks it.',
+    s3: '<b>Pick the door that stung.</b> One hour on a real case; a rule in your own words; a signed receipt; then Thursday at 15:00 Pacific, where a host marks it.',
   },
   library: { eyebrow: 'Come see · the Library', h1: 'The Library.', sub: 'One hundred verified AI harms, each with the gate that would have caught it. The practitioner test. The gates, live. Forty frameworks. Free to read — join with an email, nothing more.', inside: 'What is inside', cases: 'The cases', gatelaw: 'One gate law runs through everything.' },
   opensource: { eyebrow: 'Come try · the open source', h1: 'Open source.', practice: 'Four levels. One hour each. The marks are the credential.', engines: 'Three engines. One verifiable evidence chain.', live: 'Watch it run — live, right here' },

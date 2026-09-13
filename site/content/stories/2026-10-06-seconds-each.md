@@ -48,7 +48,7 @@ not.
 This is the third door in the café — *it's already running, and nobody can say who's watching it or
 how to stop it.* Sixty minutes today, pen and paper, and a week of traffic later. Read Arup, Cigna
 and nH Predict; name the human, the channel and the expiry; do Cigna's arithmetic; write your stop
-conditions; then bring it on Thursday at 09:00 Pacific, where a host marks it.
+conditions; then bring it on Thursday at 15:00 Pacific, where a host marks it.
 
 Seconds each was never a review. Sit down. What brought you in?
 

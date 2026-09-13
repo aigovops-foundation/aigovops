@@ -45,7 +45,7 @@ a merge that cannot happen when the rule got weaker, and a record that says so.
 
 This is the second door in the café. Sixty minutes and one install: read both cases, list your
 agent's three consequential actions, write the policy in plain words and as YAML, validate it,
-change one line, watch the diff, then bring the refused merge on Thursday at 09:00 Pacific, where a
+change one line, watch the diff, then bring the refused merge on Thursday at 15:00 Pacific, where a
 host marks it.
 
 If your system has no deploy gate today, you are not behind — most don't. You are exactly where

@@ -41,7 +41,7 @@ door that stung.
 
 The hour that follows is the same at every level. Read the case. Declare the gate — a sentence a
 colleague could enforce, or three lines of YAML; both are the same gate and produce the same
-receipt. Prove it. Then bring it on Thursday at 09:00, where the first five minutes are for receipts
+receipt. Prove it. Then bring it on Thursday at 15:00, where the first five minutes are for receipts
 and a host writes one line: `MARK · 100 · <name> · <hash> · host <name> · <date>`. That line is the
 credential, and the credential is a receipt. Nobody sells it; a stranger can verify it offline.
 
