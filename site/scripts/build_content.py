@@ -388,7 +388,17 @@ def render_translations(metas):
 
 def main():
     files = sorted(f for f in glob.glob(os.path.join(STORIES, "*.md")) if not os.path.basename(f).startswith("_") and os.path.basename(f).upper() != "README.MD")
-    metas = sorted((parse(f) for f in files), key=lambda m: m["date"], reverse=True)
+    allm = sorted((parse(f) for f in files), key=lambda m: m["date"], reverse=True)
+    # The Letter runs itself: a story dated in the future waits in content/stories/ until its day.
+    # publish-content.yml runs every Tuesday morning, so a dated story publishes on its date with
+    # nobody at the keyboard. Drafts (newsletter + LinkedIn) are written a week ahead so Monday's
+    # paste into Substack is ready. PUBLISH_UNTIL=YYYY-MM-DD overrides (the self-test uses it).
+    until = dt.date.fromisoformat(os.environ.get("PUBLISH_UNTIL") or dt.date.today().isoformat())
+    metas = [m for m in allm if dt.date.fromisoformat(m["date"]) <= until]
+    ahead = [m for m in allm if dt.date.fromisoformat(m["date"]) <= until + dt.timedelta(days=7)]
+    for m in allm:
+        if m not in metas:
+            print(f"build_content: {m['slug']} waits until {m['date']}")
     os.makedirs(os.path.join(ROOT, "blog"), exist_ok=True)
     for m in metas:
         out = os.path.join(ROOT, "blog", f"{m['slug']}.html")
@@ -396,7 +406,7 @@ def main():
         print(f"build_content: blog/{m['slug']}.html  ({m['date']}, {m['minutes']} min, {m['author']})")
     update_index(metas)          # zero stories -> an empty marker block, never a stale card
     update_feed(metas)
-    write_drafts(metas)
+    write_drafts(ahead)
     nt = render_translations(metas)
     if nt:
         print(f"build_content: {nt} translated story page(s) under blog/<lang>/")

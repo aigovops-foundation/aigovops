@@ -2,7 +2,7 @@ name: publish-content
 
 # Drop a story in content/stories/ and it publishes. This renders Markdown into the blog, the
 # blog index and the RSS feed, and commits the result to main — GitHub Pages serves main, so the
-# post is live within a minute. Same shape as fetch-linkedin-posts.yml (an automated commit of
+# post is live within a minute. A story dated in the future waits until its Tuesday. Same shape as fetch-linkedin-posts.yml (an automated commit of
 # generated files). Hand-made posts are never touched.
 
 on:
@@ -10,6 +10,8 @@ on:
     branches: [main]
     paths: ["content/**", "scripts/build_content.py"]
   workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * 2"    # Tuesdays 06:00 UTC — a story dated today publishes itself; drafts for next week are written
 
 concurrency:
   group: publish-content
