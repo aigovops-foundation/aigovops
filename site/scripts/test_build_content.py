@@ -168,3 +168,9 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+
+# recap_to_story.py (Thursday → Tuesday) carries its own throwaway self-test; run it here so one
+# command proves the whole content pipeline.
+import subprocess as _sp, sys as _sys
+_r = _sp.run([_sys.executable, os.path.join(ROOT, "scripts", "recap_to_story.py"), "--selftest"], capture_output=True, text=True)
+print(_r.stdout.strip()); assert _r.returncode == 0, _r.stderr
