@@ -23,7 +23,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Regenerate drafts (build_content writes content/drafts a week ahead)
-        run: python3 scripts/build_content.py >/dev/null
+        run: |
+          pip install -q markdown
+          python3 scripts/build_content.py >/dev/null
       - name: Post through Postiz
         env:
           POSTIZ_API_KEY: ${{ secrets.POSTIZ_API_KEY }}
