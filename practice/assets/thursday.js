@@ -7,7 +7,7 @@
  * updates a line each week.
  */
 window.THURSDAY = {
-  joinUrl: "",            // ← paste the recurring meeting link here (Google Meet / Zoom). Empty = "posted by 14:45 Pacific".
+  joinUrl: "https://teams.microsoft.com/meet/239700241949951?p=irQfj9QYneC4QBop2Q",            // ← paste the recurring meeting link here (Google Meet / Zoom). Empty = "posted by 14:45 Pacific".
   host: "Ken",
   hourPacific: 15
 };
