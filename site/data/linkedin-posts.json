@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-14T07:16:46Z",
+  "updated": "2026-09-14T19:09:14Z",
   "bob": [
+    {
+      "title": "Your AI risk boundary includes the libraries, hosted services, datasets, and evaluators you did not build. Create an approved depe...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-supplychainsecurity-activity-7505250190849826816-XvQW",
+      "date": "Mon, 14 Sep 2026 13:04:46 GMT",
+      "summary": "Your AI risk boundary includes the libraries, hosted services, datasets, and evaluators you did not build. Create an approved dependency inventory with provenance, version pins, security status, data-use terms, owners, review dates, and a block on unapproved transitive changes. T",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI is only safe when real users can understand its output and act correctly under pressure. PROBLEM｜问题 A polished demo can hide am...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-is-only-safe-when-real-users-can-understand-activity-7505249856269991936-2zFo",
+      "date": "Mon, 14 Sep 2026 13:03:27 GMT",
+      "summary": "AI is only safe when real users can understand its output and act correctly under pressure. PROBLEM｜问题 A polished demo can hide ambiguity, workload, alert fatigue, overreliance, time pressure, and failed recovery. SOLUTIONS｜解决方案 Before launch, observe representative users: • Run",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "“Escalate to a human” is not a control unless the human can respond in time. Define service levels for high-risk uncertainty: rout...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-humanoversight-activity-7505023159906250752-uOnt",
@@ -62,22 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-responsibleai-activity-7504524445403799552-tVxg",
       "date": "Sat, 12 Sep 2026 13:00:55 GMT",
       "summary": "Latency is a governance variable when delays pressure people into unsafe overrides—or cause an agent to act on outdated context. Set budgets by risk tier, measure end-to-end latency, pause when context expires, escalate predictable misses, and preserve timing evidence for review.",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Governance begins before the model reaches production. Put acceptance gates into procurement: intended use, prohibited use, data h...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-aiacquisition-activity-7504298530208026624-nrH8",
-      "date": "Fri, 11 Sep 2026 22:03:13 GMT",
-      "summary": "Governance begins before the model reaches production. Put acceptance gates into procurement: intended use, prohibited use, data handling, audit access, incident notice, subcontractors, update controls, exit support, and measurable performance commitments. A signed contract is no",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI benefit-sharing is a go/no-go governance review—not a values statement. PROBLEM Efficiency can shift costs to displaced workers...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-benefit-sharing-is-a-gono-go-governance-activity-7504298465712287747-X29c",
-      "date": "Fri, 11 Sep 2026 22:02:57 GMT",
-      "summary": "AI benefit-sharing is a go/no-go governance review—not a values statement. PROBLEM Efficiency can shift costs to displaced workers, frontline staff, and people with less access. Accuracy and ROI miss who gains, bears errors, or is excluded. SOLUTIONS Record beneficiaries/value, d",
       "image": null,
       "author": "Bob Rapp"
     }
