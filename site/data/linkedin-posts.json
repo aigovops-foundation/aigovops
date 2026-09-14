@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-13T19:07:25Z",
+  "updated": "2026-09-14T07:16:46Z",
   "bob": [
+    {
+      "title": "“Escalate to a human” is not a control unless the human can respond in time. Define service levels for high-risk uncertainty: rout...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-humanoversight-activity-7505023159906250752-uOnt",
+      "date": "Sun, 13 Sep 2026 22:02:38 GMT",
+      "summary": "“Escalate to a human” is not a control unless the human can respond in time. Define service levels for high-risk uncertainty: routing, acknowledgement, decision, and recovery. If the SLO is missed, the system should pause or move to a safer state—not continue silently. Three-Yes",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI incidents need consistent decisions—not generic escalation. ENGLISH PROBLEM Score five axes: harm, population, duration, detect...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-incidents-need-consistent-decisionsnot-activity-7505022979492319232-CI5f",
+      "date": "Sun, 13 Sep 2026 22:01:55 GMT",
+      "summary": "AI incidents need consistent decisions—not generic escalation. ENGLISH PROBLEM Score five axes: harm, population, duration, detectability, and reversibility. Escalate to the highest signal: S0 no meaningful impact; S1 limited/contained; S2 material/recoverable; S3 significant/har",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "When an AI incident triggers litigation or regulatory review, deleting logs on schedule can destroy the evidence you need. Encode...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-governanceascode-activity-7504887567822168064-N0iD",
@@ -62,22 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_ai-benefit-sharing-is-a-gono-go-governance-activity-7504298465712287747-X29c",
       "date": "Fri, 11 Sep 2026 22:02:57 GMT",
       "summary": "AI benefit-sharing is a go/no-go governance review—not a values statement. PROBLEM Efficiency can shift costs to displaced workers, frontline staff, and people with less access. Accuracy and ROI miss who gains, bears errors, or is excluded. SOLUTIONS Record beneficiaries/value, d",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI governance fails when “we use AI” is the whole record. PROBLEM One AI use case needs its own living processing register—not a c...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-fails-when-we-use-ai-is-the-activity-7504162906645770240-MfuS",
-      "date": "Fri, 11 Sep 2026 13:04:18 GMT",
-      "summary": "AI governance fails when “we use AI” is the whole record. PROBLEM One AI use case needs its own living processing register—not a consent-revocation log, legal hold, dataset-lineage file, or localization plan. SOLUTIONS Record purpose, lawful basis, data categories, sources, recip",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Not every AI change deserves the same review: but every material change deserves a reasoned decision. Score impact across model be...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-changemanagement-activity-7504162827751063552-kqYb",
-      "date": "Fri, 11 Sep 2026 13:03:59 GMT",
-      "summary": "Not every AI change deserves the same review: but every material change deserves a reasoned decision. Score impact across model behavior, data, users, jurisdiction, autonomy, and reversibility. Route the score to the right approver, testing depth, monitoring period, and communica",
       "image": null,
       "author": "Bob Rapp"
     }
