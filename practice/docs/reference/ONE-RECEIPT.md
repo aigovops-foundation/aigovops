@@ -1,5 +1,7 @@
 # One Receipt
 
+> **Superseded by v0.2 (14 September 2026).** The paper, the core specification, schemas, reference verifier, twelve corpus test vectors, the master plan with twelve decisions and the coalition playbook now live in [aigovops-foundation/One-ai-Receipt-aigovops-foundation](https://github.com/aigovops-foundation/One-ai-Receipt-aigovops-foundation) — read [`docs/WHITEPAPER.md`](https://github.com/aigovops-foundation/One-ai-Receipt-aigovops-foundation/blob/main/docs/WHITEPAPER.md) there, or the [PDF](https://github.com/aigovops-foundation/One-ai-Receipt-aigovops-foundation/blob/main/docs/One-Receipt-v0.2.pdf). This v0.1 draft stays here as history; the research memos in `research/` remain the per-claim sources. What v0.2 changed: bounded claims lead; OR-0…OR-5 is our own verifier-computed ladder (no AAL borrowing); contestability is an object; privacy has a threat model; witnessing and four separated roles; how each Foundation project adopts it is in that repo's `docs/ADOPTION.md`.
+
 **A proposal for an end-to-end protocol that lets anyone verify one generative-AI transaction — across every interface, for every party.**
 
 Whitepaper review draft v0.1 · AiGovOps Foundation · 13 September 2026 · Authors: Bob Rapp, Ken Johnston, with Claude · Status: **for review** (Ken and Bob; then the Review Circle). Review page: the artifact "One Receipt" (kept current; never re-created).
