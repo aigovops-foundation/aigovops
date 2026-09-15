@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-15T07:08:27Z",
+  "updated": "2026-09-15T19:08:58Z",
   "bob": [
+    {
+      "title": "New AI use case or change? “Low risk” is not a rationale. PROBLEM Scope six factors: affected people; decision significance; auton...",
+      "link": "https://fr.linkedin.com/posts/bobrapp_new-ai-use-case-or-change-low-risk-is-activity-7505612238268067840-E7Ng",
+      "date": "Tue, 15 Sep 2026 13:03:25 GMT",
+      "summary": "New AI use case or change? “Low risk” is not a rationale. PROBLEM Scope six factors: affected people; decision significance; autonomy; scale; reversibility; jurisdiction. SOLUTIONS Three-Yes Test: Safe? Compliant? Pro-Humanity? Require a formal assessment when these factors indic",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Retiring a model is more than removing an endpoint. Identify every workflow, fallback, cached artifact, report, and user communica...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-modelgovernance-activity-7505611951805214720-RI6p",
+      "date": "Tue, 15 Sep 2026 13:02:17 GMT",
+      "summary": "Retiring a model is more than removing an endpoint. Identify every workflow, fallback, cached artifact, report, and user communication connected to it. Encode retirement gates, replacement validation, access revocation, evidence retention, and a rollback decision window. Three-Ye",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "More logs do not automatically mean better accountability. Compression must preserve what an auditor needs: actor identity, action...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-auditability-activity-7505385585352687616-qGdF",
@@ -62,22 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_post-launch-accessibility-failures-are-governance-activity-7504887372258373632-hlqk",
       "date": "Sun, 13 Sep 2026 13:03:04 GMT",
       "summary": "Post-launch accessibility failures are governance signals: not edge cases. PROBLEM Acceptance is a snapshot. After release, collect feedback; use an AT/browser/task taxonomy; triage severity; assign an owner; fix; regression-test; notify users; publish limitations. SHIP GOOD AI •",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An AI complaint channel is not a mailbox. It is a governed path from harm to remedy. PROBLEM If people cannot report safely—or nev...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-ai-complaint-channel-is-not-a-mailbox-activity-7504660660169887744-IqA1",
-      "date": "Sat, 12 Sep 2026 22:02:11 GMT",
-      "summary": "An AI complaint channel is not a mailbox. It is a governed path from harm to remedy. PROBLEM If people cannot report safely—or never learn what happened—feedback becomes theatre. This is not accessibility acceptance or consent revocation. It is post-decision accountability. SOLUT",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Consent is not permanent permission. When someone withdraws consent, the change must reach prompts, retrieval, training pipelines,...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-digitaltrust-activity-7504660645712392193-FP7A",
-      "date": "Sat, 12 Sep 2026 22:02:08 GMT",
-      "summary": "Consent is not permanent permission. When someone withdraws consent, the change must reach prompts, retrieval, training pipelines, exports, caches, and downstream vendors. Encode revocation events, propagation deadlines, verification checks, named owners, and immutable evidence o",
       "image": null,
       "author": "Bob Rapp"
     }
