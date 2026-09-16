@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-15T19:08:58Z",
+  "updated": "2026-09-16T07:08:28Z",
   "bob": [
+    {
+      "title": "AI literacy is not one course. PROBLEM Six roles face different decisions, tools, and risks. SOLUTIONS For each role, define requi...",
+      "link": "https://fr.linkedin.com/posts/bobrapp_ai-literacy-is-not-one-course-problem-six-activity-7505747826446991361-7i56",
+      "date": "Tue, 15 Sep 2026 22:02:12 GMT",
+      "summary": "AI literacy is not one course. PROBLEM Six roles face different decisions, tools, and risks. SOLUTIONS For each role, define required knowledge, a practical test, refresh triggers (change, incident, or new use), and completion evidence. SUMMARY Train to decision rights. Three-Yes",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Moving inference to the edge can improve privacy and latency—but it can also fragment governance. Encode approved hardware, model...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-edgeai-activity-7505747676496429056-NHB9",
+      "date": "Tue, 15 Sep 2026 22:01:36 GMT",
+      "summary": "Moving inference to the edge can improve privacy and latency—but it can also fragment governance. Encode approved hardware, model hashes, configuration baselines, update windows, local retention, connectivity-loss behavior, and a remote shutdown path. A disconnected device still",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "New AI use case or change? “Low risk” is not a rationale. PROBLEM Scope six factors: affected people; decision significance; auton...",
       "link": "https://fr.linkedin.com/posts/bobrapp_new-ai-use-case-or-change-low-risk-is-activity-7505612238268067840-E7Ng",
@@ -54,30 +70,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-humanoversight-activity-7505023159906250752-uOnt",
       "date": "Sun, 13 Sep 2026 22:02:38 GMT",
       "summary": "“Escalate to a human” is not a control unless the human can respond in time. Define service levels for high-risk uncertainty: routing, acknowledgement, decision, and recovery. If the SLO is missed, the system should pause or move to a safer state—not continue silently. Three-Yes",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI incidents need consistent decisions—not generic escalation. ENGLISH PROBLEM Score five axes: harm, population, duration, detect...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-incidents-need-consistent-decisionsnot-activity-7505022979492319232-CI5f",
-      "date": "Sun, 13 Sep 2026 22:01:55 GMT",
-      "summary": "AI incidents need consistent decisions—not generic escalation. ENGLISH PROBLEM Score five axes: harm, population, duration, detectability, and reversibility. Escalate to the highest signal: S0 no meaningful impact; S1 limited/contained; S2 material/recoverable; S3 significant/har",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "When an AI incident triggers litigation or regulatory review, deleting logs on schedule can destroy the evidence you need. Encode...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-governanceascode-activity-7504887567822168064-N0iD",
-      "date": "Sun, 13 Sep 2026 13:03:50 GMT",
-      "summary": "When an AI incident triggers litigation or regulatory review, deleting logs on schedule can destroy the evidence you need. Encode legal holds: identify affected systems, freeze relevant records, name custodians, restrict deletion, record scope and start time, and require authoriz",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Post-launch accessibility failures are governance signals: not edge cases. PROBLEM Acceptance is a snapshot. After release, collec...",
-      "link": "https://www.linkedin.com/posts/bobrapp_post-launch-accessibility-failures-are-governance-activity-7504887372258373632-hlqk",
-      "date": "Sun, 13 Sep 2026 13:03:04 GMT",
-      "summary": "Post-launch accessibility failures are governance signals: not edge cases. PROBLEM Acceptance is a snapshot. After release, collect feedback; use an AT/browser/task taxonomy; triage severity; assign an owner; fix; regression-test; notify users; publish limitations. SHIP GOOD AI •",
       "image": null,
       "author": "Bob Rapp"
     }
