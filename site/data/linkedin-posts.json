@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-16T07:08:28Z",
+  "updated": "2026-09-16T19:08:32Z",
   "bob": [
+    {
+      "title": "A claim about fairness, accuracy, or compliance is only as credible as the data lineage behind it. Link each material claim to dat...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-datagovernance-activity-7505974831889289216-KEhs",
+      "date": "Wed, 16 Sep 2026 13:04:14 GMT",
+      "summary": "A claim about fairness, accuracy, or compliance is only as credible as the data lineage behind it. Link each material claim to dataset versions, collection purpose, transformations, exclusions, test populations, and approval evidence. Make the chain queryable before an audit: not",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "PUBLIC AI SHOULD BE UNDERSTANDABLE BEFORE ROLLOUT. ENGLISH PROBLEM: A contract award ≠ transparency. Before launch, disclose use c...",
+      "link": "https://www.linkedin.com/posts/bobrapp_public-ai-should-be-understandable-before-activity-7505974000330809345-eBwd",
+      "date": "Wed, 16 Sep 2026 13:00:56 GMT",
+      "summary": "PUBLIC AI SHOULD BE UNDERSTANDABLE BEFORE ROLLOUT. ENGLISH PROBLEM: A contract award ≠ transparency. Before launch, disclose use case, affected service, decision limits, oversight contact, input window, alternatives, and response. SOLUTIONS: Require plain-language notice + public",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "AI literacy is not one course. PROBLEM Six roles face different decisions, tools, and risks. SOLUTIONS For each role, define requi...",
       "link": "https://fr.linkedin.com/posts/bobrapp_ai-literacy-is-not-one-course-problem-six-activity-7505747826446991361-7i56",
@@ -54,22 +70,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-supplychainsecurity-activity-7505250190849826816-XvQW",
       "date": "Mon, 14 Sep 2026 13:04:46 GMT",
       "summary": "Your AI risk boundary includes the libraries, hosted services, datasets, and evaluators you did not build. Create an approved dependency inventory with provenance, version pins, security status, data-use terms, owners, review dates, and a block on unapproved transitive changes. T",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI is only safe when real users can understand its output and act correctly under pressure. PROBLEM｜问题 A polished demo can hide am...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-is-only-safe-when-real-users-can-understand-activity-7505249856269991936-2zFo",
-      "date": "Mon, 14 Sep 2026 13:03:27 GMT",
-      "summary": "AI is only safe when real users can understand its output and act correctly under pressure. PROBLEM｜问题 A polished demo can hide ambiguity, workload, alert fatigue, overreliance, time pressure, and failed recovery. SOLUTIONS｜解决方案 Before launch, observe representative users: • Run",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "“Escalate to a human” is not a control unless the human can respond in time. Define service levels for high-risk uncertainty: rout...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-humanoversight-activity-7505023159906250752-uOnt",
-      "date": "Sun, 13 Sep 2026 22:02:38 GMT",
-      "summary": "“Escalate to a human” is not a control unless the human can respond in time. Define service levels for high-risk uncertainty: routing, acknowledgement, decision, and recovery. If the SLO is missed, the system should pause or move to a safer state—not continue silently. Three-Yes",
       "image": null,
       "author": "Bob Rapp"
     }
