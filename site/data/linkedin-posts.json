@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-16T19:08:32Z",
+  "updated": "2026-09-17T07:09:31Z",
   "bob": [
+    {
+      "title": "An AI feature that works for most users can still exclude people who rely on assistive technology, alternative input, captions, or...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-accessibleai-activity-7506110531267678209-34S4",
+      "date": "Wed, 16 Sep 2026 22:03:27 GMT",
+      "summary": "An AI feature that works for most users can still exclude people who rely on assistive technology, alternative input, captions, or simplified language. Encode accessibility acceptance tests, minimum support levels, human alternatives, defect severity, remediation deadlines, and a",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI governance must make its artifacts accessible—not just its features. / AI機能だけでなく、証跡も誰もが使えるように。 PROBLEM / 問題 Policies, notices,...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-must-make-its-artifacts-accessiblenot-activity-7506110384680947712-Tlbe",
+      "date": "Wed, 16 Sep 2026 22:02:52 GMT",
+      "summary": "AI governance must make its artifacts accessible—not just its features. / AI機能だけでなく、証跡も誰もが使えるように。 PROBLEM / 問題 Policies, notices, training records, and evidence: usable by every reviewer. / 方針・通知・研修記録・証跡を全審査者に。 SOLUTIONS / 解決策 Use readable formats; screen readers; plain language;",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "A claim about fairness, accuracy, or compliance is only as credible as the data lineage behind it. Link each material claim to dat...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-datagovernance-activity-7505974831889289216-KEhs",
@@ -54,22 +70,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-auditability-activity-7505385585352687616-qGdF",
       "date": "Mon, 14 Sep 2026 22:02:47 GMT",
       "summary": "More logs do not automatically mean better accountability. Compression must preserve what an auditor needs: actor identity, action, target, time, policy version, input/output references, approval, and outcome. Use cryptographic hashes, searchable indexes, retention tiers, and rec",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Authoritative sources can disagree. AI must not decide silently. PROBLEM | المشكلة Conflicting-source governance—not freshness, li...",
-      "link": "https://www.linkedin.com/posts/bobrapp_authoritative-sources-can-disagree-ai-must-activity-7505385543501758464-mGrC",
-      "date": "Mon, 14 Sep 2026 22:02:37 GMT",
-      "summary": "Authoritative sources can disagree. AI must not decide silently. PROBLEM | المشكلة Conflicting-source governance—not freshness, lineage, or API version skew. تعارض المصادر الموثوقة مسألة حوكمة، لا حداثة البيانات أو نسبتها أو اختلاف API. SOLUTIONS | الحلول Tier authority; detect c",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Your AI risk boundary includes the libraries, hosted services, datasets, and evaluators you did not build. Create an approved depe...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-supplychainsecurity-activity-7505250190849826816-XvQW",
-      "date": "Mon, 14 Sep 2026 13:04:46 GMT",
-      "summary": "Your AI risk boundary includes the libraries, hosted services, datasets, and evaluators you did not build. Create an approved dependency inventory with provenance, version pins, security status, data-use terms, owners, review dates, and a block on unapproved transitive changes. T",
       "image": null,
       "author": "Bob Rapp"
     }
