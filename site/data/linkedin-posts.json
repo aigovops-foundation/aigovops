@@ -1,6 +1,14 @@
 {
-  "updated": "2026-09-18T07:07:41Z",
+  "updated": "2026-09-18T19:08:55Z",
   "bob": [
+    {
+      "title": "EN — A documented control is not necessarily an effective control. Problem: organizations count policies, approvals, and training...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7506699653086679041-3eGe",
+      "date": "Fri, 18 Sep 2026 13:04:25 GMT",
+      "summary": "EN — A documented control is not necessarily an effective control. Problem: organizations count policies, approvals, and training completions while the control fails under realistic pressure. Solution: test controls with observable scenarios. Sample actual access requests, change",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "EN — A model change is also a communication change. Problem: stakeholders keep relying on old limitations, intended-use statements...",
       "link": "https://www.linkedin.com/posts/bobrapp_en-a-model-change-is-also-a-communication-activity-7506472861038174208-259V",
@@ -62,14 +70,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-edgeai-activity-7505747676496429056-NHB9",
       "date": "Tue, 15 Sep 2026 22:01:36 GMT",
       "summary": "Moving inference to the edge can improve privacy and latency—but it can also fragment governance. Encode approved hardware, model hashes, configuration baselines, update windows, local retention, connectivity-loss behavior, and a remote shutdown path. A disconnected device still",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "New AI use case or change? “Low risk” is not a rationale. PROBLEM Scope six factors: affected people; decision significance; auton...",
-      "link": "https://fr.linkedin.com/posts/bobrapp_new-ai-use-case-or-change-low-risk-is-activity-7505612238268067840-E7Ng",
-      "date": "Tue, 15 Sep 2026 13:03:25 GMT",
-      "summary": "New AI use case or change? “Low risk” is not a rationale. PROBLEM Scope six factors: affected people; decision significance; autonomy; scale; reversibility; jurisdiction. SOLUTIONS Three-Yes Test: Safe? Compliant? Pro-Humanity? Require a formal assessment when these factors indic",
       "image": null,
       "author": "Bob Rapp"
     }
