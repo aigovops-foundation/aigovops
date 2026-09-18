@@ -1,6 +1,14 @@
 {
-  "updated": "2026-09-17T19:09:02Z",
+  "updated": "2026-09-18T07:07:41Z",
   "bob": [
+    {
+      "title": "EN — A model change is also a communication change. Problem: stakeholders keep relying on old limitations, intended-use statements...",
+      "link": "https://www.linkedin.com/posts/bobrapp_en-a-model-change-is-also-a-communication-activity-7506472861038174208-259V",
+      "date": "Thu, 17 Sep 2026 22:03:14 GMT",
+      "summary": "EN — A model change is also a communication change. Problem: stakeholders keep relying on old limitations, intended-use statements, or performance results after a model, prompt, data source, or threshold changes. Solution: CHECKLIST 1. Version public and internal model documentat",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "EN : Listening to users is not automatically ethical research. Problem: organizations collect interviews, feedback, recordings, or...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7506337110480535553-A4Ea",
@@ -62,14 +70,6 @@
       "link": "https://fr.linkedin.com/posts/bobrapp_new-ai-use-case-or-change-low-risk-is-activity-7505612238268067840-E7Ng",
       "date": "Tue, 15 Sep 2026 13:03:25 GMT",
       "summary": "New AI use case or change? “Low risk” is not a rationale. PROBLEM Scope six factors: affected people; decision significance; autonomy; scale; reversibility; jurisdiction. SOLUTIONS Three-Yes Test: Safe? Compliant? Pro-Humanity? Require a formal assessment when these factors indic",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Retiring a model is more than removing an endpoint. Identify every workflow, fallback, cached artifact, report, and user communica...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-modelgovernance-activity-7505611951805214720-RI6p",
-      "date": "Tue, 15 Sep 2026 13:02:17 GMT",
-      "summary": "Retiring a model is more than removing an endpoint. Identify every workflow, fallback, cached artifact, report, and user communication connected to it. Encode retirement gates, replacement validation, access revocation, evidence retention, and a rollback decision window. Three-Ye",
       "image": null,
       "author": "Bob Rapp"
     }
