@@ -7,6 +7,16 @@ SITE="${SITE_URL:-https://www.aigovops-foundation.com}"
 echo ""
 echo "🚨  HTTP Error Detection Tests"
 echo ""
+
+# Pre-flight: same sandbox-egress guard as the happy-path and E2E tiers — a blocked
+# proxy returns 000/403 for everything, which would otherwise read as a missing 404.
+PREFLIGHT=$(curl -sL -o /dev/null -w "%{http_code}" --max-time 10 "$SITE/")
+if [ "$PREFLIGHT" = "403" ] || [ "$PREFLIGHT" = "000" ]; then
+  echo "  ⏭️   SKIPPED — sandbox egress proxy blocks external requests (HTTP $PREFLIGHT)"
+  echo "  ℹ️   Error-detection tests run correctly from an unrestricted network"
+  echo ""
+  exit 3
+fi
 echo "  [No server errors — all 24 top-level pages]"
 for p in "/" "/404.html" "/admin.html" "/alpha.html" "/blog.html" "/bob.html" \
          "/community.html" "/demo.html" "/ecosystem.html" "/events.html" \

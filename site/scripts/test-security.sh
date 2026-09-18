@@ -127,7 +127,7 @@ done
 echo ""
 echo "  [External <script src> allowlist]"
 # The estate's sanctioned third-party script hosts:
-ALLOW_HOSTS='plausible\.io|fonts\.googleapis\.com|fonts\.gstatic\.com|js\.stripe\.com|community\.aigovops-foundation\.com|aigovops-foundation\.github\.io'
+ALLOW_HOSTS='plausible\.io|fonts\.googleapis\.com|fonts\.gstatic\.com|js\.stripe\.com|community\.aigovops-foundation\.com|practice\.aigovops-foundation\.com|aigovops-foundation\.github\.io'
 for f in "${PAGES[@]}"; do
   rel="${f#$REPO/}"
   srcs=$(grep -oE '<script[^>]+src="https?://[^"]+"' "$f" | grep -oE 'src="[^"]+"' | sed 's/^src="//; s/"$//')
