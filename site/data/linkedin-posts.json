@@ -1,6 +1,14 @@
 {
-  "updated": "2026-09-19T07:06:34Z",
+  "updated": "2026-09-19T19:07:18Z",
   "bob": [
+    {
+      "title": "EN — “Human in the loop” does not protect people if the loop is overloaded. Problem: AI systems can shift review work onto frontli...",
+      "link": "https://www.linkedin.com/posts/bobrapp_en-human-in-the-loop-does-not-protect-activity-7507061829102321664-7Ju6",
+      "date": "Sat, 19 Sep 2026 13:03:35 GMT",
+      "summary": "EN — “Human in the loop” does not protect people if the loop is overloaded. Problem: AI systems can shift review work onto frontline staff faster than teams can inspect, challenge, or recover from errors. Fatigue then becomes a governance risk. CHECKLIST Solution: measure reviewe",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "EN — A governance committee can be diverse on paper and still miss the people carrying the risk. Problem: decisions are made only...",
       "link": "https://www.linkedin.com/posts/bobrapp_en-a-governance-committee-can-be-diverse-activity-7506835207853887488-LNQh",
@@ -64,14 +72,6 @@
       "summary": "PUBLIC AI SHOULD BE UNDERSTANDABLE BEFORE ROLLOUT. ENGLISH PROBLEM: A contract award ≠ transparency. Before launch, disclose use case, affected service, decision limits, oversight contact, input window, alternatives, and response. SOLUTIONS: Require plain-language notice + public",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "AI literacy is not one course. PROBLEM Six roles face different decisions, tools, and risks. SOLUTIONS For each role, define requi...",
-      "link": "https://fr.linkedin.com/posts/bobrapp_ai-literacy-is-not-one-course-problem-six-activity-7505747826446991361-7i56",
-      "date": "Tue, 15 Sep 2026 22:02:12 GMT",
-      "summary": "AI literacy is not one course. PROBLEM Six roles face different decisions, tools, and risks. SOLUTIONS For each role, define required knowledge, a practical test, refresh triggers (change, incident, or new use), and completion evidence. SUMMARY Train to decision rights. Three-Yes",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
@@ -96,46 +96,6 @@
       "link": "https://www.linkedin.com/posts/rkjohnston_failfest-activity-7496345952597860352-b46Y",
       "date": "Thu, 20 Aug 2026 23:22:30 GMT",
       "summary": "#FAILFEST LIVE! I'm super excited. We just settle on this months meetup theme. We are doing an entire hour of AI Failure stories where we break the case down, point out the fails, and then talk about what the prevention could have/should have been. This is an open call for anyone",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "I attended the Institute for AI Transformation Leaders in AI Summit in Nashville over the past few days, but the most interesting part of the two days definitely happened after the main programming…",
-      "link": "https://www.linkedin.com/posts/asiakwiggins_i-attended-the-institute-for-ai-transformation-activity-7496248951524909056-92mi",
-      "date": "Thu, 20 Aug 2026 16:57:04 GMT",
-      "summary": "I attended the Institute for AI Transformation Leaders in AI Summit in Nashville over the past few days, but the most interesting part of the two days definitely happened after the main programming ended with the thoughtfully curated Think Tank Dinners. They brought together lead",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "I got tired of AI slop this month, so I've been re-reading the favorite physical books on my shelf. \n\nThe one I keep coming back to is Thinking in Systems by Donella Meadows. She drafted it in the… | Yen Anderson",
-      "link": "https://www.linkedin.com/posts/yenanderson_i-got-tired-of-ai-slop-this-month-so-ive-activity-7496182611334139904-1duO",
-      "date": "Thu, 20 Aug 2026 12:33:27 GMT",
-      "summary": "I got tired of AI slop this month, so I've been re-reading the favorite physical books on my shelf. The one I keep coming back to is Thinking in Systems by Donella Meadows. She drafted it in the 1990s and died before it was published in 2008. Reading it now, 18 years later, still",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "The most expensive feedback this leadership team ever received changed nothing.\n \nTheir board chair had put more than forty million dollars into the company. He told the CEO and the president they…",
-      "link": "https://www.linkedin.com/posts/kellyameerbott_the-most-expensive-feedback-this-leadership-activity-7496180969654075392-yA8a",
-      "date": "Thu, 20 Aug 2026 12:26:55 GMT",
-      "summary": "The most expensive feedback this leadership team ever received changed nothing. Their board chair had put more than forty million dollars into the company. He told the CEO and the president they had exactly one problem. They took too long to make decisions. You would think that s",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Was a great event last week at AI House.  Loved partnering with OneSixOne Ventures and Pablo Casilimas.  Check out the highlight video!",
-      "link": "https://www.linkedin.com/posts/rkjohnston_was-a-great-event-last-week-at-ai-house-activity-7496277708897808386-cp4H",
-      "date": "Thu, 20 Aug 2026 18:51:20 GMT",
-      "summary": "",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "So many learnings about how vulnerable we all are to cyber attacks and the massive opportunities ahead within AI identity & security last week. \n\nOneSixOne Ventures teamed up with AiGovOps…",
-      "link": "https://www.linkedin.com/posts/pablo-casilimas-1707a9113_so-many-learnings-about-how-vulnerable-we-activity-7496242270917099520-ogok",
-      "date": "Thu, 20 Aug 2026 16:30:31 GMT",
-      "summary": "",
       "image": null,
       "author": "Ken Johnston"
     }
