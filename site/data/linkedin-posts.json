@@ -1,6 +1,14 @@
 {
-  "updated": "2026-09-18T19:08:55Z",
+  "updated": "2026-09-19T07:06:34Z",
   "bob": [
+    {
+      "title": "EN — A governance committee can be diverse on paper and still miss the people carrying the risk. Problem: decisions are made only...",
+      "link": "https://www.linkedin.com/posts/bobrapp_en-a-governance-committee-can-be-diverse-activity-7506835207853887488-LNQh",
+      "date": "Fri, 18 Sep 2026 22:03:04 GMT",
+      "summary": "EN — A governance committee can be diverse on paper and still miss the people carrying the risk. Problem: decisions are made only by technical, legal, or executive voices while affected users, frontline workers, domain experts, and marginalized groups are absent or consulted too",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "EN — A documented control is not necessarily an effective control. Problem: organizations count policies, approvals, and training...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7506699653086679041-3eGe",
@@ -62,14 +70,6 @@
       "link": "https://fr.linkedin.com/posts/bobrapp_ai-literacy-is-not-one-course-problem-six-activity-7505747826446991361-7i56",
       "date": "Tue, 15 Sep 2026 22:02:12 GMT",
       "summary": "AI literacy is not one course. PROBLEM Six roles face different decisions, tools, and risks. SOLUTIONS For each role, define required knowledge, a practical test, refresh triggers (change, incident, or new use), and completion evidence. SUMMARY Train to decision rights. Three-Yes",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Moving inference to the edge can improve privacy and latency—but it can also fragment governance. Encode approved hardware, model...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-edgeai-activity-7505747676496429056-NHB9",
-      "date": "Tue, 15 Sep 2026 22:01:36 GMT",
-      "summary": "Moving inference to the edge can improve privacy and latency—but it can also fragment governance. Encode approved hardware, model hashes, configuration baselines, update windows, local retention, connectivity-loss behavior, and a remote shutdown path. A disconnected device still",
       "image": null,
       "author": "Bob Rapp"
     }
