@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-20T07:06:41Z",
+  "updated": "2026-09-20T19:07:30Z",
   "bob": [
+    {
+      "title": "If Lori Salow Marshall was there it was a great event thanks Dave Cotter",
+      "link": "https://www.linkedin.com/posts/bobrapp_if-lori-salow-marshall-was-there-it-was-a-activity-7507473171378352130-IU_y",
+      "date": "Sun, 20 Sep 2026 16:18:06 GMT",
+      "summary": "If Lori Salow Marshall was there it was a great event thanks Dave Cotter",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "EN — A governance control that depends on one expert is a single point of failure. Problem: key rationale, operational workarounds...",
+      "link": "https://www.linkedin.com/posts/bobrapp_en-a-governance-control-that-depends-on-activity-7507424143898951698-WGz_",
+      "date": "Sun, 20 Sep 2026 13:03:17 GMT",
+      "summary": "EN — A governance control that depends on one expert is a single point of failure. Problem: key rationale, operational workarounds, and escalation knowledge remain in private chats or one person’s memory. When they leave, the control becomes performative. Solution: pair each mate",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Great post - seattle does rock - and nice to see the gm mention",
       "link": "https://www.linkedin.com/posts/bobrapp_great-post-seattle-does-rock-and-nice-activity-7507300973741170688-fMsi",
@@ -62,22 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7506337110480535553-A4Ea",
       "date": "Thu, 17 Sep 2026 13:03:48 GMT",
       "summary": "EN : Listening to users is not automatically ethical research. Problem: organizations collect interviews, feedback, recordings, or behavioral traces for AI design without clear purpose, voluntary participation, withdrawal options, or protection against employment or service conse",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An AI feature that works for most users can still exclude people who rely on assistive technology, alternative input, captions, or...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-accessibleai-activity-7506110531267678209-34S4",
-      "date": "Wed, 16 Sep 2026 22:03:27 GMT",
-      "summary": "An AI feature that works for most users can still exclude people who rely on assistive technology, alternative input, captions, or simplified language. Encode accessibility acceptance tests, minimum support levels, human alternatives, defect severity, remediation deadlines, and a",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI governance must make its artifacts accessible—not just its features. / AI機能だけでなく、証跡も誰もが使えるように。 PROBLEM / 問題 Policies, notices,...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-must-make-its-artifacts-accessiblenot-activity-7506110384680947712-Tlbe",
-      "date": "Wed, 16 Sep 2026 22:02:52 GMT",
-      "summary": "AI governance must make its artifacts accessible—not just its features. / AI機能だけでなく、証跡も誰もが使えるように。 PROBLEM / 問題 Policies, notices, training records, and evidence: usable by every reviewer. / 方針・通知・研修記録・証跡を全審査者に。 SOLUTIONS / 解決策 Use readable formats; screen readers; plain language;",
       "image": null,
       "author": "Bob Rapp"
     }
