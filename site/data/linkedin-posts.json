@@ -1,6 +1,30 @@
 {
-  "updated": "2026-09-19T19:07:18Z",
+  "updated": "2026-09-20T07:06:41Z",
   "bob": [
+    {
+      "title": "Great post - seattle does rock - and nice to see the gm mention",
+      "link": "https://www.linkedin.com/posts/bobrapp_great-post-seattle-does-rock-and-nice-activity-7507300973741170688-fMsi",
+      "date": "Sun, 20 Sep 2026 04:53:51 GMT",
+      "summary": "Great post - seattle does rock - and nice to see the gm mention",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Really useful thanks Craig",
+      "link": "https://www.linkedin.com/posts/bobrapp_really-useful-thanks-craig-activity-7507300655116660736-beKH",
+      "date": "Sun, 20 Sep 2026 04:52:35 GMT",
+      "summary": "Really useful thanks Craig",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Accountability often fails at the handoff between teams. Problem: a developer assumes operations owns the risk; operations assumes...",
+      "link": "https://www.linkedin.com/posts/bobrapp_accountability-often-fails-at-the-handoff-activity-7507197463749926912-6jMY",
+      "date": "Sat, 19 Sep 2026 22:02:32 GMT",
+      "summary": "Accountability often fails at the handoff between teams. Problem: a developer assumes operations owns the risk; operations assumes compliance approved it; compliance assumes product will monitor it. The gap appears only after harm. Solution: design each lifecycle handoff with an",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "EN — “Human in the loop” does not protect people if the loop is overloaded. Problem: AI systems can shift review work onto frontli...",
       "link": "https://www.linkedin.com/posts/bobrapp_en-human-in-the-loop-does-not-protect-activity-7507061829102321664-7Ju6",
@@ -56,48 +80,7 @@
       "summary": "AI governance must make its artifacts accessible—not just its features. / AI機能だけでなく、証跡も誰もが使えるように。 PROBLEM / 問題 Policies, notices, training records, and evidence: usable by every reviewer. / 方針・通知・研修記録・証跡を全審査者に。 SOLUTIONS / 解決策 Use readable formats; screen readers; plain language;",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "A claim about fairness, accuracy, or compliance is only as credible as the data lineage behind it. Link each material claim to dat...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-ai%E6%B2%BB%E7%90%86-datagovernance-activity-7505974831889289216-KEhs",
-      "date": "Wed, 16 Sep 2026 13:04:14 GMT",
-      "summary": "A claim about fairness, accuracy, or compliance is only as credible as the data lineage behind it. Link each material claim to dataset versions, collection purpose, transformations, exclusions, test populations, and approval evidence. Make the chain queryable before an audit: not",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "PUBLIC AI SHOULD BE UNDERSTANDABLE BEFORE ROLLOUT. ENGLISH PROBLEM: A contract award ≠ transparency. Before launch, disclose use c...",
-      "link": "https://www.linkedin.com/posts/bobrapp_public-ai-should-be-understandable-before-activity-7505974000330809345-eBwd",
-      "date": "Wed, 16 Sep 2026 13:00:56 GMT",
-      "summary": "PUBLIC AI SHOULD BE UNDERSTANDABLE BEFORE ROLLOUT. ENGLISH PROBLEM: A contract award ≠ transparency. Before launch, disclose use case, affected service, decision limits, oversight contact, input window, alternatives, and response. SOLUTIONS: Require plain-language notice + public",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
-  "ken": [
-    {
-      "title": "AI Builders & Founders Happy Hour with DJ Sanjeet · Luma",
-      "link": "https://www.linkedin.com/posts/kenm_ai-builders-founders-happy-hour-with-dj-activity-7496345299980914688-nU_9",
-      "date": "Thu, 20 Aug 2026 23:19:55 GMT",
-      "summary": "A couple of announcements. If you’re seeing this, consider it your call to adventure. I have one spot open tonight for a wildly curated rooftop dinner party at a penthouse rooftop in Seattle starting at 6:30 PM after a last-minute drop. The room will include founders behind some",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "Community agents should do more than answer quickly.\n\nThey can triage questions, route experts, surface research, and sustain conversations. But they must not quietly become…",
-      "link": "https://www.linkedin.com/posts/bobrapp_community-agents-should-do-more-than-answer-activity-7496326217248215041-2wYU",
-      "date": "Thu, 20 Aug 2026 22:04:05 GMT",
-      "summary": "Community agents should do more than answer quickly. They can triage questions, route experts, surface research, and sustain conversations. But they must not quietly become decision-makers. GOVERNANCE BY DESIGN • Bound permissions: classify and recommend; do not approve or enforc",
-      "image": null,
-      "author": "Ken Johnston"
-    },
-    {
-      "title": "We just settle on this months meetup theme.",
-      "link": "https://www.linkedin.com/posts/rkjohnston_failfest-activity-7496345952597860352-b46Y",
-      "date": "Thu, 20 Aug 2026 23:22:30 GMT",
-      "summary": "#FAILFEST LIVE! I'm super excited. We just settle on this months meetup theme. We are doing an entire hour of AI Failure stories where we break the case down, point out the fails, and then talk about what the prevention could have/should have been. This is an open call for anyone",
-      "image": null,
-      "author": "Ken Johnston"
-    }
-  ]
+  "ken": []
 }
