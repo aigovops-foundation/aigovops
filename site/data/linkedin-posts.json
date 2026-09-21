@@ -1,6 +1,14 @@
 {
-  "updated": "2026-09-20T19:07:30Z",
+  "updated": "2026-09-21T07:18:18Z",
   "bob": [
+    {
+      "title": "EN — A system can remain technically unchanged while its governance risk changes completely. Problem: teams expand an AI tool from...",
+      "link": "https://www.linkedin.com/posts/bobrapp_en-a-system-can-remain-technically-unchanged-activity-7507559924063961088-7fNs",
+      "date": "Sun, 20 Sep 2026 22:02:50 GMT",
+      "summary": "EN — A system can remain technically unchanged while its governance risk changes completely. Problem: teams expand an AI tool from summarization to ranking, recommendation, eligibility, or enforcement without revisiting purpose, affected people, authority, or safeguards. Solution",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "If Lori Salow Marshall was there it was a great event thanks Dave Cotter",
       "link": "https://www.linkedin.com/posts/bobrapp_if-lori-salow-marshall-was-there-it-was-a-activity-7507473171378352130-IU_y",
@@ -70,14 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_en-a-model-change-is-also-a-communication-activity-7506472861038174208-259V",
       "date": "Thu, 17 Sep 2026 22:03:14 GMT",
       "summary": "EN — A model change is also a communication change. Problem: stakeholders keep relying on old limitations, intended-use statements, or performance results after a model, prompt, data source, or threshold changes. Solution: CHECKLIST 1. Version public and internal model documentat",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "EN : Listening to users is not automatically ethical research. Problem: organizations collect interviews, feedback, recordings, or...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7506337110480535553-A4Ea",
-      "date": "Thu, 17 Sep 2026 13:03:48 GMT",
-      "summary": "EN : Listening to users is not automatically ethical research. Problem: organizations collect interviews, feedback, recordings, or behavioral traces for AI design without clear purpose, voluntary participation, withdrawal options, or protection against employment or service conse",
       "image": null,
       "author": "Bob Rapp"
     }
