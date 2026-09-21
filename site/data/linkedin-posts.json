@@ -1,6 +1,14 @@
 {
-  "updated": "2026-09-21T07:18:18Z",
+  "updated": "2026-09-21T19:08:50Z",
   "bob": [
+    {
+      "title": "EN — Minutes are not enough when an AI governance decision may be challenged later. Problem: records capture the conclusion but om...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7507786704842334208-euzH",
+      "date": "Mon, 21 Sep 2026 13:03:58 GMT",
+      "summary": "EN — Minutes are not enough when an AI governance decision may be challenged later. Problem: records capture the conclusion but omit alternatives considered, evidence weighed, dissent, conditions, and the person authorized to accept residual risk. Solution: use a decision-log tem",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "EN — A system can remain technically unchanged while its governance risk changes completely. Problem: teams expand an AI tool from...",
       "link": "https://www.linkedin.com/posts/bobrapp_en-a-system-can-remain-technically-unchanged-activity-7507559924063961088-7fNs",
@@ -70,14 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7506699653086679041-3eGe",
       "date": "Fri, 18 Sep 2026 13:04:25 GMT",
       "summary": "EN — A documented control is not necessarily an effective control. Problem: organizations count policies, approvals, and training completions while the control fails under realistic pressure. Solution: test controls with observable scenarios. Sample actual access requests, change",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "EN — A model change is also a communication change. Problem: stakeholders keep relying on old limitations, intended-use statements...",
-      "link": "https://www.linkedin.com/posts/bobrapp_en-a-model-change-is-also-a-communication-activity-7506472861038174208-259V",
-      "date": "Thu, 17 Sep 2026 22:03:14 GMT",
-      "summary": "EN — A model change is also a communication change. Problem: stakeholders keep relying on old limitations, intended-use statements, or performance results after a model, prompt, data source, or threshold changes. Solution: CHECKLIST 1. Version public and internal model documentat",
       "image": null,
       "author": "Bob Rapp"
     }
