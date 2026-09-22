@@ -5,13 +5,29 @@
     <link>https://www.aigovops-foundation.com</link>
     <description>The latest posts from Ken Johnston and Bob Rapp on AI governance, policy-as-code, and open-source compliance tooling.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Sep 2026 00:06:51 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 15:27:25 +0000</lastBuildDate>
     <atom:link href="https://www.aigovops-foundation.com/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://www.aigovops-foundation.com/images/logo.png</url>
       <title>AiGovOps Foundation</title>
       <link>https://www.aigovops-foundation.com</link>
     </image>
+    <item><!-- content -->
+      <title>The one-dollar Tahoe — why a system prompt is not a rule</title>
+      <link>https://www.aigovops-foundation.com/blog/the-one-dollar-tahoe.html</link>
+      <guid isPermaLink="true">https://www.aigovops-foundation.com/blog/the-one-dollar-tahoe.html</guid>
+      <pubDate>Tue, 22 Sep 2026 09:00:00 +0000</pubDate>
+      <dc:creator>Bob Rapp</dc:creator>
+      <description>In 2023 a dealer&#x27;s chatbot agreed to sell a 2024 Chevy Tahoe for $1 and called it a legally binding offer. Nobody lost a truck. Everybody learned that a polite instruction to an LLM is not a gate. Level 200 starts here.</description>
+    </item>
+    <item><!-- content -->
+      <title>The café is open — say what brought you in, leave with a receipt</title>
+      <link>https://www.aigovops-foundation.com/blog/the-cafe-is-open.html</link>
+      <guid isPermaLink="true">https://www.aigovops-foundation.com/blog/the-cafe-is-open.html</guid>
+      <pubDate>Tue, 15 Sep 2026 09:00:00 +0000</pubDate>
+      <dc:creator>Bob Rapp</dc:creator>
+      <description>The Foundation&#x27;s home page is a café now. Wren keeps the table by the door and asks one question. Five doors, each a real case; ten minutes to start; an hour to a rule in your own words, a signed receipt, and a Thursday.</description>
+    </item>
     <item><!-- content -->
       <title>The Fall 2026 Release — one hour to your first receipt, at whatever level you start</title>
       <link>https://www.aigovops-foundation.com/blog/the-fall-2026-release.html</link>
