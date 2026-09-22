@@ -1,6 +1,14 @@
 {
-  "updated": "2026-09-21T19:08:50Z",
+  "updated": "2026-09-22T07:08:48Z",
   "bob": [
+    {
+      "title": "A control can fail because a different control failed first. Problem: Plans list approvals, monitoring, and review without depende...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-control-can-fail-because-a-different-control-activity-7507921784084602880-Jjm6",
+      "date": "Mon, 21 Sep 2026 22:00:44 GMT",
+      "summary": "A control can fail because a different control failed first. Problem: Plans list approvals, monitoring, and review without dependencies. A missing identity feed, stale owner record, or evidence store can disable safeguards. Solution: Map trigger → decision → evidence. Record upst",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "EN — Minutes are not enough when an AI governance decision may be challenged later. Problem: records capture the conclusion but om...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7507786704842334208-euzH",
@@ -70,14 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_en-a-governance-committee-can-be-diverse-activity-7506835207853887488-LNQh",
       "date": "Fri, 18 Sep 2026 22:03:04 GMT",
       "summary": "EN — A governance committee can be diverse on paper and still miss the people carrying the risk. Problem: decisions are made only by technical, legal, or executive voices while affected users, frontline workers, domain experts, and marginalized groups are absent or consulted too",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "EN — A documented control is not necessarily an effective control. Problem: organizations count policies, approvals, and training...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7506699653086679041-3eGe",
-      "date": "Fri, 18 Sep 2026 13:04:25 GMT",
-      "summary": "EN — A documented control is not necessarily an effective control. Problem: organizations count policies, approvals, and training completions while the control fails under realistic pressure. Solution: test controls with observable scenarios. Sample actual access requests, change",
       "image": null,
       "author": "Bob Rapp"
     }
