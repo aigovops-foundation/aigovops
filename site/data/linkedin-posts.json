@@ -1,6 +1,30 @@
 {
-  "updated": "2026-09-22T07:08:48Z",
+  "updated": "2026-09-22T19:09:13Z",
   "bob": [
+    {
+      "title": "ENGLISH PROBLEM / SOLUTION / SUMMARY An AI incident is not “just an outage.” Classify safety, rights, financial and operational im...",
+      "link": "https://fr.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7508178514060255233-P956",
+      "date": "Tue, 22 Sep 2026 15:00:53 GMT",
+      "summary": "ENGLISH PROBLEM / SOLUTION / SUMMARY An AI incident is not “just an outage.” Classify safety, rights, financial and operational impact immediately. At first credible awareness: assign a named owner, start the strictest applicable clock, preserve cryptographically auditable eviden",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI media without provenance is a governance failure. Problem / Problème: Stripped C2PA credentials, edits, transcodes and missing...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7508148920863354880-NIAG",
+      "date": "Tue, 22 Sep 2026 13:03:17 GMT",
+      "summary": "AI media without provenance is a governance failure. Problem / Problème: Stripped C2PA credentials, edits, transcodes and missing labels can launder synthetic media and harm real people without disclosure. Solution / Solution: Sign C2PA content credentials and durable watermarks",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "EN : A safety evaluation can produce misleading assurance if the test environment is not governed like a production boundary. Prob...",
+      "link": "https://www.linkedin.com/posts/bobrapp_en-a-safety-evaluation-can-produce-misleading-activity-7508148518847524864-oVFf",
+      "date": "Tue, 22 Sep 2026 13:01:42 GMT",
+      "summary": "EN : A safety evaluation can produce misleading assurance if the test environment is not governed like a production boundary. Problem: accidental internet access, live credentials, real domains, or ambiguous target lists can turn a controlled exercise into an uncontrolled inciden",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "A control can fail because a different control failed first. Problem: Plans list approvals, monitoring, and review without depende...",
       "link": "https://www.linkedin.com/posts/bobrapp_a-control-can-fail-because-a-different-control-activity-7507921784084602880-Jjm6",
@@ -54,30 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_really-useful-thanks-craig-activity-7507300655116660736-beKH",
       "date": "Sun, 20 Sep 2026 04:52:35 GMT",
       "summary": "Really useful thanks Craig",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Accountability often fails at the handoff between teams. Problem: a developer assumes operations owns the risk; operations assumes...",
-      "link": "https://www.linkedin.com/posts/bobrapp_accountability-often-fails-at-the-handoff-activity-7507197463749926912-6jMY",
-      "date": "Sat, 19 Sep 2026 22:02:32 GMT",
-      "summary": "Accountability often fails at the handoff between teams. Problem: a developer assumes operations owns the risk; operations assumes compliance approved it; compliance assumes product will monitor it. The gap appears only after harm. Solution: design each lifecycle handoff with an",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "EN — “Human in the loop” does not protect people if the loop is overloaded. Problem: AI systems can shift review work onto frontli...",
-      "link": "https://www.linkedin.com/posts/bobrapp_en-human-in-the-loop-does-not-protect-activity-7507061829102321664-7Ju6",
-      "date": "Sat, 19 Sep 2026 13:03:35 GMT",
-      "summary": "EN — “Human in the loop” does not protect people if the loop is overloaded. Problem: AI systems can shift review work onto frontline staff faster than teams can inspect, challenge, or recover from errors. Fatigue then becomes a governance risk. CHECKLIST Solution: measure reviewe",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "EN — A governance committee can be diverse on paper and still miss the people carrying the risk. Problem: decisions are made only...",
-      "link": "https://www.linkedin.com/posts/bobrapp_en-a-governance-committee-can-be-diverse-activity-7506835207853887488-LNQh",
-      "date": "Fri, 18 Sep 2026 22:03:04 GMT",
-      "summary": "EN — A governance committee can be diverse on paper and still miss the people carrying the risk. Problem: decisions are made only by technical, legal, or executive voices while affected users, frontline workers, domain experts, and marginalized groups are absent or consulted too",
       "image": null,
       "author": "Bob Rapp"
     }
