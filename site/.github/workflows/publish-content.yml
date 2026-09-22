@@ -38,14 +38,28 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add blog/ blog.html feed.xml content/drafts/ content/translations/ founders.html
+          # -A, not an allow-list: build_content.py's write targets have grown before (founders.html
+          # was missing here until #153) and a partial `git add` leaves an unstaged file that blocks
+          # `git pull --rebase` below without ever failing the job.
+          git add -A
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
             git commit -m "Publish stories from content/ [automated $(date -u +%Y-%m-%d)]"
             # Two merges a minute apart once made this push non-fast-forward (2026-09-13); rebase and retry.
+            pushed=0
             for i in 1 2 3; do
-              git pull --rebase origin main && git push && break
+              git add -A
+              if git pull --rebase origin main && git push; then
+                pushed=1
+                break
+              fi
               echo "push attempt $i failed; retrying"; sleep 15
             done
+            # A silent failure here is what let this drift for two weeks — fail the job loudly instead,
+            # so a stuck push shows up as red CI rather than as a commit that never arrives.
+            if [ "$pushed" != "1" ]; then
+              echo "::error::publish-content: commit made locally but never reached origin/main after 3 push attempts"
+              exit 1
+            fi
           fi
