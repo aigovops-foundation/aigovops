@@ -1,6 +1,22 @@
 {
-  "updated": "2026-09-22T19:09:13Z",
+  "updated": "2026-09-23T07:09:10Z",
   "bob": [
+    {
+      "title": "EN — A legal ambiguity should trigger a decision process, not silent optimism. Problem: teams interpret AI obligations differently...",
+      "link": "https://www.linkedin.com/posts/bobrapp_en-a-legal-ambiguity-should-trigger-a-decision-activity-7508284673484152832-oFWb",
+      "date": "Tue, 22 Sep 2026 22:02:43 GMT",
+      "summary": "EN — A legal ambiguity should trigger a decision process, not silent optimism. Problem: teams interpret AI obligations differently across jurisdictions, creating inconsistent controls or an indefensible position. Solution: record the question, jurisdiction, use case, sources, ana",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem / समस्या High-risk AI must not go live on assertions. Record purpose, data, affected populations, rights, severity×likelihoo...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7508284646892285952-6kOQ",
+      "date": "Tue, 22 Sep 2026 22:02:37 GMT",
+      "summary": "Problem / समस्या High-risk AI must not go live on assertions. Record purpose, data, affected populations, rights, severity×likelihood, mitigations, residual risk, affected-population input, accountable sign-off, published summary, and refresh triggers. / उच्च-जोखिम AI बिना इन प्र",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "ENGLISH PROBLEM / SOLUTION / SUMMARY An AI incident is not “just an outage.” Classify safety, rights, financial and operational im...",
       "link": "https://fr.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7508178514060255233-P956",
@@ -62,22 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_en-a-governance-control-that-depends-on-activity-7507424143898951698-WGz_",
       "date": "Sun, 20 Sep 2026 13:03:17 GMT",
       "summary": "EN — A governance control that depends on one expert is a single point of failure. Problem: key rationale, operational workarounds, and escalation knowledge remain in private chats or one person’s memory. When they leave, the control becomes performative. Solution: pair each mate",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Great post - seattle does rock - and nice to see the gm mention",
-      "link": "https://www.linkedin.com/posts/bobrapp_great-post-seattle-does-rock-and-nice-activity-7507300973741170688-fMsi",
-      "date": "Sun, 20 Sep 2026 04:53:51 GMT",
-      "summary": "Great post - seattle does rock - and nice to see the gm mention",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Really useful thanks Craig",
-      "link": "https://www.linkedin.com/posts/bobrapp_really-useful-thanks-craig-activity-7507300655116660736-beKH",
-      "date": "Sun, 20 Sep 2026 04:52:35 GMT",
-      "summary": "Really useful thanks Craig",
       "image": null,
       "author": "Bob Rapp"
     }
