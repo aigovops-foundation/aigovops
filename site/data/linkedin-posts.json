@@ -1,6 +1,30 @@
 {
-  "updated": "2026-09-23T07:09:10Z",
+  "updated": "2026-09-23T19:09:36Z",
   "bob": [
+    {
+      "title": "Shadow AI is an accountability gap—not merely a visibility gap. PROBLEM / SOLUTION / SUMMARY SaaS, browsers, extensions and person...",
+      "link": "https://fr.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7508541716677689345-CEyy",
+      "date": "Wed, 23 Sep 2026 15:04:07 GMT",
+      "summary": "Shadow AI is an accountability gap—not merely a visibility gap. PROBLEM / SOLUTION / SUMMARY SaaS, browsers, extensions and personal accounts can move data outside governance. Discover → intake → risk-tier → approve/deny → registry. Assign an owner; enforce least privilege and da",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem / 問題 Attendance ≠ assessed competence. Developers, deployers and human overseers need role-specific literacy, proof of sys...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7508510889227186176-pF4T",
+      "date": "Wed, 23 Sep 2026 13:01:37 GMT",
+      "summary": "Problem / 問題 Attendance ≠ assessed competence. Developers, deployers and human overseers need role-specific literacy, proof of system limits, expiring records and refreshers after material change. 受講≠評価済み能力。開発者・導入者・人間の監督者には、役割別リテラシー、限界の理解、期限付き記録、重大変更後の更新が必要です。 Solution / 解決 Requi",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "EN — A citation is not the same as provenance. Problem: users may see a source link while remaining unable to tell when the inform...",
+      "link": "https://www.linkedin.com/posts/bobrapp_en-a-citation-is-not-the-same-as-provenance-activity-7508510870969196545-D4TC",
+      "date": "Wed, 23 Sep 2026 13:01:33 GMT",
+      "summary": "EN — A citation is not the same as provenance. Problem: users may see a source link while remaining unable to tell when the information was collected, what transformation occurred, which model produced the answer, or whether the source actually supports the claim. Solution: expos",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "EN — A legal ambiguity should trigger a decision process, not silent optimism. Problem: teams interpret AI obligations differently...",
       "link": "https://www.linkedin.com/posts/bobrapp_en-a-legal-ambiguity-should-trigger-a-decision-activity-7508284673484152832-oFWb",
@@ -54,30 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7507786704842334208-euzH",
       "date": "Mon, 21 Sep 2026 13:03:58 GMT",
       "summary": "EN — Minutes are not enough when an AI governance decision may be challenged later. Problem: records capture the conclusion but omit alternatives considered, evidence weighed, dissent, conditions, and the person authorized to accept residual risk. Solution: use a decision-log tem",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "EN — A system can remain technically unchanged while its governance risk changes completely. Problem: teams expand an AI tool from...",
-      "link": "https://www.linkedin.com/posts/bobrapp_en-a-system-can-remain-technically-unchanged-activity-7507559924063961088-7fNs",
-      "date": "Sun, 20 Sep 2026 22:02:50 GMT",
-      "summary": "EN — A system can remain technically unchanged while its governance risk changes completely. Problem: teams expand an AI tool from summarization to ranking, recommendation, eligibility, or enforcement without revisiting purpose, affected people, authority, or safeguards. Solution",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "If Lori Salow Marshall was there it was a great event thanks Dave Cotter",
-      "link": "https://www.linkedin.com/posts/bobrapp_if-lori-salow-marshall-was-there-it-was-a-activity-7507473171378352130-IU_y",
-      "date": "Sun, 20 Sep 2026 16:18:06 GMT",
-      "summary": "If Lori Salow Marshall was there it was a great event thanks Dave Cotter",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "EN — A governance control that depends on one expert is a single point of failure. Problem: key rationale, operational workarounds...",
-      "link": "https://www.linkedin.com/posts/bobrapp_en-a-governance-control-that-depends-on-activity-7507424143898951698-WGz_",
-      "date": "Sun, 20 Sep 2026 13:03:17 GMT",
-      "summary": "EN — A governance control that depends on one expert is a single point of failure. Problem: key rationale, operational workarounds, and escalation knowledge remain in private chats or one person’s memory. When they leave, the control becomes performative. Solution: pair each mate",
       "image": null,
       "author": "Bob Rapp"
     }
