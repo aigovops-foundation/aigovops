@@ -1,6 +1,30 @@
 {
-  "updated": "2026-09-23T19:09:36Z",
+  "updated": "2026-09-24T07:09:23Z",
   "bob": [
+    {
+      "title": "Data: prove/stop. Problem: missing owner|license-consent|hash-version|opt-out => unknown provenance. Solution: tamper-evident cryp...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7508677323047493632-RZHK",
+      "date": "Thu, 24 Sep 2026 00:02:58 GMT",
+      "summary": "Data: prove/stop. Problem: missing owner|license-consent|hash-version|opt-out => unknown provenance. Solution: tamper-evident crypto ledger; continuous monitoring; scoped authority; human review; gap=>deny/quarantine/revoke/notify; tested rollback+independent manual stop/fallback",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "EN — An exception is not a shortcut around AI governance. It is a temporary risk decision that needs stronger evidence. Problem: u...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7508647208016080897-ajgI",
+      "date": "Wed, 23 Sep 2026 22:03:18 GMT",
+      "summary": "EN — An exception is not a shortcut around AI governance. It is a temporary risk decision that needs stronger evidence. Problem: urgent launches often create informal exemptions with no expiry, compensating control, or accountable approver. Solution: require an exception record s",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem / المشكلة: Shadow AI lives in SaaS, procured tools, notebooks and IDE assistants. Reconcile procurement, SSO, egress and e...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7508647132753489920-skX9",
+      "date": "Wed, 23 Sep 2026 22:03:00 GMT",
+      "summary": "Problem / المشكلة: Shadow AI lives in SaaS, procured tools, notebooks and IDE assistants. Reconcile procurement, SSO, egress and expense signals—or your inventory is only an assertion. الذكاء الاصطناعي الخفي موجود في البرمجيات والخدمات والأدوات ودفاتر الملاحظات ومساعدات البرمجة؛",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Shadow AI is an accountability gap—not merely a visibility gap. PROBLEM / SOLUTION / SUMMARY SaaS, browsers, extensions and person...",
       "link": "https://fr.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7508541716677689345-CEyy",
@@ -46,38 +70,6 @@
       "link": "https://fr.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7508178514060255233-P956",
       "date": "Tue, 22 Sep 2026 15:00:53 GMT",
       "summary": "ENGLISH PROBLEM / SOLUTION / SUMMARY An AI incident is not “just an outage.” Classify safety, rights, financial and operational impact immediately. At first credible awareness: assign a named owner, start the strictest applicable clock, preserve cryptographically auditable eviden",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI media without provenance is a governance failure. Problem / Problème: Stripped C2PA credentials, edits, transcodes and missing...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7508148920863354880-NIAG",
-      "date": "Tue, 22 Sep 2026 13:03:17 GMT",
-      "summary": "AI media without provenance is a governance failure. Problem / Problème: Stripped C2PA credentials, edits, transcodes and missing labels can launder synthetic media and harm real people without disclosure. Solution / Solution: Sign C2PA content credentials and durable watermarks",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "EN : A safety evaluation can produce misleading assurance if the test environment is not governed like a production boundary. Prob...",
-      "link": "https://www.linkedin.com/posts/bobrapp_en-a-safety-evaluation-can-produce-misleading-activity-7508148518847524864-oVFf",
-      "date": "Tue, 22 Sep 2026 13:01:42 GMT",
-      "summary": "EN : A safety evaluation can produce misleading assurance if the test environment is not governed like a production boundary. Problem: accidental internet access, live credentials, real domains, or ambiguous target lists can turn a controlled exercise into an uncontrolled inciden",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "A control can fail because a different control failed first. Problem: Plans list approvals, monitoring, and review without depende...",
-      "link": "https://www.linkedin.com/posts/bobrapp_a-control-can-fail-because-a-different-control-activity-7507921784084602880-Jjm6",
-      "date": "Mon, 21 Sep 2026 22:00:44 GMT",
-      "summary": "A control can fail because a different control failed first. Problem: Plans list approvals, monitoring, and review without dependencies. A missing identity feed, stale owner record, or evidence store can disable safeguards. Solution: Map trigger → decision → evidence. Record upst",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "EN — Minutes are not enough when an AI governance decision may be challenged later. Problem: records capture the conclusion but om...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7507786704842334208-euzH",
-      "date": "Mon, 21 Sep 2026 13:03:58 GMT",
-      "summary": "EN — Minutes are not enough when an AI governance decision may be challenged later. Problem: records capture the conclusion but omit alternatives considered, evidence weighed, dissent, conditions, and the person authorized to accept residual risk. Solution: use a decision-log tem",
       "image": null,
       "author": "Bob Rapp"
     }
