@@ -1,0 +1,26 @@
+name: test-door-landing
+
+# index.html: a door must land cleanly on "your first hour", with a way back — on
+# either path in (a hash link from the site's café doors, or an in-page click on this
+# page's own doors grid). scripts/test_door_landing.py checks both directly.
+
+on:
+  pull_request:
+    paths:
+      - index.html
+      - scripts/test_door_landing.py
+  push:
+    branches: [main]
+    paths:
+      - index.html
+      - scripts/test_door_landing.py
+
+jobs:
+  door-landing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 scripts/test_door_landing.py

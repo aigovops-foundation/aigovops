@@ -30,7 +30,7 @@
   /* hero */
   body.focused .hero, body.focused #problem > h2, body.focused #problem > .lead, body.focused #doors, body.focused #flow, body.focused .nolb-sec, body.focused .back{display:none}
   body.focused #problem{padding-top:28px}
-  .hour .back{margin:0 0 14px;font-size:14px}.hour .back a{color:var(--chalk-dim)}
+  .hour .hourback{margin:0 0 14px;font-size:14px}.hour .hourback a{color:var(--chalk-dim)}
   .fold{margin-top:8px;border-top:1px solid var(--line);padding-top:12px}
   .fold summary{cursor:pointer;font:600 15px var(--sans);color:var(--green-ink);padding:8px 0}
   .hero{position:relative;background:var(--board-2) center/cover no-repeat;color:var(--chalk);min-height:420px;display:flex;align-items:flex-end;isolation:isolate}
@@ -248,7 +248,7 @@
     const wsHref = d.ws.startsWith('http')?d.ws:P+d.ws;
     hour.innerHTML=`<div>
       <h3>Your first hour — ${d.level==='start'?'start here':'level '+d.level+', '+d.name}</h3>
-      <p class="back"><a href="https://www.aigovops-foundation.com/#problem">← not this one? the other doors</a></p>
+      <p class="hourback"><a href="https://www.aigovops-foundation.com/#problem">← not this one? the other doors</a></p>
       <p class="case"><b>${d.caseId} · ${d.caseName}.</b> ${d.caseLine}</p>
       <ol class="steps">
         <li><i>1</i><div><b>Read the case</b> <span>— write one line saying what the AI did that mattered.</span></div></li>
@@ -286,7 +286,7 @@
     });
     hour.classList.add('on'); if(!hour.dataset.first){hour.dataset.first='1';} hour.scrollIntoView({behavior:'smooth',block:'nearest'});
   }
-  doors.addEventListener('click',e=>{const b=e.target.closest('.door'); if(!b) return; doors.querySelectorAll('.door').forEach(x=>x.setAttribute('aria-pressed','false')); b.setAttribute('aria-pressed','true'); render(DOORS.find(d=>d.id===b.dataset.id)); if(history.replaceState) history.replaceState(null,'','#'+b.dataset.id);});
+  doors.addEventListener('click',e=>{const b=e.target.closest('.door'); if(!b) return; doors.querySelectorAll('.door').forEach(x=>x.setAttribute('aria-pressed','false')); b.setAttribute('aria-pressed','true'); document.body.classList.add('focused'); render(DOORS.find(d=>d.id===b.dataset.id)); if(history.replaceState) history.replaceState(null,'','#'+b.dataset.id); window.scrollTo(0,0);});
   const h=location.hash.replace('#',''); const pre=DOORS.find(d=>d.id===h); if(pre){document.body.classList.add('focused'); doors.querySelector(`[data-id="${h}"]`).setAttribute('aria-pressed','true'); render(pre); window.scrollTo(0,0);}
 })();
 </script>
