@@ -75,7 +75,7 @@ Emoji are not icons: any that remain in copy sit inside `<span aria-hidden="true
 The promise, once per page, in the footer. One question at the door — *what brought you in?* — and doors
 written in the visitor's words as real cases. Levels describe a person's practice, never a system's
 assurance. Sentence case for headings; Title Case for the three movements as names and the h1.
-Every page ends on one next step: the ten-minute Gate Check, the worksheet, or Thursday at 09:00.
+Every page ends on one next step: the ten-minute Gate Check, the worksheet, or Thursday at 15:00 Pacific.
 
 ## Where it applies
 

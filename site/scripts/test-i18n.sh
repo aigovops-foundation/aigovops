@@ -218,6 +218,80 @@ grep -q "encoding='utf-8'\|encoding=\"utf-8\"" "$REPO/scripts/fetch_posts.py" \
   || check "UTF-8 encoding specified in file write" "missing"
 
 echo ""
+echo "  [i18n key coverage — no data-i18n key left unresolved]"
+# Every data-i18n / data-i18n-html key referenced by an HTML page must resolve to a
+# defined value in BOTH strings-en.js and strings-es.js. A plain object literal like
+# window.I18N = { founders: {...}, ..., founders: {...} } silently drops the first
+# `founders` block — the parser never errors, but every key inside it becomes
+# unreachable at runtime. That exact bug (`founders` and `footer` each declared twice)
+# shipped invisibly: English pages happened to already show the right fallback text in
+# the static HTML, and nothing here checked what the loader actually resolved.
+node -e "
+const fs = require('fs');
+const path = require('path');
+const repo = '$REPO';
+const htmlFiles = fs.readdirSync(repo).filter(f => f.endsWith('.html'));
+const keys = new Set();
+const re = /data-i18n(?:-html)?=\"([^\"]+)\"/g;
+for (const f of htmlFiles) {
+  const html = fs.readFileSync(path.join(repo, f), 'utf8');
+  let m;
+  while ((m = re.exec(html))) keys.add(m[1]);
+}
+let missing = [];
+for (const lang of ['en', 'es']) {
+  const sandbox = {};
+  const src = fs.readFileSync(path.join(repo, 'js/i18n/strings-' + lang + '.js'), 'utf8');
+  new Function('window', src)(sandbox);
+  for (const key of keys) {
+    let val = sandbox.I18N;
+    for (const part of key.split('.')) val = val && val[part];
+    if (val === undefined) missing.push(lang + ':' + key);
+  }
+}
+if (missing.length) { console.error(missing.join(', ')); process.exit(1); }
+" 2>/tmp/i18n-missing-keys.txt \
+  && check "Every data-i18n key resolves in strings-en.js and strings-es.js" "ok" \
+  || check "Every data-i18n key resolves in strings-en.js and strings-es.js" "$(cat /tmp/i18n-missing-keys.txt)"
+
+# A duplicate top-level key in the I18N object literal is the specific failure mode
+# above — catch it directly so a future edit can't reintroduce it silently.
+for lang in en es; do
+  node -e "
+  const fs = require('fs');
+  const src = fs.readFileSync('$REPO/js/i18n/strings-$lang.js', 'utf8');
+  const start = src.indexOf('{');
+  const body = src.slice(start + 1, src.lastIndexOf('}'));
+  // Walk the object literal tracking brace depth so only keys at depth 0
+  // (immediately inside window.I18N's own braces) count as top-level.
+  let depth = 0, dupes = new Set(), seen = new Set();
+  const keyRe = /(\w+)\s*:/y;
+  for (let i = 0; i < body.length; i++) {
+    const c = body[i];
+    if (c === '{' || c === '[') { depth++; continue; }
+    if (c === '}' || c === ']') { depth--; continue; }
+    if (c === \"'\" || c === '\"') {
+      const quote = c; i++;
+      while (i < body.length && body[i] !== quote) { if (body[i] === '\\\\\\\\') i++; i++; }
+      continue;
+    }
+    if (depth === 0) {
+      keyRe.lastIndex = i;
+      const m = keyRe.exec(body);
+      if (m && m.index === i) {
+        if (seen.has(m[1])) dupes.add(m[1]);
+        seen.add(m[1]);
+        i += m[0].length - 1;
+      }
+    }
+  }
+  if (dupes.size) console.error([...dupes].join(', '));
+  process.exit(dupes.size ? 1 : 0);
+  " 2>/tmp/i18n-dupe-keys.txt && check "strings-$lang.js has no duplicate top-level I18N keys" "ok" \
+    || check "strings-$lang.js has no duplicate top-level I18N keys" "duplicate key(s): $(cat /tmp/i18n-dupe-keys.txt)"
+done
+
+echo ""
 echo "  [NLP Pipeline — language detection infrastructure]"
 grep -q "haiku_enrich_posts" "$REPO/scripts/fetch_posts.py" \
   && check "Haiku NLP pipeline in fetch script" "ok" \
