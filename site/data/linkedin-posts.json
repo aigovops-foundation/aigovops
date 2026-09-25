@@ -1,6 +1,38 @@
 {
-  "updated": "2026-09-25T07:10:08Z",
+  "updated": "2026-09-25T19:08:31Z",
   "bob": [
+    {
+      "title": "AI procurement is governance, not just Finance. / AI調達は統制です。 Problem / 問題: GPU overruns, shadow endpoints and renewals can outrun...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509266724114964480-um6p",
+      "date": "Fri, 25 Sep 2026 15:05:02 GMT",
+      "summary": "AI procurement is governance, not just Finance. / AI調達は統制です。 Problem / 問題: GPU overruns, shadow endpoints and renewals can outrun accountability. Solution / 解決策: Bind owner, purpose, risk, cap, expiry and tested rollback/quarantine. Monitor continuously; retain cryptographically",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Vendor AI is not “someone else’s risk.” Problem: Evidence-free questionnaires hide model dependencies, subprocessors, audit rights...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509266710307217410-sLLD",
+      "date": "Fri, 25 Sep 2026 15:04:59 GMT",
+      "summary": "Vendor AI is not “someone else’s risk.” Problem: Evidence-free questionnaires hide model dependencies, subprocessors, audit rights, change and incident windows, data/training limits, exit and data-return terms, and monitoring gaps. Solution: Make the contract executable. Assign a",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Level Up Your AI Governance: Readiness is more than model capability. A governance program can look mature on paper while lacking...",
+      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-readiness-is-activity-7509236316220420096-XwIz",
+      "date": "Fri, 25 Sep 2026 13:04:13 GMT",
+      "summary": "Level Up Your AI Governance: Readiness is more than model capability. A governance program can look mature on paper while lacking the infrastructure, skills, institutional capacity, or public-sector access needed to operate it. That readiness gap creates unequal exposure to AI be",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: Cross-organization agents need evidence, not partner assertions. Identity drift, contract mismatch, excessive tools, miss...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509235729621778432-Ds9a",
+      "date": "Fri, 25 Sep 2026 13:01:53 GMT",
+      "summary": "Problem: Cross-organization agents need evidence, not partner assertions. Identity drift, contract mismatch, excessive tools, missing bilateral logs, and delayed suspension can create unsafe execution. Solution: Mutual attestation; version-pinned contracts; bounded action allowli",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "ENGLISH Problem: Deletion ≠ retirement. Orphan callers, credentials, prompts, derivatives and customers can remain exposed. Soluti...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509039622069338112-QyC6",
@@ -46,38 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_cool-event-as-always-love-the-learning-activity-7508911622703386625-HF7t",
       "date": "Thu, 24 Sep 2026 15:34:00 GMT",
       "summary": "cool event - as always - love the learning!",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI incident severity must track harm—not ticket volume. Problem/Solution/Summary: Ticket counts hide harm. Triage affected people/...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7508903544037666816-8HIJ",
-      "date": "Thu, 24 Sep 2026 15:01:54 GMT",
-      "summary": "AI incident severity must track harm—not ticket volume. Problem/Solution/Summary: Ticket counts hide harm. Triage affected people/animals, exposure, reversibility, rights and uncertainty: S0 near miss; S1 limited/reversible; S2 material/repeated; S3 severe/irreversible, rights/sa",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Red-team sign-off is not a memo. It is a production gate. PROBLEM: Release claims are not evidence. Without scoped attack catalogu...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7508903505798197249-077g",
-      "date": "Thu, 24 Sep 2026 15:01:44 GMT",
-      "summary": "Red-team sign-off is not a memo. It is a production gate. PROBLEM: Release claims are not evidence. Without scoped attack catalogues, independent testers, severity scores, reproduction proof, and named accountability, “tested” means little. SOLUTION: Deny release until testing is",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem / Problème Agents inherit the risk of every tool, MCP-style server, and third-party connector. Declared scopes are not evi...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7508873987179839488-55Av",
-      "date": "Thu, 24 Sep 2026 13:04:27 GMT",
-      "summary": "Problem / Problème Agents inherit the risk of every tool, MCP-style server, and third-party connector. Declared scopes are not evidence; actual calls may exceed them. Les agents héritent du risque de chaque outil, serveur MCP et connecteur tiers. Les portées déclarées ne sont pas",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "EN — An assurance conclusion is weak if nobody can reproduce the evidence behind it. Problem: test data, configuration, prompts, t...",
-      "link": "https://www.linkedin.com/posts/bobrapp_en-an-assurance-conclusion-is-weak-if-nobody-activity-7508873938186375168-BhcM",
-      "date": "Thu, 24 Sep 2026 13:04:15 GMT",
-      "summary": "EN — An assurance conclusion is weak if nobody can reproduce the evidence behind it. Problem: test data, configuration, prompts, thresholds, reviewer notes, and environment details disappear before the next audit or incident review. Solution: define an evidence package for each m",
       "image": null,
       "author": "Bob Rapp"
     }
