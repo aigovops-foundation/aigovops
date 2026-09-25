@@ -1,6 +1,46 @@
 {
-  "updated": "2026-09-24T19:09:13Z",
+  "updated": "2026-09-25T07:10:08Z",
   "bob": [
+    {
+      "title": "ENGLISH Problem: Deletion ≠ retirement. Orphan callers, credentials, prompts, derivatives and customers can remain exposed. Soluti...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509039622069338112-QyC6",
+      "date": "Fri, 25 Sep 2026 00:02:37 GMT",
+      "summary": "ENGLISH Problem: Deletion ≠ retirement. Orphan callers, credentials, prompts, derivatives and customers can remain exposed. Solution: Assign an owner; freeze the system; map dependencies; decide migrate or replace; revoke credentials and prompts; delete data and derivatives; arch",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Board-approved AI risk appetite must be executable—not decorative. Problem / समस्या “Low risk” is not a boundary. बिना thresholds, own...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509039523297689600-iQI-",
+      "date": "Fri, 25 Sep 2026 00:02:14 GMT",
+      "summary": "Board-approved AI risk appetite must be executable—not decorative. Problem / समस्या “Low risk” is not a boundary. बिना thresholds, owners और stop authority के, tolerance घटना के बाद की कहानी बन जाती है। Solution / समाधान Approve per use case: impact tier, harm/error ceiling, expo",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "EN : You cannot govern an AI service provider if you cannot see who processes your data next. Problem: Vendors may add subprocesso...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509009250082353155-DP7G",
+      "date": "Thu, 24 Sep 2026 22:01:56 GMT",
+      "summary": "EN : You cannot govern an AI service provider if you cannot see who processes your data next. Problem: Vendors may add subprocessors, hosting regions, or data uses through quiet updates that bypass meaningful review. Solution: Make subprocessor governance executable. Maintain a c",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem / समस्या: Missing provenance, generation method, fidelity and bias limits, lawful basis, and use/non-use records make synthe...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509009030288146433-JhHn",
+      "date": "Thu, 24 Sep 2026 22:01:03 GMT",
+      "summary": "Problem / समस्या: Missing provenance, generation method, fidelity and bias limits, lawful basis, and use/non-use records make synthetic data unprovable. यह bias और data leakage छिपा सकता है। Solution / समाधान: Require source, method, and hash; document lawful basis for personal-d",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Great opportunity and some awesome teams below",
+      "link": "https://www.linkedin.com/posts/bobrapp_great-opportunity-and-some-awesome-teams-activity-7508924697590398976-93bK",
+      "date": "Thu, 24 Sep 2026 16:25:57 GMT",
+      "summary": "Great opportunity and some awesome teams below",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "cool event - as always",
       "link": "https://www.linkedin.com/posts/bobrapp_cool-event-as-always-love-the-learning-activity-7508911622703386625-HF7t",
@@ -38,38 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_en-an-assurance-conclusion-is-weak-if-nobody-activity-7508873938186375168-BhcM",
       "date": "Thu, 24 Sep 2026 13:04:15 GMT",
       "summary": "EN — An assurance conclusion is weak if nobody can reproduce the evidence behind it. Problem: test data, configuration, prompts, thresholds, reviewer notes, and environment details disappear before the next audit or incident review. Solution: define an evidence package for each m",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Data: prove/stop. Problem: missing owner|license-consent|hash-version|opt-out => unknown provenance. Solution: tamper-evident cryp...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7508677323047493632-RZHK",
-      "date": "Thu, 24 Sep 2026 00:02:58 GMT",
-      "summary": "Data: prove/stop. Problem: missing owner|license-consent|hash-version|opt-out => unknown provenance. Solution: tamper-evident crypto ledger; continuous monitoring; scoped authority; human review; gap=>deny/quarantine/revoke/notify; tested rollback+independent manual stop/fallback",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "EN — An exception is not a shortcut around AI governance. It is a temporary risk decision that needs stronger evidence. Problem: u...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7508647208016080897-ajgI",
-      "date": "Wed, 23 Sep 2026 22:03:18 GMT",
-      "summary": "EN — An exception is not a shortcut around AI governance. It is a temporary risk decision that needs stronger evidence. Problem: urgent launches often create informal exemptions with no expiry, compensating control, or accountable approver. Solution: require an exception record s",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem / المشكلة: Shadow AI lives in SaaS, procured tools, notebooks and IDE assistants. Reconcile procurement, SSO, egress and e...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7508647132753489920-skX9",
-      "date": "Wed, 23 Sep 2026 22:03:00 GMT",
-      "summary": "Problem / المشكلة: Shadow AI lives in SaaS, procured tools, notebooks and IDE assistants. Reconcile procurement, SSO, egress and expense signals—or your inventory is only an assertion. الذكاء الاصطناعي الخفي موجود في البرمجيات والخدمات والأدوات ودفاتر الملاحظات ومساعدات البرمجة؛",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Shadow AI is an accountability gap—not merely a visibility gap. PROBLEM / SOLUTION / SUMMARY SaaS, browsers, extensions and person...",
-      "link": "https://fr.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7508541716677689345-CEyy",
-      "date": "Wed, 23 Sep 2026 15:04:07 GMT",
-      "summary": "Shadow AI is an accountability gap—not merely a visibility gap. PROBLEM / SOLUTION / SUMMARY SaaS, browsers, extensions and personal accounts can move data outside governance. Discover → intake → risk-tier → approve/deny → registry. Assign an owner; enforce least privilege and da",
       "image": null,
       "author": "Bob Rapp"
     }
