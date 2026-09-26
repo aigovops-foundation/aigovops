@@ -1,6 +1,38 @@
 {
-  "updated": "2026-09-25T19:08:31Z",
+  "updated": "2026-09-26T07:06:34Z",
   "bob": [
+    {
+      "title": "AI accessibility is a release gate, not a scan result. PROBLEM / المشكلة: Automation may pass while screen-reader, keyboard, voice...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509401893366857728-u9gc",
+      "date": "Sat, 26 Sep 2026 00:02:09 GMT",
+      "summary": "AI accessibility is a release gate, not a scan result. PROBLEM / المشكلة: Automation may pass while screen-reader, keyboard, voice, zoom, caption, or cognitive access fails. قد ينجح الفحص الآلي ويفشل المستخدم. SOLUTION / الحل: Test real assistive-technology journeys with people a",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Erasure ≠ one CRM row: data can persist in embeddings, vector stores, caches, logs, fine-tunes and downstream copies. PROBLEM: mis...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509401855097978880-Vy5t",
+      "date": "Sat, 26 Sep 2026 00:02:00 GMT",
+      "summary": "Erasure ≠ one CRM row: data can persist in embeddings, vector stores, caches, logs, fine-tunes and downstream copies. PROBLEM: missing map, verified identity, SLA owner and proof. SOLUTION: map stores; clock one request; fan out correction/deletion/objection; quarantine retrieval",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: Consent is not purpose control. Agents may retrieve or write outside the agreed purpose, or retain embeddings, caches, or...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509371687553998848-GeNS",
+      "date": "Fri, 25 Sep 2026 22:02:08 GMT",
+      "summary": "Problem: Consent is not purpose control. Agents may retrieve or write outside the agreed purpose, or retain embeddings, caches, or derived memory after withdrawal. Solution: Bind every read/write to purpose + consent; deny mismatches; revoke memory and retrieval; sign and hash de",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Level Up Your AI Governance: Start with the capability you can sustain. Not every organization or country needs the same AI govern...",
+      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-start-with-the-activity-7509371574458753024-14Lj",
+      "date": "Fri, 25 Sep 2026 22:01:41 GMT",
+      "summary": "Level Up Your AI Governance: Start with the capability you can sustain. Not every organization or country needs the same AI governance roadmap. Smaller teams can make meaningful progress by targeting a specific public-interest capability: such as digital services, procurement rev",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "AI procurement is governance, not just Finance. / AI調達は統制です。 Problem / 問題: GPU overruns, shadow endpoints and renewals can outrun...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509266724114964480-um6p",
@@ -30,54 +62,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509235729621778432-Ds9a",
       "date": "Fri, 25 Sep 2026 13:01:53 GMT",
       "summary": "Problem: Cross-organization agents need evidence, not partner assertions. Identity drift, contract mismatch, excessive tools, missing bilateral logs, and delayed suspension can create unsafe execution. Solution: Mutual attestation; version-pinned contracts; bounded action allowli",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "ENGLISH Problem: Deletion ≠ retirement. Orphan callers, credentials, prompts, derivatives and customers can remain exposed. Soluti...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509039622069338112-QyC6",
-      "date": "Fri, 25 Sep 2026 00:02:37 GMT",
-      "summary": "ENGLISH Problem: Deletion ≠ retirement. Orphan callers, credentials, prompts, derivatives and customers can remain exposed. Solution: Assign an owner; freeze the system; map dependencies; decide migrate or replace; revoke credentials and prompts; delete data and derivatives; arch",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Board-approved AI risk appetite must be executable—not decorative. Problem / समस्या “Low risk” is not a boundary. बिना thresholds, own...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509039523297689600-iQI-",
-      "date": "Fri, 25 Sep 2026 00:02:14 GMT",
-      "summary": "Board-approved AI risk appetite must be executable—not decorative. Problem / समस्या “Low risk” is not a boundary. बिना thresholds, owners और stop authority के, tolerance घटना के बाद की कहानी बन जाती है। Solution / समाधान Approve per use case: impact tier, harm/error ceiling, expo",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "EN : You cannot govern an AI service provider if you cannot see who processes your data next. Problem: Vendors may add subprocesso...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509009250082353155-DP7G",
-      "date": "Thu, 24 Sep 2026 22:01:56 GMT",
-      "summary": "EN : You cannot govern an AI service provider if you cannot see who processes your data next. Problem: Vendors may add subprocessors, hosting regions, or data uses through quiet updates that bypass meaningful review. Solution: Make subprocessor governance executable. Maintain a c",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem / समस्या: Missing provenance, generation method, fidelity and bias limits, lawful basis, and use/non-use records make synthe...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509009030288146433-JhHn",
-      "date": "Thu, 24 Sep 2026 22:01:03 GMT",
-      "summary": "Problem / समस्या: Missing provenance, generation method, fidelity and bias limits, lawful basis, and use/non-use records make synthetic data unprovable. यह bias और data leakage छिपा सकता है। Solution / समाधान: Require source, method, and hash; document lawful basis for personal-d",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Great opportunity and some awesome teams below",
-      "link": "https://www.linkedin.com/posts/bobrapp_great-opportunity-and-some-awesome-teams-activity-7508924697590398976-93bK",
-      "date": "Thu, 24 Sep 2026 16:25:57 GMT",
-      "summary": "Great opportunity and some awesome teams below",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "cool event - as always",
-      "link": "https://www.linkedin.com/posts/bobrapp_cool-event-as-always-love-the-learning-activity-7508911622703386625-HF7t",
-      "date": "Thu, 24 Sep 2026 15:34:00 GMT",
-      "summary": "cool event - as always - love the learning!",
       "image": null,
       "author": "Bob Rapp"
     }
