@@ -1,6 +1,38 @@
 {
-  "updated": "2026-09-27T07:07:54Z",
+  "updated": "2026-09-27T19:08:18Z",
   "bob": [
+    {
+      "title": "Truthful model cards can become fiction overnight when production changes. PROBLEM: Model cards, system cards and intended-use sta...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509991080113922049-qf_s",
+      "date": "Sun, 27 Sep 2026 15:03:22 GMT",
+      "summary": "Truthful model cards can become fiction overnight when production changes. PROBLEM: Model cards, system cards and intended-use statements often lag live configuration, permissions and observed behavior. SOLUTION: Hash-link every document to the model, configuration, prompts and t",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI impact accounting is a release control, not a green badge. Problem: Tokens ≠ impact. Unbounded thresholds are marketing; count...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509990660247220224-NJTw",
+      "date": "Sun, 27 Sep 2026 15:01:42 GMT",
+      "summary": "AI impact accounting is a release control, not a green badge. Problem: Tokens ≠ impact. Unbounded thresholds are marketing; count embodied hardware, grid intensity, idle/rebound demand. Solution: SCI=(O+M)/R. Continuous monitoring; cryptographically auditable evidence; tested rol",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "ENGLISH Level Up Your AI Governance: Procurement is where governance becomes operational. Public-sector and enterprise buyers do m...",
+      "link": "https://www.linkedin.com/posts/bobrapp_english-level-up-your-ai-governance-procurement-activity-7509960733397430272-p5RB",
+      "date": "Sun, 27 Sep 2026 13:02:47 GMT",
+      "summary": "ENGLISH Level Up Your AI Governance: Procurement is where governance becomes operational. Public-sector and enterprise buyers do more than select a vendor. They shape what gets tested, measured, disclosed, supported, and stopped. Before an AI pilot begins, require: ✅ Define the p",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem / Solution / Summary Problem: Keeping every agent reasoning trace forever increases privacy, access, and breach risk. Dele...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509960386893508608-BsQI",
+      "date": "Sun, 27 Sep 2026 13:01:25 GMT",
+      "summary": "Problem / Solution / Summary Problem: Keeping every agent reasoning trace forever increases privacy, access, and breach risk. Deleting everything can destroy evidence. Solution: Declare retention by use case; restrict access; store tamper-evident hashes; continuously monitor; app",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Portability is governance, not procurement. / La portabilité est une exigence de gouvernance. PROBLEM / PROBLÈME Vendor lock-in ca...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509764381963071488-Cy2g",
@@ -38,30 +70,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_how-do-humans-and-silicon-co-work-in-the-activity-7509694286519574528-bt3l",
       "date": "Sat, 26 Sep 2026 19:24:01 GMT",
       "summary": "How do humans and silicon co-work in the garden of humanity for good and not bad ?",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "ENGLISH Real-looking synthetic media is not trustworthy. Problem/Solution/Summary: Require signed Content Credentials, metadata/wa...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509629109027663873-X168",
-      "date": "Sat, 26 Sep 2026 15:05:02 GMT",
-      "summary": "ENGLISH Real-looking synthetic media is not trustworthy. Problem/Solution/Summary: Require signed Content Credentials, metadata/watermark attachment, generation records, intake verification, channel labels, and quarantine. Enforce named ownership, least privilege, human review, c",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI can intake a complaint in seconds. It cannot independently decide whether harm occurred, what remedy is fair, or when restituti...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509628526057148417-i_m4",
-      "date": "Sat, 26 Sep 2026 15:02:43 GMT",
-      "summary": "AI can intake a complaint in seconds. It cannot independently decide whether harm occurred, what remedy is fair, or when restitution is complete. Problem: AI triage can bury complaints, misclassify severity, or close cases without a human-owned remedy. Solution: Issue every compl",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem / Problème: Unclassified prompt, completion, and trace fields can expose sensitive data, cross borders, and persist beyond...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509598553196109825-PC6r",
-      "date": "Sat, 26 Sep 2026 13:03:37 GMT",
-      "summary": "Problem / Problème: Unclassified prompt, completion, and trace fields can expose sensitive data, cross borders, and persist beyond purpose. Des champs non classifiés peuvent exposer des données sensibles, franchir les frontières et être conservés trop longtemps. Solution / Soluti",
       "image": null,
       "author": "Bob Rapp"
     }
