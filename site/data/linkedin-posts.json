@@ -1,6 +1,46 @@
 {
-  "updated": "2026-09-26T19:08:38Z",
+  "updated": "2026-09-27T07:07:54Z",
   "bob": [
+    {
+      "title": "Portability is governance, not procurement. / La portabilité est une exigence de gouvernance. PROBLEM / PROBLÈME Vendor lock-in ca...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509764381963071488-Cy2g",
+      "date": "Sun, 27 Sep 2026 00:02:33 GMT",
+      "summary": "Portability is governance, not procurement. / La portabilité est une exigence de gouvernance. PROBLEM / PROBLÈME Vendor lock-in can make AI outages and policy conflicts non-recoverable. SOLUTION / SOLUTION Export prompts, data, logs, configs and evals machine-readably. Monitor co",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI literacy is not a slide deck. Problem: one-off awareness training creates paper competence. Solution: role-scoped curricula for...",
+      "link": "https://fr.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509764287880503297-FZGu",
+      "date": "Sun, 27 Sep 2026 00:02:11 GMT",
+      "summary": "AI literacy is not a slide deck. Problem: one-off awareness training creates paper competence. Solution: role-scoped curricula for builders, reviewers, approvers and executives; practical assessment; completion and re-certification clocks; and signed evidence linking each human t",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Global AI teams may face comprehensive rules in one market, sector-specific duties in another, and fast-changing state or provinci...",
+      "link": "https://www.linkedin.com/posts/bobrapp_global-ai-teams-may-face-comprehensive-rules-activity-7509734049138003970-cRg6",
+      "date": "Sat, 26 Sep 2026 22:02:01 GMT",
+      "summary": "Global AI teams may face comprehensive rules in one market, sector-specific duties in another, and fast-changing state or provincial requirements elsewhere. A single policy statement cannot manage those differences. Build a jurisdiction-aware operating model: Ship Good AI • Map w",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Retirement is not deletion. Problem/समस्या: Retiring a model or dataset can erase provenance, training-run lineage, evaluation evide...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509733959380148224-WLuU",
+      "date": "Sat, 26 Sep 2026 22:01:40 GMT",
+      "summary": "Retirement is not deletion. Problem/समस्या: Retiring a model or dataset can erase provenance, training-run lineage, evaluation evidence, downstream dependents, or legal holds. रिटायरमेंट में ये रिकॉर्ड और जवाबदेही मिट सकती है। Solution/समाधान: Preserve and hash required artifacts",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "How do humans and silicon co-work in the garden of humanity for good and not bad ?",
+      "link": "https://www.linkedin.com/posts/bobrapp_how-do-humans-and-silicon-co-work-in-the-activity-7509694286519574528-bt3l",
+      "date": "Sat, 26 Sep 2026 19:24:01 GMT",
+      "summary": "How do humans and silicon co-work in the garden of humanity for good and not bad ?",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "ENGLISH Real-looking synthetic media is not trustworthy. Problem/Solution/Summary: Require signed Content Credentials, metadata/wa...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509629109027663873-X168",
@@ -22,46 +62,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509598553196109825-PC6r",
       "date": "Sat, 26 Sep 2026 13:03:37 GMT",
       "summary": "Problem / Problème: Unclassified prompt, completion, and trace fields can expose sensitive data, cross borders, and persist beyond purpose. Des champs non classifiés peuvent exposer des données sensibles, franchir les frontières et être conservés trop longtemps. Solution / Soluti",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Level Up Your AI Governance: Global collaboration is a control, not a slogan. AI systems, vendors, data flows, and impacts cross b...",
-      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-global-collaboration-activity-7509598249800966145-LIPg",
-      "date": "Sat, 26 Sep 2026 13:02:24 GMT",
-      "summary": "Level Up Your AI Governance: Global collaboration is a control, not a slogan. AI systems, vendors, data flows, and impacts cross borders. Governance improves when practitioners compare how different institutions handle the same operational question: and document what transfers, w",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI accessibility is a release gate, not a scan result. PROBLEM / المشكلة: Automation may pass while screen-reader, keyboard, voice...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509401893366857728-u9gc",
-      "date": "Sat, 26 Sep 2026 00:02:09 GMT",
-      "summary": "AI accessibility is a release gate, not a scan result. PROBLEM / المشكلة: Automation may pass while screen-reader, keyboard, voice, zoom, caption, or cognitive access fails. قد ينجح الفحص الآلي ويفشل المستخدم. SOLUTION / الحل: Test real assistive-technology journeys with people a",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Erasure ≠ one CRM row: data can persist in embeddings, vector stores, caches, logs, fine-tunes and downstream copies. PROBLEM: mis...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509401855097978880-Vy5t",
-      "date": "Sat, 26 Sep 2026 00:02:00 GMT",
-      "summary": "Erasure ≠ one CRM row: data can persist in embeddings, vector stores, caches, logs, fine-tunes and downstream copies. PROBLEM: missing map, verified identity, SLA owner and proof. SOLUTION: map stores; clock one request; fan out correction/deletion/objection; quarantine retrieval",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: Consent is not purpose control. Agents may retrieve or write outside the agreed purpose, or retain embeddings, caches, or...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509371687553998848-GeNS",
-      "date": "Fri, 25 Sep 2026 22:02:08 GMT",
-      "summary": "Problem: Consent is not purpose control. Agents may retrieve or write outside the agreed purpose, or retain embeddings, caches, or derived memory after withdrawal. Solution: Bind every read/write to purpose + consent; deny mismatches; revoke memory and retrieval; sign and hash de",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Level Up Your AI Governance: Start with the capability you can sustain. Not every organization or country needs the same AI govern...",
-      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-start-with-the-activity-7509371574458753024-14Lj",
-      "date": "Fri, 25 Sep 2026 22:01:41 GMT",
-      "summary": "Level Up Your AI Governance: Start with the capability you can sustain. Not every organization or country needs the same AI governance roadmap. Smaller teams can make meaningful progress by targeting a specific public-interest capability: such as digital services, procurement rev",
       "image": null,
       "author": "Bob Rapp"
     }
