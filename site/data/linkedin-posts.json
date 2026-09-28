@@ -1,6 +1,46 @@
 {
-  "updated": "2026-09-27T19:08:18Z",
+  "updated": "2026-09-28T07:25:00Z",
   "bob": [
+    {
+      "title": "Great team and great role",
+      "link": "https://www.linkedin.com/posts/bobrapp_principal-responsible-ai-activity-7510143416845078528-Tkbh",
+      "date": "Mon, 28 Sep 2026 01:08:42 GMT",
+      "summary": "Great team and great role",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Public-sector AI can shape benefits, care, education and political access. An uninspectable impact assessment is paperwork, not ac...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510126964180180992-F4mG",
+      "date": "Mon, 28 Sep 2026 00:03:20 GMT",
+      "summary": "Public-sector AI can shape benefits, care, education and political access. An uninspectable impact assessment is paperwork, not accountability. PROBLEM / SOLUTION / SUMMARY Before deployment, map affected groups, scoped authority, human override, complaint route and evidence owne",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "A model swap is not maintenance; it can change governance risk. PROBLEM: Model, prompt, tool scope, data source or autonomy change...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510126930210521089-Fq9J",
+      "date": "Mon, 28 Sep 2026 00:03:12 GMT",
+      "summary": "A model swap is not maintenance; it can change governance risk. PROBLEM: Model, prompt, tool scope, data source or autonomy change. SOLUTION: Owner + ticket (impact/tests/notice/rollback); human re-approval before staged rollout. Monitor continuously; breach → deny/quarantine/esc",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Level Up Your AI Governance: In finance, an AI error can become a prudential risk. Credit, fraud, trading, and risk models operate...",
+      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-in-finance-activity-7510096704336060416-xVMp",
+      "date": "Sun, 27 Sep 2026 22:03:05 GMT",
+      "summary": "Level Up Your AI Governance: In finance, an AI error can become a prudential risk. Credit, fraud, trading, and risk models operate inside tightly regulated systems. Governance must connect model behavior to customer harm, operational resilience, financial controls, and supervisor",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem / المشكلة: AI-generated code can hide insecure patterns, unknown licences, and review gaps. / قد يخفي الكود المولّد أنماطاً...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510096296699920384--xk5",
+      "date": "Sun, 27 Sep 2026 22:01:28 GMT",
+      "summary": "Problem / المشكلة: AI-generated code can hide insecure patterns, unknown licences, and review gaps. / قد يخفي الكود المولّد أنماطاً غير آمنة وتراخيص مجهولة وفجوات في المراجعة. Solution / الحل: Tag provenance; run SAST and dependency scans; trace licences; protect production branc",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Truthful model cards can become fiction overnight when production changes. PROBLEM: Model cards, system cards and intended-use sta...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509991080113922049-qf_s",
@@ -38,38 +78,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509764381963071488-Cy2g",
       "date": "Sun, 27 Sep 2026 00:02:33 GMT",
       "summary": "Portability is governance, not procurement. / La portabilité est une exigence de gouvernance. PROBLEM / PROBLÈME Vendor lock-in can make AI outages and policy conflicts non-recoverable. SOLUTION / SOLUTION Export prompts, data, logs, configs and evals machine-readably. Monitor co",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI literacy is not a slide deck. Problem: one-off awareness training creates paper competence. Solution: role-scoped curricula for...",
-      "link": "https://fr.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509764287880503297-FZGu",
-      "date": "Sun, 27 Sep 2026 00:02:11 GMT",
-      "summary": "AI literacy is not a slide deck. Problem: one-off awareness training creates paper competence. Solution: role-scoped curricula for builders, reviewers, approvers and executives; practical assessment; completion and re-certification clocks; and signed evidence linking each human t",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Global AI teams may face comprehensive rules in one market, sector-specific duties in another, and fast-changing state or provinci...",
-      "link": "https://www.linkedin.com/posts/bobrapp_global-ai-teams-may-face-comprehensive-rules-activity-7509734049138003970-cRg6",
-      "date": "Sat, 26 Sep 2026 22:02:01 GMT",
-      "summary": "Global AI teams may face comprehensive rules in one market, sector-specific duties in another, and fast-changing state or provincial requirements elsewhere. A single policy statement cannot manage those differences. Build a jurisdiction-aware operating model: Ship Good AI • Map w",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Retirement is not deletion. Problem/समस्या: Retiring a model or dataset can erase provenance, training-run lineage, evaluation evide...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7509733959380148224-WLuU",
-      "date": "Sat, 26 Sep 2026 22:01:40 GMT",
-      "summary": "Retirement is not deletion. Problem/समस्या: Retiring a model or dataset can erase provenance, training-run lineage, evaluation evidence, downstream dependents, or legal holds. रिटायरमेंट में ये रिकॉर्ड और जवाबदेही मिट सकती है। Solution/समाधान: Preserve and hash required artifacts",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "How do humans and silicon co-work in the garden of humanity for good and not bad ?",
-      "link": "https://www.linkedin.com/posts/bobrapp_how-do-humans-and-silicon-co-work-in-the-activity-7509694286519574528-bt3l",
-      "date": "Sat, 26 Sep 2026 19:24:01 GMT",
-      "summary": "How do humans and silicon co-work in the garden of humanity for good and not bad ?",
       "image": null,
       "author": "Bob Rapp"
     }
