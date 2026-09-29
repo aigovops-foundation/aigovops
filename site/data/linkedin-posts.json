@@ -1,6 +1,38 @@
 {
-  "updated": "2026-09-29T07:14:18Z",
+  "updated": "2026-09-29T19:09:18Z",
   "bob": [
+    {
+      "title": "Audit requests expose governance gaps. PROBLEM / SOLUTION / SUMMARY Scattered or mutable records make retrieval SLAs fiction. Cont...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510716125798805504-G6s1",
+      "date": "Tue, 29 Sep 2026 15:04:27 GMT",
+      "summary": "Audit requests expose governance gaps. PROBLEM / SOLUTION / SUMMARY Scattered or mutable records make retrieval SLAs fiction. Continuously monitor; create cryptographically auditable evidence; test rollback/quarantine; enforce scoped authority; preserve an independent, non-AI-dep",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI can open a pull request; it cannot own provenance or consequences. PROBLEM / SOLUTION / SUMMARY Log model, task, commit, depend...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510715492660080642-AK18",
+      "date": "Tue, 29 Sep 2026 15:01:56 GMT",
+      "summary": "AI can open a pull request; it cannot own provenance or consequences. PROBLEM / SOLUTION / SUMMARY Log model, task, commit, dependencies, licenses and named human approval. Sign repository provenance. Block unknowns. Evidence earns the merge. THREE-YES TEST Safe: monitor continuo",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI readiness is not a leaderboard of models or patents. It is the ability to turn policy into responsible outcomes through people,...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-readiness-is-not-a-leaderboard-of-models-activity-7510685924704378880-TLSZ",
+      "date": "Tue, 29 Sep 2026 13:04:26 GMT",
+      "summary": "AI readiness is not a leaderboard of models or patents. It is the ability to turn policy into responsible outcomes through people, infrastructure, data, institutions, and learning. A balanced readiness dashboard can include: • governance ownership and decision capacity • skilled",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem: Unbounded delegation creates recursive swarms, privilege creep, and orphaned child agents. Solution: Declare maximum tier...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510685849362239488-OZHl",
+      "date": "Tue, 29 Sep 2026 13:04:08 GMT",
+      "summary": "Problem: Unbounded delegation creates recursive swarms, privilege creep, and orphaned child agents. Solution: Declare maximum tiers and fan-out budgets. Register every child with a parent link and expiring identity. Permit only equal or narrower authority. Continuously monitor; r",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "An AI without a named owner is nobody’s system when it fails. ENGLISH Problem: A vendor-and-version list cannot show who owns a mo...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510489196839669760-_aze",
@@ -38,38 +70,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510353199111925760-YUUn",
       "date": "Mon, 28 Sep 2026 15:02:18 GMT",
       "summary": "Telemetry without an expiry date is unmanaged risk. ENGLISH Problem: prompts, completions, embeddings, logs and evaluation sets often outlive their purpose. Solution: tag purpose, owner, expiry and legal-hold end date. Automate secure deletion from primary and backup stores; cont",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI records are not a spreadsheet. Tool ≠ purpose. PROBLEM: Missing purpose, authority, data, recipients, retention or change trigg...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510353139993300992-GSlL",
-      "date": "Mon, 28 Sep 2026 15:02:04 GMT",
-      "summary": "AI records are not a spreadsheet. Tool ≠ purpose. PROBLEM: Missing purpose, authority, data, recipients, retention or change trigger makes purpose limitation unenforceable. SOLUTION: Bind every run to an approved purpose_id; continuously monitor; retain cryptographically auditabl",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Handoff = control boundary, not chat. / Un transfert = frontière de contrôle, pas un chat. Problem / Problème: Agent-to-agent or a...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510323758621044737-0CZe",
-      "date": "Mon, 28 Sep 2026 13:05:19 GMT",
-      "summary": "Handoff = control boundary, not chat. / Un transfert = frontière de contrôle, pas un chat. Problem / Problème: Agent-to-agent or agent-to-human work can silently lose context, authority, or ownership. / Le travail peut perdre contexte, autorité ou responsabilité. Solution / Solut",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Level Up Your AI Governance: A rule without implementation capacity is a promise. Effective AI governance depends on institutions...",
-      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-a-rule-without-activity-7510323015528677376-4OM-",
-      "date": "Mon, 28 Sep 2026 13:02:22 GMT",
-      "summary": "Level Up Your AI Governance: A rule without implementation capacity is a promise. Effective AI governance depends on institutions that can interpret obligations, inspect evidence, support practitioners, investigate harms, and enforce decisions. Organizations should assess that ca",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Great team and great role",
-      "link": "https://www.linkedin.com/posts/bobrapp_principal-responsible-ai-activity-7510143416845078528-Tkbh",
-      "date": "Mon, 28 Sep 2026 01:08:42 GMT",
-      "summary": "Great team and great role",
       "image": null,
       "author": "Bob Rapp"
     }
