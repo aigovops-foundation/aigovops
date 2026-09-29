@@ -1,6 +1,38 @@
 {
-  "updated": "2026-09-28T19:09:16Z",
+  "updated": "2026-09-29T07:14:18Z",
   "bob": [
+    {
+      "title": "An AI without a named owner is nobody’s system when it fails. ENGLISH Problem: A vendor-and-version list cannot show who owns a mo...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510489196839669760-_aze",
+      "date": "Tue, 29 Sep 2026 00:02:43 GMT",
+      "summary": "An AI without a named owner is nobody’s system when it fails. ENGLISH Problem: A vendor-and-version list cannot show who owns a model, what authority it has, what data it touches, or who can stop it. Solution: Create a signed ownership register containing the model/version hash,",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI insurance is a balance-sheet decision—not just a model decision. PROBLEM / 问题 A model prices, denies, or reserves a claim. Vend...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510489019386916865-mp5j",
+      "date": "Tue, 29 Sep 2026 00:02:00 GMT",
+      "summary": "AI insurance is a balance-sheet decision—not just a model decision. PROBLEM / 问题 A model prices, denies, or reserves a claim. Vendor indemnity cannot transfer the insurer’s consumer or regulatory duty. Allocate: insurer = outcome and remedy; vendor = warranties, audit access, and",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Level Up Your AI Governance: Data access is a governance decision. AI readiness often depends on whether quality data can be acces...",
+      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-data-access-activity-7510459299303809024-dbTy",
+      "date": "Mon, 28 Sep 2026 22:03:55 GMT",
+      "summary": "Level Up Your AI Governance: Data access is a governance decision. AI readiness often depends on whether quality data can be accessed, shared, secured, and used for a legitimate purpose. Cross-border restrictions, infrastructure gaps, privacy obligations, and unequal representati",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem / समस्या Vendor updates can silently change model behavior, data use, subprocessors, or terms—erasing accountability. / विक्रेता...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510459235139223552-Iq9n",
+      "date": "Mon, 28 Sep 2026 22:03:39 GMT",
+      "summary": "Problem / समस्या Vendor updates can silently change model behavior, data use, subprocessors, or terms—erasing accountability. / विक्रेता अपडेट चुपचाप व्यवहार, डेटा-उपयोग, उप-प्रोसेसर या शर्तें बदल सकते हैं। Solution / समाधान Notify → classify materiality → block auto-adoption → r",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Telemetry without an expiry date is unmanaged risk. ENGLISH Problem: prompts, completions, embeddings, logs and evaluation sets of...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510353199111925760-YUUn",
@@ -38,38 +70,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_principal-responsible-ai-activity-7510143416845078528-Tkbh",
       "date": "Mon, 28 Sep 2026 01:08:42 GMT",
       "summary": "Great team and great role",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Public-sector AI can shape benefits, care, education and political access. An uninspectable impact assessment is paperwork, not ac...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510126964180180992-F4mG",
-      "date": "Mon, 28 Sep 2026 00:03:20 GMT",
-      "summary": "Public-sector AI can shape benefits, care, education and political access. An uninspectable impact assessment is paperwork, not accountability. PROBLEM / SOLUTION / SUMMARY Before deployment, map affected groups, scoped authority, human override, complaint route and evidence owne",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "A model swap is not maintenance; it can change governance risk. PROBLEM: Model, prompt, tool scope, data source or autonomy change...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510126930210521089-Fq9J",
-      "date": "Mon, 28 Sep 2026 00:03:12 GMT",
-      "summary": "A model swap is not maintenance; it can change governance risk. PROBLEM: Model, prompt, tool scope, data source or autonomy change. SOLUTION: Owner + ticket (impact/tests/notice/rollback); human re-approval before staged rollout. Monitor continuously; breach → deny/quarantine/esc",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Level Up Your AI Governance: In finance, an AI error can become a prudential risk. Credit, fraud, trading, and risk models operate...",
-      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-in-finance-activity-7510096704336060416-xVMp",
-      "date": "Sun, 27 Sep 2026 22:03:05 GMT",
-      "summary": "Level Up Your AI Governance: In finance, an AI error can become a prudential risk. Credit, fraud, trading, and risk models operate inside tightly regulated systems. Governance must connect model behavior to customer harm, operational resilience, financial controls, and supervisor",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem / المشكلة: AI-generated code can hide insecure patterns, unknown licences, and review gaps. / قد يخفي الكود المولّد أنماطاً...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510096296699920384--xk5",
-      "date": "Sun, 27 Sep 2026 22:01:28 GMT",
-      "summary": "Problem / المشكلة: AI-generated code can hide insecure patterns, unknown licences, and review gaps. / قد يخفي الكود المولّد أنماطاً غير آمنة وتراخيص مجهولة وفجوات في المراجعة. Solution / الحل: Tag provenance; run SAST and dependency scans; trace licences; protect production branc",
       "image": null,
       "author": "Bob Rapp"
     }
