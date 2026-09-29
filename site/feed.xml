@@ -5,13 +5,21 @@
     <link>https://www.aigovops-foundation.com</link>
     <description>The latest posts from Ken Johnston and Bob Rapp on AI governance, policy-as-code, and open-source compliance tooling.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Sep 2026 15:27:25 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 06:07:21 +0000</lastBuildDate>
     <atom:link href="https://www.aigovops-foundation.com/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://www.aigovops-foundation.com/images/logo.png</url>
       <title>AiGovOps Foundation</title>
       <link>https://www.aigovops-foundation.com</link>
     </image>
+    <item><!-- content -->
+      <title>Forty-five minutes at Knight Capital — the deploy is the decision</title>
+      <link>https://www.aigovops-foundation.com/blog/forty-five-minutes-at-knight.html</link>
+      <guid isPermaLink="true">https://www.aigovops-foundation.com/blog/forty-five-minutes-at-knight.html</guid>
+      <pubDate>Tue, 29 Sep 2026 09:00:00 +0000</pubDate>
+      <dc:creator>Bob Rapp</dc:creator>
+      <description>In 2012 a faulty deploy sent $7 billion of unintended orders in 45 minutes and cost Knight Capital $440 million and the firm. No LLM anywhere. The gate it needed is the one your agent needs today: the deploy is a consequential action, and it gets a rule, a kill switch and a rehearsed way back.</description>
+    </item>
     <item><!-- content -->
       <title>The one-dollar Tahoe — why a system prompt is not a rule</title>
       <link>https://www.aigovops-foundation.com/blog/the-one-dollar-tahoe.html</link>
