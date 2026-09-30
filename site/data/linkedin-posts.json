@@ -1,6 +1,46 @@
 {
-  "updated": "2026-09-30T07:14:10Z",
+  "updated": "2026-09-30T19:10:02Z",
   "bob": [
+    {
+      "title": "Problem / 問題: No independent rerun = no evidence. Hidden inputs break trust. / 独立再現なし＝証拠なし。 Solution / 解決策: Require lineage, locke...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511078460723871747-E_oo",
+      "date": "Wed, 30 Sep 2026 15:04:14 GMT",
+      "summary": "Problem / 問題: No independent rerun = no evidence. Hidden inputs break trust. / 独立再現なし＝証拠なし。 Solution / 解決策: Require lineage, locked env, seeds, exclusions, metrics + independent validation. Monitor drift; sign/hash evidence; test rollback/quarantine; scope authority; retain an in",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "03:00 is the real oversight test. If no qualified, rested human can act, AI must not continue. Problem: Absence, overload and fati...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511078283938201601-l0nm",
+      "date": "Wed, 30 Sep 2026 15:03:32 GMT",
+      "summary": "03:00 is the real oversight test. If no qualified, rested human can act, AI must not continue. Problem: Absence, overload and fatigue turn “human oversight” into fiction. Solution: Name primary and backup on-call shifts. Cap concurrent cases per reviewer. Define escalation owners",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Douglas Brion well deserved",
+      "link": "https://www.linkedin.com/posts/bobrapp_20-european-industrial-ai-startups-to-watch-activity-7511069374968102912-KoiB",
+      "date": "Wed, 30 Sep 2026 14:28:08 GMT",
+      "summary": "Douglas Brion well deserved",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Level Up Your AI Governance: A standard is useful only when it changes practice. Organizations face a growing menu of AI standards...",
+      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-a-standard-is-activity-7511048556267487232-IQ7s",
+      "date": "Wed, 30 Sep 2026 13:05:24 GMT",
+      "summary": "Level Up Your AI Governance: A standard is useful only when it changes practice. Organizations face a growing menu of AI standards, frameworks, and guidance. Adoption should not be a branding exercise. Evaluate each resource by what it helps you do, measure, and improve. For ever",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Problem / المشكلة A verified profile, genuine voice, signature, or invoice proves identity, not intent. Microsoft observed 1M+ AI-...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510941819887677443-0UF9",
+      "date": "Wed, 30 Sep 2026 06:01:16 GMT",
+      "summary": "Problem / المشكلة A verified profile, genuine voice, signature, or invoice proves identity, not intent. Microsoft observed 1M+ AI-assisted impersonation emails targeting finance teams and nearly $50,000 ACH payments. الهوية الموثقة لا تثبت النية. Solution / الحل Gate every paymen",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Problem / समस्या Hidden uncertainty and overloaded attention cause operator error. Usability is governance, not a training footnote....",
       "link": "https://www.linkedin.com/posts/bobrapp_problem-%E0%A4%B8%E0%A4%AE%E0%A4%B8%E0%A4%AF-hidden-uncertainty-and-overloaded-activity-7510851448377696256-pISt",
@@ -30,54 +70,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-inclusion-requires-activity-7510821406834573312-xhQr",
       "date": "Tue, 29 Sep 2026 22:02:48 GMT",
       "summary": "Level Up Your AI Governance: Inclusion requires investment, not invitations. Emerging markets and under-resourced organizations are often asked to adopt AI before they have adequate connectivity, skills, evaluation capacity, or access to decision-makers. Responsible governance mu",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Audit requests expose governance gaps. PROBLEM / SOLUTION / SUMMARY Scattered or mutable records make retrieval SLAs fiction. Cont...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510716125798805504-G6s1",
-      "date": "Tue, 29 Sep 2026 15:04:27 GMT",
-      "summary": "Audit requests expose governance gaps. PROBLEM / SOLUTION / SUMMARY Scattered or mutable records make retrieval SLAs fiction. Continuously monitor; create cryptographically auditable evidence; test rollback/quarantine; enforce scoped authority; preserve an independent, non-AI-dep",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI can open a pull request; it cannot own provenance or consequences. PROBLEM / SOLUTION / SUMMARY Log model, task, commit, depend...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510715492660080642-AK18",
-      "date": "Tue, 29 Sep 2026 15:01:56 GMT",
-      "summary": "AI can open a pull request; it cannot own provenance or consequences. PROBLEM / SOLUTION / SUMMARY Log model, task, commit, dependencies, licenses and named human approval. Sign repository provenance. Block unknowns. Evidence earns the merge. THREE-YES TEST Safe: monitor continuo",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI readiness is not a leaderboard of models or patents. It is the ability to turn policy into responsible outcomes through people,...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-readiness-is-not-a-leaderboard-of-models-activity-7510685924704378880-TLSZ",
-      "date": "Tue, 29 Sep 2026 13:04:26 GMT",
-      "summary": "AI readiness is not a leaderboard of models or patents. It is the ability to turn policy into responsible outcomes through people, infrastructure, data, institutions, and learning. A balanced readiness dashboard can include: • governance ownership and decision capacity • skilled",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem: Unbounded delegation creates recursive swarms, privilege creep, and orphaned child agents. Solution: Declare maximum tier...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510685849362239488-OZHl",
-      "date": "Tue, 29 Sep 2026 13:04:08 GMT",
-      "summary": "Problem: Unbounded delegation creates recursive swarms, privilege creep, and orphaned child agents. Solution: Declare maximum tiers and fan-out budgets. Register every child with a parent link and expiring identity. Permit only equal or narrower authority. Continuously monitor; r",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An AI without a named owner is nobody’s system when it fails. ENGLISH Problem: A vendor-and-version list cannot show who owns a mo...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510489196839669760-_aze",
-      "date": "Tue, 29 Sep 2026 00:02:43 GMT",
-      "summary": "An AI without a named owner is nobody’s system when it fails. ENGLISH Problem: A vendor-and-version list cannot show who owns a model, what authority it has, what data it touches, or who can stop it. Solution: Create a signed ownership register containing the model/version hash,",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI insurance is a balance-sheet decision—not just a model decision. PROBLEM / 问题 A model prices, denies, or reserves a claim. Vend...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510489019386916865-mp5j",
-      "date": "Tue, 29 Sep 2026 00:02:00 GMT",
-      "summary": "AI insurance is a balance-sheet decision—not just a model decision. PROBLEM / 问题 A model prices, denies, or reserves a claim. Vendor indemnity cannot transfer the insurer’s consumer or regulatory duty. Allocate: insurer = outcome and remedy; vendor = warranties, audit access, and",
       "image": null,
       "author": "Bob Rapp"
     }
