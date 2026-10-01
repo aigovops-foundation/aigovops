@@ -112,7 +112,49 @@ def main():
           "the in-loop `git add -A` ran after the commit, so it could only ever stage "
           "the wreckage of a failed rebase — and then block the rebase it preceded")
 
-    print("\n  [5] bytecode cannot come back")
+    print("\n  [5] sitemap.xml covers every published post")
+    # VERSION-CONTROL.md §6 has asked for "New pages added to sitemap.xml" on every PR
+    # since the beginning, and by 2026-09-30 five of fourteen blog pages were absent —
+    # every generated one, because nothing wrote the file. A checklist item that relies
+    # on a person remembering is the kind this estate automates, so build_content.py now
+    # maintains a marker block and this asserts the result.
+    sitemap = ROOT / "sitemap.xml"
+    if not sitemap.exists():
+        check("sitemap.xml exists", False, "nothing to keep current")
+    else:
+        sm = sitemap.read_text(encoding="utf-8")
+        posts = sorted(p.stem for p in (ROOT / "blog").glob("*.html"))
+        absent = [p for p in posts if f"/blog/{p}.html" not in sm]
+        check(f"all {len(posts)} pages under blog/ appear in sitemap.xml",
+              not absent, f"absent: {absent}")
+        check("build_content.py maintains the generated block",
+              "def update_sitemap" in gen and "update_sitemap(metas)" in gen,
+              "defined but uncalled would leave the file frozen again")
+        # The CALL sites, found by their indented form. Written with str.index() first,
+        # which matched `def render_translations(metas)` near the top of the file instead
+        # and failed on correct code — the same def-before-call trap that bit a heartbeat
+        # assertion in Omni-Rapp this week. An ordering assertion has to anchor on the
+        # call, or it is measuring the order of the definitions.
+        call_rt = gen.rfind("= render_translations(metas)")
+        call_sm = gen.rfind("= update_sitemap(metas)")
+        check("…and it runs AFTER render_translations, so translated pages can be listed",
+              call_rt != -1 and call_sm != -1 and call_rt < call_sm,
+              f"render_translations call at {call_rt}, update_sitemap call at {call_sm} — "
+              f"otherwise a blog/es/ page written this run is missed until the next one")
+        check("generated entries are marker-delimited, so hand-made ones are never touched",
+              "<url><!-- content -->" in gen,
+              "content/stories/README.md: hand-made pages are never touched")
+        # It is an XML file served to crawlers; a malformed one is worse than a stale one.
+        import xml.dom.minidom
+        ok_xml = True
+        try:
+            xml.dom.minidom.parseString(sm)
+        except Exception as e:
+            ok_xml = False
+            err = str(e)
+        check("sitemap.xml is well-formed XML", ok_xml, "" if ok_xml else err)
+
+    print("\n  [6] bytecode cannot come back")
     check("*.pyc and __pycache__/ are gitignored",
           all(p in (ROOT / ".gitignore").read_text(encoding="utf-8") for p in ("*.pyc", "__pycache__/")))
     tracked = [p for p in (ROOT / "scripts").rglob("__pycache__")]

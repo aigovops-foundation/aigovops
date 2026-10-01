@@ -31,7 +31,7 @@ Do not read them as current policy.
 unattended. So the publish job declares its outputs and fails on anything else:
 
 ```yaml
-OUTPUTS="blog blog.html feed.xml founders.html content/drafts content/translations"
+OUTPUTS="blog blog.html feed.xml sitemap.xml founders.html content/drafts content/translations"
 git add -A -- $OUTPUTS        # -A so deletes and renames still travel
 # …then fail the job if `git status --porcelain` shows anything outside OUTPUTS
 ```
@@ -76,6 +76,14 @@ in both languages across all 49 pages (recursively — `blog/` and `blog/es/` in
 en/es key-set parity, which catches the `chips.*` and `chatbot.*` keys that `js/chat.js` reads and no
 `data-i18n` attribute mentions.
 
+**And a key resolving is not the same as the browser being able to fetch the file.** `i18n.js` built
+its `<script src>` as the document-relative literal `js/i18n/strings-${lang}.js`, so on any page under
+`blog/` it requested `/blog/js/i18n/strings-es.js` — a 404 — and the Spanish toggle was dead on all 14
+blog pages while every key "resolved" perfectly in the checker's Node sandbox. The path is now derived
+from `document.currentScript.src`, which is correct from a subdirectory *and* from a site served under
+a subpath; and the `<script>` has an `onerror`, because a missing strings file otherwise fails in total
+silence — the page keeps its English static text and looks right. The checker asserts all three.
+
 Keep checks like this in real `.js` or `.py` files, not in a `node -e "…"` inside a shell script. The
 previous inline version's escape comparison was eaten by bash — eight backslashes collapsed to four,
 so Node compared one character to a two-character string, the comparison was always false, and one
@@ -108,3 +116,8 @@ Stories are authored in `content/stories/*.md` and rendered by `scripts/build_co
 renaming a slug re-notifies every subscriber as though the post were new. Hand-made posts and cards
 are never touched by the generator. `content/drafts/` is regenerated *and pruned* — do not leave
 anything there you want to keep.
+
+`sitemap.xml` is maintained the same way, between `<url><!-- content -->` markers, and
+`update_sitemap()` runs *after* `render_translations()` so a `blog/es/` page written on the same run
+gets listed. Before 2026-09-30 nothing wrote it at all and five of fourteen posts were missing, so
+`scripts/test-publish-contract.py` now asserts every page under `blog/` appears in it.

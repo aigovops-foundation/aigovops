@@ -46,14 +46,43 @@
     document.documentElement.lang = window.I18N.lang;
   }
 
+  // WHERE THIS FILE LIVES, resolved once, from this file's own URL.
+  //
+  // THE BUG, found 2026-09-30. The src below was the document-relative literal
+  // `js/i18n/strings-${lang}.js`. On the home page that resolves correctly. On any page
+  // under blog/ it resolves to /blog/js/i18n/strings-es.js — a 404 — so i18n never
+  // loaded, the ES button did nothing, and `document.documentElement.lang` was never
+  // updated, on all 14 blog pages. Nothing said so: `s.onload` was set and `s.onerror`
+  // was not, so the failure was perfectly silent.
+  //
+  // Resolved from `document.currentScript.src` rather than hardcoded to a root-absolute
+  // `/js/i18n/...`, because root-absolute breaks the moment the site is served from a
+  // subpath (a GitHub Pages project page, a staging prefix, a local `python3 -m
+  // http.server` in a parent directory). Deriving it from this script's own location is
+  // correct in all of those and needs no configuration.
+  const I18N_DIR = (function () {
+    try {
+      const self = document.currentScript && document.currentScript.src;
+      if (self) return self.slice(0, self.lastIndexOf('/') + 1);
+    } catch (e) { /* fall through */ }
+    return 'js/i18n/';            // last resort: the old behaviour, for the root page
+  })();
+
   function loadStrings(lang) {
     // Remove existing script
     const existing = document.getElementById('i18n-strings');
     if (existing) existing.remove();
     const s = document.createElement('script');
     s.id = 'i18n-strings';
-    s.src = `js/i18n/strings-${lang}.js`;
+    s.src = `${I18N_DIR}strings-${lang}.js`;
     s.onload = applyStrings;
+    // FAIL LOUD. A missing strings file is why this went unnoticed for months: the page
+    // simply kept its English static text and looked fine. One console line is the
+    // difference between a silent downgrade and something a person can find.
+    s.onerror = function () {
+      console.error(`[i18n] could not load ${s.src} — the page will keep its static ` +
+                    `text, so a language switch will appear to do nothing.`);
+    };
     document.head.appendChild(s);
   }
 

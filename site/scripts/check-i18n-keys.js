@@ -187,7 +187,47 @@ if (tables.en && tables.es) {
   for (const k of es) if (!en.has(k)) failures.push(`en: missing ${k} (present in es)`);
 }
 
-const summary = `${pages.length} pages, ${keys.size} referenced keys, ` +
+// ── Can the loader actually REACH the strings file, from every page? ──────────
+//
+// The gap in this checker's own first version, and it is the interesting kind. Every
+// assertion above verifies that a key RESOLVES — which it does, in a Node sandbox that
+// reads the file straight off disk. None of them asked whether the browser could fetch
+// that file in the first place. It could not: i18n.js built the src as the
+// document-relative literal `js/i18n/strings-${lang}.js`, so on /blog/anything.html it
+// requested /blog/js/i18n/strings-es.js and got a 404. Every key "resolved" here while
+// the Spanish toggle was dead on all 14 blog pages.
+//
+// So: assert the path is resolved from the script's own URL, and that no page is left
+// depending on a document-relative one.
+const I18N_JS = path.join(REPO, 'js', 'i18n', 'i18n.js');
+if (fs.existsSync(I18N_JS)) {
+  const loader = fs.readFileSync(I18N_JS, 'utf8');
+  if (/\.src\s*=\s*[`'"]js\/i18n\/strings-/.test(loader)) {
+    failures.push(
+      'js/i18n/i18n.js builds the strings path document-relative, so it 404s on every ' +
+      'page outside the repo root (all of blog/ and blog/es/). Resolve it from ' +
+      'document.currentScript.src instead.');
+  }
+  if (!/currentScript/.test(loader)) {
+    failures.push(
+      'js/i18n/i18n.js no longer derives its own directory from document.currentScript — ' +
+      'whatever replaced it must work from a page in a subdirectory AND from a site ' +
+      'served under a subpath.');
+  }
+  if (!/onerror/.test(loader)) {
+    failures.push(
+      'js/i18n/i18n.js sets no onerror on the strings <script>. A missing strings file ' +
+      'then fails silently — the page keeps its English static text and looks correct, ' +
+      'which is exactly how the blog/ breakage survived unnoticed.');
+  }
+}
+
+// Pages in a subdirectory are the ones that break, so say how many are covered — a
+// number that reads as reassurance is worth more than a silent pass.
+const nested = pages.filter(f => path.dirname(path.relative(REPO, f)) !== '.').length;
+
+const summary = `${pages.length} pages (${nested} in subdirectories), ` +
+  `${keys.size} referenced keys, ` +
   `${tables.en ? flatten(tables.en).size : 0} keys per language`;
 
 if (failures.length) {

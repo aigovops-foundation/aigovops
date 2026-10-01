@@ -172,6 +172,54 @@ def update_feed(metas):
     open(FEED, "w", encoding="utf-8").write(t)
 
 
+SITEMAP = os.path.join(ROOT, "sitemap.xml")
+
+
+def update_sitemap(metas):
+    """Keep sitemap.xml current for generated story pages, and only those.
+
+    ADDED 2026-09-30. Nothing wrote sitemap.xml, so every generated post was simply
+    absent from it — five of fourteen by the time anyone checked, and the gap grew by
+    one every Tuesday. `docs/version-control/VERSION-CONTROL.md` §6 has asked for
+    "New pages added to sitemap.xml" on every PR since the beginning; a checklist item
+    that depends on a person remembering is the kind this estate has learned to automate.
+
+    Same marker discipline as update_index() and update_feed(): generated entries live
+    between markers and are rewritten wholesale, every hand-made entry above them is left
+    exactly alone. The existing file's formatting is inconsistent (some entries on one
+    line, some across three, some with no lastmod at all) — that is deliberately not
+    normalised, because reflowing lines nobody asked about buries the real change.
+    """
+    if not os.path.exists(SITEMAP):
+        print("build_content: sitemap.xml absent — skipped (nothing to keep current)")
+        return 0
+    t = open(SITEMAP, encoding="utf-8").read()
+    t = re.sub(r"\s*<url><!-- content -->(?:(?!</url>).)*?</url>", "", t, flags=re.S)
+
+    entries = []
+    for m in metas:
+        entries.append(f'\n  <url><!-- content --><loc>{SITE}/blog/{m["slug"]}.html</loc>'
+                       f'<lastmod>{m["date"]}</lastmod>'
+                       f'<changefreq>monthly</changefreq><priority>0.7</priority></url>')
+        # Translated pages are real, indexable URLs with their own content, so they
+        # belong here too — and render_translations() only writes one when a cached
+        # translation exists, so this follows what was actually published.
+        for lang in ("es",):
+            if os.path.exists(os.path.join(ROOT, "blog", lang, f"{m['slug']}.html")):
+                entries.append(
+                    f'\n  <url><!-- content --><loc>{SITE}/blog/{lang}/{m["slug"]}.html</loc>'
+                    f'<lastmod>{m["date"]}</lastmod>'
+                    f'<changefreq>monthly</changefreq><priority>0.6</priority></url>')
+
+    block = "".join(entries)
+    if "</urlset>" not in t:
+        print("build_content: sitemap.xml has no </urlset> — left untouched")
+        return 0
+    t = t.replace("</urlset>", f"{block}\n</urlset>", 1)
+    open(SITEMAP, "w", encoding="utf-8").write(t)
+    return len(entries)
+
+
 def _plain(md_text):
     """Markdown → plain sentences for a social/email draft (no headings, links become their text)."""
     t = re.sub(r"^#+\s.*$", "", md_text, flags=re.M)
@@ -416,6 +464,11 @@ def main():
     nt = render_translations(metas)
     if nt:
         print(f"build_content: {nt} translated story page(s) under blog/<lang>/")
+    # AFTER render_translations, not before: update_sitemap only lists a translated page
+    # that actually exists on disk, so it has to run once those have been written.
+    ns = update_sitemap(metas)
+    if ns:
+        print(f"build_content: sitemap.xml — {ns} generated URL(s)")
     nf = render_founders()
     if nf:
         print(f"build_content: founders.html — {nf} region(s) rendered from content/founders.md")
