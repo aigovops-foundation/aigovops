@@ -32,7 +32,40 @@ MAX_AGE_DAYS = 30       # …and nothing older than this, however few that leave
 
 
 # Set by main(); read by the exit-code contract at the bottom of this file.
+#
+# STATE['feed_errors'] is a dict author -> reason, written by fetch_feed(). It exists
+# because the original exit contract only failed when BOTH feeds died
+# (STATE['both_failed']), and "both" is the wrong quantifier: a single author's bridge
+# lapsing is invisible to it, so the job reports success while half the section is
+# unfetchable. One author down is one author down.
 STATE = {}
+
+
+def _note_feed_error(author_name, reason):
+    """Record why an author's feed produced nothing, for the payload and the exit code.
+
+    The reason reaches data/linkedin-posts.json, which is committed and served, so it is
+    stripped like any other third-party string — the text comes from a remote server
+    (`Trial expired. Please upgrade your plan.` is theirs, not ours) and this repo's rule
+    is that every such string is hostile until it has been through the sanitiser."""
+    STATE.setdefault('feed_errors', {})[author_name] = _strip_markup(str(reason))[:200]
+
+
+AUTHORS = (('bob', 'Bob Rapp'), ('ken', 'Ken Johnston'))
+
+
+def _health_block(fetched_counts, published_counts):
+    """Per-author feed health for the committed payload. See the note in main()."""
+    out = {}
+    for key, name in AUTHORS:
+        err = (STATE.get('feed_errors') or {}).get(name)
+        out[key] = {
+            'ok': not err,
+            'fetched': int(fetched_counts.get(key, 0)),
+            'published': int(published_counts.get(key, 0)),
+            'error': err,
+        }
+    return out
 
 
 def strip_html(text):
@@ -271,6 +304,7 @@ def fetch_feed(url, author_name, max_items=MAX_POSTS):
     """Fetch an rss.app (or any RSS 2.0 / Atom) feed, return list of post dicts."""
     if not url:
         print(f"  [{author_name}] No URL provided — skipping.")
+        _note_feed_error(author_name, "no feed URL configured")
         return []
     try:
         req = urllib.request.Request(
@@ -339,10 +373,15 @@ def fetch_feed(url, author_name, max_items=MAX_POSTS):
         posts = [sanitise_post(p) for p in posts]
 
         print(f"  [{author_name}] Fetched {len(posts)} posts.")
+        if posts:
+            STATE.get('feed_errors', {}).pop(author_name, None)
+        else:
+            _note_feed_error(author_name, "feed parsed but carried no items")
         return posts
 
     except Exception as exc:
         print(f"  [{author_name}] ERROR: {exc}")
+        _note_feed_error(author_name, exc)
         return []
 
 
@@ -390,12 +429,26 @@ def main():
     bob_posts = fetch_with_retry(bob_url, 'Bob Rapp') if bob_url else []
     ken_posts = fetch_with_retry(ken_url, 'Ken Johnston')
 
+    # Counted HERE, before the per-author fallback below substitutes yesterday's posts.
+    # `fetched` has to mean "what the bridge handed us on this run" or it cannot
+    # distinguish a live feed from a dead one being papered over by the fallback — which
+    # is the whole distinction the health block exists to record.
+    fetched_counts = {'bob': len(bob_posts), 'ken': len(ken_posts)}
+    if not bob_url:
+        _note_feed_error('Bob Rapp', "no feed URL configured")
+
     # If both fetches failed, keep last successful data
     if not bob_posts and not ken_posts and last_payload:
         print("  ⚠️  Both feeds failed — keeping last successful data")
         STATE['both_failed'] = True
         last_payload['fetch_error'] = True
         last_payload['fetch_attempted'] = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+        # Re-stamp health on THIS path too. It returns early, so without this line the
+        # file keeps the previous run's `feed_health` — a block saying `ok: true` sitting
+        # beside `fetch_error: true`, which is the one state the block must never report.
+        last_payload['feed_health'] = _health_block(
+            fetched_counts, {'bob': len(last_payload.get('bob') or []),
+                             'ken': len(last_payload.get('ken') or [])})
         with open(out_path, 'w', encoding='utf-8') as f:
             json.dump(last_payload, f, indent=2, ensure_ascii=False)
         print("  Preserved last successful linkedin-posts.json")
@@ -443,8 +496,29 @@ def main():
     if bob_fresh or ken_fresh:
         STATE.pop('stale_hours', None)
 
+    # FEED HEALTH IS NOT THE SAME FACT AS "THE SECTION HAS POSTS", AND CONFLATING THEM
+    # KEPT `main` RED FOR ELEVEN DAYS.
+    #
+    # scripts/test-e2e-v3.sh asserted `ken_count > 0` against the published file. On
+    # 2026-09-20 that went red and stayed red — not because anything here broke, but
+    # because Ken's newest LinkedIn post was 20 Aug and the 30-day rule above correctly
+    # dropped the last of them. The only failing assertion on main was, in effect, "a
+    # co-founder posted recently": a fact about a person that no commit can make true, so
+    # the lane could not go green and everyone learned to read Cloud-Mary's verdict as
+    # noise. That is a worse outcome than an empty section.
+    #
+    # So the file now records WHY a section is empty, and the live test asserts the half
+    # this repo actually controls:
+    #   fetched   — items the bridge handed us. Zero with a URL configured is a DEFECT.
+    #   published — items that survived the freshness rule. Zero is a legitimate state.
+    #   ok        — the bridge was reachable and carried items.
+    # An author who is simply not posting is `ok: true, published: 0`, which is healthy.
+    # A lapsed bridge (HTTP 402, as happened in June) is `ok: false`, which is not.
+    health = _health_block(fetched_counts, {'bob': len(bob_fresh), 'ken': len(ken_fresh)})
+
     payload = {
         'updated': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+        'feed_health': health,
         'bob': bob_fresh,
         'ken': ken_fresh,
     }
@@ -541,6 +615,17 @@ if __name__ == '__main__':
     if STATE.get('both_failed'):
         problems.append("both RSS feeds failed (check the bridge subscription — a lapsed "
                         "plan returns HTTP 402)")
+    # ONE AUTHOR DOWN IS ONE AUTHOR DOWN.
+    #
+    # The check above was the whole guard, and "both" let a single lapsed bridge through
+    # as success: the other author's posts kept arriving, the job stayed green, and the
+    # only red signal anywhere was a live-site assertion that said "Ken has posts — 0
+    # posts" — which names a symptom shared by a dead bridge and a founder on holiday.
+    # Eleven days of red main later, nobody could tell which it was without reading this
+    # file. A per-author fault now names itself.
+    for name, reason in sorted((STATE.get('feed_errors') or {}).items()):
+        if not STATE.get('both_failed'):
+            problems.append(f"{name}'s feed produced nothing: {reason}")
     if STATE.get('stale_hours'):
         problems.append(f"posts data is {STATE['stale_hours']:.0f}h old "
                         f"(threshold 48h) — the feed is not updating")

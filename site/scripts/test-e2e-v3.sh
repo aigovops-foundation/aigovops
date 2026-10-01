@@ -112,10 +112,60 @@ echo ""
 echo "  [Posts Data]"
 POSTS="$HOME/../data/linkedin-posts.json"  # local check
 if [ -f $REPO/data/linkedin-posts.json ]; then
-  bob_count=$(python3 -c "import json; d=json.load(open('$REPO/data/linkedin-posts.json')); print(len(d.get('bob',[])))" 2>/dev/null || echo 0)
-  ken_count=$(python3 -c "import json; d=json.load(open('$REPO/data/linkedin-posts.json')); print(len(d.get('ken',[])))" 2>/dev/null || echo 0)
-  [ "$bob_count" -gt 0 ] && check "Bob has posts ($bob_count)" "ok" || check "Bob has posts" "0 posts"
-  [ "$ken_count" -gt 0 ] && check "Ken has posts ($ken_count)" "ok" || check "Ken has posts" "0 posts"
+  # ── WHAT THIS ASSERTS, AND WHY IT CHANGED ────────────────────────────────
+  # It used to assert `ken_count > 0`, i.e. "Ken has posts". On 2026-09-20 that went red
+  # and stayed red for eleven days: Ken's newest LinkedIn post was 20 Aug, and
+  # fetch_posts.py's 30-day freshness rule correctly dropped the last of them. The feed
+  # was never broken — the runner fetched ten items that morning. So the only failing
+  # assertion on `main` was, in effect, "a co-founder posted in the last month": true or
+  # false by someone's posting habits, unfixable by any commit, and therefore a red lane
+  # that could only be ignored. A gate nobody can satisfy teaches people to skip the gate.
+  #
+  # An empty section is a legitimate state. An UNREACHABLE FEED is not. fetch_posts.py now
+  # records the difference in `feed_health`, and that is what gets gated here:
+  #   ok=false      → the bridge failed (HTTP 402 on a lapsed plan, as in June) → FAIL
+  #   published=0   → nothing recent enough to show → reported, not failed
+  # The old shape of this test would have been equally red in both cases.
+  health=$(python3 -c "
+import json
+d = json.load(open('$REPO/data/linkedin-posts.json'))
+h = d.get('feed_health')
+if not h:
+    print('MISSING'); raise SystemExit
+for k in ('bob', 'ken'):
+    a = h.get(k) or {}
+    # One field per column, no spaces inside a column: the reader below is \`read -r\`.
+    print('%s %s %s %s' % (k, a.get('ok'), a.get('published', 0),
+                           (a.get('error') or '-').replace(' ', '_')))
+" 2>/dev/null || echo MISSING)
+
+  if [ "$health" = "MISSING" ]; then
+    # Not a pass. An older published file has no health block, and treating "cannot tell"
+    # as "fine" is how the previous version of this whole area went wrong.
+    check "feed_health block present in published data" "absent — cannot judge feed health"
+  else
+    # `while read <<< "$health"`, NOT `echo "$health" | while read`. A pipe puts the loop
+    # body in a SUBSHELL, so every PASS/FAIL that `check` increments is discarded when the
+    # subshell exits — the loop would print its ❌ and the script would still total up as
+    # all-green and exit 0. A guard that reports a failure it does not count is worse than
+    # no guard, and this file's own history is the argument: the version of this section
+    # being replaced sat red for eleven days precisely because nobody could trust what it
+    # was saying.
+    while read -r who ok published err; do
+      [ -n "$who" ] || continue
+      if [ "$ok" = "True" ]; then
+        check "$who's feed reachable and carrying items" "ok"
+      else
+        check "$who's feed reachable" "$(echo "$err" | tr '_' ' ')"
+      fi
+      if [ "$published" -gt 0 ]; then
+        check "$who has recent posts published ($published)" "ok"
+      else
+        # Deliberately not a failure — see the note above.
+        echo "  ℹ️   $who has no posts inside the freshness window (feed healthy; nothing recent to show)"
+      fi
+    done <<< "$health"
+  fi
   # Check no hashtag-only titles remain
   hashtag_titles=$(python3 -c "
 import json, re
