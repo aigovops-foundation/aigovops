@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-01T12:09:23Z",
+  "updated": "2026-10-01T19:09:42Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,30 @@
     }
   },
   "bob": [
+    {
+      "title": "Problem / 问题 “Score: 0.42” is not an explanation. No understanding or appeal = inaccessible. “得分：0.42”不是解释；无法理解或申诉，就不可及。 Solution...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511440814108069888-jwbW",
+      "date": "Thu, 01 Oct 2026 15:04:06 GMT",
+      "summary": "Problem / 问题 “Score: 0.42” is not an explanation. No understanding or appeal = inaccessible. “得分：0.42”不是解释；无法理解或申诉，就不可及。 Solution / 方案 Notice: outcome; plain reason; evidence; limits; human contact; appeal. Add screen-reader text, translation, and an offline route. 通知：结果、通俗原因、证据、",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "One consent click can outlive the user’s security context. PROBLEM / PROBLÈME An AI agent may retain delegated access after a pass...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511440262850682882-9I7i",
+      "date": "Thu, 01 Oct 2026 15:01:54 GMT",
+      "summary": "One consent click can outlive the user’s security context. PROBLEM / PROBLÈME An AI agent may retain delegated access after a password reset or MFA change. That is standing authority, not fresh consent. SOLUTION / SOLUTION Inventory every grant: owner, agent, scopes, resources, p",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Consultation is not complete when comments are collected. People need to know what was heard, what changed, what could not change,...",
+      "link": "https://www.linkedin.com/posts/bobrapp_consultation-is-not-complete-when-comments-activity-7511410747332075520-k2ld",
+      "date": "Thu, 01 Oct 2026 13:04:37 GMT",
+      "summary": "Consultation is not complete when comments are collected. People need to know what was heard, what changed, what could not change, and how they can challenge the result later. Design the loop: ✅ publish a clear question and accessible background ✅ invite input through more than o",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "English pass ≠ global safety. PROBLEM: Global scores hide dialect, cultural, translation and underserved-locale harms. SOLUTION: P...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511213836776026112-ELSW",
@@ -60,30 +84,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_20-european-industrial-ai-startups-to-watch-activity-7511069374968102912-KoiB",
       "date": "Wed, 30 Sep 2026 14:28:08 GMT",
       "summary": "Douglas Brion well deserved",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Level Up Your AI Governance: A standard is useful only when it changes practice. Organizations face a growing menu of AI standards...",
-      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-a-standard-is-activity-7511048556267487232-IQ7s",
-      "date": "Wed, 30 Sep 2026 13:05:24 GMT",
-      "summary": "Level Up Your AI Governance: A standard is useful only when it changes practice. Organizations face a growing menu of AI standards, frameworks, and guidance. Adoption should not be a branding exercise. Evaluate each resource by what it helps you do, measure, and improve. For ever",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem / المشكلة A verified profile, genuine voice, signature, or invoice proves identity, not intent. Microsoft observed 1M+ AI-...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510941819887677443-0UF9",
-      "date": "Wed, 30 Sep 2026 06:01:16 GMT",
-      "summary": "Problem / المشكلة A verified profile, genuine voice, signature, or invoice proves identity, not intent. Microsoft observed 1M+ AI-assisted impersonation emails targeting finance teams and nearly $50,000 ACH payments. الهوية الموثقة لا تثبت النية. Solution / الحل Gate every paymen",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem / समस्या Hidden uncertainty and overloaded attention cause operator error. Usability is governance, not a training footnote....",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-%E0%A4%B8%E0%A4%AE%E0%A4%B8%E0%A4%AF-hidden-uncertainty-and-overloaded-activity-7510851448377696256-pISt",
-      "date": "Wed, 30 Sep 2026 00:02:10 GMT",
-      "summary": "Problem / समस्या Hidden uncertainty and overloaded attention cause operator error. Usability is governance, not a training footnote. Solution / समाधान For consequential actions: show uncertainty + next safe step; require confirmation; enforce scoped authority; use continuous moni",
       "image": null,
       "author": "Bob Rapp"
     }
