@@ -1,6 +1,30 @@
 {
-  "updated": "2026-09-30T19:10:02Z",
+  "updated": "2026-10-01T07:14:52Z",
   "bob": [
+    {
+      "title": "English pass ≠ global safety. PROBLEM: Global scores hide dialect, cultural, translation and underserved-locale harms. SOLUTION: P...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511213836776026112-ELSW",
+      "date": "Thu, 01 Oct 2026 00:02:10 GMT",
+      "summary": "English pass ≠ global safety. PROBLEM: Global scores hide dialect, cultural, translation and underserved-locale harms. SOLUTION: Per-locale evals + native review + cultural/dialect cases + parity gate + named escalation + continuous monitoring. Failure → deny/quarantine/escalate/",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "An appeal is not independent if the original decision-maker—or their manager—controls it. PROBLEM A second look becomes a rubber s...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511213678436986880-B5CJ",
+      "date": "Thu, 01 Oct 2026 00:01:33 GMT",
+      "summary": "An appeal is not independent if the original decision-maker—or their manager—controls it. PROBLEM A second look becomes a rubber stamp when authority and incentives stay with the first decision. SOLUTION Separate roles. Give the reviewer scoped authority, cryptographically audita",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "When AI systems and providers operate across borders, incompatible expectations can create friction for regulators, organizations,...",
+      "link": "https://www.linkedin.com/posts/bobrapp_when-ai-systems-and-providers-operate-across-activity-7511183657068441600-hyAX",
+      "date": "Wed, 30 Sep 2026 22:02:15 GMT",
+      "summary": "When AI systems and providers operate across borders, incompatible expectations can create friction for regulators, organizations, and affected people. Cooperation should focus on practical points of contact: shared terminology, evidence expectations, incident communication, and",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Problem / 問題: No independent rerun = no evidence. Hidden inputs break trust. / 独立再現なし＝証拠なし。 Solution / 解決策: Require lineage, locke...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511078460723871747-E_oo",
@@ -46,30 +70,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_problem-%E0%A4%B8%E0%A4%AE%E0%A4%B8%E0%A4%AF-hidden-uncertainty-and-overloaded-activity-7510851448377696256-pISt",
       "date": "Wed, 30 Sep 2026 00:02:10 GMT",
       "summary": "Problem / समस्या Hidden uncertainty and overloaded attention cause operator error. Usability is governance, not a training footnote. Solution / समाधान For consequential actions: show uncertainty + next safe step; require confirmation; enforce scoped authority; use continuous moni",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "PII must not reach a model by default. PROBLEM / SOLUTION / SUMMARY Redact or tokenize before inference. Enforce approved data cla...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510851319717605376-UWJa",
-      "date": "Wed, 30 Sep 2026 00:01:39 GMT",
-      "summary": "PII must not reach a model by default. PROBLEM / SOLUTION / SUMMARY Redact or tokenize before inference. Enforce approved data classes per endpoint, deny unclassified requests, scope retrieval to the requesting user’s entitlement, and monitor prompts, caches, and outputs for leak",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "PROBLEM External red-team access can expose raw personal data, production credentials, unmonitored model/prompt/tool paths, and fi...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7510821434030616576-U9AF",
-      "date": "Tue, 29 Sep 2026 22:02:54 GMT",
-      "summary": "PROBLEM External red-team access can expose raw personal data, production credentials, unmonitored model/prompt/tool paths, and findings that never get closed. SOLUTION Grant external evaluators only scoped sandbox access using synthetic or redacted data, monitored model/prompt/t",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Level Up Your AI Governance: Inclusion requires investment, not invitations. Emerging markets and under-resourced organizations ar...",
-      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-inclusion-requires-activity-7510821406834573312-xhQr",
-      "date": "Tue, 29 Sep 2026 22:02:48 GMT",
-      "summary": "Level Up Your AI Governance: Inclusion requires investment, not invitations. Emerging markets and under-resourced organizations are often asked to adopt AI before they have adequate connectivity, skills, evaluation capacity, or access to decision-makers. Responsible governance mu",
       "image": null,
       "author": "Bob Rapp"
     }
