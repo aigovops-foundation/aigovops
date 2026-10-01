@@ -18,7 +18,7 @@ The suite has 6 tiers, each independently executable. All tiers pass before any 
 | 🧪 Unit v1 | `scripts/test-unit.js` | 29 | Intent classifier, basic checks |
 | 🧪 Unit v3 | `scripts/test-unit-v3.js` | 118 | Intent classifier, URL integrity, NLP pipeline, scheduling, i18n, a11y hooks, PR4 checks |
 | ♿ Accessibility | `scripts/test-a11y.sh` | 85 | ARIA, skip links, lang attr, meta, chatbot, support page, i18n |
-| 🌍 Multilingual / i18n | `scripts/test-i18n.sh` | 25 | Lang attribute, encoding, chatbot typo-tolerance, timezone i18n, NLP lang detection |
+| 🌍 Multilingual / i18n | `scripts/test-i18n.sh` | 26 | Lang attribute, encoding, chatbot typo-tolerance, timezone i18n, NLP lang detection, plus `scripts/check-i18n-keys.js` (duplicate keys at any depth, every `data-i18n` key resolving across all 49 pages, en/es parity) |
 | 🐒 Chaos Monkey | `scripts/test-chaos.sh` | 14 | Malformed URLs, deleted CNAME, JS syntax error, dirty tree, JSON corruption |
 | 🌐 E2E | `scripts/test-e2e-v3.sh` | 38 | Live site HTTP checks (skips gracefully if egress blocked) |
 | ⚡ Scale | `scripts/test-scale-v3.sh` | – | 50 concurrent requests, response time, error rate |

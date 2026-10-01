@@ -35,13 +35,42 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python3 scripts/build_content.py
       - name: Commit what changed
+        env:
+          # So the self-test's import of build_content.py stops writing
+          # scripts/__pycache__/*.pyc into the tree on every run (review council,
+          # 2026-09-30). The .pyc was TRACKED, so .gitignore never applied to it, and
+          # `git add -A` re-committed a byte-different copy every run — a fresh
+          # checkout restamps the source mtime, so the bytecode header changed each
+          # time. That made "No changes to commit." dead code and pushed an
+          # unreviewable binary to the branch Pages serves.
+          PYTHONDONTWRITEBYTECODE: "1"
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # -A, not an allow-list: build_content.py's write targets have grown before (founders.html
-          # was missing here until #153) and a partial `git add` leaves an unstaged file that blocks
-          # `git pull --rebase` below without ever failing the job.
-          git add -A
+          # THE OUTPUT CONTRACT. These are build_content.py's write targets, and this
+          # list is the only place in the repo that records them — which is why #154
+          # deleting it in favour of a bare `git add -A` was the wrong fix for #153.
+          # #153's bug was that this list had drifted (founders.html was missing); the
+          # answer is to keep the list and fail loudly when reality leaves it, not to
+          # stage the whole runner workspace onto a public web root.
+          #
+          # Keep in step with the constants in scripts/build_content.py:
+          #   BLOG_INDEX=blog.html  FEED=feed.xml  DRAFTS=content/drafts
+          #   TRANSLATIONS=content/translations  FOUNDERS_HTML=founders.html  blog/
+          # scripts/test-publish-contract.py asserts this list still covers them.
+          OUTPUTS="blog blog.html feed.xml founders.html content/drafts content/translations"
+          # -A over the pathspec, not bare: -A still handles deletes and renames inside
+          # those paths, which a plain `git add` does not, and that was the other half of
+          # what #154 was reaching for.
+          git add -A -- $OUTPUTS
+          # Anything dirty OUTSIDE the contract is the signal #153 never got. Fail on it
+          # rather than committing it: a new write target is a one-line change here, and
+          # a surprise file in the tree is exactly what must not reach a public URL.
+          if [ -n "$(git status --porcelain --untracked-files=all -- . ':(exclude)blog' ':(exclude)blog.html' ':(exclude)feed.xml' ':(exclude)founders.html' ':(exclude)content/drafts' ':(exclude)content/translations')" ]; then
+            echo "::error::publish-content: the build left files outside its declared outputs — add them to OUTPUTS here if they are intended, or stop writing them:"
+            git status --porcelain --untracked-files=all -- . ':(exclude)blog' ':(exclude)blog.html' ':(exclude)feed.xml' ':(exclude)founders.html' ':(exclude)content/drafts' ':(exclude)content/translations'
+            exit 1
+          fi
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
@@ -49,7 +78,6 @@ jobs:
             # Two merges a minute apart once made this push non-fast-forward (2026-09-13); rebase and retry.
             pushed=0
             for i in 1 2 3; do
-              git add -A
               if git pull --rebase origin main && git push; then
                 pushed=1
                 break

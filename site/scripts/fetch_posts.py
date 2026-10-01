@@ -14,6 +14,7 @@ import sys
 import urllib.request
 from pathlib import Path
 import urllib.error
+from urllib.parse import urlparse
 import xml.etree.ElementTree as ET
 import json
 import os
@@ -39,6 +40,49 @@ def strip_html(text):
     text = re.sub(r'<[^>]+>', ' ', text or '')
     text = re.sub(r'\s+', ' ', text).strip()
     return text
+
+
+def _safe_url(u):
+    """An http(s) URL, or ''. Anything else is not a link we will publish."""
+    raw = (u or '').strip()
+    if not raw:
+        return ''
+    try:
+        parsed = urlparse(raw)
+    except Exception:
+        return ''
+    if parsed.scheme.lower() not in ('http', 'https') or not parsed.netloc:
+        return ''
+    return raw
+
+
+def _strip_markup(text):
+    """Tags and whitespace gone, and no stray angle bracket left behind."""
+    return strip_html(text).replace('<', '').replace('>', '')
+
+
+def sanitise_post(p):
+    """Strip markup out of every third-party field before it is committed.
+
+    Found by the review council, 2026-09-30. title and link came off the rss.app
+    bridge with no filtering at all, and only summary saw strip_html() — which
+    removes tags but is not an escaper. All four fields were then interpolated into
+    the string assigned to grid.innerHTML in js/main.js, under a CSP that allows
+    'unsafe-inline', so markup in a post title executed in every visitor's browser.
+    The feed is not restricted to Bob's and Ken's own posts: the committed JSON has
+    carried items authored by four other people.
+
+    This is the OUTER half of a two-layer defence; js/main.js escapes at the sink.
+    Deliberately a strip rather than an HTML-escape: escaping here and escaping
+    again at the sink would double-encode and show visitors '&amp;lt;'. So Python
+    removes markup, JavaScript escapes what is left, and neither relies on the other.
+    """
+    out = dict(p)
+    for field in ('title', 'summary', 'author'):
+        out[field] = _strip_markup(out.get(field, ''))
+    out['link'] = _safe_url(out.get('link'))
+    out['image'] = _safe_url(out.get('image')) or None
+    return out
 
 
 def _first_sentence(text):
@@ -141,14 +185,24 @@ Return ONLY a JSON array. No markdown, no explanation.
         text = re.sub(r'```json|```', '', text).strip()
         enriched = json.loads(text)
 
-        # Apply enrichments back to posts
+        # Apply enrichments back to posts.
+        #
+        # SANITISED AGAIN HERE, and the reason is not belt-and-braces. This function
+        # runs AFTER fetch_feed() (main() calls it at the bottom), and it overwrites
+        # title and summary with model output whose input was the hostile feed text.
+        # So sanitising only on the way out of fetch_feed() leaves this path open: a
+        # post crafted to steer the model into emitting markup would have landed that
+        # markup in the committed JSON with the earlier strip already behind it.
+        # Found by this repo's own scripts/test-fetch-sanitise.py on its first run —
+        # the assertion that the sanitiser is actually on every path, rather than
+        # merely defined, is what surfaced the second writer.
         for item in enriched:
             idx = item.get('idx', 0) - 1
             if 0 <= idx < len(posts):
                 if item.get('clean_title') and len(item['clean_title'].strip()) > 10:
-                    posts[idx]['title'] = item['clean_title'].strip()
+                    posts[idx]['title'] = _strip_markup(item['clean_title'].strip())
                 if item.get('clean_summary') and len(item['clean_summary'].strip()) > 20:
-                    posts[idx]['summary'] = item['clean_summary'].strip()
+                    posts[idx]['summary'] = _strip_markup(item['clean_summary'].strip())
                 if item.get('lang'):
                     posts[idx]['lang'] = item['lang']
                 if item.get('type'):
@@ -279,6 +333,10 @@ def fetch_feed(url, author_name, max_items=MAX_POSTS):
                     'image':   None,
                     'author':  author_name,
                 })
+
+        # One chokepoint for both the RSS and the Atom branch, so neither can be
+        # extended later with an unsanitised field.
+        posts = [sanitise_post(p) for p in posts]
 
         print(f"  [{author_name}] Fetched {len(posts)} posts.")
         return posts

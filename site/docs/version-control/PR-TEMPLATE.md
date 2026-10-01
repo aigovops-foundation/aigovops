@@ -10,7 +10,7 @@
 - 🧪 Unit v1: 29/29
 - 🧪 Unit v3: X/118
 - ♿ Accessibility: 85/85
-- 🌍 i18n: 25/25
+- 🌍 i18n: X/Y   <!-- paste the suite's own tail; it prints the total, so do not hardcode it -->
 - 🐒 Chaos: 14/14
 - 📄 Docs: X/X
 
