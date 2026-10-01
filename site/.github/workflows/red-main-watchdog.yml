@@ -27,6 +27,6 @@ permissions:
 
 jobs:
   red-main:
-    uses: aigovops-foundation/aigovops-library-june-ken-bob/.github/workflows/reusable-red-main-watchdog.yml@main
+    uses: aigovops-foundation/aigovops-library-june-ken-bob/.github/workflows/reusable-red-main-watchdog.yml@0cbbbffaa1057c7310869032b30389840af5d9de # main @ 2026-09-30
     with:
       max_red_hours: 48

@@ -34,6 +34,9 @@ def load(root):
     spec = importlib.util.spec_from_file_location("bc", os.path.join(ROOT, "scripts", "build_content.py"))
     bc = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(bc)
+    # Captured BEFORE the redirects, so the leak check below has something to compare
+    # against. bc.ROOT is the real repository at this point.
+    _REAL_ROOT = bc.ROOT
     bc.ROOT = root
     bc.STORIES = os.path.join(root, "content", "stories")
     bc.TEMPLATE = os.path.join(root, "blog", "what-is-aigovops.html")
@@ -43,6 +46,31 @@ def load(root):
     bc.FOUNDERS_MD = os.path.join(root, "content", "founders.md")
     bc.FOUNDERS_HTML = os.path.join(root, "founders.html")
     bc.TRANSLATIONS = os.path.join(root, "content", "translations")
+    bc.SITEMAP = os.path.join(root, "sitemap.xml")
+
+    # EVERY ROOT-DERIVED PATH, or this test writes into the real repository.
+    #
+    # It already did, on 2026-09-30. update_sitemap() was added to build_content.py with
+    # a module-level SITEMAP constant, this redirect list did not know about it, and the
+    # self-test's run therefore rewrote the REAL sitemap.xml — replacing the live entries
+    # with one for its fixture story, "a-test-story". That got committed and published, so
+    # the sitemap briefly advertised /blog/a-test-story.html to crawlers: a 404.
+    #
+    # The list above is the same drift that caused #153, one layer in. So instead of
+    # trusting it, derive the check: any module-level constant built off the real ROOT and
+    # still pointing there after redirection is a write target this test would leak to.
+    leaked = sorted(
+        name for name, val in vars(bc).items()
+        if name.isupper() and isinstance(val, str) and val.startswith(_REAL_ROOT)
+    )
+    if leaked:
+        raise AssertionError(
+            "test_build_content would write into the real repository: "
+            + ", ".join(f"bc.{n}" for n in leaked)
+            + f" still point under {_REAL_ROOT}. Add each to the redirect list above "
+              "before running anything — a self-test that can modify the repo it is "
+              "testing has already broken the thing it was meant to protect."
+        )
     return bc
 
 
