@@ -1,5 +1,19 @@
 {
-  "updated": "2026-10-01T07:14:52Z",
+  "updated": "2026-10-01T12:09:23Z",
+  "feed_health": {
+    "bob": {
+      "ok": true,
+      "fetched": 10,
+      "published": 9,
+      "error": null
+    },
+    "ken": {
+      "ok": true,
+      "fetched": 10,
+      "published": 0,
+      "error": null
+    }
+  },
   "bob": [
     {
       "title": "English pass ≠ global safety. PROBLEM: Global scores hide dialect, cultural, translation and underserved-locale harms. SOLUTION: P...",
