@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-01T19:09:42Z",
+  "updated": "2026-10-02T07:13:02Z",
   "feed_health": {
     "bob": {
       "ok": true,
       "fetched": 10,
-      "published": 9,
+      "published": 10,
       "error": null
     },
     "ken": {
@@ -15,6 +15,22 @@
     }
   },
   "bob": [
+    {
+      "title": "Green KPIs can hide red risk. PROBLEM / PROBLÈME Narrow denominators, relabel incidents, or exclude edge cases—and the dashboard i...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511576389511303168-wT0v",
+      "date": "Fri, 02 Oct 2026 00:02:50 GMT",
+      "summary": "Green KPIs can hide red risk. PROBLEM / PROBLÈME Narrow denominators, relabel incidents, or exclude edge cases—and the dashboard improves while harm stays invisible. / Réduire le dénominateur, renommer les incidents ou exclure les cas limites masque le risque. SOLUTION / SOLUTION",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "ENGLISH Level Up Your AI Governance: Global supply chains need governance visibility. AI capability may depend on external models,...",
+      "link": "https://www.linkedin.com/posts/bobrapp_english-level-up-your-ai-governance-global-activity-7511546180577984512-7LEs",
+      "date": "Thu, 01 Oct 2026 22:02:47 GMT",
+      "summary": "ENGLISH Level Up Your AI Governance: Global supply chains need governance visibility. AI capability may depend on external models, cloud regions, data services, evaluators, and specialized infrastructure. Accountability becomes fragile when each party sees only its own contract o",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Problem / 问题 “Score: 0.42” is not an explanation. No understanding or appeal = inaccessible. “得分：0.42”不是解释；无法理解或申诉，就不可及。 Solution...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511440814108069888-jwbW",
@@ -76,14 +92,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511078283938201601-l0nm",
       "date": "Wed, 30 Sep 2026 15:03:32 GMT",
       "summary": "03:00 is the real oversight test. If no qualified, rested human can act, AI must not continue. Problem: Absence, overload and fatigue turn “human oversight” into fiction. Solution: Name primary and backup on-call shifts. Cap concurrent cases per reviewer. Define escalation owners",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Douglas Brion well deserved",
-      "link": "https://www.linkedin.com/posts/bobrapp_20-european-industrial-ai-startups-to-watch-activity-7511069374968102912-KoiB",
-      "date": "Wed, 30 Sep 2026 14:28:08 GMT",
-      "summary": "Douglas Brion well deserved",
       "image": null,
       "author": "Bob Rapp"
     }
