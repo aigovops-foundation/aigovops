@@ -196,6 +196,16 @@ while IFS='|' read -r label result; do
   fi
 done <<< "$LINES"
 
+# Thursday's no-JS join fallback must not point at the platform's non-existent events.html
+# (Café Walk run 5). Kept as a plain grep so bash never has to carry an escape.
+echo ""
+echo "  [thursday fallback]"
+if grep -q 'community.aigovops-foundation.com/events.html' community.html; then
+  check "community.html: Thursday join fallback is not the dead events.html" "no"
+else
+  check "community.html: Thursday join fallback is not the dead events.html" "ok"
+fi
+
 echo ""
 echo "  ${PASS} passed, ${FAIL} failed"
 echo ""
