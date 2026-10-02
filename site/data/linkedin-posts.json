@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-02T07:13:02Z",
+  "updated": "2026-10-02T19:09:23Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,30 @@
     }
   },
   "bob": [
+    {
+      "title": "Public intake is not a trusted prompt. / Les entrées publiques ne sont pas des instructions. PROBLEM / PROBLÈME: Forms, tickets an...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511803298249785344-Sn41",
+      "date": "Fri, 02 Oct 2026 15:04:29 GMT",
+      "summary": "Public intake is not a trusted prompt. / Les entrées publiques ne sont pas des instructions. PROBLEM / PROBLÈME: Forms, tickets and uploads can hide instructions. A summarizer may exfiltrate records via image-URL subdomains or post as the organization without attribution or confi",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "An AI incident clock starts at DETECTION, not confirmation. PROBLEM / PROBLÈME Classify severity by actual harm × autonomy: S1 sev...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511803290028994560-WHVE",
+      "date": "Fri, 02 Oct 2026 15:04:27 GMT",
+      "summary": "An AI incident clock starts at DETECTION, not confirmation. PROBLEM / PROBLÈME Classify severity by actual harm × autonomy: S1 severe harm/fully autonomous; S2 material harm/assisted action; S3 limited harm/recommendation. Confirmation delay can consume statutory 24h/72h clocks.",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Training should produce decisions, not certificates. AI governance education is strongest when learners practice hard moments: con...",
+      "link": "https://www.linkedin.com/posts/bobrapp_training-should-produce-decisions-not-certificates-activity-7511773184002666496-Rs9K",
+      "date": "Fri, 02 Oct 2026 13:04:49 GMT",
+      "summary": "Training should produce decisions, not certificates. AI governance education is strongest when learners practice hard moments: conflicting requirements, incomplete vendor claims, community objections, failed evaluations, and decisions that must be paused. A practical learning pat",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Green KPIs can hide red risk. PROBLEM / PROBLÈME Narrow denominators, relabel incidents, or exclude edge cases—and the dashboard i...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511576389511303168-wT0v",
@@ -68,30 +92,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511213678436986880-B5CJ",
       "date": "Thu, 01 Oct 2026 00:01:33 GMT",
       "summary": "An appeal is not independent if the original decision-maker—or their manager—controls it. PROBLEM A second look becomes a rubber stamp when authority and incentives stay with the first decision. SOLUTION Separate roles. Give the reviewer scoped authority, cryptographically audita",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "When AI systems and providers operate across borders, incompatible expectations can create friction for regulators, organizations,...",
-      "link": "https://www.linkedin.com/posts/bobrapp_when-ai-systems-and-providers-operate-across-activity-7511183657068441600-hyAX",
-      "date": "Wed, 30 Sep 2026 22:02:15 GMT",
-      "summary": "When AI systems and providers operate across borders, incompatible expectations can create friction for regulators, organizations, and affected people. Cooperation should focus on practical points of contact: shared terminology, evidence expectations, incident communication, and",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem / 問題: No independent rerun = no evidence. Hidden inputs break trust. / 独立再現なし＝証拠なし。 Solution / 解決策: Require lineage, locke...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511078460723871747-E_oo",
-      "date": "Wed, 30 Sep 2026 15:04:14 GMT",
-      "summary": "Problem / 問題: No independent rerun = no evidence. Hidden inputs break trust. / 独立再現なし＝証拠なし。 Solution / 解決策: Require lineage, locked env, seeds, exclusions, metrics + independent validation. Monitor drift; sign/hash evidence; test rollback/quarantine; scope authority; retain an in",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "03:00 is the real oversight test. If no qualified, rested human can act, AI must not continue. Problem: Absence, overload and fati...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511078283938201601-l0nm",
-      "date": "Wed, 30 Sep 2026 15:03:32 GMT",
-      "summary": "03:00 is the real oversight test. If no qualified, rested human can act, AI must not continue. Problem: Absence, overload and fatigue turn “human oversight” into fiction. Solution: Name primary and backup on-call shifts. Cap concurrent cases per reviewer. Define escalation owners",
       "image": null,
       "author": "Bob Rapp"
     }
