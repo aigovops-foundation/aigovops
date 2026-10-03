@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-03T07:14:38Z",
+  "updated": "2026-10-03T19:53:00Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,46 @@
     }
   },
   "bob": [
+    {
+      "title": "Training data provenance is a revocation control—not paperwork. PROBLEM / SOLUTION / SUMMARY Lineage and consent flags vanish acro...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512165548999303168-xPmY",
+      "date": "Sat, 03 Oct 2026 15:03:56 GMT",
+      "summary": "Training data provenance is a revocation control—not paperwork. PROBLEM / SOLUTION / SUMMARY Lineage and consent flags vanish across ingestion, fine-tunes, embeddings, vector indexes and caches. Record origin, collection basis, license, consent scope, retention clock and owner pe",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Badges are not attestation. Agents need portable proof of identity, ownership and authority. PROBLEM / 問題 Claims, screenshots and...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512165386784776192-7ijX",
+      "date": "Sat, 03 Oct 2026 15:03:17 GMT",
+      "summary": "Badges are not attestation. Agents need portable proof of identity, ownership and authority. PROBLEM / 問題 Claims, screenshots and shared credentials do not prove the Owner of Record, delegated scope, revocation status or who holds the kill switch. SOLUTION / 解決策 Bind a signed age",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "EN—FOUNDERS FORUM (executive): An AIA without expiry is stale paperwork. PROBLEM: scope, data, context and affected people drift....",
+      "link": "https://fr.linkedin.com/posts/bobrapp_enfounders-forum-executive-an-aia-without-activity-7512135538657779712-IKIA",
+      "date": "Sat, 03 Oct 2026 13:04:41 GMT",
+      "summary": "EN—FOUNDERS FORUM (executive): An AIA without expiry is stale paperwork. PROBLEM: scope, data, context and affected people drift. SOLUTION/SUMMARY: version each AIA to one system scope; require expiry; reassess after material model/data change, new context/jurisdiction/population",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Risk appetite must change engineering decisions. Problem/問題: Low/medium/high labels do not set design, launch, pause or investment...",
+      "link": "https://www.linkedin.com/posts/bobrapp_risk-appetite-must-change-engineering-decisions-activity-7512135454373175296-xF3C",
+      "date": "Sat, 03 Oct 2026 13:04:21 GMT",
+      "summary": "Risk appetite must change engineering decisions. Problem/問題: Low/medium/high labels do not set design, launch, pause or investment gates. Solution/解決: By harm type: Unacceptable=block; Tolerable=mitigate/escalate/time-box; Accepted=proceed/monitor. Assign authority; make threshol",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "PROBLEM An exit can leave live AI with no accountable owner. SOLUTION Before transition, name an owner and deputy; transfer docume...",
+      "link": "https://fr.linkedin.com/posts/bobrapp_problem-an-exit-can-leave-live-ai-with-no-activity-7512135045176856578-Mh6P",
+      "date": "Sat, 03 Oct 2026 13:02:43 GMT",
+      "summary": "PROBLEM An exit can leave live AI with no accountable owner. SOLUTION Before transition, name an owner and deputy; transfer documentation, access, monitoring, incidents, and rollback authority; require written acceptance and a recovery test. No owner? Pause or retire. Three-Yes T",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "We have cows! One of my favorite lines from a simple little action movie called Twister. In early September, a 25-year-old enginee...",
       "link": "https://www.linkedin.com/posts/bobrapp_activity-7511943654840827905-MCd_",
@@ -52,46 +92,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511803298249785344-Sn41",
       "date": "Fri, 02 Oct 2026 15:04:29 GMT",
       "summary": "Public intake is not a trusted prompt. / Les entrées publiques ne sont pas des instructions. PROBLEM / PROBLÈME: Forms, tickets and uploads can hide instructions. A summarizer may exfiltrate records via image-URL subdomains or post as the organization without attribution or confi",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An AI incident clock starts at DETECTION, not confirmation. PROBLEM / PROBLÈME Classify severity by actual harm × autonomy: S1 sev...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511803290028994560-WHVE",
-      "date": "Fri, 02 Oct 2026 15:04:27 GMT",
-      "summary": "An AI incident clock starts at DETECTION, not confirmation. PROBLEM / PROBLÈME Classify severity by actual harm × autonomy: S1 severe harm/fully autonomous; S2 material harm/assisted action; S3 limited harm/recommendation. Confirmation delay can consume statutory 24h/72h clocks.",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Training should produce decisions, not certificates. AI governance education is strongest when learners practice hard moments: con...",
-      "link": "https://www.linkedin.com/posts/bobrapp_training-should-produce-decisions-not-certificates-activity-7511773184002666496-Rs9K",
-      "date": "Fri, 02 Oct 2026 13:04:49 GMT",
-      "summary": "Training should produce decisions, not certificates. AI governance education is strongest when learners practice hard moments: conflicting requirements, incomplete vendor claims, community objections, failed evaluations, and decisions that must be paused. A practical learning pat",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Green KPIs can hide red risk. PROBLEM / PROBLÈME Narrow denominators, relabel incidents, or exclude edge cases—and the dashboard i...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511576389511303168-wT0v",
-      "date": "Fri, 02 Oct 2026 00:02:50 GMT",
-      "summary": "Green KPIs can hide red risk. PROBLEM / PROBLÈME Narrow denominators, relabel incidents, or exclude edge cases—and the dashboard improves while harm stays invisible. / Réduire le dénominateur, renommer les incidents ou exclure les cas limites masque le risque. SOLUTION / SOLUTION",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "ENGLISH Level Up Your AI Governance: Global supply chains need governance visibility. AI capability may depend on external models,...",
-      "link": "https://www.linkedin.com/posts/bobrapp_english-level-up-your-ai-governance-global-activity-7511546180577984512-7LEs",
-      "date": "Thu, 01 Oct 2026 22:02:47 GMT",
-      "summary": "ENGLISH Level Up Your AI Governance: Global supply chains need governance visibility. AI capability may depend on external models, cloud regions, data services, evaluators, and specialized infrastructure. Accountability becomes fragile when each party sees only its own contract o",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Problem / 问题 “Score: 0.42” is not an explanation. No understanding or appeal = inaccessible. “得分：0.42”不是解释；无法理解或申诉，就不可及。 Solution...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511440814108069888-jwbW",
-      "date": "Thu, 01 Oct 2026 15:04:06 GMT",
-      "summary": "Problem / 问题 “Score: 0.42” is not an explanation. No understanding or appeal = inaccessible. “得分：0.42”不是解释；无法理解或申诉，就不可及。 Solution / 方案 Notice: outcome; plain reason; evidence; limits; human contact; appeal. Add screen-reader text, translation, and an offline route. 通知：结果、通俗原因、证据、",
       "image": null,
       "author": "Bob Rapp"
     }
