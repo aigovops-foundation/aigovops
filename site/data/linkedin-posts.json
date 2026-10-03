@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-02T19:09:23Z",
+  "updated": "2026-10-03T07:14:38Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,38 @@
     }
   },
   "bob": [
+    {
+      "title": "We have cows! One of my favorite lines from a simple little action movie called Twister. In early September, a 25-year-old enginee...",
+      "link": "https://www.linkedin.com/posts/bobrapp_activity-7511943654840827905-MCd_",
+      "date": "Sat, 03 Oct 2026 00:22:12 GMT",
+      "summary": "We have cows! One of my favorite lines from a simple little action movie called Twister. In early September, a 25-year-old engineer in Toronto found a strange message buried in RubyGems. By that afternoon someone had started a Discord called Swarmchasers. Within weeks it had 400",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Runtime drift can turn approved AI into unapproved AI. ENGLISH Problem: After release, base models, weights, fine-tunes, adapters,...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511938660255256576-WeGT",
+      "date": "Sat, 03 Oct 2026 00:02:22 GMT",
+      "summary": "Runtime drift can turn approved AI into unapproved AI. ENGLISH Problem: After release, base models, weights, fine-tunes, adapters, datasets, prompt templates, tools, or connector/server metadata can change, and diverge from the approved AI BOM. Solution: Make a machine-readable B",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "An agent can outlive its project—and its credential can outlive both. PROBLEM A reported campaign breached 395 organizations after...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511938575756709889-YjE8",
+      "date": "Sat, 03 Oct 2026 00:02:02 GMT",
+      "summary": "An agent can outlive its project—and its credential can outlive both. PROBLEM A reported campaign breached 395 organizations after one stolen machine credential was reused across hundreds of autonomous agents. OWASP’s Non-Human Identity Top 10 identifies improper offboarding as a",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Level Up Your AI Governance: Research matters when it survives contact with operations. A paper can identify a serious risk, but o...",
+      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-research-matters-activity-7511908435073007616-S4h8",
+      "date": "Fri, 02 Oct 2026 22:02:15 GMT",
+      "summary": "Level Up Your AI Governance: Research matters when it survives contact with operations. A paper can identify a serious risk, but organizations still need to translate that insight into a decision, owner, test, and evidence trail. For each research finding, ask: • What operational",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Public intake is not a trusted prompt. / Les entrées publiques ne sont pas des instructions. PROBLEM / PROBLÈME: Forms, tickets an...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511803298249785344-Sn41",
@@ -60,38 +92,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511440814108069888-jwbW",
       "date": "Thu, 01 Oct 2026 15:04:06 GMT",
       "summary": "Problem / 问题 “Score: 0.42” is not an explanation. No understanding or appeal = inaccessible. “得分：0.42”不是解释；无法理解或申诉，就不可及。 Solution / 方案 Notice: outcome; plain reason; evidence; limits; human contact; appeal. Add screen-reader text, translation, and an offline route. 通知：结果、通俗原因、证据、",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "One consent click can outlive the user’s security context. PROBLEM / PROBLÈME An AI agent may retain delegated access after a pass...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511440262850682882-9I7i",
-      "date": "Thu, 01 Oct 2026 15:01:54 GMT",
-      "summary": "One consent click can outlive the user’s security context. PROBLEM / PROBLÈME An AI agent may retain delegated access after a password reset or MFA change. That is standing authority, not fresh consent. SOLUTION / SOLUTION Inventory every grant: owner, agent, scopes, resources, p",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Consultation is not complete when comments are collected. People need to know what was heard, what changed, what could not change,...",
-      "link": "https://www.linkedin.com/posts/bobrapp_consultation-is-not-complete-when-comments-activity-7511410747332075520-k2ld",
-      "date": "Thu, 01 Oct 2026 13:04:37 GMT",
-      "summary": "Consultation is not complete when comments are collected. People need to know what was heard, what changed, what could not change, and how they can challenge the result later. Design the loop: ✅ publish a clear question and accessible background ✅ invite input through more than o",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "English pass ≠ global safety. PROBLEM: Global scores hide dialect, cultural, translation and underserved-locale harms. SOLUTION: P...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511213836776026112-ELSW",
-      "date": "Thu, 01 Oct 2026 00:02:10 GMT",
-      "summary": "English pass ≠ global safety. PROBLEM: Global scores hide dialect, cultural, translation and underserved-locale harms. SOLUTION: Per-locale evals + native review + cultural/dialect cases + parity gate + named escalation + continuous monitoring. Failure → deny/quarantine/escalate/",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An appeal is not independent if the original decision-maker—or their manager—controls it. PROBLEM A second look becomes a rubber s...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511213678436986880-B5CJ",
-      "date": "Thu, 01 Oct 2026 00:01:33 GMT",
-      "summary": "An appeal is not independent if the original decision-maker—or their manager—controls it. PROBLEM A second look becomes a rubber stamp when authority and incentives stay with the first decision. SOLUTION Separate roles. Give the reviewer scoped authority, cryptographically audita",
       "image": null,
       "author": "Bob Rapp"
     }
