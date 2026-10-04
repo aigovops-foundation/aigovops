@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-04T09:03:02Z",
+  "updated": "2026-10-04T19:59:59Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,38 @@
     }
   },
   "bob": [
+    {
+      "title": "Certificates do not prove human-in-the-loop competence. Demonstrated judgment does. PROBLEM / SOLUTION / SUMMARY Use four role att...",
+      "link": "https://www.linkedin.com/posts/bobrapp_certificates-do-not-prove-human-in-the-loop-activity-7512527401097248768-U3Pq",
+      "date": "Sun, 04 Oct 2026 15:01:48 GMT",
+      "summary": "Certificates do not prove human-in-the-loop competence. Demonstrated judgment does. PROBLEM / SOLUTION / SUMMARY Use four role attestations: Awareness (understand limits); Practitioner (operate approved tasks); Reviewer/Approver (challenge evidence); Accountable Executive (own ri",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Bot networks—not opinions—need governance. Problem / 问题: Autonomous influence campaigns correlate accounts and automate amplificat...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512527348563587073-xAgo",
+      "date": "Sun, 04 Oct 2026 15:01:36 GMT",
+      "summary": "Bot networks—not opinions—need governance. Problem / 问题: Autonomous influence campaigns correlate accounts and automate amplification. Disrupt inauthentic networks—not lawful viewpoints. Publish detection/challenge rules; show evidence before rejection; provide a justified appeal",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "EN Problem → Disclosure can be late, excessive, or evasive. Solution → Set severity triggers: affected people first for safety/rig...",
+      "link": "https://www.linkedin.com/posts/bobrapp_en-problem-disclosure-can-be-late-excessive-activity-7512497515154366464-IK3p",
+      "date": "Sun, 04 Oct 2026 13:03:03 GMT",
+      "summary": "EN Problem → Disclosure can be late, excessive, or evasive. Solution → Set severity triggers: affected people first for safety/rights/access/money/data; regulators/partners for duty/dependency/systemic risk; public for material, repeated, or broad impact. Share what/who/when/acti",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "PROBLEM High-impact AI can be approved with unresolved concerns. If dissent, evidence, rationale, and review triggers are missing,...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-high-impact-ai-can-be-approved-with-activity-7512497341841514496-_j2r",
+      "date": "Sun, 04 Oct 2026 13:02:22 GMT",
+      "summary": "PROBLEM High-impact AI can be approved with unresolved concerns. If dissent, evidence, rationale, and review triggers are missing, “approved” becomes a governance dead end. SOLUTION Protect good-faith dissent. Before approval, log the challenge, response, evidence, approver, risk",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "AI red teaming is governed research—not a free pass for unauthorized access. PROBLEM Testing without written authorization can har...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512301140542345216-h5jv",
@@ -60,38 +92,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512165386784776192-7ijX",
       "date": "Sat, 03 Oct 2026 15:03:17 GMT",
       "summary": "Badges are not attestation. Agents need portable proof of identity, ownership and authority. PROBLEM / 問題 Claims, screenshots and shared credentials do not prove the Owner of Record, delegated scope, revocation status or who holds the kill switch. SOLUTION / 解決策 Bind a signed age",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "EN—FOUNDERS FORUM (executive): An AIA without expiry is stale paperwork. PROBLEM: scope, data, context and affected people drift....",
-      "link": "https://fr.linkedin.com/posts/bobrapp_enfounders-forum-executive-an-aia-without-activity-7512135538657779712-IKIA",
-      "date": "Sat, 03 Oct 2026 13:04:41 GMT",
-      "summary": "EN—FOUNDERS FORUM (executive): An AIA without expiry is stale paperwork. PROBLEM: scope, data, context and affected people drift. SOLUTION/SUMMARY: version each AIA to one system scope; require expiry; reassess after material model/data change, new context/jurisdiction/population",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Risk appetite must change engineering decisions. Problem/問題: Low/medium/high labels do not set design, launch, pause or investment...",
-      "link": "https://www.linkedin.com/posts/bobrapp_risk-appetite-must-change-engineering-decisions-activity-7512135454373175296-xF3C",
-      "date": "Sat, 03 Oct 2026 13:04:21 GMT",
-      "summary": "Risk appetite must change engineering decisions. Problem/問題: Low/medium/high labels do not set design, launch, pause or investment gates. Solution/解決: By harm type: Unacceptable=block; Tolerable=mitigate/escalate/time-box; Accepted=proceed/monitor. Assign authority; make threshol",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "PROBLEM An exit can leave live AI with no accountable owner. SOLUTION Before transition, name an owner and deputy; transfer docume...",
-      "link": "https://fr.linkedin.com/posts/bobrapp_problem-an-exit-can-leave-live-ai-with-no-activity-7512135045176856578-Mh6P",
-      "date": "Sat, 03 Oct 2026 13:02:43 GMT",
-      "summary": "PROBLEM An exit can leave live AI with no accountable owner. SOLUTION Before transition, name an owner and deputy; transfer documentation, access, monitoring, incidents, and rollback authority; require written acceptance and a recovery test. No owner? Pause or retire. Three-Yes T",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "We have cows! One of my favorite lines from a simple little action movie called Twister. In early September, a 25-year-old enginee...",
-      "link": "https://www.linkedin.com/posts/bobrapp_activity-7511943654840827905-MCd_",
-      "date": "Sat, 03 Oct 2026 00:22:12 GMT",
-      "summary": "We have cows! One of my favorite lines from a simple little action movie called Twister. In early September, a 25-year-old engineer in Toronto found a strange message buried in RubyGems. By that afternoon someone had started a Discord called Swarmchasers. Within weeks it had 400",
       "image": null,
       "author": "Bob Rapp"
     }
