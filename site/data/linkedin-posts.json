@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-03T19:53:00Z",
+  "updated": "2026-10-04T09:03:02Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,38 @@
     }
   },
   "bob": [
+    {
+      "title": "AI red teaming is governed research—not a free pass for unauthorized access. PROBLEM Testing without written authorization can har...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512301140542345216-h5jv",
+      "date": "Sun, 04 Oct 2026 00:02:44 GMT",
+      "summary": "AI red teaming is governed research—not a free pass for unauthorized access. PROBLEM Testing without written authorization can harm users, expose data, and destroy trust. SOLUTION Before testing, sign Rules of Engagement covering scope, systems, environments, time windows, forbid",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Every OTA update changes the safety case. ENGLISH Problem: NTSB (31 Mar 2026) linked over-reliance and weak driver monitoring to t...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512300645962469376-KYuL",
+      "date": "Sun, 04 Oct 2026 00:00:46 GMT",
+      "summary": "Every OTA update changes the safety case. ENGLISH Problem: NTSB (31 Mar 2026) linked over-reliance and weak driver monitoring to two fatal BlueCruise crashes. Electrek (24 Sep 2026) reported NHTSA’s PE26007 openpilot probe. Solution: Treat every model or threshold OTA as a signed",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Attendance is not AI literacy. A certificate proves participation—not judgment. Test what each role can do in a realistic scenario...",
+      "link": "https://www.linkedin.com/posts/bobrapp_attendance-is-not-ai-literacy-a-certificate-activity-7512271029172641792-a7sU",
+      "date": "Sat, 03 Oct 2026 22:03:05 GMT",
+      "summary": "Attendance is not AI literacy. A certificate proves participation—not judgment. Test what each role can do in a realistic scenario. Problem → Solution Map, test, record, remediate, and re-test by role: Executive—approve/pause/reject. Developer—spot risk. Reviewer—challenge eviden",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI governance starts with red lines—not launch dates. PROBLEM Undefined unacceptable uses turn ambiguity into policy. Human oversi...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-starts-with-red-linesnot-launch-activity-7512270615660118017-KiaV",
+      "date": "Sat, 03 Oct 2026 22:01:26 GMT",
+      "summary": "AI governance starts with red lines—not launch dates. PROBLEM Undefined unacceptable uses turn ambiguity into policy. Human oversight alone is not a boundary. SOLUTION Before deployment: 1. Register prohibited uses by harm, affected people, and evidence. 2. Set exception authorit",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Training data provenance is a revocation control—not paperwork. PROBLEM / SOLUTION / SUMMARY Lineage and consent flags vanish acro...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512165548999303168-xPmY",
@@ -60,38 +92,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_activity-7511943654840827905-MCd_",
       "date": "Sat, 03 Oct 2026 00:22:12 GMT",
       "summary": "We have cows! One of my favorite lines from a simple little action movie called Twister. In early September, a 25-year-old engineer in Toronto found a strange message buried in RubyGems. By that afternoon someone had started a Discord called Swarmchasers. Within weeks it had 400",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Runtime drift can turn approved AI into unapproved AI. ENGLISH Problem: After release, base models, weights, fine-tunes, adapters,...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511938660255256576-WeGT",
-      "date": "Sat, 03 Oct 2026 00:02:22 GMT",
-      "summary": "Runtime drift can turn approved AI into unapproved AI. ENGLISH Problem: After release, base models, weights, fine-tunes, adapters, datasets, prompt templates, tools, or connector/server metadata can change, and diverge from the approved AI BOM. Solution: Make a machine-readable B",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An agent can outlive its project—and its credential can outlive both. PROBLEM A reported campaign breached 395 organizations after...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511938575756709889-YjE8",
-      "date": "Sat, 03 Oct 2026 00:02:02 GMT",
-      "summary": "An agent can outlive its project—and its credential can outlive both. PROBLEM A reported campaign breached 395 organizations after one stolen machine credential was reused across hundreds of autonomous agents. OWASP’s Non-Human Identity Top 10 identifies improper offboarding as a",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Level Up Your AI Governance: Research matters when it survives contact with operations. A paper can identify a serious risk, but o...",
-      "link": "https://www.linkedin.com/posts/bobrapp_level-up-your-ai-governance-research-matters-activity-7511908435073007616-S4h8",
-      "date": "Fri, 02 Oct 2026 22:02:15 GMT",
-      "summary": "Level Up Your AI Governance: Research matters when it survives contact with operations. A paper can identify a serious risk, but organizations still need to translate that insight into a decision, owner, test, and evidence trail. For each research finding, ask: • What operational",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Public intake is not a trusted prompt. / Les entrées publiques ne sont pas des instructions. PROBLEM / PROBLÈME: Forms, tickets an...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7511803298249785344-Sn41",
-      "date": "Fri, 02 Oct 2026 15:04:29 GMT",
-      "summary": "Public intake is not a trusted prompt. / Les entrées publiques ne sont pas des instructions. PROBLEM / PROBLÈME: Forms, tickets and uploads can hide instructions. A summarizer may exfiltrate records via image-URL subdomains or post as the organization without attribution or confi",
       "image": null,
       "author": "Bob Rapp"
     }
