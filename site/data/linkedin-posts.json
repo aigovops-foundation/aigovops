@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-04T19:59:59Z",
+  "updated": "2026-10-05T07:28:18Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,38 @@
     }
   },
   "bob": [
+    {
+      "title": "Sandbox first. Production last. PROBLEM / SOLUTION / SUMMARY An autonomous agent can turn one bad plan into an outage, data loss,...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512663495369400321-OfHq",
+      "date": "Mon, 05 Oct 2026 00:02:36 GMT",
+      "summary": "Sandbox first. Production last. PROBLEM / SOLUTION / SUMMARY An autonomous agent can turn one bad plan into an outage, data loss, or uncontrolled spend. Start in a sandbox with no live credentials and no production write access. Use dry-run mode with logged simulated side effects",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Transparency that cannot be parsed cannot be governed. ENGLISH PROBLEM: Cards become glossy PDFs: unversioned, ownerless, stale; b...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512663212195102720-hj7p",
+      "date": "Mon, 05 Oct 2026 00:01:28 GMT",
+      "summary": "Transparency that cannot be parsed cannot be governed. ENGLISH PROBLEM: Cards become glossy PDFs: unversioned, ownerless, stale; blind spots disappear. SOLUTION: Every deployed system needs an internal detailed card plus an external plain-language notice. Use versioned, machine-r",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "A remedy channel is real only if people can use it. 补救渠道只有人人能用才真实。 Problem | 问题 Test people with limited technical access, languag...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-remedy-channel-is-real-only-if-people-can-activity-7512633377154527232-kCzg",
+      "date": "Sun, 04 Oct 2026 22:02:55 GMT",
+      "summary": "A remedy channel is real only if people can use it. 补救渠道只有人人能用才真实。 Problem | 问题 Test people with limited technical access, language barriers, or low digital literacy: find → file → track → resolve. Distinct from public participation, accessible policy feedback, or generic accessi",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "An unlabeled AI output can borrow authority it has not earned. Problem | Problème Similar-looking outputs make drafts feel approve...",
+      "link": "https://www.linkedin.com/posts/bobrapp_an-unlabeled-ai-output-can-borrow-authority-activity-7512633025856249857-xZo8",
+      "date": "Sun, 04 Oct 2026 22:01:31 GMT",
+      "summary": "An unlabeled AI output can borrow authority it has not earned. Problem | Problème Similar-looking outputs make drafts feel approved. Des sorties similaires font paraître les brouillons validés. Solution | Solution At the point of use, distinguish GENERATED, RETRIEVED, HUMAN-AUTHO",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Certificates do not prove human-in-the-loop competence. Demonstrated judgment does. PROBLEM / SOLUTION / SUMMARY Use four role att...",
       "link": "https://www.linkedin.com/posts/bobrapp_certificates-do-not-prove-human-in-the-loop-activity-7512527401097248768-U3Pq",
@@ -60,38 +92,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512300645962469376-KYuL",
       "date": "Sun, 04 Oct 2026 00:00:46 GMT",
       "summary": "Every OTA update changes the safety case. ENGLISH Problem: NTSB (31 Mar 2026) linked over-reliance and weak driver monitoring to two fatal BlueCruise crashes. Electrek (24 Sep 2026) reported NHTSA’s PE26007 openpilot probe. Solution: Treat every model or threshold OTA as a signed",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Attendance is not AI literacy. A certificate proves participation—not judgment. Test what each role can do in a realistic scenario...",
-      "link": "https://www.linkedin.com/posts/bobrapp_attendance-is-not-ai-literacy-a-certificate-activity-7512271029172641792-a7sU",
-      "date": "Sat, 03 Oct 2026 22:03:05 GMT",
-      "summary": "Attendance is not AI literacy. A certificate proves participation—not judgment. Test what each role can do in a realistic scenario. Problem → Solution Map, test, record, remediate, and re-test by role: Executive—approve/pause/reject. Developer—spot risk. Reviewer—challenge eviden",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI governance starts with red lines—not launch dates. PROBLEM Undefined unacceptable uses turn ambiguity into policy. Human oversi...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-starts-with-red-linesnot-launch-activity-7512270615660118017-KiaV",
-      "date": "Sat, 03 Oct 2026 22:01:26 GMT",
-      "summary": "AI governance starts with red lines—not launch dates. PROBLEM Undefined unacceptable uses turn ambiguity into policy. Human oversight alone is not a boundary. SOLUTION Before deployment: 1. Register prohibited uses by harm, affected people, and evidence. 2. Set exception authorit",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Training data provenance is a revocation control—not paperwork. PROBLEM / SOLUTION / SUMMARY Lineage and consent flags vanish acro...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512165548999303168-xPmY",
-      "date": "Sat, 03 Oct 2026 15:03:56 GMT",
-      "summary": "Training data provenance is a revocation control—not paperwork. PROBLEM / SOLUTION / SUMMARY Lineage and consent flags vanish across ingestion, fine-tunes, embeddings, vector indexes and caches. Record origin, collection basis, license, consent scope, retention clock and owner pe",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Badges are not attestation. Agents need portable proof of identity, ownership and authority. PROBLEM / 問題 Claims, screenshots and...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512165386784776192-7ijX",
-      "date": "Sat, 03 Oct 2026 15:03:17 GMT",
-      "summary": "Badges are not attestation. Agents need portable proof of identity, ownership and authority. PROBLEM / 問題 Claims, screenshots and shared credentials do not prove the Owner of Record, delegated scope, revocation status or who holds the kill switch. SOLUTION / 解決策 Bind a signed age",
       "image": null,
       "author": "Bob Rapp"
     }
