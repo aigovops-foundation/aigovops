@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-05T07:28:18Z",
+  "updated": "2026-10-05T19:16:24Z",
   "feed_health": {
     "bob": {
       "ok": true,
       "fetched": 10,
-      "published": 10,
+      "published": 9,
       "error": null
     },
     "ken": {
@@ -15,6 +15,38 @@
     }
   },
   "bob": [
+    {
+      "title": "An agent action without a signed receipt is an anonymous side effect. हस्ताक्षरित रसीद के बिना एजेंट की कार्रवाई अनाम दुष्प्रभाव है। Problem / समस्या: A...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512890481756962818-V_wZ",
+      "date": "Mon, 05 Oct 2026 15:04:34 GMT",
+      "summary": "An agent action without a signed receipt is an anonymous side effect. हस्ताक्षरित रसीद के बिना एजेंट की कार्रवाई अनाम दुष्प्रभाव है। Problem / समस्या: Agents can misuse tools, leak data, or send messages without clear attribution or an undo path. / एजेंट बिना स्पष्ट जिम्मेदारी या",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "New AI tool? Treat procurement as a governance gate—not a shopping cart. ENGLISH PROBLEM / SOLUTION / SUMMARY Before purchase, ass...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512889964821524481-Zyy-",
+      "date": "Mon, 05 Oct 2026 15:02:30 GMT",
+      "summary": "New AI tool? Treat procurement as a governance gate—not a shopping cart. ENGLISH PROBLEM / SOLUTION / SUMMARY Before purchase, assess data exposure, prohibited use, geography, sanctions, ownership, and accountability. Score and tier every intake before contract. Require SOC 2/ISO",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Controls prove themselves under pressure—not on paper. PROBLEM / PROBLÈME Policy ≠ proof. Untestable controls, or failures with no...",
+      "link": "https://www.linkedin.com/posts/bobrapp_controls-prove-themselves-under-pressurenot-activity-7512859920917000192-MYLi",
+      "date": "Mon, 05 Oct 2026 13:03:07 GMT",
+      "summary": "Controls prove themselves under pressure—not on paper. PROBLEM / PROBLÈME Policy ≠ proof. Untestable controls, or failures with no launch/operation consequence, are governance theatre. / Politique ≠ preuve. Contrôle non testable ou échec sans conséquence = théâtre. SOLUTION / SOL",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "PROBLEM AI claims in marketing, procurement and executive reporting often lack traceable evidence. Performance, safety, fairness a...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-ai-claims-in-marketing-procurement-activity-7512859702095966208-rdZR",
+      "date": "Mon, 05 Oct 2026 13:02:15 GMT",
+      "summary": "PROBLEM AI claims in marketing, procurement and executive reporting often lack traceable evidence. Performance, safety, fairness and compliance need proof, not polished wording. This is claim substantiation—not vendor accountability or standards evaluation. SOLUTION Trace claim→m",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Sandbox first. Production last. PROBLEM / SOLUTION / SUMMARY An autonomous agent can turn one bad plan into an outage, data loss,...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512663495369400321-OfHq",
@@ -52,46 +84,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_certificates-do-not-prove-human-in-the-loop-activity-7512527401097248768-U3Pq",
       "date": "Sun, 04 Oct 2026 15:01:48 GMT",
       "summary": "Certificates do not prove human-in-the-loop competence. Demonstrated judgment does. PROBLEM / SOLUTION / SUMMARY Use four role attestations: Awareness (understand limits); Practitioner (operate approved tasks); Reviewer/Approver (challenge evidence); Accountable Executive (own ri",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Bot networks—not opinions—need governance. Problem / 问题: Autonomous influence campaigns correlate accounts and automate amplificat...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512527348563587073-xAgo",
-      "date": "Sun, 04 Oct 2026 15:01:36 GMT",
-      "summary": "Bot networks—not opinions—need governance. Problem / 问题: Autonomous influence campaigns correlate accounts and automate amplification. Disrupt inauthentic networks—not lawful viewpoints. Publish detection/challenge rules; show evidence before rejection; provide a justified appeal",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "EN Problem → Disclosure can be late, excessive, or evasive. Solution → Set severity triggers: affected people first for safety/rig...",
-      "link": "https://www.linkedin.com/posts/bobrapp_en-problem-disclosure-can-be-late-excessive-activity-7512497515154366464-IK3p",
-      "date": "Sun, 04 Oct 2026 13:03:03 GMT",
-      "summary": "EN Problem → Disclosure can be late, excessive, or evasive. Solution → Set severity triggers: affected people first for safety/rights/access/money/data; regulators/partners for duty/dependency/systemic risk; public for material, repeated, or broad impact. Share what/who/when/acti",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "PROBLEM High-impact AI can be approved with unresolved concerns. If dissent, evidence, rationale, and review triggers are missing,...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-high-impact-ai-can-be-approved-with-activity-7512497341841514496-_j2r",
-      "date": "Sun, 04 Oct 2026 13:02:22 GMT",
-      "summary": "PROBLEM High-impact AI can be approved with unresolved concerns. If dissent, evidence, rationale, and review triggers are missing, “approved” becomes a governance dead end. SOLUTION Protect good-faith dissent. Before approval, log the challenge, response, evidence, approver, risk",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI red teaming is governed research—not a free pass for unauthorized access. PROBLEM Testing without written authorization can har...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512301140542345216-h5jv",
-      "date": "Sun, 04 Oct 2026 00:02:44 GMT",
-      "summary": "AI red teaming is governed research—not a free pass for unauthorized access. PROBLEM Testing without written authorization can harm users, expose data, and destroy trust. SOLUTION Before testing, sign Rules of Engagement covering scope, systems, environments, time windows, forbid",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Every OTA update changes the safety case. ENGLISH Problem: NTSB (31 Mar 2026) linked over-reliance and weak driver monitoring to t...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512300645962469376-KYuL",
-      "date": "Sun, 04 Oct 2026 00:00:46 GMT",
-      "summary": "Every OTA update changes the safety case. ENGLISH Problem: NTSB (31 Mar 2026) linked over-reliance and weak driver monitoring to two fatal BlueCruise crashes. Electrek (24 Sep 2026) reported NHTSA’s PE26007 openpilot probe. Solution: Treat every model or threshold OTA as a signed",
       "image": null,
       "author": "Bob Rapp"
     }
