@@ -61,6 +61,14 @@
       <description>Ten yes/no questions a manager can answer about an AI agent this week, each with the evidence to point at, ending in a card you keep. No account, no maybe.</description>
     </item>
     <item>
+      <title>ISO 42001 as controls you can run, not a binder you file</title>
+      <link>https://www.aigovops-foundation.com/blog/iso-42001-controls-you-can-run.html</link>
+      <guid isPermaLink="true">https://www.aigovops-foundation.com/blog/iso-42001-controls-you-can-run.html</guid>
+      <pubDate>Tue, 06 Oct 2026 17:00:00 +0000</pubDate>
+      <dc:creator>Bob Rapp</dc:creator>
+      <description>ISO 42001 is the AI management system standard. Treat its controls as checks you run in CI, each leaving a receipt an auditor can read, not a document you file.</description>
+    </item>
+    <item>
       <title>Countdown to June 4th: 2 Days to go!</title>
       <link>https://www.linkedin.com/posts/rkjohnston_devops-aigovops-devops-activity-7467655570754306052-_4fd</link>
       <description>Countdown to June 4th: 2 Days to go! 🚀 Seattle's AI House is getting ready to host a different kind of conversation. We’re moving beyond the high-level policy debates and getting into the weeds of operationalizing trust. Governance debt is the silent killer of AI innovation, and</description>
