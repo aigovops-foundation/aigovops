@@ -5,13 +5,21 @@
     <link>https://www.aigovops-foundation.com</link>
     <description>The latest posts from Ken Johnston and Bob Rapp on AI governance, policy-as-code, and open-source compliance tooling.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Oct 2026 02:30:18 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 06:07:19 +0000</lastBuildDate>
     <atom:link href="https://www.aigovops-foundation.com/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://www.aigovops-foundation.com/images/logo.png</url>
       <title>AiGovOps Foundation</title>
       <link>https://www.aigovops-foundation.com</link>
     </image>
+    <item><!-- content -->
+      <title>Seconds each — the hold that Cigna&#x27;s PXDX never had</title>
+      <link>https://www.aigovops-foundation.com/blog/seconds-each.html</link>
+      <guid isPermaLink="true">https://www.aigovops-foundation.com/blog/seconds-each.html</guid>
+      <pubDate>Tue, 06 Oct 2026 09:00:00 +0000</pubDate>
+      <dc:creator>Bob Rapp</dc:creator>
+      <description>ProPublica reported that Cigna&#x27;s PXDX process let medical directors deny large batches of claims in seconds each, often without opening the patient&#x27;s file. The gate is a human who actually reviews before a denial — and the arithmetic of what &quot;actually&quot; means when the batch is a thousand deep. Level 300.</description>
+    </item>
     <item><!-- content -->
       <title>Forty-five minutes at Knight Capital — the deploy is the decision</title>
       <link>https://www.aigovops-foundation.com/blog/forty-five-minutes-at-knight.html</link>
