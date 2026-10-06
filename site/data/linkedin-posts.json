@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-06T07:14:19Z",
+  "updated": "2026-10-06T19:08:32Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,38 @@
     }
   },
   "bob": [
+    {
+      "title": "An AI denial is not governed because a human clicked “approve.” Problem / المشكلة People need a named reviewer with real power to...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7513252504399269889-FbTc",
+      "date": "Tue, 06 Oct 2026 15:03:07 GMT",
+      "summary": "An AI denial is not governed because a human clicked “approve.” Problem / المشكلة People need a named reviewer with real power to change the outcome, a plain-language explanation, and a contest channel with a defined service level, not a rubber stamp. Prohibit purely automated ad",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI can schedule work. It must not secretly decide a worker’s worth. ENGLISH Problem: AI can allocate shifts, set targets, score/ra...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7513252350782939136-jtYe",
+      "date": "Tue, 06 Oct 2026 15:02:30 GMT",
+      "summary": "AI can schedule work. It must not secretly decide a worker’s worth. ENGLISH Problem: AI can allocate shifts, set targets, score/rank, monitor, discipline or terminate workers. Opaque signals can become livelihood decisions. Solution: Before launch, give workers/works councils wri",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "An AI vendor exit clause is not portability. ENGLISH Problem — Export decisions, configurations, prompts, evaluation results, logs...",
+      "link": "https://ae.linkedin.com/posts/bobrapp_an-ai-vendor-exit-clause-is-not-portability-activity-7513222495013945344-UlYy",
+      "date": "Tue, 06 Oct 2026 13:03:52 GMT",
+      "summary": "An AI vendor exit clause is not portability. ENGLISH Problem — Export decisions, configurations, prompts, evaluation results, logs + required metadata in usable, tested formats; otherwise continuity stays with the vendor. Solution — Contract machine-readable export, schemas, vers",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Synthetic data can make evaluation look clean: and still hide harm. ENGLISH Problem: It may mirror generator assumptions, missing...",
+      "link": "https://www.linkedin.com/posts/bobrapp_synthetic-data-can-make-evaluation-look-clean-activity-7513221750554464257-2y-7",
+      "date": "Tue, 06 Oct 2026 13:00:54 GMT",
+      "summary": "Synthetic data can make evaluation look clean: and still hide harm. ENGLISH Problem: It may mirror generator assumptions, missing rare cases and underrepresented groups. This is evaluation validity: not cross-border access, lineage, freshness, or emerging-market capacity. Solutio",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "This is big day for safer ai in healthcare and for all areas -wow",
       "link": "https://www.linkedin.com/posts/bobrapp_this-is-big-day-for-safer-ai-in-healthcare-activity-7513030775986868224-qFfJ",
@@ -52,38 +84,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_a-model-card-earns-trust-only-when-it-changes-activity-7512995668278296576-ncGq",
       "date": "Mon, 05 Oct 2026 22:02:32 GMT",
       "summary": "A model card earns trust only when it changes a deployment decision. ENGLISH PROBLEM: A card is not a decision tool without scope, limits, evaluation context, and an accountable owner. SOLUTION: Ask: In or out of scope? Who and what was tested? What can fail? Who approves, monito",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An agent action without a signed receipt is an anonymous side effect. हस्ताक्षरित रसीद के बिना एजेंट की कार्रवाई अनाम दुष्प्रभाव है। Problem / समस्या: A...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512890481756962818-V_wZ",
-      "date": "Mon, 05 Oct 2026 15:04:34 GMT",
-      "summary": "An agent action without a signed receipt is an anonymous side effect. हस्ताक्षरित रसीद के बिना एजेंट की कार्रवाई अनाम दुष्प्रभाव है। Problem / समस्या: Agents can misuse tools, leak data, or send messages without clear attribution or an undo path. / एजेंट बिना स्पष्ट जिम्मेदारी या",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "New AI tool? Treat procurement as a governance gate—not a shopping cart. ENGLISH PROBLEM / SOLUTION / SUMMARY Before purchase, ass...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512889964821524481-Zyy-",
-      "date": "Mon, 05 Oct 2026 15:02:30 GMT",
-      "summary": "New AI tool? Treat procurement as a governance gate—not a shopping cart. ENGLISH PROBLEM / SOLUTION / SUMMARY Before purchase, assess data exposure, prohibited use, geography, sanctions, ownership, and accountability. Score and tier every intake before contract. Require SOC 2/ISO",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Controls prove themselves under pressure—not on paper. PROBLEM / PROBLÈME Policy ≠ proof. Untestable controls, or failures with no...",
-      "link": "https://www.linkedin.com/posts/bobrapp_controls-prove-themselves-under-pressurenot-activity-7512859920917000192-MYLi",
-      "date": "Mon, 05 Oct 2026 13:03:07 GMT",
-      "summary": "Controls prove themselves under pressure—not on paper. PROBLEM / PROBLÈME Policy ≠ proof. Untestable controls, or failures with no launch/operation consequence, are governance theatre. / Politique ≠ preuve. Contrôle non testable ou échec sans conséquence = théâtre. SOLUTION / SOL",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "PROBLEM AI claims in marketing, procurement and executive reporting often lack traceable evidence. Performance, safety, fairness a...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-ai-claims-in-marketing-procurement-activity-7512859702095966208-rdZR",
-      "date": "Mon, 05 Oct 2026 13:02:15 GMT",
-      "summary": "PROBLEM AI claims in marketing, procurement and executive reporting often lack traceable evidence. Performance, safety, fairness and compliance need proof, not polished wording. This is claim substantiation—not vendor accountability or standards evaluation. SOLUTION Trace claim→m",
       "image": null,
       "author": "Bob Rapp"
     }
