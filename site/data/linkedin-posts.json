@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-05T19:16:24Z",
+  "updated": "2026-10-06T07:14:19Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,46 @@
     }
   },
   "bob": [
+    {
+      "title": "This is big day for safer ai in healthcare and for all areas -wow",
+      "link": "https://www.linkedin.com/posts/bobrapp_this-is-big-day-for-safer-ai-in-healthcare-activity-7513030775986868224-qFfJ",
+      "date": "Tue, 06 Oct 2026 00:22:02 GMT",
+      "summary": "This is big day for safer ai in healthcare and for all areas -wow",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Trading, pricing and bidding agents are market participants. Speed without controls is market risk. PROBLEM / 問題 Uncapped order ra...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7513026076890013696-fk9i",
+      "date": "Tue, 06 Oct 2026 00:03:22 GMT",
+      "summary": "Trading, pricing and bidding agents are market participants. Speed without controls is market risk. PROBLEM / 問題 Uncapped order rates, positions and exposure can accelerate manipulation, collusion and loss. 上限のない注文・ポジション・エクスポージャーは、操作・共謀・損失を加速させます。 SOLUTION / 解決策 Use pre-trade reg",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Persistent agent memory is not “just context.” It is a sensitive, persistent data asset—and a future source of truth. PROBLEM / SO...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7513025915082436609-lSAN",
+      "date": "Tue, 06 Oct 2026 00:02:43 GMT",
+      "summary": "Persistent agent memory is not “just context.” It is a sensitive, persistent data asset—and a future source of truth. PROBLEM / SOLUTION / SUMMARY Agents can learn from untrusted inputs, causing memory poisoning and drift. Shared retrieval can leak one tenant’s memories into anot",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Decisions—not meetings—prove oversight. ENGLISH Problem: Without a decision-maker, quorum, evidence, protected dissent and system-...",
+      "link": "https://www.linkedin.com/posts/bobrapp_decisionsnot-meetingsprove-oversight-activity-7512995753468805120-5jRv",
+      "date": "Mon, 05 Oct 2026 22:02:52 GMT",
+      "summary": "Decisions—not meetings—prove oversight. ENGLISH Problem: Without a decision-maker, quorum, evidence, protected dissent and system-change proof, a committee is ceremony. Solution: Set committee decision rights, conflict disclosures and evidence-pack standards. Track owner, deadlin",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "A model card earns trust only when it changes a deployment decision. ENGLISH PROBLEM: A card is not a decision tool without scope,...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-model-card-earns-trust-only-when-it-changes-activity-7512995668278296576-ncGq",
+      "date": "Mon, 05 Oct 2026 22:02:32 GMT",
+      "summary": "A model card earns trust only when it changes a deployment decision. ENGLISH PROBLEM: A card is not a decision tool without scope, limits, evaluation context, and an accountable owner. SOLUTION: Ask: In or out of scope? Who and what was tested? What can fail? Who approves, monito",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "An agent action without a signed receipt is an anonymous side effect. हस्ताक्षरित रसीद के बिना एजेंट की कार्रवाई अनाम दुष्प्रभाव है। Problem / समस्या: A...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512890481756962818-V_wZ",
@@ -44,46 +84,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_problem-ai-claims-in-marketing-procurement-activity-7512859702095966208-rdZR",
       "date": "Mon, 05 Oct 2026 13:02:15 GMT",
       "summary": "PROBLEM AI claims in marketing, procurement and executive reporting often lack traceable evidence. Performance, safety, fairness and compliance need proof, not polished wording. This is claim substantiation—not vendor accountability or standards evaluation. SOLUTION Trace claim→m",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Sandbox first. Production last. PROBLEM / SOLUTION / SUMMARY An autonomous agent can turn one bad plan into an outage, data loss,...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512663495369400321-OfHq",
-      "date": "Mon, 05 Oct 2026 00:02:36 GMT",
-      "summary": "Sandbox first. Production last. PROBLEM / SOLUTION / SUMMARY An autonomous agent can turn one bad plan into an outage, data loss, or uncontrolled spend. Start in a sandbox with no live credentials and no production write access. Use dry-run mode with logged simulated side effects",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Transparency that cannot be parsed cannot be governed. ENGLISH PROBLEM: Cards become glossy PDFs: unversioned, ownerless, stale; b...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7512663212195102720-hj7p",
-      "date": "Mon, 05 Oct 2026 00:01:28 GMT",
-      "summary": "Transparency that cannot be parsed cannot be governed. ENGLISH PROBLEM: Cards become glossy PDFs: unversioned, ownerless, stale; blind spots disappear. SOLUTION: Every deployed system needs an internal detailed card plus an external plain-language notice. Use versioned, machine-r",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "A remedy channel is real only if people can use it. 补救渠道只有人人能用才真实。 Problem | 问题 Test people with limited technical access, languag...",
-      "link": "https://www.linkedin.com/posts/bobrapp_a-remedy-channel-is-real-only-if-people-can-activity-7512633377154527232-kCzg",
-      "date": "Sun, 04 Oct 2026 22:02:55 GMT",
-      "summary": "A remedy channel is real only if people can use it. 补救渠道只有人人能用才真实。 Problem | 问题 Test people with limited technical access, language barriers, or low digital literacy: find → file → track → resolve. Distinct from public participation, accessible policy feedback, or generic accessi",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An unlabeled AI output can borrow authority it has not earned. Problem | Problème Similar-looking outputs make drafts feel approve...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-unlabeled-ai-output-can-borrow-authority-activity-7512633025856249857-xZo8",
-      "date": "Sun, 04 Oct 2026 22:01:31 GMT",
-      "summary": "An unlabeled AI output can borrow authority it has not earned. Problem | Problème Similar-looking outputs make drafts feel approved. Des sorties similaires font paraître les brouillons validés. Solution | Solution At the point of use, distinguish GENERATED, RETRIEVED, HUMAN-AUTHO",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Certificates do not prove human-in-the-loop competence. Demonstrated judgment does. PROBLEM / SOLUTION / SUMMARY Use four role att...",
-      "link": "https://www.linkedin.com/posts/bobrapp_certificates-do-not-prove-human-in-the-loop-activity-7512527401097248768-U3Pq",
-      "date": "Sun, 04 Oct 2026 15:01:48 GMT",
-      "summary": "Certificates do not prove human-in-the-loop competence. Demonstrated judgment does. PROBLEM / SOLUTION / SUMMARY Use four role attestations: Awareness (understand limits); Practitioner (operate approved tasks); Reviewer/Approver (challenge evidence); Accountable Executive (own ri",
       "image": null,
       "author": "Bob Rapp"
     }
