@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-07T07:14:36Z",
+  "updated": "2026-10-07T19:10:00Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,38 @@
     }
   },
   "bob": [
+    {
+      "title": "Third-party AI is your liability. PROBLEM / SOLUTION / SUMMARY Vendor change = risk. Register model/API; require audit/evidence ac...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7513615204920741888-ev6e",
+      "date": "Wed, 07 Oct 2026 15:04:21 GMT",
+      "summary": "Third-party AI is your liability. PROBLEM / SOLUTION / SUMMARY Vendor change = risk. Register model/API; require audit/evidence access, 30-day notice, secondary-provider testing, escrow/artifacts, export/exit; monitor drift; cryptographically audit evidence; test rollback/quarant",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "An incident report is not a cure. Verified remediation is. EN Problem: Recurrence follows self-authored RCA, unowned actions, or a...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7513614945553555456-hWvl",
+      "date": "Wed, 07 Oct 2026 15:03:19 GMT",
+      "summary": "An incident report is not a cure. Verified remediation is. EN Problem: Recurrence follows self-authored RCA, unowned actions, or asserted fixes. Solution: Independent RCA by someone outside the builder/operator team; named owners and due dates; test evidence; regression and fleet",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "ENGLISH Hidden AI in a vendor product is a procurement risk—not a footnote. PROBLEM Vendor AI can decide, subcontract, change, red...",
+      "link": "https://www.linkedin.com/posts/bobrapp_english-hidden-ai-in-a-vendor-product-is-activity-7513585157673504768-MDXj",
+      "date": "Wed, 07 Oct 2026 13:04:57 GMT",
+      "summary": "ENGLISH Hidden AI in a vendor product is a procurement risk—not a footnote. PROBLEM Vendor AI can decide, subcontract, change, redirect data, or notify customers late. Disclose it before purchase. SOLUTION Require signed disclosure of embedded AI/decision roles; subcontracted mod",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Review quality can degrade before anyone notices. PROBLEM Repeated reviewing, inconsistent interpretation, and workload spikes can...",
+      "link": "https://www.linkedin.com/posts/bobrapp_review-quality-can-degrade-before-anyone-activity-7513584688180019200-MAT7",
+      "date": "Wed, 07 Oct 2026 13:03:05 GMT",
+      "summary": "Review quality can degrade before anyone notices. PROBLEM Repeated reviewing, inconsistent interpretation, and workload spikes can make judgments drift. SOLUTION Rotate reviewers. Calibrate judgments with the same sample. Track disagreement, turnaround time, and error patterns by",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Model shutdown is not data destruction. Problem / 问题 Quiet sunsets miss dependency and fan-out maps, registry updates, credential...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7513388341522931712-2wVC",
@@ -60,38 +92,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7513252350782939136-jtYe",
       "date": "Tue, 06 Oct 2026 15:02:30 GMT",
       "summary": "AI can schedule work. It must not secretly decide a worker’s worth. ENGLISH Problem: AI can allocate shifts, set targets, score/rank, monitor, discipline or terminate workers. Opaque signals can become livelihood decisions. Solution: Before launch, give workers/works councils wri",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An AI vendor exit clause is not portability. ENGLISH Problem — Export decisions, configurations, prompts, evaluation results, logs...",
-      "link": "https://ae.linkedin.com/posts/bobrapp_an-ai-vendor-exit-clause-is-not-portability-activity-7513222495013945344-UlYy",
-      "date": "Tue, 06 Oct 2026 13:03:52 GMT",
-      "summary": "An AI vendor exit clause is not portability. ENGLISH Problem — Export decisions, configurations, prompts, evaluation results, logs + required metadata in usable, tested formats; otherwise continuity stays with the vendor. Solution — Contract machine-readable export, schemas, vers",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Synthetic data can make evaluation look clean: and still hide harm. ENGLISH Problem: It may mirror generator assumptions, missing...",
-      "link": "https://www.linkedin.com/posts/bobrapp_synthetic-data-can-make-evaluation-look-clean-activity-7513221750554464257-2y-7",
-      "date": "Tue, 06 Oct 2026 13:00:54 GMT",
-      "summary": "Synthetic data can make evaluation look clean: and still hide harm. ENGLISH Problem: It may mirror generator assumptions, missing rare cases and underrepresented groups. This is evaluation validity: not cross-border access, lineage, freshness, or emerging-market capacity. Solutio",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "This is big day for safer ai in healthcare and for all areas -wow",
-      "link": "https://www.linkedin.com/posts/bobrapp_this-is-big-day-for-safer-ai-in-healthcare-activity-7513030775986868224-qFfJ",
-      "date": "Tue, 06 Oct 2026 00:22:02 GMT",
-      "summary": "This is big day for safer ai in healthcare and for all areas -wow",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Trading, pricing and bidding agents are market participants. Speed without controls is market risk. PROBLEM / 問題 Uncapped order ra...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7513026076890013696-fk9i",
-      "date": "Tue, 06 Oct 2026 00:03:22 GMT",
-      "summary": "Trading, pricing and bidding agents are market participants. Speed without controls is market risk. PROBLEM / 問題 Uncapped order rates, positions and exposure can accelerate manipulation, collusion and loss. 上限のない注文・ポジション・エクスポージャーは、操作・共謀・損失を加速させます。 SOLUTION / 解決策 Use pre-trade reg",
       "image": null,
       "author": "Bob Rapp"
     }
