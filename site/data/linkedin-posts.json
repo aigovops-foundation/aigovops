@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-08T07:16:39Z",
+  "updated": "2026-10-08T19:10:07Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,30 @@
     }
   },
   "bob": [
+    {
+      "title": "Emergency access is not governance if it never expires. PROBLEM A break-glass path can become a quiet second authorization system....",
+      "link": "https://www.linkedin.com/posts/bobrapp_emergency-access-is-not-governance-if-it-activity-7513947142156173313-Rhdc",
+      "date": "Thu, 08 Oct 2026 13:03:21 GMT",
+      "summary": "Emergency access is not governance if it never expires. PROBLEM A break-glass path can become a quiet second authorization system. Broad authorization, agent credential lifetime, and tool-failure recovery are different controls. None replaces time-boxed emergency approval and ret",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI can draft research—not own claims. / L’IA peut rédiger, pas assumer les affirmations. PROBLEM / PROBLÈME: Hidden role, unclear...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-can-draft-researchnot-own-claims-l-activity-7513946765293883394-S714",
+      "date": "Thu, 08 Oct 2026 13:01:51 GMT",
+      "summary": "AI can draft research—not own claims. / L’IA peut rédiger, pas assumer les affirmations. PROBLEM / PROBLÈME: Hidden role, unclear credit, unverified or fabricated citations, no reproducibility trail. / Rôle caché, crédit flou, citations non vérifiées ou inventées, aucune trace re",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Great to have you join remotely",
+      "link": "https://www.linkedin.com/posts/bobrapp_great-to-have-you-join-remotely-wonderful-activity-7513834042882977793-CNqe",
+      "date": "Thu, 08 Oct 2026 05:33:56 GMT",
+      "summary": "Great to have you join remotely - wonderful",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Model outage? Who serves the customer? PROBLEM: A failed model can stop service, lose evidence, and create unsafe manual work. SOL...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7513750615588663296-JCj_",
@@ -68,30 +92,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_english-hidden-ai-in-a-vendor-product-is-activity-7513585157673504768-MDXj",
       "date": "Wed, 07 Oct 2026 13:04:57 GMT",
       "summary": "ENGLISH Hidden AI in a vendor product is a procurement risk—not a footnote. PROBLEM Vendor AI can decide, subcontract, change, redirect data, or notify customers late. Disclose it before purchase. SOLUTION Require signed disclosure of embedded AI/decision roles; subcontracted mod",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Review quality can degrade before anyone notices. PROBLEM Repeated reviewing, inconsistent interpretation, and workload spikes can...",
-      "link": "https://www.linkedin.com/posts/bobrapp_review-quality-can-degrade-before-anyone-activity-7513584688180019200-MAT7",
-      "date": "Wed, 07 Oct 2026 13:03:05 GMT",
-      "summary": "Review quality can degrade before anyone notices. PROBLEM Repeated reviewing, inconsistent interpretation, and workload spikes can make judgments drift. SOLUTION Rotate reviewers. Calibrate judgments with the same sample. Track disagreement, turnaround time, and error patterns by",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Model shutdown is not data destruction. Problem / 问题 Quiet sunsets miss dependency and fan-out maps, registry updates, credential...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7513388341522931712-2wVC",
-      "date": "Wed, 07 Oct 2026 00:02:53 GMT",
-      "summary": "Model shutdown is not data destruction. Problem / 问题 Quiet sunsets miss dependency and fan-out maps, registry updates, credential revocation, contract closure—and fine-tunes, embeddings, vector indexes, caches and backups. 静默下线常漏掉依赖与扇出映射、注册表更新、凭证撤销、合同关闭，以及微调模型、嵌入、向量索引、缓存和备份。 Solu",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI evidence needs a chain of custody—not a confidence score. PROBLEM AI can draft affidavits, summarize or translate testimony, al...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7513388192025165824-IpF0",
-      "date": "Wed, 07 Oct 2026 00:02:17 GMT",
-      "summary": "AI evidence needs a chain of custody—not a confidence score. PROBLEM AI can draft affidavits, summarize or translate testimony, alter audio/video/images, or assist forensic tooling. Without provenance, an exhibit can become an untraceable claim. SOLUTION For every AI-touched exhi",
       "image": null,
       "author": "Bob Rapp"
     }
