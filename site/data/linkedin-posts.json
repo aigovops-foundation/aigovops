@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-07T19:10:00Z",
+  "updated": "2026-10-08T07:16:39Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,38 @@
     }
   },
   "bob": [
+    {
+      "title": "Model outage? Who serves the customer? PROBLEM: A failed model can stop service, lose evidence, and create unsafe manual work. SOL...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7513750615588663296-JCj_",
+      "date": "Thu, 08 Oct 2026 00:02:25 GMT",
+      "summary": "Model outage? Who serves the customer? PROBLEM: A failed model can stop service, lose evidence, and create unsafe manual work. SOLUTION: Predefine degraded/manual mode and an engagement procedure. Set RTO/RPO for the model, data, logs, and retrieval indexes. Route critical decisi",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Who governs the governor? If the control plane can be changed silently, governance is only theater. PROBLEM Policy engines, guardr...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7513750583032512513-cM6F",
+      "date": "Thu, 08 Oct 2026 00:02:18 GMT",
+      "summary": "Who governs the governor? If the control plane can be changed silently, governance is only theater. PROBLEM Policy engines, guardrails, approval workflows, audit logs, evidence stores and dashboards are high-value attack surfaces. The model team must not be able to rewrite the ru",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Appeals are governance data—not just case closures. Problem Across cases, reversals, remedy inconsistency, subgroup disparities, o...",
+      "link": "https://www.linkedin.com/posts/bobrapp_appeals-are-governance-datanot-just-case-activity-7513720968054226944-AADR",
+      "date": "Wed, 07 Oct 2026 22:04:37 GMT",
+      "summary": "Appeals are governance data—not just case closures. Problem Across cases, reversals, remedy inconsistency, subgroup disparities, or policy confusion can reveal systemic risk—not merely a usability issue or account-restriction appeal. Solution Aggregate de-identified outcomes. Com",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "An annual AI review is a habit—not a risk strategy. PROBLEM: Systems with different consequences and uncertainty should not share...",
+      "link": "https://www.linkedin.com/posts/bobrapp_an-annual-ai-review-is-a-habitnot-a-risk-activity-7513720022985404416-htz_",
+      "date": "Wed, 07 Oct 2026 22:00:52 GMT",
+      "summary": "An annual AI review is a habit—not a risk strategy. PROBLEM: Systems with different consequences and uncertainty should not share the same review cadence. SOLUTION: Set intervals by consequence + uncertainty. Shorten them as either rises. Name an owner, evidence pack, decision th",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Third-party AI is your liability. PROBLEM / SOLUTION / SUMMARY Vendor change = risk. Register model/API; require audit/evidence ac...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7513615204920741888-ev6e",
@@ -60,38 +92,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7513388192025165824-IpF0",
       "date": "Wed, 07 Oct 2026 00:02:17 GMT",
       "summary": "AI evidence needs a chain of custody—not a confidence score. PROBLEM AI can draft affidavits, summarize or translate testimony, alter audio/video/images, or assist forensic tooling. Without provenance, an exhibit can become an untraceable claim. SOLUTION For every AI-touched exhi",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI governance fails when nobody can answer one question: who is allowed to decide? PROBLEM AI may assess approved inputs and recom...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-governance-fails-when-nobody-can-answer-activity-7513358238466240512-S2s1",
-      "date": "Tue, 06 Oct 2026 22:03:15 GMT",
-      "summary": "AI governance fails when nobody can answer one question: who is allowed to decide? PROBLEM AI may assess approved inputs and recommend an action. It must not decide or act when context is missing, novel, or out of scope. SOLUTION Create a decision-boundary map: • Define assessabl",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An incident taxonomy is a learning system—not a filing cabinet. Problem / 问题 Mixing near misses, harmful outcomes, control failure...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-incident-taxonomy-is-a-learning-systemnot-activity-7513358115703177216-uzfr",
-      "date": "Tue, 06 Oct 2026 22:02:46 GMT",
-      "summary": "An incident taxonomy is a learning system—not a filing cabinet. Problem / 问题 Mixing near misses, harmful outcomes, control failures, and systemic causes hides patterns. Solution / 解决方案 Classify: • What happened / 发生了什么: near miss or harmful outcome / 险些发生或有害结果。 • Why / 为什么: contr",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An AI denial is not governed because a human clicked “approve.” Problem / المشكلة People need a named reviewer with real power to...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7513252504399269889-FbTc",
-      "date": "Tue, 06 Oct 2026 15:03:07 GMT",
-      "summary": "An AI denial is not governed because a human clicked “approve.” Problem / المشكلة People need a named reviewer with real power to change the outcome, a plain-language explanation, and a contest channel with a defined service level, not a rubber stamp. Prohibit purely automated ad",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI can schedule work. It must not secretly decide a worker’s worth. ENGLISH Problem: AI can allocate shifts, set targets, score/ra...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7513252350782939136-jtYe",
-      "date": "Tue, 06 Oct 2026 15:02:30 GMT",
-      "summary": "AI can schedule work. It must not secretly decide a worker’s worth. ENGLISH Problem: AI can allocate shifts, set targets, score/rank, monitor, discipline or terminate workers. Opaque signals can become livelihood decisions. Solution: Before launch, give workers/works councils wri",
       "image": null,
       "author": "Bob Rapp"
     }
