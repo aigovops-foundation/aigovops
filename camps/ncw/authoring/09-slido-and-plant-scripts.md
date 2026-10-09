@@ -313,7 +313,7 @@ The "Orchard Helper" agent we built this morning — the 4-ingredient Gemini Gem
 **Tag-in:** [BOTH — Bob sets up, Ken lands]
 
 **Answer (2–3 sentences):**
-Bob: The NCW AI in Action follow-up series lives at ncwtech.org/ai-in-action — it's a monthly community of practice where educators, business owners, and nonprofit leaders in our region share what's working, what failed, and what questions they're taking to the next session. Ken: Every signer of the NCW Pledge gets a badge for their classroom door, store window, or nonprofit homepage — and the Pledge lives at aigovops-foundation.com/ncw-pledge, where it updates as the field evolves. The community we're building today is the point: NCW moving together, not waiting for a city or a federal agency to tell it what to do.
+Bob: The NCW AI in Action follow-up series lives at ncwtech.org/ai-in-action — it's a monthly community of practice where educators, business owners, and nonprofit leaders in our region share what's working, what failed, and what questions they're taking to the next session. Ken: Every signer of the NCW Pledge gets a badge for their classroom door, store window, or nonprofit homepage — and the Pledge lives at aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html, where it updates as the field evolves. The community we're building today is the point: NCW moving together, not waiting for a city or a federal agency to tell it what to do.
 
 **Citation/Source:** [AiGovOps Foundation](https://www.aigovops-foundation.com)
 

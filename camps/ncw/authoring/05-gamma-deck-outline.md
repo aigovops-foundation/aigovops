@@ -437,7 +437,7 @@ Apache-2.0. No SaaS. Practitioner-led. Built by the people who ship to productio
 ---
 
 # SLIDE 54 — Sign it
-By tonight: **aigovops-foundation.com/ncw-pledge**
+By tonight: **aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html**
 Every signer gets a badge for your classroom door, your store window, your nonprofit homepage.
 *This is what an AI-positive community looks like.*
 *Not banned. Not surrendered. **Signed.***
@@ -453,7 +453,7 @@ Tag each other in on the hard ones.
 ---
 
 # SLIDE 56 — The three calls to action
-**Sign the Pledge** → aigovops-foundation.com/ncw-pledge
+**Sign the Pledge** → aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html
 **Get the free toolkit** → Beacon + Umbrella + Lantern
 **Join the AI in Action follow-up series** → ncwtech.org/ai-in-action
 *[Three QR codes, side by side, big]*

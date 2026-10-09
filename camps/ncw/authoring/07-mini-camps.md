@@ -689,4 +689,4 @@ Across all 5 scenarios and all 7 voices, the pattern is the same:
 ---
 
 *Mini-Camps v1 · NCW AI Expo 2026 · AiGovOps Foundation × NCW Tech Alliance*
-*Sign the Pledge → aigovops-foundation.com/ncw-pledge*
+*Sign the Pledge → aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html*

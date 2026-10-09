@@ -46,7 +46,7 @@ Los prompts se guardan. Las respuestas se guardan. Las ediciones se guardan. Par
 
 ### Cómo firmar
 
-**Firme en línea** → aigovops-foundation.com/ncw-pledge
+**Firme en línea** → aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html
 **Obtenga la insignia** para la puerta de su salón, la ventana de su negocio o la página de su organización
 **Únase a la conversación** en nuestra comunidad en https://community.aigovops-foundation.com
 
@@ -77,14 +77,14 @@ La [investigación del GAO del Senado, junio de 2026](https://www.bluntrochester
 
 | Qué | Dónde |
 |---|---|
-| Firme la Promesa | aigovops-foundation.com/ncw-pledge |
+| Firme la Promesa | aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html |
 | Obtenga el kit gratuito de la Fundación (Beacon, Umbrella, Lantern) | aigovops-foundation.com |
 | Únase a la comunidad AiGovOps | https://community.aigovops-foundation.com |
 | Serie de seguimiento IA en Acción de NCW | ncwtech.org/ai-in-action |
 | Participe en el Concurso de Casos de Uso de IA | ncwtech.org |
 
 ```
-[CÓDIGO QR → aigovops-foundation.com/ncw-pledge]
+[CÓDIGO QR → aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html]
 [CÓDIGO QR → ncwtech.org]
 ```
 
@@ -176,7 +176,7 @@ La maestra de María guarda los prompts, las respuestas de la IA y sus correccio
 ### Firme la Promesa
 
 ```
-[CÓDIGO QR → aigovops-foundation.com/ncw-pledge]
+[CÓDIGO QR → aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html]
 ```
 
 > **La historia que contemos sobre la IA en el Norte Central de Washington será la historia que nosotros escribimos — juntos.**

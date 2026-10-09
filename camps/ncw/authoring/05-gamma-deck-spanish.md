@@ -445,7 +445,7 @@ Apache-2.0. Sin SaaS. Dirigido por quienes lo aplican. Construido por la gente q
 ---
 
 # SLIDE 54 — Fírmela
-Para esta noche: **aigovops-foundation.com/ncw-pledge**
+Para esta noche: **aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html**
 Cada persona que firme recibe una insignia para la puerta de su salón, la ventana de su tienda, la página de su organización sin fines de lucro.
 *Así se ve una comunidad a favor de la IA.*
 *No prohibida. No rendida. **Firmada.***
@@ -461,7 +461,7 @@ Pásense la palabra el uno al otro en las difíciles.
 ---
 
 # SLIDE 56 — Los tres llamados a la acción
-**Firme la Promesa** → aigovops-foundation.com/ncw-pledge
+**Firme la Promesa** → aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html
 **Obtenga el kit gratuito** → Beacon + Umbrella + Lantern
 **Únase a la serie de seguimiento IA en Acción** → ncwtech.org/ai-in-action
 *[Tres códigos QR, lado a lado, grandes]*

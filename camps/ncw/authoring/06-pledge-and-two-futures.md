@@ -40,7 +40,7 @@ Prompts saved. Outputs saved. Edits saved. So a parent, a regulator, an auditor 
 
 ### How to sign
 
-**Sign online** → aigovops-foundation.com/ncw-pledge
+**Sign online** → aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html
 **Get the badge** for your classroom door, your store window, your nonprofit homepage
 **Join the conversation** in our community at https://community.aigovops-foundation.com
 
@@ -71,14 +71,14 @@ Three frontier AIs in parallel — [Perplexity's Model Council](https://www.link
 
 | What | Where |
 |---|---|
-| Sign the Pledge | aigovops-foundation.com/ncw-pledge |
+| Sign the Pledge | aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html |
 | Get the free Foundation toolkit (Beacon, Umbrella, Lantern) | aigovops-foundation.com |
 | Join the AiGovOps community | https://community.aigovops-foundation.com |
 | NCW AI in Action follow-up series | ncwtech.org/ai-in-action |
 | Submit to the AI Use Case Showdown | ncwtech.org |
 
 ```
-[QR CODE → aigovops-foundation.com/ncw-pledge]
+[QR CODE → aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html]
 [QR CODE → ncwtech.org]
 ```
 
@@ -170,7 +170,7 @@ Maria's teacher saves the prompts, the AI's answers, and her edits in a shared D
 ### Sign the Pledge
 
 ```
-[QR CODE → aigovops-foundation.com/ncw-pledge]
+[QR CODE → aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html]
 ```
 
 > **The story we tell about AI in NCW will be the story we wrote — together.**

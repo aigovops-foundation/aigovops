@@ -11,7 +11,7 @@
 
 1. **Tags needed:** `ncw-pledge-signer`, `{{ROLE}}` (populated at sign-up: `educator`, `smb-owner`, `community-leader`, `student`, `parent`, `other`), `{{CITY}}`, `{{NAME}}`, `{{ONE_THING}}` (the signer's free-text "one thing I'll do this week" answer from the Pledge form).
 
-2. **Trigger:** Add contact to this sequence when they complete the Pledge form at aigovops-foundation.com/ncw-pledge. Email 1 fires the morning after the event (August 12), regardless of when they submitted — set the trigger anchor to August 12 at 7:00 AM PDT for all attendees collected at the event. Future signers enter the sequence on Day 1 from their sign date.
+2. **Trigger:** Add contact to this sequence when they complete the Pledge form at aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html. Email 1 fires the morning after the event (August 12), regardless of when they submitted — set the trigger anchor to August 12 at 7:00 AM PDT for all attendees collected at the event. Future signers enter the sequence on Day 1 from their sign date.
 
 3. **Send times:** All emails go out at 7:00 AM PDT. Studies consistently show early morning delivery outperforms afternoon for mission-driven and professional lists.
 
@@ -67,7 +67,7 @@ We'll check in on Thursday.
 
 ---
 
-**[Sign the Pledge](https://aigovops-foundation.com/ncw-pledge) · [Get the Toolkit](https://aigovops-foundation.com) · [Join the Community](https://community.aigovops-foundation.com)**
+**[Sign the Pledge](https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html) · [Get the Toolkit](https://aigovops-foundation.com) · [Join the Community](https://community.aigovops-foundation.com)**
 
 *You're receiving this because you signed the NCW AI Partnership Pledge at AI Expo 2026. [Unsubscribe]([UNSUBSCRIBE_LINK])*
 
@@ -117,7 +117,7 @@ Not rhetorically. We're tracking this. Every answer helps us make the next versi
 
 ---
 
-**[Sign the Pledge](https://aigovops-foundation.com/ncw-pledge) · [Get the Toolkit](https://aigovops-foundation.com) · [Join the Community](https://community.aigovops-foundation.com)**
+**[Sign the Pledge](https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html) · [Get the Toolkit](https://aigovops-foundation.com) · [Join the Community](https://community.aigovops-foundation.com)**
 
 *You're receiving this because you signed the NCW AI Partnership Pledge at AI Expo 2026. [Unsubscribe]([UNSUBSCRIBE_LINK])*
 
@@ -175,7 +175,7 @@ The community is on Circle. Free to join. We're there most days. The best conver
 
 ---
 
-**[Sign the Pledge](https://aigovops-foundation.com/ncw-pledge) · [Get the Toolkit](https://aigovops-foundation.com) · [Join the Community](https://community.aigovops-foundation.com)**
+**[Sign the Pledge](https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html) · [Get the Toolkit](https://aigovops-foundation.com) · [Join the Community](https://community.aigovops-foundation.com)**
 
 *You're receiving this because you signed the NCW AI Partnership Pledge at AI Expo 2026. [Unsubscribe]([UNSUBSCRIBE_LINK])*
 
@@ -248,7 +248,7 @@ If no — that's the work. And we'll help you do it.
 
 ---
 
-**[Sign the Pledge](https://aigovops-foundation.com/ncw-pledge) · [Get the Toolkit](https://aigovops-foundation.com) · [Join the Community](https://community.aigovops-foundation.com)**
+**[Sign the Pledge](https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html) · [Get the Toolkit](https://aigovops-foundation.com) · [Join the Community](https://community.aigovops-foundation.com)**
 
 *You're receiving this because you signed the NCW AI Partnership Pledge at AI Expo 2026. [Unsubscribe]([UNSUBSCRIBE_LINK])*
 
@@ -292,7 +292,7 @@ The AiGovOps Foundation is also running regional office hours for NCW signers. T
 
 You know someone who wasn't in that room on August 11. A colleague, a neighbor, a city council member, a parent on your school's advisory committee. Someone who should be part of this conversation and isn't yet.
 
-**Forward this email and ask them to sign.** Or use this link: [aigovops-foundation.com/ncw-pledge].
+**Forward this email and ask them to sign.** Or use this link: [aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html].
 
 The Pledge gets stronger with every person who signs it. The community gets more useful with every story added. The region gets harder to dismiss as a proof point when more people in it have made the same commitment.
 
@@ -304,7 +304,7 @@ Thank you for signing. Thank you for doing the work. We'll see you in the fall.
 
 ---
 
-**[Sign the Pledge](https://aigovops-foundation.com/ncw-pledge) · [Get the Toolkit](https://aigovops-foundation.com) · [Join the Community](https://community.aigovops-foundation.com)**
+**[Sign the Pledge](https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html) · [Get the Toolkit](https://aigovops-foundation.com) · [Join the Community](https://community.aigovops-foundation.com)**
 
 *You're receiving this because you signed the NCW AI Partnership Pledge at AI Expo 2026. [Unsubscribe]([UNSUBSCRIBE_LINK])*
 

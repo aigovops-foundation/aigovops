@@ -172,7 +172,7 @@ All hyperlinks tested. Results grouped by status.
 ### NOT YET LIVE (expected by Expo date)
 | URL | Status |
 |-----|--------|
-| `aigovops-foundation.com/ncw-pledge` | Referenced in centerpiece.html as the pledge signing destination. Not yet live or not confirmed accessible. |
+| `aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html` | Referenced in centerpiece.html as the pledge signing destination. Not yet live or not confirmed accessible. |
 | `/api/sign.js` (pledge.html form) | Backend endpoint for pledge form submissions. Requires server-side validation — not testable from static HTML review. |
 
 ---
@@ -471,7 +471,7 @@ resources.html "Read on Substack" links to `https://aigovops.substack.com` (the 
 | 29 | LOW | E | centerpiece.html | J-PAL referenced without a specific URL or study citation |
 | 30 | LOW | E | Ken bio | "led data and mobility at Autonomic.ai" (webapp) vs. "CEO of Autonomic.ai" (deck) — minor variation |
 | 31 | LOW | A | Cornell | "1 in 3 use AI" is technically "37% at least monthly" — fine simplification but note if challenged |
-| 32 | LOW | B | aigovops-foundation.com/ncw-pledge | Referenced destination for pledge signing — not confirmed live |
+| 32 | LOW | B | aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html | Referenced destination for pledge signing — not confirmed live |
 | 33 | LOW | B | /api/sign.js | Pledge form backend not testable from static review — confirm server-side handler is live |
 | 34 | LOW | C | mainstreet.jpg | Appears AI-generated (overly perfect architecture) — no real Wenatchee branding visible |
 

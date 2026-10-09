@@ -204,7 +204,7 @@ APPLY NOW → ncwtech.org
 > `Join the Expo — August 11, Wenatchee Convention Center → ncwtech.org/expo`
 
 **CTA 3 — For the broader community / pledge signers**
-> `Sign the NCW AI Pledge → aigovops-foundation.com/ncw-pledge`
+> `Sign the NCW AI Pledge → aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html`
 
 *Recommendation: Use CTA 1 in all versions until application deadline, then swap to CTA 2 for the final 2 weeks pre-event. Use CTA 3 in the post-event cut.*
 
@@ -282,7 +282,7 @@ Style: Driving momentum track — building percussion, light synth undertone, re
 
 ## 6. WHERE TO EMBED THIS TRAILER
 
-1. **Top of the NCW AI Partnership Pledge landing page** (`aigovops-foundation.com/ncw-pledge`) — the trailer is the emotional primer before anyone reads the seven points. A visitor who watches first signs at a much higher rate than one who reads cold.
+1. **Top of the NCW AI Partnership Pledge landing page** (`aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html`) — the trailer is the emotional primer before anyone reads the seven points. A visitor who watches first signs at a much higher rate than one who reads cold.
 
 2. **NCW Tech Alliance website** (`ncwtech.org`) — front-page hero embed, above the fold. Replace any static banner. This is the primary registration driver.
 
