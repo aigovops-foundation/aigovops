@@ -11,8 +11,7 @@
 #   5. viewport meta everywhere
 #   6. skip-link on every nav-bearing page + blog posts; focus-visible styles
 #      live in the shared CSS chain
-#   7. feedback strip (.aig-feedback) on content pages — CONDITIONAL: skipped
-#      with a note until the widget ships (M12b)
+#   7. feedback strip (.aig-feedback) on content pages.
 # Standalone/self-contained pages (no site chrome by design — matches the
 # design tier's console exemption): status.html, jeeves-brief/console/estate,
 # f-ai-friday.html carries the café nav (Walk run 2) and is checked like any page.
@@ -133,7 +132,7 @@ for css in ("css/style.css", "css/garden.css"):
     emit(f"focus-visible styles: {css}",
          "ok" if os.path.exists(css) and "focus-visible" in read(css) else "no :focus-visible rules")
 
-# ── 7. feedback strip (conditional until M12b ships) ──────────────────────
+# ── 7. feedback strip on content pages ────────────────────────────────────
 section("Feedback strip (.aig-feedback) on content pages")
 shipped = any("aig-feedback" in read(p) for p in pages)
 if not shipped:

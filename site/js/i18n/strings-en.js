@@ -17,6 +17,15 @@ window.I18N = {
     book: { e: '20 minutes', t: 'Book time with the founders', d: 'Ken or Bob. Pick a time that suits you.' },
     find: 'Or search everything we have published: cases, worksheets, tools →',
   },
+  personas: {
+    prompt: "I'm a…",
+    founder: 'Startup founder',
+    enterprise: 'Enterprise governance lead',
+    student: 'Student',
+    researcher: 'Researcher',
+    regulator: 'Regulator / policy',
+    contributor: 'Open-source contributor',
+  },
   community: {
     eyebrow: 'Every Thursday · 15:00 Pacific · Ken hosts',
     h1: 'Thursday.',

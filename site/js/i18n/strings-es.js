@@ -17,6 +17,15 @@ window.I18N = {
     book: { e: '20 minutos', t: 'Reserva una reunión con los fundadores', d: 'Ken o Bob. Elige el horario que mejor te convenga.' },
     find: 'O busca todo lo que hemos publicado: casos, hojas de trabajo y herramientas →',
   },
+  personas: {
+    prompt: 'Soy…',
+    founder: 'Fundador/a de startup',
+    enterprise: 'Líder de gobernanza empresarial',
+    student: 'Estudiante',
+    researcher: 'Investigador/a',
+    regulator: 'Regulador/a o políticas públicas',
+    contributor: 'Colaborador/a de código abierto',
+  },
   community: {
     eyebrow: 'Cada jueves · 15:00 (hora del Pacífico) · Ken anfitrión',
     h1: 'Jueves.',

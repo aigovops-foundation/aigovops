@@ -37,6 +37,42 @@ The front door offers six actions: become a member, give, join a meeting, read t
 - [Thursday | AiGovOps Foundation](https://www.aigovops-foundation.com/community.html): Thursday at 15:00 Pacific is where receipts are shown and marks are made. Join free, come on Thursday, give an hour. Ship safe AI — never unsafe AI.
   - H1: Thursday.
   - H2: One path, three steps
+- [AI governance for startup founders | AiGovOps Foundation](https://www.aigovops-foundation.com/for-founders.html): A practical starting path for startup founders exploring AI risk, the AiGovOps practice, and a 10-minute Gate Check.
+  - H1: AI governance for startup founders
+  - H2: Three steps to get started
+  - H2: Frequently asked questions
+  - H2: Related answer pages
+  - H2: One next step
+- [AI governance for enterprise governance leads | AiGovOps Foundation](https://www.aigovops-foundation.com/for-enterprise.html): Map AI governance standards, explore the Vendor RFI, and book a conversation with the AiGovOps Foundation founders.
+  - H1: AI governance for enterprise governance leads
+  - H2: Three steps to get started
+  - H2: Frequently asked questions
+  - H2: Related answer pages
+  - H2: One next step
+- [AI governance for students | AiGovOps Foundation](https://www.aigovops-foundation.com/for-students.html): Start learning AI governance with the Foundation’s guide, Practice Level 100, and the Thursday community meeting.
+  - H1: AI governance for students
+  - H2: Three steps to get started
+  - H2: Frequently asked questions
+  - H2: Related answer pages
+  - H2: One next step
+- [AI governance for researchers | AiGovOps Foundation](https://www.aigovops-foundation.com/for-researchers.html): Explore OVERT, Beacon source, and the Library’s 100 verified AI-harm cases, with clear routes to the underlying materials.
+  - H1: AI governance for researchers
+  - H2: Three steps to get started
+  - H2: Frequently asked questions
+  - H2: Related answer pages
+  - H2: One next step
+- [AI governance for regulators and policy staff | AiGovOps Foundation](https://www.aigovops-foundation.com/for-regulators.html): Explore OVERT runtime evidence, verify a Beacon receipt in the browser demo, and talk with the Foundation’s founders.
+  - H1: AI governance for regulators and policy staff
+  - H2: Three steps to get started
+  - H2: Frequently asked questions
+  - H2: Related answer pages
+  - H2: One next step
+- [AI governance for open-source contributors | AiGovOps Foundation](https://www.aigovops-foundation.com/for-contributors.html): Find contribution guides for Beacon, Umbrella, and Vendor RFI, then join the Foundation’s Thursday community meeting.
+  - H1: AI governance for open-source contributors
+  - H2: Three steps to get started
+  - H2: Frequently asked questions
+  - H2: Related answer pages
+  - H2: One next step
 
 ## Topics
 - [What Is AI Governance? | AiGovOps Foundation](https://www.aigovops-foundation.com/ai-governance.html): See how AI governance becomes operational through policy as code, evidence that ships, and receipts an auditor can verify.

@@ -106,6 +106,12 @@ const START_PATHS = [
   '/support.html',
   '/founders.html',
   '/community.html',
+  '/for-founders.html',
+  '/for-enterprise.html',
+  '/for-students.html',
+  '/for-researchers.html',
+  '/for-regulators.html',
+  '/for-contributors.html',
 ];
 const TOPICS_PATHS = [
   '/ai-governance.html',
