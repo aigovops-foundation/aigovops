@@ -4,7 +4,7 @@
 
 <p class="thursday-next"><strong><span data-thursday="date">the next Thursday</span> · <span data-thursday="time">15:00 Pacific</span></strong> · <span data-thursday="host">Ken</span> hosts.</p>
 
-<p><strong>Join:</strong> <a data-thursday="join" href="https://community.aigovops-foundation.com/events.html">the link is on the community events page</a>.
+<p><strong>Join:</strong> <a data-thursday="join" href="https://community.aigovops-foundation.com/">the link is on the community front page</a>.
 Bring a receipt, or come to watch one. The date above is computed; the link is set once in
 <code>assets/thursday.js</code> and every Thursday page reads it.</p>
 

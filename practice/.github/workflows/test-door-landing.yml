@@ -9,11 +9,15 @@ on:
     paths:
       - index.html
       - scripts/test_door_landing.py
+      - docs/THURSDAY.md
+      - scripts/test_thursday_fallback.py
   push:
     branches: [main]
     paths:
       - index.html
       - scripts/test_door_landing.py
+      - docs/THURSDAY.md
+      - scripts/test_thursday_fallback.py
 
 jobs:
   door-landing:
@@ -24,3 +28,4 @@ jobs:
         with:
           python-version: "3.12"
       - run: python3 scripts/test_door_landing.py
+      - run: python3 scripts/test_thursday_fallback.py
