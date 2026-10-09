@@ -1,6 +1,6 @@
 # AiGovOps Foundation — Site Redesign (June 2026)
 
-Private review repository for Ken Johnston and Bob Rapp. This is a simplified, action-first redesign of https://www.aigovopsfoundation.org/ — same content, easier to navigate, mobile-first, accessibility-aware, and tested across major browsers.
+Private review repository for Ken Johnston and Bob Rapp. This is a simplified, action-first redesign of https://www.aigovops-foundation.com/ — same content, easier to navigate, mobile-first, accessibility-aware, and tested across major browsers.
 
 **Live preview (after enabling Pages):** Settings → Pages → Source: Deploy from a branch → Branch: `main` / `(root)`. The repo home page will render `index.html`.
 
