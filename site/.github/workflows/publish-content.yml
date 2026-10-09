@@ -34,6 +34,8 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python3 scripts/build_content.py
+      - name: Refresh AI answer-engine files
+        run: node scripts/build-llms-txt.mjs
       - name: Commit what changed
         env:
           # So the self-test's import of build_content.py stops writing
@@ -57,8 +59,9 @@ jobs:
           # Keep in step with the constants in scripts/build_content.py:
           #   BLOG_INDEX=blog.html  FEED=feed.xml  SITEMAP=sitemap.xml  DRAFTS=content/drafts
           #   TRANSLATIONS=content/translations  FOUNDERS_HTML=founders.html  blog/
+          #   AEO indexes=llms.txt llms-full.txt
           # scripts/test-publish-contract.py asserts this list still covers them.
-          OUTPUTS="blog blog.html feed.xml sitemap.xml founders.html content/drafts content/translations"
+          OUTPUTS="blog blog.html feed.xml sitemap.xml founders.html content/drafts content/translations llms.txt llms-full.txt"
           # -A over the pathspec, not bare: -A still handles deletes and renames inside
           # those paths, which a plain `git add` does not, and that was the other half of
           # what #154 was reaching for.
@@ -66,9 +69,9 @@ jobs:
           # Anything dirty OUTSIDE the contract is the signal #153 never got. Fail on it
           # rather than committing it: a new write target is a one-line change here, and
           # a surprise file in the tree is exactly what must not reach a public URL.
-          if [ -n "$(git status --porcelain --untracked-files=all -- . ':(exclude)blog' ':(exclude)blog.html' ':(exclude)feed.xml' ':(exclude)sitemap.xml' ':(exclude)founders.html' ':(exclude)content/drafts' ':(exclude)content/translations')" ]; then
+          if [ -n "$(git status --porcelain --untracked-files=all -- . ':(exclude)blog' ':(exclude)blog.html' ':(exclude)feed.xml' ':(exclude)sitemap.xml' ':(exclude)founders.html' ':(exclude)content/drafts' ':(exclude)content/translations' ':(exclude)llms.txt' ':(exclude)llms-full.txt')" ]; then
             echo "::error::publish-content: the build left files outside its declared outputs — add them to OUTPUTS here if they are intended, or stop writing them:"
-            git status --porcelain --untracked-files=all -- . ':(exclude)blog' ':(exclude)blog.html' ':(exclude)feed.xml' ':(exclude)sitemap.xml' ':(exclude)founders.html' ':(exclude)content/drafts' ':(exclude)content/translations'
+            git status --porcelain --untracked-files=all -- . ':(exclude)blog' ':(exclude)blog.html' ':(exclude)feed.xml' ':(exclude)sitemap.xml' ':(exclude)founders.html' ':(exclude)content/drafts' ':(exclude)content/translations' ':(exclude)llms.txt' ':(exclude)llms-full.txt'
             exit 1
           fi
           if git diff --cached --quiet; then

@@ -1,0 +1,54 @@
+# AiGovOps Foundation
+
+> AiGovOps Foundation is a 501(c)(3) nonprofit that builds open-source AI governance operations — policy as code, signed evidence receipts (Beacon), and tools that conform to OVERT, the open standard for runtime trust, which the Foundation co-stewards with CHAI (Coalition for Health AI). Everything is Apache-2.0.
+
+The front door offers six actions: become a member, give, join a meeting, read the newsletter, get an audit plan, or book the founders. The Library is free for members; meetings are Thursdays at 15:00 Pacific.
+
+## Start here
+- [AiGovOps Foundation — Ship Safe AI. Never Unsafe AI.](https://www.aigovops-foundation.com/): Ship safe AI — never unsafe AI. Sit down at the AiGovOps Foundation café: say what brought you in, run the ten-minute Gate Check, and leave in an hour with a rule, a signed receipt and a Thursday.
+- [What Is AiGovOps? And Why We Built the AiGovOps Foundation to Advance It | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/what-is-aigovops.html): Every AI system deployed without automated governance creates technical debt that compounds. Every compliance framework that exists only as a PDF is a...
+- [AI Governance Frameworks Explorer | AiGovOps Foundation](https://www.aigovops-foundation.com/frameworks.html): Find which AI governance frameworks apply to your organization — EU AI Act, NIST AI RMF, ISO/IEC 42001, GDPR, HIPAA, and 35+ more. Filter by region, industry, and risk level.
+- [Open source | AiGovOps Foundation](https://www.aigovops-foundation.com/open-source.html): The open source — one practice (four levels, one hour each) and three engines: Beacon signs, Umbrella declares, Lantern reads. Apache-2.0, conforming to OVERT. Ship safe AI — never unsafe AI.
+- [The Library | AiGovOps Foundation](https://www.aigovops-foundation.com/library.html): The Library — one hundred verified AI harms, each with the gate that would have caught it; the practitioner test; the gates, live; forty frameworks. Free to read: join with an email, nothing more. Ship safe AI — never unsafe AI.
+- [Support | AiGovOps Foundation](https://www.aigovops-foundation.com/support.html): Fund the open-source AI governance standard. Every contribution keeps policy-as-code free, verifiable, and global.
+- [Founders | AiGovOps Foundation](https://www.aigovops-foundation.com/founders.html): Ken Johnston and Bob Rapp — co-founders of the AiGovOps Foundation. AI and data leadership from Microsoft, Ford, Autonomic.ai, Vodafone, IBM Watson, GE Healthcare, and General Motors.
+- [Thursday | AiGovOps Foundation](https://www.aigovops-foundation.com/community.html): Thursday at 15:00 Pacific is where receipts are shown and marks are made. Join free, come on Thursday, give an hour. Ship safe AI — never unsafe AI.
+
+## Standards and tools
+- OVERT (external standard): https://overt.is/
+- Beacon: https://aigovops-foundation.github.io/aigovops-beacon/
+- Umbrella: https://aigovops-foundation.github.io/umbrella-govops/
+- Lantern: https://aigovops-foundation.github.io/aigovops-lantern/
+- Vendor RFI: https://github.com/aigovops-foundation/aigovops-vendor-rfi
+- NCW AI Camp: https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/
+
+## Practice and community
+- Practice site: https://practice.aigovops-foundation.com/
+- Thursday page: https://practice.aigovops-foundation.com/docs/THURSDAY.html
+- Gate check: https://community.aigovops-foundation.com/gate-check.html
+- Community Library (members, free): https://community.aigovops-foundation.com/library/
+
+## Writing
+- [What Is AiGovOps? And Why We Built the AiGovOps Foundation to Advance It | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/what-is-aigovops.html): Every AI system deployed without automated governance creates technical debt that compounds. Every compliance framework that exists only as a PDF is a...
+- [NIST AI RMF vs. The Real World: Turning Standards Into Executable Code | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/nist-ai-rmf-vs-real-world.html): Here's the uncomfortable truth most board presentations won't show: 88% of organizations are now using AI, but only 39% have any board-level oversight in...
+- [EU AI Act Ready by August 2026? Here's Your 90-Day Compliance Roadmap | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/eu-ai-act-90-day-roadmap.html): The clock is ticking. August 2, 2026 marks the applicability date for key EU AI Act obligations covering high-risk AI systems under Annex III. If your...
+- [Healthcare AI Governance: Spring 2026 — Crossing the Inflection Point | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/healthcare-ai-governance-spring-2026.html): This is the inaugural edition of the AiGovOps Foundation's semi-annual Healthcare AI Governance report. Every six months, we publish a practitioner-facing...
+- [Agentic Frontiers: A Two-Month Retrospective on Global AI Governance (Jan–Mar 2026) | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/agentic-frontiers-retrospective.html): The first quarter of 2026 marked a definitive turning point in the evolution of artificial intelligence. We have officially moved beyond the era of "AI as...
+- [Agentic Hell: Why We're Repeating the Worst Mistakes in AI | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/agentic-hell.html): "Those who cannot remember the past are condemned to build recursive agent loops with no observability." — probably not George...
+- [The Flow-to-Trust Loop: How 10 Ops Disciplines Converge to Ship Trusted AI | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/flow-to-trust-loop.html): A practitioner's guide to the modern AI Ops stack. Shipping trusted AI isn't the job of a single team or a single tool — it's the convergence of ten...
+- [Stop Writing for Humans. They Stopped Reading (AIFM or GTFO) | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/stop-writing-for-humans.html): Write for the LLM that's actually reading you. Here's the part nobody wants to admit: your CEO is not reading your 60-page strategy doc. Their LLM might....
+- [No More Anonymous Ghosts: NIST's Push for AI Agent Accountability | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/no-more-anonymous-ghosts.html): It is Sunday, March 15, 2026, and the landscape of artificial intelligence has shifted dramatically from the experimental "chatbot" era of a few years...
+- [ISO 42001 as controls you can run, not a binder you file | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/iso-42001-controls-you-can-run.html): ISO 42001 is the AI management system standard. Treat its controls as checks you run in CI, each leaving a receipt an auditor can read, not a document you file.
+- [Seconds each — the hold that Cigna's PXDX never had | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/seconds-each.html): ProPublica reported that Cigna's PXDX process let medical directors deny large batches of claims in seconds each, often without opening the patient's file. The gate is a human who actually reviews before a denial — and the arithmetic of what "actually" means when the batch is a thousand deep. Level 300.
+- [Forty-five minutes at Knight Capital — the deploy is the decision | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/forty-five-minutes-at-knight.html): In 2012 a faulty deploy sent $7 billion of unintended orders in 45 minutes and cost Knight Capital $440 million and the firm. No LLM anywhere. The gate it needed is the one your agent needs today: the deploy is a consequential action, and it gets a rule, a kill switch and a rehearsed way back.
+- [The one-dollar Tahoe — why a system prompt is not a rule | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/the-one-dollar-tahoe.html): In 2023 a dealer's chatbot agreed to sell a 2024 Chevy Tahoe for $1 and called it a legally binding offer. Nobody lost a truck. Everybody learned that a polite instruction to an LLM is not a gate. Level 200 starts here.
+- [The café is open — say what brought you in, leave with a receipt | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/the-cafe-is-open.html): The Foundation's home page is a café now. Wren keeps the table by the door and asks one question. Five doors, each a real case; ten minutes to start; an hour to a rule in your own words, a signed receipt, and a Thursday.
+- [The Fall 2026 Release — one hour to your first receipt, at whatever level you start | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/the-fall-2026-release.html): The Foundation's open-source projects become one practice with four levels, each an hour or less, each on a real case from the 100 verified harms — built on OVERT, the open standard from Glacis, which is the hero of this story.
+- [El lanzamiento de otoño 2026 — una hora hasta tu primer recibo, empieces en el nivel que empieces | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/es/the-fall-2026-release.html): Los proyectos de código abierto de la Fundación se convierten en una sola práctica con cuatro niveles, cada uno de una hora o menos, cada uno sobre un caso real de los 100 daños verificados — construida sobre OVERT, el estándar abierto de Glacis, que es el héroe de esta historia.
+- [The ten-minute Gate Check — is this AI agent ready to run? | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/the-ten-minute-gate-check.html): Ten yes/no questions a manager can answer about an AI agent this week, each with the evidence to point at, ending in a card you keep. No account, no maybe.
+- [El Gate Check de diez minutos — ¿está este agente de IA listo para funcionar? | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/es/the-ten-minute-gate-check.html): Diez preguntas de sí o no que un responsable puede contestar sobre un agente de IA esta semana, cada una con la evidencia que señalar, y al final una tarjeta que te quedas. Sin cuenta, sin "quizás".
+- AiGovOps Substack: https://aigovops.substack.com/
+
+## Optional
+- [Privacy | AiGovOps Foundation](https://www.aigovops-foundation.com/privacy.html): How the AiGovOps Foundation website handles your data — in plain language. What we collect, why, and the control you keep.
+- [Terms of Use | AiGovOps Foundation](https://www.aigovops-foundation.com/terms.html): Plain-language terms of use for the AiGovOps Foundation website.

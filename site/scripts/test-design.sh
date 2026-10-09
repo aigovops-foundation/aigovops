@@ -66,14 +66,14 @@ for page in "${TOP_PAGES[@]}"; do
     check "garden.css: $page (standalone — token re-point, exempt from link)" "ok"
     continue;;
   esac
-  if grep -q 'href="css/garden\.css"' "$REPO/$page"; then
+  if grep -Eq 'href="css/garden\.css(\?v=[^"]+)?"' "$REPO/$page"; then
     check "garden.css: $page" "ok"
   else
     check "garden.css: $page" "no <link> to css/garden.css"
   fi
 done
 for page in "${BLOG_PAGES[@]}"; do
-  if grep -q 'href="\.\./css/garden\.css"' "$REPO/$page"; then
+  if grep -Eq 'href="\.\./css/garden\.css(\?v=[^"]+)?"' "$REPO/$page"; then
     check "garden.css: $page" "ok"
   else
     check "garden.css: $page" "no <link> to ../css/garden.css"
@@ -187,8 +187,8 @@ PY
 # ── 5. index.html loads garden.css before porch.css ────────────────────────
 echo ""
 echo "  [index.html stylesheet order]"
-G_LINE=$(grep -n 'href="css/garden\.css"' "$REPO/index.html" | head -1 | cut -d: -f1)
-P_LINE=$(grep -n 'href="css/porch\.css"' "$REPO/index.html" | head -1 | cut -d: -f1)
+G_LINE=$(grep -En 'href="css/garden\.css(\?v=[^"]+)?"' "$REPO/index.html" | head -1 | cut -d: -f1)
+P_LINE=$(grep -En 'href="css/porch\.css(\?v=[^"]+)?"' "$REPO/index.html" | head -1 | cut -d: -f1)
 if [ -z "$G_LINE" ]; then
   check "index.html: garden.css before porch.css" "garden.css not linked"
 elif [ -z "$P_LINE" ]; then

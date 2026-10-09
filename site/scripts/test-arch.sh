@@ -45,7 +45,7 @@ import re, os, sys, glob
 repo = sys.argv[1]
 os.chdir(repo)
 TPL = "$" + "{"  # JS template-literal marker (split so bash 3.2 heredoc scan never sees it)
-pages = sorted(glob.glob("*.html") + glob.glob("blog/*.html"))
+pages = sorted(glob.glob("*.html") + glob.glob("blog/**/*.html", recursive=True))
 
 def read(p): return open(p, encoding="utf-8", errors="replace").read()
 def no_scripts(s): return re.sub(r"<script\b.*?</script>", "", s, flags=re.S | re.I)
@@ -117,9 +117,13 @@ for e in entries:
     else:
         emit(f"sitemap entry ok: /{e}")
 listed = {e if e else "index.html" for e in entries}
-# (The sitemap need not be exhaustive, only honest — reachability of unlisted
-#  indexable pages is what the orphan check below guards.)
+# Root pages and blog posts are required in the sitemap; the orphan check
+# below continues to guard reachability for every other indexable page.
 emit("sitemap lists index.html", "ok" if "index.html" in listed else "homepage missing")
+required = [p for p in pages if p not in STUBS and p not in NOIDX]
+missing = [p for p in required if p not in listed]
+emit(f"sitemap covers all {len(required)} indexable root/blog pages",
+     "ok" if not missing else f"missing: {', '.join(missing)}")
 
 # ── 4. CSS load order style.css → garden.css ──────────────────────────────
 section("CSS order — style.css before garden.css wherever both load")
@@ -176,8 +180,9 @@ section("Redirect stubs carry noindex + meta-refresh + canonical")
 for p in sorted(STUBS):
     s = read(p)
     probs = []
-    if p not in NOIDX:
-        probs.append("no noindex")
+    robots = re.search(r'<meta name="robots"[^>]*content="([^"]*)"', s, re.I)
+    if not robots or robots.group(1).strip().lower() != "noindex, follow":
+        probs.append("robots must be noindex, follow")
     if not re.search(r'http-equiv="refresh"[^>]*url=', s, re.I):
         probs.append("meta-refresh has no url=")
     if 'rel="canonical"' not in s:

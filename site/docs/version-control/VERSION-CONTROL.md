@@ -119,6 +119,7 @@ ci: add doc validation tier to Cloud-Mary
 ## Checklist
 - [ ] Cloud-Mary passes locally
 - [ ] No secrets in code
+- [ ] Bump the asset version (`scripts/bump-asset-version.sh`) when CSS/JS changes.
 - [ ] WCAG touch targets ≥ 44px
 - [ ] New pages added to sitemap.xml
 - [ ] New pages added to footer nav

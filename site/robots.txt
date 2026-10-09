@@ -2,4 +2,48 @@ User-agent: *
 Allow: /
 Disallow: /transcripts/
 
+User-agent: GPTBot
+Allow: /
+Disallow: /transcripts/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /transcripts/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /transcripts/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /transcripts/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /transcripts/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /transcripts/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /transcripts/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /transcripts/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /transcripts/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /transcripts/
+
+User-agent: CCBot
+Allow: /
+Disallow: /transcripts/
+
 Sitemap: https://www.aigovops-foundation.com/sitemap.xml

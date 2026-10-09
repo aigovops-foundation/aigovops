@@ -31,12 +31,13 @@ Do not read them as current policy.
 unattended. So the publish job declares its outputs and fails on anything else:
 
 ```yaml
-OUTPUTS="blog blog.html feed.xml sitemap.xml founders.html content/drafts content/translations"
+OUTPUTS="blog blog.html feed.xml sitemap.xml founders.html content/drafts content/translations llms.txt llms-full.txt"
 git add -A -- $OUTPUTS        # -A so deletes and renames still travel
 # …then fail the job if `git status --porcelain` shows anything outside OUTPUTS
 ```
 
-Keep that list in step with `scripts/build_content.py`'s write-target constants.
+Keep that list in step with `scripts/build_content.py`'s write-target constants and the
+`scripts/build-llms-txt.mjs` outputs.
 `scripts/test-publish-contract.py` asserts it does, and is verified to fail when a target is
 dropped — which is literally bug #153, where the list had drifted and every push was blocked.
 

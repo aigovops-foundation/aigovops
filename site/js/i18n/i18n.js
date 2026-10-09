@@ -60,13 +60,15 @@
   // subpath (a GitHub Pages project page, a staging prefix, a local `python3 -m
   // http.server` in a parent directory). Deriving it from this script's own location is
   // correct in all of those and needs no configuration.
-  const I18N_DIR = (function () {
+  const I18N_SCRIPT_URL = (function () {
     try {
       const self = document.currentScript && document.currentScript.src;
-      if (self) return self.slice(0, self.lastIndexOf('/') + 1);
+      if (self) return new URL(self, document.baseURI);
     } catch (e) { /* fall through */ }
-    return 'js/i18n/';            // last resort: the old behaviour, for the root page
+    return new URL('js/i18n/i18n.js', document.baseURI);
   })();
+  const I18N_DIR = new URL('.', I18N_SCRIPT_URL).href;
+  const I18N_VERSION = I18N_SCRIPT_URL.searchParams.get('v');
 
   function loadStrings(lang) {
     // Remove existing script
@@ -74,7 +76,9 @@
     if (existing) existing.remove();
     const s = document.createElement('script');
     s.id = 'i18n-strings';
-    s.src = `${I18N_DIR}strings-${lang}.js`;
+    const stringsUrl = new URL(`strings-${lang}.js`, I18N_DIR);
+    if (I18N_VERSION) stringsUrl.searchParams.set('v', I18N_VERSION);
+    s.src = stringsUrl.href;
     s.onload = applyStrings;
     // FAIL LOUD. A missing strings file is why this went unnoticed for months: the page
     // simply kept its English static text and looked fine. One console line is the

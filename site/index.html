@@ -19,14 +19,14 @@
   <meta name="twitter:title" content="AiGovOps Foundation" />
   <meta name="twitter:description" content="AI governance that runs like engineering." />
   <meta name="twitter:image" content="https://www.aigovops-foundation.com/images/wren/cafe-og.jpg" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=20261009a" />
   <!-- M6 porch redesign — garden-warm skin (homepage only). Pure presentation; loads after style.css. -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/garden.css" />
-  <link rel="stylesheet" href="css/porch.css" />
-  <link rel="stylesheet" href="css/wren-cafe.css?v=20260911-3" />
+  <link rel="stylesheet" href="css/garden.css?v=20261009a" />
+  <link rel="stylesheet" href="css/porch.css?v=20261009a" />
+  <link rel="stylesheet" href="css/wren-cafe.css?v=20261009a" />
   <style>
     /* ── M14 dead-simple porch: two doors, one quiet line ── */
     /* two doors instead of four — centered pair */
@@ -78,7 +78,7 @@
     @media (max-width: 600px) { .cafe-head { flex-direction: column; } }
     /* the toolkit band, reduced to one line (the trio lives on Stay at Yes) */
   </style>
-  <script src="js/i18n/i18n.js"></script>
+  <script src="js/i18n/i18n.js?v=20261009a"></script>
   <!-- Plausible Analytics — privacy-first, GDPR-compliant, no cookie banner -->
   <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
 
@@ -87,12 +87,25 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": ["Organization", "NGO"],
       "@id": "https://www.aigovops-foundation.com/#organization",
       "name": "AiGovOps Foundation",
       "url": "https://www.aigovops-foundation.com",
       "logo": "https://www.aigovops-foundation.com/images/logo.png",
       "description": "Open-source AI governance foundation. Policy as code. Evidence that ships. Governance your auditor can verify with one command.",
+      "nonprofitStatus": "Nonprofit501c3",
+      "alternateName": ["AIGovOps", "AI GovOps", "AIGovOps Foundation"],
+      "knowsAbout": [
+        "AI governance",
+        "AI governance operations (AiGovOps)",
+        "OVERT open standard",
+        "Beacon signed evidence receipts",
+        "AI audit",
+        "NIST AI RMF",
+        "EU AI Act",
+        "ISO/IEC 42001"
+      ],
+      "slogan": "Ship safe AI. Never unsafe AI.",
       "foundingDate": "2026",
       "founder": [
         {
@@ -110,7 +123,9 @@
         "https://github.com/aigovops-foundation",
         "https://aigovops.substack.com/",
         "https://www.linkedin.com/in/rkjohnston/",
-        "https://www.linkedin.com/in/bobrapp/"
+        "https://www.linkedin.com/in/bobrapp/",
+        "https://practice.aigovops-foundation.com/",
+        "https://community.aigovops-foundation.com/"
       ],
       "contactPoint": {
         "@type": "ContactPoint",
@@ -416,7 +431,7 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="js/main.js?v=20261009a"></script>
 <script>
 // Newsletter inline form handler
 function handleNewsletterSubmit(e) {
@@ -469,6 +484,6 @@ function handleNewsletterSubmit(e) {
 })();
 
 </script>
-<script src="feedback.js" class="aig-feedback-loader" defer></script>
+<script src="feedback.js?v=20261009a" class="aig-feedback-loader" defer></script>
 </body>
 </html>

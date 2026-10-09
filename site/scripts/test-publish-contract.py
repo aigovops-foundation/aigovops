@@ -20,11 +20,18 @@ Run:  python3 scripts/test-publish-contract.py
 
 import re
 import sys
+import subprocess
 from pathlib import Path
+from urllib.parse import parse_qs, urlsplit
 
 ROOT = Path(__file__).resolve().parent.parent
 WORKFLOW = ROOT / ".github" / "workflows" / "publish-content.yml"
 GENERATOR = ROOT / "scripts" / "build_content.py"
+ASSET_VERSION_EXCLUDES = {
+    entry.strip()
+    for entry in (ROOT / "scripts" / "asset-version-excludes.txt").read_text(encoding="utf-8").splitlines()
+    if entry.strip()
+}
 
 PASS = FAIL = 0
 
@@ -123,8 +130,8 @@ def main():
         check("sitemap.xml exists", False, "nothing to keep current")
     else:
         sm = sitemap.read_text(encoding="utf-8")
-        posts = sorted(p.stem for p in (ROOT / "blog").glob("*.html"))
-        absent = [p for p in posts if f"/blog/{p}.html" not in sm]
+        posts = sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / "blog").rglob("*.html"))
+        absent = [p for p in posts if f"/{p}" not in sm]
         check(f"all {len(posts)} pages under blog/ appear in sitemap.xml",
               not absent, f"absent: {absent}")
         check("build_content.py maintains the generated block",
@@ -154,7 +161,96 @@ def main():
             err = str(e)
         check("sitemap.xml is well-formed XML", ok_xml, "" if ok_xml else err)
 
-    print("\n  [6] bytecode cannot come back")
+    print("\n  [6] AI answer-engine files and JSON-LD")
+    llms = subprocess.run(
+        ["node", str(ROOT / "scripts" / "build-llms-txt.mjs"), "--check"],
+        cwd=ROOT, text=True, capture_output=True, check=False,
+    )
+    check("llms.txt and llms-full.txt match the sitemap and page metadata",
+          llms.returncode == 0, (llms.stdout + llms.stderr).strip())
+
+    html_files = [
+        p for p in ROOT.rglob("*.html")
+        if not any(part in ASSET_VERSION_EXCLUDES for part in p.relative_to(ROOT).parts)
+    ]
+    asset_references = 0
+    asset_versions = set()
+    asset_errors = []
+    attr_re = re.compile(r"""([:\w-]+)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))""")
+    asset_tag_re = re.compile(r"<(?:link|script)\b[^>]*>", re.I | re.S)
+    css_import_re = re.compile(r"""@import\s+(?:url\(\s*)?(['"]?)([^'"\s)]+)\1\s*\)?""", re.I)
+    local_hosts = {"www.aigovops-foundation.com", "aigovops-foundation.com"}
+
+    def check_asset_reference(page, value, extension):
+        nonlocal asset_references
+        parsed_url = urlsplit(value)
+        if not parsed_url.path.lower().endswith(extension):
+            return
+        same_site = (
+            not parsed_url.scheme and not parsed_url.netloc
+            or parsed_url.scheme in {"http", "https"} and parsed_url.hostname in local_hosts
+            or not parsed_url.scheme and parsed_url.hostname in local_hosts
+        )
+        if not same_site:
+            return
+        asset_references += 1
+        values = parse_qs(parsed_url.query, keep_blank_values=True).get("v", [])
+        if len(values) != 1 or not values[0]:
+            asset_errors.append(f"{page.relative_to(ROOT)}: {value}")
+        else:
+            asset_versions.add(values[0])
+
+    for page in html_files:
+        source = page.read_text(encoding="utf-8", errors="replace")
+        for asset_tag in asset_tag_re.finditer(source):
+            tag = asset_tag.group(0)
+            tag_name = re.match(r"<([a-z]+)", tag, re.I).group(1).lower()
+            attrs = {
+                key.lower(): next(value for value in values if value is not None)
+                for key, *values in attr_re.findall(tag)
+            }
+            if tag_name == "link" and "stylesheet" in attrs.get("rel", "").lower().split():
+                value, extension = attrs.get("href", ""), ".css"
+            elif tag_name == "script":
+                value, extension = attrs.get("src", ""), ".js"
+            else:
+                continue
+            check_asset_reference(page, value, extension)
+    css_files = [
+        p for p in (ROOT / "css").rglob("*.css")
+        if not any(part in ASSET_VERSION_EXCLUDES for part in p.relative_to(ROOT).parts)
+    ]
+    for stylesheet in css_files:
+        source = stylesheet.read_text(encoding="utf-8", errors="replace")
+        for imported in css_import_re.finditer(source):
+            check_asset_reference(stylesheet, imported.group(2), ".css")
+    jsonld = subprocess.run(
+        ["node", str(ROOT / "scripts" / "test-jsonld-parse.mjs")],
+        cwd=ROOT, text=True, check=False,
+    )
+    check("all JSON-LD blocks parse with JSON.parse", jsonld.returncode == 0)
+
+    versioned = asset_references > 0 and not asset_errors and len(asset_versions) == 1
+    version_detail = (
+        f"version(s): {sorted(asset_versions)}; missing/duplicate: {asset_errors[:5]}"
+    )
+    check(f"all {asset_references} local CSS/JS and @import references across {len(html_files)} HTML and {len(css_files)} CSS files share one ?v= cache version",
+          versioned, version_detail)
+    i18n_source = (ROOT / "js" / "i18n" / "i18n.js").read_text(encoding="utf-8")
+    check("i18n loader carries its cache version to strings-{lang}.js",
+          "searchParams.get('v')" in i18n_source
+          and "searchParams.set('v', I18N_VERSION)" in i18n_source)
+
+    publish_workflow = WORKFLOW.read_text(encoding="utf-8")
+    outputs = re.search(r'^\s*OUTPUTS="([^"]+)"', publish_workflow, re.M)
+    declared_outputs = outputs.group(1).split() if outputs else []
+    check("publish-content refreshes llms files after rendering stories",
+          "node scripts/build-llms-txt.mjs" in publish_workflow)
+    check("llms.txt and llms-full.txt are covered by publish-content OUTPUTS",
+          all(name in declared_outputs for name in ("llms.txt", "llms-full.txt")),
+          f"OUTPUTS: {declared_outputs}")
+
+    print("\n  [7] bytecode cannot come back")
     check("*.pyc and __pycache__/ are gitignored",
           all(p in (ROOT / ".gitignore").read_text(encoding="utf-8") for p in ("*.pyc", "__pycache__/")))
     tracked = [p for p in (ROOT / "scripts").rglob("__pycache__")]
