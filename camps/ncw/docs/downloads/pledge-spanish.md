@@ -48,7 +48,7 @@ Los prompts se guardan. Las respuestas se guardan. Las ediciones se guardan. Par
 
 **Firme en línea** → aigovops-foundation.com/ncw-pledge
 **Obtenga la insignia** para la puerta de su salón, la ventana de su negocio o la página de su organización
-**Únase a la conversación** en nuestra comunidad en community.aigovopsfoundation.org
+**Únase a la conversación** en nuestra comunidad en https://community.aigovops-foundation.com
 
 ### Por qué importa cada punto (la evidencia detrás de la Promesa)
 
@@ -79,7 +79,7 @@ La [investigación del GAO del Senado, junio de 2026](https://www.bluntrochester
 |---|---|
 | Firme la Promesa | aigovops-foundation.com/ncw-pledge |
 | Obtenga el kit gratuito de la Fundación (Beacon, Umbrella, Lantern) | aigovops-foundation.com |
-| Únase a la comunidad AiGovOps | community.aigovopsfoundation.org |
+| Únase a la comunidad AiGovOps | https://community.aigovops-foundation.com |
 | Serie de seguimiento IA en Acción de NCW | ncwtech.org/ai-in-action |
 | Participe en el Concurso de Casos de Uso de IA | ncwtech.org |
 

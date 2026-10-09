@@ -42,7 +42,7 @@ Prompts saved. Outputs saved. Edits saved. So a parent, a regulator, an auditor 
 
 **Sign online** → aigovops-foundation.com/ncw-pledge
 **Get the badge** for your classroom door, your store window, your nonprofit homepage
-**Join the conversation** in our community at community.aigovopsfoundation.org
+**Join the conversation** in our community at https://community.aigovops-foundation.com
 
 ### Why each point matters (the evidence behind the pledge)
 
@@ -73,7 +73,7 @@ Three frontier AIs in parallel — [Perplexity's Model Council](https://www.link
 |---|---|
 | Sign the Pledge | aigovops-foundation.com/ncw-pledge |
 | Get the free Foundation toolkit (Beacon, Umbrella, Lantern) | aigovops-foundation.com |
-| Join the AiGovOps community | community.aigovopsfoundation.org |
+| Join the AiGovOps community | https://community.aigovops-foundation.com |
 | NCW AI in Action follow-up series | ncwtech.org/ai-in-action |
 | Submit to the AI Use Case Showdown | ncwtech.org |
 
