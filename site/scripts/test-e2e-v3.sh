@@ -85,8 +85,17 @@ echo "$HOME" | grep -q "main-content"      && check "main-content anchor present
 echo ""
 echo "  [Brand upgrade]"
 echo "$HOME" | grep -q "footer-marks"      && check "Footer marks line present"        "ok" || check "Footer marks line present"         "not found"
-echo "$HOME" | grep -q "open-source.html"  && check "Open source in the nav"           "ok" || check "Open source in the nav"            "not found"
-echo "$HOME" | grep -q "library.html"      && check "Library in the nav"               "ok" || check "Library in the nav"                "not found"
+NAV=$(printf '%s\n' "$HOME" | sed -n '/<nav class="main-nav"/,/<\/nav>/p')
+printf '%s\n' "$NAV" | grep -qF 'href="library.html" data-i18n="nav.library"' \
+                                            && check "Library in the homepage nav"     "ok" || check "Library in the homepage nav"      "not found"
+printf '%s\n' "$NAV" | grep -qF 'href="https://practice.aigovops-foundation.com/docs/THURSDAY.html" target="_blank" rel="noopener" data-i18n="nav.meetings"' \
+                                            && check "Meetings in the homepage nav"    "ok" || check "Meetings in the homepage nav"     "not found"
+printf '%s\n' "$NAV" | grep -qF 'href="https://aigovops.substack.com" target="_blank" rel="noopener" data-i18n="nav.newsletter"' \
+                                            && check "Newsletter in the homepage nav"  "ok" || check "Newsletter in the homepage nav"   "not found"
+printf '%s\n' "$NAV" | grep -qF 'href="support.html" data-i18n="nav.give"' \
+                                            && check "Give in the homepage nav"        "ok" || check "Give in the homepage nav"         "not found"
+echo "$HOME" | grep -qF 'href="open-source.html"' \
+                                            && check "Open source footer link"          "ok" || check "Open source footer link"           "not found"
 echo "$HOME" | grep -q "OVERT"             && check "OVERT badge"                      "ok" || check "OVERT badge"                       "not found"
 echo "$HOME" | grep -q "data-intent=\"frameworks\"" && check "No assistant chips"     "still present" || check "No assistant chips"              "ok"
 echo "$HOME" | grep -q "aigovops --help"   && check "No CLI chatbot welcome"           "still present" || check "No CLI chatbot welcome"          "ok"

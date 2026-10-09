@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # Cloud-Mary ux tier (M12a) — UX heuristics across the site. LOCAL.
 # Checks:
-#   1. main-nav identical (labels + order) to index.html on every page that
-#      carries it (admin.html's console nav is a documented exception)
+#   1. main-nav identical (labels + order) to library.html on every non-home
+#      page that carries it; index.html has the approved M15 porch nav
+#      (admin.html's console nav is a documented exception)
 #   2. exactly one h1 per page (status.html console exempt — reported finding)
 #   3. porch CTA budget — hero primary CTAs (.action-card / .btn*) ≤ 6/page
 #   4. creed footer PRESENT on every page (exactness is the design tier's
@@ -59,10 +60,14 @@ def nav_labels(p):
             for a in re.findall(r"<a\b[^>]*>(.*?)</a>", m.group(1), re.S)]
 
 # ── 1. nav consistency ────────────────────────────────────────────────────
-section("main-nav labels+order match index.html (consoles exempt)")
-ref = nav_labels("index.html")
-emit("index.html defines the reference nav",
-     "ok" if ref else "no <nav class=\"main-nav\"> on index.html")
+section("M15 homepage nav; interior main-nav labels+order match library.html")
+home_ref = ["Library", "Meetings", "Newsletter", "Give", "Join"]
+home = nav_labels("index.html")
+emit("nav: index.html (M15 porch)",
+     "ok" if home == home_ref else f"expected {' | '.join(home_ref)}; got {' | '.join(home or [])}")
+ref = nav_labels("library.html")
+emit("library.html defines the interior reference nav",
+     "ok" if ref else "no <nav class=\"main-nav\"> on library.html")
 for p in NON_STUBS:
     if p == "index.html" or p.startswith("blog/"):
         continue  # blog posts carry the slim blog chrome, not the main nav

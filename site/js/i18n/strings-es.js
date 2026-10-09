@@ -1,11 +1,21 @@
 window.I18N = {
   lang: 'es',
-  nav: { library: 'Biblioteca', opensource: 'Código abierto', home: 'Inicio', blog: 'Blog' },
+  nav: { library: 'Biblioteca', opensource: 'Código abierto', home: 'Inicio', blog: 'Blog', meetings: 'Reuniones', newsletter: 'Boletín', give: 'Donar' },
   hero: {
     eyebrow: 'Fundación AiGovOps · Política como Código',
     h1: 'Despliega IA segura.<br>Nunca IA insegura.',
     movements: '<span class="mv"><b>Llegar al Sí</b> — antes de desplegar</span> <span class="mv-sep" aria-hidden="true">·</span> <span class="mv"><b>Mantener el Sí</b> — mientras funciona</span> <span class="mv-sep" aria-hidden="true">·</span> <span class="mv"><b>Recuperar el Sí</b> — cuando falla</span>',
     sub: 'Gobernanza como código para que decir sí a la IA sea seguro — construida en abierto, probada en diez minutos.',
+  },
+  six: {
+    title: '¿Qué te gustaría hacer?',
+    member: { e: 'Gratis · 30 segundos', t: 'Hazte miembro', d: 'Con un solo correo, sin contraseña. Accede a la Biblioteca, las reuniones de los jueves y la comunidad.' },
+    give: { e: 'Desde $25 · deducible de impuestos', t: 'Haz una donación', d: 'Mantén el acceso abierto para todos. Puedes donar una sola vez o mensualmente.' },
+    meet: { e: 'Jueves · 15:00 hora del Pacífico', t: 'Únete a una reunión', d: 'Una hora. Trae un caso y llévate una marca.' },
+    news: { e: 'Cada semana · gratis', t: 'Lee el boletín', d: 'Qué cambió en la gobernanza de la IA y una acción para ponerlo en práctica.' },
+    audit: { e: 'Diez minutos · sin cuenta', t: 'Obtén un plan de auditoría', d: 'Responde diez preguntas sobre un sistema de IA y recibe un plan alineado con las cuatro compuertas.' },
+    book: { e: '20 minutos', t: 'Reserva una reunión con los fundadores', d: 'Ken o Bob. Elige el horario que mejor te convenga.' },
+    find: 'O busca todo lo que hemos publicado: casos, hojas de trabajo y herramientas →',
   },
   community: {
     eyebrow: 'Cada jueves · 15:00 (hora del Pacífico) · Ken anfitrión',

@@ -1,11 +1,21 @@
 window.I18N = {
   lang: 'en',
-  nav: { library: 'Library', opensource: 'Open source', home: 'Home', blog: 'Blog' },
+  nav: { library: 'Library', opensource: 'Open source', home: 'Home', blog: 'Blog', meetings: 'Meetings', newsletter: 'Newsletter', give: 'Give' },
   hero: {
     eyebrow: 'AiGovOps Foundation · Policy as Code',
     h1: 'Ship Safe AI.<br>Never Unsafe AI.',
     movements: '<span class="mv"><b>Get to Yes</b> — before you ship</span> <span class="mv-sep" aria-hidden="true">·</span> <span class="mv"><b>Stay at Yes</b> — while it runs</span> <span class="mv-sep" aria-hidden="true">·</span> <span class="mv"><b>Recover to Yes</b> — when it breaks</span>',
     sub: 'Governance as code that makes AI safe to say yes to — built in the open, proven in ten minutes.',
+  },
+  six: {
+    title: 'What would you like to do?',
+    member: { e: 'Free · 30 seconds', t: 'Become a member', d: 'One email, no password. The Library, Thursdays and the community.' },
+    give: { e: 'From $25 · tax-deductible', t: 'Give some money', d: 'Keep the gates free for everyone. One-time or monthly.' },
+    meet: { e: 'Thursdays · 15:00 Pacific', t: 'Join a meeting', d: 'One hour. Bring a case, leave with a mark.' },
+    news: { e: 'Weekly · free', t: 'Read the newsletter', d: 'What changed in AI governance, and one thing to do about it.' },
+    audit: { e: 'Ten minutes · no account', t: 'Get an audit plan', d: 'Answer ten questions about one AI system; get a plan mapped to the four gates.' },
+    book: { e: '20 minutes', t: 'Book time with the founders', d: 'Ken or Bob. Pick a time that suits you.' },
+    find: 'Or search everything we have published: cases, worksheets, tools →',
   },
   community: {
     eyebrow: 'Every Thursday · 15:00 Pacific · Ken hosts',
