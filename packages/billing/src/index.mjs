@@ -41,8 +41,8 @@ export class StripeBilling {
       headers: { authorization: `Bearer ${this.apiKey}`, "content-type": "application/x-www-form-urlencoded" },
       body: this._form({
         mode: "subscription", "line_items[0][price]": price, "line_items[0][quantity]": 1,
-        client_reference_id: tenant, success_url: this.successUrl || "https://aigovops.org/welcome",
-        cancel_url: this.cancelUrl || "https://aigovops.org/pricing",
+        client_reference_id: tenant, success_url: this.successUrl || "https://www.aigovops-foundation.com/",
+        cancel_url: this.cancelUrl || "https://www.aigovops-foundation.com/support.html",
       }),
     });
     if (status >= 300 || !json) throw new Error(`Stripe checkout ${status}`);
