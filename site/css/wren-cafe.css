@@ -131,3 +131,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 @media (prefers-reduced-motion: reduce) { .six-card { transition: none; } .six-card:hover { transform: none; } }
 .six-find a { display: inline-flex; align-items: center; min-height: 44px; }
 .main-nav a { min-width: 44px; justify-content: center; text-align: center; }
+.footer-label {
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--garden-on-dark-dim);
+  margin-top: 10px;
+}

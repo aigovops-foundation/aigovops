@@ -107,6 +107,15 @@ const START_PATHS = [
   '/founders.html',
   '/community.html',
 ];
+const TOPICS_PATHS = [
+  '/ai-governance.html',
+  '/aigovops.html',
+  '/nonprofit.html',
+  '/overt.html',
+  '/beacon.html',
+  '/audit.html',
+  '/starter-kits.html',
+];
 const OPTIONAL_PATHS = ['/privacy.html', '/terms.html'];
 const WRITING_PAGES = [...sitemap.keys()]
   .filter(pathname => pathname.startsWith('/blog/') && pathname.endsWith('.html'))
@@ -159,6 +168,9 @@ function build(full = false) {
     '',
     '## Start here',
     formatPages(START_PATHS.map(localPage), full),
+    '',
+    '## Topics',
+    formatPages(TOPICS_PATHS.map(localPage), full),
     '',
   ];
 

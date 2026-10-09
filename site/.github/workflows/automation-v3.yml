@@ -52,6 +52,8 @@ jobs:
       # was blocked. Verified to fail when founders.html is removed from the list again.
       - name: Publish output contract
         run: python3 scripts/test-publish-contract.py
+      - name: AEO answer pages contract
+        run: python3 scripts/test-answer-pages.py
       # Keeps "this feed is broken" separable from "this founder has not posted lately".
       # Conflating them kept `main` red for eleven days behind an assertion no commit
       # could satisfy, while a single lapsed bridge stayed invisible because the exit
