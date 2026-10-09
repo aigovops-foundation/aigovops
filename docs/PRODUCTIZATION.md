@@ -30,7 +30,7 @@ cloud, already in `@aigovops/install`) and wires the right backends.
 | **Lightweight k8s** | `aigovops up --k3s` (one VPS) | DigitalOcean droplet | **k3s** (33k) |
 | **Cloud 1-click** | DigitalOcean Marketplace · Render · Railway · Fly deploy button | non-ops teams | k3s + cloud-init |
 | **Desktop app** | download → double-click | non-technical, offline | **Tauri** (108k) |
-| **Hosted SaaS** | sign in at https://www.aigovops-foundation.com/ | zero-install | the same stack, managed |
+| **Hosted SaaS** | sign in at aigovops.org | zero-install | the same stack, managed |
 | **Wizard** | open `/` → Setup | policy folks | the gate API + Jeeves |
 
 Everything terminates in the same place: the **Studio** (developer console) + the **Wizard/Dashboard**
