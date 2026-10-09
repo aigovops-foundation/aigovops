@@ -1,7 +1,7 @@
+import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { chromium, request } from 'playwright';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const BASE_URL = process.env.BASE_URL || 'http://localhost:8080';
@@ -26,6 +26,59 @@ const scorecard = {
 
 function record(condition, message) {
   if (!condition) failures.push(message);
+}
+
+function isUnexpectedConsoleError(locationUrl, text, baseUrl = BASE.href) {
+  const cspResourceUrl = /refused to load/i.test(text)
+    ? text.match(/https?:\/\/[^\s"'<>]+/i)?.[0]
+    : null;
+  const resourceUrl = cspResourceUrl || locationUrl;
+  if (!resourceUrl) return true;
+
+  try {
+    return new URL(resourceUrl, baseUrl).origin === new URL(baseUrl).origin;
+  } catch {
+    return true;
+  }
+}
+
+function runSelfTest() {
+  const baseUrl = 'https://www.aigovops-foundation.com/';
+  const cases = [
+    {
+      name: 'ignores Cloudflare Insights CSP errors',
+      locationUrl: 'https://www.aigovops-foundation.com/for-founders.html',
+      text: "Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/abc' because it violates the Content Security Policy.",
+      expected: false,
+    },
+    {
+      name: 'fails on same-origin script errors',
+      locationUrl: 'https://www.aigovops-foundation.com/js/main.js',
+      text: 'Failed to load resource',
+      expected: true,
+    },
+    {
+      name: 'fails on errors without a URL',
+      locationUrl: '',
+      text: 'Uncaught TypeError: value is undefined',
+      expected: true,
+    },
+    {
+      name: 'ignores Plausible cross-origin errors',
+      locationUrl: 'https://plausible.io/js/script.js',
+      text: 'Failed to load resource',
+      expected: false,
+    },
+  ];
+
+  for (const testCase of cases) {
+    assert.equal(
+      isUnexpectedConsoleError(testCase.locationUrl, testCase.text, baseUrl),
+      testCase.expected,
+      testCase.name,
+    );
+  }
+  console.log(`Persona journey console filter: ${cases.length} passed, 0 failed`);
 }
 
 async function readWidths(page) {
@@ -101,6 +154,7 @@ async function getStepLinkStatus(url, browser, api) {
 }
 
 async function run() {
+  const { chromium, request } = await import('playwright');
   await fs.mkdir(RESULTS_DIR, { recursive: true });
   const browser = await chromium.launch({ headless: true });
   const context = await browser.newContext({
@@ -129,13 +183,10 @@ async function run() {
       page.on('console', (message) => {
         if (message.type() !== 'error') return;
         const location = message.location();
-        const source = location.url || page.url();
-        try {
-          if (new URL(source, BASE).origin === BASE.origin) {
-            sameOriginConsoleErrors.push({ text: message.text(), source });
-          }
-        } catch {
-          sameOriginConsoleErrors.push({ text: message.text(), source });
+        const source = location.url || '';
+        const text = message.text();
+        if (isUnexpectedConsoleError(source, text, BASE.href)) {
+          sameOriginConsoleErrors.push({ text, source });
         }
       });
 
@@ -228,7 +279,11 @@ async function run() {
   }
 }
 
-run().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+if (process.argv.includes('--self-test')) {
+  runSelfTest();
+} else {
+  run().catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+  });
+}
