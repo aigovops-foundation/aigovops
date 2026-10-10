@@ -2,21 +2,18 @@
 // The trunk's test gate.
 //
 // This used to be a bare `node --test`, which discovers every test-shaped file
-// in the whole tree. That was right while the trunk held only its own code. It
-// stops being right the moment a product is subtreed into `products/`: a
-// product brings its own tests, written against its own dependencies, and the
-// trunk has no way to install them. Bare discovery would run them and the gate
-// would go red for a reason that has nothing to do with the trunk.
+// in the whole tree. That was right while the trunk held only its own code. If
+// independent product tests are added here, they may require dependencies the
+// trunk does not install. Bare discovery would run them and the gate would go
+// red for a reason that has nothing to do with the trunk.
 //
 // So the gate is scoped to what the trunk actually owns and can install: the
 // npm workspaces declared in package.json. The workspace list stays the single
 // source of truth — add a workspace and it is covered automatically; nothing
 // here needs editing.
 //
-// Products are NOT covered by this gate. Each product keeps its own CI in its
-// own repository until the trunk grows a per-product test lane that can install
-// per-product dependencies. That is a known gap, deliberately taken, not an
-// oversight — see products/README.md.
+// Products are NOT covered by this gate. Each canonical repository owns its
+// product's CI and dependencies — see products/README.md.
 //
 // Why an explicit file list rather than passing directories or a glob: Node 20
 // (what CI pins) treats a directory argument as a search root, Node 22 treats it

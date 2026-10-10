@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://aigovops-foundation.github.io/aigovops-beacon/sitemap.xml
