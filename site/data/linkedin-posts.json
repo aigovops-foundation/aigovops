@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-10T07:10:29Z",
+  "updated": "2026-10-10T19:08:36Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,22 @@
     }
   },
   "bob": [
+    {
+      "title": "ENGLISH PROBLEM — Accessible ≠ safe: cognitive load, alert fatigue, ambiguity, time pressure, and harmful defaults can overwhelm o...",
+      "link": "https://www.linkedin.com/posts/bobrapp_english-problem-accessible-safe-cognitive-activity-7514671818679713792-QNZN",
+      "date": "Sat, 10 Oct 2026 13:02:57 GMT",
+      "summary": "ENGLISH PROBLEM — Accessible ≠ safe: cognitive load, alert fatigue, ambiguity, time pressure, and harmful defaults can overwhelm oversight. SOLUTION — With representative users, test realistic tasks. Measure load, missed alerts, interpretation time, and default choices. Require c",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Temporary AI controls do not become permanent because they work. They become permanent when nobody owns the ending. PROBLEM Tempor...",
+      "link": "https://www.linkedin.com/posts/bobrapp_temporary-ai-controls-do-not-become-permanent-activity-7514671721342214144-9-Xx",
+      "date": "Sat, 10 Oct 2026 13:02:34 GMT",
+      "summary": "Temporary AI controls do not become permanent because they work. They become permanent when nobody owns the ending. PROBLEM Temporary exceptions and controls persist by inertia. Sunset governance is not model retirement, experimentation, or generic reassessment. It is the decisio",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "AI governance fails when accountability is plural. Problem: ownerless systems, unwritten risk appetite, weak independence, permane...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7514475479249387520-Rtot",
@@ -76,22 +92,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_readable-does-not-mean-stable-problem-activity-7514309977654607872-QChL",
       "date": "Fri, 09 Oct 2026 13:05:08 GMT",
       "summary": "Readable does not mean stable. PROBLEM: After an update, retraining, or configuration change, an AI rationale may drift. This is explanation-consistency governance—not research translation, a model card, or an explainability claim. SOLUTION: Version the model, configuration, prom",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI can be evaluated on one population—and deployed on another. Problem | 问题 Deployment groups and contexts shift. Stable test scor...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-can-be-evaluated-on-one-populationand-activity-7514309875414384640-PBuG",
-      "date": "Fri, 09 Oct 2026 13:04:43 GMT",
-      "summary": "AI can be evaluated on one population—and deployed on another. Problem | 问题 Deployment groups and contexts shift. Stable test scores can hide coverage loss. Measure representativeness separately from synthetic-data validity, lineage, freshness, localization, and accessibility acc",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Deepfakes must be governed before election day—not after. PROBLEM / المشكلة Synthetic political media can outrun takedowns. Option...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7514112947586199552-dGIx",
-      "date": "Fri, 09 Oct 2026 00:02:12 GMT",
-      "summary": "Deepfakes must be governed before election day—not after. PROBLEM / المشكلة Synthetic political media can outrun takedowns. Optional labels do not protect voters. يمكن للمحتوى السياسي الاصطناعي أن يسبق عمليات الإزالة. والوسوم الاختيارية لا تحمي الناخبين. SOLUTION / الحل Require m",
       "image": null,
       "author": "Bob Rapp"
     }
