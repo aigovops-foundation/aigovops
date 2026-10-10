@@ -21,6 +21,9 @@ on:
         type: choice
         options: ['false', 'true']
 
+permissions:
+  contents: read
+
 jobs:
 
   # ── Tier 1: Unit + URL Integrity ─────────────────────────────────────────

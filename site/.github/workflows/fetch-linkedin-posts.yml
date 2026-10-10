@@ -6,6 +6,9 @@ on:
     - cron: '0 19 * * *'   # 7pm UTC = noon Pacific
   workflow_dispatch:        # Manual trigger from GitHub Actions tab
 
+permissions:
+  contents: read
+
 jobs:
   fetch:
     runs-on: ubuntu-latest
