@@ -19,6 +19,9 @@ on:
       - docs/THURSDAY.md
       - scripts/test_thursday_fallback.py
 
+permissions:
+  contents: read
+
 jobs:
   door-landing:
     runs-on: ubuntu-latest
