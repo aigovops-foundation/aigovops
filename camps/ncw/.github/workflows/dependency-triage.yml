@@ -12,6 +12,9 @@ on:
     - cron: "10 17 * * 2"   # Tuesdays
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   triage:
     uses: aigovops-foundation/aigovops-library-june-ken-bob/.github/workflows/reusable-dependency-triage.yml@main
