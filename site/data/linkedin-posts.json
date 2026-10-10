@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09T07:16:35Z",
+  "updated": "2026-10-10T07:10:29Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -16,82 +16,82 @@
   },
   "bob": [
     {
+      "title": "AI governance fails when accountability is plural. Problem: ownerless systems, unwritten risk appetite, weak independence, permane...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7514475479249387520-Rtot",
+      "date": "Sat, 10 Oct 2026 00:02:46 GMT",
+      "summary": "AI governance fails when accountability is plural. Problem: ownerless systems, unwritten risk appetite, weak independence, permanent exceptions, and unreproducible board metrics. Solution: one named owner per system; rights to approve, veto, suspend, or accept residual risk; meas",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Regulatory change is a release gate—not a memo. PROBLEM / SOLUTION / SUMMARY: Per-system register: jurisdiction, rationale, effect...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7514475125975711744-L5jy",
+      "date": "Sat, 10 Oct 2026 00:01:22 GMT",
+      "summary": "Regulatory change is a release gate—not a memo. PROBLEM / SOLUTION / SUMMARY: Per-system register: jurisdiction, rationale, effective date, owner, impact, deadline, control/test, remediation. Monitor continuously; escalate; map obligation→control→test; gate unmet releases. THREE-",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "This is big and we will all say I knew Jonathan G. Blanco 🛠 back before his company was worth a billion bucks",
+      "link": "https://www.linkedin.com/posts/bobrapp_this-is-big-and-we-will-all-say-i-knew-jonathan-activity-7514451904949637121-1Y59",
+      "date": "Fri, 09 Oct 2026 22:29:06 GMT",
+      "summary": "This is big and we will all say I knew Jonathan G. Blanco 🛠 back before his company was worth a billion bucks",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "PROBLEM | المشكلة A policy library tells you what a rule says. It does not tell operations what to prove. Without a live interpret...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-%D8%A7%D9%84%D9%85%D8%B4%D9%83%D9%84%D8%A9-a-policy-library-tells-activity-7514445373680111617-crsx",
+      "date": "Fri, 09 Oct 2026 22:03:09 GMT",
+      "summary": "PROBLEM | المشكلة A policy library tells you what a rule says. It does not tell operations what to prove. Without a live interpretation register, accountability disappears. توضح مكتبة السياسات مضمون القاعدة، لكنها لا تحدد ما يجب إثباته عملياً. بدون سجل حي للتفسير، تضيع المساءلة.",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "An “82% confidence” score is not a decision. Problem A precise score near a threshold can hide uncertainty and make “approve” the...",
+      "link": "https://www.linkedin.com/posts/bobrapp_an-82-confidence-score-is-not-a-decision-activity-7514444933945085952-I3ay",
+      "date": "Fri, 09 Oct 2026 22:01:24 GMT",
+      "summary": "An “82% confidence” score is not a decision. Problem A precise score near a threshold can hide uncertainty and make “approve” the default. Solution Show, with every high-impact output: • score meaning + limits • uncertainty range + evidence quality • approve / escalate / defer /",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Evidence integrity is governance—not a score. Problem / 问题: Test-set contamination and benchmark overfitting create false confiden...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7514340394759770113-nQeD",
+      "date": "Fri, 09 Oct 2026 15:06:00 GMT",
+      "summary": "Evidence integrity is governance—not a score. Problem / 问题: Test-set contamination and benchmark overfitting create false confidence. 测试集污染与基准过拟合会制造虚假信心。 Solution / 解决方案: Lock and version evaluation sets; publish contamination thresholds; hash-verify evidence packets; require ext",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Who may attest that an AI system is safe? Not the party paid to make it pass. ENGLISH PROBLEM / SOLUTION / SUMMARY: Vendors, build...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7514340351369940992-Kwsp",
+      "date": "Fri, 09 Oct 2026 15:05:49 GMT",
+      "summary": "Who may attest that an AI system is safe? Not the party paid to make it pass. ENGLISH PROBLEM / SOLUTION / SUMMARY: Vendors, builders, resellers and success-fee assessors cannot independently validate their own product. Separate 1L build/operate, 2L challenge and 3L audit; 3L rep",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Readable does not mean stable. PROBLEM: After an update, retraining, or configuration change, an AI rationale may drift. This is e...",
+      "link": "https://www.linkedin.com/posts/bobrapp_readable-does-not-mean-stable-problem-activity-7514309977654607872-QChL",
+      "date": "Fri, 09 Oct 2026 13:05:08 GMT",
+      "summary": "Readable does not mean stable. PROBLEM: After an update, retraining, or configuration change, an AI rationale may drift. This is explanation-consistency governance—not research translation, a model card, or an explainability claim. SOLUTION: Version the model, configuration, prom",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI can be evaluated on one population—and deployed on another. Problem | 问题 Deployment groups and contexts shift. Stable test scor...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-can-be-evaluated-on-one-populationand-activity-7514309875414384640-PBuG",
+      "date": "Fri, 09 Oct 2026 13:04:43 GMT",
+      "summary": "AI can be evaluated on one population—and deployed on another. Problem | 问题 Deployment groups and contexts shift. Stable test scores can hide coverage loss. Measure representativeness separately from synthetic-data validity, lineage, freshness, localization, and accessibility acc",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
       "title": "Deepfakes must be governed before election day—not after. PROBLEM / المشكلة Synthetic political media can outrun takedowns. Option...",
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7514112947586199552-dGIx",
       "date": "Fri, 09 Oct 2026 00:02:12 GMT",
       "summary": "Deepfakes must be governed before election day—not after. PROBLEM / المشكلة Synthetic political media can outrun takedowns. Optional labels do not protect voters. يمكن للمحتوى السياسي الاصطناعي أن يسبق عمليات الإزالة. والوسوم الاختيارية لا تحمي الناخبين. SOLUTION / الحل Require m",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI duty of care starts at first contact—not in fine print. ENGLISH Problem: Consumers need clear, timely, unavoidable disclosure t...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7514112919312457728-_ovQ",
-      "date": "Fri, 09 Oct 2026 00:02:05 GMT",
-      "summary": "AI duty of care starts at first contact—not in fine print. ENGLISH Problem: Consumers need clear, timely, unavoidable disclosure that they are interacting with AI at first contact—and whenever an agent acts on their behalf. They deserve truthful capability limits, plain-language",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI-assisted internal investigations can expose confidential facts, corrupt evidence trails, miss conflicts, and blur accountabilit...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-assisted-internal-investigations-can-expose-activity-7514083191691821057-A-KM",
-      "date": "Thu, 08 Oct 2026 22:03:58 GMT",
-      "summary": "AI-assisted internal investigations can expose confidential facts, corrupt evidence trails, miss conflicts, and blur accountability. Speed is not defensibility. एआई-सहायित आंतरिक जांच में गोपनीय तथ्य उजागर, साक्ष्य-श्रृंखला दूषित, हित-संघर्ष छूट और जवाबदेही धुंधली हो सकती है। गति",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An appeal button is not contestability. Problem: Before launch, can an affected person understand the automated decision, find the...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-appeal-button-is-not-contestability-activity-7514083072137568257-0xC8",
-      "date": "Thu, 08 Oct 2026 22:03:29 GMT",
-      "summary": "An appeal button is not contestability. Problem: Before launch, can an affected person understand the automated decision, find the challenge route, submit evidence, obtain human review, and receive a reasoned outcome? Solution: Test realistic cases pre-deployment. Measure access,",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "A→B→C: who owns the outcome? Problem / Solution / Summary Problem: Deep delegation enables confused deputies, privilege amplificat...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7513977545088757761-pjyE",
-      "date": "Thu, 08 Oct 2026 15:04:10 GMT",
-      "summary": "A→B→C: who owns the outcome? Problem / Solution / Summary Problem: Deep delegation enables confused deputies, privilege amplification, and orphan agents. Solution: Narrow scope at every hop; carry the original human principal, full chain, expiry, and end-to-end cryptographic proo",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "The grid is part of your AI system. PROBLEM / SOLUTION / SUMMARY Problem: Cost-only scheduling shifts emissions, demand spikes, an...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7513976907525148673-H0wa",
-      "date": "Thu, 08 Oct 2026 15:01:38 GMT",
-      "summary": "The grid is part of your AI system. PROBLEM / SOLUTION / SUMMARY Problem: Cost-only scheduling shifts emissions, demand spikes, and infrastructure strain onto affected communities. Solution: Continuously monitor grid carbon-intensity and demand-response signals. Classify deferrab",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Emergency access is not governance if it never expires. PROBLEM A break-glass path can become a quiet second authorization system....",
-      "link": "https://www.linkedin.com/posts/bobrapp_emergency-access-is-not-governance-if-it-activity-7513947142156173313-Rhdc",
-      "date": "Thu, 08 Oct 2026 13:03:21 GMT",
-      "summary": "Emergency access is not governance if it never expires. PROBLEM A break-glass path can become a quiet second authorization system. Broad authorization, agent credential lifetime, and tool-failure recovery are different controls. None replaces time-boxed emergency approval and ret",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI can draft research—not own claims. / L’IA peut rédiger, pas assumer les affirmations. PROBLEM / PROBLÈME: Hidden role, unclear...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-can-draft-researchnot-own-claims-l-activity-7513946765293883394-S714",
-      "date": "Thu, 08 Oct 2026 13:01:51 GMT",
-      "summary": "AI can draft research—not own claims. / L’IA peut rédiger, pas assumer les affirmations. PROBLEM / PROBLÈME: Hidden role, unclear credit, unverified or fabricated citations, no reproducibility trail. / Rôle caché, crédit flou, citations non vérifiées ou inventées, aucune trace re",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Great to have you join remotely",
-      "link": "https://www.linkedin.com/posts/bobrapp_great-to-have-you-join-remotely-wonderful-activity-7513834042882977793-CNqe",
-      "date": "Thu, 08 Oct 2026 05:33:56 GMT",
-      "summary": "Great to have you join remotely - wonderful",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Model outage? Who serves the customer? PROBLEM: A failed model can stop service, lose evidence, and create unsafe manual work. SOL...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7513750615588663296-JCj_",
-      "date": "Thu, 08 Oct 2026 00:02:25 GMT",
-      "summary": "Model outage? Who serves the customer? PROBLEM: A failed model can stop service, lose evidence, and create unsafe manual work. SOLUTION: Predefine degraded/manual mode and an engagement procedure. Set RTO/RPO for the model, data, logs, and retrieval indexes. Route critical decisi",
       "image": null,
       "author": "Bob Rapp"
     }
