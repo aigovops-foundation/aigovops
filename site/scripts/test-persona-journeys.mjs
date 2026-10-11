@@ -165,6 +165,32 @@ async function run() {
   let indexScreenshotSaved = false;
 
   try {
+    const spanishContext = await browser.newContext({
+      viewport: { width: 1280, height: 800 },
+      ignoreHTTPSErrors: true,
+    });
+    try {
+      const spanishPage = await spanishContext.newPage();
+      await spanishPage.addInitScript("localStorage.setItem('aigovops-lang', 'es')");
+      await spanishPage.goto(BASE.href, { waitUntil: 'domcontentloaded', timeout: 10_000 });
+      await spanishPage.waitForFunction(
+        () => document.documentElement.lang === 'es',
+        null,
+        { timeout: 10_000 },
+      );
+      await spanishPage.evaluate(() => document.fonts.ready);
+      const spanishLastCardBottom = await spanishPage.locator('.six-card').last().evaluate(
+        (card) => card.getBoundingClientRect().bottom,
+      );
+      scorecard.spanishHomeLastCardBottom = Math.round(spanishLastCardBottom * 100) / 100;
+      record(
+        spanishLastCardBottom <= 800,
+        `Spanish homepage: last six-card fits at 1280×800 (${Math.round(spanishLastCardBottom)}px)`,
+      );
+    } finally {
+      await spanishContext.close();
+    }
+
     for (const persona of PERSONAS) {
       const journey = {
         id: persona.id,
