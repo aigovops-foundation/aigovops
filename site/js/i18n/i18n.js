@@ -42,6 +42,16 @@
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.toggle('lang-active', btn.dataset.lang === window.I18N.lang);
     });
+    document.querySelectorAll('a[href]').forEach(anchor => {
+      try {
+        const url = new URL(anchor.href, document.baseURI);
+        if (url.hostname === 'community.aigovops-foundation.com') {
+          if (window.I18N.lang === 'en') url.searchParams.delete('lang');
+          else url.searchParams.set('lang', window.I18N.lang);
+          anchor.href = url.href;
+        }
+      } catch (e) { /* leave invalid links unchanged */ }
+    });
     // Update html lang attribute
     document.documentElement.lang = window.I18N.lang;
   }

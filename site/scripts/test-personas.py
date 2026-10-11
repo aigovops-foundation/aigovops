@@ -97,22 +97,23 @@ for filename, label in PAGES.items():
     canonical = f"{SITE_ORIGIN}/{filename}"
     check(page.count("<main ") == 1 and 'id="main-content"' in page, f"{filename}: exactly one main landmark")
     check('<html lang="en">' in page, f"{filename}: English document language")
-    check("i18n.js" not in page and "lang-toggle" not in page, f"{filename}: no i18n loader or language toggle")
+    check('js/i18n/i18n.js?v=20261011a' in page and 'class="lang-toggle"' in page,
+          f"{filename}: versioned i18n loader and language toggle")
     local_scripts = [
         href for href in re.findall(r"<script\b[^>]*\bsrc=[\"']([^\"']+)[\"'][^>]*>", page, re.IGNORECASE)
         if not urlsplit(href).scheme and not urlsplit(href).netloc
     ]
     check(
-        local_scripts == ["js/main.js?v=20261009b", "feedback.js?v=20261009b"],
-        f"{filename}: main.js and feedback.js are the only local scripts and are versioned",
+        local_scripts == ["js/i18n/i18n.js?v=20261011a", "js/main.js?v=20261011a", "feedback.js?v=20261011a"],
+        f"{filename}: i18n.js, main.js, and feedback.js are the only local scripts and are versioned",
     )
     check(
-        '<script src="feedback.js?v=20261009b" class="aig-feedback-loader" defer></script>' in page,
+        '<script src="feedback.js?v=20261011a" class="aig-feedback-loader" defer></script>' in page,
         f"{filename}: feedback strip loader matches the site shell",
     )
     local_stylesheets = [
         href for href in re.findall(r"<link\b[^>]*\bhref=[\"']([^\"']+)[\"'][^>]*>", page, re.IGNORECASE)
-        if href.endswith(".css?v=20261009b")
+        if href.endswith(".css?v=20261011a")
     ]
     check(len(local_stylesheets) == 3, f"{filename}: all three local stylesheets are versioned")
     check(font_stylesheet(page) == reference_fonts, f"{filename}: Google Fonts href matches open-source.html")

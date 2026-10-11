@@ -187,6 +187,30 @@ async function run() {
         spanishLastCardBottom <= 800,
         `Spanish homepage: last six-card fits at 1280×800 (${Math.round(spanishLastCardBottom)}px)`,
       );
+      for (const persona of PERSONAS) {
+        await spanishPage.goto(new URL(persona.page, BASE).href, {
+          waitUntil: 'domcontentloaded',
+          timeout: 10_000,
+        });
+        await spanishPage.waitForFunction(
+          () => document.documentElement.lang === 'es',
+          null,
+          { timeout: 10_000 },
+        );
+        const spanishHeading = (await spanishPage.locator('.persona-hero h1').textContent())?.trim();
+        record(spanishHeading !== persona.title, `${persona.id}: Spanish H1 differs from English`);
+        const stepOneLink = spanishPage.locator('.persona-steps .persona-step:first-child a.btn-primary');
+        const stepOneHref = await stepOneLink.getAttribute('href');
+        const expected = new URL(persona.successHref);
+        if (expected.hostname === 'community.aigovops-foundation.com') {
+          const actual = new URL(stepOneHref, spanishPage.url());
+          record(actual.searchParams.get('lang') === 'es', `${persona.id}: community step-1 CTA has lang=es`);
+          record(
+            actual.searchParams.get('src') === expected.searchParams.get('src'),
+            `${persona.id}: community step-1 CTA preserves src`,
+          );
+        }
+      }
     } finally {
       await spanishContext.close();
     }
