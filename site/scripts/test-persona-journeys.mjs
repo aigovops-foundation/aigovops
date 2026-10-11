@@ -8,12 +8,12 @@ const BASE_URL = process.env.BASE_URL || 'http://localhost:8080';
 const BASE = new URL(BASE_URL);
 const RESULTS_DIR = path.join(ROOT, 'test-results', 'personas');
 const PERSONAS = [
-  { id: 'founder', page: 'for-founders.html', title: 'AI governance for startup founders', successHref: 'https://community.aigovops-foundation.com/gate-check.html?src=persona-founder' },
-  { id: 'enterprise', page: 'for-enterprise.html', title: 'AI governance for enterprise governance leads', successHref: 'https://github.com/aigovops-foundation/aigovops-vendor-rfi' },
-  { id: 'student', page: 'for-students.html', title: 'AI governance for students', successHref: 'https://practice.aigovops-foundation.com/levels/100-begin/WORKSHEET.html?src=persona-student' },
-  { id: 'researcher', page: 'for-researchers.html', title: 'AI governance for researchers', successHref: 'https://community.aigovops-foundation.com/library/find.html?src=persona-researcher', accessGatePath: '/library-rules.html' },
-  { id: 'regulator', page: 'for-regulators.html', title: 'AI governance for regulators and policy staff', successHref: 'https://aigovops-foundation.github.io/aigovops-beacon/#demo' },
-  { id: 'contributor', page: 'for-contributors.html', title: 'AI governance for open-source contributors', successHref: 'https://github.com/aigovops-foundation/aigovops-beacon/blob/main/CONTRIBUTING.md' },
+  { id: 'founder', page: 'for-founders.html', title: 'AI governance for startup founders', englishChipLabel: 'Startup founder', spanishChipLabel: 'Fundador/a de startup', successHref: 'https://community.aigovops-foundation.com/gate-check.html?src=persona-founder' },
+  { id: 'enterprise', page: 'for-enterprise.html', title: 'AI governance for enterprise governance leads', englishChipLabel: 'Enterprise governance lead', spanishChipLabel: 'Líder de gobernanza empresarial', successHref: 'https://github.com/aigovops-foundation/aigovops-vendor-rfi' },
+  { id: 'student', page: 'for-students.html', title: 'AI governance for students', englishChipLabel: 'Student', spanishChipLabel: 'Estudiante', successHref: 'https://practice.aigovops-foundation.com/levels/100-begin/WORKSHEET.html?src=persona-student' },
+  { id: 'researcher', page: 'for-researchers.html', title: 'AI governance for researchers', englishChipLabel: 'Researcher', spanishChipLabel: 'Investigador/a', successHref: 'https://community.aigovops-foundation.com/library/find.html?src=persona-researcher', accessGatePath: '/library-rules.html' },
+  { id: 'regulator', page: 'for-regulators.html', title: 'AI governance for regulators and policy staff', englishChipLabel: 'Regulator / policy', spanishChipLabel: 'Regulador/a o políticas públicas', successHref: 'https://aigovops-foundation.github.io/aigovops-beacon/#demo' },
+  { id: 'contributor', page: 'for-contributors.html', title: 'AI governance for open-source contributors', englishChipLabel: 'Open-source contributor', spanishChipLabel: 'Colaborador/a de código abierto', successHref: 'https://github.com/aigovops-foundation/aigovops-beacon/blob/main/CONTRIBUTING.md' },
 ];
 const failures = [];
 const statusCache = new Map();
@@ -26,6 +26,28 @@ const scorecard = {
 
 function record(condition, message) {
   if (!condition) failures.push(message);
+}
+
+async function checkHomepageChipLabels(page, language) {
+  await page.waitForFunction(
+    (expectedLanguage) => document.documentElement.lang === expectedLanguage
+      && document.querySelector(`.lang-btn[data-lang="${expectedLanguage}"]`)?.classList.contains('lang-active'),
+    language,
+    { timeout: 10_000 },
+  );
+  const labels = (await page.locator('.persona-chips a.persona-chip').allTextContents())
+    .map((label) => label.trim());
+  const expected = PERSONAS.map((persona) =>
+    language === 'es' ? persona.spanishChipLabel : persona.englishChipLabel,
+  );
+  record(
+    labels.length === expected.length && labels.every((label, index) => label === expected[index]),
+    `${language.toUpperCase()} homepage persona chips match the expected labels`,
+  );
+  record(
+    labels.every((label) => !label.includes('[object')),
+    `${language.toUpperCase()} homepage persona chips contain no [object`,
+  );
 }
 
 function isUnexpectedConsoleError(locationUrl, text, baseUrl = BASE.href) {
@@ -155,6 +177,15 @@ async function getStepLinkStatus(url, browser, api) {
 
 async function run() {
   const { chromium, request } = await import('playwright');
+  const indexHtml = await fs.readFile(path.join(ROOT, 'index.html'), 'utf8');
+  const staticChipLabels = [...indexHtml.matchAll(/<a class="persona-chip"[^>]*>([^<]*)<\/a>/g)]
+    .map(([, label]) => label.trim());
+  const expectedEnglishChipLabels = PERSONAS.map((persona) => persona.englishChipLabel);
+  record(
+    staticChipLabels.length === expectedEnglishChipLabels.length
+      && staticChipLabels.every((label, index) => label === expectedEnglishChipLabels[index]),
+    'homepage static chip text matches the expected English labels',
+  );
   await fs.mkdir(RESULTS_DIR, { recursive: true });
   const browser = await chromium.launch({ headless: true });
   const context = await browser.newContext({
@@ -178,6 +209,7 @@ async function run() {
         null,
         { timeout: 10_000 },
       );
+      await checkHomepageChipLabels(spanishPage, 'es');
       await spanishPage.evaluate(() => document.fonts.ready);
       const spanishLastCardBottom = await spanishPage.locator('.six-card').last().evaluate(
         (card) => card.getBoundingClientRect().bottom,
@@ -242,10 +274,12 @@ async function run() {
 
       try {
         const homeStart = performance.now();
+        await page.addInitScript("localStorage.setItem('aigovops-lang', 'en')");
         const homeResponse = await page.goto(BASE.href, { waitUntil: 'domcontentloaded', timeout: 10_000 });
         journey.timings.homeDOMContentLoadedMs = Math.round(performance.now() - homeStart);
         record(homeResponse !== null && homeResponse.status() < 400, `${persona.id}: homepage response is below 400`);
         record(journey.timings.homeDOMContentLoadedMs < 3_000, `${persona.id}: homepage DOMContentLoaded under 3 seconds`);
+        if (persona.id === PERSONAS[0].id) await checkHomepageChipLabels(page, 'en');
 
         if (!indexScreenshotSaved) {
           const indexPath = path.join(RESULTS_DIR, 'index-390.png');

@@ -162,6 +162,12 @@ for (const lang of LANGS) {
     const val = resolve(tables[lang], key);
     if (val === undefined) {
       failures.push(`${lang}: ${key} is referenced by ${keyOwners.get(key)} but not defined`);
+    } else if (typeof val !== 'string') {
+      const type = Array.isArray(val) ? 'array' : typeof val;
+      failures.push(
+        `${lang}: ${key} is referenced by ${keyOwners.get(key)} and resolves to ${type}; ` +
+        'data-i18n keys must resolve to strings',
+      );
     } else if (typeof val === 'string' && val.trim() === '') {
       // i18n.js applies a value only `if (val)`, so '' is indistinguishable from
       // missing at runtime: a Spanish visitor silently gets the English fallback.
