@@ -49,6 +49,11 @@
   section{padding-block:44px}
   h2{font:700 clamp(24px,3vw,32px)/1.1 var(--display);margin:0 0 6px;letter-spacing:-.01em;text-wrap:balance}
   .lead{color:var(--mute);margin:0 0 22px;max-width:62ch}
+  .start-cta-row{margin-bottom:18px}
+  .start-cta{display:inline-block;background:var(--green-ink);color:#fff;font-weight:600;text-decoration:none;padding:12px 18px;border-radius:8px}
+  .start-cta:hover{filter:brightness(1.06)}
+  .start-cta:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+  .door-links{margin:16px 0 0;text-align:center;font-size:14px}
   .doors{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
   .door{text-align:left;background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 18px;cursor:pointer;font:inherit;color:inherit;display:grid;gap:6px;transition:border-color .15s,transform .15s}
   .door:hover{border-color:var(--green)}.door:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
@@ -109,6 +114,29 @@
 </style>
 </head>
 <body>
+<!-- AiGovOps Foundation bar v1 — identical on every Foundation subdomain. Self-contained; no external assets. -->
+<nav class="agf-bar" aria-label="AiGovOps Foundation">
+  <a class="agf-bar__home" href="https://www.aigovops-foundation.com/">AiGovOps Foundation</a>
+  <ul class="agf-bar__links">
+    <li><a href="https://practice.aigovops-foundation.com/">Learn <span class="agf-bar__hint">· free course</span></a></li>
+    <li><a href="https://community.aigovops-foundation.com/library/">Library</a></li>
+    <li><a href="https://www.aigovops-foundation.com/open-source.html">Tools <span class="agf-bar__hint">· open source</span></a></li>
+    <li><a href="https://practice.aigovops-foundation.com/docs/THURSDAY.html">Meetings</a></li>
+    <li><a class="agf-bar__join" href="https://community.aigovops-foundation.com/signin.html">Become a member</a></li>
+  </ul>
+</nav>
+<style>
+.agf-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.25rem 1rem;padding:.35rem 1rem;background:#1f2a24;color:#e9efe9;font:500 13px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;position:relative;z-index:50}
+.agf-bar a{color:inherit;text-decoration:none}
+.agf-bar a:hover,.agf-bar a:focus-visible{text-decoration:underline}
+.agf-bar a:focus-visible{outline:2px solid #9fd8b4;outline-offset:2px;border-radius:2px}
+.agf-bar__home{font-weight:700;letter-spacing:.01em}
+.agf-bar__links{display:flex;flex-wrap:wrap;gap:.15rem .9rem;list-style:none;margin:0;padding:0}
+.agf-bar__hint{opacity:.7;font-weight:400}
+.agf-bar__join{font-weight:700;color:#9fd8b4!important}
+@media (max-width:560px){.agf-bar__hint{display:none}.agf-bar{font-size:12px}}
+@media print{.agf-bar{display:none}}
+</style>
 <div class="wrap nav" role="navigation" aria-label="Practice">
   <b>☕ The AiGovOps Foundation café</b>
   <a href="https://www.aigovops-foundation.com/#problem">The doors</a>
@@ -131,14 +159,16 @@
 <section id="problem" class="wrap">
   <h2>Start with your problem</h2>
   <p class="lead">Every one of these is a real case from the Foundation's hundred verified AI harms. Pick yours; the hour below is built on it.</p>
+  <div class="start-cta-row"><a class="start-cta" href="levels/100-begin/WORKSHEET.html">New here? Start with Level 100 — one hour, free →</a></div>
   <div class="doors" id="doors"></div>
   <noscript><ul class="doors-noscript">
-    <li><a href="levels/100-begin/WORKSHEET.html">Level 100 · Begin — An AI told someone something it shouldn't have — and now we're on the hook.</a></li>
-    <li><a href="levels/200-retrofit/WORKSHEET.html">Level 200 · Retrofit — I have a bot or an agent already, and I'm not sure it's safe to ship.</a></li>
-    <li><a href="levels/300-hold/WORKSHEET.html">Level 300 · Hold — It's already running, and nobody can say who's watching it or how to stop it.</a></li>
-    <li><a href="levels/400-prove/WORKSHEET.html">Level 400 · Prove it — Someone needs proof of what the AI actually did.</a></li>
+    <li><a href="levels/100-begin/WORKSHEET.html">Level 100 · Something went wrong — An AI told someone something it shouldn't have — and now we're on the hook.</a></li>
+    <li><a href="levels/200-retrofit/WORKSHEET.html">Level 200 · Before you ship — I have a bot or an agent already, and I'm not sure it's safe to ship.</a></li>
+    <li><a href="levels/300-hold/WORKSHEET.html">Level 300 · Already running — It's already running, and nobody can say who's watching it or how to stop it.</a></li>
+    <li><a href="levels/400-prove/WORKSHEET.html">Level 400 · Prove what it did — Someone needs proof of what the AI actually did.</a></li>
     <li><a href="https://community.aigovops-foundation.com/gate-check.html?src=cafe">Not sure yet — the ten-minute Gate Check.</a></li>
   </ul></noscript>
+  <p class="door-links"><a href="docs/reference/">Reference</a> · <a href="https://www.aigovops-foundation.com/glossary.html#practice">Glossary</a> · <a href="MANIFESTO.html">The manifesto</a></p>
   <div class="hour" id="hour" aria-live="polite"></div>
 </section>
 
@@ -200,7 +230,7 @@
 (function(){
   const P = "https://practice.aigovops-foundation.com/";
   const DOORS = [
-    {id:"promise", level:"100", name:"Begin", gate:"the pre-pend gate",
+    {id:"promise", level:"100", name:"Something went wrong", gate:"the pre-pend gate",
      q:"An AI told someone something it shouldn't have — and now we're on the hook.",
      hint:"a chatbot, an assistant, an answer about policy or price",
      caseId:"VH-001", caseName:"Air Canada", caseLine:"In 2022 Air Canada's chatbot told a grieving passenger he could claim a bereavement fare after travelling. The policy said the opposite. The tribunal held the airline to its chatbot's word.",
@@ -208,7 +238,7 @@
      time:"45 minutes · nothing installed", ws:"levels/100-begin/WORKSHEET.html",
      receipt:"Beacon in worksheet mode — one button; a key made in front of you, receipts signed, the three values on screen",
      wren:"Bring the bundle hash Thursday. The first five minutes are for receipts."},
-    {id:"ship", level:"200", name:"Retrofit", gate:"the policy gates",
+    {id:"ship", level:"200", name:"Before you ship", gate:"the policy gates",
      q:"I have a bot or an agent already, and I'm not sure it's safe to ship.",
      hint:"a script, an agent, an automation that acts for you",
      caseId:"VH-022 · VH-056", caseName:"the $1 Chevy · Knight Capital", caseLine:"A dealership's chatbot agreed to sell a Tahoe for a dollar; a trading firm's deploy lost $440M in 45 minutes. Both shipped without a rule that could refuse.",
@@ -216,7 +246,7 @@
      time:"60 minutes · one install", ws:"levels/200-retrofit/WORKSHEET.html",
      receipt:"a CI run that refused a downgrade, and the chain of receipts behind it",
      wren:"Your policy is a pull request. I'll pair you with a 100 on Thursday."},
-    {id:"running", level:"300", name:"Hold", gate:"the operate gate",
+    {id:"running", level:"300", name:"Already running", gate:"the operate gate",
      q:"It's already running, and nobody can say who's watching it or how to stop it.",
      hint:"agents that touch people, money or rights, in production",
      caseId:"VH-015 · VH-035 · VH-011", caseName:"Arup · Cigna PXDX · nH Predict", caseLine:"A deepfake call moved $25M; an insurer's algorithm denied 300,000 claims in two months; a benefits model overruled doctors. None had a hold a human could catch.",
@@ -224,7 +254,7 @@
      time:"60 minutes today · a week of traffic in Fall", ws:"levels/300-hold/WORKSHEET.html",
      receipt:"a hold that decayed on schedule, in the chain, with the number of actions it covered",
      wren:"A hold decays in hours. Pick the one action you'd least like to explain, and gate that first."},
-    {id:"prove", level:"400", name:"Prove it", gate:"the audit gate",
+    {id:"prove", level:"400", name:"Prove what it did", gate:"the audit gate",
      q:"Someone needs proof of what the AI actually did — a regulator, a court, a board.",
      hint:"an incident, an audit, a request you can't answer with a dashboard",
      caseId:"VH-013 · VH-003 · VH-088", caseName:"Robodebt · Toeslagenaffaire · Horizon", caseLine:"Three governments' systems accused hundreds of thousands of people, and nobody could reproduce what the systems had done. The evidence should have been a bundle, not a memory.",
