@@ -26,8 +26,8 @@ body, .markdown-body { font-family: var(--wc-sans); color: var(--wc-charcoal); f
 .markdown-body a:hover { color: var(--wc-green-deep); text-decoration-color: currentColor; }
 .markdown-body code, .markdown-body pre, .markdown-body kbd { font-family: var(--wc-mono); font-size: .88em; }
 .markdown-body code { background: var(--wc-deep-cream); color: var(--wc-charcoal); border-radius: 6px; padding: .12em .4em; }
-.markdown-body pre { background: var(--wc-board); color: var(--wc-chalk); border-radius: var(--wc-r-card); padding: 16px 18px; }
-.markdown-body pre code { background: transparent; color: inherit; padding: 0; }
+body .markdown-body pre { background: #F6F8FA; color: var(--wc-charcoal); border-radius: var(--wc-r-card); padding: 16px 18px; }
+body .markdown-body pre code { background: transparent; color: var(--wc-charcoal); padding: 0; }
 .markdown-body blockquote { border-left: 3px solid var(--wc-amber); color: var(--wc-coffee); font-family: var(--wc-serif); font-style: italic; font-size: 1.05em; padding: .2em 0 .2em 1em; margin: 1.2em 0; }
 .markdown-body table { border-collapse: collapse; width: 100%; font-size: .95em; }
 .markdown-body table th { font-family: var(--wc-mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--wc-ink-soft); background: transparent; border: 0; border-bottom: 1px solid var(--wc-line); text-align: left; padding: 8px 10px; }
