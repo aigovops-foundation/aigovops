@@ -1,6 +1,26 @@
 window.I18N = {
   lang: 'es',
-  nav: { library: 'Biblioteca', opensource: 'Código abierto', home: 'Inicio', blog: 'Blog', meetings: 'Reuniones', newsletter: 'Boletín', give: 'Donar' },
+  nav: { library: 'Biblioteca', opensource: 'Código abierto', home: 'Inicio', blog: 'Blog', meetings: 'Reuniones', newsletter: 'Boletín', give: 'Donar', join: 'Hazte miembro' },
+  glossary: {
+    link: 'Glosario',
+    eyebrow: 'Fundación AiGovOps · Términos en lenguaje claro',
+    title: 'Glosario',
+    intro: 'Definiciones breves de los términos que aparecen en las herramientas y la práctica de la Fundación.',
+    promise: 'Publica IA segura — nunca IA insegura: llega al sí, mantente en el sí y recupérate al sí. Demuéstralo en diez minutos.',
+    terms: {
+      overt: { term: 'OVERT', definition: 'Un estándar abierto para evidencia de ejecución verificable de forma independiente.' },
+      beacon: { term: 'Beacon', definition: 'Un motor conforme con OVERT que produce recibos de decisiones de IA firmados y verificables.' },
+      receipt: { term: 'Recibo', definition: 'Evidencia firmada y verificable de una decisión de IA.' },
+      gateCheck: { term: 'Gate Check', definition: 'Un cuestionario de diez minutos que genera un plan de auditoría.' },
+      gate: { term: 'Compuerta', definition: 'Un punto de decisión del marco de gobernanza de cuatro compuertas de la Fundación.' },
+      policyAsCode: { term: 'Política como código', definition: 'Políticas de gobernanza expresadas como código versionado y probado antes del despliegue.' },
+      practice: { term: 'Practice', definition: 'Cuatro niveles de una hora con hojas de trabajo y un manifiesto.' },
+      library: { term: 'Biblioteca', definition: 'Cien casos de daños de IA mapeados a NIST AI RMF, EU AI Act, ISO/IEC 42001 y OWASP.' },
+      umbrella: { term: 'Umbrella', definition: 'Una herramienta de la Fundación que declara políticas.' },
+      lantern: { term: 'Lantern', definition: 'Una herramienta de la Fundación que lee evidencia.' },
+      aigovops: { term: 'AiGovOps', definition: 'Tratar la gobernanza de IA como código: versionado, probado y verificable antes del despliegue.' },
+    },
+  },
   hero: {
     eyebrow: 'Fundación AiGovOps · Política como Código',
     h1: 'Despliega IA segura.<br>Nunca IA insegura.',

@@ -17,6 +17,14 @@ PAGES = {
     "for-regulators.html": "Regulator / policy",
     "for-contributors.html": "Open-source contributor",
 }
+SUCCESS_TARGETS = {
+    "for-founders.html": "https://community.aigovops-foundation.com/gate-check.html?src=persona-founder",
+    "for-enterprise.html": "https://github.com/aigovops-foundation/aigovops-vendor-rfi",
+    "for-students.html": "https://practice.aigovops-foundation.com/levels/100-begin/WORKSHEET.html?src=persona-student",
+    "for-researchers.html": "https://community.aigovops-foundation.com/library/find.html?src=persona-researcher",
+    "for-regulators.html": "https://aigovops-foundation.github.io/aigovops-beacon/#demo",
+    "for-contributors.html": "https://github.com/aigovops-foundation/aigovops-beacon/blob/main/CONTRIBUTING.md",
+}
 
 passed = 0
 failed = 0
@@ -132,11 +140,40 @@ for filename, label in PAGES.items():
         re.IGNORECASE | re.DOTALL,
     )
     step_items = re.findall(r"<li\b[^>]*class=[\"'][^\"']*\bpersona-step\b[^\"']*[\"'][^>]*>(.*?)</li>", steps_match.group(1), re.IGNORECASE | re.DOTALL) if steps_match else []
-    check(len(step_items) == 3, f"{filename}: exactly three persona steps")
+    check(2 <= len(step_items) <= 3, f"{filename}: two or three persona steps")
+    first_link = re.search(r"<a\b[^>]*\bhref=[\"']([^\"']+)[\"'][^>]*>", step_items[0], re.IGNORECASE) if step_items else None
+    check(
+        first_link is not None and html.unescape(first_link.group(1)) == SUCCESS_TARGETS[filename],
+        f"{filename}: step 1 href matches the success target",
+    )
     for index, item in enumerate(step_items, start=1):
         anchors = re.findall(r"<a\b[^>]*>", item, re.IGNORECASE)
         primary_links = [anchor for anchor in anchors if has_class(anchor, "btn-primary")]
-        check(len(primary_links) == 1, f"{filename}: step {index} has exactly one primary link")
+        expected_primary_links = 0 if filename == "for-contributors.html" and index == 2 else 1
+        check(
+            len(primary_links) == expected_primary_links,
+            f"{filename}: step {index} has {expected_primary_links} primary link(s)",
+        )
+        if filename == "for-contributors.html" and index == 2:
+            search_link = next(
+                (
+                    match
+                    for match in re.finditer(
+                        r"<a\b[^>]*\bhref=[\"']([^\"']+)[\"'][^>]*>(.*?)</a>",
+                        item,
+                        re.IGNORECASE | re.DOTALL,
+                    )
+                    if html.unescape(match.group(1))
+                    == "https://github.com/search?q=org%3Aaigovops-foundation+label%3A%22good+first+issue%22+state%3Aopen&type=issues"
+                ),
+                None,
+            )
+            check(
+                search_link is not None
+                and clean_text(search_link.group(2)) == "Search open good first issues →"
+                and not has_class(search_link.group(0), "btn-primary"),
+                "for-contributors.html: step 2 issue search is a plain link",
+            )
 
     details = re.findall(
         r"<details\b[^>]*>\s*<summary\b[^>]*>(.*?)</summary>\s*<p\b[^>]*>(.*?)</p>\s*</details>",

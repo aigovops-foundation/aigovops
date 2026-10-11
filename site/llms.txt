@@ -25,6 +25,7 @@ The front door offers six actions: become a member, give, join a meeting, read t
 - [What Is AiGovOps? | AiGovOps Foundation](https://www.aigovops-foundation.com/aigovops.html): AiGovOps treats AI governance like code: versioned, tested, and verifiable before deployment.
 - [Is AiGovOps Foundation a Nonprofit? | AiGovOps Foundation](https://www.aigovops-foundation.com/nonprofit.html): Learn what the AiGovOps Foundation builds, how support is used, and how its public finances are reported.
 - [What Is OVERT? | AiGovOps Foundation](https://www.aigovops-foundation.com/overt.html): OVERT is an open runtime-trust standard for independently verifiable evidence; the Foundation is co-steward with CHAI.
+- [Glossary | AiGovOps Foundation](https://www.aigovops-foundation.com/glossary.html): Plain-language definitions for AiGovOps Foundation tools, evidence, and practice.
 - [What Is Beacon? | AiGovOps Foundation](https://www.aigovops-foundation.com/beacon.html): Beacon is an OVERT 1.0-conformant runtime that produces signed, verifiable receipts of AI decisions.
 - [How Do I Create an AI Audit Plan? | AiGovOps Foundation](https://www.aigovops-foundation.com/audit.html): Use the 10-minute Gate Check, Vendor RFI, and mapped Library cases to begin an AI audit plan.
 - [Which AI Governance Starter Kits Can I Use? | AiGovOps Foundation](https://www.aigovops-foundation.com/starter-kits.html): Explore Practice levels 100–400, English and Spanish worksheets, NCW AI Camp, Vendor RFI, Beacon, and Gate Check.

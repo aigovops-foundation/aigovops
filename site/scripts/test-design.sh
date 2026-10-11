@@ -139,9 +139,9 @@ done
 
 # ── 4b. M15 homepage nav + M13 interior nav invariant ──────────────────────
 # The homepage has the approved six-action porch nav; interior pages retain the
-# three movement labels + Join (admin.html's reduced console nav is the exception).
+# three movement labels + Become a member (admin.html's reduced console nav is the exception).
 echo ""
-echo "  [Home + one level — M15 porch nav; interior nav carries Library, Open source + Join]"
+echo "  [Home + one level — M15 porch nav; interior nav carries Library, Open source + Become a member]"
 for hub in library.html open-source.html community.html; do
   if [ -f "$REPO/$hub" ] && ! grep -q 'http-equiv="refresh"' "$REPO/$hub"; then
     check "movement hub exists (not a stub): $hub" "ok"
@@ -169,13 +169,13 @@ for p in sorted(glob.glob("*.html")):
     labels = [re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", a)).strip()
               for a in re.findall(r"<a\b[^>]*>(.*?)</a>", m.group(1), re.S)]
     if p == "index.html":
-        expected = ["Library", "Meetings", "Newsletter", "Give", "Join"]
+        expected = ["Library", "Meetings", "Newsletter", "Give", "Become a member"]
         if labels != expected:
             print(f"homepage nav: {p}|expected {' | '.join(expected)}; got {' | '.join(labels)}")
         else:
             print(f"homepage nav: {p}|ok")
         continue
-    missing = [w for w in ("Library", "Open source", "Join")
+    missing = [w for w in ("Library", "Open source", "Become a member")
                if w not in labels]
     if missing:
         print(f"three-doors nav: {p}|missing from main-nav: {', '.join(missing)}")

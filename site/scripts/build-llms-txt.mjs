@@ -118,6 +118,7 @@ const TOPICS_PATHS = [
   '/aigovops.html',
   '/nonprofit.html',
   '/overt.html',
+  '/glossary.html',
   '/beacon.html',
   '/audit.html',
   '/starter-kits.html',

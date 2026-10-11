@@ -1,6 +1,26 @@
 window.I18N = {
   lang: 'en',
-  nav: { library: 'Library', opensource: 'Open source', home: 'Home', blog: 'Blog', meetings: 'Meetings', newsletter: 'Newsletter', give: 'Give' },
+  nav: { library: 'Library', opensource: 'Open source', home: 'Home', blog: 'Blog', meetings: 'Meetings', newsletter: 'Newsletter', give: 'Give', join: 'Become a member' },
+  glossary: {
+    link: 'Glossary',
+    eyebrow: 'AiGovOps Foundation · Plain-language terms',
+    title: 'Glossary',
+    intro: 'Short definitions for the terms used across the Foundation’s tools and practice.',
+    promise: 'Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes. Prove it in ten minutes.',
+    terms: {
+      overt: { term: 'OVERT', definition: 'An open standard for independently verifiable runtime evidence.' },
+      beacon: { term: 'Beacon', definition: 'An OVERT-conformant runtime that produces signed, verifiable receipts of AI decisions.' },
+      receipt: { term: 'Receipt', definition: 'Signed, verifiable evidence of an AI decision.' },
+      gateCheck: { term: 'Gate Check', definition: 'A ten-minute questionnaire that produces an audit plan.' },
+      gate: { term: 'Gate', definition: 'A decision point in the Foundation’s four-gate governance framework.' },
+      policyAsCode: { term: 'Policy as code', definition: 'Governance policies expressed as versioned, tested code before deployment.' },
+      practice: { term: 'Practice', definition: 'Four one-hour levels with worksheets and a manifesto.' },
+      library: { term: 'Library', definition: 'One hundred verified AI-harm cases mapped to NIST AI RMF, EU AI Act, ISO/IEC 42001, and OWASP.' },
+      umbrella: { term: 'Umbrella', definition: 'A Foundation tool that declares policies.' },
+      lantern: { term: 'Lantern', definition: 'A Foundation tool that reads evidence.' },
+      aigovops: { term: 'AiGovOps', definition: 'Treating AI governance like code: versioned, tested, and verifiable before deployment.' },
+    },
+  },
   hero: {
     eyebrow: 'AiGovOps Foundation · Policy as Code',
     h1: 'Ship Safe AI.<br>Never Unsafe AI.',

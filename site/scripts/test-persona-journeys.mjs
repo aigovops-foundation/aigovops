@@ -8,12 +8,12 @@ const BASE_URL = process.env.BASE_URL || 'http://localhost:8080';
 const BASE = new URL(BASE_URL);
 const RESULTS_DIR = path.join(ROOT, 'test-results', 'personas');
 const PERSONAS = [
-  { id: 'founder', page: 'for-founders.html', title: 'AI governance for startup founders' },
-  { id: 'enterprise', page: 'for-enterprise.html', title: 'AI governance for enterprise governance leads' },
-  { id: 'student', page: 'for-students.html', title: 'AI governance for students' },
-  { id: 'researcher', page: 'for-researchers.html', title: 'AI governance for researchers' },
-  { id: 'regulator', page: 'for-regulators.html', title: 'AI governance for regulators and policy staff' },
-  { id: 'contributor', page: 'for-contributors.html', title: 'AI governance for open-source contributors' },
+  { id: 'founder', page: 'for-founders.html', title: 'AI governance for startup founders', successHref: 'https://community.aigovops-foundation.com/gate-check.html?src=persona-founder' },
+  { id: 'enterprise', page: 'for-enterprise.html', title: 'AI governance for enterprise governance leads', successHref: 'https://github.com/aigovops-foundation/aigovops-vendor-rfi' },
+  { id: 'student', page: 'for-students.html', title: 'AI governance for students', successHref: 'https://practice.aigovops-foundation.com/levels/100-begin/WORKSHEET.html?src=persona-student' },
+  { id: 'researcher', page: 'for-researchers.html', title: 'AI governance for researchers', successHref: 'https://community.aigovops-foundation.com/library/find.html?src=persona-researcher', accessGatePath: '/library-rules.html' },
+  { id: 'regulator', page: 'for-regulators.html', title: 'AI governance for regulators and policy staff', successHref: 'https://aigovops-foundation.github.io/aigovops-beacon/#demo' },
+  { id: 'contributor', page: 'for-contributors.html', title: 'AI governance for open-source contributors', successHref: 'https://github.com/aigovops-foundation/aigovops-beacon/blob/main/CONTRIBUTING.md' },
 ];
 const failures = [];
 const statusCache = new Map();
@@ -173,7 +173,7 @@ async function run() {
         timings: {},
         widths: {},
         stepLinks: [],
-        clicksToSuccess: { fromPersonaPage: 2, fromHome: 3 },
+        clicksToSuccess: { fromPersonaPage: 1, fromHome: 2 },
         screenshots: [],
       };
       const failuresAtStart = failures.length;
@@ -206,6 +206,11 @@ async function run() {
         }
 
         journey.homeWidths = await readWidths(page);
+        for (const width of [1280, 390]) {
+          await page.setViewportSize({ width, height: 800 });
+          const firstCardTop = await page.locator('.six-card').first().evaluate((card) => card.getBoundingClientRect().top);
+          record(firstCardTop < 800, `${persona.id}: first six-card starts above the fold at ${width}×800 (${Math.round(firstCardTop)}px)`);
+        }
         const chip = page.locator(`.persona-chips a[href="${persona.page}"]`);
         record(await chip.count() === 1, `${persona.id}: homepage chip exists exactly once`);
         const landingStart = performance.now();
@@ -237,19 +242,28 @@ async function run() {
           record(result.status !== null && result.status < 400, `${persona.id}: step link ${link.href} returned ${result.status ?? 'no response'}`);
         }
 
-        const stepThree = page.locator('.persona-steps > li').nth(2).locator('a.btn-primary');
-        const expected = new URL(await stepThree.evaluate((anchor) => anchor.href));
+        const successStep = page.locator('.persona-steps > li').first().locator('a.btn-primary');
+        const successHref = await successStep.evaluate((anchor) => anchor.href);
+        const expected = new URL(persona.successHref);
+        record(successHref === expected.href, `${persona.id}: step 1 href matches success target`);
         const successStart = performance.now();
+        const expectedSearchTarget = `${expected.pathname.slice(1)}${expected.search}`;
+        const isSuccessNavigation = (url) => url.href === expected.href || (
+          persona.accessGatePath &&
+          url.origin === expected.origin &&
+          url.pathname === persona.accessGatePath &&
+          url.searchParams.get('next') === expectedSearchTarget
+        );
         await Promise.all([
-          page.waitForURL((url) => url.origin === expected.origin && url.pathname === expected.pathname, {
+          page.waitForURL(isSuccessNavigation, {
             waitUntil: 'commit',
             timeout: 10_000,
           }),
-          stepThree.click(),
+          successStep.click(),
         ]);
-        journey.timings.stepThreeNavigationMs = Math.round(performance.now() - successStart);
-        journey.success = { href: expected.href, navigated: true };
-        record(true, `${persona.id}: step three navigates`);
+        journey.timings.stepOneNavigationMs = Math.round(performance.now() - successStart);
+        journey.success = { href: expected.href, navigatedTo: page.url(), navigated: true };
+        record(true, `${persona.id}: step 1 reaches its success target or access gate`);
         record(sameOriginConsoleErrors.length === 0, `${persona.id}: no same-origin console errors${sameOriginConsoleErrors.length ? ` (${sameOriginConsoleErrors.map((item) => item.text).join('; ')})` : ''}`);
         journey.consoleErrors = sameOriginConsoleErrors;
         journey.status = failures.length === failuresAtStart ? 'passed' : 'failed';

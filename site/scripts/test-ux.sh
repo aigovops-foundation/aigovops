@@ -60,7 +60,7 @@ def nav_labels(p):
 
 # ── 1. nav consistency ────────────────────────────────────────────────────
 section("M15 homepage nav; interior main-nav labels+order match library.html")
-home_ref = ["Library", "Meetings", "Newsletter", "Give", "Join"]
+home_ref = ["Library", "Meetings", "Newsletter", "Give", "Become a member"]
 home = nav_labels("index.html")
 emit("nav: index.html (M15 porch)",
      "ok" if home == home_ref else f"expected {' | '.join(home_ref)}; got {' | '.join(home or [])}")
