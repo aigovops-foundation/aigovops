@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-11T07:12:13Z",
+  "updated": "2026-10-11T19:08:53Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,22 @@
     }
   },
   "bob": [
+    {
+      "title": "Accessibility acceptance is a one-time gate—not ongoing control. Problem Changes can break labels, focus, captions, contrast, reco...",
+      "link": "https://www.linkedin.com/posts/bobrapp_accessibility-acceptance-is-a-one-time-gatenot-activity-7515034281853894656-RHDl",
+      "date": "Sun, 11 Oct 2026 13:03:15 GMT",
+      "summary": "Accessibility acceptance is a one-time gate—not ongoing control. Problem Changes can break labels, focus, captions, contrast, recovery, or screen-reader output. Launch approval is not continued access. Solution After each release: test affected users plus keyboard, screen reader,",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Near misses are not “nothing happened.” A harmful output was caught before reaching a person—and became safety data. PROBLEM Learn...",
+      "link": "https://www.linkedin.com/posts/bobrapp_near-misses-are-not-nothing-happened-a-activity-7515033657875513344-3dV5",
+      "date": "Sun, 11 Oct 2026 13:00:47 GMT",
+      "summary": "Near misses are not “nothing happened.” A harmful output was caught before reaching a person—and became safety data. PROBLEM Learn from every near miss, regardless of severity. Keep intake psychologically safe and blame-free. SOLUTION Log context, model/version, output, catching",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "PROBLEM AI ownership often disappears in a reorganization. Decision rights show who may approve; they do not preserve who remains...",
       "link": "https://www.linkedin.com/posts/bobrapp_problem-ai-ownership-often-disappears-in-activity-7514807533878976512-l8h8",
@@ -76,22 +92,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_problem-%D8%A7%D9%84%D9%85%D8%B4%D9%83%D9%84%D8%A9-a-policy-library-tells-activity-7514445373680111617-crsx",
       "date": "Fri, 09 Oct 2026 22:03:09 GMT",
       "summary": "PROBLEM | المشكلة A policy library tells you what a rule says. It does not tell operations what to prove. Without a live interpretation register, accountability disappears. توضح مكتبة السياسات مضمون القاعدة، لكنها لا تحدد ما يجب إثباته عملياً. بدون سجل حي للتفسير، تضيع المساءلة.",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An “82% confidence” score is not a decision. Problem A precise score near a threshold can hide uncertainty and make “approve” the...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-82-confidence-score-is-not-a-decision-activity-7514444933945085952-I3ay",
-      "date": "Fri, 09 Oct 2026 22:01:24 GMT",
-      "summary": "An “82% confidence” score is not a decision. Problem A precise score near a threshold can hide uncertainty and make “approve” the default. Solution Show, with every high-impact output: • score meaning + limits • uncertainty range + evidence quality • approve / escalate / defer /",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Evidence integrity is governance—not a score. Problem / 问题: Test-set contamination and benchmark overfitting create false confiden...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7514340394759770113-nQeD",
-      "date": "Fri, 09 Oct 2026 15:06:00 GMT",
-      "summary": "Evidence integrity is governance—not a score. Problem / 问题: Test-set contamination and benchmark overfitting create false confidence. 测试集污染与基准过拟合会制造虚假信心。 Solution / 解决方案: Lock and version evaluation sets; publish contamination thresholds; hash-verify evidence packets; require ext",
       "image": null,
       "author": "Bob Rapp"
     }
