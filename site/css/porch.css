@@ -12,7 +12,7 @@
 .hero {
   background: var(--porch-cream);
   color: var(--porch-charcoal);
-  padding: 64px 0 0;              /* band + cards handle the bottom */
+  padding: 40px 0 0;              /* band + cards handle the bottom */
   overflow: hidden;
 }
 .hero-content { max-width: 1100px; text-align: center; margin: 0 auto; }

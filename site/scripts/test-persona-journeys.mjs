@@ -208,8 +208,18 @@ async function run() {
         journey.homeWidths = await readWidths(page);
         for (const width of [1280, 390]) {
           await page.setViewportSize({ width, height: 800 });
-          const firstCardTop = await page.locator('.six-card').first().evaluate((card) => card.getBoundingClientRect().top);
-          record(firstCardTop < 800, `${persona.id}: first six-card starts above the fold at ${width}×800 (${Math.round(firstCardTop)}px)`);
+          const firstCard = await page.locator('.six-card').first().evaluate((card) => {
+            const rect = card.getBoundingClientRect();
+            return { top: rect.top, bottom: rect.bottom };
+          });
+          record(firstCard.top < 800, `${persona.id}: first six-card starts above the fold at ${width}×800 (${Math.round(firstCard.top)}px)`);
+          if (width === 390) {
+            record(firstCard.bottom <= 800, `${persona.id}: first six-card fits at 390×800 (${Math.round(firstCard.bottom)}px)`);
+          }
+          if (width === 1280) {
+            const lastCardBottom = await page.locator('.six-card').last().evaluate((card) => card.getBoundingClientRect().bottom);
+            record(lastCardBottom <= 800, `${persona.id}: last six-card fits at 1280×800 (${Math.round(lastCardBottom)}px)`);
+          }
         }
         const chip = page.locator(`.persona-chips a[href="${persona.page}"]`);
         record(await chip.count() === 1, `${persona.id}: homepage chip exists exactly once`);
