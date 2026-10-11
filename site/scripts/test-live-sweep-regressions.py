@@ -1,14 +1,112 @@
+from html.parser import HTMLParser
 import re
 from pathlib import Path
+from subprocess import check_output
 
 ROOT = Path(__file__).resolve().parent.parent
-HTML = sorted(ROOT.rglob("*.html"))
+HTML = [
+    ROOT / path
+    for path in check_output(["git", "ls-files", "--", "*.html"], cwd=ROOT, text=True).splitlines()
+]
 failures = []
 
 def check(condition, message):
     if not condition:
         failures.append(message)
     print(f"  {'ok' if condition else 'FAIL'} {message}")
+
+
+class LinkNameParser(HTMLParser):
+    VOID = {
+        "area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta",
+        "param", "source", "track", "wbr",
+    }
+
+    def __init__(self):
+        super().__init__()
+        self.links = []
+        self.active_links = []
+        self.frames = []
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        parent = self.frames[-1] if self.frames else {}
+        in_svg = parent.get("in_svg", False) or tag == "svg"
+        hidden = parent.get("hidden", False) or attrs.get("aria-hidden", "").lower() == "true" or "hidden" in attrs
+        if tag == "a" and "href" in attrs:
+            link = {
+                "href": attrs.get("href", ""),
+                "aria_name": bool(attrs.get("aria-label", "").strip() or attrs.get("aria-labelledby", "").strip()),
+                "text": [],
+                "svg_title": [],
+                "image_alt": False,
+            }
+            self.links.append(link)
+            self.active_links.append(link)
+        elif not hidden and (attrs.get("aria-label", "").strip() or attrs.get("aria-labelledby", "").strip()):
+            for link in self.active_links:
+                link["aria_name"] = True
+        if tag == "img" and attrs.get("alt", "").strip() and not hidden:
+            for link in self.active_links:
+                link["image_alt"] = True
+        frame = {
+            "tag": tag,
+            "hidden": hidden,
+            "skip_text": parent.get("skip_text", False) or tag in ("script", "style"),
+            "in_svg": in_svg,
+            "in_svg_title": parent.get("in_svg_title", False) or (tag == "title" and in_svg),
+        }
+        if tag not in self.VOID:
+            self.frames.append(frame)
+
+    def handle_startendtag(self, tag, attrs):
+        self.handle_starttag(tag, attrs)
+        self.handle_endtag(tag)
+
+    def handle_endtag(self, tag):
+        if tag == "a" and self.active_links:
+            self.active_links.pop()
+        if tag in self.VOID:
+            return
+        for index in range(len(self.frames) - 1, -1, -1):
+            if self.frames[index]["tag"] == tag:
+                del self.frames[index:]
+                break
+
+    def handle_data(self, data):
+        if not self.active_links or not self.frames:
+            return
+        frame = self.frames[-1]
+        if frame["hidden"] or frame["skip_text"]:
+            return
+        if frame["tag"] == "title" and not frame["in_svg"]:
+            return
+        for link in self.active_links:
+            if frame["in_svg_title"]:
+                link["svg_title"].append(data)
+            else:
+                link["text"].append(data)
+
+    def unnamed_links(self):
+        return [
+            link for link in self.links
+            if not (
+                link["aria_name"]
+                or "".join(link["text"]).strip()
+                or "".join(link["svg_title"]).strip()
+                or link["image_alt"]
+            )
+        ]
+
+
+unnamed_links = []
+for page in HTML:
+    parser = LinkNameParser()
+    parser.feed(page.read_text())
+    unnamed_links.extend((page.relative_to(ROOT), link["href"]) for link in parser.unnamed_links())
+for page, href in unnamed_links:
+    print(f"  FAIL {page}: <a href={href!r}> has an empty accessible name")
+check(not unnamed_links, f"all tracked HTML links have an accessible name ({len(HTML)} pages audited)")
 
 feedback_tags = []
 for page in HTML:
