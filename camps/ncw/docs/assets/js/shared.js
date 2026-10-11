@@ -24,16 +24,19 @@
   // Every href() result is encoded, so each `${href(...)}` in the templates below is attribute-safe.
   const href = (h) => escAttr(/^https?:/.test(h) ? h : BASE + h);
 
-  const NAV = [
+  const PRIMARY_NAV = [
     { href: "index.html", key: "home", label: "Home" },
+    { href: "kit/attendee-guide.html", key: "day", label: "Your day" },
+    { href: "pledge.html", key: "pledge", label: "Pledge" },
+    { href: "tools.html", key: "tools", label: "Tools" },
+  ];
+  const MORE_NAV = [
     { href: "plan.html", key: "plan", label: "The Plan" },
     { href: "centerpiece.html", key: "centerpiece", label: "Centerpiece" },
     { href: "mini-camps.html", key: "mini-camps", label: "Mini-Camps" },
     { href: "workshop.html", key: "workshop", label: "Workshop" },
     { href: "demos.html", key: "demos", label: "Demo Lab" },
-    { href: "tools.html", key: "tools", label: "Tools" },
     { href: "courses.html", key: "courses", label: "Courses" },
-    { href: "pledge.html", key: "pledge", label: "Pledge" },
     { href: "hint-logs.html", key: "hint-logs", label: "Hint-Logs" },
     { href: "resources.html", key: "resources", label: "Resources" },
     { href: "support.html", key: "support", label: "Support" },
@@ -47,22 +50,10 @@
       <circle cx="24" cy="8" r="3" fill="#E07A2A"/>
     </svg>`;
 
-  /* Nav density: the header row is capped at max-w-7xl, so the usable room
-     stops growing at a 1280px viewport (1216px inner) no matter how wide the
-     screen gets. Everything competing for it is fixed-width: brand 137px,
-     "Sign the Pledge" 146px, two 16px row gaps. That leaves 917px for the
-     nav, and the full NAV set at px-1.5/gap-0/13px measures 875px — 26px of
-     slack. Cut any of those levers and the shortfall does not wrap the nav
-     (whitespace-nowrap prevents that); it silently flex-shrinks the CTA
-     instead, which is why the brand's date subline is xl:hidden — restoring
-     it costs 41px the row does not have. The nav shows at xl (1280px) rather
-     than lg (1024px) because it does not fit the room lg leaves; 1024-1279px
-     gets the mobile menu, where the subline is visible again.
-     measure-header checks in tests/e2e/header.spec.mjs guard these numbers. */
   function renderHeader() {
     const mount = document.getElementById("site-header");
     if (!mount) return;
-    const links = NAV.map(
+    const links = PRIMARY_NAV.map(
       (n) => `<a href="${href(n.href)}" data-nav="${n.key}"
         class="px-1.5 py-2 rounded-lg text-[13px] font-600 whitespace-nowrap transition-colors ${
           n.key === PAGE
@@ -70,13 +61,44 @@
             : "text-charcoal/70 hover:text-orchard hover:bg-orchard/5"
         }">${n.label}</a>`
     ).join("");
+    const moreLinks = MORE_NAV.map(
+      (n) => `<a href="${href(n.href)}" data-nav="${n.key}"
+        class="block px-3 py-2 rounded-lg text-[13px] font-600 whitespace-nowrap ${
+          n.key === PAGE
+            ? "text-orchard bg-orchard/8"
+            : "text-charcoal/80 hover:text-orchard hover:bg-cream-deep"
+        }">${n.label}</a>`
+    ).join("");
+    const moreActive = MORE_NAV.some((n) => n.key === PAGE);
+    const moreMenu = `
+      <details class="relative">
+        <summary class="cursor-pointer list-none px-1.5 py-2 rounded-lg text-[13px] font-600 whitespace-nowrap transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-orchard ${
+          moreActive ? "text-orchard bg-orchard/8" : "text-charcoal/70 hover:text-orchard hover:bg-orchard/5"
+        }">More ▾</summary>
+        <div class="absolute right-0 top-full z-[60] mt-1 min-w-48 max-h-[70vh] overflow-y-auto rounded-xl border border-cream-deep bg-cream p-2 shadow-xl">
+          ${moreLinks}
+        </div>
+      </details>`;
 
-    const mobileLinks = NAV.map(
+    const mobileLinks = PRIMARY_NAV.map(
       (n) => `<a href="${href(n.href)}"
         class="block px-4 py-3 rounded-xl text-[15px] font-600 ${
           n.key === PAGE ? "text-orchard bg-orchard/8" : "text-charcoal/80 hover:bg-cream-deep"
         }">${n.label}</a>`
-    ).join("");
+    ).join("") + `
+      <details class="px-4 rounded-xl">
+        <summary class="cursor-pointer list-none py-3 text-[15px] font-600 text-charcoal/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-orchard">More ▾</summary>
+        <div class="space-y-1 pl-3">${MORE_NAV.map(
+          (n) => `<a href="${href(n.href)}"
+            class="block px-4 py-3 rounded-xl text-[15px] font-600 ${
+              n.key === PAGE ? "text-orchard bg-orchard/8" : "text-charcoal/80 hover:bg-cream-deep"
+            }">${n.label}</a>`
+        ).join("")}</div>
+      </details>`;
+    const pledgeHeaderAction = PAGE === "pledge" ? "" : `
+      <a id="pledgeHeaderAction" href="${href('pledge.html')}" class="hidden xl:inline-flex items-center rounded-full bg-signal hover:bg-signal-dark transition-colors text-white font-700 text-sm px-5 py-2.5 shadow-sm">Sign the pledge — anonymous, 30 s</a>`;
+    const pledgeStickyMobile = PAGE === "pledge" ? "" : `
+      <a id="pledgeStickyMobile" href="${href('pledge.html')}" class="hidden xl:hidden fixed inset-x-4 bottom-20 z-40 inline-flex justify-center items-center rounded-full bg-signal hover:bg-signal-dark transition-colors text-white font-700 text-sm px-5 py-3 shadow-lg">Sign the pledge — anonymous, 30 s</a>`;
 
     mount.innerHTML = `
       <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-orchard focus:text-white focus:font-700 focus:px-4 focus:py-2 focus:shadow-lg">Skip to main content</a>
@@ -88,9 +110,9 @@
               NCW AI Expo<span class="block xl:hidden text-[11px] font-600 text-orchard tracking-wide">Aug 11, 2026 · Wenatchee</span>
             </span>
           </a>
-          <nav class="hidden xl:flex items-center gap-0" aria-label="Primary">${links}</nav>
+          <nav class="hidden xl:flex items-center gap-0" aria-label="Primary">${links}${moreMenu}</nav>
           <div class="flex items-center gap-2">
-            <a href="${href('pledge.html')}" class="hidden sm:inline-flex items-center rounded-full bg-signal hover:bg-signal-dark transition-colors text-white font-700 text-sm px-5 py-2.5 shadow-sm">Sign the Pledge</a>
+            ${pledgeHeaderAction}
             <button id="menuBtn" class="xl:hidden grid place-items-center w-10 h-10 rounded-lg text-charcoal hover:bg-cream-deep" aria-label="Open menu" aria-expanded="false">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
@@ -98,9 +120,20 @@
         </div>
         <div id="mobileMenu" class="xl:hidden hidden border-t border-cream-deep bg-cream px-4 py-3 space-y-1">
           ${mobileLinks}
-          <a href="${href('pledge.html')}" class="block text-center mt-2 rounded-full bg-signal text-white font-700 px-5 py-3">Sign the Pledge</a>
         </div>
       </header>`;
+    mount.insertAdjacentHTML("afterend", pledgeStickyMobile);
+    const stickyAction = document.getElementById("pledgeStickyMobile");
+    if (stickyAction) {
+      const topSection = document.getElementById("home-hero") || document.querySelector("#main-content > section");
+      if (!topSection || !("IntersectionObserver" in window)) {
+        stickyAction.classList.remove("hidden");
+      } else {
+        new IntersectionObserver(([entry]) => {
+          stickyAction.classList.toggle("hidden", entry.isIntersecting);
+        }).observe(topSection);
+      }
+    }
 
     const btn = document.getElementById("menuBtn");
     const menu = document.getElementById("mobileMenu");

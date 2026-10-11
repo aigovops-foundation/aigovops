@@ -117,8 +117,10 @@ test("Mobile: primary nav links meet 44×44 tap target minimum", async ({
     await toggle.first().click().catch(() => {});
   }
 
-  const links = page.locator("header a, nav a");
-  const count = Math.min(await links.count(), 12);
+  const more = page.locator("#mobileMenu > details > summary");
+  if (await more.count()) await more.click();
+  const links = page.locator("#mobileMenu a, #mobileMenu summary");
+  const count = await links.count();
   for (let i = 0; i < count; i += 1) {
     const link = links.nth(i);
     if (!(await link.isVisible())) continue;

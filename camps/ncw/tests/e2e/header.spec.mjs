@@ -69,81 +69,78 @@ test.describe("Header brand wordmark", () => {
   });
 });
 
-test.describe("Header nav density", () => {
+test.describe("Simplified shared navigation", () => {
+  test("keeps four primary links and groups the remaining destinations in keyboard-accessible More", async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 900 });
+    await page.goto("/");
+    await waitForTailwind(page);
+
+    const primary = await page.locator('nav[aria-label="Primary"]').evaluate((nav) =>
+      [...nav.children].filter((el) => el.matches("a[data-nav]")).map((el) => el.textContent.trim())
+    );
+    expect(primary).toEqual(["Home", "Your day", "Pledge", "Tools"]);
+
+    const more = page.locator('nav[aria-label="Primary"] > details');
+    const summary = more.locator("summary");
+    await expect(summary).toHaveText("More ▾");
+    await expect(more.locator("a[data-nav]")).toHaveText([
+      "The Plan",
+      "Centerpiece",
+      "Mini-Camps",
+      "Workshop",
+      "Demo Lab",
+      "Courses",
+      "Hint-Logs",
+      "Resources",
+      "Support",
+      "About",
+    ]);
+    await summary.focus();
+    await page.keyboard.press("Space");
+    await expect(more).toHaveAttribute("open", "");
+  });
+
+  test("marks Your day active on the attendee guide", async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 900 });
+    await page.goto("/kit/attendee-guide.html");
+    await waitForTailwind(page);
+    const yourDay = page.locator('nav[aria-label="Primary"] a[data-nav="day"]');
+    await expect(yourDay).toHaveAttribute("href", "../kit/attendee-guide.html");
+    expect(await yourDay.evaluate((el) => el.classList.contains("bg-orchard/8"))).toBe(true);
+    const moreSummary = page.locator('nav[aria-label="Primary"] > details > summary');
+    expect(await moreSummary.evaluate((el) => el.classList.contains("bg-orchard/8"))).toBe(false);
+  });
+
+  test("uses the same keyboard-accessible More menu in the mobile drawer", async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto("/");
+    await waitForTailwind(page);
+    await page.locator("#menuBtn").click();
+    await expect(page.locator("#mobileMenu")).toBeVisible();
+    await expect(page.locator("#mobileMenu > a")).toHaveText([
+      "Home",
+      "Your day",
+      "Pledge",
+      "Tools",
+    ]);
+
+    const more = page.locator("#mobileMenu > details");
+    const summary = more.locator("summary");
+    await summary.focus();
+    await page.keyboard.press("Space");
+    await expect(more).toHaveAttribute("open", "");
+    await expect(more.locator("a")).toHaveCount(10);
+  });
+
   for (const width of DESKTOP_WIDTHS) {
-    test(`fits on one line at ${width}px with room to spare`, async ({ page }) => {
-      await page.setViewportSize({ width, height: 900 });
-      await page.goto("/");
-      await waitForTailwind(page);
-
-      const metrics = await page.evaluate(() => {
-        const row = document.querySelector("#site-header header > div");
-        const nav = document.querySelector('nav[aria-label="Primary"]');
-        const style = getComputedStyle(row);
-        const inner =
-          row.getBoundingClientRect().width -
-          parseFloat(style.paddingLeft) -
-          parseFloat(style.paddingRight);
-
-        const links = [...nav.children];
-        // Natural single-line width of each link, measured on a clone so a
-        // squeezed label reports what it WANTS rather than what it got.
-        let need = 0;
-        for (const link of links) {
-          const clone = link.cloneNode(true);
-          clone.style.whiteSpace = "nowrap";
-          clone.style.position = "absolute";
-          clone.style.visibility = "hidden";
-          document.body.appendChild(clone);
-          need += clone.getBoundingClientRect().width;
-          clone.remove();
-        }
-        const gap = parseFloat(getComputedStyle(nav).columnGap) || 0;
-        need += (links.length - 1) * gap;
-
-        const rowGap = parseFloat(style.columnGap) || 0;
-        const brand = row.children[0].getBoundingClientRect().width;
-        const right = row.children[2].getBoundingClientRect().width;
-
-        return {
-          need: Math.round(need),
-          budget: Math.round(inner - brand - right - rowGap * 2),
-          tallestLink: Math.max(
-            ...links.map((l) => Math.round(l.getBoundingClientRect().height))
-          ),
-          linkCount: links.length,
-        };
-      });
-
-      expect(metrics.linkCount, "nav should render every link").toBeGreaterThan(10);
-
-      expect(
-        metrics.need,
-        `nav needs ${metrics.need}px but only ${metrics.budget}px is available at ` +
-          `${width}px. Either shorten a label or reclaim width from the link ` +
-          `padding, the nav gap, or the brand subline.`
-      ).toBeLessThanOrEqual(metrics.budget);
-
-      // A wrapped label doubles a link's height. Catching this is why we
-      // measure height as well as width: whitespace-nowrap should make it
-      // impossible, so a tall link means the class was dropped.
-      expect(
-        metrics.tallestLink,
-        `a nav label wrapped to a second line (tallest link ${metrics.tallestLink}px)`
-      ).toBeLessThanOrEqual(45);
-    });
-
-    test(`CTA is not flex-shrunk at ${width}px`, async ({ page }) => {
+    test(`desktop pledge action is not flex-shrunk at ${width}px`, async ({ page }) => {
       await page.setViewportSize({ width, height: 900 });
       await page.goto("/");
       await waitForTailwind(page);
 
       const cta = await page.evaluate(() => {
-        const el = document.querySelector(
-          '#site-header header a[href$="pledge.html"]'
-        );
+        const el = document.querySelector("#pledgeHeaderAction");
         const actual = el.getBoundingClientRect().width;
-        // Measure what the pill wants by taking it out of the flex row.
         const clone = el.cloneNode(true);
         clone.style.position = "absolute";
         clone.style.visibility = "hidden";
@@ -156,11 +153,27 @@ test.describe("Header nav density", () => {
 
       expect(
         cta.actual,
-        `"Sign the Pledge" was squeezed from ${cta.natural}px to ${cta.actual}px, ` +
-          `which means the header row is overflowing`
+        `the pledge action was squeezed from ${cta.natural}px to ${cta.actual}px`
       ).toBeGreaterThanOrEqual(cta.natural - 1);
     });
   }
+
+  test("mobile pledge action stays clear of the launcher's documented footprint", async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto("/");
+    await waitForTailwind(page);
+    const cta = page.locator("#pledgeStickyMobile");
+    await expect(cta).toBeHidden();
+    await page.evaluate(() => {
+      const hero = document.getElementById("home-hero");
+      window.scrollTo(0, hero.offsetTop + hero.offsetHeight);
+    });
+    await expect(cta).toBeVisible();
+    const rect = await page.locator("#pledgeStickyMobile").boundingBox();
+    expect(rect).not.toBeNull();
+    const launcherTop = 844 - 20 - 46;
+    expect(rect.y + rect.height).toBeLessThanOrEqual(launcherTop);
+  });
 
   test("hamburger replaces the nav below xl, and never both at once", async ({ page }) => {
     for (const [width, expectNav] of [
@@ -183,6 +196,15 @@ test.describe("Header nav density", () => {
         await expect(burger, `hamburger should show at ${width}px`).toBeVisible();
       }
     }
+  });
+
+  test("Foundation bar is the first body element on the landing page", async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 900 });
+    await page.goto("/");
+    await waitForTailwind(page);
+    await expect(page.locator("body > nav.agf-bar")).toBeVisible();
+    const firstElement = await page.locator("body > *").first().getAttribute("class");
+    expect(firstElement).toBe("agf-bar");
   });
 });
 

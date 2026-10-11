@@ -44,6 +44,29 @@
 </script>
 </head>
 <body class="font-sans antialiased text-charcoal" data-page="home">
+<!-- AiGovOps Foundation bar v1 — identical on every Foundation subdomain. Self-contained; no external assets. -->
+<nav class="agf-bar" aria-label="AiGovOps Foundation">
+  <a class="agf-bar__home" href="https://www.aigovops-foundation.com/">AiGovOps Foundation</a>
+  <ul class="agf-bar__links">
+    <li><a href="https://practice.aigovops-foundation.com/">Learn <span class="agf-bar__hint">· free course</span></a></li>
+    <li><a href="https://community.aigovops-foundation.com/library/">Library</a></li>
+    <li><a href="https://www.aigovops-foundation.com/open-source.html">Tools <span class="agf-bar__hint">· open source</span></a></li>
+    <li><a href="https://practice.aigovops-foundation.com/docs/THURSDAY.html">Meetings</a></li>
+    <li><a class="agf-bar__join" href="https://community.aigovops-foundation.com/signin.html">Become a member</a></li>
+  </ul>
+</nav>
+<style>
+.agf-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.25rem 1rem;padding:.35rem 1rem;background:#1f2a24;color:#e9efe9;font:500 13px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;position:relative;z-index:50}
+.agf-bar a{color:inherit;text-decoration:none}
+.agf-bar a:hover,.agf-bar a:focus-visible{text-decoration:underline}
+.agf-bar a:focus-visible{outline:2px solid #9fd8b4;outline-offset:2px;border-radius:2px}
+.agf-bar__home{font-weight:700;letter-spacing:.01em}
+.agf-bar__links{display:flex;flex-wrap:wrap;gap:.15rem .9rem;list-style:none;margin:0;padding:0}
+.agf-bar__hint{opacity:.7;font-weight:400}
+.agf-bar__join{font-weight:700;color:#9fd8b4!important}
+@media (max-width:560px){.agf-bar__hint{display:none}.agf-bar{font-size:12px}}
+@media print{.agf-bar{display:none}}
+</style>
 <div id="site-header"></div>
 <main id="main-content">
 <!-- ROW EDITION ADDITION — existing content remains below. -->
@@ -51,7 +74,7 @@
 
 
 <!-- ===== HERO ===== -->
-<section class="relative overflow-hidden">
+<section id="home-hero" class="relative overflow-hidden">
   <div class="absolute inset-0 -z-10">
     <img src="assets/img/hero-orchard.jpg" alt="Apple orchard rows beneath the snow-dusted Cascade foothills near Wenatchee at golden hour" class="w-full h-full object-cover" />
     <div class="absolute inset-0 bg-gradient-to-b from-cream/92 via-cream/82 to-cream/96"></div>
