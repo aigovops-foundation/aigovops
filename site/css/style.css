@@ -1,4 +1,4 @@
-@import url("tokens.css?v=20261011a");   /* AiGovOps brand tokens — single source of truth */
+@import url("tokens.css?v=20261011b");   /* AiGovOps brand tokens — single source of truth */
 
 /* ===== SKIP LINK (accessibility) ===== */
 .skip-link {
@@ -9,6 +9,11 @@
   transition: top 0.15s;
 }
 .skip-link:focus { top: 0; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
 
 /* ===== FOCUS-VISIBLE (keyboard accessibility) ===== */
 a:focus-visible,
@@ -74,9 +79,9 @@ a { color: inherit; text-decoration: none; }
 a[href="blog.html"], a[href="/blog.html"], a[href="../blog.html"] { display: none !important; }
 
 .lang-toggle { display: flex; gap: 2px; align-items: center; }
-.lang-btn { background: none; border: 1px solid var(--border); border-radius: 4px; padding: 3px 8px; font-size: 0.72rem; font-weight: 700; cursor: pointer; color: var(--muted); transition: all 0.15s; font-family: 'Courier New', monospace; letter-spacing: 0.05em; min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
-.lang-btn:hover { border-color: var(--teal-accessible); color: var(--teal-accessible); }
-.lang-btn.lang-active { background: var(--teal-accessible); border-color: var(--teal-accessible); color: #fff; }
+.lang-btn { background: #fff; border: 1px solid #1a1a2e; border-radius: 4px; padding: 3px 8px; font-size: 0.72rem; font-weight: 700; cursor: pointer; color: #1a1a2e; transition: border-color 0.15s; font-family: 'Courier New', monospace; letter-spacing: 0.05em; min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+.lang-btn:hover { border-color: #1a1a2e; color: #1a1a2e; }
+.lang-btn.lang-active { background: #1a1a2e; border-color: #1a1a2e; color: #fff; }
 
 /* ===== HERO ===== */
 .hero {

@@ -76,9 +76,7 @@ function renderPostCard(p) {
   const summary = (p.summary || '').slice(0, 200);
   const truncTitle = title.length >= 100 ? title.slice(0, title.lastIndexOf(' ', 97)) + '…' : title;
   const truncSummary = summary.length >= 200 ? summary.slice(0, summary.lastIndexOf(' ', 197)) + '… Read →' : summary;
-  // esc() covers the aria-label too — the old .replace(/"/g,'&quot;') closed the quote
-  // but left < and > alone, so the attribute was an injection point of its own.
-  return `<a class="post-card" href="${safeHref(p.link)}" target="_blank" rel="noopener" aria-label="${esc(truncTitle)}, opens in new tab">
+  return `<a class="post-card" href="${safeHref(p.link)}" target="_blank" rel="noopener">
     <span class="post-title">${esc(truncTitle)}</span>
     ${truncSummary ? `<span class="post-summary">${esc(truncSummary)}</span>` : ''}
     <span class="post-date">${esc(fmtDate(p.date))}</span>

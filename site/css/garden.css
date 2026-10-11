@@ -102,9 +102,9 @@ input:focus-visible, [tabindex]:focus-visible {
 }
 .nav-toggle { color: var(--garden-charcoal); }
 .main-nav.open { background: var(--garden-cream); border-bottom: 1px solid var(--garden-line); }
-.lang-btn { border-color: var(--garden-line); color: var(--garden-ink-soft); }
-.lang-btn:hover { border-color: var(--garden-green); color: var(--garden-green-deep); }
-.lang-btn.lang-active { background: var(--garden-green); border-color: var(--garden-green); color: #fff; }
+.lang-btn { background: #fff; border-color: #1a1a2e; color: #1a1a2e; }
+.lang-btn:hover { border-color: #1a1a2e; color: #1a1a2e; }
+.lang-btn.lang-active { background: #1a1a2e; border-color: #1a1a2e; color: #fff; }
 
 /* ---------- section bands ---------- */
 .section-light { background: var(--garden-cream); }

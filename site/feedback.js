@@ -31,6 +31,36 @@
   var DS = (document.currentScript && document.currentScript.dataset) || {};
   var THEME = DS.theme === 'light' ? 'light' : 'dark';
   var ENDPOINT = DS.endpoint || 'https://community.aigovops-foundation.com/api/feedback';
+  var STRINGS = {
+    en: {
+      group: 'Page feedback',
+      question: 'Was this page helpful?',
+      up: 'Yes, this page was helpful',
+      down: 'No, this page was not helpful',
+      more: 'Tell us more',
+      honeypot: 'Leave this field empty',
+      textarea: 'Tell us more about this page',
+      placeholder: 'What worked, what didn’t…',
+      send: 'Send',
+      privacy: 'Sent to the founders. No account, no cookies; don’t include personal info.',
+      thanks: 'Thanks!',
+      noteThanks: 'Thank you — the founders read every note.'
+    },
+    es: {
+      group: 'Comentarios de la página',
+      question: '¿Te resultó útil esta página?',
+      up: 'Sí, esta página fue útil',
+      down: 'No, esta página no fue útil',
+      more: 'Cuéntanos más',
+      honeypot: 'Deja este campo vacío',
+      textarea: 'Cuéntanos más sobre esta página',
+      placeholder: '¿Qué funcionó y qué no…?',
+      send: 'Enviar',
+      privacy: 'Se envía a los fundadores. Sin cuenta ni cookies; no incluyas información personal.',
+      thanks: '¡Gracias!',
+      noteThanks: 'Gracias — los fundadores leen todas las notas.'
+    }
+  };
 
   // AA on both grounds: light = garden ink/green on cream (≥4.5:1); dark = the
   // estate-footer's charcoal set, page vars honored with safe fallbacks.
@@ -112,25 +142,22 @@
     var strip = document.createElement('div');
     strip.className = 'aig-feedback';
     strip.setAttribute('role', 'group');
-    strip.setAttribute('aria-label', 'Page feedback');
     strip.innerHTML =
       '<div class="aig-fb-inner">' +
         '<div class="aig-fb-row">' +
-          '<span class="aig-fb-q">Was this page helpful?</span>' +
-          '<button type="button" class="aig-fb-up" aria-label="Yes, this page was helpful" aria-pressed="false">👍</button>' +
-          '<button type="button" class="aig-fb-down" aria-label="No, this page was not helpful" aria-pressed="false">👎</button>' +
-          '<button type="button" class="aig-fb-more" aria-expanded="false">Tell us more</button>' +
+          '<span class="aig-fb-q"></span>' +
+          '<button type="button" class="aig-fb-up" aria-pressed="false">👍</button>' +
+          '<button type="button" class="aig-fb-down" aria-pressed="false">👎</button>' +
+          '<button type="button" class="aig-fb-more" aria-expanded="false"></button>' +
           '<span class="aig-fb-note" role="status" aria-live="polite"></span>' +
         '</div>' +
         '<form hidden novalidate>' +
-          '<label class="aig-fb-hp" aria-hidden="true">Leave this field empty' +
+          '<label class="aig-fb-hp" aria-hidden="true"><span class="aig-fb-hp-label"></span>' +
             '<input type="text" name="website" tabindex="-1" autocomplete="off"></label>' +
-          '<textarea maxlength="2000" aria-label="Tell us more about this page" ' +
-            'placeholder="What worked, what didn’t…"></textarea>' +
-          '<button type="submit" class="aig-fb-send">Send</button>' +
+          '<textarea maxlength="2000"></textarea>' +
+          '<button type="submit" class="aig-fb-send"></button>' +
         '</form>' +
-        '<p class="aig-fb-privacy">Sent to the founders. No account, no cookies; ' +
-          'don’t include personal info.</p>' +
+        '<p class="aig-fb-privacy"></p>' +
       '</div>';
 
     var up = strip.querySelector('.aig-fb-up');
@@ -141,6 +168,28 @@
     var hp = strip.querySelector('input[name="website"]');
     var note = strip.querySelector('.aig-fb-note');
     var voted = false;
+    var noteType = '';
+
+    function renderLanguage() {
+      var lang = (document.documentElement.lang || 'en').toLowerCase().split('-')[0];
+      var text = STRINGS[lang] || STRINGS.en;
+      strip.setAttribute('aria-label', text.group);
+      strip.querySelector('.aig-fb-q').textContent = text.question;
+      up.setAttribute('aria-label', text.up);
+      down.setAttribute('aria-label', text.down);
+      more.textContent = text.more;
+      strip.querySelector('.aig-fb-hp-label').textContent = text.honeypot;
+      ta.setAttribute('aria-label', text.textarea);
+      ta.placeholder = text.placeholder;
+      form.querySelector('.aig-fb-send').textContent = text.send;
+      strip.querySelector('.aig-fb-privacy').textContent = text.privacy;
+      note.textContent = noteType ? text[noteType] : '';
+    }
+
+    renderLanguage();
+    new MutationObserver(function (mutations) {
+      if (mutations.some(function (mutation) { return mutation.attributeName === 'lang'; })) renderLanguage();
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
 
     function vote(which, btn, other) {
       if (voted) return;
@@ -149,7 +198,8 @@
       up.disabled = down.disabled = true;
       other.setAttribute('aria-pressed', 'false');
       send({ vote: which, website: hp.value }, function () {
-        note.innerHTML = '<span class="aig-fb-thanks">Thanks!</span>';
+        noteType = 'thanks';
+        renderLanguage();
       });
     }
     up.addEventListener('click', function () { vote('up', up, down); });
@@ -170,7 +220,8 @@
       send({ vote: null, text: text.slice(0, 2000), website: hp.value }, function () {
         form.setAttribute('hidden', '');
         more.setAttribute('hidden', '');
-        note.innerHTML = '<span class="aig-fb-thanks">Thank you — the founders read every note.</span>';
+        noteType = 'noteThanks';
+        renderLanguage();
       });
     });
 

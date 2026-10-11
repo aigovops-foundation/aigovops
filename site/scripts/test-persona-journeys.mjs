@@ -229,6 +229,32 @@ async function run() {
           null,
           { timeout: 10_000 },
         );
+        if (persona.id === 'founder') {
+          await spanishPage.waitForSelector('.aig-feedback');
+          const spanishFeedback = await spanishPage.evaluate(() => ({
+            question: document.querySelector('.aig-fb-q')?.textContent,
+            more: document.querySelector('.aig-fb-more')?.textContent,
+            placeholder: document.querySelector('.aig-feedback textarea')?.placeholder,
+          }));
+          record(
+            spanishFeedback.question === '¿Te resultó útil esta página?'
+              && spanishFeedback.more === 'Cuéntanos más'
+              && spanishFeedback.placeholder === '¿Qué funcionó y qué no…?',
+            'Feedback widget renders Spanish visible and form strings',
+          );
+          await spanishPage.evaluate(() => window.I18N_SET('en'));
+          await spanishPage.waitForFunction(
+            () => document.querySelector('.aig-fb-q')?.textContent === 'Was this page helpful?',
+            null,
+            { timeout: 10_000 },
+          );
+          await spanishPage.evaluate(() => window.I18N_SET('es'));
+          await spanishPage.waitForFunction(
+            () => document.querySelector('.aig-fb-q')?.textContent === '¿Te resultó útil esta página?',
+            null,
+            { timeout: 10_000 },
+          );
+        }
         const spanishHeading = (await spanishPage.locator('.persona-hero h1').textContent())?.trim();
         record(spanishHeading !== persona.title, `${persona.id}: Spanish H1 differs from English`);
         const stepOneLink = spanishPage.locator('.persona-steps .persona-step:first-child a.btn-primary');

@@ -75,8 +75,8 @@ check_html "$REPO/css/style.css" "Chat badge visible style"        '\.chat-badge
 
 echo ""
 echo "  [js/main.js — Post Card Labels]"
-check_html "$REPO/js/main.js"  "Post cards have aria-label"        "aria-label="
-check_html "$REPO/js/main.js"  "Post cards signal new tab"         "opens in new tab"
+check_absent "$REPO/js/main.js" "Post cards rely on visible text for their name" "aria-label="
+check_html "$REPO/js/main.js"  "Post cards keep safe new-tab behavior"   'target="_blank" rel="noopener"'
 
 echo ""
 echo "  [js/chat.js — Keyboard Navigation]"
@@ -167,6 +167,14 @@ check_html "$REPO/index.html" "Visitor timezone span"       'visitorTz'
 check_html "$REPO/blog.html"  "blog.html has HTML lang"            '<html lang="en"'
 check_html "$REPO/blog.html"  "blog.html has og:title"             'og:title'
 check_html "$REPO/blog.html"  "blog.html has favicon"              'favicon'
+
+echo ""
+echo "  [live sweep regressions]"
+if python3 "$REPO/scripts/test-live-sweep-regressions.py"; then
+  check "Accessible shared labels, feedback theme, and Practice links" "ok"
+else
+  check "Accessible shared labels, feedback theme, and Practice links" "failed"
+fi
 
 echo ""
 echo "  ${PASS} passed, ${FAIL} failed"
