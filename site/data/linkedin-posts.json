@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-10T19:08:36Z",
+  "updated": "2026-10-11T07:12:13Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,22 @@
     }
   },
   "bob": [
+    {
+      "title": "PROBLEM AI ownership often disappears in a reorganization. Decision rights show who may approve; they do not preserve who remains...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-ai-ownership-often-disappears-in-activity-7514807533878976512-l8h8",
+      "date": "Sat, 10 Oct 2026 22:02:14 GMT",
+      "summary": "PROBLEM AI ownership often disappears in a reorganization. Decision rights show who may approve; they do not preserve who remains accountable when roles, teams, or vendors change. Without institutional capacity, named-owner repetition, and a durable record, controls become orphan",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI can pass launch checks—and still strand users mid-task. PROBLEM / समस्या Accessibility debt is governance risk, not polish. Log u...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-can-pass-launch-checksand-still-strand-activity-7514807489931173888-omYQ",
+      "date": "Sat, 10 Oct 2026 22:02:04 GMT",
+      "summary": "AI can pass launch checks—and still strand users mid-task. PROBLEM / समस्या Accessibility debt is governance risk, not polish. Log unserved journeys, severity, owner, target, and release decision. Never treat it as a one-time acceptance test. SOLUTION / समाधान Maintain a live reg",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "ENGLISH PROBLEM — Accessible ≠ safe: cognitive load, alert fatigue, ambiguity, time pressure, and harmful defaults can overwhelm o...",
       "link": "https://www.linkedin.com/posts/bobrapp_english-problem-accessible-safe-cognitive-activity-7514671818679713792-QNZN",
@@ -76,22 +92,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7514340394759770113-nQeD",
       "date": "Fri, 09 Oct 2026 15:06:00 GMT",
       "summary": "Evidence integrity is governance—not a score. Problem / 问题: Test-set contamination and benchmark overfitting create false confidence. 测试集污染与基准过拟合会制造虚假信心。 Solution / 解决方案: Lock and version evaluation sets; publish contamination thresholds; hash-verify evidence packets; require ext",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Who may attest that an AI system is safe? Not the party paid to make it pass. ENGLISH PROBLEM / SOLUTION / SUMMARY: Vendors, build...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7514340351369940992-Kwsp",
-      "date": "Fri, 09 Oct 2026 15:05:49 GMT",
-      "summary": "Who may attest that an AI system is safe? Not the party paid to make it pass. ENGLISH PROBLEM / SOLUTION / SUMMARY: Vendors, builders, resellers and success-fee assessors cannot independently validate their own product. Separate 1L build/operate, 2L challenge and 3L audit; 3L rep",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Readable does not mean stable. PROBLEM: After an update, retraining, or configuration change, an AI rationale may drift. This is e...",
-      "link": "https://www.linkedin.com/posts/bobrapp_readable-does-not-mean-stable-problem-activity-7514309977654607872-QChL",
-      "date": "Fri, 09 Oct 2026 13:05:08 GMT",
-      "summary": "Readable does not mean stable. PROBLEM: After an update, retraining, or configuration change, an AI rationale may drift. This is explanation-consistency governance—not research translation, a model card, or an explainability claim. SOLUTION: Version the model, configuration, prom",
       "image": null,
       "author": "Bob Rapp"
     }
