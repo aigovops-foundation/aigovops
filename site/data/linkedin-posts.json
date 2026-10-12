@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-11T19:08:53Z",
+  "updated": "2026-10-12T07:31:45Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,22 @@
     }
   },
   "bob": [
+    {
+      "title": "Live personal data is not a default pilot environment. PROBLEM “Just a pilot” is not a control. Masked data can be re-identified;...",
+      "link": "https://www.linkedin.com/posts/bobrapp_live-personal-data-is-not-a-default-pilot-activity-7515170000349941760-fFEy",
+      "date": "Sun, 11 Oct 2026 22:02:33 GMT",
+      "summary": "Live personal data is not a default pilot environment. PROBLEM “Just a pilot” is not a control. Masked data can be re-identified; prototypes can reach production. SOLUTION Start synthetic/masked; test re-identification; grant minimum, time-boxed access; separate test from product",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "ENGLISH PROBLEM A supplier vulnerability disclosure—affecting a model, tool, dataset, or infrastructure—can leave ownership, affec...",
+      "link": "https://www.linkedin.com/posts/bobrapp_english-problem-a-supplier-vulnerability-activity-7515169886952824832-Ol2C",
+      "date": "Sun, 11 Oct 2026 22:02:06 GMT",
+      "summary": "ENGLISH PROBLEM A supplier vulnerability disclosure—affecting a model, tool, dataset, or infrastructure—can leave ownership, affected versions, temporary controls, notices, remediation, and closure unclear. SOLUTION Assign triage ownership; map affected versions and deployments;",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Accessibility acceptance is a one-time gate—not ongoing control. Problem Changes can break labels, focus, captions, contrast, reco...",
       "link": "https://www.linkedin.com/posts/bobrapp_accessibility-acceptance-is-a-one-time-gatenot-activity-7515034281853894656-RHDl",
@@ -76,22 +92,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7514475125975711744-L5jy",
       "date": "Sat, 10 Oct 2026 00:01:22 GMT",
       "summary": "Regulatory change is a release gate—not a memo. PROBLEM / SOLUTION / SUMMARY: Per-system register: jurisdiction, rationale, effective date, owner, impact, deadline, control/test, remediation. Monitor continuously; escalate; map obligation→control→test; gate unmet releases. THREE-",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "This is big and we will all say I knew Jonathan G. Blanco 🛠 back before his company was worth a billion bucks",
-      "link": "https://www.linkedin.com/posts/bobrapp_this-is-big-and-we-will-all-say-i-knew-jonathan-activity-7514451904949637121-1Y59",
-      "date": "Fri, 09 Oct 2026 22:29:06 GMT",
-      "summary": "This is big and we will all say I knew Jonathan G. Blanco 🛠 back before his company was worth a billion bucks",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "PROBLEM | المشكلة A policy library tells you what a rule says. It does not tell operations what to prove. Without a live interpret...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-%D8%A7%D9%84%D9%85%D8%B4%D9%83%D9%84%D8%A9-a-policy-library-tells-activity-7514445373680111617-crsx",
-      "date": "Fri, 09 Oct 2026 22:03:09 GMT",
-      "summary": "PROBLEM | المشكلة A policy library tells you what a rule says. It does not tell operations what to prove. Without a live interpretation register, accountability disappears. توضح مكتبة السياسات مضمون القاعدة، لكنها لا تحدد ما يجب إثباته عملياً. بدون سجل حي للتفسير، تضيع المساءلة.",
       "image": null,
       "author": "Bob Rapp"
     }
