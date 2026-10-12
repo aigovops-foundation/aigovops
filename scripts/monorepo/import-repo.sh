@@ -102,11 +102,15 @@ trap 'rm -rf -- "$tmpdir"' EXIT
 source_clone="$tmpdir/source"
 git clone --no-local --single-branch --branch "$branch" "$git_url" "$source_clone"
 
-filter_args=(--to-subdirectory-filter "$dest_path")
-for path in "${drop_paths[@]}"; do
-  filter_args+=(--path "$dest_path/$path")
-done
-if [[ ${#drop_paths[@]} -gt 0 ]]; then filter_args+=(--invert-paths); fi
+if [[ ${#drop_paths[@]} -gt 0 ]]; then
+  drop_args=()
+  for path in "${drop_paths[@]}"; do drop_args+=(--path "$path"); done
+  drop_args+=(--invert-paths)
+  git -C "$source_clone" filter-repo "${drop_args[@]}"
+  filter_args=(--force --to-subdirectory-filter "$dest_path")
+else
+  filter_args=(--to-subdirectory-filter "$dest_path")
+fi
 if [[ -n "$replace_text" ]]; then filter_args+=(--replace-text "$replace_text"); fi
 git -C "$source_clone" filter-repo "${filter_args[@]}"
 
