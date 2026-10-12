@@ -1,0 +1,12 @@
+{
+  "projects": [
+    {
+      "id": "trunk-docs",
+      "path": "docs",
+      "urlPrefix": "/",
+      "build": null,
+      "out": "docs",
+      "legacy": []
+    }
+  ]
+}
