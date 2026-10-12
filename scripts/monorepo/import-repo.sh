@@ -71,6 +71,18 @@ if [[ -n "$(git status --porcelain --untracked-files=all)" ]]; then
   exit 1
 fi
 
+dest_segments=()
+IFS=/ read -r -a dest_segments <<< "$dest_path"
+ancestor=
+for segment in "${dest_segments[@]}"; do
+  [[ -n "$segment" ]] || continue
+  ancestor="${ancestor:+$ancestor/}$segment"
+  if [[ -L "$ancestor" ]]; then
+    printf 'refusing to import: destination ancestor is a symlink: %s\n' "$ancestor" >&2
+    exit 1
+  fi
+done
+
 if [[ -e "$dest_path" ]]; then
   printf 'refusing to import: destination already exists: %s\n' "$dest_path" >&2
   exit 1

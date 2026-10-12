@@ -1,7 +1,8 @@
 # Monorepo
 
-`monorepo.json` is the deployment manifest. Each project declares its source path,
-URL prefix, optional build command, output directory, and legacy redirects. Phase 0
+`monorepo.json` is the deployment manifest. Each project declares its source path
+(the working directory for its optional build command), URL prefix, output directory
+relative to the repo root, and legacy redirects. Phase 0
 contains only `trunk-docs`; assembly keeps its Pages output byte-for-byte equal to
 the current `docs/`.
 

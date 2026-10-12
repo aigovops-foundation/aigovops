@@ -1,5 +1,7 @@
 import assert from "node:assert/strict";
-import { mkdtemp, mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
+import { once } from "node:events";
+import { createServer } from "node:http";
+import { mkdtemp, mkdir, readFile, readdir, rm, symlink, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { spawnSync } from "node:child_process";
@@ -8,7 +10,7 @@ import vm from "node:vm";
 import test from "node:test";
 import { assemble } from "./assemble.mjs";
 import { mapUrl, renderStub } from "./redirect-stub.mjs";
-import { hasAnchor } from "./link-test.mjs";
+import { hasAnchor, printTable, runChecks } from "./link-test.mjs";
 
 const ROOT = resolve(fileURLToPath(new URL("../..", import.meta.url)));
 
@@ -49,6 +51,25 @@ test("real manifest assembles _site byte-for-byte from docs", async () => {
   for (const [path, contents] of docs) assert.deepEqual(site.get(path), contents, path);
 });
 
+test("project builds run from path while out stays relative to the repo root", async () => {
+  const root = await fixtureRoot();
+  try {
+    await mkdir(join(root, "p"), { recursive: true });
+    await writeManifest(root, [{
+      id: "builder",
+      path: "p",
+      urlPrefix: "/built/",
+      build: `node -e "require('fs').mkdirSync('dist',{recursive:true});require('fs').writeFileSync('dist/x.txt','ok')"`,
+      out: "p/dist",
+      legacy: [],
+    }]);
+    await assemble({ root, manifestPath: join(root, "monorepo.json"), sitePath: join(root, "_site") });
+    assert.equal(await readFile(join(root, "_site", "built", "x.txt"), "utf8"), "ok");
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
+});
+
 test("assembly reports both project ids on a file collision", async () => {
   const root = await fixtureRoot();
   try {
@@ -73,6 +94,34 @@ test("overlapping prefixes are allowed when output files do not collide", async 
     await assemble({ root, manifestPath: join(root, "monorepo.json"), sitePath: join(root, "_site") });
     assert.equal(await readFile(join(root, "_site", "a", "index.html"), "utf8"), "a");
     assert.equal(await readFile(join(root, "_site", "a", "b", "index.html"), "utf8"), "b");
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
+});
+
+test("url prefixes reject encoded traversal and invalid segment characters", async () => {
+  const root = await fixtureRoot();
+  try {
+    for (const urlPrefix of ["/a/%2e%2e/", "/bad segment/"]) {
+      await writeManifest(root, [project("invalid", "a", urlPrefix)]);
+      await assert.rejects(
+        assemble({ root, manifestPath: join(root, "monorepo.json"), sitePath: join(root, "_site") }),
+        /has invalid urlPrefix/,
+      );
+    }
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
+});
+
+test("project paths must stay inside the repo", async () => {
+  const root = await fixtureRoot();
+  try {
+    await writeManifest(root, [{ ...project("escape", "a", "/"), path: "../outside" }]);
+    await assert.rejects(
+      assemble({ root, manifestPath: join(root, "monorepo.json"), sitePath: join(root, "_site") }),
+      /path must be inside the repo/,
+    );
   } finally {
     await rm(root, { recursive: true, force: true });
   }
@@ -126,6 +175,54 @@ test("link test anchor lookup matches exact id and name values", () => {
   assert.equal(hasAnchor('<main data-id="demo"></main>', "demo"), false);
 });
 
+test("link test follows a redirect stub and reports the mapped response", async () => {
+  let stub;
+  const server = createServer((request, response) => {
+    if (request.url?.startsWith("/old/")) {
+      response.writeHead(404, { "content-type": "text/html" });
+      response.end(stub);
+    } else if (request.url?.startsWith("/new/deep/page.html")) {
+      response.writeHead(200, { "content-type": "text/html" });
+      response.end('<main id="ready"></main>');
+    } else {
+      response.writeHead(404);
+      response.end();
+    }
+  });
+  server.listen(0, "127.0.0.1");
+  await once(server, "listening");
+  try {
+    const address = server.address();
+    assert.ok(address && typeof address !== "string");
+    const origin = `http://127.0.0.1:${address.port}`;
+    const from = `${origin}/old/`;
+    const to = `${origin}/new/`;
+    stub = renderStub(from, to);
+    const entry = {
+      url: `${from}deep/page.html?campaign=phase0`,
+      expectFinalPrefix: to,
+      anchor: "ready",
+    };
+    const [result] = await runChecks([entry]);
+    assert.equal(result.passed, true);
+    assert.equal(result.viaStub, true);
+    assert.equal(result.finalUrl, `${to}deep/page.html?campaign=phase0`);
+    const output = [];
+    const originalLog = console.log;
+    try {
+      console.log = (line) => output.push(String(line));
+      assert.equal(printTable([result]), 0);
+    } finally {
+      console.log = originalLog;
+    }
+    assert.match(output.join("\n"), /PASS\t200\t1\tvia stub\tready/);
+  } finally {
+    await new Promise((resolve, reject) => {
+      server.close((error) => (error ? reject(error) : resolve()));
+    });
+  }
+});
+
 test("generated redirect stub maps deep paths in its inline script", async () => {
   const from = "https://aigovops-foundation.github.io/aigovops-beacon/";
   const to = "https://www.aigovops-foundation.com/beacon/";
@@ -172,6 +269,11 @@ test("redirect CLI writes matching index and 404 documents", async () => {
     const notFound = await readFile(join(out, "404.html"), "utf8");
     assert.equal(index, notFound);
     assert.match(index, /<meta name="robots" content="noindex">/);
+    assert.match(index, /<meta name="aigovops-redirect" content="https:\/\/example\.github\.io\/old\/\|https:\/\/example\.com\/new\/">/);
+    assert.match(
+      renderStub("https://example.com/a&b/", "https://example.com/c&d/"),
+      /content="https:\/\/example\.com\/a&amp;b\/\|https:\/\/example\.com\/c&amp;d\/"/,
+    );
     assert.match(index, /<link rel="canonical" href="https:\/\/example\.com\/new\/">/);
     assert.match(index, /location\.replace\(mapped\)/);
     assert.match(index, /Continue to the new site/);
@@ -222,6 +324,29 @@ test("import script preserves source history and drops excluded paths", { timeou
     const history = git(destination, "log", "--follow", "--format=%s", "--", "vendor/x/visible.txt");
     assert.deepEqual(history.split("\n"), ["source update", "source initial"]);
     assert.equal(git(destination, "log", "--all", "--", "vendor/x/secret.txt"), "");
+
+    const blockedDestination = join(root, "blocked-destination");
+    const outside = join(root, "outside");
+    await mkdir(blockedDestination);
+    await mkdir(outside);
+    git(blockedDestination, "init", "--initial-branch=main");
+    git(blockedDestination, "config", "user.name", "Monorepo Test");
+    git(blockedDestination, "config", "user.email", "monorepo-test@example.invalid");
+    await writeFile(join(blockedDestination, "README.md"), "destination\n");
+    git(blockedDestination, "add", "README.md");
+    git(blockedDestination, "commit", "-m", "destination initial");
+    await symlink(outside, join(blockedDestination, "vendor"));
+    git(blockedDestination, "add", "vendor");
+    git(blockedDestination, "commit", "-m", "add symlink ancestor");
+
+    const refused = spawnSync(
+      "bash",
+      [importScript, source, "main", "vendor/x", "--drop-path", "secret.txt"],
+      { cwd: blockedDestination, encoding: "utf8", timeout: 50_000 },
+    );
+    assert.notEqual(refused.status, 0);
+    assert.match(`${refused.stdout}\n${refused.stderr}`, /destination ancestor is a symlink: vendor/);
+    assert.deepEqual(await readdir(outside), []);
   } finally {
     await rm(root, { recursive: true, force: true });
   }

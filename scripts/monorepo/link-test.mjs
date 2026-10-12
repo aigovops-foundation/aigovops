@@ -3,6 +3,7 @@
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { mapUrl } from "./redirect-stub.mjs";
 
 const URL_LIST = new URL("./estate-urls.json", import.meta.url);
 const TIMEOUT_MS = 20_000;
@@ -27,15 +28,60 @@ function hasAnchor(html, anchor) {
   return false;
 }
 
+function redirectBases(html) {
+  for (const meta of html.matchAll(/<meta\b[^>]*>/gi)) {
+    const attributes = new Map();
+    for (const attribute of meta[0].matchAll(
+      /(?:^|\s)([^\s=/>]+)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/g,
+    )) {
+      attributes.set(
+        attribute[1].toLowerCase(),
+        attribute[2] ?? attribute[3] ?? attribute[4],
+      );
+    }
+    if (attributes.get("name")?.toLowerCase() !== "aigovops-redirect") continue;
+    const content = (attributes.get("content") ?? "").replace(
+      /&(amp|quot|#39|lt|gt);/g,
+      (entity) => ({
+        "&amp;": "&",
+        "&quot;": '"',
+        "&#39;": "'",
+        "&lt;": "<",
+        "&gt;": ">",
+      })[entity],
+    );
+    const separator = content.indexOf("|");
+    if (separator <= 0 || separator === content.length - 1) return null;
+    return {
+      from: content.slice(0, separator),
+      to: content.slice(separator + 1),
+    };
+  }
+  return null;
+}
+
 async function check(entry) {
   let result;
   for (let attempt = 0; attempt <= RETRIES; attempt += 1) {
+    let viaStub = false;
     try {
-      const response = await fetch(entry.url, {
+      let response = await fetch(entry.url, {
         redirect: "follow",
         signal: AbortSignal.timeout(TIMEOUT_MS),
       });
-      const html = await response.text();
+      let html = await response.text();
+      if ([200, 404].includes(response.status)) {
+        const bases = redirectBases(html);
+        const mapped = bases && mapUrl(bases.from, bases.to, response.url);
+        if (mapped) {
+          viaStub = true;
+          response = await fetch(mapped, {
+            redirect: "follow",
+            signal: AbortSignal.timeout(TIMEOUT_MS),
+          });
+          html = await response.text();
+        }
+      }
       const anchorFound = !entry.anchor || hasAnchor(html, entry.anchor);
       const prefixMatches = !entry.expectFinalPrefix || response.url.startsWith(entry.expectFinalPrefix);
       const passed = response.status === 200 && anchorFound && prefixMatches;
@@ -46,6 +92,7 @@ async function check(entry) {
         anchorFound,
         prefixMatches,
         passed,
+        viaStub,
         attempts: attempt + 1,
         error: "",
       };
@@ -58,6 +105,7 @@ async function check(entry) {
         anchorFound: !entry.anchor,
         prefixMatches: !entry.expectFinalPrefix,
         passed: false,
+        viaStub,
         attempts: attempt + 1,
         error: error.message,
       };
@@ -77,12 +125,13 @@ async function runChecks(entries) {
 }
 
 function printTable(results) {
-  console.log("RESULT\tHTTP\tATTEMPTS\tANCHOR\tURL\tFINAL URL");
+  console.log("RESULT\tHTTP\tATTEMPTS\tVIA\tANCHOR\tURL\tFINAL URL");
   for (const result of results) {
     console.log([
       result.passed ? "PASS" : "FAIL",
       result.status,
       result.attempts,
+      result.viaStub ? "via stub" : "",
       result.entry.anchor ?? "",
       result.entry.url,
       result.finalUrl,
@@ -98,7 +147,7 @@ function printTable(results) {
   return failed;
 }
 
-export { check, hasAnchor, runChecks };
+export { check, hasAnchor, printTable, runChecks };
 
 if (
   !process.env.NODE_TEST_CONTEXT &&
