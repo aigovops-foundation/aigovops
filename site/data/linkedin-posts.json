@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12T07:31:45Z",
+  "updated": "2026-10-12T19:08:56Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,22 @@
     }
   },
   "bob": [
+    {
+      "title": "A human in the loop is not a quality metric. 人在回路中，不等于审查有效。 Problem Reviewers can be present while AI errors pass. Measure whether...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-human-in-the-loop-is-not-a-quality-metric-activity-7515397059126927361-gHPm",
+      "date": "Mon, 12 Oct 2026 13:04:48 GMT",
+      "summary": "A human in the loop is not a quality metric. 人在回路中，不等于审查有效。 Problem Reviewers can be present while AI errors pass. Measure whether reviewers catch and correctly resolve errors—not attendance. 问题 有人在场，错误仍可能漏过。衡量发现与纠正，而不是参与形式。 Solution Use blinded samples. Track: • Catch rate, corr",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI accountability can vanish in M&A—not because models changed, but because ownership did. Problem: Merged teams can lose owners,...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-accountability-can-vanish-in-manot-because-activity-7515396426017710080-Veyf",
+      "date": "Mon, 12 Oct 2026 13:02:17 GMT",
+      "summary": "AI accountability can vanish in M&A—not because models changed, but because ownership did. Problem: Merged teams can lose owners, evidence, escalation, and remedies. Never migrate first. Solution—continuity gate: inventory decisions/owners; freeze unsafe migrations; validate acce",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Live personal data is not a default pilot environment. PROBLEM “Just a pilot” is not a control. Masked data can be re-identified;...",
       "link": "https://www.linkedin.com/posts/bobrapp_live-personal-data-is-not-a-default-pilot-activity-7515170000349941760-fFEy",
@@ -76,22 +92,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_temporary-ai-controls-do-not-become-permanent-activity-7514671721342214144-9-Xx",
       "date": "Sat, 10 Oct 2026 13:02:34 GMT",
       "summary": "Temporary AI controls do not become permanent because they work. They become permanent when nobody owns the ending. PROBLEM Temporary exceptions and controls persist by inertia. Sunset governance is not model retirement, experimentation, or generic reassessment. It is the decisio",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI governance fails when accountability is plural. Problem: ownerless systems, unwritten risk appetite, weak independence, permane...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7514475479249387520-Rtot",
-      "date": "Sat, 10 Oct 2026 00:02:46 GMT",
-      "summary": "AI governance fails when accountability is plural. Problem: ownerless systems, unwritten risk appetite, weak independence, permanent exceptions, and unreproducible board metrics. Solution: one named owner per system; rights to approve, veto, suspend, or accept residual risk; meas",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Regulatory change is a release gate—not a memo. PROBLEM / SOLUTION / SUMMARY: Per-system register: jurisdiction, rationale, effect...",
-      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-ship-safe-ai-never-activity-7514475125975711744-L5jy",
-      "date": "Sat, 10 Oct 2026 00:01:22 GMT",
-      "summary": "Regulatory change is a release gate—not a memo. PROBLEM / SOLUTION / SUMMARY: Per-system register: jurisdiction, rationale, effective date, owner, impact, deadline, control/test, remediation. Monitor continuously; escalate; map obligation→control→test; gate unmet releases. THREE-",
       "image": null,
       "author": "Bob Rapp"
     }
