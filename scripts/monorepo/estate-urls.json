@@ -1,0 +1,32 @@
+[
+  { "url": "https://www.aigovops-foundation.com/" },
+  { "url": "https://www.aigovops-foundation.com/open-source.html" },
+  { "url": "https://community.aigovops-foundation.com/landing.html" },
+  { "url": "https://community.aigovops-foundation.com/gate-check.html" },
+  { "url": "https://community.aigovops-foundation.com/signin.html" },
+  { "url": "https://community.aigovops-foundation.com/library-rules.html" },
+  {
+    "url": "https://community.aigovops-foundation.com/library/",
+    "expectFinalPrefix": "https://community.aigovops-foundation.com/library-rules.html?next=library/"
+  },
+  { "url": "https://practice.aigovops-foundation.com/" },
+  { "url": "https://practice.aigovops-foundation.com/levels/100-begin/WORKSHEET.html" },
+  { "url": "https://practice.aigovops-foundation.com/docs/THURSDAY.html" },
+  { "url": "https://aigovops-foundation.github.io/aigovops-beacon/", "anchor": "demo" },
+  { "url": "https://aigovops-foundation.github.io/aigovops-beacon/", "anchor": "run" },
+  { "url": "https://aigovops-foundation.github.io/aigovops-lantern/", "anchor": "quick-start" },
+  { "url": "https://aigovops-foundation.github.io/aigovops-lantern/cli/" },
+  { "url": "https://aigovops-foundation.github.io/umbrella-govops/", "anchor": "journeys" },
+  { "url": "https://aigovops-foundation.github.io/umbrella-govops/", "anchor": "frameworks" },
+  { "url": "https://aigovops-foundation.github.io/aigovops/", "anchor": "try" },
+  { "url": "https://aigovops-foundation.github.io/aigovops-vendor-rfi/comparison.html" },
+  { "url": "https://aigovops-foundation.github.io/aigovops-vendor-rfi/vendor-rfi-advisor.html" },
+  { "url": "https://aigovops-foundation.github.io/aigovops-vendor-rfi/training.html" },
+  { "url": "https://aigovops-foundation.github.io/openclaw-installer/app/index.html" },
+  { "url": "https://aigovops-foundation.github.io/openclaw-installer/aigovops-wizard.html" },
+  { "url": "https://aigovops-foundation.github.io/openclaw-installer/dashboard.html" },
+  { "url": "https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html" },
+  { "url": "https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/mini-camps.html" },
+  { "url": "https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/kit/attendee-guide.html" },
+  { "url": "https://aigovops-foundation.github.io/ai-artistic-agent-aigovops/showcase.html" }
+]

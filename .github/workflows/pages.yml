@@ -13,8 +13,9 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
       - run: npm test   # hard gate: all gate tests must pass before the docs deploy
+      - run: node scripts/monorepo/assemble.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
-        with: { path: docs }   # static landing page; no Jekyll build
+        with: { path: _site }   # assembled static sites; no Jekyll build
       - id: deploy
         uses: actions/deploy-pages@v4
