@@ -71,6 +71,18 @@ if [[ -n "$(git status --porcelain --untracked-files=all)" ]]; then
   exit 1
 fi
 
+dest_segments=()
+IFS=/ read -r -a dest_segments <<< "$dest_path"
+ancestor=
+for segment in "${dest_segments[@]}"; do
+  [[ -n "$segment" ]] || continue
+  ancestor="${ancestor:+$ancestor/}$segment"
+  if [[ -L "$ancestor" ]]; then
+    printf 'refusing to import: destination ancestor is a symlink: %s\n' "$ancestor" >&2
+    exit 1
+  fi
+done
+
 if [[ -e "$dest_path" ]]; then
   printf 'refusing to import: destination already exists: %s\n' "$dest_path" >&2
   exit 1
@@ -102,11 +114,15 @@ trap 'rm -rf -- "$tmpdir"' EXIT
 source_clone="$tmpdir/source"
 git clone --no-local --single-branch --branch "$branch" "$git_url" "$source_clone"
 
-filter_args=(--to-subdirectory-filter "$dest_path")
-for path in "${drop_paths[@]}"; do
-  filter_args+=(--path "$dest_path/$path")
-done
-if [[ ${#drop_paths[@]} -gt 0 ]]; then filter_args+=(--invert-paths); fi
+if [[ ${#drop_paths[@]} -gt 0 ]]; then
+  drop_args=()
+  for path in "${drop_paths[@]}"; do drop_args+=(--path "$path"); done
+  drop_args+=(--invert-paths)
+  git -C "$source_clone" filter-repo "${drop_args[@]}"
+  filter_args=(--force --to-subdirectory-filter "$dest_path")
+else
+  filter_args=(--to-subdirectory-filter "$dest_path")
+fi
 if [[ -n "$replace_text" ]]; then filter_args+=(--replace-text "$replace_text"); fi
 git -C "$source_clone" filter-repo "${filter_args[@]}"
 

@@ -16,12 +16,34 @@ function prefixParts(project) {
     urlPrefix.startsWith("//") ||
     urlPrefix.includes("//") ||
     urlPrefix.includes("\\") ||
+    urlPrefix.includes("%") ||
     /[?#]/.test(urlPrefix) ||
-    urlPrefix.split("/").some((part) => part === "." || part === "..")
+    urlPrefix.split("/").some(
+      (part) =>
+        (part && !/^[A-Za-z0-9._~-]+$/.test(part)) ||
+        part === "." ||
+        part === "..",
+    )
   ) {
     throw new Error(`project "${id}" has invalid urlPrefix: ${JSON.stringify(urlPrefix)}`);
   }
   return urlPrefix.split("/").filter(Boolean);
+}
+
+function projectDirectory(root, project) {
+  if (typeof project.path !== "string" || project.path.length === 0 || isAbsolute(project.path)) {
+    throw new Error(`project "${project.id}" must have a relative path`);
+  }
+  const directory = resolve(root, project.path);
+  const relativeDirectory = relative(root, directory);
+  if (
+    relativeDirectory === ".." ||
+    relativeDirectory.startsWith(`..${sep}`) ||
+    isAbsolute(relativeDirectory)
+  ) {
+    throw new Error(`project "${project.id}" path must be inside the repo: ${project.path}`);
+  }
+  return directory;
 }
 
 function outputDirectory(root, project) {
@@ -79,9 +101,7 @@ export async function assemble({
     }
     if (ids.has(project.id)) throw new Error(`duplicate project id: ${project.id}`);
     ids.add(project.id);
-    if (typeof project.path !== "string" || !project.path) {
-      throw new Error(`project "${project.id}" must have a path`);
-    }
+    const source = projectDirectory(root, project);
     const parts = prefixParts(project);
     if (project.build !== null && typeof project.build !== "string") {
       throw new Error(`project "${project.id}" build must be a shell command or null`);
@@ -90,7 +110,7 @@ export async function assemble({
       throw new Error(`project "${project.id}" legacy must be an array`);
     }
     const output = outputDirectory(root, project);
-    if (project.build) execSync(project.build, { cwd: root, stdio: "inherit", shell: true });
+    if (project.build) execSync(project.build, { cwd: source, stdio: "inherit", shell: true });
     let outputStat;
     try {
       outputStat = await stat(output);
