@@ -5,13 +5,21 @@
     <link>https://www.aigovops-foundation.com</link>
     <description>The latest posts from Ken Johnston and Bob Rapp on AI governance, policy-as-code, and open-source compliance tooling.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Oct 2026 06:07:19 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 06:09:05 +0000</lastBuildDate>
     <atom:link href="https://www.aigovops-foundation.com/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://www.aigovops-foundation.com/images/logo.png</url>
       <title>AiGovOps Foundation</title>
       <link>https://www.aigovops-foundation.com</link>
     </image>
+    <item><!-- content -->
+      <title>The premise — Robodebt and the gate before the first notice</title>
+      <link>https://www.aigovops-foundation.com/blog/the-premise.html</link>
+      <guid isPermaLink="true">https://www.aigovops-foundation.com/blog/the-premise.html</guid>
+      <pubDate>Tue, 13 Oct 2026 09:00:00 +0000</pubDate>
+      <dc:creator>Bob Rapp</dc:creator>
+      <description>Australia&#x27;s automated debt scheme averaged annual income into fortnights, fabricated debts for anyone with irregular earnings, and reversed the burden of proof onto about 440,000 people. The gate is not on the notice. It is on the arithmetic, before a single notice goes out. Level 400.</description>
+    </item>
     <item><!-- content -->
       <title>Seconds each — the hold that Cigna&#x27;s PXDX never had</title>
       <link>https://www.aigovops-foundation.com/blog/seconds-each.html</link>

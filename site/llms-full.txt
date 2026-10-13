@@ -165,6 +165,11 @@ The front door offers six actions: become a member, give, join a meeting, read t
   - H1: ISO 42001 as controls you can run, not a binder you file
   - H2: Start with the controls that already map to an action
   - H2: The test that tells you it is real
+- [The premise — Robodebt and the gate before the first notice | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/the-premise.html): Australia's automated debt scheme averaged annual income into fortnights, fabricated debts for anyone with irregular earnings, and reversed the burden of proof onto about 440,000 people. The gate is not on the notice. It is on the arithmetic, before a single notice goes out. Level 400.
+  - H1: The premise — Robodebt and the gate before the first notice
+  - H2: The gate that would have caught it
+  - H2: What &ldquo;prove it&rdquo; means
+  - H2: The hour
 - [Seconds each — the hold that Cigna's PXDX never had | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/seconds-each.html): ProPublica reported that Cigna's PXDX process let medical directors deny large batches of claims in seconds each, often without opening the patient's file. The gate is a human who actually reviews before a denial — and the arithmetic of what "actually" means when the batch is a thousand deep. Level 300.
   - H1: Seconds each — the hold that Cigna's PXDX never had
   - H2: The gate that would have caught it
