@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12T19:08:56Z",
+  "updated": "2026-10-13T07:20:11Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,22 @@
     }
   },
   "bob": [
+    {
+      "title": "Policy on paper is not operational AI governance. Evidence is. PROBLEM / 問題 A maturity score matters only when it identifies the n...",
+      "link": "https://www.linkedin.com/posts/bobrapp_policy-on-paper-is-not-operational-ai-governance-activity-7515532251330134016-sRFy",
+      "date": "Mon, 12 Oct 2026 22:02:01 GMT",
+      "summary": "Policy on paper is not operational AI governance. Evidence is. PROBLEM / 問題 A maturity score matters only when it identifies the next control to improve. / 成熟度は次の改善点を示してこそ意味があります。 SOLUTION / 解決策 Score 1 only when current evidence exists; otherwise score 0: Owner named / 責任者; reco",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Translation can be fluent—and still fail locally. PROBLEM | समस्या Localization is not translation. Test idioms, social norms, power...",
+      "link": "https://www.linkedin.com/posts/bobrapp_translation-can-be-fluentand-still-fail-activity-7515532176772186112-k6ZF",
+      "date": "Mon, 12 Oct 2026 22:01:43 GMT",
+      "summary": "Translation can be fluent—and still fail locally. PROBLEM | समस्या Localization is not translation. Test idioms, social norms, power dynamics, cultural assumptions, and market-specific harm patterns before launch. स्थानीयकरण केवल अनुवाद नहीं है। लॉन्च से पहले मुहावरों, सामाजिक मा",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "A human in the loop is not a quality metric. 人在回路中，不等于审查有效。 Problem Reviewers can be present while AI errors pass. Measure whether...",
       "link": "https://www.linkedin.com/posts/bobrapp_a-human-in-the-loop-is-not-a-quality-metric-activity-7515397059126927361-gHPm",
@@ -76,22 +92,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_ai-can-pass-launch-checksand-still-strand-activity-7514807489931173888-omYQ",
       "date": "Sat, 10 Oct 2026 22:02:04 GMT",
       "summary": "AI can pass launch checks—and still strand users mid-task. PROBLEM / समस्या Accessibility debt is governance risk, not polish. Log unserved journeys, severity, owner, target, and release decision. Never treat it as a one-time acceptance test. SOLUTION / समाधान Maintain a live reg",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "ENGLISH PROBLEM — Accessible ≠ safe: cognitive load, alert fatigue, ambiguity, time pressure, and harmful defaults can overwhelm o...",
-      "link": "https://www.linkedin.com/posts/bobrapp_english-problem-accessible-safe-cognitive-activity-7514671818679713792-QNZN",
-      "date": "Sat, 10 Oct 2026 13:02:57 GMT",
-      "summary": "ENGLISH PROBLEM — Accessible ≠ safe: cognitive load, alert fatigue, ambiguity, time pressure, and harmful defaults can overwhelm oversight. SOLUTION — With representative users, test realistic tasks. Measure load, missed alerts, interpretation time, and default choices. Require c",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Temporary AI controls do not become permanent because they work. They become permanent when nobody owns the ending. PROBLEM Tempor...",
-      "link": "https://www.linkedin.com/posts/bobrapp_temporary-ai-controls-do-not-become-permanent-activity-7514671721342214144-9-Xx",
-      "date": "Sat, 10 Oct 2026 13:02:34 GMT",
-      "summary": "Temporary AI controls do not become permanent because they work. They become permanent when nobody owns the ending. PROBLEM Temporary exceptions and controls persist by inertia. Sunset governance is not model retirement, experimentation, or generic reassessment. It is the decisio",
       "image": null,
       "author": "Bob Rapp"
     }
