@@ -142,6 +142,9 @@ jobs:
     runs-on: ubuntu-latest
     if: always()
     needs: [html-lint, api-tests, e2e, link-check]
+    defaults:
+      run:
+        working-directory: .
     steps:
       - name: Aggregate results
         run: |
