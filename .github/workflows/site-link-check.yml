@@ -23,7 +23,8 @@ permissions:
 
 jobs:
   link-check:
-    uses: aigovops-foundation/aigovops-library-june-ken-bob/.github/workflows/reusable-link-check.yml@0cbbbffaa1057c7310869032b30389840af5d9de # main @ 2026-09-30
+    uses: aigovops-foundation/aigovops-library-june-ken-bob/.github/workflows/reusable-link-check.yml@0cbbbffaa1057c7310869032b30389840af5d9de # v1
     with:
       site_url: "https://www.aigovops-foundation.com"
-      skip_pattern: "/cdn-cgi/"
+      # PRE-CUTOVER skip: remove after cutover (MONOREPO.md step 8)
+      skip_pattern: "/cdn-cgi/|https://www\\.aigovops-foundation\\.com/(practice|camps/ncw)/"

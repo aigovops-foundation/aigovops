@@ -6,6 +6,18 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const BASE_URL = process.env.BASE_URL || 'http://localhost:8080';
 const BASE = new URL(BASE_URL);
+const PRE_CUTOVER_URL_REMAPS = [
+  // PRE-CUTOVER remap: remove after cutover (MONOREPO.md step 8)
+  {
+    from: /^https:\/\/www\.aigovops-foundation\.com\/practice\/(.*)$/,
+    to: 'https://practice.aigovops-foundation.com/$1',
+  },
+  // PRE-CUTOVER remap: remove after cutover (MONOREPO.md step 8)
+  {
+    from: /^https:\/\/www\.aigovops-foundation\.com\/camps\/ncw\/(.*)$/,
+    to: 'https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/$1',
+  },
+];
 const RESULTS_DIR = path.join(ROOT, 'test-results', 'personas');
 const PERSONAS = [
   { id: 'founder', page: 'for-founders.html', title: 'AI governance for startup founders', englishChipLabel: 'Startup founder', spanishChipLabel: 'Fundador/a de startup', successHref: 'https://community.aigovops-foundation.com/gate-check.html?src=persona-founder' },
@@ -26,6 +38,13 @@ const scorecard = {
 
 function record(condition, message) {
   if (!condition) failures.push(message);
+}
+
+function remapPreCutoverUrl(url) {
+  for (const { from, to } of PRE_CUTOVER_URL_REMAPS) {
+    if (from.test(url)) return url.replace(from, to);
+  }
+  return url;
 }
 
 async function checkHomepageChipLabels(page, language) {
@@ -66,6 +85,25 @@ function isUnexpectedConsoleError(locationUrl, text, baseUrl = BASE.href) {
 
 function runSelfTest() {
   const baseUrl = 'https://www.aigovops-foundation.com/';
+  const remapCases = [
+    {
+      input: 'https://www.aigovops-foundation.com/practice/levels/100-begin/WORKSHEET.html?src=persona#start',
+      expected: 'https://practice.aigovops-foundation.com/levels/100-begin/WORKSHEET.html?src=persona#start',
+    },
+    {
+      input: 'https://www.aigovops-foundation.com/camps/ncw/docs/?q=1#x',
+      expected: 'https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/docs/?q=1#x',
+    },
+    {
+      input: 'https://www.aigovops-foundation.com/open-source.html',
+      expected: 'https://www.aigovops-foundation.com/open-source.html',
+    },
+  ];
+  for (const testCase of remapCases) {
+    assert.equal(remapPreCutoverUrl(testCase.input), testCase.expected);
+  }
+  console.log(`Persona journey pre-cutover URL remaps: ${remapCases.length} passed, 0 failed`);
+
   const cases = [
     {
       name: 'ignores Cloudflare Insights CSP errors',
@@ -167,9 +205,10 @@ async function sameOriginStatus(url, browser) {
 
 async function getStepLinkStatus(url, browser, api) {
   if (!statusCache.has(url)) {
-    const operation = new URL(url).origin === BASE.origin
-      ? sameOriginStatus(url, browser)
-      : externalStatus(url, api);
+    const remappedUrl = remapPreCutoverUrl(url);
+    const operation = new URL(remappedUrl).origin === BASE.origin
+      ? sameOriginStatus(remappedUrl, browser)
+      : externalStatus(remappedUrl, api);
     statusCache.set(url, operation);
   }
   return statusCache.get(url);
@@ -192,6 +231,10 @@ async function run() {
     viewport: { width: 390, height: 900 },
     ignoreHTTPSErrors: true,
   });
+  await context.route(
+    /^https:\/\/www\.aigovops-foundation\.com\/(?:practice|camps\/ncw)\//,
+    async (route) => route.continue({ url: remapPreCutoverUrl(route.request().url()) }),
+  );
   const api = await request.newContext({ timeout: 10_000, ignoreHTTPSErrors: true });
   let indexScreenshotSaved = false;
 

@@ -59,7 +59,10 @@ Add these repository secrets to `aigovops` before cutover:
    `www.aigovops-foundation.com` and enforce HTTPS.
 6. Merge the Practice and NCW redirect-stub PRs.
 7. Run `node scripts/monorepo/link-test.mjs --cutover`.
-8. Archive the old repositories only after a week of green checks.
+8. After the cutover link test passes, remove the PRE-CUTOVER URL alternation from
+   `site-link-check.yml`'s `skip_pattern` (retain `/cdn-cgi/`) and the pre-cutover
+   remaps from the Site persona-journey test.
+9. Archive the old repositories only after a week of green checks.
 
 After cutover, deep links under `github.io/aigovops/` land at `www` paths; trunk
 documentation is now served under `/aigovops/`.
