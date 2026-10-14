@@ -20,7 +20,7 @@ from pathlib import Path
 
 import segno
 
-URL = "https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html"
+URL = "https://www.aigovops-foundation.com/camps/ncw/pledge.html"
 OUT = Path(__file__).resolve().parent.parent / "docs" / "assets" / "img"
 ORCHARD, CREAM = "#2E7D4F", "#FAF7F0"
 

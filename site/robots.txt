@@ -47,3 +47,4 @@ Allow: /
 Disallow: /transcripts/
 
 Sitemap: https://www.aigovops-foundation.com/sitemap.xml
+Sitemap: https://www.aigovops-foundation.com/camps/ncw/sitemap.xml

@@ -59,7 +59,7 @@ Hi [vendor] team,
 
 I wrote last week about sponsoring the NCW AI Camp — August 11, 2026, in Wenatchee, Washington. Short version, in case it's easier to answer:
 
-[Your product] is one of the tools up to 500 education-focused attendees work hands-on that day, learning to use AI with citations, a human on the trigger, and receipts: https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/tools.html
+[Your product] is one of the tools up to 500 education-focused attendees work hands-on that day, learning to use AI with citations, a human on the trigger, and receipts: https://www.aigovops-foundation.com/camps/ncw/tools.html
 
 The ask is unchanged: $1,000 split between our two 501(c)(3)s — https://buy.stripe.com/bJe7sKbi214M7qJ1t75J603 — and/or two 12-month accounts for the two of us who teach every lab. Your logo goes on the event screen and our Supporters page.
 

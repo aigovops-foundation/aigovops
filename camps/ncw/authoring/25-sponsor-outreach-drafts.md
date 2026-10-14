@@ -9,7 +9,7 @@ Wenatchee, WA) at any tier — the easiest for a tool vendor is either a **$500 
 on the Support page) **or a year of the "Max" tier free for our two co-founders** (Ken Johnston & Bob
 Rapp), which counts as a full sponsorship. Every supporter's **logo goes on the event screen that day
 + the Supporters page year-round**. Support page:
-https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/support.html · AiGovOps Foundation is a
+https://www.aigovops-foundation.com/camps/ncw/support.html · AiGovOps Foundation is a
 501(c)(3), EIN 41-2999095.
 
 ## Send plan (from the master plan — window Jul 30–31)
@@ -46,7 +46,7 @@ your support, whichever is easier:
   every camp.
 
 Every supporter's **logo goes up on the event screen** that day and on our Supporters page:
-https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/support.html
+https://www.aigovops-foundation.com/camps/ncw/support.html
 
 We're helping our region ship good AI and steer clear of the bad. Would you stand with us?
 
@@ -72,7 +72,7 @@ two co-founders**, Ken Johnston and Bob Rapp, who teach every camp. Given our sh
 letter of support or a batch of educator access codes for attendees would mean a lot.
 
 Every supporter's **logo goes on the event screen** and our Supporters page:
-https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/support.html
+https://www.aigovops-foundation.com/camps/ncw/support.html
 
 Would you stand with us?
 
@@ -96,7 +96,7 @@ either a **$500 contribution** (Stripe on our Support page) or **a year of Bolt 
 co-founders**, Ken Johnston and Bob Rapp, who build and teach every camp.
 
 Every supporter's **logo goes on the event screen** that day and our Supporters page:
-https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/support.html
+https://www.aigovops-foundation.com/camps/ncw/support.html
 
 Would you stand with us?
 
@@ -120,7 +120,7 @@ support — a **$500 contribution** (Stripe on our Support page), or **a year of
 co-founders**, Ken Johnston and Bob Rapp, who build and teach every camp.
 
 Every supporter's **logo goes on the event screen** and our Supporters page:
-https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/support.html
+https://www.aigovops-foundation.com/camps/ncw/support.html
 
 Would you stand with us?
 
@@ -145,7 +145,7 @@ a **$500 contribution** or **a year of n8n for our two co-founders**, Ken Johnst
 501(c)(3) determination letter is attached for your nonprofit process.
 
 Every supporter's **logo goes on the event screen** and our Supporters page:
-https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/support.html
+https://www.aigovops-foundation.com/camps/ncw/support.html
 
 Would you stand with us?
 
@@ -169,7 +169,7 @@ support — a **$500 contribution** or **a year of Lovable for our two co-founde
 Bob Rapp, who build and teach every camp. Our 501(c)(3) determination letter is attached.
 
 Every supporter's **logo goes on the event screen** and our Supporters page:
-https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/support.html
+https://www.aigovops-foundation.com/camps/ncw/support.html
 
 Would you stand with us?
 
@@ -192,7 +192,7 @@ sponsor, so this is a natural extension.
 On **August 11, 2026** the camp reaches **up to 500 education-focused attendees**. A **$500
 contribution** or **a year of Copilot for our two co-founders**, Ken Johnston and Bob Rapp, would put
 your **logo on the event screen** that day and our Supporters page:
-https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/support.html
+https://www.aigovops-foundation.com/camps/ncw/support.html
 
 Would you stand with us?
 
@@ -215,7 +215,7 @@ citations, a human on the trigger, and the receipts to prove it. **ChatGPT** is 
 On **August 11, 2026** the camp reaches **up to 500 education-focused attendees**. We'd be grateful for
 a **$500 contribution** or **a year of ChatGPT for our two co-founders**, Ken Johnston and Bob Rapp.
 Every supporter's **logo goes on the event screen** and our Supporters page:
-https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/support.html
+https://www.aigovops-foundation.com/camps/ncw/support.html
 
 Would you stand with us?
 
@@ -238,7 +238,7 @@ research, which is the heart of our "keep the receipts" habit.
 On **August 11, 2026** the camp reaches **up to 500 education-focused attendees**. We'd love a **$500
 contribution** or **a year of Perplexity Max for our two co-founders**, Ken Johnston and Bob Rapp.
 Logo on the event screen + Supporters page:
-https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/support.html
+https://www.aigovops-foundation.com/camps/ncw/support.html
 
 Would you stand with us?
 
@@ -260,7 +260,7 @@ their own. On **August 11, 2026** the camp reaches **up to 500 education-focused
 
 A **$500 contribution** or **a year of Gamma for our two co-founders**, Ken Johnston and Bob Rapp,
 puts your **logo on the event screen** + our Supporters page:
-https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/support.html
+https://www.aigovops-foundation.com/camps/ncw/support.html
 
 Would you stand with us?
 
@@ -283,7 +283,7 @@ tools we demo live for honest, human-in-the-loop meeting notes.
 On **August 11, 2026** the camp reaches **up to 500 education-focused attendees**. We'd love a **$500
 contribution** or **a year of Granola for our two co-founders**, Ken Johnston and Bob Rapp. Logo on
 the event screen + Supporters page:
-https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/support.html
+https://www.aigovops-foundation.com/camps/ncw/support.html
 
 Would you stand with us?
 
@@ -306,7 +306,7 @@ hands full — utility crews, clinic staff, orchard managers.
 On **August 11, 2026** the camp reaches **up to 500 education-focused attendees**. A **$500
 contribution** or **a year of Wispr Flow for our two co-founders**, Ken Johnston and Bob Rapp, puts
 your **logo on the event screen** + our Supporters page:
-https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/support.html
+https://www.aigovops-foundation.com/camps/ncw/support.html
 
 Would you stand with us?
 
@@ -329,7 +329,7 @@ grown-up version of the "keep the receipts" discipline we teach families.
 On **August 11, 2026** the camp reaches **up to 500 education-focused attendees**. A **$500
 contribution** or **a year of Glean for our two co-founders**, Ken Johnston and Bob Rapp, puts your
 **logo on the event screen** + our Supporters page:
-https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/support.html
+https://www.aigovops-foundation.com/camps/ncw/support.html
 
 Would you stand with us?
 
@@ -352,7 +352,7 @@ grounded, cited answers.
 On **August 11, 2026** the camp reaches **up to 500 education-focused attendees**. We'd be grateful for
 a contribution (any tier) or a year of Gemini/Workspace access for our two co-founders, Ken Johnston
 and Bob Rapp. Every supporter's **logo goes on the event screen** and our Supporters page:
-https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/support.html
+https://www.aigovops-foundation.com/camps/ncw/support.html
 
 Would you stand with us?
 
@@ -374,7 +374,7 @@ tools we demo live in our build lab, and your education focus is a perfect fit.
 On **August 11, 2026** the camp reaches **up to 500 education-focused attendees**. We'd love a **$500
 contribution** or **a year of Replit for our two co-founders**, Ken Johnston and Bob Rapp. Logo on the
 event screen + Supporters page:
-https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/support.html
+https://www.aigovops-foundation.com/camps/ncw/support.html
 
 Would you stand with us?
 
@@ -396,7 +396,7 @@ for turning an idea into a working UI in minutes.
 On **August 11, 2026** the camp reaches **up to 500 education-focused attendees**. We'd love a **$500
 contribution** or **a year of Magic Patterns for our two co-founders**, Ken Johnston and Bob Rapp.
 Logo on the event screen + Supporters page:
-https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/support.html
+https://www.aigovops-foundation.com/camps/ncw/support.html
 
 Would you stand with us?
 

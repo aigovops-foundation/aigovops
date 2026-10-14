@@ -20,7 +20,7 @@ PAGES = {
 SUCCESS_TARGETS = {
     "for-founders.html": "https://community.aigovops-foundation.com/gate-check.html?src=persona-founder",
     "for-enterprise.html": "https://github.com/aigovops-foundation/aigovops-vendor-rfi",
-    "for-students.html": "https://practice.aigovops-foundation.com/levels/100-begin/WORKSHEET.html?src=persona-student",
+    "for-students.html": "https://www.aigovops-foundation.com/practice/levels/100-begin/WORKSHEET.html?src=persona-student",
     "for-researchers.html": "https://community.aigovops-foundation.com/library/find.html?src=persona-researcher",
     "for-regulators.html": "https://aigovops-foundation.github.io/aigovops-beacon/#demo",
     "for-contributors.html": "https://github.com/aigovops-foundation/aigovops-beacon/blob/main/CONTRIBUTING.md",

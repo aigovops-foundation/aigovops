@@ -16,7 +16,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APPLY = "--apply" in sys.argv
 ECO = '<a href="ecosystem.html">Ecosystem</a>'
-NCW = '<a href="https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/" target="_blank" rel="noopener">NCW AI Camp</a>'
+NCW = '<a href="https://www.aigovops-foundation.com/camps/ncw/" target="_blank" rel="noopener">NCW AI Camp</a>'
 
 changed = 0
 for path in sorted(glob.glob(os.path.join(ROOT, "*.html"))):

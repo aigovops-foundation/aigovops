@@ -36,11 +36,11 @@ The front door offers six actions: become a member, give, join a meeting, read t
 - Umbrella: https://aigovops-foundation.github.io/umbrella-govops/
 - Lantern: https://aigovops-foundation.github.io/aigovops-lantern/
 - Vendor RFI: https://github.com/aigovops-foundation/aigovops-vendor-rfi
-- NCW AI Camp: https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/
+- NCW AI Camp: https://www.aigovops-foundation.com/camps/ncw/
 
 ## Practice and community
-- Practice site: https://practice.aigovops-foundation.com/
-- Thursday page: https://practice.aigovops-foundation.com/docs/THURSDAY.html
+- Practice site: https://www.aigovops-foundation.com/practice/
+- Thursday page: https://www.aigovops-foundation.com/practice/docs/THURSDAY.html
 - Gate check: https://community.aigovops-foundation.com/gate-check.html
 - Community Library (members, free): https://community.aigovops-foundation.com/library/
 

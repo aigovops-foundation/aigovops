@@ -10,7 +10,7 @@ PASS=0; FAIL=0
 SITE="${SITE_URL:-https://www.aigovops-foundation.com}"
 COMMUNITY="${COMMUNITY_URL:-https://community.aigovops-foundation.com}"
 LIBRARY_URL="${LIBRARY_URL:-https://aigovops-foundation.github.io/aigovops-library-june-ken-bob/}"
-CAMP_URL="${CAMP_URL:-https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/}"
+CAMP_URL="${CAMP_URL:-https://www.aigovops-foundation.com/camps/ncw/}"
 STRIPE_URL="https://buy.stripe.com/bJe7sKbi214M7qJ1t75J603"
 BLOG_POST="$SITE/blog/what-is-aigovops.html"
 TIMEOUT=20

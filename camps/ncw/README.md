@@ -3,7 +3,7 @@
 > **Cool Tools. Cool Schools. The Rules.**
 > A complete, open-source community AI training program — built for the NCW Tech Alliance **AI Expo 2026**, August 11, 2026, Wenatchee Convention Center.
 
-**Live site:** [aigovops-foundation.github.io/aigovops-ncw-ai-camp](https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/)
+**Live site:** [aigovops-foundation.github.io/aigovops-ncw-ai-camp](https://www.aigovops-foundation.com/camps/ncw/)
 **Foundation:** [aigovops-foundation.com](https://www.aigovops-foundation.com)
 **Partner:** [NCW Tech Alliance](https://www.ncwtech.org) · [AI in Action series](https://www.ncwtech.org/ai-in-action)
 
@@ -25,7 +25,7 @@ The repository contains everything: the published webapp source, the 32-page min
 
 ### `/docs` — Published webapp (served by GitHub Pages)
 
-Multi-page editorial-grade site, mobile-first, no backend dependencies. GitHub Pages serves this folder at [aigovops-foundation.github.io/aigovops-ncw-ai-camp/](https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/).
+Multi-page editorial-grade site, mobile-first, no backend dependencies. GitHub Pages serves this folder at [aigovops-foundation.github.io/aigovops-ncw-ai-camp/](https://www.aigovops-foundation.com/camps/ncw/).
 
 - `docs/index.html` — Home (hero, scenario cards, schedule)
 - `docs/plan.html` — The Plan (4 breakouts, room schedule)

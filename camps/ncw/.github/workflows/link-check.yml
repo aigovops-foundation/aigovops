@@ -19,4 +19,4 @@ jobs:
   link-check:
     uses: aigovops-foundation/aigovops-library-june-ken-bob/.github/workflows/reusable-link-check.yml@main
     with:
-      site_url: "https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/"
+      site_url: "https://www.aigovops-foundation.com/camps/ncw/"

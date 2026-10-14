@@ -51,4 +51,4 @@ host marks it.
 If your system has no deploy gate today, you are not behind — most don't. You are exactly where
 Knight was at 09:29. Sit down. What brought you in?
 
-— [The café](https://www.aigovops-foundation.com/?src=letter#problem) · [Level 200 worksheet](https://practice.aigovops-foundation.com/levels/200-retrofit/WORKSHEET.html) · [VH-056 in the cases](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-056)
+— [The café](https://www.aigovops-foundation.com/?src=letter#problem) · [Level 200 worksheet](https://www.aigovops-foundation.com/practice/levels/200-retrofit/WORKSHEET.html) · [VH-056 in the cases](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-056)

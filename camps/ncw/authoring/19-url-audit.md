@@ -28,7 +28,7 @@
 
 ### 2. `docs/downloads/master-deck.pdf` — 404 on Pages
 
-**Issue:** PDF returns 404 from `https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/downloads/master-deck.pdf` because the file lives on the `add-rendered-video-library` branch only.
+**Issue:** PDF returns 404 from `https://www.aigovops-foundation.com/camps/ncw/downloads/master-deck.pdf` because the file lives on the `add-rendered-video-library` branch only.
 
 **Fix:** Resolves automatically when PR #2 (rendered video library + master deck PDF) merges to `main`. No code change needed in this PR.
 

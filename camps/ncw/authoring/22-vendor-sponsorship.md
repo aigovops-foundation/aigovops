@@ -51,7 +51,7 @@ Replit · Magic Patterns · ChatPRD · n8n · Glean.
 >   every camp.
 >
 > Every supporter's **logo goes up on the event screen** that day and on our Supporters page:
-> https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/support.html
+> https://www.aigovops-foundation.com/camps/ncw/support.html
 >
 > We're helping our region ship good AI and steer clear of the bad. Would you stand with us?
 >

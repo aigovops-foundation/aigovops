@@ -1,7 +1,7 @@
 # NCW AI Camp — 25 Live Demo Scripts
 
 *5 personas × 5 tools = 25 examples · English + Spanish · For Bob & Ken · Aug 11, 2026*
-*Site: [aigovops-ncw-ai-camp](https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/) · [Tools page](https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/tools)*
+*Site: [aigovops-ncw-ai-camp](https://www.aigovops-foundation.com/camps/ncw/) · [Tools page](https://www.aigovops-foundation.com/camps/ncw/tools)*
 
 Each example is a 60–120 second live demo. Every one has the same 5 fields so Ken can run it from a card, and so we can print a handout in both languages.
 

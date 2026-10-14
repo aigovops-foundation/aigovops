@@ -4,7 +4,7 @@
 #        keyboard nav markers, screen reader cues, form labels
 # Run: bash scripts/test-a11y.sh
 
-REPO=$(git rev-parse --show-toplevel 2>/dev/null || (cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd))
+REPO=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 PASS=0; FAIL=0
 
 check() {

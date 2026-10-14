@@ -66,7 +66,7 @@ We'll check in on Thursday.
 
 ---
 
-**[Sign the Pledge](https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html) · [Get the Toolkit](https://aigovops-foundation.com) · [Join the Community](https://community.aigovops-foundation.com)**
+**[Sign the Pledge](https://www.aigovops-foundation.com/camps/ncw/pledge.html) · [Get the Toolkit](https://aigovops-foundation.com) · [Join the Community](https://community.aigovops-foundation.com)**
 
 *You're receiving this because you asked for NCW follow-up emails after taking the Pledge at AI Expo 2026. [Unsubscribe]([UNSUBSCRIBE_LINK])*
 
@@ -115,7 +115,7 @@ Not rhetorically. We're tracking this. Every answer helps us make the next versi
 
 ---
 
-**[Sign the Pledge](https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html) · [Get the Toolkit](https://aigovops-foundation.com) · [Join the Community](https://community.aigovops-foundation.com)**
+**[Sign the Pledge](https://www.aigovops-foundation.com/camps/ncw/pledge.html) · [Get the Toolkit](https://aigovops-foundation.com) · [Join the Community](https://community.aigovops-foundation.com)**
 
 *You're receiving this because you asked for NCW follow-up emails after taking the Pledge at AI Expo 2026. [Unsubscribe]([UNSUBSCRIBE_LINK])*
 
@@ -172,7 +172,7 @@ The community is on Circle. Free to join. We're there most days. The best conver
 
 ---
 
-**[Sign the Pledge](https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html) · [Get the Toolkit](https://aigovops-foundation.com) · [Join the Community](https://community.aigovops-foundation.com)**
+**[Sign the Pledge](https://www.aigovops-foundation.com/camps/ncw/pledge.html) · [Get the Toolkit](https://aigovops-foundation.com) · [Join the Community](https://community.aigovops-foundation.com)**
 
 *You're receiving this because you asked for NCW follow-up emails after taking the Pledge at AI Expo 2026. [Unsubscribe]([UNSUBSCRIBE_LINK])*
 
@@ -242,7 +242,7 @@ If no — that's the work. And we'll help you do it.
 
 ---
 
-**[Sign the Pledge](https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html) · [Get the Toolkit](https://aigovops-foundation.com) · [Join the Community](https://community.aigovops-foundation.com)**
+**[Sign the Pledge](https://www.aigovops-foundation.com/camps/ncw/pledge.html) · [Get the Toolkit](https://aigovops-foundation.com) · [Join the Community](https://community.aigovops-foundation.com)**
 
 *You're receiving this because you asked for NCW follow-up emails after taking the Pledge at AI Expo 2026. [Unsubscribe]([UNSUBSCRIBE_LINK])*
 
@@ -297,7 +297,7 @@ Thank you for signing. Thank you for doing the work. We'll see you in the fall.
 
 ---
 
-**[Sign the Pledge](https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html) · [Get the Toolkit](https://aigovops-foundation.com) · [Join the Community](https://community.aigovops-foundation.com)**
+**[Sign the Pledge](https://www.aigovops-foundation.com/camps/ncw/pledge.html) · [Get the Toolkit](https://aigovops-foundation.com) · [Join the Community](https://community.aigovops-foundation.com)**
 
 *You're receiving this because you asked for NCW follow-up emails after taking the Pledge at AI Expo 2026. [Unsubscribe]([UNSUBSCRIBE_LINK])*
 

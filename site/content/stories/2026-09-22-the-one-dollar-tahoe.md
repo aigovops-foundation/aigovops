@@ -59,4 +59,4 @@ the diff. Then you bring it on Thursday at 15:00 Pacific, where a host marks it.
 If you do not have a bot yet, take the first door instead, or run the ten-minute Gate Check and keep
 the card. Either way: the rule goes outside the model. Sit down. What brought you in?
 
-— [The café](https://www.aigovops-foundation.com/?src=letter#problem) · [Level 200 worksheet](https://practice.aigovops-foundation.com/levels/200-retrofit/WORKSHEET.html) · [VH-022 in the cases](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-022)
+— [The café](https://www.aigovops-foundation.com/?src=letter#problem) · [Level 200 worksheet](https://www.aigovops-foundation.com/practice/levels/200-retrofit/WORKSHEET.html) · [VH-022 in the cases](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-022)

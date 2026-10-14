@@ -2,7 +2,7 @@
 """index.html: a door must land cleanly on "your first hour", with a way back.
 
 Two ways a visitor reaches "your first hour": a hash link from the site's café doors
-(https://practice.aigovops-foundation.com/#promise) or an in-page click on this page's
+(https://www.aigovops-foundation.com/practice/#promise) or an in-page click on this page's
 own doors grid. Both must add body.focused (hiding the doors grid so the question isn't
 asked twice), and the "<- not this one? the other doors" link rendered inside #hour must
 stay visible in that state — it is the only way back once focused. A CSS class collision

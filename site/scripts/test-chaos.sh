@@ -4,7 +4,7 @@
 # ⚠️  Requires a clean git working tree. All changes are reverted.
 
 SITE="https://www.aigovops-foundation.com"
-REPO=$(git rev-parse --show-toplevel 2>/dev/null || (cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd))
+REPO=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 PASS=0; FAIL=0
 
 check() {

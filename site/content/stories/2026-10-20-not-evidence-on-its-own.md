@@ -53,4 +53,4 @@ Pacific, where a host marks it — and then host the next one.
 
 The figures were never the evidence. Sit down. What brought you in?
 
-— [The café](https://www.aigovops-foundation.com/?src=letter#problem) · [Level 400 worksheet](https://practice.aigovops-foundation.com/levels/400-prove/WORKSHEET.html) · [VH-088 in the cases](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-088)
+— [The café](https://www.aigovops-foundation.com/?src=letter#problem) · [Level 400 worksheet](https://www.aigovops-foundation.com/practice/levels/400-prove/WORKSHEET.html) · [VH-088 in the cases](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-088)

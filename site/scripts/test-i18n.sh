@@ -5,7 +5,7 @@
 #        chatbot multilingual keyword detection
 # Run: bash scripts/test-i18n.sh
 
-REPO=$(git rev-parse --show-toplevel 2>/dev/null || (cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd))
+REPO=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 PASS=0; FAIL=0
 
 check() {

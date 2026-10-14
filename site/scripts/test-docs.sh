@@ -140,8 +140,16 @@ check_contains "scripts/test-ux.sh"       "UX tier arms the feedback-strip check
 check_file "skills/cloud-mary/SKILL.md"                             "Cloud-Mary runner skill"
 check_file "skills/hostinger-github-pages/SKILL.md"                  "Hostinger-GitHub Pages skill"
 check_file "skills/links-for-events/SKILL.md"                        "Links-for-events skill"
-check_file "transcripts/README.md"                                   "Transcripts README"
-check_file "transcripts/journal.txt"                                 "Transcripts journal"
+if [ -f "$REPO/../monorepo.json" ]; then
+  if [ ! -e "$REPO/transcripts" ]; then
+    check "Transcripts omitted for monorepo import" "ok"
+  else
+    check "Transcripts omitted for monorepo import" "unexpected transcripts directory"
+  fi
+else
+  check_file "transcripts/README.md"                                 "Transcripts README"
+  check_file "transcripts/journal.txt"                               "Transcripts journal"
+fi
 
 echo ""
 echo "  ${PASS} passed, ${FAIL} failed"
