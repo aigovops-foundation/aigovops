@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13T19:08:28Z",
+  "updated": "2026-10-14T07:11:10Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,22 @@
     }
   },
   "bob": [
+    {
+      "title": "AI change freezes are not “no deploy” rules. They are controlled release windows for high-risk AI. PROBLEM In sensitive periods, e...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-change-freezes-are-not-no-deploy-rules-activity-7515895084479868928-rr_2",
+      "date": "Tue, 13 Oct 2026 22:03:47 GMT",
+      "summary": "AI change freezes are not “no deploy” rules. They are controlled release windows for high-risk AI. PROBLEM In sensitive periods, even a model, prompt, data, policy, or agent change can shift production behavior. Impact scoring alone does not set override authority, evidence, roll",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "A disputed IP claim is not metadata. It is a release-control decision. ENGLISH Problem: Lineage = data origin; attribution = credi...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-disputed-ip-claim-is-not-metadata-it-is-activity-7515894577531133952-6UyY",
+      "date": "Tue, 13 Oct 2026 22:01:46 GMT",
+      "summary": "A disputed IP claim is not metadata. It is a release-control decision. ENGLISH Problem: Lineage = data origin; attribution = credit. Rights provenance governs whether disputed material may be trained, retained, transformed, or shipped. Solution: Log notice, evidence, scope, and t",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "PROBLEM AI that influences minors can shape trust, choices, identity, and development. Age assurance is imperfect—not permission t...",
       "link": "https://www.linkedin.com/posts/bobrapp_problem-ai-that-influences-minors-can-shape-activity-7515759219468296192-xEzA",
@@ -76,22 +92,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_english-problem-a-supplier-vulnerability-activity-7515169886952824832-Ol2C",
       "date": "Sun, 11 Oct 2026 22:02:06 GMT",
       "summary": "ENGLISH PROBLEM A supplier vulnerability disclosure—affecting a model, tool, dataset, or infrastructure—can leave ownership, affected versions, temporary controls, notices, remediation, and closure unclear. SOLUTION Assign triage ownership; map affected versions and deployments;",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Accessibility acceptance is a one-time gate—not ongoing control. Problem Changes can break labels, focus, captions, contrast, reco...",
-      "link": "https://www.linkedin.com/posts/bobrapp_accessibility-acceptance-is-a-one-time-gatenot-activity-7515034281853894656-RHDl",
-      "date": "Sun, 11 Oct 2026 13:03:15 GMT",
-      "summary": "Accessibility acceptance is a one-time gate—not ongoing control. Problem Changes can break labels, focus, captions, contrast, recovery, or screen-reader output. Launch approval is not continued access. Solution After each release: test affected users plus keyboard, screen reader,",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Near misses are not “nothing happened.” A harmful output was caught before reaching a person—and became safety data. PROBLEM Learn...",
-      "link": "https://www.linkedin.com/posts/bobrapp_near-misses-are-not-nothing-happened-a-activity-7515033657875513344-3dV5",
-      "date": "Sun, 11 Oct 2026 13:00:47 GMT",
-      "summary": "Near misses are not “nothing happened.” A harmful output was caught before reaching a person—and became safety data. PROBLEM Learn from every near miss, regardless of severity. Keep intake psychologically safe and blame-free. SOLUTION Log context, model/version, output, catching",
       "image": null,
       "author": "Bob Rapp"
     }
