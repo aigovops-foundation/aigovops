@@ -1,0 +1,49 @@
+{
+  "slug": "magic-patterns",
+  "tool": "Magic Patterns",
+  "voice": "narrator",
+  "slides": [
+    {
+      "kind": "title",
+      "title": "Magic Patterns",
+      "sub": "A 90-second guide · AiGovOps Foundation",
+      "narration": "A ninety-second guide to Magic Patterns, from the AiGovOps Foundation and the NCW AI Camp."
+    },
+    {
+      "kind": "tool",
+      "title": "What it is",
+      "lines": [
+        "Magic Patterns generates production-minded UI designs and interactive prototypes from natural-language prompts, aimed at product teams.",
+        "It bridges the gap between a rough idea and something engineers can build.",
+        "It's a paid tool included in Lenny's bundle."
+      ],
+      "narration": "Magic Patterns generates production-minded UI designs and interactive prototypes from natural-language prompts, aimed at product teams. It bridges the gap between a rough idea and something engineers can build. It's worth a look."
+    },
+    {
+      "kind": "cool",
+      "title": "What's cool for NCW",
+      "lines": [
+        "Educators: mock up a clean interface for a classroom app idea to share with a developer or grant funder",
+        "SMB owners: visualize a website redesign or a new feature before paying for development",
+        "Community leaders: produce a polished prototype to show a board what a digital service could look like"
+      ],
+      "narration": "Here's what's cool for our valley. Educators can mock up a clean interface for a classroom app idea to share with a developer or grant funder; SMB owners can visualize a website redesign or a new feature before paying for development; Community leaders can produce a polished prototype to show a board what a digital service could look like."
+    },
+    {
+      "kind": "rules",
+      "title": "The rules — the AiGovOps way",
+      "lines": [
+        "A human on the trigger — you read it before it goes out",
+        "Keep the receipts — save your prompt and the answer",
+        "Mind the data cost of “free” — no student records, IEPs, or private details in a free tool"
+      ],
+      "narration": "Now the rules, the AiGovOps way. Keep a human on the trigger: you read it before it goes out. Keep the receipts: save your prompt and the answer. And mind the data cost of free — never paste student records, an I-E-P, or a customer's private details into a free tool, because free tools learn from what you type."
+    },
+    {
+      "kind": "outro",
+      "title": "Good AI, the NCW way.",
+      "sub": "NCW AI Camp · Aug 11, 2026 · AiGovOps Foundation",
+      "narration": "Good A-I, the NCW way. That's Magic Patterns. Learn more at the NCW AI Camp. AiGovOps Foundation."
+    }
+  ]
+}
