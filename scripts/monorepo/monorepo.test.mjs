@@ -10,7 +10,7 @@ import vm from "node:vm";
 import test from "node:test";
 import { assemble } from "./assemble.mjs";
 import { mapUrl, renderStub } from "./redirect-stub.mjs";
-import { hasAnchor, printTable, runChecks } from "./link-test.mjs";
+import { hasAnchor, loadEntries, parseArgs, printTable, runChecks } from "./link-test.mjs";
 
 const ROOT = resolve(fileURLToPath(new URL("../..", import.meta.url)));
 
@@ -220,14 +220,14 @@ test("link test follows a redirect stub and reports the mapped response", async 
     const to = `${origin}/new/`;
     stub = renderStub(from, to);
     const entry = {
-      url: `${from}deep/page.html?campaign=phase0`,
-      expectFinalPrefix: to,
+      url: `${from}deep/page.html?campaign=phase1#ready`,
+      expectFinalPrefix: `${to}deep/page.html?campaign=phase1#ready`,
       anchor: "ready",
     };
     const [result] = await runChecks([entry]);
     assert.equal(result.passed, true);
     assert.equal(result.viaStub, true);
-    assert.equal(result.finalUrl, `${to}deep/page.html?campaign=phase0`);
+    assert.equal(result.finalUrl, `${to}deep/page.html?campaign=phase1#ready`);
     const output = [];
     const originalLog = console.log;
     try {
@@ -242,6 +242,57 @@ test("link test follows a redirect stub and reports the mapped response", async 
       server.close((error) => (error ? reject(error) : resolve()));
     });
   }
+});
+
+test("redirect metadata keeps pipe characters in legacy URLs unambiguous", async () => {
+  let stub;
+  const server = createServer((request, response) => {
+    const pathname = decodeURIComponent(new URL(request.url, "http://localhost").pathname);
+    if (pathname.startsWith("/old|source/")) {
+      response.writeHead(404, { "content-type": "text/html" });
+      response.end(stub);
+    } else if (pathname.startsWith("/new|target/deep/page.html")) {
+      response.writeHead(200, { "content-type": "text/html" });
+      response.end('<main id="ready"></main>');
+    } else {
+      response.writeHead(404);
+      response.end();
+    }
+  });
+  server.listen(0, "127.0.0.1");
+  await once(server, "listening");
+  try {
+    const address = server.address();
+    assert.ok(address && typeof address !== "string");
+    const origin = `http://127.0.0.1:${address.port}`;
+    const from = `${origin}/old|source/`;
+    const to = `${origin}/new|target/`;
+    stub = renderStub(from, to);
+    const url = `${from}deep/page.html?q=1#ready`;
+    const mapped = mapUrl(from, to, url);
+    assert.ok(mapped);
+    const [result] = await runChecks([{
+      url,
+      expectFinalPrefix: mapped,
+      anchor: "ready",
+    }]);
+    assert.equal(result.passed, true);
+    assert.equal(result.viaStub, true);
+    assert.equal(result.finalUrl, mapped);
+  } finally {
+    await new Promise((resolve, reject) => {
+      server.close((error) => (error ? reject(error) : resolve()));
+    });
+  }
+});
+
+test("link-test selects the post-cutover URL set only with --cutover", async () => {
+  assert.equal(parseArgs([]), false);
+  assert.equal(parseArgs(["--cutover"]), true);
+  assert.throws(() => parseArgs(["--unknown"]), /usage:/);
+  const entries = await loadEntries(true);
+  assert.ok(entries.some((entry) => entry.url.endsWith("/WORKSHEET.html?q=1#x")));
+  assert.ok(entries.some((entry) => entry.url.endsWith("/pledge.html?q=1#x")));
 });
 
 test("generated redirect stub maps deep paths in its inline script", async () => {
@@ -290,10 +341,15 @@ test("redirect CLI writes matching index and 404 documents", async () => {
     const notFound = await readFile(join(out, "404.html"), "utf8");
     assert.equal(index, notFound);
     assert.match(index, /<meta name="robots" content="noindex">/);
-    assert.match(index, /<meta name="aigovops-redirect" content="https:\/\/example\.github\.io\/old\/\|https:\/\/example\.com\/new\/">/);
+    assert.match(index, /<meta name="aigovops-redirect-from" content="https:\/\/example\.github\.io\/old\/">/);
+    assert.match(index, /<meta name="aigovops-redirect-to" content="https:\/\/example\.com\/new\/">/);
     assert.match(
       renderStub("https://example.com/a&b/", "https://example.com/c&d/"),
-      /content="https:\/\/example\.com\/a&amp;b\/\|https:\/\/example\.com\/c&amp;d\/"/,
+      /<meta name="aigovops-redirect-from" content="https:\/\/example\.com\/a&amp;b\/">/,
+    );
+    assert.match(
+      renderStub("https://example.com/a&b/", "https://example.com/c&d/"),
+      /<meta name="aigovops-redirect-to" content="https:\/\/example\.com\/c&amp;d\/">/,
     );
     assert.match(index, /<link rel="canonical" href="https:\/\/example\.com\/new\/">/);
     assert.match(index, /location\.replace\(mapped\)/);
