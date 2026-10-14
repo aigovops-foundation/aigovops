@@ -2,6 +2,8 @@ from html.parser import HTMLParser
 import re
 from pathlib import Path
 from subprocess import check_output
+from urllib.parse import urlparse
+from xml.etree import ElementTree
 
 ROOT = Path(__file__).resolve().parent.parent
 HTML = [
@@ -109,11 +111,30 @@ for page, href in unnamed_links:
 check(not unnamed_links, f"all tracked HTML links have an accessible name ({len(HTML)} pages audited)")
 
 feedback_tags = []
+feedback_pages = set()
 for page in HTML:
     text = page.read_text()
-    if "feedback.js" in text:
-        feedback_tags.extend(re.findall(r"<script\b[^>]*feedback\.js[^>]*>", text))
-check(len(feedback_tags) == 44, "all 44 feedback pages remain covered")
+    page_tags = re.findall(r"<script\b[^>]*feedback\.js[^>]*>", text)
+    if page_tags:
+        feedback_pages.add(page)
+        feedback_tags.extend(page_tags)
+
+expected_feedback_pages = {
+    ROOT / urlparse(element.text).path.lstrip("/")
+    for element in ElementTree.parse(ROOT / "sitemap.xml").iter()
+    if element.tag.endswith("loc")
+    and element.text
+    and urlparse(element.text).path.endswith(".html")
+}
+expected_feedback_pages.add(ROOT / "index.html")
+for page in sorted(expected_feedback_pages - feedback_pages):
+    print(f"  FAIL {page.relative_to(ROOT)}: feedback strip missing")
+for page in sorted(feedback_pages - expected_feedback_pages):
+    print(f"  FAIL {page.relative_to(ROOT)}: unexpected feedback strip")
+check(
+    feedback_pages == expected_feedback_pages,
+    f"all {len(expected_feedback_pages)} feedback pages remain covered",
+)
 check(
     all('data-theme="light"' in tag and "?v=20261011b" in tag for tag in feedback_tags),
     "feedback pages use the light palette and bumped script version",
