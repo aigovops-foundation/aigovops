@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-14T07:11:10Z",
+  "updated": "2026-10-14T19:09:07Z",
   "feed_health": {
     "bob": {
       "ok": true,
       "fetched": 10,
-      "published": 10,
+      "published": 9,
       "error": null
     },
     "ken": {
@@ -15,6 +15,22 @@
     }
   },
   "bob": [
+    {
+      "title": "AI can flag suspicious sign-ins. It cannot decide—by confidence score alone—who loses access. Problem Device-code and OAuth phishi...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-can-flag-suspicious-sign-ins-it-cannot-activity-7516121616154750976-AXV9",
+      "date": "Wed, 14 Oct 2026 13:03:56 GMT",
+      "summary": "AI can flag suspicious sign-ins. It cannot decide—by confidence score alone—who loses access. Problem Device-code and OAuth phishing can yield valid tokens. Automation may lock out legitimate users or leave attackers active. Solutions Score signals, then route medium/high confide",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI can change a job before it changes an org chart. Consulting workers after deployment is theatre. Problem → AI may change monito...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-can-change-a-job-before-it-changes-an-activity-7516121212171862017-Tg6w",
+      "date": "Wed, 14 Oct 2026 13:02:20 GMT",
+      "summary": "AI can change a job before it changes an org chart. Consulting workers after deployment is theatre. Problem → AI may change monitoring, targets, task allocation, or job security without worker influence. Solution → Before deployment, consult early; include elected or recognised r",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "AI change freezes are not “no deploy” rules. They are controlled release windows for high-risk AI. PROBLEM In sensitive periods, e...",
       "link": "https://www.linkedin.com/posts/bobrapp_ai-change-freezes-are-not-no-deploy-rules-activity-7515895084479868928-rr_2",
@@ -68,30 +84,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_a-human-in-the-loop-is-not-a-quality-metric-activity-7515397059126927361-gHPm",
       "date": "Mon, 12 Oct 2026 13:04:48 GMT",
       "summary": "A human in the loop is not a quality metric. 人在回路中，不等于审查有效。 Problem Reviewers can be present while AI errors pass. Measure whether reviewers catch and correctly resolve errors—not attendance. 问题 有人在场，错误仍可能漏过。衡量发现与纠正，而不是参与形式。 Solution Use blinded samples. Track: • Catch rate, corr",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI accountability can vanish in M&A—not because models changed, but because ownership did. Problem: Merged teams can lose owners,...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-accountability-can-vanish-in-manot-because-activity-7515396426017710080-Veyf",
-      "date": "Mon, 12 Oct 2026 13:02:17 GMT",
-      "summary": "AI accountability can vanish in M&A—not because models changed, but because ownership did. Problem: Merged teams can lose owners, evidence, escalation, and remedies. Never migrate first. Solution—continuity gate: inventory decisions/owners; freeze unsafe migrations; validate acce",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Live personal data is not a default pilot environment. PROBLEM “Just a pilot” is not a control. Masked data can be re-identified;...",
-      "link": "https://www.linkedin.com/posts/bobrapp_live-personal-data-is-not-a-default-pilot-activity-7515170000349941760-fFEy",
-      "date": "Sun, 11 Oct 2026 22:02:33 GMT",
-      "summary": "Live personal data is not a default pilot environment. PROBLEM “Just a pilot” is not a control. Masked data can be re-identified; prototypes can reach production. SOLUTION Start synthetic/masked; test re-identification; grant minimum, time-boxed access; separate test from product",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "ENGLISH PROBLEM A supplier vulnerability disclosure—affecting a model, tool, dataset, or infrastructure—can leave ownership, affec...",
-      "link": "https://www.linkedin.com/posts/bobrapp_english-problem-a-supplier-vulnerability-activity-7515169886952824832-Ol2C",
-      "date": "Sun, 11 Oct 2026 22:02:06 GMT",
-      "summary": "ENGLISH PROBLEM A supplier vulnerability disclosure—affecting a model, tool, dataset, or infrastructure—can leave ownership, affected versions, temporary controls, notices, remediation, and closure unclear. SOLUTION Assign triage ownership; map affected versions and deployments;",
       "image": null,
       "author": "Bob Rapp"
     }
