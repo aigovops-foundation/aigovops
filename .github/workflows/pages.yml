@@ -1,21 +1,60 @@
 name: pages
 on:
-  push: { branches: [main] }
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - "site/**"
+      - "practice/**"
+      - "camps/ncw/**"
+      - "monorepo.json"
+      - "scripts/monorepo/**"
+      - ".github/workflows/pages.yml"
+  pull_request:
+    paths:
+      - "docs/**"
+      - "site/**"
+      - "practice/**"
+      - "camps/ncw/**"
+      - "monorepo.json"
+      - "scripts/monorepo/**"
+      - ".github/workflows/pages.yml"
   workflow_dispatch:
-permissions: { contents: read, pages: write, id-token: write }
+permissions:
+  contents: read
 concurrency: { group: pages, cancel-in-progress: true }
 jobs:
-  deploy:
-    environment: { name: github-pages, url: "${{ steps.deploy.outputs.page_url }}" }
+  build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
       - run: npm test   # hard gate: all gate tests must pass before the docs deploy
+      - uses: ruby/setup-ruby@44511735964dcb71245e7e55f72539531f7bc0eb # v1.257.0
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+          working-directory: practice
       - run: node scripts/monorepo/assemble.mjs
-      - uses: actions/configure-pages@v5
+      - name: Check current live estate links
+        if: github.event_name == 'pull_request'
+        run: node scripts/monorepo/link-test.mjs
       - uses: actions/upload-pages-artifact@v3
-        with: { path: _site }   # assembled static sites; no Jekyll build
+        if: github.event_name != 'pull_request'
+        with: { path: _site }
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    environment: { name: github-pages, url: "${{ steps.deploy.outputs.page_url }}" }
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/configure-pages@v5
       - id: deploy
         uses: actions/deploy-pages@v4
