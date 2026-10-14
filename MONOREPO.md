@@ -47,12 +47,19 @@ Add these repository secrets to `aigovops` before cutover:
 ## Cutover runbook
 
 1. Add the workflow secrets listed above to `aigovops`.
-2. Remove the custom domain from the Foundation site repository's Pages settings.
-3. Merge the Phase 1 monorepo PR, then set the `aigovops` Pages custom domain to
+2. Refresh the imports: site, Practice and NCW keep moving on their old `main`
+   (the site's LinkedIn and publish jobs commit daily). Run each import again from a
+   fresh `origin/main` (or merge the new commits into the prefix), with the same
+   site `--drop-path`/`--replace-text` options. Re-run the full-history gitleaks
+   scan and the token count, and get them both to 0, before you merge.
+3. Disable the workflows in the site, Practice and NCW repos so they stop committing
+   to the old copies.
+4. Remove the custom domain from the Foundation site repository's Pages settings.
+5. Merge the Phase 1 monorepo PR, then set the `aigovops` Pages custom domain to
    `www.aigovops-foundation.com` and enforce HTTPS.
-4. Merge the Practice and NCW redirect-stub PRs.
-5. Run `node scripts/monorepo/link-test.mjs --cutover`.
-6. Archive the old repositories only after a week of green checks.
+6. Merge the Practice and NCW redirect-stub PRs.
+7. Run `node scripts/monorepo/link-test.mjs --cutover`.
+8. Archive the old repositories only after a week of green checks.
 
 After cutover, deep links under `github.io/aigovops/` land at `www` paths; trunk
 documentation is now served under `/aigovops/`.
