@@ -23,7 +23,7 @@ permissions:
 
 jobs:
   link-check:
-    uses: aigovops-foundation/aigovops-library-june-ken-bob/.github/workflows/reusable-link-check.yml@0cbbbffaa1057c7310869032b30389840af5d9de # v1
+    uses: aigovops-foundation/aigovops-library-june-ken-bob/.github/workflows/reusable-link-check.yml@0cbbbffaa1057c7310869032b30389840af5d9de # main @ 2026-09-30
     with:
       site_url: "https://www.aigovops-foundation.com"
       # PRE-CUTOVER skip: remove after cutover (MONOREPO.md step 8)

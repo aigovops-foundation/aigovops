@@ -30,5 +30,6 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2
         with:
-          args: --no-progress --max-concurrency 8 --max-retries 3 --retry-wait-time 10 --accept 200,201,202,204,206,301,302,308,403,429,999 --exclude 'linkedin\.com' --exclude 'claude\.ai' './practice/**/*.md'
+          # PRE-CUTOVER skip: remove after cutover (MONOREPO.md step 8)
+          args: --no-progress --max-concurrency 8 --max-retries 3 --retry-wait-time 10 --accept 200,201,202,204,206,301,302,308,403,429,999 --exclude 'linkedin\.com' --exclude 'claude\.ai' --exclude 'https://www\.aigovops-foundation\.com/practice/' './practice/**/*.md'
           fail: true
