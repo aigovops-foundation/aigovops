@@ -1,0 +1,301 @@
+/* ============================================================================
+   garden.css — the shared "garden-warm" design system (M6b, all pages).
+   Load order on every page:  css/style.css  →  css/garden.css  →  (page CSS).
+   style.css keeps carrying layout/structure; this file re-skins its colors and
+   type. Extracted from the M6 homepage skin (css/porch.css), which now keeps
+   only homepage-specific pieces and loads AFTER this file on index.html.
+   Conversion recipe for the remaining pages: mockups/m6-porch/CONVERSION-GUIDE.md
+   ========================================================================== */
+
+:root {
+  /* ── canonical garden tokens ── */
+  --garden-cream:       #FAF7F0;   /* page ground */
+  --garden-deep-cream:  #F1EAD8;   /* alternating band / featured tint */
+  --garden-deeper:      #E9DFC6;   /* hover tint on deep-cream */
+  --garden-charcoal:    #2B2B28;   /* ink + dark bands (footer, toolkit) */
+  --garden-ink-soft:    #4C4A42;   /* body text on cream (7:1) */
+  --garden-green:       #2E7D4F;   /* orchard green — fills, bands */
+  --garden-green-ink:   #1F5E3A;   /* green for TEXT on cream (7.1:1) */
+  --garden-green-deep:  #0F4A2C;   /* hover / emphasis green */
+  --garden-orange:      #E07A2A;   /* warm accent — fills only */
+  --garden-orange-ink:  #9C4E12;   /* orange for TEXT on cream (5.5:1) */
+  --garden-gold:        #E8B54A;   /* accent on charcoal (7.3:1 there) */
+  --garden-line:        rgba(43,43,40,.14);
+  --garden-card-line:   rgba(43,43,40,.08);
+  --garden-shadow:      0 18px 40px -18px rgba(78,60,32,.35);
+  --garden-shadow-sm:   0 10px 26px -14px rgba(78,60,32,.3);
+  --garden-r-2xl:       1.4rem;
+  --garden-serif:       "Fraunces", Georgia, serif;
+  --garden-sans:        "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  /* text colors on the charcoal footer/bands */
+  --garden-on-dark:     #EDE8DA;
+  --garden-on-dark-dim: #B9B3A2;
+
+  /* ── legacy aliases (the homepage porch skin references these) ── */
+  --porch-cream:       var(--garden-cream);
+  --porch-deep-cream:  var(--garden-deep-cream);
+  --porch-deeper:      var(--garden-deeper);
+  --porch-charcoal:    var(--garden-charcoal);
+  --porch-ink-soft:    var(--garden-ink-soft);
+  --porch-green:       var(--garden-green);
+  --porch-green-ink:   var(--garden-green-ink);
+  --porch-green-deep:  var(--garden-green-deep);
+  --porch-orange:      var(--garden-orange);
+  --porch-orange-ink:  var(--garden-orange-ink);
+  --porch-gold:        var(--garden-gold);
+  --porch-line:        var(--garden-line);
+  --porch-shadow:      var(--garden-shadow);
+  --porch-shadow-sm:   var(--garden-shadow-sm);
+  --porch-r-2xl:       var(--garden-r-2xl);
+  --porch-serif:       var(--garden-serif);
+  --porch-sans:        var(--garden-sans);
+}
+
+/* ---------- ground & type ---------- */
+body {
+  font-family: var(--garden-sans);
+  background: var(--garden-cream);
+  color: var(--garden-charcoal);
+}
+/* paper grain — below the sticky header (z100) and all widgets */
+body::after {
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 30;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.17 0 0 0 0 0.16 0 0 0 0 0.13 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+h1, h2, h3, .section-title {
+  font-family: var(--garden-serif);
+  font-optical-sizing: auto;
+  color: var(--garden-charcoal);
+}
+p { color: var(--garden-ink-soft); }
+.skip-link { background: var(--garden-green); color: #fff; }
+a:focus-visible, button:focus-visible, [role="button"]:focus-visible,
+input:focus-visible, [tabindex]:focus-visible {
+  outline: 3px solid var(--garden-orange); outline-offset: 2px;
+}
+
+/* ---------- header ---------- */
+.site-header {
+  background: rgba(250, 247, 240, .97);
+  backdrop-filter: none;
+  border-bottom: 1px solid var(--garden-line);
+}
+.main-nav a { color: var(--garden-ink-soft); }
+.main-nav a:hover, .main-nav a.active {
+  color: var(--garden-green-deep);
+  border-bottom-color: var(--garden-green);
+}
+/* M13 three doors — "Join" is the nav's one primary action: a filled
+   garden-green pill, consistent on every page that carries the site nav. */
+.main-nav a.nav-join {
+  background: var(--garden-green);
+  color: #fff;
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-weight: 600;
+  border-bottom-color: transparent;
+}
+.main-nav a.nav-join:hover, .main-nav a.nav-join.active {
+  background: var(--garden-green-deep);
+  color: #fff;
+  border-bottom-color: transparent;
+}
+.nav-toggle { color: var(--garden-charcoal); }
+.main-nav.open { background: var(--garden-cream); border-bottom: 1px solid var(--garden-line); }
+.lang-btn { background: #fff; border-color: #1a1a2e; color: #1a1a2e; }
+.lang-btn:hover { border-color: #1a1a2e; color: #1a1a2e; }
+.lang-btn.lang-active { background: #1a1a2e; border-color: #1a1a2e; color: #fff; }
+
+/* ---------- section bands ---------- */
+.section-light { background: var(--garden-cream); }
+.section-mid   { background: var(--garden-deep-cream); }
+.section-dark  { background: var(--garden-charcoal); --teal: #5DCAA5; --white: var(--garden-cream); }
+.section-dark h2 { color: var(--garden-cream); }
+.section-dark p  { color: rgba(250,247,240,.72); }
+
+/* sub-page hero (style.css .page-hero is a navy gradient — re-ground it) */
+.page-hero { background: var(--garden-deep-cream); color: var(--garden-charcoal); }
+.page-hero h1 { color: var(--garden-charcoal); }
+.page-hero p  { color: var(--garden-ink-soft); }
+
+/* ---------- buttons & pills ---------- */
+.btn-primary { background: var(--garden-green); color: #fff; border-radius: 999px; }
+.btn-primary:hover { background: var(--garden-green-deep); }
+.btn-outline { border-color: var(--garden-green); color: var(--garden-green-deep); border-radius: 999px; }
+.btn-outline:hover {
+  border-color: var(--garden-green-deep);
+  color: var(--garden-green-deep);
+  background: var(--garden-deep-cream);
+}
+.linkedin-profile-btn { background: var(--garden-green); border-radius: 999px; }
+.linkedin-profile-btn:hover { background: var(--garden-green-deep); }
+
+/* ---------- badge strip ---------- */
+.badge-strip { background: var(--garden-deep-cream); border-top: 1px solid var(--garden-line); }
+.badge-pill { border-color: rgba(43,43,40,.22); color: var(--garden-ink-soft); }
+.badge-pill .dot { background: var(--garden-green); }
+.badge-pill .dot-amber { background: var(--garden-orange); }
+
+/* ---------- cards ---------- */
+.pillar-card {
+  background: var(--garden-cream);
+  border: 1px solid var(--garden-card-line);
+  border-radius: var(--garden-r-2xl);
+  box-shadow: var(--garden-shadow-sm);
+}
+.pillar-card:hover { box-shadow: var(--garden-shadow); }
+.pillar-num {
+  font-family: var(--garden-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 2.2rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--garden-green);
+  border-bottom: 3px solid var(--garden-gold);
+  display: inline-block;
+  padding-bottom: 2px;
+  margin-bottom: 12px;
+}
+.pillar-card:nth-child(2) .pillar-num { border-color: var(--garden-orange); }
+.pillar-card:nth-child(3) .pillar-num { border-color: var(--garden-green); }
+.pillar-card h3 { font-size: 1.08rem; }
+.pillar-card p { color: var(--garden-ink-soft); }
+
+.post-card {
+  background: var(--garden-cream);
+  border: 1px solid var(--garden-card-line);
+  border-radius: 14px;
+  box-shadow: var(--garden-shadow-sm);
+}
+.post-card:hover { border-color: var(--garden-green); box-shadow: var(--garden-shadow); }
+.post-title { color: var(--garden-charcoal); }
+.post-summary, .post-date { color: var(--garden-ink-soft); }
+#postsUpdated { color: var(--garden-ink-soft) !important; }
+.founders-col-header {
+  font-family: var(--garden-serif);
+  font-size: 1.05rem; font-weight: 600;
+  letter-spacing: .01em; text-transform: none;
+  color: var(--garden-green-deep);
+  border-bottom: 2px solid rgba(46,125,79,.35);
+}
+
+.blog-card, .event-card {
+  background: var(--garden-cream);
+  border: 1px solid var(--garden-card-line);
+  border-radius: var(--garden-r-2xl);
+  box-shadow: var(--garden-shadow-sm);
+}
+.blog-card:hover { box-shadow: var(--garden-shadow); }
+.blog-card h3 a:hover, .blog-card-link { color: var(--garden-green-ink); }
+.blog-card-meta .author { color: var(--garden-green-ink); }
+.event-date-box { background: var(--garden-green); }
+.event-info .event-type { color: var(--garden-green-ink); }
+
+/* ---------- homepage-shared sections that other pages may reuse ---------- */
+.founders-section { background: var(--garden-cream); }
+.founders-img { border-radius: var(--garden-r-2xl); box-shadow: var(--garden-shadow); }
+.founders-text h2 { color: var(--garden-charcoal); }
+.founders-text p { color: var(--garden-ink-soft); font-size: 1rem; }
+.founders-text p strong { color: var(--garden-charcoal); }
+.founders-mission {
+  font-family: var(--garden-serif);
+  font-style: italic;
+  font-size: 1.15rem !important;
+  color: var(--garden-charcoal) !important;
+  border-left: 3px solid var(--garden-green);
+  padding-left: 16px;
+}
+.pillars-section { background: var(--garden-deep-cream); }
+.pillars-section .section-title { color: var(--garden-charcoal); }
+.founders-posts-section { background: var(--garden-deep-cream); }
+
+/* charcoal band (the toolkit treatment) — inline var(--teal)/var(--white)
+   usages inside resolve to AA-safe values via the scoped re-points */
+.toolkit-section {
+  background: var(--garden-charcoal);
+  --teal: #5DCAA5;
+  --white: var(--garden-cream);
+}
+.toolkit-section h2 { color: var(--garden-cream) !important; font-family: var(--garden-serif); }
+.toolkit-section > .container > p:nth-of-type(2) { color: rgba(250,247,240,.72) !important; }
+.toolkit-card { border-color: rgba(250,247,240,.16); border-radius: var(--garden-r-2xl); }
+.toolkit-card:hover { border-color: var(--garden-gold); background: rgba(232,181,74,.06); }
+.toolkit-card h3 { color: var(--garden-cream); font-family: var(--garden-serif); font-size: 1.15rem; }
+.toolkit-card p { color: rgba(250,247,240,.68); }
+.toolkit-tag { color: var(--garden-gold); }
+.toolkit-link { color: var(--garden-gold); }
+.toolkit-link:hover { color: #F3CE7E; }
+
+/* orchard-green band (the newsletter treatment) */
+.newsletter-section.section-dark {
+  background: var(--garden-green);
+  position: relative; overflow: hidden;
+}
+.newsletter-section.section-dark::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(420px 200px at 12% 110%, rgba(232,181,74,.22), transparent 70%),
+    radial-gradient(420px 220px at 92% -10%, rgba(15,74,44,.55), transparent 70%);
+}
+.newsletter-section .container { position: relative; }
+.newsletter-section h2 { color: #fff; font-family: var(--garden-serif); }
+.newsletter-section p { color: #F4FAF4; }
+.newsletter-section #newsletterEmail { border-radius: 999px !important; }
+.newsletter-section .btn-primary {
+  background: var(--garden-orange);
+  color: var(--garden-charcoal);
+  border-radius: 999px;
+}
+.newsletter-section .btn-primary:hover { background: #E98A40; }
+.newsletter-section .fine-print { color: rgba(255,255,255,.85); }
+.newsletter-section a[href*="substack"] { color: #F4FAF4 !important; }
+
+/* ---------- footer (charcoal, creed first) ---------- */
+.site-footer { background: var(--garden-charcoal); color: #C9C3B4; }
+.footer-brand p:first-of-type {
+  font-family: var(--garden-serif);
+  font-style: italic;
+  font-size: 1.18rem;
+  line-height: 1.5;
+  color: #F5EFDF;
+  max-width: 34ch;
+}
+.footer-brand p:nth-of-type(2) {
+  font-size: .72rem; font-weight: 700;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--garden-on-dark-dim);
+}
+/* !important so per-page inline color="#8080a0" attributes are corrected too */
+.site-footer address, .site-footer address a { color: var(--garden-on-dark-dim) !important; }
+.site-footer address a:hover { color: var(--garden-gold) !important; }
+.footer-nav a { color: var(--garden-on-dark); }
+.footer-nav a:hover { color: var(--garden-gold); }
+.footer-social a { color: var(--garden-on-dark-dim); }
+.footer-social a:hover { color: var(--garden-gold); }
+.footer-bottom { border-top: 1px solid rgba(237,232,218,.14); }
+.footer-bottom p { color: var(--garden-on-dark-dim); }
+#visitorTz { color: var(--garden-on-dark-dim) !important; }
+
+/* ---------- schedule modal + chat accents ---------- */
+.sched-primary { background: var(--garden-green); border-radius: 999px; }
+.sched-primary:hover { background: var(--garden-green-deep); }
+.sched-btn:hover, .sched-slot:hover { border-color: var(--garden-green); background: var(--garden-deep-cream); }
+.sched-spinner { border-top-color: var(--garden-green); }
+.sched-secondary:hover { color: var(--garden-green-deep); }
+.chat-bubble { background: var(--garden-green); box-shadow: 0 4px 20px rgba(46,125,79,.45); }
+.chat-header { background: var(--garden-green); }
+.chat-msg.user { background: var(--garden-green); }
+.chip { background: var(--garden-deep-cream); color: var(--garden-green-deep); border-color: rgba(46,125,79,.4); }
+.chip:hover { background: var(--garden-deeper); }
+.chat-input-row button { background: var(--garden-green); }
+.chat-input-row button:hover { background: var(--garden-green-deep); }
+
+/* Founder-hidden footer threads (Bob, 2026-07-18): RSS, Newsletter, Community
+   platform, and Press links are dark estate-wide on this site — the Join pill is
+   the one door to the platform. Links stay in markup (arch tier's orphan check
+   still sees them); delete this block to bring any of them back. */
+a[href="/feed.xml"], a[href="feed.xml"],
+a[href="press.html"], a[href="/press.html"], a[href="../press.html"],
+.footer-nav a[href*="substack.com"],
+.footer-nav a[href*="community.aigovops-foundation.com"] { display: none !important; }

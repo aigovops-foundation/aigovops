@@ -1,0 +1,247 @@
+name: Cloud-Mary v3 — Automation Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 8 * * *'     # Daily at 8am UTC (1am Pacific)
+    - cron: '0 20 * * *'    # Daily at 8pm UTC (1pm Pacific)
+  workflow_dispatch:
+    inputs:
+      tiers:
+        description: 'Test tiers to run (space-separated: unit e2e a11y i18n scale chaos)'
+        required: false
+        default: 'unit a11y i18n chaos'
+      skip_network:
+        description: 'Skip network-dependent tests (e2e, scale)'
+        required: false
+        default: 'false'
+        type: choice
+        options: ['false', 'true']
+
+permissions:
+  contents: read
+
+jobs:
+
+  # ── Tier 1: Unit + URL Integrity ─────────────────────────────────────────
+  unit:
+    name: 🧪 Unit Tests (v1 + v3)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '20'
+      - name: Run unit tests v1
+        run: node scripts/test-unit.js
+      - name: Run unit tests v3
+        run: node scripts/test-unit-v3.js
+      # Two suites, one for each half of the feed-injection defence (review council,
+      # 2026-09-30). They are deliberately separate from the unit lanes: the inner half
+      # is JS at the innerHTML sink, the outer half is Python in the fetcher, and
+      # either one alone is one edit away from being the only one.
+      - name: Feed-to-DOM injection guard (the sink)
+        run: node scripts/test-xss.js
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.11'
+      - name: Feed sanitiser (the fetcher)
+        run: python3 scripts/test-fetch-sanitise.py
+      # Keeps publish-content.yml's staging list in step with build_content.py's write
+      # targets. #153 was those two drifting apart, and nothing noticed until every push
+      # was blocked. Verified to fail when founders.html is removed from the list again.
+      - name: Publish output contract
+        run: python3 scripts/test-publish-contract.py
+      - name: AEO answer pages contract
+        run: python3 scripts/test-answer-pages.py
+      - name: Persona paths contract
+        run: python3 scripts/test-personas.py
+      - name: Persona journey console error filter
+        run: node scripts/test-persona-journeys.mjs --self-test
+      # Keeps "this feed is broken" separable from "this founder has not posted lately".
+      # Conflating them kept `main` red for eleven days behind an assertion no commit
+      # could satisfy, while a single lapsed bridge stayed invisible because the exit
+      # contract only fired when BOTH feeds died.
+      - name: Feed health (per author, not just "both failed")
+        run: python3 scripts/test-feed-health.py
+
+  # ── Tier 1b: Message lint (promise · path · proof — plan 1.1/1.2) ───────
+  message:
+    name: 🗣️ Message Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.11'
+      - name: One public vocabulary; Gate Check on every page
+        run: python3 scripts/test-message.py
+
+  # ── Tier 2: Accessibility ─────────────────────────────────────────────────
+  a11y:
+    name: ♿ Accessibility Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.11'
+      - name: Run accessibility tests
+        run: bash scripts/test-a11y.sh
+
+  # ── Tier 3: Multilingual / i18n ───────────────────────────────────────────
+  i18n:
+    name: 🌍 Multilingual / i18n Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '20'
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.11'
+      - name: Run i18n tests
+        run: bash scripts/test-i18n.sh
+
+  # ── Tier 4: E2E (live site — skipped on PR, runs on push + schedule) ──────
+  e2e:
+    name: 🌐 E2E Tests (live site)
+    runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.11'
+      - name: Wait for Pages CDN to propagate
+        if: github.event_name == 'push'
+        run: |
+          # Poll the live site until it responds 200, up to ~3 min, then give
+          # the CDN a short grace period so the E2E checks see fresh content.
+          for i in $(seq 1 18); do
+            code=$(curl -sL -o /dev/null -w "%{http_code}" --max-time 10 https://www.aigovops-foundation.com/ || echo 000)
+            echo "Attempt $i: HTTP $code"
+            [ "$code" = "200" ] && break
+            sleep 10
+          done
+          echo "Grace period for CDN edge propagation..."
+          sleep 30
+      - name: Run E2E v3 tests (with one retry)
+        run: |
+          # The CDN can serve a stale edge node briefly after deploy; retry once
+          # before failing so transient propagation lag doesn't red-flag main.
+          bash scripts/test-e2e-v3.sh || { echo "E2E failed once — waiting 45s and retrying..."; sleep 45; bash scripts/test-e2e-v3.sh; }
+      - name: Validate posts data quality
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python3 - << 'EOF'
+          import json, re, sys
+          with open('data/linkedin-posts.json') as f:
+              d = json.load(f)
+          errors = []
+          for person in ['bob', 'ken']:
+              for p in d.get(person, []):
+                  t = p.get('title', '')
+                  core = re.sub(r'[#@]\S+', '', t)
+                  core = re.sub(r'[^\w\s]', '', core).strip()
+                  if len(core.split()) < 4:
+                      errors.append(f"{person}: hashtag-only title: {t[:60]}")
+          if errors:
+              print(f"❌ {len(errors)} bad titles:")
+              for e in errors: print(f"  {e}")
+              sys.exit(1)
+          print(f"✅ All {sum(len(d.get(p,[])) for p in ['bob','ken'])} post titles are clean")
+          EOF
+
+  # ── Tier 2b: Infra health — DNS, uptime, HTTP errors (live site) ──────────
+  infra-health:
+    name: 🩺 Infra Health (DNS / uptime / errors)
+    runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.11'
+      - name: Wait for Pages CDN to propagate
+        if: github.event_name == 'push'
+        run: |
+          for i in $(seq 1 18); do
+            code=$(curl -sL -o /dev/null -w "%{http_code}" --max-time 10 https://www.aigovops-foundation.com/ || echo 000)
+            echo "Attempt $i: HTTP $code"
+            [ "$code" = "200" ] && break
+            sleep 10
+          done
+          sleep 20
+      - name: DNS checks
+        run: bash scripts/test-dns.sh || { echo "DNS failed once — retrying in 30s (propagation)"; sleep 30; bash scripts/test-dns.sh; }
+      - name: Uptime / TLS checks
+        run: bash scripts/test-uptime.sh
+      - name: HTTP error-detection checks
+        run: bash scripts/test-errors.sh
+
+  # ── Tier 5: Scale (live site — scheduled only) ────────────────────────────
+  scale:
+    name: ⚡ Scale Tests (50 concurrent)
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.11'
+      - name: Run scale tests v3
+        run: bash scripts/test-scale-v3.sh 50
+        continue-on-error: true  # scale failures are informational in CI
+      - name: Run scale tests v3 (high load)
+        run: bash scripts/test-scale-v3.sh 100
+        continue-on-error: true
+
+  # ── Tier 6: Chaos Monkey ──────────────────────────────────────────────────
+  chaos:
+    name: 🐒 Chaos Monkey
+    runs-on: ubuntu-latest
+    needs: unit   # only run chaos if unit tests pass
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '20'
+      - name: Run chaos tests
+        run: bash scripts/test-chaos.sh
+
+  docs:
+    name: 📄 Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Run doc validation
+        run: bash scripts/test-docs.sh
+
+  # ── Summary Report ────────────────────────────────────────────────────────
+  report:
+    name: ☁️ Cloud-Mary Report
+    runs-on: ubuntu-latest
+    needs: [unit, a11y, i18n, chaos, docs]
+    if: always()
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Generate summary
+        run: |
+          echo "# ☁️ Cloud-Mary v3 — Test Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Tier | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| 🧪 Unit Tests | ${{ needs.unit.result == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| ♿ Accessibility | ${{ needs.a11y.result == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| 🌍 Multilingual | ${{ needs.i18n.result == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| 🐒 Chaos Monkey | ${{ needs.chaos.result == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| 📄 Documentation | ${{ needs.docs.result == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Commit: \`$(git log --oneline -1)\`" >> $GITHUB_STEP_SUMMARY
+          echo "Run at: $(date -u '+%Y-%m-%d %H:%M UTC')" >> $GITHUB_STEP_SUMMARY

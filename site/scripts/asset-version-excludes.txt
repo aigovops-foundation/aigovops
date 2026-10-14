@@ -1,0 +1,5 @@
+.git
+.backups
+mockups
+node_modules
+__pycache__

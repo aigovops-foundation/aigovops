@@ -1,0 +1,100 @@
+{
+  "updated": "2026-10-13T19:08:28Z",
+  "feed_health": {
+    "bob": {
+      "ok": true,
+      "fetched": 10,
+      "published": 10,
+      "error": null
+    },
+    "ken": {
+      "ok": true,
+      "fetched": 10,
+      "published": 0,
+      "error": null
+    }
+  },
+  "bob": [
+    {
+      "title": "PROBLEM AI that influences minors can shape trust, choices, identity, and development. Age assurance is imperfect—not permission t...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-ai-that-influences-minors-can-shape-activity-7515759219468296192-xEzA",
+      "date": "Tue, 13 Oct 2026 13:03:54 GMT",
+      "summary": "PROBLEM AI that influences minors can shape trust, choices, identity, and development. Age assurance is imperfect—not permission to lower safeguards. Test child-specific harms before launch. SOLUTION Use heightened defaults: minimum data, no manipulative nudges, clear AI disclosu",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI monitoring can look “green” while critical stages stay invisible. PROBLEM Unobserved stages, undocumented signals, delayed logs...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-monitoring-can-look-green-while-critical-activity-7515758929956487168-zslO",
+      "date": "Tue, 13 Oct 2026 13:02:45 GMT",
+      "summary": "AI monitoring can look “green” while critical stages stay invisible. PROBLEM Unobserved stages, undocumented signals, delayed logs and unmonitored downstream effects create coverage gaps. This is not a general metrics issue—or audit-trail compression. SOLUTION Map each lifecycle",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Policy on paper is not operational AI governance. Evidence is. PROBLEM / 問題 A maturity score matters only when it identifies the n...",
+      "link": "https://www.linkedin.com/posts/bobrapp_policy-on-paper-is-not-operational-ai-governance-activity-7515532251330134016-sRFy",
+      "date": "Mon, 12 Oct 2026 22:02:01 GMT",
+      "summary": "Policy on paper is not operational AI governance. Evidence is. PROBLEM / 問題 A maturity score matters only when it identifies the next control to improve. / 成熟度は次の改善点を示してこそ意味があります。 SOLUTION / 解決策 Score 1 only when current evidence exists; otherwise score 0: Owner named / 責任者; reco",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Translation can be fluent—and still fail locally. PROBLEM | समस्या Localization is not translation. Test idioms, social norms, power...",
+      "link": "https://www.linkedin.com/posts/bobrapp_translation-can-be-fluentand-still-fail-activity-7515532176772186112-k6ZF",
+      "date": "Mon, 12 Oct 2026 22:01:43 GMT",
+      "summary": "Translation can be fluent—and still fail locally. PROBLEM | समस्या Localization is not translation. Test idioms, social norms, power dynamics, cultural assumptions, and market-specific harm patterns before launch. स्थानीयकरण केवल अनुवाद नहीं है। लॉन्च से पहले मुहावरों, सामाजिक मा",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "A human in the loop is not a quality metric. 人在回路中，不等于审查有效。 Problem Reviewers can be present while AI errors pass. Measure whether...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-human-in-the-loop-is-not-a-quality-metric-activity-7515397059126927361-gHPm",
+      "date": "Mon, 12 Oct 2026 13:04:48 GMT",
+      "summary": "A human in the loop is not a quality metric. 人在回路中，不等于审查有效。 Problem Reviewers can be present while AI errors pass. Measure whether reviewers catch and correctly resolve errors—not attendance. 问题 有人在场，错误仍可能漏过。衡量发现与纠正，而不是参与形式。 Solution Use blinded samples. Track: • Catch rate, corr",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI accountability can vanish in M&A—not because models changed, but because ownership did. Problem: Merged teams can lose owners,...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-accountability-can-vanish-in-manot-because-activity-7515396426017710080-Veyf",
+      "date": "Mon, 12 Oct 2026 13:02:17 GMT",
+      "summary": "AI accountability can vanish in M&A—not because models changed, but because ownership did. Problem: Merged teams can lose owners, evidence, escalation, and remedies. Never migrate first. Solution—continuity gate: inventory decisions/owners; freeze unsafe migrations; validate acce",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Live personal data is not a default pilot environment. PROBLEM “Just a pilot” is not a control. Masked data can be re-identified;...",
+      "link": "https://www.linkedin.com/posts/bobrapp_live-personal-data-is-not-a-default-pilot-activity-7515170000349941760-fFEy",
+      "date": "Sun, 11 Oct 2026 22:02:33 GMT",
+      "summary": "Live personal data is not a default pilot environment. PROBLEM “Just a pilot” is not a control. Masked data can be re-identified; prototypes can reach production. SOLUTION Start synthetic/masked; test re-identification; grant minimum, time-boxed access; separate test from product",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "ENGLISH PROBLEM A supplier vulnerability disclosure—affecting a model, tool, dataset, or infrastructure—can leave ownership, affec...",
+      "link": "https://www.linkedin.com/posts/bobrapp_english-problem-a-supplier-vulnerability-activity-7515169886952824832-Ol2C",
+      "date": "Sun, 11 Oct 2026 22:02:06 GMT",
+      "summary": "ENGLISH PROBLEM A supplier vulnerability disclosure—affecting a model, tool, dataset, or infrastructure—can leave ownership, affected versions, temporary controls, notices, remediation, and closure unclear. SOLUTION Assign triage ownership; map affected versions and deployments;",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Accessibility acceptance is a one-time gate—not ongoing control. Problem Changes can break labels, focus, captions, contrast, reco...",
+      "link": "https://www.linkedin.com/posts/bobrapp_accessibility-acceptance-is-a-one-time-gatenot-activity-7515034281853894656-RHDl",
+      "date": "Sun, 11 Oct 2026 13:03:15 GMT",
+      "summary": "Accessibility acceptance is a one-time gate—not ongoing control. Problem Changes can break labels, focus, captions, contrast, recovery, or screen-reader output. Launch approval is not continued access. Solution After each release: test affected users plus keyboard, screen reader,",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Near misses are not “nothing happened.” A harmful output was caught before reaching a person—and became safety data. PROBLEM Learn...",
+      "link": "https://www.linkedin.com/posts/bobrapp_near-misses-are-not-nothing-happened-a-activity-7515033657875513344-3dV5",
+      "date": "Sun, 11 Oct 2026 13:00:47 GMT",
+      "summary": "Near misses are not “nothing happened.” A harmful output was caught before reaching a person—and became safety data. PROBLEM Learn from every near miss, regardless of severity. Keep intake psychologically safe and blame-free. SOLUTION Log context, model/version, output, catching",
+      "image": null,
+      "author": "Bob Rapp"
+    }
+  ],
+  "ken": []
+}
