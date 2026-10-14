@@ -21,7 +21,7 @@ permissions:
 
 jobs:
   triage:
-    uses: aigovops-foundation/aigovops-library-june-ken-bob/.github/workflows/reusable-dependency-triage.yml@main
+    uses: aigovops-foundation/aigovops-library-june-ken-bob/.github/workflows/reusable-dependency-triage.yml@faab8ce1dbf3849598a8af5a027204dba6d7a0f1 # v1
     with:
       working_directory: "camps/ncw"
       verify_command: "npm run test:links"
