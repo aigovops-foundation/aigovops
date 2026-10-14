@@ -58,11 +58,21 @@ function outputDirectory(root, project) {
   return output;
 }
 
-async function outputFiles(directory) {
+async function outputFiles(directory, exclude) {
   const files = [];
   async function walk(current, prefix = "") {
     for (const entry of await readdir(current, { withFileTypes: true })) {
       const path = prefix ? `${prefix}/${entry.name}` : entry.name;
+      const segments = path.split("/");
+      if (
+        segments.some(
+          (segment) =>
+            exclude.includes(segment) ||
+            (exclude.includes(".*") && segment.startsWith(".")),
+        )
+      ) {
+        continue;
+      }
       const absolute = join(current, entry.name);
       if (entry.isDirectory()) await walk(absolute, path);
       else files.push(path);
@@ -109,6 +119,10 @@ export async function assemble({
     if (!Array.isArray(project.legacy)) {
       throw new Error(`project "${project.id}" legacy must be an array`);
     }
+    const exclude = project.exclude ?? [];
+    if (!Array.isArray(exclude) || exclude.some((entry) => typeof entry !== "string" || !entry)) {
+      throw new Error(`project "${project.id}" exclude must be an array of non-empty strings`);
+    }
     const output = outputDirectory(root, project);
     if (project.build) execSync(project.build, { cwd: source, stdio: "inherit", shell: true });
     let outputStat;
@@ -120,7 +134,7 @@ export async function assemble({
     if (!outputStat.isDirectory()) {
       throw new Error(`project "${project.id}" output is not a directory: ${project.out}`);
     }
-    projects.push({ ...project, prefixParts: parts, output });
+    projects.push({ ...project, exclude, prefixParts: parts, output });
   }
 
   for (const project of projects) {
@@ -135,7 +149,7 @@ export async function assemble({
 
   const owned = new Map();
   for (const project of projects) {
-    for (const file of await outputFiles(project.output)) {
+    for (const file of await outputFiles(project.output, project.exclude)) {
       const target = [...project.prefixParts, ...file.split("/")].join("/");
       const collision = findCollision(owned, target);
       if (collision) {
@@ -150,9 +164,11 @@ export async function assemble({
   await rm(sitePath, { recursive: true, force: true });
   await mkdir(sitePath, { recursive: true });
   for (const project of projects) {
-    const destination = join(sitePath, ...project.prefixParts);
-    await mkdir(destination, { recursive: true });
-    await cp(project.output, destination, { recursive: true });
+    for (const file of await outputFiles(project.output, project.exclude)) {
+      const destination = join(sitePath, ...project.prefixParts, ...file.split("/"));
+      await mkdir(dirname(destination), { recursive: true });
+      await cp(join(project.output, ...file.split("/")), destination);
+    }
   }
   return sitePath;
 }

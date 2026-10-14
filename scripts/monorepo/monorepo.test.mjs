@@ -43,12 +43,12 @@ function project(id, out, urlPrefix) {
   return { id, path: out, urlPrefix, build: null, out, legacy: [] };
 }
 
-test("real manifest assembles _site byte-for-byte from docs", async () => {
+test("real manifest assembles trunk docs under /aigovops/", async () => {
   await assemble();
   const docs = await fileContents(join(ROOT, "docs"));
-  const site = await fileContents(join(ROOT, "_site"));
-  assert.deepEqual([...site.keys()].sort(), [...docs.keys()].sort());
-  for (const [path, contents] of docs) assert.deepEqual(site.get(path), contents, path);
+  const trunk = await fileContents(join(ROOT, "_site/aigovops"));
+  assert.deepEqual([...trunk.keys()].sort(), [...docs.keys()].sort());
+  for (const [path, contents] of docs) assert.deepEqual(trunk.get(path), contents, path);
 });
 
 test("project builds run from path while out stays relative to the repo root", async () => {
@@ -80,6 +80,27 @@ test("assembly reports both project ids on a file collision", async () => {
       assemble({ root, manifestPath: join(root, "monorepo.json"), sitePath: join(root, "_site") }),
       /collision.*alpha.*beta|collision.*beta.*alpha/,
     );
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
+});
+
+test("assembly excludes matching path segments and dot-prefixed segments", async () => {
+  const root = await fixtureRoot();
+  try {
+    await mkdir(join(root, "a", ".github", "workflows"), { recursive: true });
+    await mkdir(join(root, "a", "nested", ".cache"), { recursive: true });
+    await mkdir(join(root, "a", "nested"), { recursive: true });
+    await writeFile(join(root, "a", "index.html"), "index");
+    await writeFile(join(root, "a", "CNAME"), "domain");
+    await writeFile(join(root, "a", ".github", "workflows", "ci.yml"), "workflow");
+    await writeFile(join(root, "a", "nested", "CNAME"), "nested domain");
+    await writeFile(join(root, "a", "nested", ".cache", "state"), "cache");
+    await writeFile(join(root, "a", "nested", "keepCNAME.txt"), "keep");
+    await writeManifest(root, [{ ...project("filtered", "a", "/"), exclude: [".*", "CNAME"] }]);
+    await assemble({ root, manifestPath: join(root, "monorepo.json"), sitePath: join(root, "_site") });
+    const files = await fileContents(join(root, "_site"));
+    assert.deepEqual([...files.keys()].sort(), ["index.html", "nested/keepCNAME.txt"]);
   } finally {
     await rm(root, { recursive: true, force: true });
   }
