@@ -3,6 +3,8 @@
 title: AiGovOps Practice
 description: One practice, four levels, four gates — one hour of value at every level. Fall 2026 Release. Conforms to OVERT.
 theme: jekyll-theme-primer
+sass:
+  style: compact
 plugins: [jekyll-relative-links, jekyll-optional-front-matter, jekyll-readme-index, jekyll-titles-from-headings]
 relative_links: { enabled: true, collections: true }
 titles_from_headings: { enabled: true, strip_title: true }
