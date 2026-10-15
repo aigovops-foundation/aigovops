@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15T07:11:08Z",
+  "updated": "2026-10-15T19:08:31Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,22 @@
     }
   },
   "bob": [
+    {
+      "title": "A vendor claim is not an internal compliance assertion. PROBLEM / 问题 “Fair,” “robust,” and “compliant” are claims—not evidence. Te...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-vendor-claim-is-not-an-internal-compliance-activity-7516483766836518912-XItX",
+      "date": "Thu, 15 Oct 2026 13:03:00 GMT",
+      "summary": "A vendor claim is not an internal compliance assertion. PROBLEM / 问题 “Fair,” “robust,” and “compliant” are claims—not evidence. Test first, or supplier marketing becomes internal risk. “公平、稳健、合规”是声明，不是证据。先验证，否则营销会变成内部风险。 SOLUTION / 解决方案 For each material claim: map artifacts such",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Credential exposure drills are not tabletop theatre. They rehearse discovery → containment before a real incident. PROBLEM AI-agen...",
+      "link": "https://www.linkedin.com/posts/bobrapp_credential-exposure-drills-are-not-tabletop-activity-7516483535604613120-gslv",
+      "date": "Thu, 15 Oct 2026 13:02:04 GMT",
+      "summary": "Credential exposure drills are not tabletop theatre. They rehearse discovery → containment before a real incident. PROBLEM AI-agent secrets can surface in code, prompts, logs, tool outputs, repos, or vendor paths. Without rehearsal, blast radius grows while responders improvise.",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Can this model card guide the next safe action—or only prove that a document exists? Problem / 問題 Usability is task-based. For thi...",
       "link": "https://www.linkedin.com/posts/bobrapp_can-this-model-card-guide-the-next-safe-actionor-activity-7516257214798622721-L9PF",
@@ -68,22 +84,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_problem-ai-that-influences-minors-can-shape-activity-7515759219468296192-xEzA",
       "date": "Tue, 13 Oct 2026 13:03:54 GMT",
       "summary": "PROBLEM AI that influences minors can shape trust, choices, identity, and development. Age assurance is imperfect—not permission to lower safeguards. Test child-specific harms before launch. SOLUTION Use heightened defaults: minimum data, no manipulative nudges, clear AI disclosu",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI monitoring can look “green” while critical stages stay invisible. PROBLEM Unobserved stages, undocumented signals, delayed logs...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-monitoring-can-look-green-while-critical-activity-7515758929956487168-zslO",
-      "date": "Tue, 13 Oct 2026 13:02:45 GMT",
-      "summary": "AI monitoring can look “green” while critical stages stay invisible. PROBLEM Unobserved stages, undocumented signals, delayed logs and unmonitored downstream effects create coverage gaps. This is not a general metrics issue—or audit-trail compression. SOLUTION Map each lifecycle",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Policy on paper is not operational AI governance. Evidence is. PROBLEM / 問題 A maturity score matters only when it identifies the n...",
-      "link": "https://www.linkedin.com/posts/bobrapp_policy-on-paper-is-not-operational-ai-governance-activity-7515532251330134016-sRFy",
-      "date": "Mon, 12 Oct 2026 22:02:01 GMT",
-      "summary": "Policy on paper is not operational AI governance. Evidence is. PROBLEM / 問題 A maturity score matters only when it identifies the next control to improve. / 成熟度は次の改善点を示してこそ意味があります。 SOLUTION / 解決策 Score 1 only when current evidence exists; otherwise score 0: Owner named / 責任者; reco",
       "image": null,
       "author": "Bob Rapp"
     }
