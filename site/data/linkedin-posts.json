@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-14T19:09:07Z",
+  "updated": "2026-10-15T07:11:08Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,22 @@
     }
   },
   "bob": [
+    {
+      "title": "Can this model card guide the next safe action—or only prove that a document exists? Problem / 問題 Usability is task-based. For thi...",
+      "link": "https://www.linkedin.com/posts/bobrapp_can-this-model-card-guide-the-next-safe-actionor-activity-7516257214798622721-L9PF",
+      "date": "Wed, 14 Oct 2026 22:02:45 GMT",
+      "summary": "Can this model card guide the next safe action—or only prove that a document exists? Problem / 問題 Usability is task-based. For this version, an operator must find allowed use, required checks, stop/escalate triggers, and known non-use conditions. If not, block deployment. 使いやすさは実",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Can your AI kill-switch stop the whole system—or only the screen? PROBLEM / समस्या A UI stop may leave APIs, queues, replicas, or do...",
+      "link": "https://www.linkedin.com/posts/bobrapp_can-your-ai-kill-switch-stop-the-whole-systemor-activity-7516256790561488896-ZkwA",
+      "date": "Wed, 14 Oct 2026 22:01:04 GMT",
+      "summary": "Can your AI kill-switch stop the whole system—or only the screen? PROBLEM / समस्या A UI stop may leave APIs, queues, replicas, or downstream actions running. UI stop से API, queue, replica और downstream काम जारी रह सकता है। SOLUTION / समाधान Use an independent test principal. Ver",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "AI can flag suspicious sign-ins. It cannot decide—by confidence score alone—who loses access. Problem Device-code and OAuth phishi...",
       "link": "https://www.linkedin.com/posts/bobrapp_ai-can-flag-suspicious-sign-ins-it-cannot-activity-7516121616154750976-AXV9",
@@ -68,22 +84,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_policy-on-paper-is-not-operational-ai-governance-activity-7515532251330134016-sRFy",
       "date": "Mon, 12 Oct 2026 22:02:01 GMT",
       "summary": "Policy on paper is not operational AI governance. Evidence is. PROBLEM / 問題 A maturity score matters only when it identifies the next control to improve. / 成熟度は次の改善点を示してこそ意味があります。 SOLUTION / 解決策 Score 1 only when current evidence exists; otherwise score 0: Owner named / 責任者; reco",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Translation can be fluent—and still fail locally. PROBLEM | समस्या Localization is not translation. Test idioms, social norms, power...",
-      "link": "https://www.linkedin.com/posts/bobrapp_translation-can-be-fluentand-still-fail-activity-7515532176772186112-k6ZF",
-      "date": "Mon, 12 Oct 2026 22:01:43 GMT",
-      "summary": "Translation can be fluent—and still fail locally. PROBLEM | समस्या Localization is not translation. Test idioms, social norms, power dynamics, cultural assumptions, and market-specific harm patterns before launch. स्थानीयकरण केवल अनुवाद नहीं है। लॉन्च से पहले मुहावरों, सामाजिक मा",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "A human in the loop is not a quality metric. 人在回路中，不等于审查有效。 Problem Reviewers can be present while AI errors pass. Measure whether...",
-      "link": "https://www.linkedin.com/posts/bobrapp_a-human-in-the-loop-is-not-a-quality-metric-activity-7515397059126927361-gHPm",
-      "date": "Mon, 12 Oct 2026 13:04:48 GMT",
-      "summary": "A human in the loop is not a quality metric. 人在回路中，不等于审查有效。 Problem Reviewers can be present while AI errors pass. Measure whether reviewers catch and correctly resolve errors—not attendance. 问题 有人在场，错误仍可能漏过。衡量发现与纠正，而不是参与形式。 Solution Use blinded samples. Track: • Catch rate, corr",
       "image": null,
       "author": "Bob Rapp"
     }
