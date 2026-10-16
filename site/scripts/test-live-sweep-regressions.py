@@ -113,7 +113,8 @@ for page in HTML:
     text = page.read_text()
     if "feedback.js" in text:
         feedback_tags.extend(re.findall(r"<script\b[^>]*feedback\.js[^>]*>", text))
-check(len(feedback_tags) == 44, "all 44 feedback pages remain covered")
+# A floor, not an equality: the publish job adds a feedback page with every new story.
+check(len(feedback_tags) >= 44, f"feedback pages remain covered ({len(feedback_tags)}, floor 44)")
 check(
     all('data-theme="light"' in tag and "?v=20261011b" in tag for tag in feedback_tags),
     "feedback pages use the light palette and bumped script version",
