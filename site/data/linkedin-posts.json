@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16T07:09:53Z",
+  "updated": "2026-10-16T19:08:07Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,22 @@
     }
   },
   "bob": [
+    {
+      "title": "Benchmark results can be precise—and still too uncertain to support a launch claim. PROBLEM A score is not evidence strength. Chec...",
+      "link": "https://www.linkedin.com/posts/bobrapp_benchmark-results-can-be-preciseand-still-activity-7516846225166594048-dbhD",
+      "date": "Fri, 16 Oct 2026 13:03:16 GMT",
+      "summary": "Benchmark results can be precise—and still too uncertain to support a launch claim. PROBLEM A score is not evidence strength. Check confidence-interval width, sample adequacy per critical slice, missing slices, and independent reproducibility. SOLUTION Set gates before testing: C",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Shared workspaces are AI control-plane infrastructure—not just team plumbing. PROBLEM / PROBLÈME Agents can edit shared boards, ar...",
+      "link": "https://www.linkedin.com/posts/bobrapp_shared-workspaces-are-ai-control-plane-infrastructurenot-activity-7516846155322994688-1Uzh",
+      "date": "Fri, 16 Oct 2026 13:03:00 GMT",
+      "summary": "Shared workspaces are AI control-plane infrastructure—not just team plumbing. PROBLEM / PROBLÈME Agents can edit shared boards, artifact stores, and channels. Spoofed authors, silent edits, or overwritten snapshots can corrupt decisions. This is workspace integrity—not prompt/pol",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "An evaluation environment can look isolated—and still touch the outside world. Problem Can the agent reach an unintended service,...",
       "link": "https://www.linkedin.com/posts/bobrapp_an-evaluation-environment-can-look-isolatedand-activity-7516619499899633664-miPW",
@@ -68,22 +84,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_ai-can-flag-suspicious-sign-ins-it-cannot-activity-7516121616154750976-AXV9",
       "date": "Wed, 14 Oct 2026 13:03:56 GMT",
       "summary": "AI can flag suspicious sign-ins. It cannot decide—by confidence score alone—who loses access. Problem Device-code and OAuth phishing can yield valid tokens. Automation may lock out legitimate users or leave attackers active. Solutions Score signals, then route medium/high confide",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI can change a job before it changes an org chart. Consulting workers after deployment is theatre. Problem → AI may change monito...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-can-change-a-job-before-it-changes-an-activity-7516121212171862017-Tg6w",
-      "date": "Wed, 14 Oct 2026 13:02:20 GMT",
-      "summary": "AI can change a job before it changes an org chart. Consulting workers after deployment is theatre. Problem → AI may change monitoring, targets, task allocation, or job security without worker influence. Solution → Before deployment, consult early; include elected or recognised r",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI change freezes are not “no deploy” rules. They are controlled release windows for high-risk AI. PROBLEM In sensitive periods, e...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-change-freezes-are-not-no-deploy-rules-activity-7515895084479868928-rr_2",
-      "date": "Tue, 13 Oct 2026 22:03:47 GMT",
-      "summary": "AI change freezes are not “no deploy” rules. They are controlled release windows for high-risk AI. PROBLEM In sensitive periods, even a model, prompt, data, policy, or agent change can shift production behavior. Impact scoring alone does not set override authority, evidence, roll",
       "image": null,
       "author": "Bob Rapp"
     }
