@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15T19:08:31Z",
+  "updated": "2026-10-16T07:09:53Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,22 @@
     }
   },
   "bob": [
+    {
+      "title": "An evaluation environment can look isolated—and still touch the outside world. Problem Can the agent reach an unintended service,...",
+      "link": "https://www.linkedin.com/posts/bobrapp_an-evaluation-environment-can-look-isolatedand-activity-7516619499899633664-miPW",
+      "date": "Thu, 15 Oct 2026 22:02:21 GMT",
+      "summary": "An evaluation environment can look isolated—and still touch the outside world. Problem Can the agent reach an unintended service, alter a shared workspace, or reuse a credential? Solution Test the boundary—not just the sandbox. Ship Good AI □ Allowlist; deny by default. □ Seed UR",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI output does not stop at an API boundary. Problem: An external service may reuse it beyond your intent. API compatibility is not...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-output-does-not-stop-at-an-api-boundary-activity-7516619300720361472-oUBM",
+      "date": "Thu, 15 Oct 2026 22:01:33 GMT",
+      "summary": "AI output does not stop at an API boundary. Problem: An external service may reuse it beyond your intent. API compatibility is not governance—and this is not a decision-boundary map. Solution: Contract the boundary: permitted downstream use; warning propagation; responsibility ha",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "A vendor claim is not an internal compliance assertion. PROBLEM / 问题 “Fair,” “robust,” and “compliant” are claims—not evidence. Te...",
       "link": "https://www.linkedin.com/posts/bobrapp_a-vendor-claim-is-not-an-internal-compliance-activity-7516483766836518912-XItX",
@@ -68,22 +84,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_ai-change-freezes-are-not-no-deploy-rules-activity-7515895084479868928-rr_2",
       "date": "Tue, 13 Oct 2026 22:03:47 GMT",
       "summary": "AI change freezes are not “no deploy” rules. They are controlled release windows for high-risk AI. PROBLEM In sensitive periods, even a model, prompt, data, policy, or agent change can shift production behavior. Impact scoring alone does not set override authority, evidence, roll",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "A disputed IP claim is not metadata. It is a release-control decision. ENGLISH Problem: Lineage = data origin; attribution = credi...",
-      "link": "https://www.linkedin.com/posts/bobrapp_a-disputed-ip-claim-is-not-metadata-it-is-activity-7515894577531133952-6UyY",
-      "date": "Tue, 13 Oct 2026 22:01:46 GMT",
-      "summary": "A disputed IP claim is not metadata. It is a release-control decision. ENGLISH Problem: Lineage = data origin; attribution = credit. Rights provenance governs whether disputed material may be trained, retained, transformed, or shipped. Solution: Log notice, evidence, scope, and t",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "PROBLEM AI that influences minors can shape trust, choices, identity, and development. Age assurance is imperfect—not permission t...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-ai-that-influences-minors-can-shape-activity-7515759219468296192-xEzA",
-      "date": "Tue, 13 Oct 2026 13:03:54 GMT",
-      "summary": "PROBLEM AI that influences minors can shape trust, choices, identity, and development. Age assurance is imperfect—not permission to lower safeguards. Test child-specific harms before launch. SOLUTION Use heightened defaults: minimum data, no manipulative nudges, clear AI disclosu",
       "image": null,
       "author": "Bob Rapp"
     }
