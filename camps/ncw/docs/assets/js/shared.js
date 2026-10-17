@@ -1,0 +1,325 @@
+/* ============================================================
+   NCW AI Expo 2026 — shared header, footer, scroll animations
+   skin: aigovops-july-2026 (garden-warm, camp-native) — canonical tokens:
+   foundation repo design/aigovops-july-2026/tokens.css (orchard=--garden-green,
+   signal=--garden-orange, cream=--garden-cream, cream-deep=--garden-deep-cream,
+   charcoal=--garden-charcoal); the estate creed below must stay byte-identical.
+   Injects a consistent nav + footer on every page and wires up
+   subtle motion (scroll fade-ins, stat count-ups, mobile menu).
+   ============================================================ */
+(function () {
+  "use strict";
+
+  // Which page is active? Derived from <body data-page="...">
+  const PAGE = (document.body && document.body.getAttribute("data-page")) || "";
+  // Path prefix for pages living in a subdirectory (e.g. /tools/*.html set data-base="../").
+  // VALIDATED to a strict "../"-only shape: the value is developer-set, but we don't trust a DOM
+  // attribute as an input source, so anything that isn't a run of "../" is dropped to "". This closes
+  // the taint path CodeQL flags (getAttribute -> href attribute) at the source.
+  const _rawBase = (document.body && document.body.getAttribute("data-base")) || "";
+  const BASE = /^(?:\.\.\/)*$/.test(_rawBase) ? _rawBase : "";
+  // Encode a value for safe interpolation inside an HTML attribute (a recognized XSS sanitizer).
+  const escAttr = (s) => String(s).replace(/[&<>"']/g, (c) =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  // Every href() result is encoded, so each `${href(...)}` in the templates below is attribute-safe.
+  const href = (h) => escAttr(/^https?:/.test(h) ? h : BASE + h);
+
+  const PRIMARY_NAV = [
+    { href: "index.html", key: "home", label: "Home" },
+    { href: "kit/attendee-guide.html", key: "day", label: "Your day" },
+    { href: "pledge.html", key: "pledge", label: "Pledge" },
+    { href: "tools.html", key: "tools", label: "Tools" },
+  ];
+  const MORE_NAV = [
+    { href: "plan.html", key: "plan", label: "The Plan" },
+    { href: "centerpiece.html", key: "centerpiece", label: "Centerpiece" },
+    { href: "mini-camps.html", key: "mini-camps", label: "Mini-Camps" },
+    { href: "workshop.html", key: "workshop", label: "Workshop" },
+    { href: "demos.html", key: "demos", label: "Demo Lab" },
+    { href: "courses.html", key: "courses", label: "Courses" },
+    { href: "hint-logs.html", key: "hint-logs", label: "Hint-Logs" },
+    { href: "resources.html", key: "resources", label: "Resources" },
+    { href: "support.html", key: "support", label: "Support" },
+    { href: "about.html", key: "about", label: "About" },
+  ];
+
+  const LOGO = `
+    <svg width="32" height="32" viewBox="0 0 32 32" class="shrink-0" aria-label="NCW AI Expo mark" role="img">
+      <rect width="32" height="32" rx="7" fill="#2E7D4F"/>
+      <path d="M4 22 L11 11 L16 18 L21 9 L28 22 Z" fill="#FAF7F0"/>
+      <circle cx="24" cy="8" r="3" fill="#E07A2A"/>
+    </svg>`;
+
+  function renderHeader() {
+    const mount = document.getElementById("site-header");
+    if (!mount) return;
+    const links = PRIMARY_NAV.map(
+      (n) => `<a href="${href(n.href)}" data-nav="${n.key}"
+        class="px-1.5 py-2 rounded-lg text-[13px] font-600 whitespace-nowrap transition-colors ${
+          n.key === PAGE
+            ? "text-orchard bg-orchard/8"
+            : "text-charcoal/70 hover:text-orchard hover:bg-orchard/5"
+        }">${n.label}</a>`
+    ).join("");
+    const moreLinks = MORE_NAV.map(
+      (n) => `<a href="${href(n.href)}" data-nav="${n.key}"
+        class="block px-3 py-2 rounded-lg text-[13px] font-600 whitespace-nowrap ${
+          n.key === PAGE
+            ? "text-orchard bg-orchard/8"
+            : "text-charcoal/80 hover:text-orchard hover:bg-cream-deep"
+        }">${n.label}</a>`
+    ).join("");
+    const moreActive = MORE_NAV.some((n) => n.key === PAGE);
+    const moreMenu = `
+      <details class="relative">
+        <summary class="cursor-pointer list-none px-1.5 py-2 rounded-lg text-[13px] font-600 whitespace-nowrap transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-orchard ${
+          moreActive ? "text-orchard bg-orchard/8" : "text-charcoal/70 hover:text-orchard hover:bg-orchard/5"
+        }">More ▾</summary>
+        <div class="absolute right-0 top-full z-[60] mt-1 min-w-48 max-h-[70vh] overflow-y-auto rounded-xl border border-cream-deep bg-cream p-2 shadow-xl">
+          ${moreLinks}
+        </div>
+      </details>`;
+
+    const mobileLinks = PRIMARY_NAV.map(
+      (n) => `<a href="${href(n.href)}"
+        class="block px-4 py-3 rounded-xl text-[15px] font-600 ${
+          n.key === PAGE ? "text-orchard bg-orchard/8" : "text-charcoal/80 hover:bg-cream-deep"
+        }">${n.label}</a>`
+    ).join("") + `
+      <details class="px-4 rounded-xl">
+        <summary class="cursor-pointer list-none py-3 text-[15px] font-600 text-charcoal/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-orchard">More ▾</summary>
+        <div class="space-y-1 pl-3">${MORE_NAV.map(
+          (n) => `<a href="${href(n.href)}"
+            class="block px-4 py-3 rounded-xl text-[15px] font-600 ${
+              n.key === PAGE ? "text-orchard bg-orchard/8" : "text-charcoal/80 hover:bg-cream-deep"
+            }">${n.label}</a>`
+        ).join("")}</div>
+      </details>`;
+    const pledgeHeaderAction = PAGE === "pledge" ? "" : `
+      <a id="pledgeHeaderAction" href="${href('pledge.html')}" class="hidden xl:inline-flex items-center rounded-full bg-signal hover:bg-signal-dark transition-colors text-white font-700 text-sm px-5 py-2.5 shadow-sm">Sign the pledge — anonymous, 30 s</a>`;
+    const pledgeStickyMobile = PAGE === "pledge" ? "" : `
+      <a id="pledgeStickyMobile" href="${href('pledge.html')}" class="hidden xl:hidden fixed inset-x-4 bottom-20 z-40 inline-flex justify-center items-center rounded-full bg-signal hover:bg-signal-dark transition-colors text-white font-700 text-sm px-5 py-3 shadow-lg">Sign the pledge — anonymous, 30 s</a>`;
+
+    mount.innerHTML = `
+      <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-orchard focus:text-white focus:font-700 focus:px-4 focus:py-2 focus:shadow-lg">Skip to main content</a>
+      <header class="sticky top-0 z-50 bg-cream/90 backdrop-blur-md border-b border-cream-deep">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 h-[68px] flex items-center justify-between gap-4">
+          <a href="${href('index.html')}" class="flex items-center gap-2.5 group shrink-0">
+            ${LOGO}
+            <span class="font-serif font-700 text-charcoal text-[15px] leading-[1.05] block">
+              NCW AI Expo<span class="block xl:hidden text-[11px] font-600 text-orchard tracking-wide">Aug 11, 2026 · Wenatchee</span>
+            </span>
+          </a>
+          <nav class="hidden xl:flex items-center gap-0" aria-label="Primary">${links}${moreMenu}</nav>
+          <div class="flex items-center gap-2">
+            ${pledgeHeaderAction}
+            <button id="menuBtn" class="xl:hidden grid place-items-center w-10 h-10 rounded-lg text-charcoal hover:bg-cream-deep" aria-label="Open menu" aria-expanded="false">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+          </div>
+        </div>
+        <div id="mobileMenu" class="xl:hidden hidden border-t border-cream-deep bg-cream px-4 py-3 space-y-1">
+          ${mobileLinks}
+        </div>
+      </header>`;
+    mount.insertAdjacentHTML("afterend", pledgeStickyMobile);
+    const stickyAction = document.getElementById("pledgeStickyMobile");
+    if (stickyAction) {
+      const topSection = document.getElementById("home-hero") || document.querySelector("#main-content > section");
+      if (!topSection || !("IntersectionObserver" in window)) {
+        stickyAction.classList.remove("hidden");
+      } else {
+        new IntersectionObserver(([entry]) => {
+          stickyAction.classList.toggle("hidden", entry.isIntersecting);
+        }).observe(topSection);
+      }
+    }
+
+    const btn = document.getElementById("menuBtn");
+    const menu = document.getElementById("mobileMenu");
+    if (btn && menu) {
+      btn.addEventListener("click", () => {
+        const open = menu.classList.toggle("hidden");
+        btn.setAttribute("aria-expanded", String(!open));
+      });
+    }
+  }
+
+  /* Canonical AiGovOps estate link set — identical labels + order on every
+     property, themed to each site's palette. Group A stays inside the estate
+     (same-tab); Group B leaves it (new tab). The NCW entry is the current
+     site, so it carries aria-current="page". */
+  const ESTATE = [
+    { href: "https://www.aigovops-foundation.com", label: "Foundation" },
+    { href: "https://community.aigovops-foundation.com", label: "Community platform" },
+    { href: "https://community.aigovops-foundation.com/library/", label: "Library" },
+    { href: "https://aigovops-foundation.github.io/aigovops-beacon/", label: "Beacon" },
+    { href: "https://aigovops-foundation.github.io/umbrella-govops/", label: "Umbrella" },
+    { href: "https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/", label: "NCW AI Camp", current: true },
+  ];
+  const CONNECT = [
+    { href: "https://aigovops.substack.com/", label: "Newsletter" },
+    { href: "https://github.com/aigovops-foundation", label: "GitHub" },
+    { href: "https://www.linkedin.com/company/aigovops-foundation", label: "LinkedIn" },
+  ];
+
+  function renderFooter() {
+    const mount = document.getElementById("site-footer");
+    if (!mount) return;
+    const estateLinks = ESTATE.map(
+      (l) => `<li><a href="${l.href}"${l.current ? ' aria-current="page"' : ""}
+        class="inline-block py-1 text-cream/75 hover:text-signal transition-colors${
+          l.current ? " font-700 text-cream" : ""
+        }">${l.label}</a></li>`
+    ).join("");
+    const connectLinks = CONNECT.map(
+      (l) => `<li><a href="${l.href}" target="_blank" rel="noopener"
+        class="inline-block py-1 text-cream/75 hover:text-signal transition-colors">${l.label}</a></li>`
+    ).join("");
+    mount.innerHTML = `
+      <footer class="bg-charcoal text-cream mt-0">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 py-16">
+          <div class="grid md:grid-cols-4 gap-10">
+            <div class="md:col-span-1">
+              <div class="flex items-center gap-2.5 mb-3">${LOGO}
+                <span class="font-serif font-700 text-lg leading-tight">AiGovOps<br>Foundation</span></div>
+              <p class="text-cream/60 text-sm leading-relaxed">A 501(c)(3) nonprofit. Apache-2.0. Empowering rural and small communities through better AI access and impact.</p>
+              <p class="mt-4 font-serif font-600 text-signal text-[15px]">× NCW Tech Alliance</p>
+            </div>
+            <div>
+              <p class="font-700 text-xs uppercase tracking-[0.16em] text-cream/45 mb-4">Explore the day</p>
+              <ul class="space-y-2.5 text-sm">
+                <li><a href="${href('plan.html')}" class="text-cream/75 hover:text-signal transition-colors">The Plan & breakouts</a></li>
+                <li><a href="${href('centerpiece.html')}" class="text-cream/75 hover:text-signal transition-colors">The Centerpiece plenary</a></li>
+                <li><a href="${href('mini-camps.html')}" class="text-cream/75 hover:text-signal transition-colors">The mini-camps</a></li>
+                <li><a href="${href('workshop.html')}" class="text-cream/75 hover:text-signal transition-colors">The Rules, Hands-On workshop</a></li>
+                <li><a href="${href('checklist.html')}" class="text-cream/75 hover:text-signal transition-colors">The First-30-Days Checklist</a></li>
+                <li><a href="${href('resources.html')}" class="text-cream/75 hover:text-signal transition-colors">Resources & downloads</a></li>
+                <li><a href="${href('community-resources.html')}" class="text-cream/75 hover:text-signal transition-colors">Resources for your community</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="font-700 text-xs uppercase tracking-[0.16em] text-cream/45 mb-4">Take action</p>
+              <ul class="space-y-2.5 text-sm">
+                <li><a href="${href('pledge.html')}" class="text-cream/75 hover:text-signal transition-colors">Sign the Pledge</a></li>
+                <li><a href="${href('supporters.html')}" class="text-cream/75 hover:text-signal transition-colors">Our supporters</a></li>
+                <li><a href="https://www.aigovops-foundation.com" class="text-cream/75 hover:text-signal transition-colors">aigovops-foundation.com</a></li>
+                <li><a href="https://www.ncwtech.org" class="text-cream/75 hover:text-signal transition-colors">ncwtech.org</a></li>
+                <li><a href="https://github.com/focuslead/ai-council-framework" class="text-cream/75 hover:text-signal transition-colors">AI Council Framework</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="font-700 text-xs uppercase tracking-[0.16em] text-cream/45 mb-4">The three habits</p>
+              <ul class="space-y-3 text-sm text-cream/75">
+                <li class="flex gap-2.5"><span aria-hidden="true">🤝</span><span>The two-eyes rule</span></li>
+                <li class="flex gap-2.5"><span aria-hidden="true">🔍</span><span>Triangulate hard questions</span></li>
+                <li class="flex gap-2.5"><span aria-hidden="true">📂</span><span>Keep the receipts</span></li>
+              </ul>
+            </div>
+          </div>
+          <p class="mt-14 pt-10 border-t border-cream/15 font-serif italic text-cream/85 text-[15.5px] max-w-2xl">Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes. Prove it in ten minutes.</p>
+          <div class="mt-8 grid sm:grid-cols-2 gap-x-10 gap-y-8">
+            <nav aria-label="Explore the estate">
+              <span class="aig-ef-h block font-700 text-xs uppercase tracking-[0.16em] text-cream/45 mb-4">Explore the estate</span>
+              <ul class="grid grid-cols-2 gap-x-6 text-sm">${estateLinks}</ul>
+            </nav>
+            <nav aria-label="Connect">
+              <span class="aig-ef-h block font-700 text-xs uppercase tracking-[0.16em] text-cream/45 mb-4">Connect</span>
+              <ul class="grid grid-cols-2 gap-x-6 text-sm">${connectLinks}</ul>
+            </nav>
+          </div>
+          <div class="mt-14 pt-8 border-t border-cream/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-cream/50">
+            <p class="font-serif italic">The story we tell about AI in NCW will be the story we wrote — together.</p>
+            <p class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+              <a href="${href('whats-new.html')}" class="hover:text-signal transition-colors">What's new</a><span aria-hidden="true">·</span>
+              <a href="${href('privacy.html')}" class="hover:text-signal transition-colors">Privacy</a><span aria-hidden="true">·</span>
+              <a href="${href('terms.html')}" class="hover:text-signal transition-colors">Terms</a><span aria-hidden="true">·</span>
+              <span>NCW AI Expo 2026 · v1.0</span>
+            </p>
+          </div>
+        </div>
+      </footer>`;
+  }
+
+  /* Scroll fade-ins. Content is visible at rest — `.shown` plays a
+     one-shot fade-up keyframe (see custom.css) when an element enters
+     the viewport. Nothing is ever persistently hidden, so no-JS
+     visitors, crawlers, and headless full-page captures (which never
+     scroll) always see the full page. `.js-fade` scopes the animation
+     to JS-running sessions. */
+  function initFade() {
+    document.documentElement.classList.add("js-fade");
+    const els = document.querySelectorAll(".fade-in");
+    if (!("IntersectionObserver" in window)) {
+      els.forEach((el) => el.classList.add("shown"));
+      return;
+    }
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) {
+            en.target.classList.add("shown");
+            obs.unobserve(en.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+    );
+    els.forEach((el) => obs.observe(el));
+    /* No timed safety net needed: un-`.shown` elements are fully
+       visible at rest, so an element the observer never reaches is
+       simply shown without its entrance animation. */
+  }
+
+  /* Count-up on stats with data-count */
+  function initCountUp() {
+    const els = document.querySelectorAll("[data-count]");
+    if (!els.length) return;
+    const animate = (el) => {
+      const target = parseInt(el.getAttribute("data-count"), 10) || 0;
+      const dur = 1400;
+      const start = performance.now();
+      const step = (now) => {
+        const p = Math.min(1, (now - start) / dur);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(eased * target).toLocaleString();
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    if (!("IntersectionObserver" in window)) {
+      els.forEach(animate);
+      return;
+    }
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) {
+            animate(en.target);
+            obs.unobserve(en.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    els.forEach((el) => obs.observe(el));
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    renderHeader();
+    renderFooter();
+    initFade();
+    initCountUp();
+    // expose year
+    document.querySelectorAll("[data-year]").forEach((e) => (e.textContent = new Date().getFullYear()));
+  });
+})();
+
+/* Jeeves corner assistant — REMOVED 2026-08-09, ahead of the NCW AI Expo.
+   It used to auto-mount here on every page. The estate hid it everywhere a visitor lands:
+   the community platform gated its injector to admin.html (Omni-Rapp #336) and the Foundation
+   site did the same (#99). A camp attendee meeting a floating agent on one property and not
+   the next is the inconsistency a room of first-time visitors would actually notice.
+   jeeves-widget.js still ships from the Foundation origin for the steward surfaces — nothing
+   about it was deleted, this site simply no longer loads it.
+   To restore: re-add the loader below and the <script> tag in docs/index.html. */
