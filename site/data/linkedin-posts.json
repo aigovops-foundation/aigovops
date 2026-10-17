@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16T19:08:07Z",
+  "updated": "2026-10-17T07:06:10Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,22 @@
     }
   },
   "bob": [
+    {
+      "title": "Shutdown ≠ decommissioning proof. PROBLEM “Off” can leave zombie endpoints, service identities, user paths, webhooks, or downstrea...",
+      "link": "https://www.linkedin.com/posts/bobrapp_shutdown-decommissioning-proof-problem-activity-7516982171694186496-xUS_",
+      "date": "Fri, 16 Oct 2026 22:03:29 GMT",
+      "summary": "Shutdown ≠ decommissioning proof. PROBLEM “Off” can leave zombie endpoints, service identities, user paths, webhooks, or downstream consumers. This is residual-access verification: not model retirement. SOLUTION Build closure evidence: • Disable endpoints; revoke identities, toke",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Suspicious AI-agent activity is not the incident. The governance test is what happens next. PROBLEM Detection without response rea...",
+      "link": "https://www.linkedin.com/posts/bobrapp_suspicious-ai-agent-activity-is-not-the-incident-activity-7516981669371904000-lgKt",
+      "date": "Fri, 16 Oct 2026 22:01:29 GMT",
+      "summary": "Suspicious AI-agent activity is not the incident. The governance test is what happens next. PROBLEM Detection without response readiness creates false confidence. An alert needs severity, a named decision owner, and a measurable clock. 问题 发现可疑活动不等于做好应对准备。每个警报都需要明确严重级别、指定决策负责人和可衡量",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Benchmark results can be precise—and still too uncertain to support a launch claim. PROBLEM A score is not evidence strength. Chec...",
       "link": "https://www.linkedin.com/posts/bobrapp_benchmark-results-can-be-preciseand-still-activity-7516846225166594048-dbhD",
@@ -68,22 +84,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_can-this-model-card-guide-the-next-safe-actionor-activity-7516257214798622721-L9PF",
       "date": "Wed, 14 Oct 2026 22:02:45 GMT",
       "summary": "Can this model card guide the next safe action—or only prove that a document exists? Problem / 問題 Usability is task-based. For this version, an operator must find allowed use, required checks, stop/escalate triggers, and known non-use conditions. If not, block deployment. 使いやすさは実",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Can your AI kill-switch stop the whole system—or only the screen? PROBLEM / समस्या A UI stop may leave APIs, queues, replicas, or do...",
-      "link": "https://www.linkedin.com/posts/bobrapp_can-your-ai-kill-switch-stop-the-whole-systemor-activity-7516256790561488896-ZkwA",
-      "date": "Wed, 14 Oct 2026 22:01:04 GMT",
-      "summary": "Can your AI kill-switch stop the whole system—or only the screen? PROBLEM / समस्या A UI stop may leave APIs, queues, replicas, or downstream actions running. UI stop से API, queue, replica और downstream काम जारी रह सकता है। SOLUTION / समाधान Use an independent test principal. Ver",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI can flag suspicious sign-ins. It cannot decide—by confidence score alone—who loses access. Problem Device-code and OAuth phishi...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-can-flag-suspicious-sign-ins-it-cannot-activity-7516121616154750976-AXV9",
-      "date": "Wed, 14 Oct 2026 13:03:56 GMT",
-      "summary": "AI can flag suspicious sign-ins. It cannot decide—by confidence score alone—who loses access. Problem Device-code and OAuth phishing can yield valid tokens. Automation may lock out legitimate users or leave attackers active. Solutions Score signals, then route medium/high confide",
       "image": null,
       "author": "Bob Rapp"
     }
