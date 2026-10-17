@@ -51,7 +51,7 @@ async function checkHomepageChipLabels(page, language) {
 }
 
 function isUnexpectedConsoleError(locationUrl, text, baseUrl = BASE.href) {
-  const cspResourceUrl = /refused to load/i.test(text)
+  const cspResourceUrl = /refused to load|violates the following content security policy/i.test(text)
     ? text.match(/https?:\/\/[^\s"'<>]+/i)?.[0]
     : null;
   const resourceUrl = cspResourceUrl || locationUrl;
@@ -71,6 +71,12 @@ function runSelfTest() {
       name: 'ignores Cloudflare Insights CSP errors',
       locationUrl: 'https://www.aigovops-foundation.com/for-founders.html',
       text: "Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/abc' because it violates the Content Security Policy.",
+      expected: false,
+    },
+    {
+      name: 'ignores the newer Chromium wording for Cloudflare Insights CSP errors',
+      locationUrl: 'https://www.aigovops-foundation.com/for-founders.html',
+      text: "Loading the script 'https://static.cloudflareinsights.com/beacon.min.js/abc' violates the following Content Security Policy directive: \"script-src 'self'\". The action has been blocked.",
       expected: false,
     },
     {

@@ -88,7 +88,7 @@ echo "$HOME" | grep -q "footer-marks"      && check "Footer marks line present" 
 NAV=$(printf '%s\n' "$HOME" | sed -n '/<nav class="main-nav"/,/<\/nav>/p')
 printf '%s\n' "$NAV" | grep -qF 'href="library.html" data-i18n="nav.library"' \
                                             && check "Library in the homepage nav"     "ok" || check "Library in the homepage nav"      "not found"
-printf '%s\n' "$NAV" | grep -qF 'href="https://practice.aigovops-foundation.com/docs/THURSDAY.html" target="_blank" rel="noopener" data-i18n="nav.meetings"' \
+printf '%s\n' "$NAV" | grep -qF 'href="https://luma.com/aigovops" target="_blank" rel="noopener" data-i18n="nav.meetings"' \
                                             && check "Meetings in the homepage nav"    "ok" || check "Meetings in the homepage nav"     "not found"
 printf '%s\n' "$NAV" | grep -qF 'href="https://aigovops.substack.com" target="_blank" rel="noopener" data-i18n="nav.newsletter"' \
                                             && check "Newsletter in the homepage nav"  "ok" || check "Newsletter in the homepage nav"   "not found"
