@@ -71,8 +71,8 @@ Add these repository secrets to `aigovops` before cutover:
    )
    git merge --no-edit "$refresh_branch"
    ```
-   Re-run the full-history Gitleaks scan and token count, and get both to 0,
-   before you merge.
+   Do not add Gitleaks ignore entries. Re-run the full-history Gitleaks scan and
+   token count, and require both to be 0 before merging the Phase 1 PR.
 3. Disable the workflows in the site, Practice and NCW repos so they stop committing
    to the old copies.
 4. Remove the custom domain from the Foundation site repository's Pages settings.
