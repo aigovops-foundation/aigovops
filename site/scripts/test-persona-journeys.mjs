@@ -177,14 +177,14 @@ async function getStepLinkStatus(url, browser, api) {
 
 async function run() {
   const { chromium, request } = await import('playwright');
-  const indexHtml = await fs.readFile(path.join(ROOT, 'index.html'), 'utf8');
-  const staticChipLabels = [...indexHtml.matchAll(/<a class="persona-chip"[^>]*>([^<]*)<\/a>/g)]
+  const academyHtml = await fs.readFile(path.join(ROOT, 'academy.html'), 'utf8');
+  const staticChipLabels = [...academyHtml.matchAll(/<a class="persona-chip"[^>]*>([^<]*)<\/a>/g)]
     .map(([, label]) => label.trim());
   const expectedEnglishChipLabels = PERSONAS.map((persona) => persona.englishChipLabel);
   record(
     staticChipLabels.length === expectedEnglishChipLabels.length
       && staticChipLabels.every((label, index) => label === expectedEnglishChipLabels[index]),
-    'homepage static chip text matches the expected English labels',
+    'academy static chip text matches the expected English labels',
   );
   await fs.mkdir(RESULTS_DIR, { recursive: true });
   const browser = await chromium.launch({ headless: true });
@@ -209,16 +209,17 @@ async function run() {
         null,
         { timeout: 10_000 },
       );
-      await checkHomepageChipLabels(spanishPage, 'es');
       await spanishPage.evaluate(() => document.fonts.ready);
-      const spanishLastCardBottom = await spanishPage.locator('.six-card').last().evaluate(
-        (card) => card.getBoundingClientRect().bottom,
+      const spanishLastCardBottom = await spanishPage.locator('.academy-bar').evaluate(
+        (bar) => bar.getBoundingClientRect().bottom,
       );
       scorecard.spanishHomeLastCardBottom = Math.round(spanishLastCardBottom * 100) / 100;
       record(
         spanishLastCardBottom <= 800,
-        `Spanish homepage: last six-card fits at 1280×800 (${Math.round(spanishLastCardBottom)}px)`,
+        `Spanish homepage: the four tasks and the Academy bar fit at 1280×800 (${Math.round(spanishLastCardBottom)}px)`,
       );
+      await spanishPage.goto(new URL('academy.html', BASE).href, { waitUntil: 'domcontentloaded', timeout: 10_000 });
+      await checkHomepageChipLabels(spanishPage, 'es');
       for (const persona of PERSONAS) {
         await spanishPage.goto(new URL(persona.page, BASE).href, {
           waitUntil: 'domcontentloaded',
@@ -305,7 +306,6 @@ async function run() {
         journey.timings.homeDOMContentLoadedMs = Math.round(performance.now() - homeStart);
         record(homeResponse !== null && homeResponse.status() < 400, `${persona.id}: homepage response is below 400`);
         record(journey.timings.homeDOMContentLoadedMs < 3_000, `${persona.id}: homepage DOMContentLoaded under 3 seconds`);
-        if (persona.id === PERSONAS[0].id) await checkHomepageChipLabels(page, 'en');
 
         if (!indexScreenshotSaved) {
           const indexPath = path.join(RESULTS_DIR, 'index-390.png');
@@ -318,21 +318,28 @@ async function run() {
         journey.homeWidths = await readWidths(page);
         for (const width of [1280, 390]) {
           await page.setViewportSize({ width, height: 800 });
-          const firstCard = await page.locator('.six-card').first().evaluate((card) => {
+          const firstCard = await page.locator('.task-card').first().evaluate((card) => {
             const rect = card.getBoundingClientRect();
             return { top: rect.top, bottom: rect.bottom };
           });
-          record(firstCard.top < 800, `${persona.id}: first six-card starts above the fold at ${width}×800 (${Math.round(firstCard.top)}px)`);
+          record(firstCard.top < 800, `${persona.id}: first task card starts above the fold at ${width}×800 (${Math.round(firstCard.top)}px)`);
           if (width === 390) {
-            record(firstCard.bottom <= 800, `${persona.id}: first six-card fits at 390×800 (${Math.round(firstCard.bottom)}px)`);
+            record(firstCard.bottom <= 800, `${persona.id}: first task card fits at 390×800 (${Math.round(firstCard.bottom)}px)`);
           }
           if (width === 1280) {
-            const lastCardBottom = await page.locator('.six-card').last().evaluate((card) => card.getBoundingClientRect().bottom);
-            record(lastCardBottom <= 800, `${persona.id}: last six-card fits at 1280×800 (${Math.round(lastCardBottom)}px)`);
+            const barBottom = await page.locator('.academy-bar').evaluate((bar) => bar.getBoundingClientRect().bottom);
+            record(barBottom <= 800, `${persona.id}: the four tasks and the Academy bar fit at 1280×800 (${Math.round(barBottom)}px)`);
           }
         }
+        const academyLink = page.locator('a.academy-bar');
+        record(await academyLink.count() === 1, `${persona.id}: homepage Academy link exists exactly once`);
+        await Promise.all([
+          page.waitForURL((url) => url.pathname === new URL('academy.html', BASE).pathname, { waitUntil: 'domcontentloaded', timeout: 10_000 }),
+          academyLink.click(),
+        ]);
+        if (persona.id === PERSONAS[0].id) await checkHomepageChipLabels(page, 'en');
         const chip = page.locator(`.persona-chips a[href="${persona.page}"]`);
-        record(await chip.count() === 1, `${persona.id}: homepage chip exists exactly once`);
+        record(await chip.count() === 1, `${persona.id}: academy chip exists exactly once`);
         const landingStart = performance.now();
         await Promise.all([
           page.waitForURL((url) => url.pathname === new URL(persona.page, BASE).pathname, {

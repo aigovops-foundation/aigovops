@@ -4,20 +4,20 @@
   <meta charset="UTF-8" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://plausible.io https://www.aigovops-foundation.com https://community.aigovops-foundation.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://aigovops-foundation.github.io https://buy.stripe.com; connect-src 'self' https://plausible.io https://community.aigovops-foundation.com https://raw.githubusercontent.com; object-src 'none'; base-uri 'self'">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AiGovOps Foundation — Ship Safe AI. Never Unsafe AI.</title>
+  <title>AiGovOps Foundation — Grow AI governance together</title>
 <link rel="canonical" href="https://www.aigovops-foundation.com/" />
-  <meta name="description" content="Ship safe AI — never unsafe AI. Sit down at the AiGovOps Foundation café: say what brought you in, run the ten-minute Gate Check, and leave in an hour with a rule, a signed receipt and a Thursday." />
+  <meta name="description" content="A nonprofit community building open-source AI governance. Join the monthly meeting at AI House, subscribe on Substack, become a member, or write with us. Everything else is in the AiGovOps Foundation Academy." />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-  <meta property="og:title" content="AiGovOps Foundation — Ship Safe AI. Never Unsafe AI." />
-  <meta property="og:description" content="Get to yes, stay at yes, recover to yes — governance as code, verifiable evidence, and a community that builds it in the open." />
+  <meta property="og:title" content="AiGovOps Foundation — Grow AI governance together" />
+  <meta property="og:description" content="A nonprofit community building open-source AI governance. Join the monthly meeting at AI House, subscribe on Substack, become a member, or write with us. Everything else is in the AiGovOps Foundation Academy." />
   <meta property="og:image" content="https://www.aigovops-foundation.com/images/wren/cafe-og.jpg" />
   <meta property="og:url" content="https://www.aigovops-foundation.com/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="AiGovOps Foundation" />
-  <meta name="twitter:description" content="AI governance that runs like engineering." />
+  <meta name="twitter:title" content="AiGovOps Foundation — Grow AI governance together" />
+  <meta name="twitter:description" content="A nonprofit community building open-source AI governance. Join the monthly meeting at AI House, subscribe on Substack, become a member, or write with us. Everything else is in the AiGovOps Foundation Academy." />
   <meta name="twitter:image" content="https://www.aigovops-foundation.com/images/wren/cafe-og.jpg" />
   <link rel="stylesheet" href="css/style.css?v=20261011b" />
   <!-- M6 porch redesign — garden-warm skin (homepage only). Pure presentation; loads after style.css. -->
@@ -28,6 +28,32 @@
   <link rel="stylesheet" href="css/porch.css?v=20261011b" />
   <link rel="stylesheet" href="css/wren-cafe.css?v=20261011b" />
   <style>
+    /* ── simple front door (Oct 2026): four tasks, then the Academy ── */
+    .home-hero { padding: 16px 0 28px; text-align: left; }
+    .home-hero h1 { font-size: clamp(1.8rem, 3vw, 2.3rem); margin: 2px 0 4px; line-height: 1.1; }
+    .home-hero .home-lede { margin: 0 0 12px; max-width: 60ch; font-size: 1rem; }
+    .task-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .task-card { background: #fff; border: 1px solid rgba(43,43,40,.12); border-radius: 16px; padding: 12px 16px 12px; display: flex; flex-direction: column; gap: 5px; box-shadow: var(--garden-shadow-sm, 0 1px 2px rgba(0,0,0,.05)); }
+    .task-card h2 { font-family: var(--garden-serif, Fraunces, Georgia, serif); font-size: 1.2rem; margin: 0; color: var(--garden-charcoal, #2b2b28); }
+    .task-card p { margin: 0; color: var(--garden-ink-soft, #55524a); font-size: .92rem; line-height: 1.4; }
+    .task-card .task-when { color: var(--garden-green-ink, #1F5E3A); font-weight: 600; }
+    .task-card .task-btn { align-self: flex-start; margin-top: auto; padding: 8px 16px; }
+    .task-card .btn-primary { background: var(--garden-green, #2E7D4F); color: #fff; }
+    .task-card .btn-primary:hover { background: var(--garden-green-deep, #1F5E3A); }
+    .task-card .btn-outline { border-color: var(--garden-green, #2E7D4F); color: var(--garden-green-ink, #1F5E3A); }
+    .task-form { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+    .task-form input { flex: 1 1 180px; min-width: 0; padding: 8px 12px; border: 1.5px solid rgba(43,43,40,.2); border-radius: 8px; font-size: .95rem; background: #fff; }
+    .task-form .task-btn { margin-top: 0; }
+    .task-msg { min-height: 0; font-size: .8rem; }
+    .task-msg:empty { display: none; }
+    .tiers { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tier { font: 600 .78rem/1.2 var(--garden-sans, 'Source Sans 3', sans-serif); border: 1px solid rgba(43,43,40,.18); border-radius: 999px; padding: 4px 10px; color: var(--garden-charcoal, #2b2b28); background: var(--garden-cream, #FAF7F0); }
+    .academy-bar { display: block; margin-top: 12px; background: var(--garden-charcoal, #2b2b28); color: #fff; border-radius: 16px; padding: 12px 18px; text-decoration: none; }
+    .academy-bar:hover { background: #1d1d1b; }
+    .academy-bar b { color: var(--garden-gold, #E8B54A); }
+    .academy-bar .academy-bar-title { font-family: var(--garden-serif, Fraunces, Georgia, serif); font-size: 1.15rem; display: block; }
+    .academy-bar small { display: block; margin-top: 2px; color: rgba(255,255,255,.78); font-size: .85rem; line-height: 1.35; }
+    @media (max-width: 700px) { .task-grid { grid-template-columns: 1fr; } .home-hero { padding-top: 16px; } .home-hero h1 { font-size: 1.8rem; } }
     /* ── M14 dead-simple porch: two doors, one quiet line ── */
     /* two doors instead of four — centered pair */
     .hero .action-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 680px; margin-left: auto; margin-right: auto; }
@@ -206,7 +232,7 @@
     </a>
     <nav class="main-nav">
       <a href="library.html" data-i18n="nav.library">Library</a>
-      <a href="https://practice.aigovops-foundation.com/docs/THURSDAY.html" target="_blank" rel="noopener" data-i18n="nav.meetings">Meetings</a>
+      <a href="https://luma.com/aigovops" target="_blank" rel="noopener" data-i18n="nav.meetings">Meetings</a>
       <a href="https://aigovops.substack.com" target="_blank" rel="noopener" data-i18n="nav.newsletter">Newsletter</a>
       <a href="support.html" data-i18n="nav.give">Give</a>
       <a href="https://community.aigovops-foundation.com/signin.html" class="nav-join" data-i18n="nav.join">Become a member</a>
@@ -219,153 +245,48 @@
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero" id="main-content">
-  <div class="container hero-content">
-    <p class="hero-eyebrow" data-i18n="hero.eyebrow">AiGovOps Foundation &nbsp;·&nbsp; Policy as Code</p>
-    <h1 data-i18n-html="hero.h1">Ship Safe AI.<br>Never Unsafe AI.</h1>
-    <p class="hero-movements" data-i18n-html="hero.movements"><span class="mv"><b>Get to Yes</b> — before you ship</span> <span class="mv-sep" aria-hidden="true">·</span> <span class="mv"><b>Stay at Yes</b> — while it runs</span> <span class="mv-sep" aria-hidden="true">·</span> <span class="mv"><b>Recover to Yes</b> — when it breaks</span></p>
-    <p class="hero-sub" data-i18n="hero.sub">Governance as code that makes AI safe to say yes to — built in the open, proven in ten minutes.</p>
-
-  </div>
-</section>
-
-<!-- SIX ACTIONS (M15, plan/simple-front-door.md in the Library) — insert directly after the HERO section -->
-<section class="section-light six-section" id="start" aria-labelledby="six-title">
+<!-- HOME — the simple front door (Oct 2026): four tasks, then one link to the Academy -->
+<section class="hero home-hero" id="main-content">
   <div class="container">
-    <h2 class="six-title" id="six-title" data-i18n="six.title">What would you like to do?</h2>
-    <ul class="six-grid">
-      <li><a class="six-card" href="https://community.aigovops-foundation.com/signin.html" onclick="if(window.plausible)plausible('Six: member')"><span class="six-eyebrow" data-i18n="six.member.e">Free · 30 seconds</span><b data-i18n="six.member.t">Become a member</b><span class="six-d" data-i18n="six.member.d">One email, no password. The Library, Thursdays and the community.</span><span class="six-go" aria-hidden="true">→</span></a></li>
-      <li><a class="six-card" href="support.html" onclick="if(window.plausible)plausible('Six: give')"><span class="six-eyebrow" data-i18n="six.give.e">From $25 · tax-deductible</span><b data-i18n="six.give.t">Give some money</b><span class="six-d" data-i18n="six.give.d">Keep the gates free for everyone. One-time or monthly.</span><span class="six-go" aria-hidden="true">→</span></a></li>
-      <li><a class="six-card" href="https://practice.aigovops-foundation.com/docs/THURSDAY.html" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Six: meet')"><span class="six-eyebrow" data-i18n="six.meet.e">Thursdays · 15:00 Pacific</span><b data-i18n="six.meet.t">Join a meeting</b><span class="six-d" data-i18n="six.meet.d">One hour. Bring a case, leave with a mark.</span><span class="six-go" aria-hidden="true">→</span></a></li>
-      <li><a class="six-card" href="https://aigovops.substack.com/subscribe" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Six: newsletter')"><span class="six-eyebrow" data-i18n="six.news.e">Weekly · free</span><b data-i18n="six.news.t">Read the newsletter</b><span class="six-d" data-i18n="six.news.d">What changed in AI governance, and one thing to do about it.</span><span class="six-go" aria-hidden="true">→</span></a></li>
-      <li><a class="six-card" href="https://community.aigovops-foundation.com/gate-check.html?src=home-six" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Six: audit plan')"><span class="six-eyebrow" data-i18n="six.audit.e">Ten minutes · no account</span><b data-i18n="six.audit.t">Get an audit plan</b><span class="six-d" data-i18n="six.audit.d">Answer ten questions about one AI system; get a plan mapped to the four gates.</span><span class="six-go" aria-hidden="true">→</span></a></li>
-      <li><a class="six-card" href="founders.html" onclick="if(window.plausible)plausible('Six: book founders')"><span class="six-eyebrow" data-i18n="six.book.e">20 minutes</span><b data-i18n="six.book.t">Book time with the founders</b><span class="six-d" data-i18n="six.book.d">Ken or Bob. Pick a time that suits you.</span><span class="six-go" aria-hidden="true">→</span></a></li>
+    <p class="hero-eyebrow" data-i18n="home.eyebrow">AiGovOps Foundation · Open-source AI governance</p>
+    <h1 data-i18n="home.h1">Grow AI governance together.</h1>
+    <p class="hero-sub home-lede" data-i18n="home.lede">A nonprofit community building open-source AI governance. Pick what you came to do.</p>
+    <ul class="task-grid" aria-label="Top tasks">
+      <li class="task-card" id="meeting">
+        <h2 data-i18n="home.meet.t">Join the next meeting</h2>
+        <p class="task-when" id="nextMeeting" data-i18n="home.meet.none">See the next date on Luma</p>
+        <p data-i18n="home.meet.d">The monthly community meeting at AI House, Seattle, and online.</p>
+        <a class="btn btn-primary task-btn" id="nextMeetingLink" href="https://luma.com/aigovops" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Home: meeting')" data-i18n="home.meet.cta">Register on Luma</a>
+      </li>
+      <li class="task-card" id="subscribe">
+        <h2 data-i18n="home.news.t">Subscribe on Substack</h2>
+        <p data-i18n="home.news.d">Monthly field notes from Bob, Ken and volunteers.</p>
+        <form id="newsletterForm" class="task-form" onsubmit="handleNewsletterSubmit(event)">
+          <label for="newsletterEmail" class="sr-only" data-i18n="home.news.label">Email address</label>
+          <input type="email" id="newsletterEmail" placeholder="you@example.com" required autocomplete="email" />
+          <button type="submit" class="btn btn-primary task-btn" data-i18n="home.news.cta">Subscribe</button>
+        </form>
+        <p id="newsletterMsg" class="task-msg" aria-live="polite"></p>
+        <p class="fine-print task-msg" data-i18n="newsletter.fine">No spam. Delivered by Substack — unsubscribe any time.</p>
+      </li>
+      <li class="task-card" id="member">
+        <h2 data-i18n="home.member.t">Become a member</h2>
+        <p data-i18n="home.member.d">Meeting recordings, early Substack drafts, the case-study library and a member badge.</p>
+        <p class="tiers"><span class="tier" data-i18n="home.member.t1">$12 / yr · Anyone</span><span class="tier" data-i18n="home.member.t2">$120 / yr · Founder or creator</span><span class="tier" data-i18n="home.member.t3">$1,200 / yr · Company</span></p>
+        <a class="btn btn-primary task-btn" href="members.html" onclick="if(window.plausible)plausible('Home: member')" data-i18n="home.member.cta">Choose a membership</a>
+      </li>
+      <li class="task-card" id="write">
+        <h2 data-i18n="home.write.t">Write with us</h2>
+        <p data-i18n="home.write.d">Pick a topic, send a draft, publish with Bob and Ken.</p>
+        <a class="btn btn-outline task-btn" href="write.html" onclick="if(window.plausible)plausible('Home: write')" data-i18n="home.write.cta">See open topics</a>
+      </li>
     </ul>
-    <nav class="persona-chips" aria-label="Start by role">
-      <span class="persona-chips-prompt" data-i18n="personas.prompt">I'm a…</span>
-      <a class="persona-chip" href="for-founders.html" data-i18n="personas.founder.label">Startup founder</a>
-      <a class="persona-chip" href="for-enterprise.html" data-i18n="personas.enterprise.label">Enterprise governance lead</a>
-      <a class="persona-chip" href="for-students.html" data-i18n="personas.student.label">Student</a>
-      <a class="persona-chip" href="for-researchers.html" data-i18n="personas.researcher.label">Researcher</a>
-      <a class="persona-chip" href="for-regulators.html" data-i18n="personas.regulator.label">Regulator / policy</a>
-      <a class="persona-chip" href="for-contributors.html" data-i18n="personas.contributor.label">Open-source contributor</a>
-    </nav>
-    <p class="six-find"><a href="https://community.aigovops-foundation.com/library/find.html" onclick="if(window.plausible)plausible('Six: find')" data-i18n="six.find">Or search everything we have published: cases, worksheets, tools →</a></p>
+    <a class="academy-bar" href="academy.html" onclick="if(window.plausible)plausible('Home: academy')">
+      <span class="academy-bar-title"><b data-i18n="home.academy.t">Everything else →</b> <span data-i18n="home.academy.n">The AiGovOps Foundation Academy</span></span>
+      <small data-i18n="home.academy.d">Research · Learn · Practice · Get audit-ready, plus open source, demos, the Library, the NCW camp, book time with Bob and plan an audit</small>
+    </a>
   </div>
 </section>
-<div class="porch-hero-band" aria-hidden="true">
-  <img src="images/wren/cafe.jpg" alt="" width="1600" height="900" loading="eager" />
-</div>
-
-<!-- THE CAFÉ — start with your problem (11 Sept 2026: the café is the home page) -->
-<section class="section-light cafe-section" id="problem" aria-labelledby="cafe-title">
-  <div class="container">
-    <div class="cafe-head">
-      <img src="images/wren/wren-112.jpg" alt="Wren, the practitioner at the table" width="56" height="56" class="cafe-wren" />
-      <div>
-        <h2 class="section-title" id="cafe-title" style="text-align:left;margin-bottom:4px" data-i18n="cafe.title">What brought you in?</h2>
-        <p class="cafe-lead" data-i18n="cafe.lead">Wren keeps the table by the door. Say what happened — or what you are afraid will happen — and leave in an hour with a rule in your own words, a signed receipt, and a Thursday. Every door below is a real case from the hundred verified AI harms.</p>
-      </div>
-    </div>
-    <div class="cafe-doors">
-      <a class="cafe-door" href="https://practice.aigovops-foundation.com/levels/100-begin/WORKSHEET.html" onclick="if(window.plausible)plausible('Cafe: 100')"><span class="cafe-lv" data-i18n="cafe.l100">Level 100 · Begin · 45 min</span><q data-i18n="cafe.q100">An AI told someone something it shouldn't have — and now we're on the hook.</q><small data-i18n="cafe.s100">Air Canada, 2022. A rule, one decision, a real signed receipt in your browser.</small></a>
-      <a class="cafe-door" href="https://practice.aigovops-foundation.com/levels/200-retrofit/WORKSHEET.html" onclick="if(window.plausible)plausible('Cafe: 200')"><span class="cafe-lv" data-i18n="cafe.l200">Level 200 · Retrofit · 60 min</span><q data-i18n="cafe.q200">I have a bot or an agent already, and I'm not sure it's safe to ship.</q><small data-i18n="cafe.s200">The $1 Chevy; Knight Capital. Your rule in CI, refusing the merge on weakening.</small></a>
-      <a class="cafe-door" href="https://practice.aigovops-foundation.com/levels/300-hold/WORKSHEET.html" onclick="if(window.plausible)plausible('Cafe: 300')"><span class="cafe-lv" data-i18n="cafe.l300">Level 300 · Hold · 60 min</span><q data-i18n="cafe.q300">It's already running, and nobody can say who's watching it or how to stop it.</q><small data-i18n="cafe.s300">Arup; Cigna PXDX; nH Predict. Holds for a named human, and the decay arithmetic.</small></a>
-      <a class="cafe-door" href="https://practice.aigovops-foundation.com/levels/400-prove/WORKSHEET.html" onclick="if(window.plausible)plausible('Cafe: 400')"><span class="cafe-lv" data-i18n="cafe.l400">Level 400 · Prove it · 60 min + a Thursday</span><q data-i18n="cafe.q400">Someone needs proof of what the AI actually did — a regulator, a court, a board.</q><small data-i18n="cafe.s400">Robodebt; Toeslagenaffaire; Horizon. Verify evidence you did not make, offline.</small></a>
-      <a class="cafe-door cafe-door-start" href="#ten" onclick="if(window.plausible)plausible('Cafe: not sure')"><span class="cafe-lv" data-i18n="cafe.lstart">Start here · 10 min</span><q data-i18n="cafe.qstart">I'm not sure what my problem is — I just know AI is in the building.</q><small data-i18n="cafe.sstart">Start with the ten minutes below. No account; you keep the card.</small></a>
-    </div>
-  </div>
-</section>
-
-<!-- TEN MINUTES — the one thing to do first -->
-<section class="section-mid ten-section" id="ten" aria-labelledby="ten-title">
-  <div class="container">
-    <h2 class="section-title" id="ten-title" data-i18n="ten.title">Ten minutes to get started</h2>
-    <ol class="ten-steps">
-      <li data-i18n-html="ten.s1"><b>Run the Gate Check.</b> Ten questions about one AI you know. No account, nothing installed.</li>
-      <li data-i18n-html="ten.s2"><b>Keep the Gate Card.</b> Your verdict and your gaps — never your answers. It is your first receipt.</li>
-      <li data-i18n-html="ten.s3"><b>Pick the door that stung.</b> One hour on a real case; a rule in your own words; a signed receipt; then Thursday at 15:00 Pacific, where a host marks it.</li>
-    </ol>
-    <p class="ten-cta"><a href="https://community.aigovops-foundation.com/gate-check.html?src=home-ten" target="_blank" rel="noopener" class="btn btn-primary" onclick="if(window.plausible)plausible('Home: Ten minutes')">Run the ten-minute Gate Check →</a> <span class="ten-note">Then everything else on this site is one click away: <a href="library.html">the Library</a> to read, <a href="open-source.html">the open source</a> to build, <a href="community.html">the community</a> to return to.</span></p>
-  </div>
-</section>
-
-<!-- CORE PILLARS -->
-<section class="section-light pillars-section">
-  <div class="container">
-    <h2 class="section-title" data-i18n="pillars.title">The four gates — one rule, four moments</h2>
-    <div class="pillars-grid">
-      <div class="pillar-card">
-        <span class="pillar-num">01</span>
-        <h3>The pre-pend gate</h3>
-        <p>Before a single action runs. May this exact action run, and only this far? The decision is bound to the action's hash and leaves a signed receipt.</p>
-      </div>
-      <div class="pillar-card">
-        <span class="pillar-num">02</span>
-        <h3>The policy gate</h3>
-        <p>Before a rule or a system ships. Is the rule valid, reviewed and crosswalked — and did changing it leave a receipt? Weakening a rule refuses the merge.</p>
-      </div>
-      <div class="pillar-card">
-        <span class="pillar-num">03</span>
-        <h3>The operate gate</h3>
-        <p>While it runs, in real time. Holds held for a named human, budgets kept, every agent bound to an identity, coverage measured — and never failing open above the reversible tier.</p>
-      </div>
-      <div class="pillar-card">
-        <span class="pillar-num">04</span>
-        <h3>The audit gate</h3>
-        <p>After — on demand, on incident. A stranger verifies what happened, offline, without an account and without trusting us; the evidence reaches the regulator complete.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOUNDERS -->
-<section class="section-mid founders-section">
-  <div class="container founders-inner">
-    <img src="images/founders.jpg" alt="Ken Johnston and Bob Rapp" class="founders-img" />
-    <div class="founders-text">
-      <h2 data-i18n="founders.title">About the Founders</h2>
-      <p><strong>Ken Johnston</strong> — AI and data leadership at Microsoft, Ford, and CEO of Autonomic.ai.</p>
-      <p><strong>Bob Rapp</strong> — AI/ML at Vodafone, IBM Watson, GE Healthcare, Microsoft, and General Motors.</p>
-      <p class="founders-mission">Together, advancing responsible AI governance for organizations navigating the evolving AI landscape.</p>
-      <div class="founders-links">
-        <a href="https://www.linkedin.com/in/rkjohnston/" target="_blank" rel="noopener" class="btn btn-outline">Ken on LinkedIn</a>
-        <a href="https://www.linkedin.com/in/bobrapp/" target="_blank" rel="noopener" class="btn btn-outline">Bob on LinkedIn</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LATEST FROM KEN & BOB -->
-<section class="section-light founders-posts-section">
-  <div class="container">
-    <h2 class="section-title" data-i18n="posts.title">Latest from Ken &amp; Bob</h2>
-    <p id="postsUpdated" style="font-size:.75rem;font-family:'Courier New',monospace;color:var(--muted);margin-bottom:24px;letter-spacing:.04em" aria-live="polite"></p>
-    <div class="founders-posts-grid" id="postsGrid">
-      <!-- Populated by main.js from data/linkedin-posts.json; falls back to LinkedIn links -->
-    </div>
-  </div>
-</section>
-
-
-<!-- NEWSLETTER CTA -->
-<section class="section-dark newsletter-section">
-  <div class="container narrow-center">
-    <h2 data-i18n="newsletter.title">The Tuesday Letter.</h2>
-    <p data-i18n="newsletter.sub">One story from the practice, the week’s marks by level, the countdown to 2 December 2027. No other sends, ever.</p>
-    <form id="newsletterForm" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:14px" onsubmit="handleNewsletterSubmit(event)">
-      <input type="email" id="newsletterEmail" placeholder="you@company.com" required
-        style="padding:12px 16px;border:1.5px solid rgba(255,255,255,.25);border-radius:8px;background:rgba(255,255,255,.1);color:#fff;font-size:.9rem;width:280px;outline:none"
-        aria-label="Email address for newsletter" />
-      <button type="submit" class="btn btn-primary btn-large" style="white-space:nowrap">Subscribe →</button>
-    </form>
-    <p id="newsletterMsg" style="font-size:.82rem;color:rgba(255,255,255,.5);min-height:18px" aria-live="polite"></p>
-    <a href="https://aigovops.substack.com/" target="_blank" rel="noopener" style="font-size:.8rem;color:rgba(255,255,255,.4);text-decoration:underline" data-i18n="newsletter.cta">Or read the archive on Substack →</a>
-    <p class="fine-print" data-i18n="newsletter.fine">No spam. Delivered by Substack — unsubscribe any time.</p>
-  </div>
-</section>
-
 
 <!-- FOOTER -->
 <footer class="site-footer">
@@ -456,6 +377,28 @@
 
 <script src="js/main.js?v=20261011b"></script>
 <script>
+// Old home-page anchors now live on the Academy page.
+(function () {
+  var h = window.location.hash.slice(1);
+  if (/^(start|problem|ten|six-title|cafe-title|ten-title)$/.test(h)) window.location.replace('academy.html#' + h);
+})();
+// Next meeting: data/next-meeting.json is written daily from the public Luma calendar.
+(function () {
+  var when = document.getElementById('nextMeeting'), link = document.getElementById('nextMeetingLink');
+  if (!when || !link || !window.fetch) return;
+  fetch('data/next-meeting.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+    if (!d || typeof d.start !== 'string') return;
+    var t = new Date(d.start);
+    if (isNaN(t.getTime())) return;
+    var es = document.documentElement.lang === 'es';
+    var s = new Intl.DateTimeFormat(es ? 'es' : 'en-US', { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZone: 'America/Los_Angeles', timeZoneName: 'short' }).format(t);
+    when.removeAttribute('data-i18n');
+    when.textContent = (es ? 'Próxima: ' : 'Next: ') + s + ' · AI House + online';
+    if (typeof d.url === 'string' && /^https:\/\/(luma\.com|lu\.ma)\//.test(d.url)) link.href = d.url;
+  }).catch(function () {});
+})();
+</script>
+<script>
 // Newsletter inline form handler
 function handleNewsletterSubmit(e) {
   e.preventDefault();
@@ -464,8 +407,7 @@ function handleNewsletterSubmit(e) {
   if (!email) return;
   const url = 'https://aigovops.substack.com/subscribe?utm_source=site-newsletter&utm_medium=form&email=' + encodeURIComponent(email);
   window.open(url, '_blank', 'noopener');
-  msg.textContent = 'Opening Substack — confirm your subscription there <span aria-hidden="true">✓</span>';
-  msg.style.color = 'rgba(255,255,255,.7)';
+  msg.textContent = 'Opening Substack — confirm your subscription there ✓';
   if (window.plausible) plausible('Newsletter signup', { props: { source: 'homepage-inline' } });
 }
 
