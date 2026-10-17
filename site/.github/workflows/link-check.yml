@@ -1,0 +1,25 @@
+name: link-check
+
+# Adopting the estate's shared link checker (one `uses:` line — rationale lives in the Library).
+#
+# This repo already has a Cloud-Mary E2E tier that checks a curated list of URLs. This lane is
+# complementary, not redundant: it CRAWLS every reachable page rather than asserting on a fixed
+# list, so a link that rots on a page nobody wrote a test for still gets caught.
+#
+# /cdn-cgi/ is skipped: Cloudflare rewrites mailto: links into an obfuscated path that only
+# resolves once the page's JS runs, so a crawler always reports it as a 404 — a false positive.
+
+on:
+  schedule:
+    - cron: "5 16 * * 1"   # Mondays — link rot is a weekly-cadence problem
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  link-check:
+    uses: aigovops-foundation/aigovops-library-june-ken-bob/.github/workflows/reusable-link-check.yml@0cbbbffaa1057c7310869032b30389840af5d9de # main @ 2026-09-30
+    with:
+      site_url: "https://www.aigovops-foundation.com"
+      skip_pattern: "/cdn-cgi/"

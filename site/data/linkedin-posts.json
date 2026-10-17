@@ -1,0 +1,92 @@
+{
+  "updated": "2026-10-17T07:06:10Z",
+  "feed_health": {
+    "bob": {
+      "ok": true,
+      "fetched": 10,
+      "published": 9,
+      "error": null
+    },
+    "ken": {
+      "ok": true,
+      "fetched": 10,
+      "published": 0,
+      "error": null
+    }
+  },
+  "bob": [
+    {
+      "title": "Shutdown ≠ decommissioning proof. PROBLEM “Off” can leave zombie endpoints, service identities, user paths, webhooks, or downstrea...",
+      "link": "https://www.linkedin.com/posts/bobrapp_shutdown-decommissioning-proof-problem-activity-7516982171694186496-xUS_",
+      "date": "Fri, 16 Oct 2026 22:03:29 GMT",
+      "summary": "Shutdown ≠ decommissioning proof. PROBLEM “Off” can leave zombie endpoints, service identities, user paths, webhooks, or downstream consumers. This is residual-access verification: not model retirement. SOLUTION Build closure evidence: • Disable endpoints; revoke identities, toke",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Suspicious AI-agent activity is not the incident. The governance test is what happens next. PROBLEM Detection without response rea...",
+      "link": "https://www.linkedin.com/posts/bobrapp_suspicious-ai-agent-activity-is-not-the-incident-activity-7516981669371904000-lgKt",
+      "date": "Fri, 16 Oct 2026 22:01:29 GMT",
+      "summary": "Suspicious AI-agent activity is not the incident. The governance test is what happens next. PROBLEM Detection without response readiness creates false confidence. An alert needs severity, a named decision owner, and a measurable clock. 问题 发现可疑活动不等于做好应对准备。每个警报都需要明确严重级别、指定决策负责人和可衡量",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Benchmark results can be precise—and still too uncertain to support a launch claim. PROBLEM A score is not evidence strength. Chec...",
+      "link": "https://www.linkedin.com/posts/bobrapp_benchmark-results-can-be-preciseand-still-activity-7516846225166594048-dbhD",
+      "date": "Fri, 16 Oct 2026 13:03:16 GMT",
+      "summary": "Benchmark results can be precise—and still too uncertain to support a launch claim. PROBLEM A score is not evidence strength. Check confidence-interval width, sample adequacy per critical slice, missing slices, and independent reproducibility. SOLUTION Set gates before testing: C",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Shared workspaces are AI control-plane infrastructure—not just team plumbing. PROBLEM / PROBLÈME Agents can edit shared boards, ar...",
+      "link": "https://www.linkedin.com/posts/bobrapp_shared-workspaces-are-ai-control-plane-infrastructurenot-activity-7516846155322994688-1Uzh",
+      "date": "Fri, 16 Oct 2026 13:03:00 GMT",
+      "summary": "Shared workspaces are AI control-plane infrastructure—not just team plumbing. PROBLEM / PROBLÈME Agents can edit shared boards, artifact stores, and channels. Spoofed authors, silent edits, or overwritten snapshots can corrupt decisions. This is workspace integrity—not prompt/pol",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "An evaluation environment can look isolated—and still touch the outside world. Problem Can the agent reach an unintended service,...",
+      "link": "https://www.linkedin.com/posts/bobrapp_an-evaluation-environment-can-look-isolatedand-activity-7516619499899633664-miPW",
+      "date": "Thu, 15 Oct 2026 22:02:21 GMT",
+      "summary": "An evaluation environment can look isolated—and still touch the outside world. Problem Can the agent reach an unintended service, alter a shared workspace, or reuse a credential? Solution Test the boundary—not just the sandbox. Ship Good AI □ Allowlist; deny by default. □ Seed UR",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI output does not stop at an API boundary. Problem: An external service may reuse it beyond your intent. API compatibility is not...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-output-does-not-stop-at-an-api-boundary-activity-7516619300720361472-oUBM",
+      "date": "Thu, 15 Oct 2026 22:01:33 GMT",
+      "summary": "AI output does not stop at an API boundary. Problem: An external service may reuse it beyond your intent. API compatibility is not governance—and this is not a decision-boundary map. Solution: Contract the boundary: permitted downstream use; warning propagation; responsibility ha",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "A vendor claim is not an internal compliance assertion. PROBLEM / 问题 “Fair,” “robust,” and “compliant” are claims—not evidence. Te...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-vendor-claim-is-not-an-internal-compliance-activity-7516483766836518912-XItX",
+      "date": "Thu, 15 Oct 2026 13:03:00 GMT",
+      "summary": "A vendor claim is not an internal compliance assertion. PROBLEM / 问题 “Fair,” “robust,” and “compliant” are claims—not evidence. Test first, or supplier marketing becomes internal risk. “公平、稳健、合规”是声明，不是证据。先验证，否则营销会变成内部风险。 SOLUTION / 解决方案 For each material claim: map artifacts such",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Credential exposure drills are not tabletop theatre. They rehearse discovery → containment before a real incident. PROBLEM AI-agen...",
+      "link": "https://www.linkedin.com/posts/bobrapp_credential-exposure-drills-are-not-tabletop-activity-7516483535604613120-gslv",
+      "date": "Thu, 15 Oct 2026 13:02:04 GMT",
+      "summary": "Credential exposure drills are not tabletop theatre. They rehearse discovery → containment before a real incident. PROBLEM AI-agent secrets can surface in code, prompts, logs, tool outputs, repos, or vendor paths. Without rehearsal, blast radius grows while responders improvise.",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Can this model card guide the next safe action—or only prove that a document exists? Problem / 問題 Usability is task-based. For thi...",
+      "link": "https://www.linkedin.com/posts/bobrapp_can-this-model-card-guide-the-next-safe-actionor-activity-7516257214798622721-L9PF",
+      "date": "Wed, 14 Oct 2026 22:02:45 GMT",
+      "summary": "Can this model card guide the next safe action—or only prove that a document exists? Problem / 問題 Usability is task-based. For this version, an operator must find allowed use, required checks, stop/escalate triggers, and known non-use conditions. If not, block deployment. 使いやすさは実",
+      "image": null,
+      "author": "Bob Rapp"
+    }
+  ],
+  "ken": []
+}

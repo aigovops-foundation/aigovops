@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://plausible.io https://www.aigovops-foundation.com https://community.aigovops-foundation.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://aigovops-foundation.github.io https://buy.stripe.com; connect-src 'self' https://plausible.io https://community.aigovops-foundation.com https://raw.githubusercontent.com; object-src 'none'; base-uri 'self'">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Governance Frameworks Explorer | AiGovOps Foundation</title>
+  <meta name="description" content="Find which AI governance frameworks apply to your organization — EU AI Act, NIST AI RMF, ISO/IEC 42001, GDPR, HIPAA, and 35+ more. Filter by region, industry, and risk level." />
+  <link rel="canonical" href="https://www.aigovops-foundation.com/frameworks.html" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <meta property="og:title" content="AI Governance Frameworks Explorer | AiGovOps Foundation" />
+  <meta property="og:description" content="Find which AI governance frameworks apply to your organization. Filter by region, industry, and risk level." />
+  <meta property="og:image" content="https://www.aigovops-foundation.com/images/founders.jpg" />
+  <meta property="og:url" content="https://www.aigovops-foundation.com/frameworks.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="css/style.css?v=20261011b" />
+  <!-- M6b garden-warm skin (shared system) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/garden.css?v=20261011b" />
+  <link rel="stylesheet" href="css/wren-cafe.css?v=20261011b" />
+  <script src="js/i18n/i18n.js?v=20261011b"></script>
+  <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
+  <style>
+    /* ── Frameworks page specific — garden-warm skin (M6b) ── */
+    /* Inline markup (active nav link, Clear-filters button) uses
+       var(--teal-accessible) / var(--teal-light); re-point them to garden. */
+    :root { --teal-accessible: #1F5E3A; --teal-light: var(--garden-deep-cream); }
+
+    .fw-hero { background: var(--garden-deep-cream); color: var(--garden-charcoal); padding: 60px 0 48px; text-align: center; position: relative; overflow: hidden; }
+    .fw-hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(480px 220px at 10% 115%, rgba(232,181,74,.28), transparent 70%), radial-gradient(460px 220px at 92% -15%, rgba(46,125,79,.16), transparent 70%); }
+    .fw-hero .container { position: relative; }
+    .fw-hero .hero-eyebrow { color: var(--garden-green-ink); font-family: 'Courier New', monospace; font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 12px; }
+    .fw-hero h1 { font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight: 600; margin-bottom: 12px; }
+    .fw-hero p { color: var(--garden-ink-soft); font-size: .95rem; max-width: 540px; margin: 0 auto; }
+
+    .fw-filters { background: var(--garden-cream); border-bottom: 1px solid var(--garden-line); padding: 20px 0; position: sticky; top: 60px; z-index: 10; }
+    .fw-filters .container { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+    .fw-filters label { font-size: .78rem; font-weight: 600; color: var(--garden-ink-soft); font-family: 'Courier New', monospace; text-transform: uppercase; letter-spacing: .08em; }
+    .fw-filters select { padding: 7px 12px; border: 1px solid var(--garden-line); border-radius: 999px; font-size: .85rem; background: #fff; color: var(--garden-charcoal); cursor: pointer; }
+    .fw-filters select:focus { outline: none; border-color: var(--garden-green-ink); }
+    .fw-count { font-size: .8rem; color: var(--garden-ink-soft); margin-left: auto; font-family: 'Courier New', monospace; }
+
+    .fw-grid-section { background: var(--garden-cream); padding: 40px 0 64px; }
+    .fw-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+    .fw-card { background: #fff; border: 1px solid var(--garden-card-line); box-shadow: var(--garden-shadow-sm); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 8px; transition: border-color .15s, transform .15s, box-shadow .15s; }
+    .fw-card:hover { border-color: var(--garden-green); transform: translateY(-2px); box-shadow: var(--garden-shadow); }
+    .fw-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+    .fw-name { font-size: .95rem; font-weight: 700; color: var(--garden-charcoal); line-height: 1.3; }
+    .fw-risk { font-size: .68rem; font-weight: 700; font-family: 'Courier New', monospace; text-transform: uppercase; letter-spacing: .08em; padding: 3px 9px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; }
+    .risk-high   { background: #FAECE7; color: #993C1D; }
+    .risk-medium { background: #FAEEDA; color: #854F0B; }
+    .risk-low    { background: #EAF3DE; color: #3B6D11; }
+    .fw-desc { font-size: .83rem; color: var(--garden-ink-soft); line-height: 1.55; }
+    .fw-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .fw-tag { font-size: .68rem; padding: 2px 8px; border-radius: 20px; background: var(--garden-deep-cream); color: var(--garden-ink-soft); border: 1px solid var(--garden-card-line); }
+    .fw-link { font-size: .8rem; color: var(--garden-green-ink); font-weight: 600; text-decoration: none; margin-top: auto; }
+    .fw-link:hover { color: var(--garden-green-deep); }
+    .fw-card.hidden { display: none; }
+
+    /* CTA — orchard-green band */
+    .fw-cta { background: var(--garden-green); color: #fff; padding: 52px 0; text-align: center; position: relative; overflow: hidden; }
+    .fw-cta::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(480px 220px at 10% 115%, rgba(232,181,74,.22), transparent 70%), radial-gradient(460px 220px at 92% -15%, rgba(15,74,44,.55), transparent 70%); }
+    .fw-cta .container { position: relative; }
+    .fw-cta h2 { color: #fff; margin-bottom: 10px; }
+    .fw-cta p { color: #F4FAF4; margin-bottom: 28px; font-size: .95rem; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .fw-cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    /* primary inside a green band goes orange — never green-on-green */
+    .fw-cta .btn-primary { background: var(--garden-orange); color: var(--garden-charcoal); }
+    .fw-cta .btn-primary:hover { background: #E98A40; }
+
+    @media (max-width: 600px) { .fw-grid { grid-template-columns: 1fr; } }
+  </style>
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "AI Governance Frameworks",
+  "description": "Comprehensive list of AI governance frameworks, regulations, and standards including EU AI Act, NIST AI RMF, ISO/IEC 42001, and more.",
+  "url": "https://www.aigovops-foundation.com/frameworks.html",
+  "numberOfItems": 40,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "EU AI Act"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "NIST AI RMF"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ISO/IEC 42001"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "GDPR"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "HIPAA"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "UK AI Act (proposed)"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "CCPA / CPRA"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "Colorado AI Act"
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "name": "Korea AI Basic Act"
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "name": "OVERT 1.0"
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "name": "UNESCO AI Ethics"
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "name": "WCAG 2.2 AA"
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "name": "EU AI Liability Directive"
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "name": "DORA"
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "name": "SR 11-7 (Fed Reserve)"
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "name": "FDA AI/ML Action Plan"
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "name": "UNECE WP.29 (Automotive)"
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "name": "ISO 26262 (Functional Safety)"
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "name": "EEOC AI Guidance"
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "name": "OpenSSF Best Practices"
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "name": "Illinois BIPA"
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "name": "NY Local Law 144"
+    },
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "name": "Canada AIDA"
+    },
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "name": "China AI Regulations"
+    },
+    {
+      "@type": "ListItem",
+      "position": 25,
+      "name": "Japan AI Guidelines"
+    },
+    {
+      "@type": "ListItem",
+      "position": 26,
+      "name": "Singapore AI Verify"
+    },
+    {
+      "@type": "ListItem",
+      "position": 27,
+      "name": "Australia AI Ethics Framework"
+    },
+    {
+      "@type": "ListItem",
+      "position": 28,
+      "name": "OECD AI Principles"
+    },
+    {
+      "@type": "ListItem",
+      "position": 29,
+      "name": "G7 Hiroshima AI Process"
+    },
+    {
+      "@type": "ListItem",
+      "position": 30,
+      "name": "PCI DSS v4.0 (AI scope)"
+    },
+    {
+      "@type": "ListItem",
+      "position": 31,
+      "name": "SOC 2 Type II (AI scope)"
+    },
+    {
+      "@type": "ListItem",
+      "position": 32,
+      "name": "FTC AI Guidance"
+    },
+    {
+      "@type": "ListItem",
+      "position": 33,
+      "name": "ISO/IEC 24028 (Trustworthiness)"
+    },
+    {
+      "@type": "ListItem",
+      "position": 34,
+      "name": "IEEE 7000 Series"
+    },
+    {
+      "@type": "ListItem",
+      "position": 35,
+      "name": "EU AI Pact (voluntary)"
+    },
+    {
+      "@type": "ListItem",
+      "position": 36,
+      "name": "Brazil LGPD (AI scope)"
+    },
+    {
+      "@type": "ListItem",
+      "position": 37,
+      "name": "India DPDP Act (AI scope)"
+    },
+    {
+      "@type": "ListItem",
+      "position": 38,
+      "name": "NIST CSF 2.0 (AI scope)"
+    },
+    {
+      "@type": "ListItem",
+      "position": 39,
+      "name": "Texas TRAIGA (HB 149)"
+    },
+    {
+      "@type": "ListItem",
+      "position": 40,
+      "name": "ISO/IEC 42006 (AI auditing)"
+    }
+  ]
+}
+  </script>
+  <link rel="alternate" type="application/rss+xml" title="AiGovOps Foundation Feed" href="/feed.xml" />
+</head>
+<body>
+<svg id="wc-sprite" xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="wc-cup" viewBox="0 0 24 24"><path d="M4 8h12v6a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5z"/><path d="M16 10h2a2 2 0 0 1 0 4h-2"/><path d="M8 3v2M11 3v2"/></symbol><symbol id="wc-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></symbol><symbol id="wc-receipt" viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></symbol><symbol id="wc-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol><symbol id="wc-wrench" viewBox="0 0 24 24"><path d="M14 4l6 6-8 8H6v-6z"/><path d="M12 6l6 6"/></symbol><symbol id="wc-hand" viewBox="0 0 24 24"><path d="M8 13V6a1.5 1.5 0 0 1 3 0v6"/><path d="M11 12V5a1.5 1.5 0 0 1 3 0v7"/><path d="M14 12V7a1.5 1.5 0 0 1 3 0v6"/><path d="M17 13a1.5 1.5 0 0 1 3 0v3a6 6 0 0 1-6 6h-2a6 6 0 0 1-5-3l-3-5a1.5 1.5 0 0 1 2.6-1.5L8 14"/></symbol><symbol id="wc-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></symbol><symbol id="wc-book" viewBox="0 0 24 24"><path d="M4 5h6a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H4z"/><path d="M20 5h-6a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h7z"/></symbol><symbol id="wc-leaf" viewBox="0 0 24 24"><path d="M12 3c3 3 4 6 4 9a4 4 0 0 1-8 0c0-3 1-6 4-9z"/><path d="M12 16v5M8 21h8"/></symbol><symbol id="wc-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></symbol><symbol id="wc-code" viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4"/><path d="M16 8l4 4-4 4"/><path d="M14 5l-4 14"/></symbol><symbol id="wc-scale" viewBox="0 0 24 24"><path d="M12 3v18M5 21h14"/><path d="M4 8h16"/><path d="M7 8l-3 6a3 3 0 0 0 6 0z"/><path d="M17 8l-3 6a3 3 0 0 0 6 0z"/></symbol><symbol id="wc-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"/></symbol><symbol id="wc-megaphone" viewBox="0 0 24 24"><path d="M4 10v4h3l7 4V6l-7 4z"/><path d="M17 9a4 4 0 0 1 0 6"/></symbol><symbol id="wc-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></symbol><symbol id="wc-repeat" viewBox="0 0 24 24"><path d="M4 9a5 5 0 0 1 5-5h9"/><path d="M15 1l3 3-3 3"/><path d="M20 15a5 5 0 0 1-5 5H6"/><path d="M9 23l-3-3 3-3"/></symbol><symbol id="wc-pen" viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M13 7l3 3"/></symbol><symbol id="wc-flag" viewBox="0 0 24 24"><path d="M5 21V4"/><path d="M5 4h12l-3 4 3 4H5"/></symbol><symbol id="wc-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol><symbol id="wc-atom" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)"/></symbol><symbol id="wc-cap" viewBox="0 0 24 24"><path d="M2 9l10-4 10 4-10 4z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></symbol><symbol id="wc-tent" viewBox="0 0 24 24"><path d="M3 20L12 4l9 16z"/><path d="M12 12l-4 8M12 12l4 8"/></symbol><symbol id="wc-lantern" viewBox="0 0 24 24"><path d="M9 6h6l2 4v6l-2 4H9l-2-4v-6z"/><path d="M12 3v3M12 20v1"/><path d="M12 9v5"/></symbol><symbol id="wc-umbrella" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 18 0z"/><path d="M12 12v6a2 2 0 0 0 4 0"/><path d="M12 3v1"/></symbol><symbol id="wc-clipboard" viewBox="0 0 24 24"><path d="M7 5h10v16H7z"/><path d="M9 3h6v4H9z"/><path d="M10 12h4M10 16h4"/></symbol><symbol id="wc-calendar" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></symbol><symbol id="wc-briefcase" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M9 8V5h6v3"/><path d="M3 13h18"/></symbol><symbol id="wc-news" viewBox="0 0 24 24"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 8h3v9a2 2 0 0 1-2 2"/><path d="M7 9h7M7 13h7"/></symbol><symbol id="wc-sprout" viewBox="0 0 24 24"><path d="M12 21v-8"/><path d="M12 13c0-4 3-6 7-6 0 4-3 6-7 6z"/><path d="M12 15c0-3-2.5-5-6-5 0 3 2.5 5 6 5z"/></symbol></svg>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo-link">
+      <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="height:38px;width:38px;flex-shrink:0">
+        <title>AiGovOps Foundation</title>
+        <circle cx="100" cy="100" r="96" fill="#071a12"/>
+        <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+        <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+        <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
+        <ellipse cx="100" cy="57" rx="4" ry="6" fill="#9fe1cb" opacity="0.95"/>
+        <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+      </svg>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="library.html" data-i18n="nav.library">Library</a>
+      <a href="open-source.html" data-i18n="nav.opensource">Open source</a>
+      <a href="blog.html" data-i18n="nav.blog">Blog</a>
+      <a href="https://community.aigovops-foundation.com/signin.html" class="nav-join" data-i18n="nav.join">Become a member</a>
+    </nav>
+    <div class="lang-toggle" aria-label="Language selector">
+      <button class="lang-btn lang-active" data-lang="en" onclick="window.I18N_SET('en')">EN<span class="sr-only">, switch to English</span></button>
+      <button class="lang-btn" data-lang="es" onclick="window.I18N_SET('es')">ES<span class="sr-only">, cambiar a español</span></button>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="fw-hero">
+    <div class="container">
+      <p class="hero-eyebrow">40 Global Frameworks · Updated 2026</p>
+      <h1>Find your frameworks.</h1>
+      <p>Filter by region and industry to find the regulations and standards your organization needs to comply with — then map them to code with Umbrella.</p>
+    </div>
+  </section>
+
+  <div class="fw-filters" role="search" aria-label="Framework filters">
+    <div class="container">
+      <label for="filterRegion">Region</label>
+      <select id="filterRegion" onchange="applyFilters()" aria-label="Filter by region">
+        <option value="">All regions</option>
+        <option value="eu">European Union</option>
+        <option value="us">United States</option>
+        <option value="uk">United Kingdom</option>
+        <option value="global">Global / International</option>
+        <option value="apac">Asia-Pacific</option>
+      </select>
+      <label for="filterIndustry">Industry</label>
+      <select id="filterIndustry" onchange="applyFilters()" aria-label="Filter by industry">
+        <option value="">All industries</option>
+        <option value="healthcare">Healthcare</option>
+        <option value="finance">Finance</option>
+        <option value="automotive">Automotive / Transport</option>
+        <option value="tech">Technology / SaaS</option>
+        <option value="gov">Government / Public sector</option>
+        <option value="hr">HR / Employment</option>
+      </select>
+      <label for="filterRisk">Risk level</label>
+      <select id="filterRisk" onchange="applyFilters()" aria-label="Filter by risk level">
+        <option value="">All risk levels</option>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+      <button id="clearFilters" onclick="clearAllFilters()" aria-label="Clear all filters" style="display:none;padding:7px 14px;border:1px solid var(--teal-accessible);border-radius:8px;font-size:.82rem;font-weight:600;color:var(--teal-accessible);background:transparent;cursor:pointer;white-space:nowrap;transition:all .15s;min-height:44px" onmouseover="this.style.background='var(--teal-light)'" onmouseout="this.style.background='transparent'"><span aria-hidden="true">✕</span> Clear filters</button>
+      <span class="fw-count" id="fwCount" aria-live="polite"></span>
+    </div>
+  </div>
+
+  <section class="fw-grid-section">
+    <div class="container">
+      <div class="fw-grid" id="fwGrid" role="list" aria-label="Governance frameworks">
+      </div>
+    </div>
+  </section>
+
+  <section class="fw-cta">
+    <div class="container">
+      <h2>Turn frameworks into executable controls</h2>
+      <p>Umbrella compiles your applicable frameworks into YAML controls, OVERT 1.0 evidence bundles, and Beacon-signed audit packages — automatically.</p>
+      <div class="fw-cta-btns">
+        <a href="https://aigovops-foundation.github.io/umbrella-govops/" target="_blank" rel="noopener" class="btn btn-primary btn-large" onclick="if(window.plausible)plausible('Frameworks: Lantern CTA')"><svg class="wc-icon" aria-hidden="true"><use href="#wc-umbrella"></use></svg> Get to Yes in 15 minutes →</a>
+      </div>
+      <p style="margin:18px auto 0;font-size:.88rem"><a href="https://aigovops-foundation.github.io/aigovops-beacon/" target="_blank" rel="noopener" style="color:#F4FAF4;font-weight:600" onclick="if(window.plausible)plausible('Frameworks: Beacon CTA')">Or scan with the <svg class="wc-icon" aria-hidden="true"><use href="#wc-lantern"></use></svg> Beacon scanner →</a></p>
+    </div>
+  </section>
+</main>
+
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="index.html">
+        <span class="sr-only">AiGovOps Foundation home</span>
+        <svg style="height:32px;width:32px" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="96" fill="#071a12"/>
+          <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+          <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+          <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
+          <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+        </svg>
+      </a>
+      <p>Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes. Prove it in ten minutes.</p>
+      <p class="footer-gate"><a href="https://community.aigovops-foundation.com/gate-check.html?src=site-footer" onclick="if(window.plausible)plausible('Gate Check: footer')">Ten minutes, no account — run the Gate Check →</a></p>
+      <p class="footer-marks" data-i18n="footer.marks">Apache-2.0 · Conforms to OVERT · NIST AI RMF · EU AI Act · ISO/IEC 42001 · 501(c)(3) Foundation</p>
+    </div>
+        <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="library.html">Library</a>
+      <a href="open-source.html">Open source</a>
+      <a href="community.html">Community</a>
+      <a href="blog.html">Blog</a>
+      <a href="founders.html">Founders</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="/feed.xml">RSS</a>
+      <a href="https://aigovops.substack.com/" target="_blank" rel="noopener">Newsletter</a>
+    <a href="glossary.html" data-i18n="glossary.link">Glossary</a></nav>
+  </div>
+  <div class="footer-bottom">
+    <div class="container"><p>© 2026 AiGovOps Foundation — 501(c)(3) Nonprofit</p></div>
+  </div>
+</footer>
+
+<script>
+// ── Framework data ───────────────────────────────────────────────────────────
+const FRAMEWORKS = [
+  { name: 'EU AI Act', risk: 'high', regions: ['eu'], industries: [], desc: 'Comprehensive risk-based regulation of AI systems in the EU. High-risk systems require conformity assessment, technical documentation, and human oversight.', tags: ['Mandatory', 'EU', 'Risk-based'], url: 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689' },
+  { name: 'NIST AI RMF', risk: 'medium', regions: ['us', 'global'], industries: [], desc: 'Voluntary framework from NIST for managing AI risks across the lifecycle. Widely adopted as a baseline in US federal procurement.', tags: ['Voluntary', 'US', 'Risk management'], url: 'https://airc.nist.gov/RMF' },
+  { name: 'ISO/IEC 42001', risk: 'medium', regions: ['global'], industries: [], desc: 'International standard for AI management systems. Certifiable. Maps to ISO 9001 structure — familiar to quality-managed organizations.', tags: ['Certifiable', 'Global', 'Management system'], url: 'https://www.iso.org/standard/81230.html' },
+  { name: 'GDPR', risk: 'high', regions: ['eu'], industries: [], desc: 'EU data protection regulation with direct AI implications — automated decision-making (Art. 22), data minimization, and right to explanation.', tags: ['Mandatory', 'EU', 'Data protection'], url: 'https://gdpr.eu/' },
+  { name: 'HIPAA', risk: 'high', regions: ['us'], industries: ['healthcare'], desc: 'US healthcare privacy law. AI systems processing Protected Health Information must comply with Privacy and Security Rules.', tags: ['Mandatory', 'US', 'Healthcare'], url: 'https://www.hhs.gov/hipaa/index.html' },
+  { name: 'UK AI Act (proposed)', risk: 'medium', regions: ['uk'], industries: [], desc: 'Post-Brexit UK approach to AI regulation — principles-based, sector-led, with the AI Safety Institute providing guidance.', tags: ['Emerging', 'UK', 'Principles-based'], url: 'https://www.gov.uk/government/publications/ai-regulation-a-pro-innovation-approach' },
+  { name: 'CCPA / CPRA', risk: 'medium', regions: ['us'], industries: [], desc: 'California privacy laws with AI implications — automated decision-making, right to opt-out of profiling, data broker rules.', tags: ['Mandatory', 'US (CA)', 'Privacy'], url: 'https://cppa.ca.gov/' },
+  { name: 'Colorado AI Act', risk: 'medium', regions: ['us'], industries: [], desc: 'First US state AI law covering consequential decisions. Requires impact assessments for high-risk AI systems deployed in Colorado.', tags: ['Mandatory', 'US (CO)', 'Consequential AI'], url: 'https://leg.colorado.gov/bills/sb24-205' },
+  { name: 'Korea AI Basic Act', risk: 'medium', regions: ['apac'], industries: [], desc: "South Korea's foundational AI law enacted 2024. Establishes AI governance framework, high-impact AI designation, and safety obligations.", tags: ['Mandatory', 'Korea', 'Foundational'], url: 'https://www.korea.kr/briefing/policyBriefingView.do?newsId=156624627' },
+  { name: 'OVERT 1.0', risk: 'low', regions: ['global'], industries: [], desc: 'Open standard for independently verifiable runtime evidence across AI systems. Maintained by Glacis Technologies, Inc. (overt.is). Published March 2026. Cryptographic proof that governance controls actually executed.', tags: ['Open standard', 'Global', 'Cryptographic'], url: 'https://overt.is/' },
+  { name: 'UNESCO AI Ethics', risk: 'low', regions: ['global'], industries: ['gov'], desc: 'First global normative framework on AI ethics adopted by 193 UNESCO member states. Non-binding but influential in public sector AI policy.', tags: ['Non-binding', 'Global', 'Ethics'], url: 'https://www.unesco.org/en/artificial-intelligence/recommendation-ethics' },
+  { name: 'WCAG 2.2 AA', risk: 'medium', regions: ['global', 'us', 'eu'], industries: [], desc: 'Web Content Accessibility Guidelines — legally required in many jurisdictions. AI-powered interfaces must meet AA standard.', tags: ['Mandatory (in context)', 'Global', 'Accessibility'], url: 'https://www.w3.org/TR/WCAG22/' },
+  { name: 'EU AI Liability Directive', risk: 'high', regions: ['eu'], industries: [], desc: 'Proposed EU directive making it easier to seek damages from AI systems that cause harm. Complements the EU AI Act.', tags: ['Emerging', 'EU', 'Liability'], url: 'https://commission.europa.eu/business-economy-euro/doing-business-eu/contract-rules/digital-contracts/liability-ai_en' },
+  { name: 'DORA', risk: 'high', regions: ['eu'], industries: ['finance'], desc: 'Digital Operational Resilience Act — EU financial sector regulation covering AI and digital risk management in banks, insurers, and investment firms.', tags: ['Mandatory', 'EU', 'Finance'], url: 'https://www.eiopa.europa.eu/digital-operational-resilience-act-dora_en' },
+  { name: 'SR 11-7 (Fed Reserve)', risk: 'high', regions: ['us'], industries: ['finance'], desc: 'US Federal Reserve guidance on model risk management — foundational for AI/ML models used in US banking and credit decisions.', tags: ['Mandatory', 'US', 'Banking'], url: 'https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm' },
+  { name: 'FDA AI/ML Action Plan', risk: 'high', regions: ['us'], industries: ['healthcare'], desc: "FDA's evolving framework for AI/ML-based Software as a Medical Device (SaMD). Predetermined change control plans required.", tags: ['Regulatory', 'US', 'Medical AI'], url: 'https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-software-medical-device' },
+  { name: 'UNECE WP.29 (Automotive)', risk: 'high', regions: ['eu', 'global'], industries: ['automotive'], desc: 'UN Regulation covering cybersecurity and software updates in vehicles — includes AI decision-making in ADAS and autonomous systems.', tags: ['Mandatory', 'Global', 'Automotive'], url: 'https://unece.org/transport/vehicle-regulations/wp29-what-it' },
+  { name: 'ISO 26262 (Functional Safety)', risk: 'high', regions: ['global'], industries: ['automotive'], desc: 'International standard for functional safety of road vehicles. AI components in safety systems must meet ASIL integrity levels.', tags: ['Mandatory', 'Global', 'Safety'], url: 'https://www.iso.org/standard/68383.html' },
+  { name: 'EEOC AI Guidance', risk: 'medium', regions: ['us'], industries: ['hr'], desc: 'US Equal Employment Opportunity Commission guidance on AI in hiring. Disparate impact doctrine applies to algorithmic screening tools.', tags: ['Guidance', 'US', 'Employment'], url: 'https://www.eeoc.gov/laws/guidance/questions-and-answers-clarify-and-provide-common-interpretation-uniform-guidelines' },
+  { name: 'OpenSSF Best Practices', risk: 'low', regions: ['global'], industries: ['tech'], desc: 'Open Source Security Foundation best practices badge. Increasingly expected for AI/ML open source projects claiming enterprise-readiness.', tags: ['Voluntary', 'Global', 'Open source'], url: 'https://bestpractices.coreinfrastructure.org/' },
+  { name: "Illinois BIPA", risk: "high", regions: ["us"], industries: ["hr", "tech"], desc: "Illinois Biometric Information Privacy Act \u2014 strict consent requirements for AI systems using facial recognition or biometric data.", tags: ["Mandatory", "US (IL)", "Biometrics"], url: "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=3004" },
+  { name: "NY Local Law 144", risk: "high", regions: ["us"], industries: ["hr"], desc: "New York City law requiring bias audits of automated employment decision tools used in hiring and promotion.", tags: ["Mandatory", "US (NYC)", "Employment AI"], url: "https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page" },
+  { name: "Canada AIDA", risk: "medium", regions: ["global"], industries: [], desc: "Artificial Intelligence and Data Act \u2014 proposed Canadian federal law requiring impact assessments for high-impact AI systems.", tags: ["Emerging", "Canada", "Impact assessment"], url: "https://ised-isde.canada.ca/site/innovation-better-canada/en/artificial-intelligence-and-data-act" },
+  { name: "China AI Regulations", risk: "high", regions: ["apac"], industries: [], desc: "Suite of Chinese AI regulations covering generative AI, recommendation algorithms \u2014 mandatory security assessments for China deployment.", tags: ["Mandatory", "China", "Generative AI"], url: "https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm" },
+  { name: "Japan AI Guidelines", risk: "low", regions: ["apac"], industries: [], desc: "Japan METI AI governance guidelines \u2014 principles-based, covering transparency, safety, fairness, and accountability for AI developers.", tags: ["Guidance", "Japan", "Principles-based"], url: "https://www.meti.go.jp/press/2024/04/20240419004/20240419004.html" },
+  { name: "Singapore AI Verify", risk: "low", regions: ["apac"], industries: [], desc: "Singapore IMDA AI governance testing framework and toolkit. Voluntary but widely adopted across ASEAN financial and public sector.", tags: ["Voluntary", "Singapore", "Testing"], url: "https://aiverifyfoundation.sg/" },
+  { name: "Australia AI Ethics Framework", risk: "low", regions: ["global"], industries: [], desc: "Australia DISR voluntary AI ethics framework \u2014 8 principles covering human rights, privacy, fairness, and explainability.", tags: ["Voluntary", "Australia", "Ethics"], url: "https://www.industry.gov.au/publications/australias-artificial-intelligence-ethics-framework" },
+  { name: "OECD AI Principles", risk: "low", regions: ["global"], industries: [], desc: "First intergovernmental AI policy standard, adopted by 47 countries. Foundational reference for EU AI Act and NIST AI RMF.", tags: ["Non-binding", "Global", "Reference standard"], url: "https://oecd.ai/en/ai-principles" },
+  { name: "G7 Hiroshima AI Process", risk: "low", regions: ["global"], industries: [], desc: "G7 Guiding Principles for Advanced AI \u2014 11 principles covering transparency, safety, accountability for enterprise responsible AI.", tags: ["Non-binding", "Global", "G7"], url: "https://www.g7hiroshima.go.jp/en/documents/" },
+  { name: "PCI DSS v4.0 (AI scope)", risk: "high", regions: ["global"], industries: ["finance"], desc: "Payment Card Industry Data Security Standard \u2014 AI systems in payment processing must meet cardholder data protection requirements.", tags: ["Mandatory", "Global", "Payments"], url: "https://www.pcisecuritystandards.org/document_library/" },
+  { name: "SOC 2 Type II (AI scope)", risk: "medium", regions: ["global"], industries: ["tech"], desc: "AICPA Trust Services Criteria \u2014 AI SaaS providers seeking enterprise customers typically need SOC 2 Type II certification.", tags: ["Certifiable", "Global", "SaaS"], url: "https://www.aicpa.org/resources/landing/system-and-organization-controls-soc-suite-of-services" },
+  { name: "FTC AI Guidance", risk: "medium", regions: ["us"], industries: ["tech"], desc: "US FTC enforcement guidance on AI fairness, transparency, and deceptive practices \u2014 enforcement risk for consumer-facing AI products.", tags: ["Enforcement", "US", "Consumer AI"], url: "https://www.ftc.gov/business-guidance/blog/2023/02/keep-your-ai-claims-in-check" },
+  { name: "ISO/IEC 24028 (Trustworthiness)", risk: "medium", regions: ["global"], industries: [], desc: "Overview of trustworthiness in AI \u2014 covers accuracy, robustness, reliability. Referenced in EU AI Act conformity assessments.", tags: ["Reference", "Global", "Trustworthiness"], url: "https://www.iso.org/standard/77608.html" },
+  { name: "IEEE 7000 Series", risk: "low", regions: ["global"], industries: ["tech"], desc: "IEEE standards for ethically aligned AI design covering transparency (7001), privacy (7002), and bias (7003).", tags: ["Voluntary", "Global", "Engineering"], url: "https://standards.ieee.org/initiatives/artificial-intelligence-systems/" },
+  { name: "EU AI Pact (voluntary)", risk: "low", regions: ["eu"], industries: [], desc: "Voluntary early-adoption pledge for the EU AI Act \u2014 companies committing to implement key obligations ahead of official deadlines.", tags: ["Voluntary", "EU", "Early adoption"], url: "https://digital-strategy.ec.europa.eu/en/policies/ai-pact" },
+  { name: "Brazil LGPD (AI scope)", risk: "medium", regions: ["global"], industries: [], desc: "Brazil's data protection law with AI implications \u2014 automated decision-making rights and cross-border transfer rules.", tags: ["Mandatory", "Brazil", "Data protection"], url: "https://www.gov.br/secretariageral/pt-br/lgpd" },
+  { name: "India DPDP Act (AI scope)", risk: "medium", regions: ["apac"], industries: [], desc: "India's Digital Personal Data Protection Act \u2014 AI systems processing Indian citizens' data must comply with consent and purpose limitation rules.", tags: ["Mandatory", "India", "Data protection"], url: "https://www.meity.gov.in/writereaddata/files/Digital%20Personal%20Data%20Protection%20Act%202023.pdf" },
+  { name: "NIST CSF 2.0 (AI scope)", risk: "medium", regions: ["us", "global"], industries: [], desc: "NIST Cybersecurity Framework 2.0 \u2014 AI systems in critical infrastructure must address AI model supply chain and adversarial attack risks.", tags: ["Voluntary", "Global", "Cybersecurity"], url: "https://www.nist.gov/cyberframework" },
+  { name: 'Texas TRAIGA (HB 149)', risk: 'medium', regions: ['us'], industries: [], desc: 'Texas Responsible AI Governance Act — signed June 22 2025, in effect Jan 1 2026. Regulates AI for government transparency, consumer rights, and prohibited uses. Original HB 1709 was not enacted; replaced by narrower HB 149.', tags: ['Mandatory', 'US (TX)', 'In effect 2026'], url: 'https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HB149' },
+  { name: "ISO/IEC 42006 (AI auditing)", risk: "medium", regions: ["global"], industries: [], desc: "Requirements for bodies providing audit and certification of AI management systems under ISO 42001 \u2014 defines competence criteria for AI auditors.", tags: ["Certifiable", "Global", "Audit"], url: "https://www.iso.org/standard/44546.html" },
+
+];
+
+// ── Render and filter ────────────────────────────────────────────────────────
+function renderCards(frameworks) {
+  const grid = document.getElementById('fwGrid');
+  const count = document.getElementById('fwCount');
+  grid.innerHTML = frameworks.map(fw => `
+    <div class="fw-card" role="listitem" data-regions="${fw.regions.join(',')}" data-industries="${fw.industries.join(',')}" data-risk="${fw.risk}">
+      <div class="fw-card-top">
+        <span class="fw-name">${fw.name}</span>
+        <span class="fw-risk risk-${fw.risk}">${fw.risk}</span>
+      </div>
+      <p class="fw-desc">${fw.desc}</p>
+      <div class="fw-tags">${fw.tags.map(t => `<span class="fw-tag">${t}</span>`).join('')}</div>
+      <a href="${fw.url}" target="_blank" rel="noopener" class="fw-link" onclick="if(window.plausible)plausible('Framework clicked',{props:{framework:'${fw.name}'}})">Learn more →</a>
+    </div>
+  `).join('');
+  count.textContent = `Showing ${frameworks.length} of ${FRAMEWORKS.length} frameworks`;
+}
+
+function clearAllFilters() {
+  document.getElementById('filterRegion').value   = '';
+  document.getElementById('filterIndustry').value = '';
+  document.getElementById('filterRisk').value     = '';
+  history.replaceState(null, '', window.location.pathname);
+  applyFilters();
+  if (window.plausible) plausible('Frameworks filters cleared');
+}
+
+function applyFilters() {
+  const region   = document.getElementById('filterRegion').value;
+  const industry = document.getElementById('filterIndustry').value;
+  const risk     = document.getElementById('filterRisk').value;
+
+  // Show/hide clear button
+  const clearBtn = document.getElementById('clearFilters');
+  if (clearBtn) clearBtn.style.display = (region || industry || risk) ? 'block' : 'none';
+
+  const filtered = FRAMEWORKS.filter(fw => {
+    const regionMatch   = !region   || fw.regions.includes(region)    || fw.regions.includes('global');
+    const industryMatch = !industry || fw.industries.includes(industry) || fw.industries.length === 0;
+    const riskMatch     = !risk     || fw.risk === risk;
+    return regionMatch && industryMatch && riskMatch;
+  });
+
+  renderCards(filtered);
+  if (window.plausible) plausible('Frameworks filtered', { props: { region: region || 'all', industry: industry || 'all', risk: risk || 'all' } });
+}
+
+// Read URL params for shareable filter state
+(function initFilters() {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('region'))   document.getElementById('filterRegion').value   = params.get('region');
+  if (params.get('industry')) document.getElementById('filterIndustry').value = params.get('industry');
+  if (params.get('risk'))     document.getElementById('filterRisk').value     = params.get('risk');
+  applyFilters();
+
+  // Update URL when filters change so links are shareable
+  ['filterRegion','filterIndustry','filterRisk'].forEach(id => {
+    document.getElementById(id).addEventListener('change', () => {
+      const p = new URLSearchParams();
+      const r = document.getElementById('filterRegion').value;
+      const i = document.getElementById('filterIndustry').value;
+      const k = document.getElementById('filterRisk').value;
+      if (r) p.set('region', r);
+      if (i) p.set('industry', i);
+      if (k) p.set('risk', k);
+      history.replaceState(null, '', p.toString() ? `?${p}` : window.location.pathname);
+    });
+  });
+})();
+
+// Mobile nav
+const navToggle = document.querySelector('.nav-toggle');
+const mainNav = document.querySelector('.main-nav');
+if (navToggle && mainNav) {
+  navToggle.addEventListener('click', () => {
+    const open = mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open);
+  });
+}
+</script>
+<script src="feedback.js?v=20261011b" class="aig-feedback-loader" data-theme="light" defer></script>
+<script>
+// Mobile nav — inject secondary links when menu opens on small screens (M13: Press / Founders / Support)
+(function() {
+  const toggle = document.querySelector('.nav-toggle');
+  const nav    = document.querySelector('.main-nav');
+  if (!toggle || !nav) return;
+  const EXTRA = [
+    { href: '/press.html',     label: 'Press' },
+    { href: '/founders.html',  label: 'Founders' },
+    { href: '/support.html',   label: 'Support' },
+  ];
+  let injected = false;
+  toggle.addEventListener('click', () => {
+    if (injected) return;
+    const current = window.location.pathname.replace(/\/$/, '') || '/index.html';
+    EXTRA.forEach(item => {
+      const alreadyInNav = [...nav.querySelectorAll('a')].some(a => a.getAttribute('href') === item.href || a.href.endsWith(item.href));
+      if (alreadyInNav) return;
+      const a = document.createElement('a');
+      a.href  = item.href;
+      a.textContent = item.label;
+      a.style.cssText = 'font-size:.85rem;color:var(--muted)';
+      if (current.endsWith(item.href.replace(/^\//, ''))) a.classList.add('active');
+      nav.appendChild(a);
+    });
+    injected = true;
+  });
+})();
+</script>
+</body>
+</html>
