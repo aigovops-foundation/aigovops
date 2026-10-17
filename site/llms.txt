@@ -5,7 +5,7 @@
 The front door offers six actions: become a member, give, join a meeting, read the newsletter, get an audit plan, or book the founders. The Library is free for members; meetings are Thursdays at 15:00 Pacific.
 
 ## Start here
-- [AiGovOps Foundation — Ship Safe AI. Never Unsafe AI.](https://www.aigovops-foundation.com/): Ship safe AI — never unsafe AI. Sit down at the AiGovOps Foundation café: say what brought you in, run the ten-minute Gate Check, and leave in an hour with a rule, a signed receipt and a Thursday.
+- [AiGovOps Foundation — Grow AI governance together](https://www.aigovops-foundation.com/): A nonprofit community building open-source AI governance. Join the monthly meeting at AI House, subscribe on Substack, become a member, or write with us. Everything else is in the AiGovOps Foundation Academy.
 - [What Is AiGovOps? And Why We Built the AiGovOps Foundation to Advance It | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/what-is-aigovops.html): Every AI system deployed without automated governance creates technical debt that compounds. Every compliance framework that exists only as a PDF is a...
 - [AI Governance Frameworks Explorer | AiGovOps Foundation](https://www.aigovops-foundation.com/frameworks.html): Find which AI governance frameworks apply to your organization — EU AI Act, NIST AI RMF, ISO/IEC 42001, GDPR, HIPAA, and 35+ more. Filter by region, industry, and risk level.
 - [Open source | AiGovOps Foundation](https://www.aigovops-foundation.com/open-source.html): The open source — one practice (four levels, one hour each) and three engines: Beacon signs, Umbrella declares, Lantern reads. Apache-2.0, conforming to OVERT. Ship safe AI — never unsafe AI.

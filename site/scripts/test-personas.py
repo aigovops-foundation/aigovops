@@ -239,17 +239,17 @@ for filename, label in PAGES.items():
             "for-regulators.html: no sign-up step (standard nav Join allowed)",
         )
 
-index = (ROOT / "index.html").read_text(encoding="utf-8")
+index = (ROOT / "academy.html").read_text(encoding="utf-8")
 chips_match = re.search(
     r"<nav\b(?=[^>]*\bclass=[\"'][^\"']*\bpersona-chips\b[^\"']*[\"'])[^>]*>(.*?)</nav>",
     index,
     re.IGNORECASE | re.DOTALL,
 )
 chip_hrefs = re.findall(r"<a\b[^>]*\bhref=[\"']([^\"']+)[\"'][^>]*>", chips_match.group(1), re.IGNORECASE) if chips_match else []
-check(chips_match is not None, "index.html: labelled persona chip navigation exists")
-check(chip_hrefs == list(PAGES), "index.html: six chips point to persona pages in required order")
+check(chips_match is not None, "academy.html: labelled persona chip navigation exists")
+check(chip_hrefs == list(PAGES), "academy.html: six chips point to persona pages in required order")
 for href in chip_hrefs:
-    check((ROOT / href).is_file(), f"index.html: persona chip target exists ({href})")
+    check((ROOT / href).is_file(), f"academy.html: persona chip target exists ({href})")
 
 print(f"test-personas.py: {passed} passed, {failed} failed")
 sys.exit(1 if failed else 0)

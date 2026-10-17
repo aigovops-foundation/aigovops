@@ -5,15 +5,12 @@
 The front door offers six actions: become a member, give, join a meeting, read the newsletter, get an audit plan, or book the founders. The Library is free for members; meetings are Thursdays at 15:00 Pacific.
 
 ## Start here
-- [AiGovOps Foundation — Ship Safe AI. Never Unsafe AI.](https://www.aigovops-foundation.com/): Ship safe AI — never unsafe AI. Sit down at the AiGovOps Foundation café: say what brought you in, run the ten-minute Gate Check, and leave in an hour with a rule, a signed receipt and a Thursday.
-  - H1: Ship Safe AI. Never Unsafe AI.
-  - H2: What would you like to do?
-  - H2: What brought you in?
-  - H2: Ten minutes to get started
-  - H2: The four gates — one rule, four moments
-  - H2: About the Founders
-  - H2: Latest from Ken & Bob
-  - H2: The Tuesday Letter.
+- [AiGovOps Foundation — Grow AI governance together](https://www.aigovops-foundation.com/): A nonprofit community building open-source AI governance. Join the monthly meeting at AI House, subscribe on Substack, become a member, or write with us. Everything else is in the AiGovOps Foundation Academy.
+  - H1: Grow AI governance together.
+  - H2: Join the next meeting
+  - H2: Subscribe on Substack
+  - H2: Become a member
+  - H2: Write with us
 - [What Is AiGovOps? And Why We Built the AiGovOps Foundation to Advance It | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/what-is-aigovops.html): Every AI system deployed without automated governance creates technical debt that compounds. Every compliance framework that exists only as a PDF is a...
   - H1: What Is AiGovOps? And Why We Built the AiGovOps Foundation to Advance It
 - [AI Governance Frameworks Explorer | AiGovOps Foundation](https://www.aigovops-foundation.com/frameworks.html): Find which AI governance frameworks apply to your organization — EU AI Act, NIST AI RMF, ISO/IEC 42001, GDPR, HIPAA, and 35+ more. Filter by region, industry, and risk level.

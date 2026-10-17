@@ -59,6 +59,8 @@ jobs:
         run: python3 scripts/test-answer-pages.py
       - name: Persona paths contract
         run: python3 scripts/test-personas.py
+      - name: Next-meeting job (offline fixture)
+        run: python3 scripts/test-next-meeting.py
       - name: Persona journey console error filter
         run: node scripts/test-persona-journeys.mjs --self-test
       # Keeps "this feed is broken" separable from "this founder has not posted lately".
