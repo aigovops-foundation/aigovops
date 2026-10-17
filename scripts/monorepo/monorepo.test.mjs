@@ -10,7 +10,7 @@ import vm from "node:vm";
 import test from "node:test";
 import { assemble } from "./assemble.mjs";
 import { mapUrl, renderStub } from "./redirect-stub.mjs";
-import { hasAnchor, printTable, runChecks } from "./link-test.mjs";
+import { hasAnchor, loadEntries, parseArgs, printTable, runChecks } from "./link-test.mjs";
 
 const ROOT = resolve(fileURLToPath(new URL("../..", import.meta.url)));
 
@@ -43,12 +43,12 @@ function project(id, out, urlPrefix) {
   return { id, path: out, urlPrefix, build: null, out, legacy: [] };
 }
 
-test("real manifest assembles _site byte-for-byte from docs", async () => {
+test("real manifest assembles trunk docs under /aigovops/", async () => {
   await assemble();
   const docs = await fileContents(join(ROOT, "docs"));
-  const site = await fileContents(join(ROOT, "_site"));
-  assert.deepEqual([...site.keys()].sort(), [...docs.keys()].sort());
-  for (const [path, contents] of docs) assert.deepEqual(site.get(path), contents, path);
+  const trunk = await fileContents(join(ROOT, "_site/aigovops"));
+  assert.deepEqual([...trunk.keys()].sort(), [...docs.keys()].sort());
+  for (const [path, contents] of docs) assert.deepEqual(trunk.get(path), contents, path);
 });
 
 test("project builds run from path while out stays relative to the repo root", async () => {
@@ -80,6 +80,27 @@ test("assembly reports both project ids on a file collision", async () => {
       assemble({ root, manifestPath: join(root, "monorepo.json"), sitePath: join(root, "_site") }),
       /collision.*alpha.*beta|collision.*beta.*alpha/,
     );
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
+});
+
+test("assembly excludes matching path segments and dot-prefixed segments", async () => {
+  const root = await fixtureRoot();
+  try {
+    await mkdir(join(root, "a", ".github", "workflows"), { recursive: true });
+    await mkdir(join(root, "a", "nested", ".cache"), { recursive: true });
+    await mkdir(join(root, "a", "nested"), { recursive: true });
+    await writeFile(join(root, "a", "index.html"), "index");
+    await writeFile(join(root, "a", "CNAME"), "domain");
+    await writeFile(join(root, "a", ".github", "workflows", "ci.yml"), "workflow");
+    await writeFile(join(root, "a", "nested", "CNAME"), "nested domain");
+    await writeFile(join(root, "a", "nested", ".cache", "state"), "cache");
+    await writeFile(join(root, "a", "nested", "keepCNAME.txt"), "keep");
+    await writeManifest(root, [{ ...project("filtered", "a", "/"), exclude: [".*", "CNAME"] }]);
+    await assemble({ root, manifestPath: join(root, "monorepo.json"), sitePath: join(root, "_site") });
+    const files = await fileContents(join(root, "_site"));
+    assert.deepEqual([...files.keys()].sort(), ["index.html", "nested/keepCNAME.txt"]);
   } finally {
     await rm(root, { recursive: true, force: true });
   }
@@ -199,14 +220,14 @@ test("link test follows a redirect stub and reports the mapped response", async 
     const to = `${origin}/new/`;
     stub = renderStub(from, to);
     const entry = {
-      url: `${from}deep/page.html?campaign=phase0`,
-      expectFinalPrefix: to,
+      url: `${from}deep/page.html?campaign=phase1#ready`,
+      expectFinalPrefix: `${to}deep/page.html?campaign=phase1#ready`,
       anchor: "ready",
     };
     const [result] = await runChecks([entry]);
     assert.equal(result.passed, true);
     assert.equal(result.viaStub, true);
-    assert.equal(result.finalUrl, `${to}deep/page.html?campaign=phase0`);
+    assert.equal(result.finalUrl, `${to}deep/page.html?campaign=phase1#ready`);
     const output = [];
     const originalLog = console.log;
     try {
@@ -221,6 +242,57 @@ test("link test follows a redirect stub and reports the mapped response", async 
       server.close((error) => (error ? reject(error) : resolve()));
     });
   }
+});
+
+test("redirect metadata keeps pipe characters in legacy URLs unambiguous", async () => {
+  let stub;
+  const server = createServer((request, response) => {
+    const pathname = decodeURIComponent(new URL(request.url, "http://localhost").pathname);
+    if (pathname.startsWith("/old|source/")) {
+      response.writeHead(404, { "content-type": "text/html" });
+      response.end(stub);
+    } else if (pathname.startsWith("/new|target/deep/page.html")) {
+      response.writeHead(200, { "content-type": "text/html" });
+      response.end('<main id="ready"></main>');
+    } else {
+      response.writeHead(404);
+      response.end();
+    }
+  });
+  server.listen(0, "127.0.0.1");
+  await once(server, "listening");
+  try {
+    const address = server.address();
+    assert.ok(address && typeof address !== "string");
+    const origin = `http://127.0.0.1:${address.port}`;
+    const from = `${origin}/old|source/`;
+    const to = `${origin}/new|target/`;
+    stub = renderStub(from, to);
+    const url = `${from}deep/page.html?q=1#ready`;
+    const mapped = mapUrl(from, to, url);
+    assert.ok(mapped);
+    const [result] = await runChecks([{
+      url,
+      expectFinalPrefix: mapped,
+      anchor: "ready",
+    }]);
+    assert.equal(result.passed, true);
+    assert.equal(result.viaStub, true);
+    assert.equal(result.finalUrl, mapped);
+  } finally {
+    await new Promise((resolve, reject) => {
+      server.close((error) => (error ? reject(error) : resolve()));
+    });
+  }
+});
+
+test("link-test selects the post-cutover URL set only with --cutover", async () => {
+  assert.equal(parseArgs([]), false);
+  assert.equal(parseArgs(["--cutover"]), true);
+  assert.throws(() => parseArgs(["--unknown"]), /usage:/);
+  const entries = await loadEntries(true);
+  assert.ok(entries.some((entry) => entry.url.endsWith("/WORKSHEET.html?q=1#x")));
+  assert.ok(entries.some((entry) => entry.url.endsWith("/pledge.html?q=1#x")));
 });
 
 test("generated redirect stub maps deep paths in its inline script", async () => {
@@ -269,10 +341,15 @@ test("redirect CLI writes matching index and 404 documents", async () => {
     const notFound = await readFile(join(out, "404.html"), "utf8");
     assert.equal(index, notFound);
     assert.match(index, /<meta name="robots" content="noindex">/);
-    assert.match(index, /<meta name="aigovops-redirect" content="https:\/\/example\.github\.io\/old\/\|https:\/\/example\.com\/new\/">/);
+    assert.match(index, /<meta name="aigovops-redirect-from" content="https:\/\/example\.github\.io\/old\/">/);
+    assert.match(index, /<meta name="aigovops-redirect-to" content="https:\/\/example\.com\/new\/">/);
     assert.match(
       renderStub("https://example.com/a&b/", "https://example.com/c&d/"),
-      /content="https:\/\/example\.com\/a&amp;b\/\|https:\/\/example\.com\/c&amp;d\/"/,
+      /<meta name="aigovops-redirect-from" content="https:\/\/example\.com\/a&amp;b\/">/,
+    );
+    assert.match(
+      renderStub("https://example.com/a&b/", "https://example.com/c&d/"),
+      /<meta name="aigovops-redirect-to" content="https:\/\/example\.com\/c&amp;d\/">/,
     );
     assert.match(index, /<link rel="canonical" href="https:\/\/example\.com\/new\/">/);
     assert.match(index, /location\.replace\(mapped\)/);

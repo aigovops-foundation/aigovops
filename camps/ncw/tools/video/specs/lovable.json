@@ -1,0 +1,49 @@
+{
+  "slug": "lovable",
+  "tool": "Lovable",
+  "voice": "narrator",
+  "slides": [
+    {
+      "kind": "title",
+      "title": "Lovable",
+      "sub": "A 90-second guide · AiGovOps Foundation",
+      "narration": "A ninety-second guide to Lovable, from the AiGovOps Foundation and the NCW AI Camp."
+    },
+    {
+      "kind": "tool",
+      "title": "What it is",
+      "lines": [
+        "Lovable is an AI app builder that turns natural-language descriptions into full, working web applications — frontend, backend, and database.",
+        "You chat to refine it, then publish.",
+        "It's a paid tool (included in Lenny's bundle) aimed at non-engineers who want to ship real software."
+      ],
+      "narration": "Lovable is an AI app builder that turns natural-language descriptions into full, working web applications — frontend, backend, and database. You chat to refine it, then publish. It's worth a look."
+    },
+    {
+      "kind": "cool",
+      "title": "What's cool for NCW",
+      "lines": [
+        "Educators: spin up a simple classroom tool — a reading-log tracker or a field-trip signup form",
+        "SMB owners: build a custom booking page, inventory tracker, or customer intake form without hiring a developer",
+        "Community leaders: create a volunteer signup or event RSVP app for your organization"
+      ],
+      "narration": "Here's what's cool for our valley. Educators can spin up a simple classroom tool — a reading-log tracker or a field-trip signup form; SMB owners can build a custom booking page, inventory tracker, or customer intake form without hiring a developer; Community leaders can create a volunteer signup or event RSVP app for your organization."
+    },
+    {
+      "kind": "rules",
+      "title": "The rules — the AiGovOps way",
+      "lines": [
+        "A human on the trigger — you read it before it goes out",
+        "Keep the receipts — save your prompt and the answer",
+        "Mind the data cost of “free” — no student records, IEPs, or private details in a free tool"
+      ],
+      "narration": "Now the rules, the AiGovOps way. Keep a human on the trigger: you read it before it goes out. Keep the receipts: save your prompt and the answer. And mind the data cost of free — never paste student records, an I-E-P, or a customer's private details into a free tool, because free tools learn from what you type."
+    },
+    {
+      "kind": "outro",
+      "title": "Good AI, the NCW way.",
+      "sub": "NCW AI Camp · Aug 11, 2026 · AiGovOps Foundation",
+      "narration": "Good A-I, the NCW way. That's Lovable. Learn more at the NCW AI Camp. AiGovOps Foundation."
+    }
+  ]
+}

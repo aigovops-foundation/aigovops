@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://www.aigovops-foundation.com/practice/",
+    "expectFinalPrefix": "https://www.aigovops-foundation.com/practice/"
+  },
+  {
+    "url": "https://www.aigovops-foundation.com/camps/ncw/",
+    "expectFinalPrefix": "https://www.aigovops-foundation.com/camps/ncw/"
+  },
+  {
+    "url": "https://practice.aigovops-foundation.com/levels/100-begin/WORKSHEET.html?q=1#x",
+    "expectFinalPrefix": "https://www.aigovops-foundation.com/practice/levels/100-begin/WORKSHEET.html?q=1#x"
+  },
+  {
+    "url": "https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html?q=1#x",
+    "expectFinalPrefix": "https://www.aigovops-foundation.com/camps/ncw/pledge.html?q=1#x"
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "slug": "glean",
+  "tool": "Glean",
+  "voice": "narrator",
+  "slides": [
+    {
+      "kind": "title",
+      "title": "Glean",
+      "sub": "A 90-second guide · AiGovOps Foundation",
+      "narration": "A ninety-second guide to Glean, from the AiGovOps Foundation and the NCW AI Camp."
+    },
+    {
+      "kind": "tool",
+      "title": "What it is",
+      "lines": [
+        "Glean is an enterprise 'work AI' platform that connects to your company's tools — email, drives, chat, ticketing — and lets staff search…",
+        "It's enterprise-only and paid, sold per seat with a setup process.",
+        "It's the kind of system the AiGovOps Foundation's governance work is designed for."
+      ],
+      "narration": "Glean is an enterprise 'work AI' platform that connects to your company's tools — email, drives, chat, ticketing — and lets staff search and ask questions across everything at once, with permissions respected. It's enterprise-only and It's worth a look."
+    },
+    {
+      "kind": "cool",
+      "title": "What's cool for NCW",
+      "lines": [
+        "Larger districts: let staff find policies, HR answers, and curriculum docs across every system from one search.",
+        "Growing SMBs: unify scattered knowledge so new hires can self-serve answers securely."
+      ],
+      "narration": "Here's what's cool for our valley. Larger districts: let staff find policies, HR answers, and curriculum docs across every system from one search.; Growing SMBs: unify scattered knowledge so new hires can self-serve answers securely.."
+    },
+    {
+      "kind": "rules",
+      "title": "The rules — the AiGovOps way",
+      "lines": [
+        "A human on the trigger — you read it before it goes out",
+        "Keep the receipts — save your prompt and the answer",
+        "Mind the data cost of “free” — no student records, IEPs, or private details in a free tool"
+      ],
+      "narration": "Now the rules, the AiGovOps way. Keep a human on the trigger: you read it before it goes out. Keep the receipts: save your prompt and the answer. And mind the data cost of free — never paste student records, an I-E-P, or a customer's private details into a free tool, because free tools learn from what you type."
+    },
+    {
+      "kind": "outro",
+      "title": "Good AI, the NCW way.",
+      "sub": "NCW AI Camp · Aug 11, 2026 · AiGovOps Foundation",
+      "narration": "Good A-I, the NCW way. That's Glean. Learn more at the NCW AI Camp. AiGovOps Foundation."
+    }
+  ]
+}

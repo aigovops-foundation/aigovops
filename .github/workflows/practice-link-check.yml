@@ -1,0 +1,35 @@
+name: link-check
+
+# Every Markdown link in the repo — relative links between worksheets and external links alike —
+# must resolve. Practice #3: the rendered Pages have a footer now; this keeps the links honest.
+
+on:
+  pull_request:
+    paths:
+      - "practice/**"
+      - ".github/workflows/practice-link-check.yml"
+  push:
+    branches: [main]
+    paths:
+      - "practice/**"
+      - ".github/workflows/practice-link-check.yml"
+  schedule:
+    - cron: "17 6 * * 1"   # Mondays, before the Letter
+
+defaults:
+  run:
+    working-directory: practice
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2
+        with:
+          # PRE-CUTOVER skip: remove after cutover (MONOREPO.md step 8)
+          args: --no-progress --max-concurrency 8 --max-retries 3 --retry-wait-time 10 --accept 200,201,202,204,206,301,302,308,403,429,999 --exclude 'linkedin\.com' --exclude 'claude\.ai' --exclude 'https://www\.aigovops-foundation\.com/practice/' './practice/**/*.md'
+          fail: true
