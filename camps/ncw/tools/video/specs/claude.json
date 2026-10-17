@@ -1,0 +1,49 @@
+{
+  "slug": "claude",
+  "tool": "Claude",
+  "voice": "narrator",
+  "slides": [
+    {
+      "kind": "title",
+      "title": "Claude",
+      "sub": "A 90-second guide · AiGovOps Foundation",
+      "narration": "A ninety-second guide to Claude, from the AiGovOps Foundation and the NCW AI Camp."
+    },
+    {
+      "kind": "tool",
+      "title": "What it is",
+      "lines": [
+        "Anthropic's AI assistant — nuanced writing, careful reasoning, long documents",
+        "Free tier right in your browser; Pro and Max for heavier use",
+        "Patient, and it shows its thinking"
+      ],
+      "narration": "Claude is Anthropic's A-I assistant. It's the one to reach for when you're writing something that has to land right, reasoning through a hard problem, or working with a long document. There's a free tier right in your browser, and paid Pro and Max plans when you need more."
+    },
+    {
+      "kind": "cool",
+      "title": "What's cool for NCW",
+      "lines": [
+        "Teachers: get a delicate parent email's tone exactly right; summarize a dense article",
+        "Small business: turn a messy brain-dump into a real plan; draft a policy in plain language",
+        "Community leaders: shape a proposal until it reads clearly"
+      ],
+      "narration": "Here's what's cool for our valley. Teachers: workshop a delicate parent email until the tone is exactly right, or summarize a dense research article in minutes. Small businesses: turn a messy brain-dump into a real plan, or draft a policy in plain language. It explains its reasoning as it goes."
+    },
+    {
+      "kind": "rules",
+      "title": "The rules — the AiGovOps way",
+      "lines": [
+        "A human on the trigger — you read it before it goes out",
+        "Keep the receipts — save your prompt and the answer",
+        "Mind the data cost of “free” — no student records, IEPs, or private details in a free tool"
+      ],
+      "narration": "Now the rules, the AiGovOps way. Keep a human on the trigger: you read it before it goes out. Keep the receipts: save your prompt and the answer. And mind the data cost of free — never paste student records, an I-E-P, or a customer's private details into a free tool, because free tools learn from what you type."
+    },
+    {
+      "kind": "outro",
+      "title": "Good AI, the NCW way.",
+      "sub": "NCW AI Camp · Aug 11, 2026 · AiGovOps Foundation",
+      "narration": "Good A-I, the NCW way. Learn more at the NCW AI Camp. AiGovOps Foundation."
+    }
+  ]
+}
