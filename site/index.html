@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://plausible.io https://www.aigovops-foundation.com https://community.aigovops-foundation.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://aigovops-foundation.github.io https://buy.stripe.com; connect-src 'self' https://plausible.io https://community.aigovops-foundation.com https://raw.githubusercontent.com; object-src 'none'; base-uri 'self'">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AiGovOps Foundation — Grow AI governance together</title>
+<link rel="canonical" href="https://www.aigovops-foundation.com/" />
+  <meta name="description" content="A nonprofit community building open-source AI governance. Join the monthly meeting at AI House, subscribe on Substack, become a member, or write with us. Everything else is in the AiGovOps Foundation Academy." />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <meta property="og:title" content="AiGovOps Foundation — Grow AI governance together" />
+  <meta property="og:description" content="A nonprofit community building open-source AI governance. Join the monthly meeting at AI House, subscribe on Substack, become a member, or write with us. Everything else is in the AiGovOps Foundation Academy." />
+  <meta property="og:image" content="https://www.aigovops-foundation.com/images/wren/cafe-og.jpg" />
+  <meta property="og:url" content="https://www.aigovops-foundation.com/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AiGovOps Foundation — Grow AI governance together" />
+  <meta name="twitter:description" content="A nonprofit community building open-source AI governance. Join the monthly meeting at AI House, subscribe on Substack, become a member, or write with us. Everything else is in the AiGovOps Foundation Academy." />
+  <meta name="twitter:image" content="https://www.aigovops-foundation.com/images/wren/cafe-og.jpg" />
+  <link rel="stylesheet" href="css/style.css?v=20261011b" />
+  <!-- M6 porch redesign — garden-warm skin (homepage only). Pure presentation; loads after style.css. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/garden.css?v=20261011b" />
+  <link rel="stylesheet" href="css/porch.css?v=20261011b" />
+  <link rel="stylesheet" href="css/wren-cafe.css?v=20261011b" />
+  <style>
+    /* ── simple front door (Oct 2026): four tasks, then the Academy ── */
+    .home-hero { padding: 16px 0 28px; text-align: left; }
+    .home-hero h1 { font-size: clamp(1.8rem, 3vw, 2.3rem); margin: 2px 0 4px; line-height: 1.1; }
+    .home-hero .home-lede { margin: 0 0 12px; max-width: 60ch; font-size: 1rem; }
+    .task-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .task-card { background: #fff; border: 1px solid rgba(43,43,40,.12); border-radius: 16px; padding: 12px 16px 12px; display: flex; flex-direction: column; gap: 5px; box-shadow: var(--garden-shadow-sm, 0 1px 2px rgba(0,0,0,.05)); }
+    .task-card h2 { font-family: var(--garden-serif, Fraunces, Georgia, serif); font-size: 1.2rem; margin: 0; color: var(--garden-charcoal, #2b2b28); }
+    .task-card p { margin: 0; color: var(--garden-ink-soft, #55524a); font-size: .92rem; line-height: 1.4; }
+    .task-card .task-when { color: var(--garden-green-ink, #1F5E3A); font-weight: 600; }
+    .task-card .task-btn { align-self: flex-start; margin-top: auto; padding: 8px 16px; }
+    .task-card .btn-primary { background: var(--garden-green, #2E7D4F); color: #fff; }
+    .task-card .btn-primary:hover { background: var(--garden-green-deep, #1F5E3A); }
+    .task-card .btn-outline { border-color: var(--garden-green, #2E7D4F); color: var(--garden-green-ink, #1F5E3A); }
+    .task-form { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+    .task-form input { flex: 1 1 180px; min-width: 0; padding: 8px 12px; border: 1.5px solid rgba(43,43,40,.2); border-radius: 8px; font-size: .95rem; background: #fff; }
+    .task-form .task-btn { margin-top: 0; }
+    .task-msg { min-height: 0; font-size: .8rem; }
+    .task-msg:empty { display: none; }
+    .tiers { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tier { font: 600 .78rem/1.2 var(--garden-sans, 'Source Sans 3', sans-serif); border: 1px solid rgba(43,43,40,.18); border-radius: 999px; padding: 4px 10px; color: var(--garden-charcoal, #2b2b28); background: var(--garden-cream, #FAF7F0); }
+    .academy-bar { display: block; margin-top: 12px; background: var(--garden-charcoal, #2b2b28); color: #fff; border-radius: 16px; padding: 12px 18px; text-decoration: none; }
+    .academy-bar:hover { background: #1d1d1b; }
+    .academy-bar b { color: var(--garden-gold, #E8B54A); }
+    .academy-bar .academy-bar-title { font-family: var(--garden-serif, Fraunces, Georgia, serif); font-size: 1.15rem; display: block; }
+    .academy-bar small { display: block; margin-top: 2px; color: rgba(255,255,255,.78); font-size: .85rem; line-height: 1.35; }
+    @media (max-width: 700px) { .task-grid { grid-template-columns: 1fr; } .home-hero { padding-top: 16px; } .home-hero h1 { font-size: 1.8rem; } }
+    /* ── M14 dead-simple porch: two doors, one quiet line ── */
+    /* two doors instead of four — centered pair */
+    .hero .action-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 680px; margin-left: auto; margin-right: auto; }
+    @media (max-width: 600px) { .hero .action-grid { grid-template-columns: 1fr; } }
+    /* the Come Join door carries btn-primary (the hero's ONE primary CTA);
+       the porch door look wins over the garden pill defaults */
+    .hero .action-card.btn-primary { border-radius: var(--porch-r-2xl); }
+    /* the merged quiet line reads as one quiet sentence — neutralize the
+       old ribbon's pill treatment (it assumed the give-time/give-money pair) */
+    .hero .hero-quiet-links:last-of-type {
+      max-width: 760px; padding: 0; background: transparent; border: none;
+      font-family: var(--porch-sans); font-style: normal; font-size: .92rem !important;
+      color: var(--porch-ink-soft); margin: 18px auto 44px !important;
+    }
+    .hero .hero-quiet-links:last-of-type a,
+    .hero .hero-quiet-links:last-of-type a:first-of-type,
+    .hero .hero-quiet-links:last-of-type a:last-of-type {
+      display: inline; background: none; border: none; padding: 0; margin: 0;
+      border-radius: 0; font-family: inherit; font-style: normal; font-size: inherit;
+      font-weight: 600; text-decoration: underline; text-underline-offset: 3px;
+      color: var(--porch-green-ink) !important;
+    }
+    .hero .hero-quiet-links:last-of-type a:hover,
+    .hero .hero-quiet-links:last-of-type a:first-of-type:hover,
+    .hero .hero-quiet-links:last-of-type a:last-of-type:hover {
+      transform: none; box-shadow: none; color: var(--porch-orange-ink) !important;
+    }
+
+    /* ── the café (11 Sept 2026) ── */
+    .cafe-section { padding: 56px 0; }
+    .cafe-head { display: flex; gap: 18px; align-items: flex-start; max-width: 860px; margin: 0 auto 26px; }
+    .cafe-wren { width: 56px; height: 56px; border-radius: 50%; border: 2px solid var(--garden-gold, #E8B54A); flex: none; }
+    .cafe-lead { color: var(--garden-ink-soft, #55524a); font-size: 1rem; line-height: 1.6; margin: 0; max-width: 62ch; }
+    .cafe-doors { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+    .cafe-door { display: grid; gap: 6px; background: #fff; border: 1px solid rgba(43,43,40,.14); border-radius: 14px; padding: 18px 20px; text-decoration: none; color: inherit; transition: border-color .15s, transform .15s; }
+    .cafe-door:hover { border-color: var(--garden-green, #2E7D4F); transform: translateY(-2px); }
+    .cafe-door:focus-visible { outline: 2px solid var(--garden-gold, #E8B54A); outline-offset: 3px; border-color: var(--garden-green, #2E7D4F); }
+    .cafe-door q { quotes: "“" "”"; font-family: var(--porch-serif, var(--garden-serif, Georgia, serif)); font-style: italic; font-size: 1.12rem; line-height: 1.3; color: var(--garden-charcoal, #2b2b28); }
+    .cafe-door small { color: var(--garden-ink-soft, #55524a); font-size: .86rem; line-height: 1.5; }
+    .cafe-lv { font: 600 11px 'Courier New', monospace; letter-spacing: .1em; text-transform: uppercase; color: var(--garden-green-ink, #1F5E3A); }
+    .cafe-door-start { background: var(--garden-deep-cream, #F3EBDD); }
+    .ten-section { padding: 56px 0; }
+    .ten-steps { max-width: 760px; margin: 0 auto 22px; padding-left: 1.4em; line-height: 1.7; font-size: 1.02rem; }
+    .ten-steps li { margin-bottom: 8px; }
+    .ten-steps b { color: var(--garden-charcoal, #2b2b28); }
+    .ten-cta { text-align: center; margin: 0; }
+    .ten-note { display: block; margin-top: 14px; font-size: .92rem; color: var(--garden-ink-soft, #55524a); }
+    @media (max-width: 600px) { .cafe-head { flex-direction: column; } }
+    /* the toolkit band, reduced to one line (the trio lives on Stay at Yes) */
+  </style>
+  <script src="js/i18n/i18n.js?v=20261011b"></script>
+  <!-- Plausible Analytics — privacy-first, GDPR-compliant, no cookie banner -->
+  <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "NGO"],
+      "@id": "https://www.aigovops-foundation.com/#organization",
+      "name": "AiGovOps Foundation",
+      "url": "https://www.aigovops-foundation.com",
+      "logo": "https://www.aigovops-foundation.com/images/logo.png",
+      "description": "Open-source AI governance foundation. Policy as code. Evidence that ships. Governance your auditor can verify with one command.",
+      "nonprofitStatus": "Nonprofit501c3",
+      "alternateName": ["AIGovOps", "AI GovOps", "AIGovOps Foundation"],
+      "knowsAbout": [
+        "AI governance",
+        "AI governance operations (AiGovOps)",
+        "OVERT open standard",
+        "Beacon signed evidence receipts",
+        "AI audit",
+        "NIST AI RMF",
+        "EU AI Act",
+        "ISO/IEC 42001"
+      ],
+      "slogan": "Ship safe AI. Never unsafe AI.",
+      "foundingDate": "2026",
+      "founder": [
+        {
+          "@type": "Person",
+          "name": "Ken Johnston",
+          "url": "https://www.aigovops-foundation.com/founders.html#ken"
+        },
+        {
+          "@type": "Person",
+          "name": "Bob Rapp",
+          "url": "https://www.aigovops-foundation.com/founders.html#bob"
+        }
+      ],
+      "sameAs": [
+        "https://github.com/aigovops-foundation",
+        "https://aigovops.substack.com/",
+        "https://www.linkedin.com/in/rkjohnston/",
+        "https://www.linkedin.com/in/bobrapp/",
+        "https://practice.aigovops-foundation.com/",
+        "https://community.aigovops-foundation.com/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "bob.rapp@aigovops.community",
+        "contactType": "general"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.aigovops-foundation.com/#website",
+      "url": "https://www.aigovops-foundation.com",
+      "name": "AiGovOps Foundation",
+      "publisher": {
+        "@id": "https://www.aigovops-foundation.com/#organization"
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="alternate" type="application/rss+xml" title="AiGovOps Foundation Feed" href="/feed.xml" />
+</head>
+<body>
+<svg id="wc-sprite" xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="wc-cup" viewBox="0 0 24 24"><path d="M4 8h12v6a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5z"/><path d="M16 10h2a2 2 0 0 1 0 4h-2"/><path d="M8 3v2M11 3v2"/></symbol><symbol id="wc-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></symbol><symbol id="wc-receipt" viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></symbol><symbol id="wc-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol><symbol id="wc-wrench" viewBox="0 0 24 24"><path d="M14 4l6 6-8 8H6v-6z"/><path d="M12 6l6 6"/></symbol><symbol id="wc-hand" viewBox="0 0 24 24"><path d="M8 13V6a1.5 1.5 0 0 1 3 0v6"/><path d="M11 12V5a1.5 1.5 0 0 1 3 0v7"/><path d="M14 12V7a1.5 1.5 0 0 1 3 0v6"/><path d="M17 13a1.5 1.5 0 0 1 3 0v3a6 6 0 0 1-6 6h-2a6 6 0 0 1-5-3l-3-5a1.5 1.5 0 0 1 2.6-1.5L8 14"/></symbol><symbol id="wc-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></symbol><symbol id="wc-book" viewBox="0 0 24 24"><path d="M4 5h6a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H4z"/><path d="M20 5h-6a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h7z"/></symbol><symbol id="wc-leaf" viewBox="0 0 24 24"><path d="M12 3c3 3 4 6 4 9a4 4 0 0 1-8 0c0-3 1-6 4-9z"/><path d="M12 16v5M8 21h8"/></symbol><symbol id="wc-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></symbol><symbol id="wc-code" viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4"/><path d="M16 8l4 4-4 4"/><path d="M14 5l-4 14"/></symbol><symbol id="wc-scale" viewBox="0 0 24 24"><path d="M12 3v18M5 21h14"/><path d="M4 8h16"/><path d="M7 8l-3 6a3 3 0 0 0 6 0z"/><path d="M17 8l-3 6a3 3 0 0 0 6 0z"/></symbol><symbol id="wc-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"/></symbol><symbol id="wc-megaphone" viewBox="0 0 24 24"><path d="M4 10v4h3l7 4V6l-7 4z"/><path d="M17 9a4 4 0 0 1 0 6"/></symbol><symbol id="wc-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></symbol><symbol id="wc-repeat" viewBox="0 0 24 24"><path d="M4 9a5 5 0 0 1 5-5h9"/><path d="M15 1l3 3-3 3"/><path d="M20 15a5 5 0 0 1-5 5H6"/><path d="M9 23l-3-3 3-3"/></symbol><symbol id="wc-pen" viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M13 7l3 3"/></symbol><symbol id="wc-flag" viewBox="0 0 24 24"><path d="M5 21V4"/><path d="M5 4h12l-3 4 3 4H5"/></symbol><symbol id="wc-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol><symbol id="wc-atom" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)"/></symbol><symbol id="wc-cap" viewBox="0 0 24 24"><path d="M2 9l10-4 10 4-10 4z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></symbol><symbol id="wc-tent" viewBox="0 0 24 24"><path d="M3 20L12 4l9 16z"/><path d="M12 12l-4 8M12 12l4 8"/></symbol><symbol id="wc-lantern" viewBox="0 0 24 24"><path d="M9 6h6l2 4v6l-2 4H9l-2-4v-6z"/><path d="M12 3v3M12 20v1"/><path d="M12 9v5"/></symbol><symbol id="wc-umbrella" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 18 0z"/><path d="M12 12v6a2 2 0 0 0 4 0"/><path d="M12 3v1"/></symbol><symbol id="wc-clipboard" viewBox="0 0 24 24"><path d="M7 5h10v16H7z"/><path d="M9 3h6v4H9z"/><path d="M10 12h4M10 16h4"/></symbol><symbol id="wc-calendar" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></symbol><symbol id="wc-briefcase" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M9 8V5h6v3"/><path d="M3 13h18"/></symbol><symbol id="wc-news" viewBox="0 0 24 24"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 8h3v9a2 2 0 0 1-2 2"/><path d="M7 9h7M7 13h7"/></symbol><symbol id="wc-sprout" viewBox="0 0 24 24"><path d="M12 21v-8"/><path d="M12 13c0-4 3-6 7-6 0 4-3 6-7 6z"/><path d="M12 15c0-3-2.5-5-6-5 0 3 2.5 5 6 5z"/></symbol></svg>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- NAV -->
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo-link">
+      <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AiGovOps Foundation Lantern logo" style="height:38px;width:38px;flex-shrink:0">
+        <title>AiGovOps Foundation</title>
+        <defs>
+          <clipPath id="navClip"><circle cx="100" cy="100" r="96"/></clipPath>
+          <path id="navTr" d="M100,100 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"/>
+          <style>
+            @keyframes navSweep{0%{transform:rotate(-52deg);opacity:.9}45%{transform:rotate(52deg);opacity:.9}58%{transform:rotate(52deg);opacity:0}59%{transform:rotate(-52deg);opacity:0}72%{transform:rotate(-52deg);opacity:.9}100%{transform:rotate(-52deg);opacity:.9}}
+            @keyframes navSweep2{0%{transform:rotate(-36deg);opacity:.55}45%{transform:rotate(36deg);opacity:.55}58%{transform:rotate(36deg);opacity:0}59%{transform:rotate(-36deg);opacity:0}72%{transform:rotate(-36deg);opacity:.55}100%{transform:rotate(-36deg);opacity:.55}}
+            @keyframes navFlame{0%,100%{opacity:.95}50%{opacity:.55}}
+            @keyframes navSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+            .nb1{transform-origin:50% 100%;animation:navSweep 6s ease-in-out infinite}
+            .nb2{transform-origin:50% 100%;animation:navSweep2 6s ease-in-out infinite .18s}
+            .nfl{animation:navFlame 2.2s ease-in-out infinite}
+            .ntr{transform-origin:100px 100px;animation:navSpin 35s linear infinite}
+            @media(prefers-reduced-motion:reduce){.nb1,.nb2,.nfl,.ntr{animation:none}.nb1{transform:rotate(0deg);opacity:.85}.nb2{transform:rotate(0deg);opacity:.5}}
+            @media(max-width:600px){.nb1,.nb2{animation-duration:8s}.ntr{animation:none}}
+          </style>
+        </defs>
+        <circle cx="100" cy="100" r="96" fill="#071a12"/>
+        <g class="nb1" clip-path="url(#navClip)"><polygon points="100,100 35,0 165,0" fill="#9fe1cb" opacity=".11"/></g>
+        <g class="nb2" clip-path="url(#navClip)"><polygon points="100,100 62,0 138,0" fill="#e1f5ee" opacity=".09"/></g>
+        <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+        <circle cx="100" cy="100" r="79" fill="none" stroke="#1d9e75" stroke-width="0.5" opacity=".35"/>
+        <line x1="100" y1="4"   x2="100" y2="11"  stroke="#1d9e75" stroke-width="1.5" opacity=".6"/>
+        <line x1="100" y1="189" x2="100" y2="196" stroke="#1d9e75" stroke-width="1.5" opacity=".6"/>
+        <line x1="4"   y1="100" x2="11"  y2="100" stroke="#1d9e75" stroke-width="1.5" opacity=".6"/>
+        <line x1="189" y1="100" x2="196" y2="100" stroke="#1d9e75" stroke-width="1.5" opacity=".6"/>
+        <line x1="100" y1="18" x2="100" y2="10" stroke="#1d9e75" stroke-width="1.8" stroke-linecap="round"/>
+        <ellipse cx="100" cy="9" rx="7" ry="3" fill="none" stroke="#1d9e75" stroke-width="1.8"/>
+        <rect x="84" y="17" width="32" height="6" rx="2" fill="#085041"/>
+        <path d="M88 23 L80 41 L120 41 L112 23 Z" fill="#0f6e56"/>
+        <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+        <line x1="90"  y1="41" x2="90"  y2="93" stroke="#1d9e75" stroke-width="1" opacity=".5"/>
+        <line x1="100" y1="41" x2="100" y2="93" stroke="#1d9e75" stroke-width="1" opacity=".5"/>
+        <line x1="110" y1="41" x2="110" y2="93" stroke="#1d9e75" stroke-width="1" opacity=".5"/>
+        <line x1="78"  y1="67" x2="122" y2="67" stroke="#1d9e75" stroke-width="1.2" opacity=".5"/>
+        <rect x="78" y="41" width="44" height="52" rx="1.5" fill="none" stroke="#1d9e75" stroke-width="1"/>
+        <ellipse cx="100" cy="60" rx="10" ry="12" fill="#1d9e75" opacity=".3"/>
+        <ellipse cx="100" cy="60" rx="7"  ry="9"  fill="#5dcaa5" opacity=".75"/>
+        <ellipse class="nfl" cx="100" cy="57" rx="4" ry="6" fill="#9fe1cb" opacity=".95"/>
+        <ellipse cx="100" cy="55" rx="2" ry="3" fill="#e1f5ee" opacity=".9"/>
+        <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+        <rect x="84" y="111" width="32" height="6" rx="2" fill="#085041"/>
+        <ellipse cx="100" cy="121" rx="5" ry="2.5" fill="#085041"/>
+        <line x1="100" y1="117" x2="100" y2="124" stroke="#085041" stroke-width="2" stroke-linecap="round"/>
+        <g class="ntr"><text font-family="'Courier New',monospace" font-size="9.5" font-weight="600" fill="#1d9e75" letter-spacing="2.8" opacity=".8"><textPath href="#navTr" startOffset="4%">AIGOVOPS FOUNDATION · LANTERN ·</textPath></text></g>
+      </svg>
+    </a>
+    <nav class="main-nav">
+      <a href="library.html" data-i18n="nav.library">Library</a>
+      <a href="https://luma.com/aigovops" target="_blank" rel="noopener" data-i18n="nav.meetings">Meetings</a>
+      <a href="https://aigovops.substack.com" target="_blank" rel="noopener" data-i18n="nav.newsletter">Newsletter</a>
+      <a href="support.html" data-i18n="nav.give">Give</a>
+      <a href="https://community.aigovops-foundation.com/signin.html" class="nav-join" data-i18n="nav.join">Become a member</a>
+    </nav>
+    <div class="lang-toggle" aria-label="Language selector">
+      <button class="lang-btn lang-active" data-lang="en" onclick="window.I18N_SET('en')">EN<span class="sr-only">, switch to English</span></button>
+      <button class="lang-btn" data-lang="es" onclick="window.I18N_SET('es')">ES<span class="sr-only">, cambiar a español</span></button>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  </div>
+</header>
+
+<!-- HOME — the simple front door (Oct 2026): four tasks, then one link to the Academy -->
+<section class="hero home-hero" id="main-content">
+  <div class="container">
+    <p class="hero-eyebrow" data-i18n="home.eyebrow">AiGovOps Foundation · Open-source AI governance</p>
+    <h1 data-i18n="home.h1">Grow AI governance together.</h1>
+    <p class="hero-sub home-lede" data-i18n="home.lede">A nonprofit community building open-source AI governance. Pick what you came to do.</p>
+    <ul class="task-grid" aria-label="Top tasks">
+      <li class="task-card" id="meeting">
+        <h2 data-i18n="home.meet.t">Join the next meeting</h2>
+        <p class="task-when" id="nextMeeting" data-i18n="home.meet.none">See the next date on Luma</p>
+        <p data-i18n="home.meet.d">The monthly community meeting at AI House, Seattle, and online.</p>
+        <a class="btn btn-primary task-btn" id="nextMeetingLink" href="https://luma.com/aigovops" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Home: meeting')" data-i18n="home.meet.cta">Register on Luma</a>
+      </li>
+      <li class="task-card" id="subscribe">
+        <h2 data-i18n="home.news.t">Subscribe on Substack</h2>
+        <p data-i18n="home.news.d">Monthly field notes from Bob, Ken and volunteers.</p>
+        <form id="newsletterForm" class="task-form" onsubmit="handleNewsletterSubmit(event)">
+          <label for="newsletterEmail" class="sr-only" data-i18n="home.news.label">Email address</label>
+          <input type="email" id="newsletterEmail" placeholder="you@example.com" required autocomplete="email" />
+          <button type="submit" class="btn btn-primary task-btn" data-i18n="home.news.cta">Subscribe</button>
+        </form>
+        <p id="newsletterMsg" class="task-msg" aria-live="polite"></p>
+        <p class="fine-print task-msg" data-i18n="newsletter.fine">No spam. Delivered by Substack — unsubscribe any time.</p>
+      </li>
+      <li class="task-card" id="member">
+        <h2 data-i18n="home.member.t">Become a member</h2>
+        <p data-i18n="home.member.d">Meeting recordings, early Substack drafts, the case-study library and a member badge.</p>
+        <p class="tiers"><span class="tier" data-i18n="home.member.t1">$12 / yr · Anyone</span><span class="tier" data-i18n="home.member.t2">$120 / yr · Founder or creator</span><span class="tier" data-i18n="home.member.t3">$1,200 / yr · Company</span></p>
+        <a class="btn btn-primary task-btn" href="members.html" onclick="if(window.plausible)plausible('Home: member')" data-i18n="home.member.cta">Choose a membership</a>
+      </li>
+      <li class="task-card" id="write">
+        <h2 data-i18n="home.write.t">Write with us</h2>
+        <p data-i18n="home.write.d">Pick a topic, send a draft, publish with Bob and Ken.</p>
+        <a class="btn btn-outline task-btn" href="write.html" onclick="if(window.plausible)plausible('Home: write')" data-i18n="home.write.cta">See open topics</a>
+      </li>
+    </ul>
+    <a class="academy-bar" href="academy.html" onclick="if(window.plausible)plausible('Home: academy')">
+      <span class="academy-bar-title"><b data-i18n="home.academy.t">Everything else →</b> <span data-i18n="home.academy.n">The AiGovOps Foundation Academy</span></span>
+      <small data-i18n="home.academy.d">Research · Learn · Practice · Get audit-ready, plus open source, demos, the Library, the NCW camp, book time with Bob and plan an audit</small>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="index.html">
+        <svg class="footer-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AiGovOps Foundation Lantern" style="height:38px;width:38px">
+          <title>AiGovOps Foundation</title>
+          <defs><path id="ftr" d="M100,100 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"/></defs>
+          <circle cx="100" cy="100" r="96" fill="#071a12"/>
+          <polygon points="100,100 42,0 158,0" fill="#9fe1cb" opacity="0.09"/>
+          <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+          <circle cx="100" cy="100" r="79" fill="none" stroke="#1d9e75" stroke-width="0.5" opacity="0.35"/>
+          <line x1="100" y1="4" x2="100" y2="11" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+          <line x1="100" y1="189" x2="100" y2="196" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+          <line x1="4" y1="100" x2="11" y2="100" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+          <line x1="189" y1="100" x2="196" y2="100" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+          <line x1="100" y1="18" x2="100" y2="10" stroke="#1d9e75" stroke-width="1.8" stroke-linecap="round"/>
+          <ellipse cx="100" cy="9" rx="7" ry="3" fill="none" stroke="#1d9e75" stroke-width="1.8"/>
+          <rect x="84" y="17" width="32" height="6" rx="2" fill="#085041"/>
+          <path d="M88 23 L80 41 L120 41 L112 23 Z" fill="#0f6e56"/>
+          <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+          <line x1="90" y1="41" x2="90" y2="93" stroke="#1d9e75" stroke-width="1" opacity="0.5"/>
+          <line x1="100" y1="41" x2="100" y2="93" stroke="#1d9e75" stroke-width="1" opacity="0.5"/>
+          <line x1="110" y1="41" x2="110" y2="93" stroke="#1d9e75" stroke-width="1" opacity="0.5"/>
+          <line x1="78" y1="67" x2="122" y2="67" stroke="#1d9e75" stroke-width="1.2" opacity="0.5"/>
+          <rect x="78" y="41" width="44" height="52" rx="1.5" fill="none" stroke="#1d9e75" stroke-width="1"/>
+          <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
+          <ellipse cx="100" cy="57" rx="4" ry="6" fill="#9fe1cb" opacity="0.95"/>
+          <ellipse cx="100" cy="55" rx="2" ry="3" fill="#e1f5ee" opacity="0.9"/>
+          <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+          <rect x="84" y="111" width="32" height="6" rx="2" fill="#085041"/>
+          <ellipse cx="100" cy="121" rx="5" ry="2.5" fill="#085041"/>
+          <text font-family="'Courier New',monospace" font-size="9.5" font-weight="600" fill="#1d9e75" letter-spacing="2.8" opacity="0.75">
+            <textPath href="#ftr" startOffset="4%">AIGOVOPS FOUNDATION · LANTERN ·</textPath>
+          </text>
+        </svg>
+      </a>
+      <p>Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes. Prove it in ten minutes.</p>
+      <p class="footer-gate"><a href="https://community.aigovops-foundation.com/gate-check.html?src=site-footer" onclick="if(window.plausible)plausible('Gate Check: footer')">Ten minutes, no account — run the Gate Check →</a></p>
+      <p class="footer-marks" data-i18n="footer.marks">Apache-2.0 · Conforms to OVERT · NIST AI RMF · EU AI Act · ISO/IEC 42001 · 501(c)(3) Foundation</p>
+      <address>Seattle, WA 98104 · Global Community &bull;
+        <a href="mailto:bob.rapp@aigovops.community">bob.rapp@aigovops.community</a> &bull;
+        <a href="mailto:ken.johnston@aigovops.community">ken.johnston@aigovops.community</a>
+        <span id="visitorTz" style="display:block;font-size:0.78rem;color:#8080a0;margin-top:4px;"></span>
+      </address>
+    </div>
+        <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="library.html">Library</a>
+      <a href="open-source.html">Open source</a>
+      <a href="community.html">Community</a>
+      <a href="blog.html">Blog</a>
+      <a href="founders.html">Founders</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="/feed.xml">RSS</a>
+      <a href="https://aigovops.substack.com/" target="_blank" rel="noopener">Newsletter</a>
+      <span class="footer-label">Start here</span>
+      <a href="for-founders.html">Startup founder</a>
+      <a href="for-enterprise.html">Enterprise governance lead</a>
+      <a href="for-students.html">Student</a>
+      <a href="for-researchers.html">Researcher</a>
+      <a href="for-regulators.html">Regulator / policy</a>
+      <a href="for-contributors.html">Open-source contributor</a>
+      <span class="footer-label">Topics</span>
+      <a href="ai-governance.html">AI governance</a>
+      <a href="aigovops.html">AiGovOps</a>
+      <a href="nonprofit.html">Nonprofit</a>
+      <a href="overt.html">OVERT</a>
+      <a href="beacon.html">Beacon</a>
+      <a href="audit.html">AI audit plan</a>
+      <a href="starter-kits.html">Starter kits</a>
+    <a href="glossary.html" data-i18n="glossary.link">Glossary</a></nav>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/company/aigovops-foundation" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 AiGovOps Foundation. All rights reserved. · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js?v=20261011b"></script>
+<script>
+// Old home-page anchors now live on the Academy page.
+(function () {
+  var h = window.location.hash.slice(1);
+  if (/^(start|problem|ten|six-title|cafe-title|ten-title)$/.test(h)) window.location.replace('academy.html#' + h);
+})();
+// Next meeting: data/next-meeting.json is written daily from the public Luma calendar.
+(function () {
+  var when = document.getElementById('nextMeeting'), link = document.getElementById('nextMeetingLink');
+  if (!when || !link || !window.fetch) return;
+  fetch('data/next-meeting.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+    if (!d || typeof d.start !== 'string') return;
+    var t = new Date(d.start);
+    if (isNaN(t.getTime())) return;
+    var es = document.documentElement.lang === 'es';
+    var s = new Intl.DateTimeFormat(es ? 'es' : 'en-US', { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZone: 'America/Los_Angeles', timeZoneName: 'short' }).format(t);
+    when.removeAttribute('data-i18n');
+    when.textContent = (es ? 'Próxima: ' : 'Next: ') + s + ' · AI House + online';
+    if (typeof d.url === 'string' && /^https:\/\/(luma\.com|lu\.ma)\//.test(d.url)) link.href = d.url;
+  }).catch(function () {});
+})();
+</script>
+<script>
+// Newsletter inline form handler
+function handleNewsletterSubmit(e) {
+  e.preventDefault();
+  const email = document.getElementById('newsletterEmail').value.trim();
+  const msg   = document.getElementById('newsletterMsg');
+  if (!email) return;
+  const url = 'https://aigovops.substack.com/subscribe?utm_source=site-newsletter&utm_medium=form&email=' + encodeURIComponent(email);
+  window.open(url, '_blank', 'noopener');
+  msg.textContent = 'Opening Substack — confirm your subscription there ✓';
+  if (window.plausible) plausible('Newsletter signup', { props: { source: 'homepage-inline' } });
+}
+
+// Visitor timezone display in footer
+(function() {
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const el = document.getElementById('visitorTz');
+    if (el && tz) el.textContent = 'You\'re visiting from ' + tz.replace(/_/g, ' ');
+  } catch(e) {}
+})();
+
+// Mobile nav — inject secondary links when menu opens on small screens
+(function() {
+  const toggle = document.querySelector('.nav-toggle');
+  const nav    = document.querySelector('.main-nav');
+  if (!toggle || !nav) return;
+  const EXTRA = [
+    { href: '/press.html',     label: 'Press' },
+    { href: '/founders.html',  label: 'Founders' },
+    { href: '/support.html',   label: 'Support' },
+  ];
+  let injected = false;
+  toggle.addEventListener('click', () => {
+    if (injected) return;
+    const current = window.location.pathname.replace(/\/$/, '') || '/index.html';
+    EXTRA.forEach(item => {
+      const alreadyInNav = [...nav.querySelectorAll('a')].some(a => a.getAttribute('href') === item.href || a.href.endsWith(item.href));
+      if (alreadyInNav) return;
+      const a = document.createElement('a');
+      a.href  = item.href;
+      a.textContent = item.label;
+      a.style.cssText = 'font-size:.85rem;color:var(--muted)';
+      if (current.endsWith(item.href.replace(/^\//, ''))) a.classList.add('active');
+      nav.appendChild(a);
+    });
+    injected = true;
+  });
+})();
+
+</script>
+<script src="feedback.js?v=20261011b" class="aig-feedback-loader" data-theme="light" defer></script>
+</body>
+</html>
