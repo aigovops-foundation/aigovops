@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-13T19:08:28Z",
+  "updated": "2026-10-17T07:06:10Z",
   "feed_health": {
     "bob": {
       "ok": true,
       "fetched": 10,
-      "published": 10,
+      "published": 9,
       "error": null
     },
     "ken": {
@@ -16,82 +16,74 @@
   },
   "bob": [
     {
-      "title": "PROBLEM AI that influences minors can shape trust, choices, identity, and development. Age assurance is imperfect—not permission t...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-ai-that-influences-minors-can-shape-activity-7515759219468296192-xEzA",
-      "date": "Tue, 13 Oct 2026 13:03:54 GMT",
-      "summary": "PROBLEM AI that influences minors can shape trust, choices, identity, and development. Age assurance is imperfect—not permission to lower safeguards. Test child-specific harms before launch. SOLUTION Use heightened defaults: minimum data, no manipulative nudges, clear AI disclosu",
+      "title": "Shutdown ≠ decommissioning proof. PROBLEM “Off” can leave zombie endpoints, service identities, user paths, webhooks, or downstrea...",
+      "link": "https://www.linkedin.com/posts/bobrapp_shutdown-decommissioning-proof-problem-activity-7516982171694186496-xUS_",
+      "date": "Fri, 16 Oct 2026 22:03:29 GMT",
+      "summary": "Shutdown ≠ decommissioning proof. PROBLEM “Off” can leave zombie endpoints, service identities, user paths, webhooks, or downstream consumers. This is residual-access verification: not model retirement. SOLUTION Build closure evidence: • Disable endpoints; revoke identities, toke",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "AI monitoring can look “green” while critical stages stay invisible. PROBLEM Unobserved stages, undocumented signals, delayed logs...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-monitoring-can-look-green-while-critical-activity-7515758929956487168-zslO",
-      "date": "Tue, 13 Oct 2026 13:02:45 GMT",
-      "summary": "AI monitoring can look “green” while critical stages stay invisible. PROBLEM Unobserved stages, undocumented signals, delayed logs and unmonitored downstream effects create coverage gaps. This is not a general metrics issue—or audit-trail compression. SOLUTION Map each lifecycle",
+      "title": "Suspicious AI-agent activity is not the incident. The governance test is what happens next. PROBLEM Detection without response rea...",
+      "link": "https://www.linkedin.com/posts/bobrapp_suspicious-ai-agent-activity-is-not-the-incident-activity-7516981669371904000-lgKt",
+      "date": "Fri, 16 Oct 2026 22:01:29 GMT",
+      "summary": "Suspicious AI-agent activity is not the incident. The governance test is what happens next. PROBLEM Detection without response readiness creates false confidence. An alert needs severity, a named decision owner, and a measurable clock. 问题 发现可疑活动不等于做好应对准备。每个警报都需要明确严重级别、指定决策负责人和可衡量",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "Policy on paper is not operational AI governance. Evidence is. PROBLEM / 問題 A maturity score matters only when it identifies the n...",
-      "link": "https://www.linkedin.com/posts/bobrapp_policy-on-paper-is-not-operational-ai-governance-activity-7515532251330134016-sRFy",
-      "date": "Mon, 12 Oct 2026 22:02:01 GMT",
-      "summary": "Policy on paper is not operational AI governance. Evidence is. PROBLEM / 問題 A maturity score matters only when it identifies the next control to improve. / 成熟度は次の改善点を示してこそ意味があります。 SOLUTION / 解決策 Score 1 only when current evidence exists; otherwise score 0: Owner named / 責任者; reco",
+      "title": "Benchmark results can be precise—and still too uncertain to support a launch claim. PROBLEM A score is not evidence strength. Chec...",
+      "link": "https://www.linkedin.com/posts/bobrapp_benchmark-results-can-be-preciseand-still-activity-7516846225166594048-dbhD",
+      "date": "Fri, 16 Oct 2026 13:03:16 GMT",
+      "summary": "Benchmark results can be precise—and still too uncertain to support a launch claim. PROBLEM A score is not evidence strength. Check confidence-interval width, sample adequacy per critical slice, missing slices, and independent reproducibility. SOLUTION Set gates before testing: C",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "Translation can be fluent—and still fail locally. PROBLEM | समस्या Localization is not translation. Test idioms, social norms, power...",
-      "link": "https://www.linkedin.com/posts/bobrapp_translation-can-be-fluentand-still-fail-activity-7515532176772186112-k6ZF",
-      "date": "Mon, 12 Oct 2026 22:01:43 GMT",
-      "summary": "Translation can be fluent—and still fail locally. PROBLEM | समस्या Localization is not translation. Test idioms, social norms, power dynamics, cultural assumptions, and market-specific harm patterns before launch. स्थानीयकरण केवल अनुवाद नहीं है। लॉन्च से पहले मुहावरों, सामाजिक मा",
+      "title": "Shared workspaces are AI control-plane infrastructure—not just team plumbing. PROBLEM / PROBLÈME Agents can edit shared boards, ar...",
+      "link": "https://www.linkedin.com/posts/bobrapp_shared-workspaces-are-ai-control-plane-infrastructurenot-activity-7516846155322994688-1Uzh",
+      "date": "Fri, 16 Oct 2026 13:03:00 GMT",
+      "summary": "Shared workspaces are AI control-plane infrastructure—not just team plumbing. PROBLEM / PROBLÈME Agents can edit shared boards, artifact stores, and channels. Spoofed authors, silent edits, or overwritten snapshots can corrupt decisions. This is workspace integrity—not prompt/pol",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "A human in the loop is not a quality metric. 人在回路中，不等于审查有效。 Problem Reviewers can be present while AI errors pass. Measure whether...",
-      "link": "https://www.linkedin.com/posts/bobrapp_a-human-in-the-loop-is-not-a-quality-metric-activity-7515397059126927361-gHPm",
-      "date": "Mon, 12 Oct 2026 13:04:48 GMT",
-      "summary": "A human in the loop is not a quality metric. 人在回路中，不等于审查有效。 Problem Reviewers can be present while AI errors pass. Measure whether reviewers catch and correctly resolve errors—not attendance. 问题 有人在场，错误仍可能漏过。衡量发现与纠正，而不是参与形式。 Solution Use blinded samples. Track: • Catch rate, corr",
+      "title": "An evaluation environment can look isolated—and still touch the outside world. Problem Can the agent reach an unintended service,...",
+      "link": "https://www.linkedin.com/posts/bobrapp_an-evaluation-environment-can-look-isolatedand-activity-7516619499899633664-miPW",
+      "date": "Thu, 15 Oct 2026 22:02:21 GMT",
+      "summary": "An evaluation environment can look isolated—and still touch the outside world. Problem Can the agent reach an unintended service, alter a shared workspace, or reuse a credential? Solution Test the boundary—not just the sandbox. Ship Good AI □ Allowlist; deny by default. □ Seed UR",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "AI accountability can vanish in M&A—not because models changed, but because ownership did. Problem: Merged teams can lose owners,...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-accountability-can-vanish-in-manot-because-activity-7515396426017710080-Veyf",
-      "date": "Mon, 12 Oct 2026 13:02:17 GMT",
-      "summary": "AI accountability can vanish in M&A—not because models changed, but because ownership did. Problem: Merged teams can lose owners, evidence, escalation, and remedies. Never migrate first. Solution—continuity gate: inventory decisions/owners; freeze unsafe migrations; validate acce",
+      "title": "AI output does not stop at an API boundary. Problem: An external service may reuse it beyond your intent. API compatibility is not...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-output-does-not-stop-at-an-api-boundary-activity-7516619300720361472-oUBM",
+      "date": "Thu, 15 Oct 2026 22:01:33 GMT",
+      "summary": "AI output does not stop at an API boundary. Problem: An external service may reuse it beyond your intent. API compatibility is not governance—and this is not a decision-boundary map. Solution: Contract the boundary: permitted downstream use; warning propagation; responsibility ha",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "Live personal data is not a default pilot environment. PROBLEM “Just a pilot” is not a control. Masked data can be re-identified;...",
-      "link": "https://www.linkedin.com/posts/bobrapp_live-personal-data-is-not-a-default-pilot-activity-7515170000349941760-fFEy",
-      "date": "Sun, 11 Oct 2026 22:02:33 GMT",
-      "summary": "Live personal data is not a default pilot environment. PROBLEM “Just a pilot” is not a control. Masked data can be re-identified; prototypes can reach production. SOLUTION Start synthetic/masked; test re-identification; grant minimum, time-boxed access; separate test from product",
+      "title": "A vendor claim is not an internal compliance assertion. PROBLEM / 问题 “Fair,” “robust,” and “compliant” are claims—not evidence. Te...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-vendor-claim-is-not-an-internal-compliance-activity-7516483766836518912-XItX",
+      "date": "Thu, 15 Oct 2026 13:03:00 GMT",
+      "summary": "A vendor claim is not an internal compliance assertion. PROBLEM / 问题 “Fair,” “robust,” and “compliant” are claims—not evidence. Test first, or supplier marketing becomes internal risk. “公平、稳健、合规”是声明，不是证据。先验证，否则营销会变成内部风险。 SOLUTION / 解决方案 For each material claim: map artifacts such",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "ENGLISH PROBLEM A supplier vulnerability disclosure—affecting a model, tool, dataset, or infrastructure—can leave ownership, affec...",
-      "link": "https://www.linkedin.com/posts/bobrapp_english-problem-a-supplier-vulnerability-activity-7515169886952824832-Ol2C",
-      "date": "Sun, 11 Oct 2026 22:02:06 GMT",
-      "summary": "ENGLISH PROBLEM A supplier vulnerability disclosure—affecting a model, tool, dataset, or infrastructure—can leave ownership, affected versions, temporary controls, notices, remediation, and closure unclear. SOLUTION Assign triage ownership; map affected versions and deployments;",
+      "title": "Credential exposure drills are not tabletop theatre. They rehearse discovery → containment before a real incident. PROBLEM AI-agen...",
+      "link": "https://www.linkedin.com/posts/bobrapp_credential-exposure-drills-are-not-tabletop-activity-7516483535604613120-gslv",
+      "date": "Thu, 15 Oct 2026 13:02:04 GMT",
+      "summary": "Credential exposure drills are not tabletop theatre. They rehearse discovery → containment before a real incident. PROBLEM AI-agent secrets can surface in code, prompts, logs, tool outputs, repos, or vendor paths. Without rehearsal, blast radius grows while responders improvise.",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "Accessibility acceptance is a one-time gate—not ongoing control. Problem Changes can break labels, focus, captions, contrast, reco...",
-      "link": "https://www.linkedin.com/posts/bobrapp_accessibility-acceptance-is-a-one-time-gatenot-activity-7515034281853894656-RHDl",
-      "date": "Sun, 11 Oct 2026 13:03:15 GMT",
-      "summary": "Accessibility acceptance is a one-time gate—not ongoing control. Problem Changes can break labels, focus, captions, contrast, recovery, or screen-reader output. Launch approval is not continued access. Solution After each release: test affected users plus keyboard, screen reader,",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Near misses are not “nothing happened.” A harmful output was caught before reaching a person—and became safety data. PROBLEM Learn...",
-      "link": "https://www.linkedin.com/posts/bobrapp_near-misses-are-not-nothing-happened-a-activity-7515033657875513344-3dV5",
-      "date": "Sun, 11 Oct 2026 13:00:47 GMT",
-      "summary": "Near misses are not “nothing happened.” A harmful output was caught before reaching a person—and became safety data. PROBLEM Learn from every near miss, regardless of severity. Keep intake psychologically safe and blame-free. SOLUTION Log context, model/version, output, catching",
+      "title": "Can this model card guide the next safe action—or only prove that a document exists? Problem / 問題 Usability is task-based. For thi...",
+      "link": "https://www.linkedin.com/posts/bobrapp_can-this-model-card-guide-the-next-safe-actionor-activity-7516257214798622721-L9PF",
+      "date": "Wed, 14 Oct 2026 22:02:45 GMT",
+      "summary": "Can this model card guide the next safe action—or only prove that a document exists? Problem / 問題 Usability is task-based. For this version, an operator must find allowed use, required checks, stop/escalate triggers, and known non-use conditions. If not, block deployment. 使いやすさは実",
       "image": null,
       "author": "Bob Rapp"
     }

@@ -119,6 +119,9 @@ for page in HTML:
         feedback_pages.add(page)
         feedback_tags.extend(page_tags)
 
+# A floor, not equality: the publish job adds a feedback page with every new story.
+check(len(feedback_tags) >= 44, f"feedback pages remain covered ({len(feedback_tags)}, floor 44)")
+
 expected_feedback_pages = {
     ROOT / urlparse(element.text).path.lstrip("/")
     for element in ElementTree.parse(ROOT / "sitemap.xml").iter()

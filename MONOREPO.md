@@ -47,11 +47,32 @@ Add these repository secrets to `aigovops` before cutover:
 ## Cutover runbook
 
 1. Add the workflow secrets listed above to `aigovops`.
-2. Refresh the imports: site, Practice and NCW keep moving on their old `main`
-   (the site's LinkedIn and publish jobs commit daily). Run each import again from a
-   fresh `origin/main` (or merge the new commits into the prefix), with the same
-   site `--drop-path`/`--replace-text` options. Re-run the full-history gitleaks
-   scan and the token count, and get them both to 0, before you merge.
+2. Refresh the imports before merging the Phase 1 PR. Since the importer refuses
+   existing destinations, do not rerun it in the Phase 1 worktree. From a clean
+   checkout on the Phase 1 branch, create a temporary worktree from fresh
+   `origin/main`, run all three imports there, then merge that refresh branch into
+   the Phase 1 branch:
+   ```bash
+   git fetch origin main:refs/remotes/origin/main
+   refresh_id=$(date +%s)
+   refresh_branch="devin/${refresh_id}-refresh-imports"
+   refresh_dir="../aigovops-refresh-${refresh_id}"
+   git worktree add -b "$refresh_branch" "$refresh_dir" origin/main
+   (
+     cd "$refresh_dir"
+     scripts/monorepo/import-repo.sh \
+       https://github.com/aigovops-foundation/aigovops-foundation-site-redesign-June2026-ken-and-bob.git \
+       main site --drop-path transcripts --drop-path .backups \
+       --replace-text /Users/devin/govops-wiki/plans/scan/site-replace-token.txt
+     scripts/monorepo/import-repo.sh \
+       https://github.com/aigovops-foundation/practice.git main practice
+     scripts/monorepo/import-repo.sh \
+       https://github.com/aigovops-foundation/aigovops-ncw-ai-camp.git main camps/ncw
+   )
+   git merge --no-edit "$refresh_branch"
+   ```
+   Re-run the full-history Gitleaks scan and token count, and get both to 0,
+   before you merge.
 3. Disable the workflows in the site, Practice and NCW repos so they stop committing
    to the old copies.
 4. Remove the custom domain from the Foundation site repository's Pages settings.
