@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17T19:07:17Z",
+  "updated": "2026-10-18T07:06:37Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,22 @@
     }
   },
   "bob": [
+    {
+      "title": "Public-benefit eligibility recommendations can change access to essential services. Notice after adverse action is not due process...",
+      "link": "https://www.linkedin.com/posts/bobrapp_public-benefit-eligibility-recommendations-activity-7517344485148831744-WRCH",
+      "date": "Sat, 17 Oct 2026 22:03:11 GMT",
+      "summary": "Public-benefit eligibility recommendations can change access to essential services. Notice after adverse action is not due process. قد تغيّر توصيات الأهلية للمنافع العامة الوصول إلى خدمات أساسية. الإشعار بعد الإجراء السلبي لا يحقق الإجراءات القانونية الواجبة. Problem | A silent r",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Red-team success is measured after the finding—not at report delivery. Problem → No calibrated severity, accountable owner, due da...",
+      "link": "https://www.linkedin.com/posts/bobrapp_red-team-success-is-measured-after-the-findingnot-activity-7517344172136091648-Wn23",
+      "date": "Sat, 17 Oct 2026 22:01:56 GMT",
+      "summary": "Red-team success is measured after the finding—not at report delivery. Problem → No calibrated severity, accountable owner, due date, compensating control, retest, or explicit residual-risk acceptance = hidden risk. Solution → Set a remediation SLA, require evidence, and escalate",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Approved for triage, reused for scoring. Use-case drift is a governance failure. Approuvé pour le triage, réutilisé pour le scorin...",
       "link": "https://www.linkedin.com/posts/bobrapp_approved-for-triage-reused-for-scoring-activity-7517208728543068163-LXc4",
@@ -68,22 +84,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_an-evaluation-environment-can-look-isolatedand-activity-7516619499899633664-miPW",
       "date": "Thu, 15 Oct 2026 22:02:21 GMT",
       "summary": "An evaluation environment can look isolated—and still touch the outside world. Problem Can the agent reach an unintended service, alter a shared workspace, or reuse a credential? Solution Test the boundary—not just the sandbox. Ship Good AI □ Allowlist; deny by default. □ Seed UR",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI output does not stop at an API boundary. Problem: An external service may reuse it beyond your intent. API compatibility is not...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-output-does-not-stop-at-an-api-boundary-activity-7516619300720361472-oUBM",
-      "date": "Thu, 15 Oct 2026 22:01:33 GMT",
-      "summary": "AI output does not stop at an API boundary. Problem: An external service may reuse it beyond your intent. API compatibility is not governance—and this is not a decision-boundary map. Solution: Contract the boundary: permitted downstream use; warning propagation; responsibility ha",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "A vendor claim is not an internal compliance assertion. PROBLEM / 问题 “Fair,” “robust,” and “compliant” are claims—not evidence. Te...",
-      "link": "https://www.linkedin.com/posts/bobrapp_a-vendor-claim-is-not-an-internal-compliance-activity-7516483766836518912-XItX",
-      "date": "Thu, 15 Oct 2026 13:03:00 GMT",
-      "summary": "A vendor claim is not an internal compliance assertion. PROBLEM / 问题 “Fair,” “robust,” and “compliant” are claims—not evidence. Test first, or supplier marketing becomes internal risk. “公平、稳健、合规”是声明，不是证据。先验证，否则营销会变成内部风险。 SOLUTION / 解决方案 For each material claim: map artifacts such",
       "image": null,
       "author": "Bob Rapp"
     }
