@@ -109,16 +109,17 @@ async function run() {
       await ctx.close();
     }
 
-    // 4. Members: three tiers, yearly / no refunds, buttons go somewhere real.
+    // 4. Members: four tiers (three paid + free), yearly / no refunds, buttons go somewhere real.
     {
       const { ctx, page } = await withLang(browser, 'en', { width: 1280, height: 800 });
       await page.goto(new URL('members.html', BASE).href, { waitUntil: 'networkidle', timeout: 20_000 });
       const prices = await page.locator('.tier-price').allInnerTexts();
-      record(prices.length === 3 && /\$12\b/.test(prices[0]) && /\$120\b/.test(prices[1]) && /\$1,200\b/.test(prices[2]), `members: three tiers priced $12 / $120 / $1,200 (${prices.map((p) => p.replace(/\s+/g, ' ')).join(' | ')})`);
+      record(prices.length === 4 && /\$12\b/.test(prices[0]) && /\$120\b/.test(prices[1]) && /\$1,200\b/.test(prices[2]) && /\$0\b/.test(prices[3]), `members: four tiers priced $12 / $120 / $1,200 / $0 (${prices.map((p) => p.replace(/\s+/g, ' ')).join(' | ')})`);
       const body = await page.locator('main').innerText();
+      record(/no questions asked|sin preguntas/i.test(body), 'members: the free tier says no questions asked');
       record(/no refunds/i.test(body) && /yearly/i.test(body), 'members: says yearly and no refunds');
       const hrefs = await page.locator('.tier-card a.btn').evaluateAll((as) => as.map((a) => [a.getAttribute('href'), a.dataset.stripePending || '']));
-      record(hrefs.length === 3 && hrefs.every(([h]) => /^https:\/\/buy\.stripe\.com\//.test(h) || /^mailto:bob\.rapp@aigovops\.community\?/.test(h)), 'members: each button is a Stripe Payment Link or the interim mailto');
+      record(hrefs.length === 4 && hrefs.every(([h]) => /^https:\/\/buy\.stripe\.com\//.test(h) || /^mailto:bob\.rapp@aigovops\.community\?/.test(h)), 'members: each button is a Stripe Payment Link or the interim mailto');
       for (const [h, pending] of hrefs) if (h.startsWith('https://')) { const s = await status(h, api); record(s !== null && s < 400, `members: Stripe link ${h} → ${s}`); if (pending) record(false, `members: ${h} still carries data-stripe-pending`); }
       record(!/teams/i.test(body), 'members: no mention of the private Teams call');
       await page.screenshot({ path: path.join(OUT, 'members-1280-en.png'), fullPage: true });
