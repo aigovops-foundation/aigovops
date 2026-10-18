@@ -119,6 +119,9 @@ async function run() {
       record(/no questions asked|sin preguntas/i.test(body), 'members: the free tier says no questions asked');
       record(/no refunds/i.test(body) && /yearly/i.test(body), 'members: says yearly and no refunds');
       const hrefs = await page.locator('.tier-card a.btn').evaluateAll((as) => as.map((a) => [a.getAttribute('href'), a.dataset.stripePending || '']));
+      const free = await page.locator('.tier-card a.btn[data-form-pending="free"], .tier-card a.btn[data-free]').evaluateAll((as) => as.map((a) => a.getAttribute('href')));
+      record(free.length === 1 && !/buy\.stripe\.com|checkout\.stripe\.com/.test(free[0]) && (/^mailto:bob\.rapp@aigovops\.community\?/.test(free[0]) || /^https:\/\//.test(free[0])), `members: the free button is a request, never a payment link (${free[0]})`);
+      record(/free if \$12 is a barrier/i.test(await page.locator('meta[name="description"]').getAttribute('content') || ''), 'members: the search/social description mentions the free tier');
       record(hrefs.length === 4 && hrefs.every(([h]) => /^https:\/\/buy\.stripe\.com\//.test(h) || /^mailto:bob\.rapp@aigovops\.community\?/.test(h)), 'members: each button is a Stripe Payment Link or the interim mailto');
       for (const [h, pending] of hrefs) if (h.startsWith('https://')) { const s = await status(h, api); record(s !== null && s < 400, `members: Stripe link ${h} → ${s}`); if (pending) record(false, `members: ${h} still carries data-stripe-pending`); }
       record(!/teams/i.test(body), 'members: no mention of the private Teams call');
