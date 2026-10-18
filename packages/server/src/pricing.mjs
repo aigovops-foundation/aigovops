@@ -24,8 +24,7 @@ export function pricingHTML() {
 
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AiGovOps · Pricing</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://www.aigovops-foundation.com/fonts/fonts.css">
 <style>
   :root{--bg:#f6f3ec;--card:#fff;--ink:#1d2430;--muted:#5d6b7a;--line:#e7e0d3;--teal:#0f9b8e;--green:#1f9d57;--gold:#c98a16;--navy:#0c1430}
   *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Inter",system-ui,sans-serif;line-height:1.6;
