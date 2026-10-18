@@ -70,7 +70,7 @@ def meta_content(document, name):
 def google_fonts_href(document):
     for tag in re.findall(r"<link\b[^>]*>", document, re.I):
         href = html.unescape(attr(tag, "href") or "")
-        if "fonts.googleapis.com/css2" in href:
+        if "fonts.googleapis.com/css2" in href or "/fonts/fonts.css" in href:
             return href
     return None
 

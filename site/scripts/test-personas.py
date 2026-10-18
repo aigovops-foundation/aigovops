@@ -76,7 +76,7 @@ def local_href_resolves(filename, href):
 
 def font_stylesheet(page):
     for tag in re.findall(r"<link\b[^>]*>", page, re.IGNORECASE):
-        if "fonts.googleapis.com/css2" in tag:
+        if "fonts.googleapis.com/css2" in tag or "/fonts/fonts.css" in tag:
             href = re.search(r'\bhref=["\']([^"\']+)["\']', tag, re.IGNORECASE)
             return href.group(1) if href else None
     return None
@@ -117,8 +117,8 @@ for filename, label in PAGES.items():
         href for href in re.findall(r"<link\b[^>]*\bhref=[\"']([^\"']+)[\"'][^>]*>", page, re.IGNORECASE)
         if href.endswith(".css?v=20261011b")
     ]
-    check(len(local_stylesheets) == 3, f"{filename}: all three local stylesheets are versioned")
-    check(font_stylesheet(page) == reference_fonts, f"{filename}: Google Fonts href matches open-source.html")
+    check(len(local_stylesheets) == 4, f"{filename}: all four local stylesheets (tokens, style, page, fonts) are versioned")
+    check(font_stylesheet(page) == reference_fonts, f"{filename}: font stylesheet href matches open-source.html")
     check(re.search(r'<meta\b(?=[^>]*\bname=["\']robots["\'])(?=[^>]*\bcontent=["\']index, follow["\'])[^>]*>', page, re.IGNORECASE) is not None, f"{filename}: indexable robots metadata")
     check(re.search(r'<meta\b(?=[^>]*\bproperty=["\']og:title["\'])[^>]*>', page, re.IGNORECASE) is not None, f"{filename}: Open Graph title")
 
