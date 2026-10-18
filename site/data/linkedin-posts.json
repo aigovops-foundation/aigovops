@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18T07:06:37Z",
+  "updated": "2026-10-18T19:07:57Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,22 @@
     }
   },
   "bob": [
+    {
+      "title": "Temporary approval ≠ permanent practice. PROBLEM Without an expiry clock, named owner, compensating safeguards, and renewal eviden...",
+      "link": "https://www.linkedin.com/posts/bobrapp_temporary-approval-permanent-practice-activity-7517570587582672896-HRpX",
+      "date": "Sun, 18 Oct 2026 13:01:38 GMT",
+      "summary": "Temporary approval ≠ permanent practice. PROBLEM Without an expiry clock, named owner, compensating safeguards, and renewal evidence, an exception becomes the baseline. This is exception control—not risk appetite or generic change management. SOLUTION Set a hard expiry. Name one",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Public AI is not always safe for incident forensics. Problem: Attacker-derived artifacts may contain secrets, malware, personal da...",
+      "link": "https://www.linkedin.com/posts/bobrapp_public-ai-is-not-always-safe-for-incident-activity-7517570268450463746-nmlY",
+      "date": "Sun, 18 Oct 2026 13:00:22 GMT",
+      "summary": "Public AI is not always safe for incident forensics. Problem: Attacker-derived artifacts may contain secrets, malware, personal data, or hostile prompts. Public upload can widen the breach. Solution: Pre-stage a local model in an isolated workspace. Hash originals; analyze verifi",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Public-benefit eligibility recommendations can change access to essential services. Notice after adverse action is not due process...",
       "link": "https://www.linkedin.com/posts/bobrapp_public-benefit-eligibility-recommendations-activity-7517344485148831744-WRCH",
@@ -68,22 +84,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_benchmark-results-can-be-preciseand-still-activity-7516846225166594048-dbhD",
       "date": "Fri, 16 Oct 2026 13:03:16 GMT",
       "summary": "Benchmark results can be precise—and still too uncertain to support a launch claim. PROBLEM A score is not evidence strength. Check confidence-interval width, sample adequacy per critical slice, missing slices, and independent reproducibility. SOLUTION Set gates before testing: C",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Shared workspaces are AI control-plane infrastructure—not just team plumbing. PROBLEM / PROBLÈME Agents can edit shared boards, ar...",
-      "link": "https://www.linkedin.com/posts/bobrapp_shared-workspaces-are-ai-control-plane-infrastructurenot-activity-7516846155322994688-1Uzh",
-      "date": "Fri, 16 Oct 2026 13:03:00 GMT",
-      "summary": "Shared workspaces are AI control-plane infrastructure—not just team plumbing. PROBLEM / PROBLÈME Agents can edit shared boards, artifact stores, and channels. Spoofed authors, silent edits, or overwritten snapshots can corrupt decisions. This is workspace integrity—not prompt/pol",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "An evaluation environment can look isolated—and still touch the outside world. Problem Can the agent reach an unintended service,...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-evaluation-environment-can-look-isolatedand-activity-7516619499899633664-miPW",
-      "date": "Thu, 15 Oct 2026 22:02:21 GMT",
-      "summary": "An evaluation environment can look isolated—and still touch the outside world. Problem Can the agent reach an unintended service, alter a shared workspace, or reuse a credential? Solution Test the boundary—not just the sandbox. Ship Good AI □ Allowlist; deny by default. □ Seed UR",
       "image": null,
       "author": "Bob Rapp"
     }
