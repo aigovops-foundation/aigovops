@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18T19:07:57Z",
+  "updated": "2026-10-19T07:23:24Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,22 @@
     }
   },
   "bob": [
+    {
+      "title": "An uncertain AI output is not a disclaimer. It is an operating instruction. PROBLEM “Confidence: 72%” does not tell an operator or...",
+      "link": "https://www.linkedin.com/posts/bobrapp_an-uncertain-ai-output-is-not-a-disclaimer-activity-7517706852684701697-wvhG",
+      "date": "Sun, 18 Oct 2026 22:03:06 GMT",
+      "summary": "An uncertain AI output is not a disclaimer. It is an operating instruction. PROBLEM “Confidence: 72%” does not tell an operator or affected person what to do. Communicate limits, missing context, known failure conditions, required verification, and escalation. الحل لكل مخرَج مؤثر",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI assurance fails when the people proving safety are rewarded for shipping. PROBLEM / समस्या If evidence may affect go/no-go, separ...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-assurance-fails-when-the-people-proving-activity-7517706259832393728-CysV",
+      "date": "Sun, 18 Oct 2026 22:00:45 GMT",
+      "summary": "AI assurance fails when the people proving safety are rewarded for shipping. PROBLEM / समस्या If evidence may affect go/no-go, separate builders, deployers, and reviewers. A committee or cross-functional vote is oversight: not independence. Go/no-go evidence में builder, deployer",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Temporary approval ≠ permanent practice. PROBLEM Without an expiry clock, named owner, compensating safeguards, and renewal eviden...",
       "link": "https://www.linkedin.com/posts/bobrapp_temporary-approval-permanent-practice-activity-7517570587582672896-HRpX",
@@ -68,22 +84,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_shutdown-decommissioning-proof-problem-activity-7516982171694186496-xUS_",
       "date": "Fri, 16 Oct 2026 22:03:29 GMT",
       "summary": "Shutdown ≠ decommissioning proof. PROBLEM “Off” can leave zombie endpoints, service identities, user paths, webhooks, or downstream consumers. This is residual-access verification: not model retirement. SOLUTION Build closure evidence: • Disable endpoints; revoke identities, toke",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Suspicious AI-agent activity is not the incident. The governance test is what happens next. PROBLEM Detection without response rea...",
-      "link": "https://www.linkedin.com/posts/bobrapp_suspicious-ai-agent-activity-is-not-the-incident-activity-7516981669371904000-lgKt",
-      "date": "Fri, 16 Oct 2026 22:01:29 GMT",
-      "summary": "Suspicious AI-agent activity is not the incident. The governance test is what happens next. PROBLEM Detection without response readiness creates false confidence. An alert needs severity, a named decision owner, and a measurable clock. 问题 发现可疑活动不等于做好应对准备。每个警报都需要明确严重级别、指定决策负责人和可衡量",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Benchmark results can be precise—and still too uncertain to support a launch claim. PROBLEM A score is not evidence strength. Chec...",
-      "link": "https://www.linkedin.com/posts/bobrapp_benchmark-results-can-be-preciseand-still-activity-7516846225166594048-dbhD",
-      "date": "Fri, 16 Oct 2026 13:03:16 GMT",
-      "summary": "Benchmark results can be precise—and still too uncertain to support a launch claim. PROBLEM A score is not evidence strength. Check confidence-interval width, sample adequacy per critical slice, missing slices, and independent reproducibility. SOLUTION Set gates before testing: C",
       "image": null,
       "author": "Bob Rapp"
     }
