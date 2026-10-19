@@ -3,7 +3,7 @@
 
 Fetches Google Fonts' CSS with a modern-browser UA (so it returns woff2 + unicode-range subsets),
 downloads every font file into fonts/, and writes fonts/fonts.css with local url()s. Fonts are
-OFL-licensed (Fraunces, Source Sans 3, Source Serif 4, IBM Plex Mono, Inter), so redistribution
+OFL-licensed (Fraunces, Source Sans 3, Source Serif 4, IBM Plex Mono, Inter, DM Mono, Lora), so redistribution
 is permitted; see fonts/LICENSE-OFL.txt. Re-run only to refresh; the output is committed.
 
     python3 scripts/vendor-fonts.py
@@ -20,6 +20,7 @@ FAMILIES = [
     "Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700",
     "IBM+Plex+Mono:wght@400;500;600",
     "Inter:wght@400;500;600;700",
+    "Lora:ital,wght@0,400..700;1,400..700",  # NCW camp pages' serif (font-serif)
 ]
 SUBSETS = {"latin", "latin-ext"}  # the site is EN/ES; skip cyrillic, greek, vietnamese
 
