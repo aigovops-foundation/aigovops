@@ -14,6 +14,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "fonts"
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36"
 FAMILIES = [
+    "DM+Mono:ital,wght@0,400;0,500;1,400",  # Library hub (docs/index.html) mono face
     "Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900",
     "Source+Sans+3:ital,wght@0,300..800;1,300..800",
     "Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700",
