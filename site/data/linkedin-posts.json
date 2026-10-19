@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19T07:23:24Z",
+  "updated": "2026-10-19T19:08:04Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -10,11 +10,27 @@
     "ken": {
       "ok": true,
       "fetched": 10,
-      "published": 0,
+      "published": 1,
       "error": null
     }
   },
   "bob": [
+    {
+      "title": "Enjoyed this thanks Suchitra (Suchi) Mohan for being so helpful to the community and Ken Johnston for the intro Lana Zumbrunn Lana...",
+      "link": "https://www.linkedin.com/posts/bobrapp_enjoyed-this-thanks-suchitra-suchi-mohan-activity-7517945093019041792-QBgT",
+      "date": "Mon, 19 Oct 2026 13:49:47 GMT",
+      "summary": "Enjoyed this thanks Suchitra (Suchi) Mohan for being so helpful to the community and Ken Johnston for the intro Lana Zumbrunn Lana would be a great interview next",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "The question is not “Can AI do this?” It is “Which steps may be automated—and which consequences must humans own?” Problem AI gove...",
+      "link": "https://www.linkedin.com/posts/bobrapp_the-question-is-not-can-ai-do-this-it-activity-7517933525275131904-6wRV",
+      "date": "Mon, 19 Oct 2026 13:03:49 GMT",
+      "summary": "The question is not “Can AI do this?” It is “Which steps may be automated—and which consequences must humans own?” Problem AI governance begins before the model call: define what the system may do and what remains human-owned. Solution Set a boundary for each step: Automate repea",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "An uncertain AI output is not a disclaimer. It is an operating instruction. PROBLEM “Confidence: 72%” does not tell an operator or...",
       "link": "https://www.linkedin.com/posts/bobrapp_an-uncertain-ai-output-is-not-a-disclaimer-activity-7517706852684701697-wvhG",
@@ -70,23 +86,16 @@
       "summary": "Approved for triage, reused for scoring. Use-case drift is a governance failure. Approuvé pour le triage, réutilisé pour le scoring : dérive d’usage. PROBLEM / PROBLÈME Approved use ≠ actual use. Without a purpose-boundary register, secondary use becomes infrastructure. SOLUTION",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "An AI decision record fails when affected people cannot use it. Problem → “The model flagged you” is not a reason. Include plain-l...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-ai-decision-record-fails-when-affected-activity-7517208072361013248-ne3q",
-      "date": "Sat, 17 Oct 2026 13:01:07 GMT",
-      "summary": "An AI decision record fails when affected people cannot use it. Problem → “The model flagged you” is not a reason. Include plain-language reasons; material inputs and limits; the human decision owner; a correction/review path; translation and accessibility; a response deadline; a",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Shutdown ≠ decommissioning proof. PROBLEM “Off” can leave zombie endpoints, service identities, user paths, webhooks, or downstrea...",
-      "link": "https://www.linkedin.com/posts/bobrapp_shutdown-decommissioning-proof-problem-activity-7516982171694186496-xUS_",
-      "date": "Fri, 16 Oct 2026 22:03:29 GMT",
-      "summary": "Shutdown ≠ decommissioning proof. PROBLEM “Off” can leave zombie endpoints, service identities, user paths, webhooks, or downstream consumers. This is residual-access verification: not model retirement. SOLUTION Build closure evidence: • Disable endpoints; revoke identities, toke",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
-  "ken": []
+  "ken": [
+    {
+      "title": "Paul Li, Ph.D. “Ken and I were some of the first people to join the Windows 10 Core Data Science organization. Working with Ken, I always appreciated his strategic vision, and collaborative leadership style. During our time together at Microsoft, Ken consistently demonstrated a remarkable talent for balancing cutting-edge innovation with ethical considerations, particularly in his pioneering work implementing responsible AI standards across a 5,000-person organization. Any organization would be fortunate to have Ken—he brings technical excellence, ethical leadership, and a proven ability to scale data science practices across large enterprises. His rare combination of deep technical knowledg",
+      "link": "https://www.linkedin.com/in/paul-l-li?trk=public_profile_recommendations",
+      "date": "",
+      "summary": "",
+      "image": null,
+      "author": "Ken Johnston"
+    }
+  ]
 }
