@@ -23,8 +23,7 @@ function slideHTML(s, i, total) {
     `<li><span class="dot" style="background:${accent}"></span><span>${esc(l)}</span></li>`).join("");
   const center = isTitle || isOutro;
   return `<!doctype html><html><head><meta charset="utf-8">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.aigovops-foundation.com/fonts/fonts.css">
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     html,body{width:${W}px;height:${H}px;overflow:hidden}
