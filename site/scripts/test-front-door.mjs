@@ -39,8 +39,8 @@ async function run() {
   const browser = await chromium.launch({ headless: true });
   const api = await request.newContext({ timeout: 15_000, ignoreHTTPSErrors: true, extraHTTPHeaders: { 'user-agent': 'Mozilla/5.0 aigovops-front-door-test' } });
   try {
-    // 1. Home: four tasks and the Academy bar fit, in both languages.
-    for (const lang of ['en', 'es']) {
+    // 1. Home: four tasks and the Academy bar fit. English only since 2026-10-19 (no language toggle).
+    for (const lang of ['en']) {
       for (const [w, h] of [[1280, 800], [390, 844]]) {
         const { ctx, page } = await withLang(browser, lang, { width: w, height: h });
         const errors = [];

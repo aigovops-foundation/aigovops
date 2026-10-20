@@ -53,16 +53,8 @@ def main():
         page, _, why = line.partition(":")
         allow[page.strip()] = why.strip()
     print("\n🗣️  Message lint — promise · path · proof\n")
-    print("  [Promise on every public page]")
-    for f in PUBLIC:
-        raw = open(f, encoding="utf-8", errors="ignore").read()
-        check(f"{os.path.basename(f)} carries the promise", bool(PROMISE.search(visible(raw))), "no 'Ship safe AI — never unsafe AI' in visible text")
-    print("\n  [The one CTA — Gate Check, src-tagged, on every page with a footer]")
-    for f in PUBLIC:
-        raw = open(f, encoding="utf-8", errors="ignore").read()
-        if "site-footer" not in raw:
-            continue
-        check(f"{os.path.basename(f)} links the Gate Check", bool(GATE.search(raw)), "no gate-check.html?src= link")
+    # The promise and the Gate Check CTA lived in the site footer, retired 2026-10-19 (English-only,
+    # nothing below the page). The home page keeps its four actions by design, so neither is linted.
     print("\n  [Retired vocabulary stays out of visible copy]")
     stale_allow = set(allow)
     for f in PUBLIC:

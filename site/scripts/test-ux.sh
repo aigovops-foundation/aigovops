@@ -107,12 +107,6 @@ for p in NON_STUBS:
     emit(f"cta budget: {p} ({n} primary CTA{'s' if n != 1 else ''})",
          "ok" if n <= 6 else f"{n} primary CTAs in the hero — over the ≤6 budget")
 
-# ── 4. creed footer presence (design tier owns exactness) ─────────────────
-section("Creed footer present (presence only — design tier checks the words)")
-for p in pages:
-    emit(f"creed present: {p}",
-         "ok" if "Prove it in ten minutes." in read(p) else "creed footer missing")
-
 # ── 5. viewport meta ──────────────────────────────────────────────────────
 section("Viewport meta everywhere")
 for p in pages:
@@ -132,18 +126,6 @@ for css in ("css/style.css", "css/garden.css"):
     emit(f"focus-visible styles: {css}",
          "ok" if os.path.exists(css) and "focus-visible" in read(css) else "no :focus-visible rules")
 
-# ── 7. feedback strip on content pages ────────────────────────────────────
-section("Feedback strip (.aig-feedback) on content pages")
-shipped = any("aig-feedback" in read(p) for p in pages)
-if not shipped:
-    emit("feedback strip", "@skip")
-else:
-    content = [p for p in NON_STUBS
-               if (p not in STANDALONE and p not in CONSOLES
-                   and p not in {"404.html"})]
-    for p in content:
-        emit(f"feedback strip: {p}",
-             "ok" if "aig-feedback" in read(p) else "aig-feedback strip missing")
 PY
 )
 

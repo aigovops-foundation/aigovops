@@ -174,6 +174,7 @@ def main():
         calls.append(lang)
         return text.replace("title: A test story about gates", "title: Una historia de prueba sobre puertas").replace("The first paragraph", "El primer párrafo")
     bc2.TRANSLATOR = fake
+    bc2.LANGS = ["es"]   # the site ships English only; the translator stays testable
     check("pipeline runs with translations", bc2.main() == 0)
     es = os.path.join(tmp2, "blog", "es", "a-test-story.html")
     check("Spanish page rendered under blog/es/", os.path.exists(es))

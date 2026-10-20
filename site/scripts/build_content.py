@@ -204,7 +204,7 @@ def update_sitemap(metas):
         # Translated pages are real, indexable URLs with their own content, so they
         # belong here too — and render_translations() only writes one when a cached
         # translation exists, so this follows what was actually published.
-        for lang in ("es",):
+        for lang in LANGS:
             if os.path.exists(os.path.join(ROOT, "blog", lang, f"{m['slug']}.html")):
                 entries.append(
                     f'\n  <url><!-- content --><loc>{SITE}/blog/{lang}/{m["slug"]}.html</loc>'
@@ -362,7 +362,7 @@ def render_founders():
 # key and no cache the Spanish page is simply not produced (and the build says so) — never a machine
 # stub passed off as a translation. TRANSLATOR is pluggable so the test can swap in a fake.
 TRANSLATIONS = os.path.join(ROOT, "content", "translations")
-LANGS = ["es"]
+LANGS = ()   # English only since 2026-10-19 (Bob): no translated pages are rendered
 GLOSSARY = ["Gate Check", "Beacon", "Umbrella", "Lantern", "AiGovOps", "Ship safe AI — never unsafe AI", "Tuesday Letter"]
 TRANSLATOR = None   # callable(text, lang) -> text
 

@@ -8,6 +8,7 @@ HTML = [
     ROOT / path
     for path in check_output(["git", "ls-files", "--", "*.html"], cwd=ROOT, text=True).splitlines()
 ]
+HTML = [p for p in HTML if ".backups" not in p.parts]
 failures = []
 
 def check(condition, message):
@@ -114,7 +115,7 @@ for page in HTML:
     if "feedback.js" in text:
         feedback_tags.extend(re.findall(r"<script\b[^>]*feedback\.js[^>]*>", text))
 # A floor, not an equality: the publish job adds a feedback page with every new story.
-check(len(feedback_tags) >= 44, f"feedback pages remain covered ({len(feedback_tags)}, floor 44)")
+check(len(feedback_tags) == 0, f"no page loads the retired feedback strip ({len(feedback_tags)} found)")
 check(
     all('data-theme="light"' in tag and "?v=20261011b" in tag for tag in feedback_tags),
     "feedback pages use the light palette and bumped script version",
@@ -137,14 +138,7 @@ buttons = [
     for page in HTML
     for button in re.findall(r"<button\b[^>]*\blang-btn\b[^>]*>.*?</button>", page.read_text(), re.S)
 ]
-check(
-    all('data-lang="en"' not in button or 'EN<span class="sr-only">, switch to English</span>' in button for _, button in buttons),
-    "English language controls include visible EN and a hidden instruction",
-)
-check(
-    all('data-lang="es"' not in button or 'ES<span class="sr-only">, cambiar a español</span>' in button for _, button in buttons),
-    "Spanish language controls include visible ES and a hidden instruction",
-)
+check(not buttons, f"no page carries a language toggle ({len(buttons)} lang-btn found; the site is English only)")
 
 main_js = (ROOT / "js/main.js").read_text()
 check(
@@ -152,7 +146,7 @@ check(
     "LinkedIn cards use their visible text as the name",
 )
 stale_fragments = ("#promise", "#ship", "#running", "#prove")
-search_files = HTML + list((ROOT / "js/i18n").glob("strings-*.js"))
+search_files = HTML
 check(
     not any(fragment in page.read_text() for page in search_files for fragment in stale_fragments),
     "Practice cards do not link to dead level fragments",

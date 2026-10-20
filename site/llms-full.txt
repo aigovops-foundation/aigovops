@@ -199,22 +199,11 @@ The front door offers six actions: become a member, give, join a meeting, read t
   - H2: The cases are real
   - H2: The marks are the credential
   - H2: Where it lives
-- [El lanzamiento de otoño 2026 — una hora hasta tu primer recibo, empieces en el nivel que empieces | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/es/the-fall-2026-release.html): Los proyectos de código abierto de la Fundación se convierten en una sola práctica con cuatro niveles, cada uno de una hora o menos, cada uno sobre un caso real de los 100 daños verificados — construida sobre OVERT, el estándar abierto de Glacis, que es el héroe de esta historia.
-  - H1: El lanzamiento de otoño 2026 — una hora hasta tu primer recibo, empieces en el nivel que empieces
-  - H2: Una práctica, cuatro niveles, una hora cada uno
-  - H2: Los casos son reales
-  - H2: Las marcas son la credencial
-  - H2: Dónde vive
 - [The ten-minute Gate Check — is this AI agent ready to run? | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/the-ten-minute-gate-check.html): Ten yes/no questions a manager can answer about an AI agent this week, each with the evidence to point at, ending in a card you keep. No account, no maybe.
   - H1: The ten-minute Gate Check — is this AI agent ready to run?
   - H2: What it is
   - H2: Who it is for
   - H2: What comes next
-- [El Gate Check de diez minutos — ¿está este agente de IA listo para funcionar? | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/es/the-ten-minute-gate-check.html): Diez preguntas de sí o no que un responsable puede contestar sobre un agente de IA esta semana, cada una con la evidencia que señalar, y al final una tarjeta que te quedas. Sin cuenta, sin "quizás".
-  - H1: El Gate Check de diez minutos — ¿está este agente de IA listo para funcionar?
-  - H2: Qué es
-  - H2: Para quién es
-  - H2: Qué viene después
 - AiGovOps Substack: https://aigovops.substack.com/
 
 ## Optional
