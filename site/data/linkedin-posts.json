@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-19T19:08:04Z",
+  "updated": "2026-10-20T07:11:18Z",
   "feed_health": {
     "bob": {
       "ok": true,
       "fetched": 10,
-      "published": 9,
+      "published": 8,
       "error": null
     },
     "ken": {
@@ -15,6 +15,14 @@
     }
   },
   "bob": [
+    {
+      "title": "Generic AI training is not governance. Different roles face different decisions, tools and risks. Problem → Solution → Summary One...",
+      "link": "https://www.linkedin.com/posts/bobrapp_generic-ai-training-is-not-governance-different-activity-7518069151769198592-FbCR",
+      "date": "Mon, 19 Oct 2026 22:02:45 GMT",
+      "summary": "Generic AI training is not governance. Different roles face different decisions, tools and risks. Problem → Solution → Summary One course proves attendance, not capability. Profile each role: decisions, tools/data, risks and escalation. Practise scenarios, assess behavior, refres",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Enjoyed this thanks Suchitra (Suchi) Mohan for being so helpful to the community and Ken Johnston for the intro Lana Zumbrunn Lana...",
       "link": "https://www.linkedin.com/posts/bobrapp_enjoyed-this-thanks-suchitra-suchi-mohan-activity-7517945093019041792-QBgT",
@@ -68,22 +76,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_public-benefit-eligibility-recommendations-activity-7517344485148831744-WRCH",
       "date": "Sat, 17 Oct 2026 22:03:11 GMT",
       "summary": "Public-benefit eligibility recommendations can change access to essential services. Notice after adverse action is not due process. قد تغيّر توصيات الأهلية للمنافع العامة الوصول إلى خدمات أساسية. الإشعار بعد الإجراء السلبي لا يحقق الإجراءات القانونية الواجبة. Problem | A silent r",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Red-team success is measured after the finding—not at report delivery. Problem → No calibrated severity, accountable owner, due da...",
-      "link": "https://www.linkedin.com/posts/bobrapp_red-team-success-is-measured-after-the-findingnot-activity-7517344172136091648-Wn23",
-      "date": "Sat, 17 Oct 2026 22:01:56 GMT",
-      "summary": "Red-team success is measured after the finding—not at report delivery. Problem → No calibrated severity, accountable owner, due date, compensating control, retest, or explicit residual-risk acceptance = hidden risk. Solution → Set a remediation SLA, require evidence, and escalate",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Approved for triage, reused for scoring. Use-case drift is a governance failure. Approuvé pour le triage, réutilisé pour le scorin...",
-      "link": "https://www.linkedin.com/posts/bobrapp_approved-for-triage-reused-for-scoring-activity-7517208728543068163-LXc4",
-      "date": "Sat, 17 Oct 2026 13:03:44 GMT",
-      "summary": "Approved for triage, reused for scoring. Use-case drift is a governance failure. Approuvé pour le triage, réutilisé pour le scoring : dérive d’usage. PROBLEM / PROBLÈME Approved use ≠ actual use. Without a purpose-boundary register, secondary use becomes infrastructure. SOLUTION",
       "image": null,
       "author": "Bob Rapp"
     }
