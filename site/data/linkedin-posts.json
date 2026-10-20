@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20T07:11:18Z",
+  "updated": "2026-10-20T19:08:48Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,14 @@
     }
   },
   "bob": [
+    {
+      "title": "Before choosing a model, screen the objective. PROBLEM A capable model can still scale an unacceptable goal. Wrong objective + bet...",
+      "link": "https://www.linkedin.com/posts/bobrapp_before-choosing-a-model-screen-the-objective-activity-7518296030736592896-ldZu",
+      "date": "Tue, 20 Oct 2026 13:04:17 GMT",
+      "summary": "Before choosing a model, screen the objective. PROBLEM A capable model can still scale an unacceptable goal. Wrong objective + better accuracy = faster harm. SOLUTION — GATE 0 1) State the outcome, affected people, and decision authority. 2) Apply the Three-Yes Test: Safe? Compli",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Generic AI training is not governance. Different roles face different decisions, tools and risks. Problem → Solution → Summary One...",
       "link": "https://www.linkedin.com/posts/bobrapp_generic-ai-training-is-not-governance-different-activity-7518069151769198592-FbCR",
@@ -68,14 +76,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_public-ai-is-not-always-safe-for-incident-activity-7517570268450463746-nmlY",
       "date": "Sun, 18 Oct 2026 13:00:22 GMT",
       "summary": "Public AI is not always safe for incident forensics. Problem: Attacker-derived artifacts may contain secrets, malware, personal data, or hostile prompts. Public upload can widen the breach. Solution: Pre-stage a local model in an isolated workspace. Hash originals; analyze verifi",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Public-benefit eligibility recommendations can change access to essential services. Notice after adverse action is not due process...",
-      "link": "https://www.linkedin.com/posts/bobrapp_public-benefit-eligibility-recommendations-activity-7517344485148831744-WRCH",
-      "date": "Sat, 17 Oct 2026 22:03:11 GMT",
-      "summary": "Public-benefit eligibility recommendations can change access to essential services. Notice after adverse action is not due process. قد تغيّر توصيات الأهلية للمنافع العامة الوصول إلى خدمات أساسية. الإشعار بعد الإجراء السلبي لا يحقق الإجراءات القانونية الواجبة. Problem | A silent r",
       "image": null,
       "author": "Bob Rapp"
     }
