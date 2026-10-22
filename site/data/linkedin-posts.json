@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-21T19:08:54Z",
+  "updated": "2026-10-22T07:13:32Z",
   "feed_health": {
     "bob": {
       "ok": true,
       "fetched": 10,
-      "published": 8,
+      "published": 9,
       "error": null
     },
     "ken": {
@@ -15,6 +15,14 @@
     }
   },
   "bob": [
+    {
+      "title": "Handoff ≠ a file; it is operating capability. التسليم ≠ ملف؛ بل قدرة تشغيلية. PROBLEM | المشكلة Build knows. Operations needs owne...",
+      "link": "https://www.linkedin.com/posts/bobrapp_handoff-a-file-it-is-operating-capability-activity-7518794221051551745-09H9",
+      "date": "Wed, 21 Oct 2026 22:03:55 GMT",
+      "summary": "Handoff ≠ a file; it is operating capability. التسليم ≠ ملف؛ بل قدرة تشغيلية. PROBLEM | المشكلة Build knows. Operations needs owner, limits, assumptions, monitoring, and support/escalation—not a model card or generic accountability. يعرف فريق البناء. يحتاج التشغيل إلى المالك والق",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "One cohort can bear harm while the average says “pass.” Problem Cover language, age, geography, disability, device, context—and in...",
       "link": "https://www.linkedin.com/posts/bobrapp_one-cohort-can-bear-harm-while-the-average-activity-7518658402366177281-ryhM",
