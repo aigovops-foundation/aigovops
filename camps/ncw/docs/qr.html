@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pledge QR — print or project</title>
+<meta name="description" content="A print-ready QR code pointing at the NCW AI Partnership Pledge, for table tents, posters, and the final slide of a deck." />
+<meta name="robots" content="noindex" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232E7D4F'/%3E%3Cpath d='M4 22 L11 11 L16 18 L21 9 L28 22 Z' fill='%23FAF7F0'/%3E%3Ccircle cx='24' cy='8' r='3' fill='%23E07A2A'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  /* Deliberately NOT Tailwind-from-CDN like the rest of the site. This page has one job — come
+     out of a printer looking right — and a CDN stylesheet that has not loaded yet is the classic
+     way a print job silently produces an unstyled sheet. Everything it needs is inline. */
+  :root { --orchard:#2E7D4F; --signal:#E07A2A; --cream:#FAF7F0; --charcoal:#2B2B28; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--cream); color:var(--charcoal);
+         font-family:Inter,system-ui,sans-serif; display:grid; place-items:center;
+         min-height:100vh; padding:32px; }
+  .card { text-align:center; max-width:620px; }
+  h1 { font-family:Lora,Georgia,serif; font-weight:700; font-size:2.1rem; margin:0 0 6px; }
+  .lede { font-size:1.05rem; color:#2B2B28bf; margin:0 0 28px; line-height:1.5; }
+  img.qr { width:min(74vw,420px); height:auto; display:block; margin:0 auto;
+           border:10px solid #fff; border-radius:18px; box-shadow:0 6px 28px rgba(0,0,0,.10); }
+  .url { margin-top:20px; font-size:.95rem; color:#2B2B28a6; word-break:break-all; }
+  .steps { margin-top:26px; font-size:1.15rem; font-weight:600; color:var(--orchard); }
+  .note { margin-top:34px; font-size:.85rem; color:#2B2B2899; line-height:1.55; }
+  @media print {
+    /* One sheet, no chrome, no shadows that waste toner, and the URL stays legible for anyone
+       whose camera will not focus. */
+    body { background:#fff; padding:0; min-height:auto; }
+    img.qr { box-shadow:none; border-color:#fff; width:88mm; }
+    .note { display:none; }
+    @page { margin:16mm; }
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>Sign the NCW AI Partnership Pledge</h1>
+    <p class="lede">Point your phone's camera at the code. Seven commitments, about a minute.</p>
+
+    <!-- The SVG is the source of truth (it scales to a poster without going fuzzy). The PNG
+         beside it exists for slide decks that will not accept SVG. Both are generated from the
+         same URL by scripts/make-qr.py and BOTH have been machine-decoded, because a QR nobody
+         verified is a poster of noise. -->
+    <img class="qr" src="assets/img/pledge-qr.svg" alt="QR code linking to the NCW AI Partnership Pledge" />
+
+    <p class="url">aigovops-foundation.github.io/aigovops-ncw-ai-camp/pledge.html</p>
+    <p class="steps">Nothing to fill in. We never learn who signed.</p>
+
+    <p class="note">
+      Print this page for a table tent or poster, or use
+      <code>assets/img/pledge-qr.png</code> on a slide.
+      Regenerate with <code>python3 scripts/make-qr.py</code> if the pledge URL ever moves —
+      and scan the result with a real phone before printing a hundred of them.
+    </p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+name: linkedin-tuesday
+# The Tuesday story's LinkedIn text goes out by itself through Postiz (channel: Bob Rapp).
+# 14:00 UTC = 07:00 PDT / 06:00 PST. Nothing to post (no story dated today, or held) exits quietly.
+on:
+  schedule:
+    - cron: "0 14 * * 2"
+  workflow_dispatch:
+    inputs:
+      draft:
+        description: "Create a Postiz draft instead of publishing (safe test)"
+        type: boolean
+        default: true
+      date:
+        description: "Story date YYYY-MM-DD (default: today, Pacific)"
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Regenerate drafts (build_content writes content/drafts a week ahead)
+        run: |
+          pip install -q markdown
+          python3 scripts/build_content.py >/dev/null
+      - name: Post through Postiz
+        env:
+          POSTIZ_API_KEY: ${{ secrets.POSTIZ_API_KEY }}
+          POSTIZ_INTEGRATION_ID: ${{ vars.POSTIZ_INTEGRATION_ID }}
+        run: |
+          ARGS=""
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            [ "${{ inputs.draft }}" = "true" ] && ARGS="$ARGS --draft"
+            [ -n "${{ inputs.date }}" ] && ARGS="$ARGS --date ${{ inputs.date }}"
+          fi
+          python3 scripts/post_linkedin.py $ARGS; rc=$?
+          [ $rc -eq 2 ] && exit 0
+          exit $rc
