@@ -6,8 +6,9 @@ on:
   pull_request:
     branches: [ main ]
   schedule:
-    - cron: '0 8 * * *'     # Daily at 8am UTC (1am Pacific)
-    - cron: '0 20 * * *'    # Daily at 8pm UTC (1pm Pacific)
+    - cron: '0 8 * * *'     # Once a day, 8am UTC (1am Pacific). The 8pm run was retired 2026-10-20: every
+                            # push already runs the live tiers, so the schedule only needs to catch the site
+                            # breaking while nobody pushed, and once a day is enough for that.
   workflow_dispatch:
     inputs:
       tiers:
@@ -171,6 +172,38 @@ jobs:
         run: bash scripts/test-uptime.sh
       - name: HTTP error-detection checks
         run: bash scripts/test-errors.sh
+
+  # ── Tier 4b: Persona journeys + front door (live site — scheduled only) ───
+  # On pull requests this runs from persona-journeys.yml against a local server. The daily
+  # live run moved here on 2026-10-20 so the site has ONE scheduled workflow, not three.
+  journeys:
+    name: 🚶 Persona journeys + front door (live site)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    env:
+      BASE_URL: https://www.aigovops-foundation.com
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+      - name: Install Playwright
+        run: npm install --no-save --package-lock=false playwright@1.56.1
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Run persona journeys
+        run: node scripts/test-persona-journeys.mjs
+      - name: Run front-door tests (home, Academy, Members, Write, Luma data)
+        run: node scripts/test-front-door.mjs
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        if: always()
+        with:
+          name: live-journeys
+          path: |
+            test-results/front-door/
+            test-results/personas/
+          if-no-files-found: warn
 
   # ── Tier 5: Scale (live site — scheduled only) ────────────────────────────
   scale:

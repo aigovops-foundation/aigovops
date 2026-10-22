@@ -1,9 +1,9 @@
 name: Persona journeys
 
+# Pull requests only since 2026-10-20: the daily live-site run is the `journeys` job in
+# automation-v3.yml, so the site has one scheduled workflow instead of three.
 on:
   pull_request:
-  schedule:
-    - cron: '0 13 * * *'
   workflow_dispatch:
 
 permissions:
