@@ -45,4 +45,4 @@ Thursday at 15:00 Pacific, where a host marks it.
 
 The bot was confident and the policy was elsewhere. Sit down. What brought you in?
 
-— [The café](https://www.aigovops-foundation.com/?src=letter#problem) · [Level 100 worksheet](https://practice.aigovops-foundation.com/levels/100-begin/WORKSHEET.html) · [VH-001 in the cases](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-001)
+— [The café](https://www.aigovops-foundation.com/academy.html?src=letter#problem) · [Level 100 worksheet](https://practice.aigovops-foundation.com/levels/100-begin/WORKSHEET.html) · [VH-001 in the cases](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-001)

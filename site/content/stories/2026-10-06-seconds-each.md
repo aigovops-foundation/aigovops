@@ -52,4 +52,4 @@ conditions; then bring it on Thursday at 15:00 Pacific, where a host marks it.
 
 Seconds each was never a review. Sit down. What brought you in?
 
-— [The café](https://www.aigovops-foundation.com/?src=letter#problem) · [Level 300 worksheet](https://practice.aigovops-foundation.com/levels/300-hold/WORKSHEET.html) · [VH-035 in the cases](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-035)
+— [The café](https://www.aigovops-foundation.com/academy.html?src=letter#problem) · [Level 300 worksheet](https://practice.aigovops-foundation.com/levels/300-hold/WORKSHEET.html) · [VH-035 in the cases](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-035)

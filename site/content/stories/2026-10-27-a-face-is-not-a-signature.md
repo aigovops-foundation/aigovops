@@ -51,4 +51,4 @@ Pacific, where a host marks it.
 
 The faces were perfect. The channel was theirs. Sit down. What brought you in?
 
-— [The café](https://www.aigovops-foundation.com/?src=letter#problem) · [Level 300 worksheet](https://practice.aigovops-foundation.com/levels/300-hold/WORKSHEET.html) · [VH-015 in the cases](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-015)
+— [The café](https://www.aigovops-foundation.com/academy.html?src=letter#problem) · [Level 300 worksheet](https://practice.aigovops-foundation.com/levels/300-hold/WORKSHEET.html) · [VH-015 in the cases](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-015)
