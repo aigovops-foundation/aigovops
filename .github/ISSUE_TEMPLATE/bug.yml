@@ -3,6 +3,25 @@ description: A page, lane, probe or service that does not do what it says.
 title: "bug: "
 labels: ["queue", "bug"]
 body:
+  - type: dropdown
+    id: repo
+    attributes:
+      label: Repository
+      description: Where the fix lands.
+      options:
+        - aigovops (trunk)
+        - aigovops-foundation-site-redesign-June2026-ken-and-bob (www)
+        - aigovops-library-june-ken-bob (Library)
+        - practice
+        - aigovops-ncw-ai-camp
+        - aigovops-beacon
+        - Omni-Rapp-June-2026
+        - umbrella-govops
+        - aigovops-lantern
+        - aigovops-vendor-rfi
+        - other / not sure
+    validations:
+      required: true
   - type: input
     id: where
     attributes:
@@ -21,6 +40,13 @@ body:
     attributes:
       label: Actual
       description: Paste the error, status code or screenshot.
+    validations:
+      required: true
+  - type: textarea
+    id: proof
+    attributes:
+      label: Proof
+      description: How a reviewer checks it is fixed — a URL, a command, a test name.
     validations:
       required: true
   - type: checkboxes

@@ -24,6 +24,8 @@ never as a side channel.
 - `estate-health`, `estate-uptime` — tickets filed by the Library's monitors.
 
 A ticket is done when its pull request merges and its **Proof** holds on the live
-estate; `closes #N` in the PR body closes it.
+estate. Close it from the PR body with the fully qualified form,
+`Fixes aigovops-foundation/aigovops#N` — a bare `closes #N` in another repository's
+pull request points at that repository's issue N, not the ticket.
 
 Open an issue or PR. Be precise and honest; don't overclaim.
