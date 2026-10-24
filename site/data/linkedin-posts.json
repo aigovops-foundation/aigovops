@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17T07:06:10Z",
+  "updated": "2026-10-24T07:07:16Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -10,83 +10,92 @@
     "ken": {
       "ok": true,
       "fetched": 10,
-      "published": 0,
+      "published": 1,
       "error": null
     }
   },
   "bob": [
     {
-      "title": "Shutdown ≠ decommissioning proof. PROBLEM “Off” can leave zombie endpoints, service identities, user paths, webhooks, or downstrea...",
-      "link": "https://www.linkedin.com/posts/bobrapp_shutdown-decommissioning-proof-problem-activity-7516982171694186496-xUS_",
-      "date": "Fri, 16 Oct 2026 22:03:29 GMT",
-      "summary": "Shutdown ≠ decommissioning proof. PROBLEM “Off” can leave zombie endpoints, service identities, user paths, webhooks, or downstream consumers. This is residual-access verification: not model retirement. SOLUTION Build closure evidence: • Disable endpoints; revoke identities, toke",
+      "title": "More prompt data ≠ better AI. PROBLEM | 问题 A task may need only a category and time range, yet receive a full ticket or customer r...",
+      "link": "https://www.linkedin.com/posts/bobrapp_more-prompt-data-better-ai-problem-activity-7519518589419421696-CaQq",
+      "date": "Fri, 23 Oct 2026 22:02:18 GMT",
+      "summary": "More prompt data ≠ better AI. PROBLEM | 问题 A task may need only a category and time range, yet receive a full ticket or customer record. Unnecessary personal or confidential data has crossed the AI boundary. This is input minimization—not memory retention, consent revocation, or",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "Suspicious AI-agent activity is not the incident. The governance test is what happens next. PROBLEM Detection without response rea...",
-      "link": "https://www.linkedin.com/posts/bobrapp_suspicious-ai-agent-activity-is-not-the-incident-activity-7516981669371904000-lgKt",
-      "date": "Fri, 16 Oct 2026 22:01:29 GMT",
-      "summary": "Suspicious AI-agent activity is not the incident. The governance test is what happens next. PROBLEM Detection without response readiness creates false confidence. An alert needs severity, a named decision owner, and a measurable clock. 问题 发现可疑活动不等于做好应对准备。每个警报都需要明确严重级别、指定决策负责人和可衡量",
+      "title": "AI-generated code is not production-ready. Problem: Speed without governance creates unreviewed, untested, unowned changes. Soluti...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-generated-code-is-not-production-ready-activity-7519382725645185025-0MmD",
+      "date": "Fri, 23 Oct 2026 13:02:25 GMT",
+      "summary": "AI-generated code is not production-ready. Problem: Speed without governance creates unreviewed, untested, unowned changes. Solution: Before release, require human review, tests, dependency/licence checks, evidence, and an owner. Three-Yes Test: Safe? Compliant? Pro-humanity? Shi",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "Benchmark results can be precise—and still too uncertain to support a launch claim. PROBLEM A score is not evidence strength. Chec...",
-      "link": "https://www.linkedin.com/posts/bobrapp_benchmark-results-can-be-preciseand-still-activity-7516846225166594048-dbhD",
-      "date": "Fri, 16 Oct 2026 13:03:16 GMT",
-      "summary": "Benchmark results can be precise—and still too uncertain to support a launch claim. PROBLEM A score is not evidence strength. Check confidence-interval width, sample adequacy per critical slice, missing slices, and independent reproducibility. SOLUTION Set gates before testing: C",
+      "title": "PROBLEM / 問題 AI output is not evidence by itself. Without its source, transformation steps, and named sign-off, an internal decisi...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-%E5%95%8F%E9%A1%8C-ai-output-is-not-evidence-by-activity-7519157151219777537-kaS-",
+      "date": "Thu, 22 Oct 2026 22:06:04 GMT",
+      "summary": "PROBLEM / 問題 AI output is not evidence by itself. Without its source, transformation steps, and named sign-off, an internal decision cannot be reconstructed or defended. AI出力は証拠そのものではありません。出典、変換工程、承認者の記録がなければ、社内判断を再現・説明できません。 SOLUTION / 解決策 Record at decision time: source/version",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "Shared workspaces are AI control-plane infrastructure—not just team plumbing. PROBLEM / PROBLÈME Agents can edit shared boards, ar...",
-      "link": "https://www.linkedin.com/posts/bobrapp_shared-workspaces-are-ai-control-plane-infrastructurenot-activity-7516846155322994688-1Uzh",
-      "date": "Fri, 16 Oct 2026 13:03:00 GMT",
-      "summary": "Shared workspaces are AI control-plane infrastructure—not just team plumbing. PROBLEM / PROBLÈME Agents can edit shared boards, artifact stores, and channels. Spoofed authors, silent edits, or overwritten snapshots can corrupt decisions. This is workspace integrity—not prompt/pol",
+      "title": "A polished AI demo can hide a harmful assumption. PROBLEM Affected users expose missing context, time, language, authority, and sa...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-polished-ai-demo-can-hide-a-harmful-assumption-activity-7519020660501843968-eQpO",
+      "date": "Thu, 22 Oct 2026 13:03:42 GMT",
+      "summary": "A polished AI demo can hide a harmful assumption. PROBLEM Affected users expose missing context, time, language, authority, and safe ways to challenge AI. SOLUTION Before build freeze, observe real tasks. Map handoffs and failure points. Ask when AI is wrong. Convert dissent into",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "An evaluation environment can look isolated—and still touch the outside world. Problem Can the agent reach an unintended service,...",
-      "link": "https://www.linkedin.com/posts/bobrapp_an-evaluation-environment-can-look-isolatedand-activity-7516619499899633664-miPW",
-      "date": "Thu, 15 Oct 2026 22:02:21 GMT",
-      "summary": "An evaluation environment can look isolated—and still touch the outside world. Problem Can the agent reach an unintended service, alter a shared workspace, or reuse a credential? Solution Test the boundary—not just the sandbox. Ship Good AI □ Allowlist; deny by default. □ Seed UR",
+      "title": "Handoff ≠ a file; it is operating capability. التسليم ≠ ملف؛ بل قدرة تشغيلية. PROBLEM | المشكلة Build knows. Operations needs owne...",
+      "link": "https://www.linkedin.com/posts/bobrapp_handoff-a-file-it-is-operating-capability-activity-7518794221051551745-09H9",
+      "date": "Wed, 21 Oct 2026 22:03:55 GMT",
+      "summary": "Handoff ≠ a file; it is operating capability. التسليم ≠ ملف؛ بل قدرة تشغيلية. PROBLEM | المشكلة Build knows. Operations needs owner, limits, assumptions, monitoring, and support/escalation—not a model card or generic accountability. يعرف فريق البناء. يحتاج التشغيل إلى المالك والق",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "AI output does not stop at an API boundary. Problem: An external service may reuse it beyond your intent. API compatibility is not...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-output-does-not-stop-at-an-api-boundary-activity-7516619300720361472-oUBM",
-      "date": "Thu, 15 Oct 2026 22:01:33 GMT",
-      "summary": "AI output does not stop at an API boundary. Problem: An external service may reuse it beyond your intent. API compatibility is not governance—and this is not a decision-boundary map. Solution: Contract the boundary: permitted downstream use; warning propagation; responsibility ha",
+      "title": "One cohort can bear harm while the average says “pass.” Problem Cover language, age, geography, disability, device, context—and in...",
+      "link": "https://www.linkedin.com/posts/bobrapp_one-cohort-can-bear-harm-while-the-average-activity-7518658402366177281-ryhM",
+      "date": "Wed, 21 Oct 2026 13:04:13 GMT",
+      "summary": "One cohort can bear harm while the average says “pass.” Problem Cover language, age, geography, disability, device, context—and intersections. Solution Pre-design cohorts; weight real use; set floors; inspect errors; retest after changes. Three-Yes Test: Safe? Compliant? Pro-Huma",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "A vendor claim is not an internal compliance assertion. PROBLEM / 问题 “Fair,” “robust,” and “compliant” are claims—not evidence. Te...",
-      "link": "https://www.linkedin.com/posts/bobrapp_a-vendor-claim-is-not-an-internal-compliance-activity-7516483766836518912-XItX",
-      "date": "Thu, 15 Oct 2026 13:03:00 GMT",
-      "summary": "A vendor claim is not an internal compliance assertion. PROBLEM / 问题 “Fair,” “robust,” and “compliant” are claims—not evidence. Test first, or supplier marketing becomes internal risk. “公平、稳健、合规”是声明，不是证据。先验证，否则营销会变成内部风险。 SOLUTION / 解决方案 For each material claim: map artifacts such",
+      "title": "Can another team rerun your AI evaluation, and explain any changed result? PROBLEM | A score without fixtures, versions, or rerun...",
+      "link": "https://www.linkedin.com/posts/bobrapp_can-another-team-rerun-your-ai-evaluation-activity-7518431529556164608-EVWm",
+      "date": "Tue, 20 Oct 2026 22:02:42 GMT",
+      "summary": "Can another team rerun your AI evaluation, and explain any changed result? PROBLEM | A score without fixtures, versions, or rerun evidence is only a claim. SOLUTION | Freeze fixtures. Pin model, prompt, code, data, dependencies, threshold, seed, runtime, and environment. Keep raw",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "Credential exposure drills are not tabletop theatre. They rehearse discovery → containment before a real incident. PROBLEM AI-agen...",
-      "link": "https://www.linkedin.com/posts/bobrapp_credential-exposure-drills-are-not-tabletop-activity-7516483535604613120-gslv",
-      "date": "Thu, 15 Oct 2026 13:02:04 GMT",
-      "summary": "Credential exposure drills are not tabletop theatre. They rehearse discovery → containment before a real incident. PROBLEM AI-agent secrets can surface in code, prompts, logs, tool outputs, repos, or vendor paths. Without rehearsal, blast radius grows while responders improvise.",
+      "title": "Before choosing a model, screen the objective. PROBLEM A capable model can still scale an unacceptable goal. Wrong objective + bet...",
+      "link": "https://www.linkedin.com/posts/bobrapp_before-choosing-a-model-screen-the-objective-activity-7518296030736592896-ldZu",
+      "date": "Tue, 20 Oct 2026 13:04:17 GMT",
+      "summary": "Before choosing a model, screen the objective. PROBLEM A capable model can still scale an unacceptable goal. Wrong objective + better accuracy = faster harm. SOLUTION — GATE 0 1) State the outcome, affected people, and decision authority. 2) Apply the Three-Yes Test: Safe? Compli",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "Can this model card guide the next safe action—or only prove that a document exists? Problem / 問題 Usability is task-based. For thi...",
-      "link": "https://www.linkedin.com/posts/bobrapp_can-this-model-card-guide-the-next-safe-actionor-activity-7516257214798622721-L9PF",
-      "date": "Wed, 14 Oct 2026 22:02:45 GMT",
-      "summary": "Can this model card guide the next safe action—or only prove that a document exists? Problem / 問題 Usability is task-based. For this version, an operator must find allowed use, required checks, stop/escalate triggers, and known non-use conditions. If not, block deployment. 使いやすさは実",
+      "title": "Generic AI training is not governance. Different roles face different decisions, tools and risks. Problem → Solution → Summary One...",
+      "link": "https://www.linkedin.com/posts/bobrapp_generic-ai-training-is-not-governance-different-activity-7518069151769198592-FbCR",
+      "date": "Mon, 19 Oct 2026 22:02:45 GMT",
+      "summary": "Generic AI training is not governance. Different roles face different decisions, tools and risks. Problem → Solution → Summary One course proves attendance, not capability. Profile each role: decisions, tools/data, risks and escalation. Practise scenarios, assess behavior, refres",
       "image": null,
       "author": "Bob Rapp"
     }
   ],
-  "ken": []
+  "ken": [
+    {
+      "title": "Paul Li, Ph.D. “Ken and I were some of the first people to join the Windows 10 Core Data Science organization. Working with Ken, I always appreciated his strategic vision, and collaborative leadership style. During our time together at Microsoft, Ken consistently demonstrated a remarkable talent for balancing cutting-edge innovation with ethical considerations, particularly in his pioneering work implementing responsible AI standards across a 5,000-person organization. Any organization would be fortunate to have Ken—he brings technical excellence, ethical leadership, and a proven ability to scale data science practices across large enterprises. His rare combination of deep technical knowledg",
+      "link": "https://www.linkedin.com/in/paul-l-li?trk=public_profile_recommendations",
+      "date": "",
+      "summary": "",
+      "image": null,
+      "author": "Ken Johnston"
+    }
+  ]
 }

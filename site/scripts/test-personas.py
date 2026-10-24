@@ -76,7 +76,7 @@ def local_href_resolves(filename, href):
 
 def font_stylesheet(page):
     for tag in re.findall(r"<link\b[^>]*>", page, re.IGNORECASE):
-        if "fonts.googleapis.com/css2" in tag:
+        if "fonts.googleapis.com/css2" in tag or "/fonts/fonts.css" in tag:
             href = re.search(r'\bhref=["\']([^"\']+)["\']', tag, re.IGNORECASE)
             return href.group(1) if href else None
     return None
@@ -97,28 +97,28 @@ for filename, label in PAGES.items():
     canonical = f"{SITE_ORIGIN}/{filename}"
     check(page.count("<main ") == 1 and 'id="main-content"' in page, f"{filename}: exactly one main landmark")
     check('<html lang="en">' in page, f"{filename}: English document language")
-    check('js/i18n/i18n.js?v=20261011b' in page and 'class="lang-toggle"' in page,
-          f"{filename}: versioned i18n loader and language toggle")
+    check('i18n.js' not in page and 'lang-toggle' not in page,
+          f"{filename}: English only — no i18n loader or language toggle")
     local_scripts = [
         href for href in re.findall(r"<script\b[^>]*\bsrc=[\"']([^\"']+)[\"'][^>]*>", page, re.IGNORECASE)
         if not urlsplit(href).scheme and not urlsplit(href).netloc
     ]
     check(
-        local_scripts == ["js/i18n/i18n.js?v=20261011b", "js/main.js?v=20261011b", "feedback.js?v=20261011b"],
-        f"{filename}: i18n.js, main.js, and feedback.js are the only local scripts and are versioned",
+        local_scripts == ["js/main.js?v=20261011b"],
+        f"{filename}: main.js is the only local script and is versioned",
     )
     feedback_loader = re.search(
         r"""<script\b(?=[^>]*\bsrc=["']feedback\.js\?v=20261011b["'])(?=[^>]*\bclass=["']aig-feedback-loader["'])(?=[^>]*\bdefer(?:\s|>))[^>]*></script>""",
         page,
         re.IGNORECASE,
     )
-    check(feedback_loader is not None, f"{filename}: feedback strip loader matches the site shell")
+    check(feedback_loader is None, f"{filename}: no feedback strip (retired 2026-10-19)")
     local_stylesheets = [
         href for href in re.findall(r"<link\b[^>]*\bhref=[\"']([^\"']+)[\"'][^>]*>", page, re.IGNORECASE)
         if href.endswith(".css?v=20261011b")
     ]
-    check(len(local_stylesheets) == 3, f"{filename}: all three local stylesheets are versioned")
-    check(font_stylesheet(page) == reference_fonts, f"{filename}: Google Fonts href matches open-source.html")
+    check(len(local_stylesheets) == 4, f"{filename}: all four local stylesheets (tokens, style, page, fonts) are versioned")
+    check(font_stylesheet(page) == reference_fonts, f"{filename}: font stylesheet href matches open-source.html")
     check(re.search(r'<meta\b(?=[^>]*\bname=["\']robots["\'])(?=[^>]*\bcontent=["\']index, follow["\'])[^>]*>', page, re.IGNORECASE) is not None, f"{filename}: indexable robots metadata")
     check(re.search(r'<meta\b(?=[^>]*\bproperty=["\']og:title["\'])[^>]*>', page, re.IGNORECASE) is not None, f"{filename}: Open Graph title")
 

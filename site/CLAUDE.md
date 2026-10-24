@@ -65,7 +65,15 @@ Two layers, deliberately not relying on each other:
 A strip in Python and an escape in JS, in that order — escaping in both would double-encode and show
 visitors `&amp;lt;`. Guards: `scripts/test-fetch-sanitise.py`, `scripts/test-xss.js`.
 
-## THE RULE: a duplicate key is a silent translation loss
+## RETIRED 2026-10-19: the site is English only
+
+Bob's decision (2026-10-19): "remove all the stuff below the main page - and also remove spanish - only do
+english for the entire site". The EN/ES toggle, `js/i18n/`, `scripts/check-i18n-keys.js`, `scripts/test-i18n.sh`
+and `blog/es/` (now redirect stubs) are gone; `build_content.py` has `LANGS = ()`. The footer is one line
+(© · Privacy · Terms · Contact) and the feedback strip is not loaded. The section below is kept as history of
+bug #155 in case translations ever return.
+
+### History: a duplicate key is a silent translation loss
 
 `window.I18N = { footer: {…}, …, footer: {…} }` is legal JavaScript; the parser keeps the last block
 and every key in the first becomes unreachable. Because `js/i18n/i18n.js` applies a value only when
@@ -96,7 +104,7 @@ carries a comment about having learned the same lesson.
 ```bash
 node scripts/test-unit.js && node scripts/test-unit-v3.js
 node scripts/test-xss.js && python3 scripts/test-fetch-sanitise.py
-python3 scripts/test-publish-contract.py && bash scripts/test-i18n.sh
+python3 scripts/test-publish-contract.py && python3 scripts/test-personas.py
 python3 scripts/test-message.py && bash scripts/test-a11y.sh
 ```
 

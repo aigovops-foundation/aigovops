@@ -53,4 +53,4 @@ your verification statement on Thursday at 15:00 Pacific.
 
 The notice was never the problem. Sit down. What brought you in?
 
-— [The café](https://www.aigovops-foundation.com/?src=letter#problem) · [Level 400 worksheet](https://www.aigovops-foundation.com/practice/levels/400-prove/WORKSHEET.html) · [VH-013 in the cases](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-013)
+— [The café](https://www.aigovops-foundation.com/academy.html?src=letter#problem) · [Level 400 worksheet](https://www.aigovops-foundation.com/practice/levels/400-prove/WORKSHEET.html) · [VH-013 in the cases](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-013)

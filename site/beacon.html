@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://plausible.io https://www.aigovops-foundation.com https://community.aigovops-foundation.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://aigovops-foundation.github.io https://buy.stripe.com; connect-src 'self' https://plausible.io https://community.aigovops-foundation.com https://raw.githubusercontent.com; object-src 'none'; base-uri 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://plausible.io https://www.aigovops-foundation.com https://community.aigovops-foundation.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; frame-src https://aigovops-foundation.github.io https://buy.stripe.com; connect-src 'self' https://plausible.io https://community.aigovops-foundation.com https://raw.githubusercontent.com; object-src 'none'; base-uri 'self'">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>What Is Beacon? | AiGovOps Foundation</title>
   <meta name="description" content="Beacon is an OVERT 1.0-conformant runtime that produces signed, verifiable receipts of AI decisions." />
@@ -17,9 +17,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
   <link rel="stylesheet" href="css/style.css?v=20261011b" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/fonts/fonts.css?v=20261011b" />
   <link rel="stylesheet" href="css/garden.css?v=20261011b" />
   <link rel="stylesheet" href="css/wren-cafe.css?v=20261011b" />
   <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
@@ -167,11 +165,11 @@
       </svg>
     </a>
     <nav class="main-nav">
-      <a href="index.html" data-i18n="nav.home">Home</a>
-      <a href="library.html" data-i18n="nav.library">Library</a>
-      <a href="open-source.html" data-i18n="nav.opensource">Open source</a>
-      <a href="blog.html" data-i18n="nav.blog">Blog</a>
-      <a href="https://community.aigovops-foundation.com/signin.html" class="nav-join" data-i18n="nav.join">Become a member</a>
+      <a href="index.html">Home</a>
+      <a href="library.html">Library</a>
+      <a href="open-source.html">Open source</a>
+      <a href="blog.html">Blog</a>
+      <a href="https://community.aigovops-foundation.com/signin.html" class="nav-join">Become a member</a>
     </nav>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
   </div>
@@ -256,61 +254,13 @@
     </div>
   </section>
 </main>
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <a href="index.html">
-        <svg class="footer-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="height:38px;width:38px">
-          <title>AiGovOps Foundation</title>
-          <circle cx="100" cy="100" r="96" fill="#071a12"/>
-          <polygon points="100,100 42,0 158,0" fill="#9fe1cb" opacity="0.09"/>
-          <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
-          <circle cx="100" cy="100" r="79" fill="none" stroke="#1d9e75" stroke-width="0.5" opacity="0.35"/>
-          <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
-          <ellipse cx="100" cy="57" rx="4" ry="6" fill="#9fe1cb" opacity="0.95"/>
-          <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
-          <rect x="78" y="41" width="44" height="52" rx="1.5" fill="none" stroke="#1d9e75" stroke-width="1"/>
-          <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
-        </svg>
-      </a>
-      <p>Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes. Prove it in ten minutes.</p>
-      <p class="footer-gate"><a href="https://community.aigovops-foundation.com/gate-check.html?src=site-footer" onclick="if(window.plausible)plausible('Gate Check: footer')">Ten minutes, no account — run the Gate Check →</a></p>
-      <p class="footer-marks" data-i18n="footer.marks">Apache-2.0 · Conforms to OVERT · NIST AI RMF · EU AI Act · ISO/IEC 42001 · 501(c)(3) Foundation</p>
-    </div>
-        <nav class="footer-nav">
-      <a href="index.html">Home</a>
-      <a href="library.html">Library</a>
-      <a href="open-source.html">Open source</a>
-      <a href="community.html">Community</a>
-      <a href="blog.html">Blog</a>
-      <a href="founders.html">Founders</a>
-      <a href="support.html">Support</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-      <a href="/feed.xml">RSS</a>
-      <a href="https://aigovops.substack.com/" target="_blank" rel="noopener">Newsletter</a>
-          <span class="footer-label">Topics</span>
-      <a href="ai-governance.html">What is AI governance</a>
-      <a href="aigovops.html">What is AiGovOps</a>
-      <a href="nonprofit.html">Is the AiGovOps Foundation a nonprofit</a>
-      <a href="overt.html">What is OVERT</a>
-      <a href="beacon.html">What is Beacon</a>
-      <a href="audit.html">How do I create an AI audit plan</a>
-      <a href="starter-kits.html">Which AI governance starter kits can I use</a>
-    <a href="glossary.html" data-i18n="glossary.link">Glossary</a></nav>
-  </div>
+<footer class="site-footer site-footer--line">
   <div class="footer-bottom">
-    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
-      <p>© 2026 AiGovOps Foundation — 501(c)(3) Nonprofit</p>
-      <address style="font-style:normal;font-size:.8rem;color:#8080a0">
-        Seattle, WA · Global Community &bull;
-        <a href="mailto:bob.rapp@aigovops.community" style="color:#8080a0">bob.rapp@aigovops.community</a> &bull;
-        <a href="mailto:ken.johnston@aigovops.community" style="color:#8080a0">ken.johnston@aigovops.community</a>
-      </address>
+    <div class="container">
+      <p>© 2026 AiGovOps Foundation. All rights reserved. · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="mailto:bob.rapp@aigovops.community">Contact</a></p>
     </div>
   </div>
 </footer>
 <script src="js/main.js?v=20261011b"></script>
-<script src="feedback.js?v=20261011b" class="aig-feedback-loader" data-theme="light" defer></script>
 </body>
 </html>

@@ -136,11 +136,10 @@ checkTrue('index.html has aria-live',       indexHtml.includes('aria-live'));
 checkFalse('index.html no longer loads schedule.js (one voice at the door)',  indexHtml.includes('schedule.js'));
 checkTrue('index.html main-content anchor', indexHtml.includes('id="main-content"'));
 checkFalse('index.html has no assistant chips', indexHtml.includes('data-intent="frameworks"'));
-checkTrue('index.html says the licence and OVERT once, in the footer', indexHtml.includes('footer-marks') && indexHtml.includes('Conforms to OVERT'));
 checkFalse('index.html no longer carries the badge strip (the footer says it once)', indexHtml.includes('badge-strip'));
 checkTrue('index.html has Plausible analytics',    indexHtml.includes('plausible.io'));
-checkTrue('index.html has i18n script',            indexHtml.includes('i18n.js'));
-checkTrue('index.html has lang toggle',            indexHtml.includes('lang-btn'));
+checkFalse('index.html is English only (no i18n script)', indexHtml.includes('i18n.js'));
+checkFalse('index.html is English only (no lang toggle)', indexHtml.includes('lang-btn'));
 checkTrue('index.html has teal CSS variable',      fs.readFileSync(path.join(__dirname, '../css/style.css'), 'utf8').includes('--teal'));
 
 // FALLBACK text accuracy

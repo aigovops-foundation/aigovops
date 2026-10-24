@@ -1,9 +1,9 @@
 name: Persona journeys
 
+# Pull requests only since 2026-10-20: the daily live-site run is the `journeys` job in
+# automation-v3.yml, so the site has one scheduled workflow instead of three.
 on:
   pull_request:
-  schedule:
-    - cron: '0 13 * * *'
   workflow_dispatch:
 
 permissions:
@@ -39,6 +39,14 @@ jobs:
           exit 1
       - name: Run persona journeys
         run: node scripts/test-persona-journeys.mjs
+      - name: Run front-door tests (home, Academy, Members, Write, Luma data)
+        run: node scripts/test-front-door.mjs
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        if: always()
+        with:
+          name: front-door
+          path: test-results/front-door/
+          if-no-files-found: warn
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         if: always()
         with:

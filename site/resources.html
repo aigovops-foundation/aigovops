@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://plausible.io https://www.aigovops-foundation.com https://community.aigovops-foundation.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://aigovops-foundation.github.io https://buy.stripe.com; connect-src 'self' https://plausible.io https://community.aigovops-foundation.com https://raw.githubusercontent.com; object-src 'none'; base-uri 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://plausible.io https://www.aigovops-foundation.com https://community.aigovops-foundation.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; frame-src https://aigovops-foundation.github.io https://buy.stripe.com; connect-src 'self' https://plausible.io https://community.aigovops-foundation.com https://raw.githubusercontent.com; object-src 'none'; base-uri 'self'">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resources | AiGovOps Foundation</title>
 <link rel="canonical" href="https://www.aigovops-foundation.com/resources.html" />
@@ -15,12 +15,9 @@
   <link rel="alternate" type="application/rss+xml" title="AiGovOps Foundation Feed" href="/feed.xml" />
   <link rel="stylesheet" href="css/style.css?v=20261011b" />
   <!-- M6b garden-warm skin (shared system) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/fonts/fonts.css?v=20261011b" />
   <link rel="stylesheet" href="css/garden.css?v=20261011b" />
   <link rel="stylesheet" href="css/wren-cafe.css?v=20261011b" />
-  <script src="js/i18n/i18n.js?v=20261011b"></script>
   <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
   <style>
     /* ── Community page — garden-warm skin (M6b) ── */
@@ -83,16 +80,12 @@
       </svg>
     </a>
     <nav class="main-nav">
-      <a href="index.html" data-i18n="nav.home">Home</a>
-      <a href="library.html" data-i18n="nav.library">Library</a>
-      <a href="open-source.html" data-i18n="nav.opensource">Open source</a>
-      <a href="blog.html" data-i18n="nav.blog">Blog</a>
-      <a href="https://community.aigovops-foundation.com/signin.html" class="nav-join" data-i18n="nav.join">Become a member</a>
+      <a href="index.html">Home</a>
+      <a href="library.html">Library</a>
+      <a href="open-source.html">Open source</a>
+      <a href="blog.html">Blog</a>
+      <a href="https://community.aigovops-foundation.com/signin.html" class="nav-join">Become a member</a>
     </nav>
-    <div class="lang-toggle" aria-label="Language selector">
-      <button class="lang-btn lang-active" data-lang="en" onclick="window.I18N_SET('en')">EN<span class="sr-only">, switch to English</span></button>
-      <button class="lang-btn" data-lang="es" onclick="window.I18N_SET('es')">ES<span class="sr-only">, cambiar a español</span></button>
-    </div>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
   </div>
 </header>
@@ -100,9 +93,9 @@
 <main id="main-content">
   <section class="comm-hero">
     <div class="container">
-      <p class="hero-eyebrow" data-i18n="resources.eyebrow">The third level</p>
-      <h1 data-i18n="resources.h1">Resources.</h1>
-      <p data-i18n="resources.sub">Everything on the site that is not the one path — kept, linked once, never in the way.</p>
+      <p class="hero-eyebrow">The third level</p>
+      <h1>Resources.</h1>
+      <p>Everything on the site that is not the one path — kept, linked once, never in the way.</p>
     </div>
   </section>
 
@@ -172,39 +165,11 @@
   </section>
 </main>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <a href="index.html">
-        <span class="sr-only">AiGovOps Foundation home</span>
-        <svg style="height:32px;width:32px" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="100" cy="100" r="96" fill="#071a12"/>
-          <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
-          <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
-          <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
-          <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
-        </svg>
-      </a>
-      <p class="estate-creed">Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes. Prove it in ten minutes.</p>
-      <p class="footer-gate"><a href="https://community.aigovops-foundation.com/gate-check.html?src=site-footer" onclick="if(window.plausible)plausible('Gate Check: footer')">Ten minutes, no account — run the Gate Check →</a></p>
-      <p class="footer-marks" data-i18n="footer.marks">Apache-2.0 · Conforms to OVERT · NIST AI RMF · EU AI Act · ISO/IEC 42001 · 501(c)(3) Foundation</p>
-    </div>
-        <nav class="footer-nav">
-      <a href="index.html">Home</a>
-      <a href="library.html">Library</a>
-      <a href="open-source.html">Open source</a>
-      <a href="community.html">Community</a>
-      <a href="blog.html">Blog</a>
-      <a href="founders.html">Founders</a>
-      <a href="support.html">Support</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-      <a href="/feed.xml">RSS</a>
-      <a href="https://aigovops.substack.com/" target="_blank" rel="noopener">Newsletter</a>
-    <a href="glossary.html" data-i18n="glossary.link">Glossary</a></nav>
-  </div>
+<footer class="site-footer site-footer--line">
   <div class="footer-bottom">
-    <div class="container"><p>© 2026 AiGovOps Foundation — 501(c)(3) Nonprofit · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p></div>
+    <div class="container">
+      <p>© 2026 AiGovOps Foundation. All rights reserved. · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="mailto:bob.rapp@aigovops.community">Contact</a></p>
+    </div>
   </div>
 </footer>
 <script>
@@ -239,6 +204,5 @@ if (t && n) t.addEventListener('click', () => { const o = n.classList.toggle('op
 })();
 
 </script>
-<script src="feedback.js?v=20261011b" class="aig-feedback-loader" data-theme="light" defer></script>
 </body>
 </html>

@@ -2,8 +2,7 @@ name: Fetch LinkedIn Posts
 
 on:
   schedule:
-    - cron: '0 7 * * *'    # 7am UTC = midnight Pacific
-    - cron: '0 19 * * *'   # 7pm UTC = noon Pacific
+    - cron: '0 7 * * *'    # 7am UTC = midnight Pacific, once a day (the noon run was retired 2026-10-20: LinkedIn posts land weekly, not hourly)
   workflow_dispatch:        # Manual trigger from GitHub Actions tab
 
 permissions:

@@ -92,6 +92,8 @@ a[href="blog.html"], a[href="/blog.html"], a[href="../blog.html"] { display: non
 .hero-eyebrow { font-size: 0.75rem; font-weight: 600; font-family: 'Courier New', 'Consolas', monospace; text-transform: uppercase; letter-spacing: 0.16em; color: #11785a; margin-bottom: 16px; }
 .hero h1 { font-size: clamp(2rem, 4.5vw, 3.4rem); font-weight: 700; line-height: 1.1; margin-bottom: 16px; }
 .hero-sub { font-size: 1.05rem; color: #d4d0f0; max-width: 560px; margin-bottom: 40px; }
+/* The estate creed, once, where the home page introduces itself (design system 2026-10-19: not in a footer). */
+.home-creed { font-size: 0.95rem; color: #d4d0f0; opacity: .9; max-width: 560px; margin: -24px 0 36px; font-style: italic; }
 
 /* ===== ACTION GRID ===== */
 .action-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
@@ -215,6 +217,10 @@ address a:hover { color: var(--white); }
 .footer-social a:hover { color: var(--white); }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding: 16px 0; }
 .footer-bottom p { font-size: 0.8rem; color: #a0a0b8; }
+/* One-line footer (2026-10-19): nothing below the page but the legal line. */
+.site-footer--line { padding: 0; }
+.site-footer--line .footer-bottom { border-top: 0; padding: 14px 0; }
+.site-footer--line .footer-bottom p { margin: 0; text-align: center; }
 
 /* ===== BLOG PAGE ===== */
 .page-hero { background: linear-gradient(135deg, var(--dark), var(--mid)); color: var(--white); padding: 64px 0 48px; }

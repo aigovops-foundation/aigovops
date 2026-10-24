@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://plausible.io https://www.aigovops-foundation.com https://community.aigovops-foundation.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://aigovops-foundation.github.io https://buy.stripe.com; connect-src 'self' https://plausible.io https://community.aigovops-foundation.com https://raw.githubusercontent.com; object-src 'none'; base-uri 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://plausible.io https://www.aigovops-foundation.com https://community.aigovops-foundation.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; frame-src https://aigovops-foundation.github.io https://buy.stripe.com; connect-src 'self' https://plausible.io https://community.aigovops-foundation.com https://raw.githubusercontent.com; object-src 'none'; base-uri 'self'">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI governance for enterprise governance leads | AiGovOps Foundation</title>
   <meta name="description" content="Map AI governance standards, explore the Vendor RFI, and book a conversation with the AiGovOps Foundation founders." />
@@ -17,12 +17,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
   <link rel="stylesheet" href="css/style.css?v=20261011b" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/fonts/fonts.css?v=20261011b" />
   <link rel="stylesheet" href="css/garden.css?v=20261011b" />
   <link rel="stylesheet" href="css/wren-cafe.css?v=20261011b" />
-  <script src="js/i18n/i18n.js?v=20261011b"></script>
   <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
   <link rel="alternate" type="application/rss+xml" title="AiGovOps Foundation Feed" href="/feed.xml" />
   <script type="application/ld+json">{
@@ -73,77 +70,64 @@
       </svg>
     </a>
     <nav class="main-nav">
-      <a href="index.html" data-i18n="nav.home">Home</a><a href="library.html" data-i18n="nav.library">Library</a><a href="open-source.html" data-i18n="nav.opensource">Open source</a><a href="blog.html" data-i18n="nav.blog">Blog</a>
-      <a href="https://community.aigovops-foundation.com/signin.html" class="nav-join" data-i18n="nav.join">Become a member</a>
+      <a href="index.html">Home</a><a href="library.html">Library</a><a href="open-source.html">Open source</a><a href="blog.html">Blog</a>
+      <a href="https://community.aigovops-foundation.com/signin.html" class="nav-join">Become a member</a>
     </nav>
-    <div class="lang-toggle" aria-label="Language selector">
-      <button class="lang-btn lang-active" data-lang="en" onclick="window.I18N_SET('en')">EN<span class="sr-only">, switch to English</span></button>
-      <button class="lang-btn" data-lang="es" onclick="window.I18N_SET('es')">ES<span class="sr-only">, cambiar a español</span></button>
-    </div>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
   </div>
 </header>
 <main id="main-content" class="persona-page">
   <section class="persona-hero"><div class="container persona-container">
-    <p class="hero-eyebrow" data-i18n="personas.enterprise.eyebrow">Start by role · Enterprise governance lead</p>
-    <h1 data-i18n="personas.enterprise.h1">AI governance for enterprise governance leads</h1>
-    <p class="answer" data-i18n-html="personas.enterprise.answer">Enterprise governance leads can map NIST AI RMF, the EU AI Act, and ISO/IEC 42001 through the Foundation’s frameworks explorer, then use the Vendor RFI to build knowledge, self-audit, and export a verifiable receipt. This open-source path offers a vendor-neutral starting point and a direct way to book the founders for implementation questions.</p>
-    <p class="persona-whats-this"><a href="https://github.com/aigovops-foundation/aigovops-vendor-rfi" data-i18n="personas.enterprise.whatsThis">New to this? What is the Vendor RFI kit →</a></p>
+    <p class="hero-eyebrow">Start by role · Enterprise governance lead</p>
+    <h1>AI governance for enterprise governance leads</h1>
+    <p class="answer">Enterprise governance leads can map NIST AI RMF, the EU AI Act, and ISO/IEC 42001 through the Foundation’s frameworks explorer, then use the Vendor RFI to build knowledge, self-audit, and export a verifiable receipt. This open-source path offers a vendor-neutral starting point and a direct way to book the founders for implementation questions.</p>
+    <p class="persona-whats-this"><a href="https://github.com/aigovops-foundation/aigovops-vendor-rfi">New to this? What is the Vendor RFI kit →</a></p>
   </div></section>
   <section class="persona-journey"><div class="container persona-container">
-    <h2 data-i18n="personas.common.stepsThree">Three steps to get started</h2>
+    <h2>Three steps to get started</h2>
     <ol class="persona-steps">
       <li class="persona-step">
-        <span class="persona-step-number" aria-hidden="true">1</span><h3 data-i18n="personas.enterprise.step1Heading">Assess the Vendor RFI</h3>
-        <p data-i18n="personas.enterprise.step1Text">Use the open-source RFI/RFP and audit-training tool.</p>
-        <a class="btn btn-primary" href="https://github.com/aigovops-foundation/aigovops-vendor-rfi" data-i18n="personas.enterprise.step1Cta">Open the Vendor RFI kit →</a>
+        <span class="persona-step-number" aria-hidden="true">1</span><h3>Assess the Vendor RFI</h3>
+        <p>Use the open-source RFI/RFP and audit-training tool.</p>
+        <a class="btn btn-primary" href="https://github.com/aigovops-foundation/aigovops-vendor-rfi">Open the Vendor RFI kit →</a>
       </li>
       <li class="persona-step">
-        <span class="persona-step-number" aria-hidden="true">2</span><h3 data-i18n="personas.enterprise.step2Heading">Map the frameworks</h3>
-        <p data-i18n="personas.enterprise.step2Text">Explore standards that apply to your organization.</p>
-        <a class="btn btn-primary" href="frameworks.html" data-i18n="personas.enterprise.step2Cta">Open the frameworks explorer →</a>
+        <span class="persona-step-number" aria-hidden="true">2</span><h3>Map the frameworks</h3>
+        <p>Explore standards that apply to your organization.</p>
+        <a class="btn btn-primary" href="frameworks.html">Open the frameworks explorer →</a>
       </li>
       <li class="persona-step">
-        <span class="persona-step-number" aria-hidden="true">3</span><h3 data-i18n="personas.enterprise.step3Heading">Talk through the path</h3>
-        <p data-i18n="personas.enterprise.step3Text">Book time with Ken or Bob.</p>
-        <a class="btn btn-primary" href="founders.html" data-i18n="personas.enterprise.step3Cta">Book the founders</a>
+        <span class="persona-step-number" aria-hidden="true">3</span><h3>Talk through the path</h3>
+        <p>Book time with Ken or Bob.</p>
+        <a class="btn btn-primary" href="founders.html">Book the founders</a>
       </li>
     </ol>
   </div></section>
   <section class="persona-trust" aria-label="Enterprise trust needs"><div class="container persona-container">
-    <ul><li data-i18n="personas.enterprise.chip1">Standards mapping</li><li data-i18n="personas.enterprise.chip2">Auditor-verifiable evidence</li><li data-i18n="personas.enterprise.chip3">Vendor neutrality</li></ul>
+    <ul><li>Standards mapping</li><li>Auditor-verifiable evidence</li><li>Vendor neutrality</li></ul>
   </div></section>
   <section class="persona-faq"><div class="container persona-container">
-    <h2 data-i18n="personas.common.faqHeading">Frequently asked questions</h2>
-    <details><summary data-i18n="personas.enterprise.faq1q">Which standards can I explore?</summary><p data-i18n="personas.enterprise.faq1a">The Foundation’s frameworks explorer includes NIST AI RMF, the EU AI Act, and ISO/IEC 42001.</p></details>
-    <details><summary data-i18n="personas.enterprise.faq2q">What does the Vendor RFI provide?</summary><p data-i18n="personas.enterprise.faq2a">The open-source Vendor RFI is a vendor RFI/RFP and audit-training tool with a scored knowledge check, self-audit, and verifiable receipt export.</p></details>
-    <details><summary data-i18n="personas.enterprise.faq3q">Can I discuss implementation with the Foundation?</summary><p data-i18n="personas.enterprise.faq3a">The path includes an option to book the founders.</p></details>
+    <h2>Frequently asked questions</h2>
+    <details><summary>Which standards can I explore?</summary><p>The Foundation’s frameworks explorer includes NIST AI RMF, the EU AI Act, and ISO/IEC 42001.</p></details>
+    <details><summary>What does the Vendor RFI provide?</summary><p>The open-source Vendor RFI is a vendor RFI/RFP and audit-training tool with a scored knowledge check, self-audit, and verifiable receipt export.</p></details>
+    <details><summary>Can I discuss implementation with the Foundation?</summary><p>The path includes an option to book the founders.</p></details>
   </div></section>
   <section class="persona-related"><div class="container persona-container">
-    <h2 data-i18n="personas.common.relatedHeading">Related answer pages</h2>
-    <ul><li><a href="ai-governance.html" data-i18n="personas.enterprise.related1">What is AI governance?</a></li><li><a href="audit.html" data-i18n="personas.enterprise.related2">How do I create an AI audit plan?</a></li></ul>
+    <h2>Related answer pages</h2>
+    <ul><li><a href="ai-governance.html">What is AI governance?</a></li><li><a href="audit.html">How do I create an AI audit plan?</a></li></ul>
   </div></section>
   <section class="persona-next"><div class="container persona-container">
-    <h2 data-i18n="personas.common.nextHeading">One next step</h2><p data-i18n="personas.enterprise.nextText">Talk with the founders about your governance path.</p>
-    <a class="btn btn-primary" href="founders.html" data-i18n="personas.enterprise.nextCta">Book the founders →</a>
+    <h2>One next step</h2><p>Talk with the founders about your governance path.</p>
+    <a class="btn btn-primary" href="founders.html">Book the founders →</a>
   </div></section>
 </main>
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-brand"><a href="index.html">AiGovOps Foundation</a>
-      <p data-i18n="glossary.promise">Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes. Prove it in ten minutes.</p>
-      <p class="footer-gate"><a href="https://community.aigovops-foundation.com/gate-check.html?src=persona-enterprise" data-i18n="personas.enterprise.footerGate">Ten minutes, no account — run the Gate Check →</a></p>
-      <p class="footer-marks" data-i18n="personas.common.footerMarks">Apache-2.0 · Conforms to OVERT · 501(c)(3) Foundation</p>
+<footer class="site-footer site-footer--line">
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 AiGovOps Foundation. All rights reserved. · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="mailto:bob.rapp@aigovops.community">Contact</a></p>
     </div>
-    <nav class="footer-nav" aria-label="Footer">
-      <a href="index.html" data-i18n="nav.home">Home</a><a href="library.html" data-i18n="nav.library">Library</a><a href="open-source.html" data-i18n="nav.opensource">Open source</a><a href="community.html" data-i18n="personas.common.footerCommunity">Community</a>
-      <a href="founders.html" data-i18n="personas.common.footerFounders">Founders</a><span class="footer-label" data-i18n="personas.common.footerTopics">Topics</span>
-      <a href="ai-governance.html" data-i18n="personas.common.footerAiGovernance">AI governance</a><a href="aigovops.html" data-i18n="glossary.terms.aigovops.term">AiGovOps</a><a href="overt.html" data-i18n="glossary.terms.overt.term">OVERT</a><a href="beacon.html" data-i18n="glossary.terms.beacon.term">Beacon</a><a href="audit.html" data-i18n="personas.common.footerAuditPlan">Audit plan</a>
-    <a href="glossary.html" data-i18n="glossary.link">Glossary</a></nav>
   </div>
-  <div class="footer-bottom"><div class="container"><p data-i18n="personas.common.footerCopyright">© 2026 AiGovOps Foundation — 501(c)(3) Nonprofit</p></div></div>
 </footer>
 <script src="js/main.js?v=20261011b"></script>
-<script src="feedback.js?v=20261011b" class="aig-feedback-loader" data-theme="light" defer></script>
 </body>
 </html>

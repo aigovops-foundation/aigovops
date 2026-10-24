@@ -1,10 +1,11 @@
+# One grouped PR per ecosystem per week instead of one PR (and one email) per package.
 version: 2
 updates:
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "weekly"
+  - package-ecosystem: github-actions
+    directory: /
+    schedule: { interval: weekly, day: monday }
     open-pull-requests-limit: 10
-    labels:
-      - dependencies
-      - security
+    labels: [dependencies, security]
+    groups:
+      all:
+        patterns: ["*"]

@@ -80,17 +80,6 @@ for page in "${BLOG_PAGES[@]}"; do
   fi
 done
 
-# ── 2. Every page's footer carries the creed ───────────────────────────────
-echo ""
-echo "  [Footer creed on every page]"
-for page in "${TOP_PAGES[@]}" "${BLOG_PAGES[@]}"; do
-  if grep -qF "$CREED" "$REPO/$page"; then
-    check "creed: $page" "ok"
-  else
-    check "creed: $page" "creed line missing"
-  fi
-done
-
 # ── 3. Token drift: tokens.css (canonical) vs css/garden.css ───────────────
 echo ""
 echo "  [Token drift — design/aigovops-july-2026/tokens.css → css/garden.css]"

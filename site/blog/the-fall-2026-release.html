@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://plausible.io https://www.aigovops-foundation.com https://community.aigovops-foundation.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://aigovops-foundation.github.io https://buy.stripe.com; connect-src 'self' https://plausible.io https://community.aigovops-foundation.com https://raw.githubusercontent.com; object-src 'none'; base-uri 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://plausible.io https://www.aigovops-foundation.com https://community.aigovops-foundation.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; frame-src https://aigovops-foundation.github.io https://buy.stripe.com; connect-src 'self' https://plausible.io https://community.aigovops-foundation.com https://raw.githubusercontent.com; object-src 'none'; base-uri 'self'">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Fall 2026 Release — one hour to your first receipt, at whatever level you start | AiGovOps Foundation</title>
   <meta name="description" content="The Foundation&#x27;s open-source projects become one practice with four levels, each an hour or less, each on a real case from the 100 verified harms — built on OVERT, the open standard from Glacis, which is the hero of this story." />
@@ -18,12 +18,9 @@
   <meta name="author" content="Bob Rapp" />
   <link rel="stylesheet" href="../css/style.css?v=20261011b" />
   <!-- M6b garden-warm skin (shared system) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..800;1,300..800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/fonts/fonts.css?v=20261011b" />
   <link rel="stylesheet" href="../css/garden.css?v=20261011b" />
   <link rel="stylesheet" href="../css/wren-cafe.css?v=20261011b" />
-  <script src="../js/i18n/i18n.js?v=20261011b"></script>
   <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
   <script type="application/ld+json">
   {
@@ -37,7 +34,7 @@
       "name": "AiGovOps Foundation",
       "logo": { "@type": "ImageObject", "url": "https://www.aigovops-foundation.com/images/logo.png" }
     },
-    "image": "https://www.aigovops-foundation.com/images/story-default.png",
+    "image": "/images/blog/what-is-aigovops.webp",
     "mainEntityOfPage": "https://www.aigovops-foundation.com/blog/the-fall-2026-release.html",
     "url": "https://www.aigovops-foundation.com/blog/the-fall-2026-release.html"
   }
@@ -64,16 +61,12 @@
       <span class="logo-text">AiGovOps Foundation</span>
     </a>
     <nav class="main-nav">
-      <a href="../index.html" data-i18n="nav.home">Home</a>
-      <a href="../library.html" data-i18n="nav.library">Library</a>
-      <a href="../open-source.html" data-i18n="nav.opensource">Open source</a>
-      <a href="../blog.html" class="active" data-i18n="nav.blog">Blog</a>
-      <a href="https://community.aigovops-foundation.com/signin.html" class="nav-join" data-i18n="nav.join">Become a member</a>
+      <a href="../index.html">Home</a>
+      <a href="../library.html">Library</a>
+      <a href="../open-source.html">Open source</a>
+      <a href="../blog.html" class="active">Blog</a>
+      <a href="https://community.aigovops-foundation.com/signin.html" class="nav-join">Become a member</a>
     </nav>
-    <div class="lang-toggle" aria-label="Language selector">
-      <button class="lang-btn lang-active" data-lang="en" onclick="window.I18N_SET('en')">EN<span class="sr-only">, switch to English</span></button>
-      <button class="lang-btn" data-lang="es" onclick="window.I18N_SET('es')">ES<span class="sr-only">, cambiar a español</span></button>
-    </div>
     <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
   </div>
 </header>
@@ -97,7 +90,6 @@
 
   <img src="https://www.aigovops-foundation.com/images/story-default.png" alt="The Fall 2026 Release — one hour to your first receipt, at whatever level you start" loading="lazy" style="width:100%;border-radius:14px;margin:24px 0 32px;aspect-ratio:16/9;object-fit:cover" />
 
-  <p class="lang-switch"><a href="es/the-fall-2026-release.html" hreflang="es">Leer en español →</a></p>
   <div class="post-body" style="font-size:1.05rem;line-height:1.75;color:var(--text)">
 <p style="margin-bottom:20px">This story has a hero, and it is not us.</p>
 <p style="margin-bottom:20px">In March, Glacis Technologies published <strong>OVERT</strong> — an open, royalty-free standard for proof at the
@@ -168,30 +160,14 @@ Then bring it.</em></p>
 </article>
 </main>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <span class="logo-text footer-logo" style="color:#fff;font-size:1.1rem;">AiGovOps Foundation</span>
-      <p>Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes. Prove it in ten minutes.</p>
-      <p style="margin-top:16px">The AiGovOps Foundation is dedicated to shaping the future of artificial intelligence through rigorous oversight, audit, and compliance.</p>
-      <address>Seattle, WA 98104 &bull; <a href="mailto:bob.rapp@aigovops.community">bob.rapp@aigovops.community</a></address>
-    </div>
-    <nav style="padding-top:8px">
-      <a href="../index.html" style="display:block;color:#a0a0b8;margin-bottom:8px">Home</a>
-      <a href="../blog.html" style="display:block;color:#a0a0b8;margin-bottom:8px">Blog</a>
-      <a href="../frameworks.html" style="display:block;color:#a0a0b8;margin-bottom:8px">Frameworks</a>
-      <a href="../support.html" style="display:block;color:#a0a0b8;margin-bottom:8px">Support</a>
-    <a href="../glossary.html" data-i18n="glossary.link">Glossary</a></nav>
-  </div>
+<footer class="site-footer site-footer--line">
   <div class="footer-bottom">
     <div class="container">
-      <p>Governance Versioned Like Code. Tested Before Deployment.</p>
-      <p>&copy; 2026 AiGovOps Foundation. All rights reserved.</p>
+      <p>© 2026 AiGovOps Foundation. All rights reserved. · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a> · <a href="mailto:bob.rapp@aigovops.community">Contact</a></p>
     </div>
   </div>
 </footer>
 
 <script src="../js/main.js?v=20261011b"></script>
-<script src="../feedback.js?v=20261011b" class="aig-feedback-loader" data-theme="light" defer></script>
 </body>
 </html>

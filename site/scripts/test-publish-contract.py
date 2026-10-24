@@ -130,7 +130,8 @@ def main():
         check("sitemap.xml exists", False, "nothing to keep current")
     else:
         sm = sitemap.read_text(encoding="utf-8")
-        posts = sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / "blog").rglob("*.html"))
+        posts = sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / "blog").rglob("*.html")
+                       if 'content="noindex' not in p.read_text(encoding="utf-8"))  # redirect stubs (blog/es/) are not pages
         absent = [p for p in posts if f"/{p}" not in sm]
         check(f"all {len(posts)} pages under blog/ appear in sitemap.xml",
               not absent, f"absent: {absent}")
@@ -236,10 +237,6 @@ def main():
     )
     check(f"all {asset_references} local CSS/JS and @import references across {len(html_files)} HTML and {len(css_files)} CSS files share one ?v= cache version",
           versioned, version_detail)
-    i18n_source = (ROOT / "js" / "i18n" / "i18n.js").read_text(encoding="utf-8")
-    check("i18n loader carries its cache version to strings-{lang}.js",
-          "searchParams.get('v')" in i18n_source
-          and "searchParams.set('v', I18N_VERSION)" in i18n_source)
 
     publish_workflow = WORKFLOW.read_text(encoding="utf-8")
     outputs = re.search(r'^\s*OUTPUTS="([^"]+)"', publish_workflow, re.M)

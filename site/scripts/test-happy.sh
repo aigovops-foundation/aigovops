@@ -46,10 +46,10 @@ fi
 echo "  [Journey 1 — arrive on the porch]"
 code=$(http_code "$SITE/")
 [ "$code" = "200" ] && check "$SITE/ → 200" "ok" || check "$SITE/ → 200" "HTTP $code"
-if body "$SITE/" | grep -qF "Get to Yes"; then
-  check "Homepage contains \"Get to Yes\"" "ok"
+if body "$SITE/" | grep -qF "Pick what you came to do"; then
+  check "Homepage asks \"Pick what you came to do\"" "ok"
 else
-  check "Homepage contains \"Get to Yes\"" "promise text missing from live homepage"
+  check "Homepage asks \"Pick what you came to do\"" "front-door prompt missing from live homepage"
 fi
 
 # ── Journey 2: Come Join → the community platform answers ──────────────────
@@ -92,10 +92,10 @@ fi
 # ── Journey 5: community page — ways to contribute ─────────────────────────
 echo ""
 echo "  [Journey 5 — find a way to contribute]"
-if body "$SITE/community.html" | grep -qF 'id="ways-to-contribute"'; then
-  check "community.html has #ways-to-contribute" "ok"
+if body "$SITE/write.html" | grep -qF 'id="topics"'; then
+  check "write.html lists open topics (#topics)" "ok"
 else
-  check "community.html has #ways-to-contribute" "anchor missing on live page"
+  check "write.html lists open topics (#topics)" "anchor missing on live page"
 fi
 
 # ── Journey 6: read a blog post ────────────────────────────────────────────

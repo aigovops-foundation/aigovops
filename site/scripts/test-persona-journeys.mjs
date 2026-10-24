@@ -10,12 +10,12 @@ const PRE_CUTOVER_URL_REMAPS = [
   // PRE-CUTOVER remap: remove after cutover (MONOREPO.md step 8)
   {
     from: /^https:\/\/www\.aigovops-foundation\.com\/practice\/(.*)$/,
-    to: 'https://practice.aigovops-foundation.com/$1',
+    to: 'https://www.aigovops-foundation.com/practice/$1',
   },
   // PRE-CUTOVER remap: remove after cutover (MONOREPO.md step 8)
   {
     from: /^https:\/\/www\.aigovops-foundation\.com\/camps\/ncw\/(.*)$/,
-    to: 'https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/$1',
+    to: 'https://www.aigovops-foundation.com/camps/ncw/$1',
   },
 ];
 const RESULTS_DIR = path.join(ROOT, 'test-results', 'personas');
@@ -48,17 +48,15 @@ function remapPreCutoverUrl(url) {
 }
 
 async function checkHomepageChipLabels(page, language) {
+  // English only since 2026-10-19: no language toggle; the document language is static.
   await page.waitForFunction(
-    (expectedLanguage) => document.documentElement.lang === expectedLanguage
-      && document.querySelector(`.lang-btn[data-lang="${expectedLanguage}"]`)?.classList.contains('lang-active'),
+    (expectedLanguage) => document.documentElement.lang === expectedLanguage,
     language,
     { timeout: 10_000 },
   );
   const labels = (await page.locator('.persona-chips a.persona-chip').allTextContents())
     .map((label) => label.trim());
-  const expected = PERSONAS.map((persona) =>
-    language === 'es' ? persona.spanishChipLabel : persona.englishChipLabel,
-  );
+  const expected = PERSONAS.map((persona) => persona.englishChipLabel);
   record(
     labels.length === expected.length && labels.every((label, index) => label === expected[index]),
     `${language.toUpperCase()} homepage persona chips match the expected labels`,
@@ -70,7 +68,7 @@ async function checkHomepageChipLabels(page, language) {
 }
 
 function isUnexpectedConsoleError(locationUrl, text, baseUrl = BASE.href) {
-  const cspResourceUrl = /refused to load/i.test(text)
+  const cspResourceUrl = /refused to load|violates the following content security policy/i.test(text)
     ? text.match(/https?:\/\/[^\s"'<>]+/i)?.[0]
     : null;
   const resourceUrl = cspResourceUrl || locationUrl;
@@ -88,11 +86,11 @@ function runSelfTest() {
   const remapCases = [
     {
       input: 'https://www.aigovops-foundation.com/practice/levels/100-begin/WORKSHEET.html?src=persona#start',
-      expected: 'https://practice.aigovops-foundation.com/levels/100-begin/WORKSHEET.html?src=persona#start',
+      expected: 'https://www.aigovops-foundation.com/practice/levels/100-begin/WORKSHEET.html?src=persona#start',
     },
     {
       input: 'https://www.aigovops-foundation.com/camps/ncw/docs/?q=1#x',
-      expected: 'https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/docs/?q=1#x',
+      expected: 'https://www.aigovops-foundation.com/camps/ncw/docs/?q=1#x',
     },
     {
       input: 'https://www.aigovops-foundation.com/open-source.html',
@@ -109,6 +107,12 @@ function runSelfTest() {
       name: 'ignores Cloudflare Insights CSP errors',
       locationUrl: 'https://www.aigovops-foundation.com/for-founders.html',
       text: "Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/abc' because it violates the Content Security Policy.",
+      expected: false,
+    },
+    {
+      name: 'ignores the newer Chromium wording for Cloudflare Insights CSP errors',
+      locationUrl: 'https://www.aigovops-foundation.com/for-founders.html',
+      text: "Loading the script 'https://static.cloudflareinsights.com/beacon.min.js/abc' violates the following Content Security Policy directive: \"script-src 'self'\". The action has been blocked.",
       expected: false,
     },
     {
@@ -239,83 +243,6 @@ async function run() {
   let indexScreenshotSaved = false;
 
   try {
-    const spanishContext = await browser.newContext({
-      viewport: { width: 1280, height: 800 },
-      ignoreHTTPSErrors: true,
-    });
-    try {
-      const spanishPage = await spanishContext.newPage();
-      await spanishPage.addInitScript("localStorage.setItem('aigovops-lang', 'es')");
-      await spanishPage.goto(BASE.href, { waitUntil: 'domcontentloaded', timeout: 10_000 });
-      await spanishPage.waitForFunction(
-        () => document.documentElement.lang === 'es',
-        null,
-        { timeout: 10_000 },
-      );
-      await spanishPage.evaluate(() => document.fonts.ready);
-      const spanishLastCardBottom = await spanishPage.locator('.academy-bar').evaluate(
-        (bar) => bar.getBoundingClientRect().bottom,
-      );
-      scorecard.spanishHomeLastCardBottom = Math.round(spanishLastCardBottom * 100) / 100;
-      record(
-        spanishLastCardBottom <= 800,
-        `Spanish homepage: the four tasks and the Academy bar fit at 1280×800 (${Math.round(spanishLastCardBottom)}px)`,
-      );
-      await spanishPage.goto(new URL('academy.html', BASE).href, { waitUntil: 'domcontentloaded', timeout: 10_000 });
-      await checkHomepageChipLabels(spanishPage, 'es');
-      for (const persona of PERSONAS) {
-        await spanishPage.goto(new URL(persona.page, BASE).href, {
-          waitUntil: 'domcontentloaded',
-          timeout: 10_000,
-        });
-        await spanishPage.waitForFunction(
-          () => document.documentElement.lang === 'es',
-          null,
-          { timeout: 10_000 },
-        );
-        if (persona.id === 'founder') {
-          await spanishPage.waitForSelector('.aig-feedback');
-          const spanishFeedback = await spanishPage.evaluate(() => ({
-            question: document.querySelector('.aig-fb-q')?.textContent,
-            more: document.querySelector('.aig-fb-more')?.textContent,
-            placeholder: document.querySelector('.aig-feedback textarea')?.placeholder,
-          }));
-          record(
-            spanishFeedback.question === '¿Te resultó útil esta página?'
-              && spanishFeedback.more === 'Cuéntanos más'
-              && spanishFeedback.placeholder === '¿Qué funcionó y qué no…?',
-            'Feedback widget renders Spanish visible and form strings',
-          );
-          await spanishPage.evaluate(() => window.I18N_SET('en'));
-          await spanishPage.waitForFunction(
-            () => document.querySelector('.aig-fb-q')?.textContent === 'Was this page helpful?',
-            null,
-            { timeout: 10_000 },
-          );
-          await spanishPage.evaluate(() => window.I18N_SET('es'));
-          await spanishPage.waitForFunction(
-            () => document.querySelector('.aig-fb-q')?.textContent === '¿Te resultó útil esta página?',
-            null,
-            { timeout: 10_000 },
-          );
-        }
-        const spanishHeading = (await spanishPage.locator('.persona-hero h1').textContent())?.trim();
-        record(spanishHeading !== persona.title, `${persona.id}: Spanish H1 differs from English`);
-        const stepOneLink = spanishPage.locator('.persona-steps .persona-step:first-child a.btn-primary');
-        const stepOneHref = await stepOneLink.getAttribute('href');
-        const expected = new URL(persona.successHref);
-        if (expected.hostname === 'community.aigovops-foundation.com') {
-          const actual = new URL(stepOneHref, spanishPage.url());
-          record(actual.searchParams.get('lang') === 'es', `${persona.id}: community step-1 CTA has lang=es`);
-          record(
-            actual.searchParams.get('src') === expected.searchParams.get('src'),
-            `${persona.id}: community step-1 CTA preserves src`,
-          );
-        }
-      }
-    } finally {
-      await spanishContext.close();
-    }
 
     for (const persona of PERSONAS) {
       const journey = {

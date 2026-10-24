@@ -14,7 +14,9 @@
     "test:a11y": "playwright test --config=tests/playwright.config.mjs tests/e2e/a11y.spec.mjs",
     "test:html": "htmlhint \"docs/**/*.html\" --config tests/.htmlhintrc",
     "test:links": "linkinator docs --recurse --silent --skip \"https?://(?!localhost|127\\.0\\.0\\.1)\" --config tests/linkinator.config.json",
-    "test": "npm run test:html && npm run test:api && npm run test:e2e && npm run test:a11y"
+    "test": "npm run test:html && npm run test:css && npm run test:api && npm run test:e2e && npm run test:a11y",
+    "build:css": "npx --yes tailwindcss@3.4.17 -c tailwind.config.js -i tools/css/tailwind.src.css -o docs/assets/css/tailwind.css --minify",
+    "test:css": "node tests/css-no-cdn.test.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.0",
