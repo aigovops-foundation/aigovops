@@ -1,3 +1,5 @@
+> **Retired 2026-10-18 (Bob, cut-list 11: "Studio off").** The hosted Studio demo on Render (`aigovops-studio.onrender.com`) and the dead Fly app are being deleted, and `render.yaml` / `fly.toml` are gone from this repo. The product ships as the container image `ghcr.io/aigovops-foundation/aigovops` (see `release.yml`); run it anywhere with `docker run -p 8930:8930 ghcr.io/aigovops-foundation/aigovops:latest`. The notes below are kept as history.
+
 # Deploy the Studio to a non-production URL (for Bob & Ken)
 
 *Goal: a public, non-production URL where you and Ken can drive the **real** server-backed
