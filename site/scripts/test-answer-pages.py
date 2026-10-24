@@ -23,6 +23,8 @@ RELEVANT_LINKS = (
     "library.html",
     "community.aigovops-foundation.com/library/",
     "practice.aigovops-foundation.com",
+    "aigovops-foundation.com/practice/",
+    "aigovops-foundation.com/camps/ncw/",
     "gate-check.html",
     "aigovops-beacon",
     "aigovops-vendor-rfi",
