@@ -10,12 +10,12 @@ const PRE_CUTOVER_URL_REMAPS = [
   // PRE-CUTOVER remap: remove after cutover (MONOREPO.md step 8)
   {
     from: /^https:\/\/www\.aigovops-foundation\.com\/practice\/(.*)$/,
-    to: 'https://www.aigovops-foundation.com/practice/$1',
+    to: 'https://practice.aigovops-foundation.com/$1',
   },
   // PRE-CUTOVER remap: remove after cutover (MONOREPO.md step 8)
   {
     from: /^https:\/\/www\.aigovops-foundation\.com\/camps\/ncw\/(.*)$/,
-    to: 'https://www.aigovops-foundation.com/camps/ncw/$1',
+    to: 'https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/$1',
   },
 ];
 const RESULTS_DIR = path.join(ROOT, 'test-results', 'personas');
@@ -86,11 +86,11 @@ function runSelfTest() {
   const remapCases = [
     {
       input: 'https://www.aigovops-foundation.com/practice/levels/100-begin/WORKSHEET.html?src=persona#start',
-      expected: 'https://www.aigovops-foundation.com/practice/levels/100-begin/WORKSHEET.html?src=persona#start',
+      expected: 'https://practice.aigovops-foundation.com/levels/100-begin/WORKSHEET.html?src=persona#start',
     },
     {
       input: 'https://www.aigovops-foundation.com/camps/ncw/docs/?q=1#x',
-      expected: 'https://www.aigovops-foundation.com/camps/ncw/docs/?q=1#x',
+      expected: 'https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/docs/?q=1#x',
     },
     {
       input: 'https://www.aigovops-foundation.com/open-source.html',
