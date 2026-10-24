@@ -1,0 +1,101 @@
+{
+  "updated": "2026-10-24T07:07:16Z",
+  "feed_health": {
+    "bob": {
+      "ok": true,
+      "fetched": 10,
+      "published": 9,
+      "error": null
+    },
+    "ken": {
+      "ok": true,
+      "fetched": 10,
+      "published": 1,
+      "error": null
+    }
+  },
+  "bob": [
+    {
+      "title": "More prompt data ≠ better AI. PROBLEM | 问题 A task may need only a category and time range, yet receive a full ticket or customer r...",
+      "link": "https://www.linkedin.com/posts/bobrapp_more-prompt-data-better-ai-problem-activity-7519518589419421696-CaQq",
+      "date": "Fri, 23 Oct 2026 22:02:18 GMT",
+      "summary": "More prompt data ≠ better AI. PROBLEM | 问题 A task may need only a category and time range, yet receive a full ticket or customer record. Unnecessary personal or confidential data has crossed the AI boundary. This is input minimization—not memory retention, consent revocation, or",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI-generated code is not production-ready. Problem: Speed without governance creates unreviewed, untested, unowned changes. Soluti...",
+      "link": "https://www.linkedin.com/posts/bobrapp_ai-generated-code-is-not-production-ready-activity-7519382725645185025-0MmD",
+      "date": "Fri, 23 Oct 2026 13:02:25 GMT",
+      "summary": "AI-generated code is not production-ready. Problem: Speed without governance creates unreviewed, untested, unowned changes. Solution: Before release, require human review, tests, dependency/licence checks, evidence, and an owner. Three-Yes Test: Safe? Compliant? Pro-humanity? Shi",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "PROBLEM / 問題 AI output is not evidence by itself. Without its source, transformation steps, and named sign-off, an internal decisi...",
+      "link": "https://www.linkedin.com/posts/bobrapp_problem-%E5%95%8F%E9%A1%8C-ai-output-is-not-evidence-by-activity-7519157151219777537-kaS-",
+      "date": "Thu, 22 Oct 2026 22:06:04 GMT",
+      "summary": "PROBLEM / 問題 AI output is not evidence by itself. Without its source, transformation steps, and named sign-off, an internal decision cannot be reconstructed or defended. AI出力は証拠そのものではありません。出典、変換工程、承認者の記録がなければ、社内判断を再現・説明できません。 SOLUTION / 解決策 Record at decision time: source/version",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "A polished AI demo can hide a harmful assumption. PROBLEM Affected users expose missing context, time, language, authority, and sa...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-polished-ai-demo-can-hide-a-harmful-assumption-activity-7519020660501843968-eQpO",
+      "date": "Thu, 22 Oct 2026 13:03:42 GMT",
+      "summary": "A polished AI demo can hide a harmful assumption. PROBLEM Affected users expose missing context, time, language, authority, and safe ways to challenge AI. SOLUTION Before build freeze, observe real tasks. Map handoffs and failure points. Ask when AI is wrong. Convert dissent into",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Handoff ≠ a file; it is operating capability. التسليم ≠ ملف؛ بل قدرة تشغيلية. PROBLEM | المشكلة Build knows. Operations needs owne...",
+      "link": "https://www.linkedin.com/posts/bobrapp_handoff-a-file-it-is-operating-capability-activity-7518794221051551745-09H9",
+      "date": "Wed, 21 Oct 2026 22:03:55 GMT",
+      "summary": "Handoff ≠ a file; it is operating capability. التسليم ≠ ملف؛ بل قدرة تشغيلية. PROBLEM | المشكلة Build knows. Operations needs owner, limits, assumptions, monitoring, and support/escalation—not a model card or generic accountability. يعرف فريق البناء. يحتاج التشغيل إلى المالك والق",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "One cohort can bear harm while the average says “pass.” Problem Cover language, age, geography, disability, device, context—and in...",
+      "link": "https://www.linkedin.com/posts/bobrapp_one-cohort-can-bear-harm-while-the-average-activity-7518658402366177281-ryhM",
+      "date": "Wed, 21 Oct 2026 13:04:13 GMT",
+      "summary": "One cohort can bear harm while the average says “pass.” Problem Cover language, age, geography, disability, device, context—and intersections. Solution Pre-design cohorts; weight real use; set floors; inspect errors; retest after changes. Three-Yes Test: Safe? Compliant? Pro-Huma",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Can another team rerun your AI evaluation, and explain any changed result? PROBLEM | A score without fixtures, versions, or rerun...",
+      "link": "https://www.linkedin.com/posts/bobrapp_can-another-team-rerun-your-ai-evaluation-activity-7518431529556164608-EVWm",
+      "date": "Tue, 20 Oct 2026 22:02:42 GMT",
+      "summary": "Can another team rerun your AI evaluation, and explain any changed result? PROBLEM | A score without fixtures, versions, or rerun evidence is only a claim. SOLUTION | Freeze fixtures. Pin model, prompt, code, data, dependencies, threshold, seed, runtime, and environment. Keep raw",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Before choosing a model, screen the objective. PROBLEM A capable model can still scale an unacceptable goal. Wrong objective + bet...",
+      "link": "https://www.linkedin.com/posts/bobrapp_before-choosing-a-model-screen-the-objective-activity-7518296030736592896-ldZu",
+      "date": "Tue, 20 Oct 2026 13:04:17 GMT",
+      "summary": "Before choosing a model, screen the objective. PROBLEM A capable model can still scale an unacceptable goal. Wrong objective + better accuracy = faster harm. SOLUTION — GATE 0 1) State the outcome, affected people, and decision authority. 2) Apply the Three-Yes Test: Safe? Compli",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Generic AI training is not governance. Different roles face different decisions, tools and risks. Problem → Solution → Summary One...",
+      "link": "https://www.linkedin.com/posts/bobrapp_generic-ai-training-is-not-governance-different-activity-7518069151769198592-FbCR",
+      "date": "Mon, 19 Oct 2026 22:02:45 GMT",
+      "summary": "Generic AI training is not governance. Different roles face different decisions, tools and risks. Problem → Solution → Summary One course proves attendance, not capability. Profile each role: decisions, tools/data, risks and escalation. Practise scenarios, assess behavior, refres",
+      "image": null,
+      "author": "Bob Rapp"
+    }
+  ],
+  "ken": [
+    {
+      "title": "Paul Li, Ph.D. “Ken and I were some of the first people to join the Windows 10 Core Data Science organization. Working with Ken, I always appreciated his strategic vision, and collaborative leadership style. During our time together at Microsoft, Ken consistently demonstrated a remarkable talent for balancing cutting-edge innovation with ethical considerations, particularly in his pioneering work implementing responsible AI standards across a 5,000-person organization. Any organization would be fortunate to have Ken—he brings technical excellence, ethical leadership, and a proven ability to scale data science practices across large enterprises. His rare combination of deep technical knowledg",
+      "link": "https://www.linkedin.com/in/paul-l-li?trk=public_profile_recommendations",
+      "date": "",
+      "summary": "",
+      "image": null,
+      "author": "Ken Johnston"
+    }
+  ]
+}

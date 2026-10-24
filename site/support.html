@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://plausible.io https://www.aigovops-foundation.com https://community.aigovops-foundation.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; frame-src https://aigovops-foundation.github.io https://buy.stripe.com; connect-src 'self' https://plausible.io https://community.aigovops-foundation.com https://raw.githubusercontent.com; object-src 'none'; base-uri 'self'">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support | AiGovOps Foundation</title>
+<link rel="canonical" href="https://www.aigovops-foundation.com/support.html" />
+  <meta name="description" content="Fund the open-source AI governance standard. Every contribution keeps policy-as-code free, verifiable, and global." />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <meta property="og:title" content="Support the AiGovOps Foundation" />
+  <meta property="og:description" content="Fund the open-source AI governance standard. Keep policy-as-code free, verifiable, and global." />
+  <meta property="og:image" content="https://www.aigovops-foundation.com/images/founders.jpg" />
+  <meta property="og:url" content="https://www.aigovops-foundation.com/support.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="css/style.css?v=20261011b" />
+  <!-- M6b garden-warm skin (shared system) -->
+  <link rel="stylesheet" href="/fonts/fonts.css?v=20261011b" />
+  <link rel="stylesheet" href="css/garden.css?v=20261011b" />
+  <link rel="stylesheet" href="css/wren-cafe.css?v=20261011b" />
+  <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
+  <style>
+    /* ── Support page specific — garden-warm skin (M6b) ── */
+    /* Inline markup uses var(--teal-accessible); re-point it to garden green-ink
+       so the giving-interim notice, Stripe CTA pill and FAQ links go garden. */
+    :root { --teal-accessible: #1F5E3A; }
+
+    .support-hero { background: var(--garden-deep-cream); color: var(--garden-charcoal); padding: 72px 0 56px; text-align: center; position: relative; overflow: hidden; }
+    .support-hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(480px 220px at 10% 115%, rgba(232,181,74,.28), transparent 70%), radial-gradient(460px 220px at 92% -15%, rgba(46,125,79,.16), transparent 70%); }
+    .support-hero .container { position: relative; }
+    .support-hero .hero-eyebrow { color: var(--garden-green-ink); font-family: 'Courier New', monospace; font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .16em; margin-bottom: 14px; }
+    .support-hero h1 { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 600; margin-bottom: 16px; }
+    .support-hero p { font-size: 1.05rem; color: var(--garden-ink-soft); max-width: 560px; margin: 0 auto 36px; line-height: 1.6; }
+    /* Give-now cluster (rails-ribbon treatment, one giving surface) */
+    .coffee-banner { background: var(--garden-cream); border-top: 1.5px dashed rgba(46,125,79,.5); border-bottom: 1.5px dashed rgba(46,125,79,.5); padding: 28px 0; text-align: center; }
+    .give-cluster { padding: 36px 0; }
+    .give-cluster .btn-teal-outline { background: transparent; }
+    /* PARKED-GIVING HIDE (Bob, 2026-07-17; pruned 2026-07-17 design review): the
+       coffee rail and the two parked top buttons are DELETED from markup, not
+       hidden. What remains parked is the three tier cards' data-orig CTAs — the
+       flip machinery for scripts/apply-stripe-links.sh. The script strips this
+       rule when Ken's Stripe links land; do not remove it by hand before then. */
+    a[data-orig] { display: none !important; }
+
+    /* Tier grid */
+    .tiers-section { background: var(--garden-cream); padding: 64px 0; }
+    .tiers-section h2 { text-align: center; margin-bottom: 8px; }
+    .tiers-section .section-sub { text-align: center; color: var(--garden-ink-soft); font-size: .9rem; margin-bottom: 48px; }
+    .tiers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .tier-card { background: #fff; border: 1px solid var(--garden-card-line); box-shadow: var(--garden-shadow-sm); border-radius: var(--garden-r-2xl); padding: 32px 28px; display: flex; flex-direction: column; gap: 12px; position: relative; transition: transform .18s, border-color .18s, box-shadow .18s; }
+    .tier-card:hover { transform: translateY(-4px); border-color: var(--garden-green); box-shadow: var(--garden-shadow); }
+    .tier-card.featured { border-color: var(--garden-green); background: var(--garden-deep-cream); }
+    .tier-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--garden-green); color: #fff; font-size: .72rem; font-weight: 700; font-family: 'Courier New', monospace; letter-spacing: .1em; text-transform: uppercase; padding: 4px 14px; border-radius: 20px; white-space: nowrap; }
+    .tier-icon { font-size: 1.8rem; }
+    .tier-name { font-size: 1rem; font-weight: 700; color: var(--garden-charcoal); }
+    .tier-amount { font-family: var(--garden-serif); font-size: 2rem; font-weight: 600; color: var(--garden-green-deep); line-height: 1; }
+    .tier-amount span { font-family: var(--garden-sans); font-size: .85rem; font-weight: 400; color: var(--garden-ink-soft); }
+    .tier-desc { font-size: .85rem; color: var(--garden-ink-soft); line-height: 1.5; }
+    .tier-perks { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 7px; }
+    .tier-perks li { font-size: .84rem; color: var(--garden-charcoal); display: flex; align-items: flex-start; gap: 8px; line-height: 1.4; }
+    .tier-perks li::before { content: '✓'; color: var(--garden-green-ink); font-weight: 700; flex-shrink: 0; }
+    .tier-actions { margin-top: auto; display: flex; flex-direction: column; gap: 8px; }
+    .btn-teal { background: var(--garden-green); color: #fff; border: none; border-radius: 999px; padding: 12px 20px; font-size: .88rem; font-weight: 600; cursor: pointer; text-align: center; text-decoration: none; display: block; transition: background .15s; }
+    .btn-teal:hover { background: var(--garden-green-deep); }
+    .btn-teal-outline { background: transparent; color: var(--garden-green-deep); border: 1.5px solid var(--garden-green); border-radius: 999px; padding: 10px 20px; font-size: .82rem; font-weight: 600; cursor: pointer; text-align: center; text-decoration: none; display: block; transition: all .15s; }
+    .btn-teal-outline:hover { background: var(--garden-deep-cream); }
+
+    /* Trust band — charcoal (impact ∪ transparency, toolkit treatment) */
+    .impact-section { background: var(--garden-charcoal); --teal: #5DCAA5; color: var(--garden-cream); padding: 56px 0; }
+    .impact-section h2 { color: var(--garden-cream); text-align: center; margin-bottom: 8px; }
+    .impact-sub { text-align: center; color: rgba(250,247,240,.72); font-size: .9rem; max-width: 640px; margin: 0 auto 40px; }
+    .impact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .impact-card { border: 1px solid rgba(250,247,240,.16); border-radius: var(--garden-r-2xl); padding: 20px 16px; text-align: center; }
+    .impact-amount { font-size: 1.3rem; font-weight: 700; color: var(--garden-gold); font-family: 'Courier New', monospace; margin-bottom: 6px; }
+    .impact-label { font-size: .8rem; color: rgba(250,247,240,.72); line-height: 1.4; }
+    .transparency-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+    .transparency-item { background: var(--garden-cream); border-radius: 14px; padding: 18px 20px; border: 1px solid var(--garden-card-line); box-shadow: var(--garden-shadow-sm); }
+    .transparency-item h4 { font-size: .9rem; font-weight: 700; margin-bottom: 6px; color: var(--garden-charcoal); }
+    .transparency-item p { font-size: .82rem; color: var(--garden-ink-soft); line-height: 1.5; }
+    .impact-section .btn-outline { border: 1.5px solid #5DCAA5; color: #5DCAA5; border-radius: 999px; }
+    .impact-section .btn-outline:hover { background: rgba(93,202,165,.12); color: #9fe1cb; border-color: #9fe1cb; }
+
+    /* FAQ — accessible accordion (details/summary) */
+    .faq-section { background: var(--garden-cream); padding: 52px 0; }
+    .faq-section h2 { text-align: center; margin-bottom: 36px; }
+    .faq-list { display: flex; flex-direction: column; gap: 12px; max-width: 760px; margin: 0 auto; }
+    .faq-item { background: #fff; border: 1px solid var(--garden-card-line); border-radius: 14px; padding: 0; box-shadow: var(--garden-shadow-sm); }
+    .faq-item summary { font-size: .9rem; font-weight: 700; color: var(--garden-charcoal); padding: 16px 20px; cursor: pointer; list-style-position: inside; border-radius: 14px; }
+    .faq-item summary:hover { color: var(--garden-green-deep); }
+    .faq-item summary:focus-visible { outline: 3px solid var(--garden-orange); outline-offset: 2px; }
+    .faq-item[open] summary { border-bottom: 1px solid var(--garden-line); }
+    .faq-item p { font-size: .82rem; color: var(--garden-ink-soft); line-height: 1.5; padding: 12px 20px 16px; }
+
+    /* Responsive */
+    @media (max-width: 900px) { .tiers-grid { grid-template-columns: 1fr; } .impact-grid { grid-template-columns: repeat(2,1fr); } .transparency-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .impact-grid { grid-template-columns: 1fr 1fr; } }
+  </style>
+  <link rel="alternate" type="application/rss+xml" title="AiGovOps Foundation Feed" href="/feed.xml" />
+</head>
+<body>
+<svg id="wc-sprite" xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="wc-cup" viewBox="0 0 24 24"><path d="M4 8h12v6a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5z"/><path d="M16 10h2a2 2 0 0 1 0 4h-2"/><path d="M8 3v2M11 3v2"/></symbol><symbol id="wc-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></symbol><symbol id="wc-receipt" viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></symbol><symbol id="wc-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol><symbol id="wc-wrench" viewBox="0 0 24 24"><path d="M14 4l6 6-8 8H6v-6z"/><path d="M12 6l6 6"/></symbol><symbol id="wc-hand" viewBox="0 0 24 24"><path d="M8 13V6a1.5 1.5 0 0 1 3 0v6"/><path d="M11 12V5a1.5 1.5 0 0 1 3 0v7"/><path d="M14 12V7a1.5 1.5 0 0 1 3 0v6"/><path d="M17 13a1.5 1.5 0 0 1 3 0v3a6 6 0 0 1-6 6h-2a6 6 0 0 1-5-3l-3-5a1.5 1.5 0 0 1 2.6-1.5L8 14"/></symbol><symbol id="wc-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></symbol><symbol id="wc-book" viewBox="0 0 24 24"><path d="M4 5h6a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H4z"/><path d="M20 5h-6a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h7z"/></symbol><symbol id="wc-leaf" viewBox="0 0 24 24"><path d="M12 3c3 3 4 6 4 9a4 4 0 0 1-8 0c0-3 1-6 4-9z"/><path d="M12 16v5M8 21h8"/></symbol><symbol id="wc-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></symbol><symbol id="wc-code" viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4"/><path d="M16 8l4 4-4 4"/><path d="M14 5l-4 14"/></symbol><symbol id="wc-scale" viewBox="0 0 24 24"><path d="M12 3v18M5 21h14"/><path d="M4 8h16"/><path d="M7 8l-3 6a3 3 0 0 0 6 0z"/><path d="M17 8l-3 6a3 3 0 0 0 6 0z"/></symbol><symbol id="wc-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"/></symbol><symbol id="wc-megaphone" viewBox="0 0 24 24"><path d="M4 10v4h3l7 4V6l-7 4z"/><path d="M17 9a4 4 0 0 1 0 6"/></symbol><symbol id="wc-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></symbol><symbol id="wc-repeat" viewBox="0 0 24 24"><path d="M4 9a5 5 0 0 1 5-5h9"/><path d="M15 1l3 3-3 3"/><path d="M20 15a5 5 0 0 1-5 5H6"/><path d="M9 23l-3-3 3-3"/></symbol><symbol id="wc-pen" viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M13 7l3 3"/></symbol><symbol id="wc-flag" viewBox="0 0 24 24"><path d="M5 21V4"/><path d="M5 4h12l-3 4 3 4H5"/></symbol><symbol id="wc-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol><symbol id="wc-atom" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)"/></symbol><symbol id="wc-cap" viewBox="0 0 24 24"><path d="M2 9l10-4 10 4-10 4z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></symbol><symbol id="wc-tent" viewBox="0 0 24 24"><path d="M3 20L12 4l9 16z"/><path d="M12 12l-4 8M12 12l4 8"/></symbol><symbol id="wc-lantern" viewBox="0 0 24 24"><path d="M9 6h6l2 4v6l-2 4H9l-2-4v-6z"/><path d="M12 3v3M12 20v1"/><path d="M12 9v5"/></symbol><symbol id="wc-umbrella" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 18 0z"/><path d="M12 12v6a2 2 0 0 0 4 0"/><path d="M12 3v1"/></symbol><symbol id="wc-clipboard" viewBox="0 0 24 24"><path d="M7 5h10v16H7z"/><path d="M9 3h6v4H9z"/><path d="M10 12h4M10 16h4"/></symbol><symbol id="wc-calendar" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></symbol><symbol id="wc-briefcase" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M9 8V5h6v3"/><path d="M3 13h18"/></symbol><symbol id="wc-news" viewBox="0 0 24 24"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 8h3v9a2 2 0 0 1-2 2"/><path d="M7 9h7M7 13h7"/></symbol><symbol id="wc-sprout" viewBox="0 0 24 24"><path d="M12 21v-8"/><path d="M12 13c0-4 3-6 7-6 0 4-3 6-7 6z"/><path d="M12 15c0-3-2.5-5-6-5 0 3 2.5 5 6 5z"/></symbol></svg>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- NAV -->
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo-link">
+      <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AiGovOps Foundation Lantern logo" style="height:38px;width:38px;flex-shrink:0">
+        <title>AiGovOps Foundation</title>
+        <circle cx="100" cy="100" r="96" fill="#071a12"/>
+        <polygon points="100,100 42,0 158,0" fill="#9fe1cb" opacity="0.09"/>
+        <circle cx="100" cy="100" r="96" fill="none" stroke="#1d9e75" stroke-width="1.5"/>
+        <circle cx="100" cy="100" r="79" fill="none" stroke="#1d9e75" stroke-width="0.5" opacity="0.35"/>
+        <line x1="100" y1="4" x2="100" y2="11" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+        <line x1="100" y1="189" x2="100" y2="196" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+        <line x1="4" y1="100" x2="11" y2="100" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+        <line x1="189" y1="100" x2="196" y2="100" stroke="#1d9e75" stroke-width="1.5" opacity="0.6"/>
+        <line x1="100" y1="18" x2="100" y2="10" stroke="#1d9e75" stroke-width="1.8" stroke-linecap="round"/>
+        <ellipse cx="100" cy="9" rx="7" ry="3" fill="none" stroke="#1d9e75" stroke-width="1.8"/>
+        <rect x="84" y="17" width="32" height="6" rx="2" fill="#085041"/>
+        <path d="M88 23 L80 41 L120 41 L112 23 Z" fill="#0f6e56"/>
+        <rect x="78" y="41" width="44" height="52" rx="1.5" fill="#0a3d2a"/>
+        <line x1="90" y1="41" x2="90" y2="93" stroke="#1d9e75" stroke-width="1" opacity="0.5"/>
+        <line x1="100" y1="41" x2="100" y2="93" stroke="#1d9e75" stroke-width="1" opacity="0.5"/>
+        <line x1="110" y1="41" x2="110" y2="93" stroke="#1d9e75" stroke-width="1" opacity="0.5"/>
+        <line x1="78" y1="67" x2="122" y2="67" stroke="#1d9e75" stroke-width="1.2" opacity="0.5"/>
+        <rect x="78" y="41" width="44" height="52" rx="1.5" fill="none" stroke="#1d9e75" stroke-width="1"/>
+        <ellipse cx="100" cy="60" rx="7" ry="9" fill="#5dcaa5" opacity="0.75"/>
+        <ellipse cx="100" cy="57" rx="4" ry="6" fill="#9fe1cb" opacity="0.95"/>
+        <ellipse cx="100" cy="55" rx="2" ry="3" fill="#e1f5ee" opacity="0.9"/>
+        <path d="M78 93 L84 111 L116 111 L122 93 Z" fill="#0f6e56"/>
+        <rect x="84" y="111" width="32" height="6" rx="2" fill="#085041"/>
+        <ellipse cx="100" cy="121" rx="5" ry="2.5" fill="#085041"/>
+      </svg>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="library.html">Library</a>
+      <a href="open-source.html">Open source</a>
+      <a href="blog.html">Blog</a>
+      <a href="https://community.aigovops-foundation.com/signin.html" class="nav-join">Become a member</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="support-hero" id="main-content">
+  <div class="container">
+    <p class="hero-eyebrow">501(c)(3) · Apache-2.0 · Open Standard</p>
+    <h1>Give.</h1>
+    <p>The AiGovOps Foundation builds open-source tools that turn AI compliance into verifiable code — your support keeps them free for every practitioner, startup, and regulator on the planet.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="#give" class="btn btn-primary btn-large" onclick="if(window.plausible)plausible('Support: Give now click')"><svg class="wc-icon" aria-hidden="true"><use href="#wc-heart"></use></svg> Give now</a>
+    </div>
+  </div>
+</section>
+
+<!-- GIVE NOW — the one giving cluster -->
+<section class="give-cluster coffee-banner" id="give" aria-label="Give now">
+  <div class="container">
+    <!-- giving-interim:start — giving rails LIVE (2026-07-18, Ken's Stripe links): pick-your-amount + $25/$50/$500 quick gifts. Tier-card checkouts still parked (pledge-by-email); run scripts/apply-stripe-links.sh DONATE CONTRIBUTOR SUSTAINER FOUNDING when tier links arrive. Jeeves giving_rails watches this state. -->
+    <div class="giving-interim-notice" role="note" style="max-width:760px;margin:0 auto 18px;padding:14px 18px;border:2px solid var(--teal-accessible,#0a7);border-radius:10px;background:rgba(10,170,120,.08);text-align:center;font-size:.95rem;line-height:1.5">
+      <svg class="wc-icon" aria-hidden="true"><use href="#wc-heart"></use></svg> <strong>Give securely in one click</strong> — every checkout is Stripe.<br>
+      <a href="https://buy.stripe.com/cNi9AU8RT0884tR6Ix4Vy02" target="_blank" rel="noopener" style="display:inline-block;margin:8px 8px 6px;padding:11px 26px;border-radius:999px;background:var(--teal-accessible,#0a7);color:#fff;font-weight:700;text-decoration:none" onclick="if(window.plausible)plausible('Support: Stripe donate',{props:{amount:'any'}})">Give any amount →</a><br>
+      <span style="display:inline-block;margin-top:4px">Or a quick gift:</span>
+      <a href="https://buy.stripe.com/eVq7sMb015ss9Obd6V4Vy00" target="_blank" rel="noopener" style="display:inline-block;margin:6px 4px;padding:8px 18px;border-radius:999px;border:2px solid var(--teal-accessible,#0a7);color:var(--teal-accessible,#0a7);font-weight:700;text-decoration:none" onclick="if(window.plausible)plausible('Support: Stripe donate',{props:{amount:'25'}})">$25</a>
+      <a href="https://buy.stripe.com/28E00kfgh1ccbWjgj74Vy01" target="_blank" rel="noopener" style="display:inline-block;margin:6px 4px;padding:8px 18px;border-radius:999px;border:2px solid var(--teal-accessible,#0a7);color:var(--teal-accessible,#0a7);font-weight:700;text-decoration:none" onclick="if(window.plausible)plausible('Support: Stripe donate',{props:{amount:'50'}})">$50</a>
+      <a href="https://buy.stripe.com/bJe7sKbi214M7qJ1t75J603" target="_blank" rel="noopener" style="display:inline-block;margin:6px 4px;padding:8px 18px;border-radius:999px;border:2px solid var(--teal-accessible,#0a7);color:var(--teal-accessible,#0a7);font-weight:700;text-decoration:none" onclick="if(window.plausible)plausible('Support: Stripe donate',{props:{amount:'500'}})">$500</a><br>
+      <span style="font-size:.9rem">For larger gifts or anything bespoke, email
+      <a href="mailto:bob.rapp@aigovops.community?subject=Pledge my support" style="color:var(--teal-accessible,#0a7);font-weight:600">bob.rapp@aigovops.community</a>.</span>
+    </div>
+    <!-- giving-interim:end -->
+  </div>
+</section>
+
+<!-- TIERS -->
+<section class="tiers-section">
+  <div class="container">
+    <h2>Choose your level of support</h2>
+    <p class="section-sub">Tier checkout links arrive soon — until then every tier is pledge-by-email. All tiers contribute to the same mission — open, verifiable AI governance for everyone.</p>
+    <div class="tiers-grid">
+
+      <!-- CONTRIBUTOR -->
+      <div class="tier-card">
+        <span class="tier-icon"><svg class="wc-icon" aria-hidden="true"><use href="#wc-sprout"></use></svg></span>
+        <div class="tier-name">Contributor</div>
+        <div class="tier-amount">$50 <span>/ one-time or monthly</span></div>
+        <div class="tier-desc">For individual practitioners, researchers, and students who believe governance shouldn't be locked behind a paywall.</div>
+        <ul class="tier-perks">
+          <li>Your name in the GitHub contributors file</li>
+          <li>Contributor recognition on the foundation website</li>
+          <li>Early access to new framework releases</li>
+          <li>Warm feeling of doing the right thing</li>
+        </ul>
+        <div class="tier-actions">
+          <a href="https://github.com/aigovops-foundation" data-orig="https://github.com/sponsors/aigovops-foundation?tier=contributor" target="_blank" rel="noopener" class="btn-teal" onclick="if(window.plausible)plausible('Support: Tier click',{props:{tier:'contributor',platform:'github'}})"><span aria-hidden="true">⭐</span> Sponsor on GitHub</a>
+          <a href="https://github.com/aigovops-foundation" data-orig="https://opencollective.com/aigovops-foundation/contribute/contributor-50" target="_blank" rel="noopener" class="btn-teal-outline" onclick="if(window.plausible)plausible('Support: Tier click',{props:{tier:'contributor',platform:'opencollective'}})"><svg class="wc-icon" aria-hidden="true"><use href="#wc-heart"></use></svg> Via Open Collective</a>
+          <a href="mailto:bob.rapp@aigovops.community?subject=Contributor pledge ($50)" class="btn-teal-outline" onclick="if(window.plausible)plausible('Support: Tier pledge email',{props:{tier:'contributor'}})"><span aria-hidden="true">✉️</span> Email to pledge →</a>
+        </div>
+      </div>
+
+      <!-- SUSTAINER -->
+      <div class="tier-card featured">
+        <div class="tier-badge">Most popular</div>
+        <span class="tier-icon"><svg class="wc-icon" aria-hidden="true"><use href="#wc-lantern"></use></svg></span>
+        <div class="tier-name">Sustainer</div>
+        <div class="tier-amount">$1,000 <span>/ one-time or monthly</span></div>
+        <div class="tier-desc">For teams, startups, and consultancies using Beacon or Lantern in production who want to keep the lights on.</div>
+        <ul class="tier-perks">
+          <li>Listed as a Community Sustainer on the foundation website</li>
+          <li>Your logo in the Beacon + Lantern README</li>
+          <li>Priority issue triage on GitHub</li>
+          <li>Quarterly governance briefing from Ken &amp; Bob</li>
+          <li>All Contributor perks</li>
+        </ul>
+        <div class="tier-actions">
+          <a href="https://github.com/aigovops-foundation" data-orig="https://github.com/sponsors/aigovops-foundation?tier=sustainer" target="_blank" rel="noopener" class="btn-teal" onclick="if(window.plausible)plausible('Support: Tier click',{props:{tier:'sustainer',platform:'github'}})"><span aria-hidden="true">⭐</span> Sponsor on GitHub</a>
+          <a href="https://github.com/aigovops-foundation" data-orig="https://opencollective.com/aigovops-foundation/contribute/sustainer-1000" target="_blank" rel="noopener" class="btn-teal-outline" onclick="if(window.plausible)plausible('Support: Tier click',{props:{tier:'sustainer',platform:'opencollective'}})"><svg class="wc-icon" aria-hidden="true"><use href="#wc-heart"></use></svg> Via Open Collective</a>
+          <a href="mailto:bob.rapp@aigovops.community?subject=Sustainer pledge ($1,000)" class="btn-teal-outline" onclick="if(window.plausible)plausible('Support: Tier pledge email',{props:{tier:'sustainer'}})"><span aria-hidden="true">✉️</span> Email to pledge →</a>
+        </div>
+      </div>
+
+      <!-- FOUNDING PARTNER -->
+      <div class="tier-card">
+        <span class="tier-icon"><span aria-hidden="true">🏛️</span></span>
+        <div class="tier-name">Founding Steward Partner</div>
+        <div class="tier-amount">$10,000 <span>/ one-time or annual</span></div>
+        <div class="tier-desc">For enterprises, regulators, and standards bodies who want to shape the future of AI governance at the protocol level.</div>
+        <ul class="tier-perks">
+          <li>Listed as a Founding Steward Partner — same status as Glacis Technologies on OVERT 1.0</li>
+          <li>Logo on homepage, Beacon, Lantern, and all foundation materials</li>
+          <li>Seat at the annual governance roadmap review</li>
+          <li>Named attribution in OVERT protocol documentation</li>
+          <li>Direct line to Ken &amp; Bob for governance advisory</li>
+          <li>All Sustainer + Contributor perks</li>
+        </ul>
+        <div class="tier-actions">
+          <a href="https://github.com/aigovops-foundation" data-orig="https://opencollective.com/aigovops-foundation/contribute/founding-partner-10000" target="_blank" rel="noopener" class="btn-teal" onclick="if(window.plausible)plausible('Support: Tier click',{props:{tier:'founding-partner',platform:'opencollective'}})"><svg class="wc-icon" aria-hidden="true"><use href="#wc-heart"></use></svg> Via Open Collective</a>
+          <a href="mailto:bob.rapp@aigovops.community?subject=Founding Steward Partner inquiry" class="btn-teal-outline" onclick="if(window.plausible)plausible('Support: Founding partner email')"><span aria-hidden="true">✉️</span> Contact us directly</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TRUST — where it goes + how to check (impact ∪ transparency) -->
+<section class="impact-section">
+  <div class="container">
+    <h2>Where your support goes — and how to check</h2>
+    <p class="impact-sub">Every dollar funds open infrastructure — no SaaS margins, no VC overhead. We're a 501(c)(3) building Apache-2.0 tools: public finances, open code, verifiable governance.</p>
+    <div class="impact-grid">
+      <div class="impact-card">
+        <div class="impact-amount">$50</div>
+        <div class="impact-label">Covers one month of Beacon CI/CD pipeline costs</div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-amount">$200</div>
+        <div class="impact-label">Funds a new global framework mapping (one country's AI law)</div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-amount">$1,000</div>
+        <div class="impact-label">Sponsors a full quarter of Lantern infrastructure + storage</div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-amount">$10,000</div>
+        <div class="impact-label">Funds a full year of foundation operations + OVERT protocol stewardship</div>
+      </div>
+    </div>
+    <div class="transparency-grid">
+      <div class="transparency-item">
+        <h4><span aria-hidden="true">📊</span> Public finances</h4>
+        <p>Income and expenses are reported in our annual filings and shared on request. No black boxes, no hidden overhead.</p>
+      </div>
+      <div class="transparency-item">
+        <h4><svg class="wc-icon" aria-hidden="true"><use href="#wc-code"></use></svg> Open source everything</h4>
+        <p>Beacon, Lantern, and all foundation tooling — read it, fork it, audit it. No lock-in, ever.</p>
+      </div>
+      <div class="transparency-item">
+        <h4><span aria-hidden="true">🔏</span> Cryptographically signed</h4>
+        <p>We use our own tools. Every Beacon evidence bundle we produce is signed and verifiable by anyone with one command.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:28px">
+      <a href="https://github.com/aigovops-foundation" data-orig="https://opencollective.com/aigovops-foundation" target="_blank" rel="noopener" class="btn btn-outline">Support the foundation →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background:var(--garden-cream);text-align:center;padding:32px 24px"><p class="wc-more" style="margin:0"><span>Everything else is one page further:</span> common questions, sponsoring on GitHub, the pledge email. <a href="resources.html#support">Resources →</a></p></section>
+
+<!-- FOOTER -->
+
+<footer class="site-footer site-footer--line">
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 AiGovOps Foundation. All rights reserved. · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="mailto:bob.rapp@aigovops.community">Contact</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── Mobile nav toggle ───────────────────────────────────────────────────
+const navToggle = document.querySelector('.nav-toggle');
+const mainNav = document.querySelector('.main-nav');
+if (navToggle && mainNav) {
+  navToggle.addEventListener('click', () => {
+    const open = mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open);
+  });
+}
+</script>
+<script>
+// Mobile nav — inject secondary links when menu opens on small screens (M13: Press / Founders / Support)
+(function() {
+  const toggle = document.querySelector('.nav-toggle');
+  const nav    = document.querySelector('.main-nav');
+  if (!toggle || !nav) return;
+  const EXTRA = [
+    { href: '/press.html',     label: 'Press' },
+    { href: '/founders.html',  label: 'Founders' },
+    { href: '/support.html',   label: 'Support' },
+  ];
+  let injected = false;
+  toggle.addEventListener('click', () => {
+    if (injected) return;
+    const current = window.location.pathname.replace(/\/$/, '') || '/index.html';
+    EXTRA.forEach(item => {
+      const alreadyInNav = [...nav.querySelectorAll('a')].some(a => a.getAttribute('href') === item.href || a.href.endsWith(item.href));
+      if (alreadyInNav) return;
+      const a = document.createElement('a');
+      a.href  = item.href;
+      a.textContent = item.label;
+      a.style.cssText = 'font-size:.85rem;color:var(--muted)';
+      if (current.endsWith(item.href.replace(/^\//, ''))) a.classList.add('active');
+      nav.appendChild(a);
+    });
+    injected = true;
+  });
+})();
+</script>
+</body>
+</html>
