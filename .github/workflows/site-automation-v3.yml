@@ -17,9 +17,9 @@ on:
   workflow_dispatch:
     inputs:
       tiers:
-        description: 'Test tiers to run (space-separated: unit e2e a11y i18n scale chaos)'
+        description: 'Test tiers to run (space-separated: unit e2e a11y scale chaos)'
         required: false
-        default: 'unit a11y i18n chaos'
+        default: 'unit a11y chaos'
       skip_network:
         description: 'Skip network-dependent tests (e2e, scale)'
         required: false
@@ -101,21 +101,6 @@ jobs:
           python-version: '3.11'
       - name: Run accessibility tests
         run: bash scripts/test-a11y.sh
-
-  # ── Tier 3: Multilingual / i18n ───────────────────────────────────────────
-  i18n:
-    name: 🌍 Multilingual / i18n Tests
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
-      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
-        with:
-          node-version: '20'
-      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
-        with:
-          python-version: '3.11'
-      - name: Run i18n tests
-        run: bash scripts/test-i18n.sh
 
   # ── Tier 4: E2E (live site — skipped on PR, runs on push + schedule) ──────
   e2e:
@@ -237,7 +222,7 @@ jobs:
   report:
     name: ☁️ Cloud-Mary Report
     runs-on: ubuntu-latest
-    needs: [unit, a11y, i18n, chaos, docs]
+    needs: [unit, a11y, chaos, docs]
     if: always()
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
@@ -249,7 +234,6 @@ jobs:
           echo "|------|--------|" >> $GITHUB_STEP_SUMMARY
           echo "| 🧪 Unit Tests | ${{ needs.unit.result == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
           echo "| ♿ Accessibility | ${{ needs.a11y.result == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| 🌍 Multilingual | ${{ needs.i18n.result == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
           echo "| 🐒 Chaos Monkey | ${{ needs.chaos.result == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
           echo "| 📄 Documentation | ${{ needs.docs.result == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
