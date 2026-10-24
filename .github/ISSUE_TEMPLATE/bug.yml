@@ -1,0 +1,32 @@
+name: Something is broken
+description: A page, lane, probe or service that does not do what it says.
+title: "bug: "
+labels: ["queue", "bug"]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: URL, workflow run, or command.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual
+      description: Paste the error, status code or screenshot.
+    validations:
+      required: true
+  - type: checkboxes
+    id: gate
+    attributes:
+      label: Human gate
+      options:
+        - label: Nothing here is irreversible without a human click (merge, DNS, secrets, deletes, payments).
+          required: true
