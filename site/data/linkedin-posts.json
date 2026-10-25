@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-24T07:07:16Z",
+  "updated": "2026-10-25T07:07:48Z",
   "feed_health": {
     "bob": {
       "ok": true,
       "fetched": 10,
-      "published": 9,
+      "published": 10,
       "error": null
     },
     "ken": {
@@ -15,6 +15,22 @@
     }
   },
   "bob": [
+    {
+      "title": "High-impact AI needs an independent “yes.” PROBLEM Builders should not approve their own evidence. Independent validation is not h...",
+      "link": "https://www.linkedin.com/posts/bobrapp_high-impact-ai-needs-an-independent-yes-activity-7519880806698303489-Ohtw",
+      "date": "Sat, 24 Oct 2026 22:01:37 GMT",
+      "summary": "High-impact AI needs an independent “yes.” PROBLEM Builders should not approve their own evidence. Independent validation is not human-review sampling or generic cross-functional decision rights. It is structural separation: an independent team challenges methods, tests claims, v",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "AI governance fails quietly when an AI use case is invisible. If you cannot find it, classify it, name its owner, and review it, y...",
+      "link": "https://fr.linkedin.com/posts/bobrapp_ai-governance-fails-quietly-when-an-ai-use-activity-7519744609053343744-DgwN",
+      "date": "Sat, 24 Oct 2026 13:00:25 GMT",
+      "summary": "AI governance fails quietly when an AI use case is invisible. If you cannot find it, classify it, name its owner, and review it, you cannot govern it before scale. PROBLEM Spreadsheets miss pilots, embedded models, vendor features, and shadow automation. SOLUTION Create one livin",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "More prompt data ≠ better AI. PROBLEM | 问题 A task may need only a category and time range, yet receive a full ticket or customer r...",
       "link": "https://www.linkedin.com/posts/bobrapp_more-prompt-data-better-ai-problem-activity-7519518589419421696-CaQq",
@@ -78,24 +94,18 @@
       "summary": "Before choosing a model, screen the objective. PROBLEM A capable model can still scale an unacceptable goal. Wrong objective + better accuracy = faster harm. SOLUTION — GATE 0 1) State the outcome, affected people, and decision authority. 2) Apply the Three-Yes Test: Safe? Compli",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "Generic AI training is not governance. Different roles face different decisions, tools and risks. Problem → Solution → Summary One...",
-      "link": "https://www.linkedin.com/posts/bobrapp_generic-ai-training-is-not-governance-different-activity-7518069151769198592-FbCR",
-      "date": "Mon, 19 Oct 2026 22:02:45 GMT",
-      "summary": "Generic AI training is not governance. Different roles face different decisions, tools and risks. Problem → Solution → Summary One course proves attendance, not capability. Profile each role: decisions, tools/data, risks and escalation. Practise scenarios, assess behavior, refres",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
     {
-      "title": "Paul Li, Ph.D. “Ken and I were some of the first people to join the Windows 10 Core Data Science organization. Working with Ken, I always appreciated his strategic vision, and collaborative leadership style. During our time together at Microsoft, Ken consistently demonstrated a remarkable talent for balancing cutting-edge innovation with ethical considerations, particularly in his pioneering work implementing responsible AI standards across a 5,000-person organization. Any organization would be fortunate to have Ken—he brings technical excellence, ethical leadership, and a proven ability to scale data science practices across large enterprises. His rare combination of deep technical knowledg",
+      "title": "Strategic Vision and Ethical Leadership in AI Implementation",
       "link": "https://www.linkedin.com/in/paul-l-li?trk=public_profile_recommendations",
       "date": "",
-      "summary": "",
+      "summary": "Testimonial about Ken's collaborative leadership style and ability to balance innovation with responsible AI standards across large organizations.",
       "image": null,
-      "author": "Ken Johnston"
+      "author": "Ken Johnston",
+      "lang": "en",
+      "content_type": "personal"
     }
   ]
 }
