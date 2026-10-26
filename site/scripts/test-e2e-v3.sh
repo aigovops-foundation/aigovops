@@ -83,26 +83,15 @@ echo "$HOME" | grep -q "aria-label.*Open AiGovOps\|aria-label.*assistant" \
 echo "$HOME" | grep -q "main-content"      && check "main-content anchor present"      "ok" || check "main-content anchor present"     "not found"
 
 echo ""
-echo "  [Brand upgrade]"
-echo "$HOME" | grep -q "footer-marks"      && check "Footer marks line present"        "ok" || check "Footer marks line present"         "not found"
-NAV=$(printf '%s\n' "$HOME" | sed -n '/<nav class="main-nav"/,/<\/nav>/p')
-printf '%s\n' "$NAV" | grep -qF 'href="library.html" data-i18n="nav.library"' \
-                                            && check "Library in the homepage nav"     "ok" || check "Library in the homepage nav"      "not found"
-printf '%s\n' "$NAV" | grep -qF 'href="https://luma.com/aigovops" target="_blank" rel="noopener" data-i18n="nav.meetings"' \
-                                            && check "Meetings in the homepage nav"    "ok" || check "Meetings in the homepage nav"     "not found"
-printf '%s\n' "$NAV" | grep -qF 'href="https://aigovops.substack.com" target="_blank" rel="noopener" data-i18n="nav.newsletter"' \
-                                            && check "Newsletter in the homepage nav"  "ok" || check "Newsletter in the homepage nav"   "not found"
-printf '%s\n' "$NAV" | grep -qF 'href="support.html" data-i18n="nav.give"' \
-                                            && check "Give in the homepage nav"        "ok" || check "Give in the homepage nav"         "not found"
-echo "$HOME" | grep -qF 'href="open-source.html"' \
-                                            && check "Open source footer link"          "ok" || check "Open source footer link"           "not found"
+echo "  [Brand — Wren Café home: one-line footer, English only (Bob, 2026-10-19)]"
+echo "$HOME" | grep -qF 'href="privacy.html"' && echo "$HOME" | grep -qF 'href="terms.html"' \
+                                            && check "Footer line links Privacy and Terms"  "ok" || check "Footer line links Privacy and Terms"  "not found"
 echo "$HOME" | grep -q "OVERT"             && check "OVERT badge"                      "ok" || check "OVERT badge"                       "not found"
 echo "$HOME" | grep -q "data-intent=\"frameworks\"" && check "No assistant chips"     "still present" || check "No assistant chips"              "ok"
 echo "$HOME" | grep -q "aigovops --help"   && check "No CLI chatbot welcome"           "still present" || check "No CLI chatbot welcome"          "ok"
 echo "$HOME" | grep -q "plausible.io"      && check "Plausible analytics present"      "ok" || check "Plausible analytics present"       "not found"
-echo "$HOME" | grep -q "lang-btn"          && check "Language toggle present"          "ok" || check "Language toggle present"           "not found"
-echo "$HOME" | grep -q "Global Community"  && check "Global Community in footer"       "ok" || check "Global Community in footer"        "not found"
-echo "$HOME" | grep -q "i18n.js"           && check "i18n script loaded"               "ok" || check "i18n script loaded"               "not found"
+echo "$HOME" | grep -q "lang-btn"          && check "No language toggle (English only)"  "still present" || check "No language toggle (English only)"  "ok"
+echo "$HOME" | grep -q "i18n.js"           && check "No i18n script (English only)"      "still present" || check "No i18n script (English only)"      "ok"
 
 echo ""
 
