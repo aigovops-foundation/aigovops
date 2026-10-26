@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-25T07:07:48Z",
+  "updated": "2026-10-26T07:25:36Z",
   "feed_health": {
     "bob": {
       "ok": true,
       "fetched": 10,
-      "published": 10,
+      "published": 9,
       "error": null
     },
     "ken": {
@@ -15,6 +15,22 @@
     }
   },
   "bob": [
+    {
+      "title": "A one-time control test is a snapshot—not assurance. Problem | 課題 Without recurring tests, approvals, access boundaries, notices,...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-one-time-control-test-is-a-snapshotnot-activity-7520243168295157760-pbJM",
+      "date": "Sun, 25 Oct 2026 22:01:31 GMT",
+      "summary": "A one-time control test is a snapshot—not assurance. Problem | 課題 Without recurring tests, approvals, access boundaries, notices, records, and recovery procedures drift. Who owns the result, exception, and fix? 一度きりのテストは保証ではなく、スナップショットです。定期テストがなければ、承認、アクセス境界、通知、記録、復旧手順は形骸化します。結果・",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "A vendor changes an AI service. Your contract must preserve your ability to know, test, and act. PROBLEM A model, data-use, retent...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-vendor-changes-an-ai-service-your-contract-activity-7520107873461403648-CrSn",
+      "date": "Sun, 25 Oct 2026 13:03:54 GMT",
+      "summary": "A vendor changes an AI service. Your contract must preserve your ability to know, test, and act. PROBLEM A model, data-use, retention, or subprocessor change can invalidate controls before notice. This is a contract-rights issue, not an acceptance gate, dependency inventory, or v",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "High-impact AI needs an independent “yes.” PROBLEM Builders should not approve their own evidence. Independent validation is not h...",
       "link": "https://www.linkedin.com/posts/bobrapp_high-impact-ai-needs-an-independent-yes-activity-7519880806698303489-Ohtw",
@@ -70,42 +86,16 @@
       "summary": "Handoff ≠ a file; it is operating capability. التسليم ≠ ملف؛ بل قدرة تشغيلية. PROBLEM | المشكلة Build knows. Operations needs owner, limits, assumptions, monitoring, and support/escalation—not a model card or generic accountability. يعرف فريق البناء. يحتاج التشغيل إلى المالك والق",
       "image": null,
       "author": "Bob Rapp"
-    },
-    {
-      "title": "One cohort can bear harm while the average says “pass.” Problem Cover language, age, geography, disability, device, context—and in...",
-      "link": "https://www.linkedin.com/posts/bobrapp_one-cohort-can-bear-harm-while-the-average-activity-7518658402366177281-ryhM",
-      "date": "Wed, 21 Oct 2026 13:04:13 GMT",
-      "summary": "One cohort can bear harm while the average says “pass.” Problem Cover language, age, geography, disability, device, context—and intersections. Solution Pre-design cohorts; weight real use; set floors; inspect errors; retest after changes. Three-Yes Test: Safe? Compliant? Pro-Huma",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Can another team rerun your AI evaluation, and explain any changed result? PROBLEM | A score without fixtures, versions, or rerun...",
-      "link": "https://www.linkedin.com/posts/bobrapp_can-another-team-rerun-your-ai-evaluation-activity-7518431529556164608-EVWm",
-      "date": "Tue, 20 Oct 2026 22:02:42 GMT",
-      "summary": "Can another team rerun your AI evaluation, and explain any changed result? PROBLEM | A score without fixtures, versions, or rerun evidence is only a claim. SOLUTION | Freeze fixtures. Pin model, prompt, code, data, dependencies, threshold, seed, runtime, and environment. Keep raw",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Before choosing a model, screen the objective. PROBLEM A capable model can still scale an unacceptable goal. Wrong objective + bet...",
-      "link": "https://www.linkedin.com/posts/bobrapp_before-choosing-a-model-screen-the-objective-activity-7518296030736592896-ldZu",
-      "date": "Tue, 20 Oct 2026 13:04:17 GMT",
-      "summary": "Before choosing a model, screen the objective. PROBLEM A capable model can still scale an unacceptable goal. Wrong objective + better accuracy = faster harm. SOLUTION — GATE 0 1) State the outcome, affected people, and decision authority. 2) Apply the Three-Yes Test: Safe? Compli",
-      "image": null,
-      "author": "Bob Rapp"
     }
   ],
   "ken": [
     {
-      "title": "Strategic Vision and Ethical Leadership in AI Implementation",
+      "title": "Paul Li, Ph.D. “Ken and I were some of the first people to join the Windows 10 Core Data Science organization. Working with Ken, I always appreciated his strategic vision, and collaborative leadership style. During our time together at Microsoft, Ken consistently demonstrated a remarkable talent for balancing cutting-edge innovation with ethical considerations, particularly in his pioneering work implementing responsible AI standards across a 5,000-person organization. Any organization would be fortunate to have Ken—he brings technical excellence, ethical leadership, and a proven ability to scale data science practices across large enterprises. His rare combination of deep technical knowledg",
       "link": "https://www.linkedin.com/in/paul-l-li?trk=public_profile_recommendations",
       "date": "",
-      "summary": "Testimonial about Ken's collaborative leadership style and ability to balance innovation with responsible AI standards across large organizations.",
+      "summary": "",
       "image": null,
-      "author": "Ken Johnston",
-      "lang": "en",
-      "content_type": "personal"
+      "author": "Ken Johnston"
     }
   ]
 }
