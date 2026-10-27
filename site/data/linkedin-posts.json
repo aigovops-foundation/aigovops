@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26T07:25:36Z",
+  "updated": "2026-10-27T07:14:53Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,22 @@
     }
   },
   "bob": [
+    {
+      "title": "Risk appetite is not “low, medium, or high.” It is a deployment boundary. Problem If teams cannot answer when to stop, who decides...",
+      "link": "https://www.linkedin.com/posts/bobrapp_risk-appetite-is-not-low-medium-or-high-activity-7520605658526830593-cng8",
+      "date": "Mon, 26 Oct 2026 22:01:55 GMT",
+      "summary": "Risk appetite is not “low, medium, or high.” It is a deployment boundary. Problem If teams cannot answer when to stop, who decides, or how fast to escalate, tolerance is a slogan. Solution Set rules: • Permit: require override, monitoring, evidence, and rollback. • Escalate: paus",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Scope is the first impact decision. / दायरा पहला प्रभाव-निर्णय है। PROBLEM / समस्या Unnamed people, rights, risks, or evidence leave “comple...",
+      "link": "https://www.linkedin.com/posts/bobrapp_scope-is-the-first-impact-decision-%E0%A4%A6%E0%A4%AF%E0%A4%B0-activity-7520470481284669440-Du6o",
+      "date": "Mon, 26 Oct 2026 13:04:46 GMT",
+      "summary": "Scope is the first impact decision. / दायरा पहला प्रभाव-निर्णय है। PROBLEM / समस्या Unnamed people, rights, risks, or evidence leave “complete” reviews blind. / नाम न हों तो “पूर्ण” समीक्षा अंधी रहती है। SOLUTION / समाधान Ask: PEOPLE—who is affected? RIGHTS—what is at stake? RISK",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "A one-time control test is a snapshot—not assurance. Problem | 課題 Without recurring tests, approvals, access boundaries, notices,...",
       "link": "https://www.linkedin.com/posts/bobrapp_a-one-time-control-test-is-a-snapshotnot-activity-7520243168295157760-pbJM",
@@ -68,22 +84,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_problem-%E5%95%8F%E9%A1%8C-ai-output-is-not-evidence-by-activity-7519157151219777537-kaS-",
       "date": "Thu, 22 Oct 2026 22:06:04 GMT",
       "summary": "PROBLEM / 問題 AI output is not evidence by itself. Without its source, transformation steps, and named sign-off, an internal decision cannot be reconstructed or defended. AI出力は証拠そのものではありません。出典、変換工程、承認者の記録がなければ、社内判断を再現・説明できません。 SOLUTION / 解決策 Record at decision time: source/version",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "A polished AI demo can hide a harmful assumption. PROBLEM Affected users expose missing context, time, language, authority, and sa...",
-      "link": "https://www.linkedin.com/posts/bobrapp_a-polished-ai-demo-can-hide-a-harmful-assumption-activity-7519020660501843968-eQpO",
-      "date": "Thu, 22 Oct 2026 13:03:42 GMT",
-      "summary": "A polished AI demo can hide a harmful assumption. PROBLEM Affected users expose missing context, time, language, authority, and safe ways to challenge AI. SOLUTION Before build freeze, observe real tasks. Map handoffs and failure points. Ask when AI is wrong. Convert dissent into",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "Handoff ≠ a file; it is operating capability. التسليم ≠ ملف؛ بل قدرة تشغيلية. PROBLEM | المشكلة Build knows. Operations needs owne...",
-      "link": "https://www.linkedin.com/posts/bobrapp_handoff-a-file-it-is-operating-capability-activity-7518794221051551745-09H9",
-      "date": "Wed, 21 Oct 2026 22:03:55 GMT",
-      "summary": "Handoff ≠ a file; it is operating capability. التسليم ≠ ملف؛ بل قدرة تشغيلية. PROBLEM | المشكلة Build knows. Operations needs owner, limits, assumptions, monitoring, and support/escalation—not a model card or generic accountability. يعرف فريق البناء. يحتاج التشغيل إلى المالك والق",
       "image": null,
       "author": "Bob Rapp"
     }
