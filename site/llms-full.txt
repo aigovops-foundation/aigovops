@@ -162,6 +162,11 @@ The front door offers six actions: become a member, give, join a meeting, read t
   - H1: ISO 42001 as controls you can run, not a binder you file
   - H2: Start with the controls that already map to an action
   - H2: The test that tells you it is real
+- [A face is not a signature — Arup, and the transfer that needed a second channel | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/a-face-is-not-a-signature.html): In 2024 a finance employee at Arup's Hong Kong office joined a video call where the CFO and every colleague were AI deepfakes, then made fifteen transfers totalling HK$200 million. The gate is that a face on a call is not identity, and a high-value transfer waits for a confirmation the caller cannot fake. Level 300, the hold.
+  - H1: A face is not a signature — Arup, and the transfer that needed a second channel
+  - H2: The gate that would have caught it
+  - H2: Identity, under whose authority
+  - H2: The hour
 - [Not evidence on its own — Horizon, and the receipt a stranger can check | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/not-evidence-on-its-own.html): For twenty-five years the UK Post Office prosecuted more than 700 subpostmasters on the say-so of its Horizon accounting system. Not AI — included for the lesson. The gate is that a system's output accusing a person is independently verifiable, and is not legal evidence by itself. Level 400, the audit gate.
   - H1: Not evidence on its own — Horizon, and the receipt a stranger can check
   - H2: The gate that would have caught it
