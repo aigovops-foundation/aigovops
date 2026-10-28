@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T07:14:53Z",
+  "updated": "2026-10-28T07:05:55Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,22 @@
     }
   },
   "bob": [
+    {
+      "title": "Resolved is not closed. PROBLEM: A fix may remove the symptom while the root cause remains. SOLUTION: For every root cause, assign...",
+      "link": "https://www.linkedin.com/posts/bobrapp_resolved-is-not-closed-problem-a-fix-may-activity-7520968478191763456-Vs59",
+      "date": "Tue, 27 Oct 2026 22:03:38 GMT",
+      "summary": "Resolved is not closed. PROBLEM: A fix may remove the symptom while the root cause remains. SOLUTION: For every root cause, assign an owner and due date. Before closure, require a same-condition re-test, a regression test, an adjacent-behaviour check, an affected-team walkthrough",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Decide AI incident severity before the incident—not during the scramble. Problem: Without a written Sev-1/2/3 rubric, debate can o...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-grow-ai-governance-activity-7520832480703135744-5mv-",
+      "date": "Tue, 27 Oct 2026 13:03:14 GMT",
+      "summary": "Decide AI incident severity before the incident—not during the scramble. Problem: Without a written Sev-1/2/3 rubric, debate can outpace harm. Score harm to people, scope, reversibility, and regulatory exposure. Name a 24/7 triage owner and backup; keep a standing channel; log ev",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Risk appetite is not “low, medium, or high.” It is a deployment boundary. Problem If teams cannot answer when to stop, who decides...",
       "link": "https://www.linkedin.com/posts/bobrapp_risk-appetite-is-not-low-medium-or-high-activity-7520605658526830593-cng8",
@@ -68,22 +84,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_more-prompt-data-better-ai-problem-activity-7519518589419421696-CaQq",
       "date": "Fri, 23 Oct 2026 22:02:18 GMT",
       "summary": "More prompt data ≠ better AI. PROBLEM | 问题 A task may need only a category and time range, yet receive a full ticket or customer record. Unnecessary personal or confidential data has crossed the AI boundary. This is input minimization—not memory retention, consent revocation, or",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI-generated code is not production-ready. Problem: Speed without governance creates unreviewed, untested, unowned changes. Soluti...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-generated-code-is-not-production-ready-activity-7519382725645185025-0MmD",
-      "date": "Fri, 23 Oct 2026 13:02:25 GMT",
-      "summary": "AI-generated code is not production-ready. Problem: Speed without governance creates unreviewed, untested, unowned changes. Solution: Before release, require human review, tests, dependency/licence checks, evidence, and an owner. Three-Yes Test: Safe? Compliant? Pro-humanity? Shi",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "PROBLEM / 問題 AI output is not evidence by itself. Without its source, transformation steps, and named sign-off, an internal decisi...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-%E5%95%8F%E9%A1%8C-ai-output-is-not-evidence-by-activity-7519157151219777537-kaS-",
-      "date": "Thu, 22 Oct 2026 22:06:04 GMT",
-      "summary": "PROBLEM / 問題 AI output is not evidence by itself. Without its source, transformation steps, and named sign-off, an internal decision cannot be reconstructed or defended. AI出力は証拠そのものではありません。出典、変換工程、承認者の記録がなければ、社内判断を再現・説明できません。 SOLUTION / 解決策 Record at decision time: source/version",
       "image": null,
       "author": "Bob Rapp"
     }
