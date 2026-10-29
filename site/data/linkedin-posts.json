@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28T07:05:55Z",
+  "updated": "2026-10-29T07:05:50Z",
   "feed_health": {
     "bob": {
       "ok": true,
@@ -15,6 +15,22 @@
     }
   },
   "bob": [
+    {
+      "title": "Freeze windows must be controls, not suggestions. PROBLEM / PROBLÈME During financial close, peak season, regulated reporting, maj...",
+      "link": "https://fr.linkedin.com/posts/bobrapp_aigovops-foundation-grow-ai-governance-activity-7521330561685200896-ZnTm",
+      "date": "Wed, 28 Oct 2026 22:02:25 GMT",
+      "summary": "Freeze windows must be controls, not suggestions. PROBLEM / PROBLÈME During financial close, peak season, regulated reporting, major public events or active incidents, freeze model, prompt, data, policy, threshold, dependency, feature and configuration changes. / Pendant ces péri",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Generated data is not automatically anonymous. PROBLEM / 問題 Synthetic records can memorize real people or confidential rows—and di...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-grow-ai-governance-activity-7521194331110567936-a3fq",
+      "date": "Wed, 28 Oct 2026 13:01:06 GMT",
+      "summary": "Generated data is not automatically anonymous. PROBLEM / 問題 Synthetic records can memorize real people or confidential rows—and distort fairness testing. 合成レコードは実在人物や機密記録を記憶し、公平性テストを歪める可能性があります。 SOLUTION / 解決策 Assign a named Data Governance Owner. Log generator/base-model version",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Resolved is not closed. PROBLEM: A fix may remove the symptom while the root cause remains. SOLUTION: For every root cause, assign...",
       "link": "https://www.linkedin.com/posts/bobrapp_resolved-is-not-closed-problem-a-fix-may-activity-7520968478191763456-Vs59",
@@ -68,22 +84,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_high-impact-ai-needs-an-independent-yes-activity-7519880806698303489-Ohtw",
       "date": "Sat, 24 Oct 2026 22:01:37 GMT",
       "summary": "High-impact AI needs an independent “yes.” PROBLEM Builders should not approve their own evidence. Independent validation is not human-review sampling or generic cross-functional decision rights. It is structural separation: an independent team challenges methods, tests claims, v",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "AI governance fails quietly when an AI use case is invisible. If you cannot find it, classify it, name its owner, and review it, y...",
-      "link": "https://fr.linkedin.com/posts/bobrapp_ai-governance-fails-quietly-when-an-ai-use-activity-7519744609053343744-DgwN",
-      "date": "Sat, 24 Oct 2026 13:00:25 GMT",
-      "summary": "AI governance fails quietly when an AI use case is invisible. If you cannot find it, classify it, name its owner, and review it, you cannot govern it before scale. PROBLEM Spreadsheets miss pilots, embedded models, vendor features, and shadow automation. SOLUTION Create one livin",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "More prompt data ≠ better AI. PROBLEM | 问题 A task may need only a category and time range, yet receive a full ticket or customer r...",
-      "link": "https://www.linkedin.com/posts/bobrapp_more-prompt-data-better-ai-problem-activity-7519518589419421696-CaQq",
-      "date": "Fri, 23 Oct 2026 22:02:18 GMT",
-      "summary": "More prompt data ≠ better AI. PROBLEM | 问题 A task may need only a category and time range, yet receive a full ticket or customer record. Unnecessary personal or confidential data has crossed the AI boundary. This is input minimization—not memory retention, consent revocation, or",
       "image": null,
       "author": "Bob Rapp"
     }
