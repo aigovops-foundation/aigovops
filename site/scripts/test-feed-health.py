@@ -110,8 +110,13 @@ def run_case(name, responses, expect_exit, env=None):
 
 def main():
     print("\n\U0001f4e1  Feed health — per-author\n")
-    recent = "Mon, 29 Sep 2026 10:00:00 GMT"
-    old = "Thu, 20 Aug 2026 23:19:55 GMT"
+    # Relative to today, not fixed dates: a hard-coded "recent" of 29 Sep 2026 aged past the
+    # 30-day freshness window on 29 Oct and turned this suite red with nothing broken.
+    from datetime import datetime, timedelta, timezone
+    from email.utils import format_datetime
+    now = datetime.now(timezone.utc)
+    recent = format_datetime(now - timedelta(days=1), usegmt=True)
+    old = format_datetime(now - timedelta(days=70), usegmt=True)
 
     # ── 1. Both feeds alive and recent: green, both ok, both publishing ──────
     print("  [1] both alive, both recent")
