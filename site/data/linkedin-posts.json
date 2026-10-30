@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-29T07:05:50Z",
+  "updated": "2026-10-30T07:05:27Z",
   "feed_health": {
     "bob": {
       "ok": true,
       "fetched": 10,
-      "published": 9,
+      "published": 10,
       "error": null
     },
     "ken": {
@@ -15,6 +15,22 @@
     }
   },
   "bob": [
+    {
+      "title": "A spreadsheet can become a decision system before anyone calls it AI. Problem Citizen-built models in spreadsheets, BI, and low-co...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-grow-ai-governance-activity-7521693140731305985-b1pj",
+      "date": "Thu, 29 Oct 2026 22:03:11 GMT",
+      "summary": "A spreadsheet can become a decision system before anyone calls it AI. Problem Citizen-built models in spreadsheets, BI, and low-code tools can steer pricing, staffing, benefits, or access. Solution Gate the path: personal file → reviewed model → operational system. Record a named",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "Post 5/16 Problem: “EU-hosted” ≠ every inference, log, retrieval, support or review region. Solution: Map each step → region/provi...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-grow-ai-governance-activity-7521556824253341696-EXpB",
+      "date": "Thu, 29 Oct 2026 13:01:31 GMT",
+      "summary": "Post 5/16 Problem: “EU-hosted” ≠ every inference, log, retrieval, support or review region. Solution: Map each step → region/provider; name subprocessors and review queues; document transfer basis; evidence residency settings; test failover; block unapproved routes; assign an own",
+      "image": null,
+      "author": "Bob Rapp"
+    },
     {
       "title": "Freeze windows must be controls, not suggestions. PROBLEM / PROBLÈME During financial close, peak season, regulated reporting, maj...",
       "link": "https://fr.linkedin.com/posts/bobrapp_aigovops-foundation-grow-ai-governance-activity-7521330561685200896-ZnTm",
@@ -76,14 +92,6 @@
       "link": "https://www.linkedin.com/posts/bobrapp_a-vendor-changes-an-ai-service-your-contract-activity-7520107873461403648-CrSn",
       "date": "Sun, 25 Oct 2026 13:03:54 GMT",
       "summary": "A vendor changes an AI service. Your contract must preserve your ability to know, test, and act. PROBLEM A model, data-use, retention, or subprocessor change can invalidate controls before notice. This is a contract-rights issue, not an acceptance gate, dependency inventory, or v",
-      "image": null,
-      "author": "Bob Rapp"
-    },
-    {
-      "title": "High-impact AI needs an independent “yes.” PROBLEM Builders should not approve their own evidence. Independent validation is not h...",
-      "link": "https://www.linkedin.com/posts/bobrapp_high-impact-ai-needs-an-independent-yes-activity-7519880806698303489-Ohtw",
-      "date": "Sat, 24 Oct 2026 22:01:37 GMT",
-      "summary": "High-impact AI needs an independent “yes.” PROBLEM Builders should not approve their own evidence. Independent validation is not human-review sampling or generic cross-functional decision rights. It is structural separation: an independent team challenges methods, tests claims, v",
       "image": null,
       "author": "Bob Rapp"
     }
