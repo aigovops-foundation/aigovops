@@ -1,0 +1,32 @@
+name: verify-on-merge
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: read
+
+jobs:
+  verify:
+    if: ${{ github.event.pull_request.merged == true }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 20
+
+      - name: Verify merged issues' Proof URLs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_EVENT_PATH: ${{ github.event_path }}
+          VERIFY_MERGE_INITIAL_WAIT_MS: "300000"
+          VERIFY_MERGE_RETRY_GAP_MS: "20000"
+          VERIFY_MERGE_TIMEOUT_MS: "15000"
+        run: node scripts/verify-on-merge.mjs
