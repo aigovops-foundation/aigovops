@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/images/favicon-32.png" | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/images/favicon-16.png" | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/images/apple-touch-icon.png" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+  <link rel="stylesheet" href="https://www.aigovops-foundation.com/fonts/fonts.css">
+  <link rel="stylesheet" href="{{ "/assets/wren-cafe.css" | relative_url }}">
+  <style>
+  </style>
+</head>
+<body>
+<!-- AiGovOps Foundation bar v1 — identical on every Foundation subdomain. Self-contained; no external assets. -->
+<nav class="agf-bar" aria-label="AiGovOps Foundation">
+  <a class="agf-bar__home" href="https://www.aigovops-foundation.com/">AiGovOps Foundation</a>
+  <ul class="agf-bar__links">
+    <li><a href="https://practice.aigovops-foundation.com/">Learn <span class="agf-bar__hint">· free course</span></a></li>
+    <li><a href="https://community.aigovops-foundation.com/library/">Library</a></li>
+    <li><a href="https://www.aigovops-foundation.com/open-source.html">Tools <span class="agf-bar__hint">· open source</span></a></li>
+    <li><a href="https://practice.aigovops-foundation.com/docs/THURSDAY.html">Meetings</a></li>
+    <li><a class="agf-bar__join" href="https://community.aigovops-foundation.com/signin.html">Become a member</a></li>
+  </ul>
+</nav>
+<style>
+.agf-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.25rem 1rem;padding:.35rem 1rem;background:#1f2a24;color:#e9efe9;font:500 13px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;position:relative;z-index:50}
+.agf-bar a{color:inherit;text-decoration:none}
+.agf-bar a:hover,.agf-bar a:focus-visible{text-decoration:underline}
+.agf-bar a:focus-visible{outline:2px solid #9fd8b4;outline-offset:2px;border-radius:2px}
+.agf-bar__home{font-weight:700;letter-spacing:.01em}
+.agf-bar__links{display:flex;flex-wrap:wrap;gap:.15rem .9rem;list-style:none;margin:0;padding:0}
+.agf-bar__hint{opacity:.7;font-weight:400}
+.agf-bar__join{font-weight:700;color:#9fd8b4!important}
+@media (max-width:560px){.agf-bar__hint{display:none}.agf-bar{font-size:12px}}
+@media print{.agf-bar{display:none}}
+</style>
+  <a id="skip-to-content" href="#content" class="sr-only sr-only-focusable">Skip to the content.</a>
+  <div class="container-lg px-3 my-5 markdown-body">
+    <nav class="practice-nav" aria-label="Practice">
+      <b><a href="{{ "/" | relative_url }}">The café</a></b>
+      <a href="{{ "/levels/100-begin/WORKSHEET.html" | relative_url }}">100</a>
+      <a href="{{ "/levels/200-retrofit/WORKSHEET.html" | relative_url }}">200</a>
+      <a href="{{ "/levels/300-hold/WORKSHEET.html" | relative_url }}">300</a>
+      <a href="{{ "/levels/400-prove/WORKSHEET.html" | relative_url }}">400</a>
+      <a href="{{ "/docs/THURSDAY.html" | relative_url }}">Thursday</a>
+      <a href="https://github.com/aigovops-foundation/practice">GitHub</a>
+    </nav>
+    <main id="content">{{ content }}</main>
+    <footer class="practice-foot">
+      <p><strong>Ship safe AI — never unsafe AI:</strong> get to yes, stay at yes, recover to yes. Prove it in ten minutes.</p>
+      <p><a href="https://community.aigovops-foundation.com/gate-check.html?src=practice-pages">Run the ten-minute Gate Check</a> · <a href="https://www.aigovops-foundation.com/">AiGovOps Foundation</a> · <a href="https://overt.is/">Conforms to OVERT</a> · <a href="https://github.com/aigovops-foundation/practice/blob/main/RELEASE.md">Fall 2026 Release</a></p>
+    </footer>
+  </div>
+  <script src="{{ "/assets/js/anchor.min.js" | relative_url }}"></script>
+  <script>anchors.add();</script>
+  <script>document.querySelectorAll('pre').forEach(function (pre) { pre.tabIndex = 0; });</script>
+</body>
+</html>

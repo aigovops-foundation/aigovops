@@ -1,0 +1,30 @@
+name: link-check
+
+# Every Markdown link in the repo — relative links between worksheets and external links alike —
+# must resolve. Practice #3: the rendered Pages have a footer now; this keeps the links honest.
+# Pull requests and pushes only since 2026-10-20: the weekly estate-wide link check runs in the
+# Library (one matrix over estate.yaml), so a second weekly crawl here was a duplicate email.
+# standards.iteh.ai is excluded: its TLS certificate lapsed on 2026-10-20 and a third party's
+# expired certificate is not a broken link in this repo (the Library lane reports external
+# failures without failing on them; lychee here cannot tell the two apart).
+# Same for two third-party links in the 2026-09-13 research notes: arxiv.org/pdf answers CI 406 (it
+# refuses bots) and csrc.nist.gov/Projects/cosais/publications returns 404 (NIST moved it); both are
+# notes about someone else's pages, to be re-pointed when the notes are next revised.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2
+        with:
+          args: --no-progress --max-concurrency 8 --max-retries 3 --retry-wait-time 10 --accept 200,201,202,204,206,301,302,308,403,429,999 --exclude 'linkedin\.com' --exclude 'claude\.ai' --exclude 'standards\.iteh\.ai' --exclude 'arxiv\.org/pdf/2603\.16874' --exclude 'csrc\.nist\.gov/Projects/cosais/publications' './**/*.md'
+          fail: true
