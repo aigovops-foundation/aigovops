@@ -55,4 +55,4 @@ Then bring it on Thursday at 15:00 Pacific, where a host marks it.
 
 Do not ask the bot whether the bot is right. Sit down. What brought you in?
 
-— [The café](https://www.aigovops-foundation.com/academy.html?src=letter#problem) · [Level 200 worksheet](https://practice.aigovops-foundation.com/levels/200-retrofit/WORKSHEET.html) · [VH-010 in the cases](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-010)
+— [The café](https://www.aigovops-foundation.com/academy.html?src=letter#problem) · [Level 200 worksheet](https://www.aigovops-foundation.com/practice/levels/200-retrofit/WORKSHEET.html) · [VH-010 in the cases](https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-010)
