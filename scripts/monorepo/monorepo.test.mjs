@@ -283,7 +283,14 @@ test("redirect CLI writes matching index and 404 documents", async () => {
   }
 });
 
-test("import script preserves source history and drops excluded paths", { timeout: 60_000 }, async () => {
+// import-repo.sh needs git-filter-repo. CI installs it before running this file; a
+// developer's bare `node --test` may not have it, so skip there instead of failing
+// on a missing tool. Under CI the test always runs, so a broken install step stays red.
+const hasFilterRepo = spawnSync("git", ["filter-repo", "--version"], { encoding: "utf8" }).status === 0;
+const skipImportTest = !hasFilterRepo && !process.env.CI
+  && "git-filter-repo is not installed (brew install git-filter-repo); CI installs it and runs this test";
+
+test("import script preserves source history and drops excluded paths", { timeout: 60_000, skip: skipImportTest }, async () => {
   const root = await mkdtemp(join(tmpdir(), "monorepo-import-"));
   const source = join(root, "source");
   const destination = join(root, "destination");
