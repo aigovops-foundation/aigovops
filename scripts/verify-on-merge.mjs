@@ -154,7 +154,6 @@ export async function verifyOnMerge({
     return { issues: 0, urls: 0 };
   }
   const references = parseIssueReferences(payload.pull_request.body, owner, repo);
-  let waited = false;
   let checkedIssues = 0;
   const issuesWithProof = [];
 
@@ -165,16 +164,18 @@ export async function verifyOnMerge({
       logger(`no allowed Proof URLs on ${reference.owner}/${reference.repo}#${reference.number}`);
       continue;
     }
-    issuesWithProof.push({ reference, urls, urlsToCheck: [] });
+    issuesWithProof.push({ reference, urls, urlsToCheck: [], results: [] });
   }
 
   let checkedUrls = 0;
+  const checks = [];
   for (let urlIndex = 0; checkedUrls < MAX_PROOF_URLS; urlIndex++) {
     let allocated = false;
     for (const issue of issuesWithProof) {
       const url = issue.urls[urlIndex];
       if (url === undefined) continue;
       issue.urlsToCheck.push(url);
+      checks.push({ issue, url });
       checkedUrls++;
       allocated = true;
       if (checkedUrls === MAX_PROOF_URLS) break;
@@ -182,24 +183,27 @@ export async function verifyOnMerge({
     if (!allocated) break;
   }
 
-  for (const { reference, urls, urlsToCheck } of issuesWithProof) {
+  if (checks.length > 0 && initialWaitMs > 0) {
+    logger(`waiting ${initialWaitMs}ms for Pages to deploy`);
+    await sleep(initialWaitMs);
+  }
+  for (const { issue, url } of checks) {
+    issue.results.push(await checkUrl(url, { fetchImpl, sleep, retryGapMs, timeoutMs }));
+  }
+
+  for (const { reference, urls, urlsToCheck, results } of issuesWithProof) {
     const checked = new Set(urlsToCheck);
     for (const url of urls) {
       if (!checked.has(url)) logger(`${url} not checked (cap)`);
     }
-    if (urlsToCheck.length === 0) continue;
-    if (!waited) {
-      waited = true;
-      if (initialWaitMs > 0) {
-        logger(`waiting ${initialWaitMs}ms for Pages to deploy`);
-        await sleep(initialWaitMs);
-      }
+    if (urlsToCheck.length === 0) {
+      await github.createComment(
+        reference,
+        "Proof not checked after merge: the 5-URL limit for this PR was reached. Check it by hand.",
+      );
+      continue;
     }
     checkedIssues++;
-    const results = [];
-    for (const url of urlsToCheck) {
-      results.push(await checkUrl(url, { fetchImpl, sleep, retryGapMs, timeoutMs }));
-    }
     const failed = results.filter((result) => !result.ok);
     if (failed.length === 0) {
       await github.createComment(

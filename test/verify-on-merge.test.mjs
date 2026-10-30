@@ -201,8 +201,8 @@ test("all 2xx Proof URLs get the success comment without reopening", async () =>
   assert.deepEqual(result, { issues: 2, urls: 4 });
   assert.deepEqual(requested, [
     "https://aigovops-foundation.com/status",
-    "https://aigovops.github.io/proof",
     "https://aigovops-foundation.com/status",
+    "https://aigovops.github.io/proof",
     "https://aigovops.github.io/proof",
   ]);
   assert.equal(sleeps.length, 0);
