@@ -225,12 +225,19 @@ function pullRequestRepository(pull, owner, repo) {
   return repositoryCoordinates(pull._receiptRepository, null, owner, repo);
 }
 
-export function selectMergedClosingPr(pullRequests, owner, repo, issue) {
+export function selectMergedClosingPr(pullRequests, owner, repo, issue, timeline = []) {
   const closedAt = timestamp(issue.closed_at);
+  const latestReopenedAt = timeline.reduce((latest, event) => {
+    if (event.event !== "reopened") return latest;
+    const reopenedAt = timestamp(event.created_at);
+    return reopenedAt !== null && (latest === null || reopenedAt > latest) ? reopenedAt : latest;
+  }, null);
   return pullRequests.filter((pr) => {
     const prRepository = pullRequestRepository(pr, owner, repo);
-    return pr.merged_at && timestamp(pr.merged_at) !== null &&
-      (!closedAt || timestamp(pr.merged_at) <= closedAt) &&
+    const mergedAt = timestamp(pr.merged_at);
+    return mergedAt !== null &&
+      (closedAt === null || mergedAt <= closedAt) &&
+      (latestReopenedAt === null || mergedAt > latestReopenedAt) &&
       closesIssue(pr.body, owner, repo, issue.number, prRepository.owner, prRepository.repo);
   })
     .sort((a, b) => timestamp(b.merged_at) - timestamp(a.merged_at))[0] || null;
@@ -254,7 +261,7 @@ export function extractTicketFields({ owner, repo, issue, timeline, pullRequests
   const first = rungEvents[0] || null;
   const final = rungEvents[rungEvents.length - 1] || null;
   const startAt = first ? timestamp(first.event.created_at) : null;
-  const pr = selectMergedClosingPr(pullRequests, owner, repo, issue);
+  const pr = selectMergedClosingPr(pullRequests, owner, repo, issue, timeline);
   const prCreatedAt = pr ? timestamp(pr.created_at) : null;
   const hoursToPr = startAt !== null && prCreatedAt !== null
     ? Number(((prCreatedAt - startAt) / 3_600_000).toFixed(1))
@@ -391,7 +398,7 @@ async function main(argv) {
   const issue = await apiGet(`/repos/${owner}/${repo}/issues/${issuePayload.number}`);
   const timeline = await apiList(`/repos/${owner}/${repo}/issues/${issue.number}/timeline`);
   const pullRequests = await collectPullRequests(timeline, owner, repo, issue);
-  const pr = selectMergedClosingPr(pullRequests, owner, repo, issue);
+  const pr = selectMergedClosingPr(pullRequests, owner, repo, issue, timeline);
   const ciConclusion = pr?.head?.sha
     ? await readCheckRuns(pr.head.sha, pr._receiptRepository)
       .then(combinedCheckConclusion)

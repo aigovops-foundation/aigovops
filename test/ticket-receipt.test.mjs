@@ -74,6 +74,21 @@ test("counts lite to ready to ultra as two escalations", () => {
   assert.equal(fields.escalations, 2);
 });
 
+test("does not credit a PR merged before the latest reopening", () => {
+  const fields = extractTicketFields({
+    owner: "aigovops-foundation",
+    repo: "aigovops",
+    issue,
+    timeline: [
+      { event: "closed", created_at: "2026-10-29T10:00:00Z" },
+      { event: "reopened", created_at: "2026-10-29T10:30:00Z" },
+      { event: "closed", created_at: "2026-10-29T12:00:00Z" },
+    ],
+    pullRequests: [{ ...closingPr(), merged_at: "2026-10-29T09:30:00Z" }],
+  });
+  assert.equal(fields.merged, false);
+});
+
 test("re-adding the same rung does not count as an escalation", () => {
   const fields = extractTicketFields({
     owner: "aigovops-foundation",
