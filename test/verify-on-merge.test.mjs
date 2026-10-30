@@ -85,6 +85,19 @@ test("reads the actual Proof heading and ignores other sections", () => {
   ]);
 });
 
+test("extracts URLs wrapped in Markdown code and angle brackets", () => {
+  assert.deepEqual(extractProofUrls([
+    "### Proof",
+    "`https://x.github.io/a`",
+    "<https://x.github.io/b>.",
+    "https://x.github.io/c,",
+  ].join("\n")), [
+    "https://x.github.io/a",
+    "https://x.github.io/b",
+    "https://x.github.io/c",
+  ]);
+});
+
 test("caps Proof URL fetches at five across all linked issues", async () => {
   const body = [
     "### Proof",
