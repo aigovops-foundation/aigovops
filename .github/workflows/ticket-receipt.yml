@@ -22,6 +22,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           fetch-depth: 0
+          ref: main
 
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
@@ -43,15 +44,25 @@ jobs:
           git config user.email "noreply@aigovops-foundation.com"
           git add ops/receipts/tickets.ndjson
           if ! git diff --cached --quiet -- ops/receipts/tickets.ndjson; then
-            node scripts/ticket-receipt.mjs --verify || {
-              echo "::error::ticket receipt chain did not verify — not committing"
-              exit 1
-            }
-            git commit -m "chore(receipts): closed-ticket receipt [automated]"
             for attempt in 1 2 3; do
+              node scripts/ticket-receipt.mjs --verify || {
+                echo "::error::ticket receipt chain did not verify — not committing"
+                exit 1
+              }
+              git commit -m "chore(receipts): closed-ticket receipt [automated]"
               git push && exit 0
-              echo "push rejected (attempt $attempt) — rebasing onto origin/main and retrying"
-              git pull --rebase --autostash origin main || exit 1
+              if [ "$attempt" -eq 3 ]; then
+                break
+              fi
+              echo "push rejected (attempt $attempt) — refreshing receipt from origin/main"
+              git fetch origin main || exit 1
+              git reset --hard origin/main || exit 1
+              node scripts/ticket-receipt.mjs || exit 1
+              node scripts/ticket-receipt.mjs --verify || {
+                echo "::error::ticket receipt chain did not verify — not committing"
+                exit 1
+              }
+              git add ops/receipts/tickets.ndjson
               sleep $((attempt * 5))
             done
             echo "::error::could not push ticket receipt after three attempts"
