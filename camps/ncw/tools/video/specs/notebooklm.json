@@ -1,0 +1,49 @@
+{
+  "slug": "notebooklm",
+  "tool": "NotebookLM",
+  "voice": "narrator",
+  "slides": [
+    {
+      "kind": "title",
+      "title": "NotebookLM",
+      "sub": "A 90-second guide · AiGovOps Foundation",
+      "narration": "A ninety-second guide to NotebookLM, from the AiGovOps Foundation and the NCW AI Camp."
+    },
+    {
+      "kind": "tool",
+      "title": "What it is",
+      "lines": [
+        "NotebookLM is a free Google research tool that answers only from sources you upload — PDFs, Google Docs, slides, websites, even YouTube.",
+        "Because it's grounded in your material, it cites every answer back to the exact passage, which dramatically reduces hallucination.",
+        "Its standout feature is the Audio Overview, which turns your documents into a two-host podcast you can listen to."
+      ],
+      "narration": "NotebookLM is a free Google research tool that answers only from sources you upload — PDFs, Google Docs, slides, websites, even YouTube. Because it's grounded in your material, it cites every answer back to the exact passage, which There's a free tier to start."
+    },
+    {
+      "kind": "cool",
+      "title": "What's cool for NCW",
+      "lines": [
+        "Educators: drop in a textbook chapter and curriculum standards, then generate a study guide with citations students can verify",
+        "SMB owners: load your employee handbook, supplier contracts, and SOPs, then ask grounded questions instead of digging",
+        "Community leaders: upload meeting minutes and grant guidelines, then generate an Audio Overview for board members who prefer to listen"
+      ],
+      "narration": "Here's what's cool for our valley. Educators can drop in a textbook chapter and curriculum standards, then generate a study guide with citations students can verify; SMB owners can load your employee handbook, supplier contracts, and SOPs, then ask grounded questions instead of digging; Community leaders can upload meeting minutes and grant guidelines, then generate an Audio Overview for board members who prefer to listen."
+    },
+    {
+      "kind": "rules",
+      "title": "The rules — the AiGovOps way",
+      "lines": [
+        "A human on the trigger — you read it before it goes out",
+        "Keep the receipts — save your prompt and the answer",
+        "Mind the data cost of “free” — no student records, IEPs, or private details in a free tool"
+      ],
+      "narration": "Now the rules, the AiGovOps way. Keep a human on the trigger: you read it before it goes out. Keep the receipts: save your prompt and the answer. And mind the data cost of free — never paste student records, an I-E-P, or a customer's private details into a free tool, because free tools learn from what you type."
+    },
+    {
+      "kind": "outro",
+      "title": "Good AI, the NCW way.",
+      "sub": "NCW AI Camp · Aug 11, 2026 · AiGovOps Foundation",
+      "narration": "Good A-I, the NCW way. That's NotebookLM. Learn more at the NCW AI Camp. AiGovOps Foundation."
+    }
+  ]
+}
