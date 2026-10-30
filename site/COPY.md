@@ -11,7 +11,7 @@
 NIST AI RMF · ISO/IEC 42001 · EU AI Act · SOC 2
 
 ## One-click actions
-- Newsletter — Monthly brief
+- Newsletter — The Tuesday Letter, weekly
 - Events — Forums & summits
 - Blog — Field notes
 - Podcast — Listen
@@ -43,14 +43,14 @@ Standards-aligned, evidence-first tooling you can run today.
 ## Programs
 - Discussion groups — After-hours practitioner forums.
 - Community — Slack and working groups.
-- Newsletter — Monthly operating brief.
+- Newsletter — The Tuesday Letter: one story from the practice every Tuesday.
 - Training & summits — Workshops and annual summit.
 
 ## Events
 Forums, workshops, and the annual AiGovOps Summit. See the calendar →
 
 ## Newsletter
-**H2:** Get the monthly brief
+**H2:** Get the Tuesday Letter
 **Sub:** Operating notes for AI governance practitioners. No fluff.
 
 ## Founders

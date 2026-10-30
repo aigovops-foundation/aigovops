@@ -298,7 +298,7 @@ async function run() {
           }
           if (width === 1280) {
             const barBottom = await page.locator('.academy-bar').evaluate((bar) => bar.getBoundingClientRect().bottom);
-            record(barBottom <= 800, `${persona.id}: the four tasks and the Academy bar fit at 1280×800 (${Math.round(barBottom)}px)`);
+            record(barBottom <= 800, `${persona.id}: the Gate Check, four tasks and the Academy bar fit at 1280×800 (${Math.round(barBottom)}px)`);
           }
         }
         const academyLink = page.locator('a.academy-bar');

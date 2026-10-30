@@ -57,7 +57,7 @@ The full build, milestone by milestone. Every one was tested, shipped to `main`,
 ## Companion docs
 - **[BLUEPRINT.md](./BLUEPRINT.md)** — the product architecture and grounding
 - **[ROADMAP.md](./ROADMAP.md)** — kernel → production v-next, per product
-- **[INTEROP.md](https://github.com/bobrapp/Aigovops-Foundation-Open-Source-V4-10k/blob/main/INTEROP.md)** — the verified Apache-2.0 / 10k★ backend stack
+- **[INTEROP.md](https://github.com/aigovops-foundation/aigovops/blob/main/INTEROP.md)** — the verified Apache-2.0 / 10k★ backend stack
 - **[PRODUCTIZATION.md](./PRODUCTIZATION.md)** — the 1-click product plan (wizard · script · Jeeves-run)
 - **[SAAS.md](./SAAS.md)** — the hosted, open-core model and the no-lock-in guarantee
 

@@ -52,7 +52,7 @@ jobs:
   # ---------------------------------------------------------------
   e2e:
     name: E2E (Playwright • a11y • mobile)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # WebKit times out on ubuntu-latest (26.04); unpin once Playwright supports it
     needs: html-lint
     strategy:
       fail-fast: false

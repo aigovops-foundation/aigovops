@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   journeys:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # Playwright 1.56.1 cannot install Chromium deps on ubuntu-latest (26.04) — 2026-10-30
     timeout-minutes: 20
     env:
       BASE_URL: ${{ github.event_name == 'pull_request' && 'http://127.0.0.1:8080' || 'https://www.aigovops-foundation.com' }}

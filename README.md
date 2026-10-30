@@ -7,6 +7,8 @@
 
 Monorepo deployment and migration tooling: [MONOREPO.md](MONOREPO.md).
 
+**Work queue:** tickets live in GitHub Issues — see [CONTRIBUTING.md#the-work-queue](CONTRIBUTING.md#the-work-queue).
+
 > **Status (2026-08-09):** self-hostable from a clone today — zero-dependency Node, **193 tests
 > green** (`node --test`). The hosted one-line installer (`get.aigovops.org`) and the published
 > `@aigovops/*` npm packages are **planned, not yet live**: the domain isn't provisioned and nothing
@@ -243,7 +245,7 @@ runConformance();   // → { conformant: true, passed: 6, total: 6 } — the con
 ## Quick start
 
 ```bash
-git clone https://github.com/bobrapp/Aigovops-Foundation-Open-Source-V4-10k.git
+git clone https://github.com/aigovops-foundation/aigovops.git
 cd Aigovops-Foundation-Open-Source-V4-10k
 node --test                       # run all gate tests (Node 20+, zero dependencies)
 

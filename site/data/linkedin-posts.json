@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-24T07:07:16Z",
+  "updated": "2026-10-30T07:05:27Z",
   "feed_health": {
     "bob": {
       "ok": true,
       "fetched": 10,
-      "published": 9,
+      "published": 10,
       "error": null
     },
     "ken": {
@@ -16,74 +16,82 @@
   },
   "bob": [
     {
-      "title": "More prompt data ≠ better AI. PROBLEM | 问题 A task may need only a category and time range, yet receive a full ticket or customer r...",
-      "link": "https://www.linkedin.com/posts/bobrapp_more-prompt-data-better-ai-problem-activity-7519518589419421696-CaQq",
-      "date": "Fri, 23 Oct 2026 22:02:18 GMT",
-      "summary": "More prompt data ≠ better AI. PROBLEM | 问题 A task may need only a category and time range, yet receive a full ticket or customer record. Unnecessary personal or confidential data has crossed the AI boundary. This is input minimization—not memory retention, consent revocation, or",
+      "title": "A spreadsheet can become a decision system before anyone calls it AI. Problem Citizen-built models in spreadsheets, BI, and low-co...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-grow-ai-governance-activity-7521693140731305985-b1pj",
+      "date": "Thu, 29 Oct 2026 22:03:11 GMT",
+      "summary": "A spreadsheet can become a decision system before anyone calls it AI. Problem Citizen-built models in spreadsheets, BI, and low-code tools can steer pricing, staffing, benefits, or access. Solution Gate the path: personal file → reviewed model → operational system. Record a named",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "AI-generated code is not production-ready. Problem: Speed without governance creates unreviewed, untested, unowned changes. Soluti...",
-      "link": "https://www.linkedin.com/posts/bobrapp_ai-generated-code-is-not-production-ready-activity-7519382725645185025-0MmD",
-      "date": "Fri, 23 Oct 2026 13:02:25 GMT",
-      "summary": "AI-generated code is not production-ready. Problem: Speed without governance creates unreviewed, untested, unowned changes. Solution: Before release, require human review, tests, dependency/licence checks, evidence, and an owner. Three-Yes Test: Safe? Compliant? Pro-humanity? Shi",
+      "title": "Post 5/16 Problem: “EU-hosted” ≠ every inference, log, retrieval, support or review region. Solution: Map each step → region/provi...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-grow-ai-governance-activity-7521556824253341696-EXpB",
+      "date": "Thu, 29 Oct 2026 13:01:31 GMT",
+      "summary": "Post 5/16 Problem: “EU-hosted” ≠ every inference, log, retrieval, support or review region. Solution: Map each step → region/provider; name subprocessors and review queues; document transfer basis; evidence residency settings; test failover; block unapproved routes; assign an own",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "PROBLEM / 問題 AI output is not evidence by itself. Without its source, transformation steps, and named sign-off, an internal decisi...",
-      "link": "https://www.linkedin.com/posts/bobrapp_problem-%E5%95%8F%E9%A1%8C-ai-output-is-not-evidence-by-activity-7519157151219777537-kaS-",
-      "date": "Thu, 22 Oct 2026 22:06:04 GMT",
-      "summary": "PROBLEM / 問題 AI output is not evidence by itself. Without its source, transformation steps, and named sign-off, an internal decision cannot be reconstructed or defended. AI出力は証拠そのものではありません。出典、変換工程、承認者の記録がなければ、社内判断を再現・説明できません。 SOLUTION / 解決策 Record at decision time: source/version",
+      "title": "Freeze windows must be controls, not suggestions. PROBLEM / PROBLÈME During financial close, peak season, regulated reporting, maj...",
+      "link": "https://fr.linkedin.com/posts/bobrapp_aigovops-foundation-grow-ai-governance-activity-7521330561685200896-ZnTm",
+      "date": "Wed, 28 Oct 2026 22:02:25 GMT",
+      "summary": "Freeze windows must be controls, not suggestions. PROBLEM / PROBLÈME During financial close, peak season, regulated reporting, major public events or active incidents, freeze model, prompt, data, policy, threshold, dependency, feature and configuration changes. / Pendant ces péri",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "A polished AI demo can hide a harmful assumption. PROBLEM Affected users expose missing context, time, language, authority, and sa...",
-      "link": "https://www.linkedin.com/posts/bobrapp_a-polished-ai-demo-can-hide-a-harmful-assumption-activity-7519020660501843968-eQpO",
-      "date": "Thu, 22 Oct 2026 13:03:42 GMT",
-      "summary": "A polished AI demo can hide a harmful assumption. PROBLEM Affected users expose missing context, time, language, authority, and safe ways to challenge AI. SOLUTION Before build freeze, observe real tasks. Map handoffs and failure points. Ask when AI is wrong. Convert dissent into",
+      "title": "Generated data is not automatically anonymous. PROBLEM / 問題 Synthetic records can memorize real people or confidential rows—and di...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-grow-ai-governance-activity-7521194331110567936-a3fq",
+      "date": "Wed, 28 Oct 2026 13:01:06 GMT",
+      "summary": "Generated data is not automatically anonymous. PROBLEM / 問題 Synthetic records can memorize real people or confidential rows—and distort fairness testing. 合成レコードは実在人物や機密記録を記憶し、公平性テストを歪める可能性があります。 SOLUTION / 解決策 Assign a named Data Governance Owner. Log generator/base-model version",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "Handoff ≠ a file; it is operating capability. التسليم ≠ ملف؛ بل قدرة تشغيلية. PROBLEM | المشكلة Build knows. Operations needs owne...",
-      "link": "https://www.linkedin.com/posts/bobrapp_handoff-a-file-it-is-operating-capability-activity-7518794221051551745-09H9",
-      "date": "Wed, 21 Oct 2026 22:03:55 GMT",
-      "summary": "Handoff ≠ a file; it is operating capability. التسليم ≠ ملف؛ بل قدرة تشغيلية. PROBLEM | المشكلة Build knows. Operations needs owner, limits, assumptions, monitoring, and support/escalation—not a model card or generic accountability. يعرف فريق البناء. يحتاج التشغيل إلى المالك والق",
+      "title": "Resolved is not closed. PROBLEM: A fix may remove the symptom while the root cause remains. SOLUTION: For every root cause, assign...",
+      "link": "https://www.linkedin.com/posts/bobrapp_resolved-is-not-closed-problem-a-fix-may-activity-7520968478191763456-Vs59",
+      "date": "Tue, 27 Oct 2026 22:03:38 GMT",
+      "summary": "Resolved is not closed. PROBLEM: A fix may remove the symptom while the root cause remains. SOLUTION: For every root cause, assign an owner and due date. Before closure, require a same-condition re-test, a regression test, an adjacent-behaviour check, an affected-team walkthrough",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "One cohort can bear harm while the average says “pass.” Problem Cover language, age, geography, disability, device, context—and in...",
-      "link": "https://www.linkedin.com/posts/bobrapp_one-cohort-can-bear-harm-while-the-average-activity-7518658402366177281-ryhM",
-      "date": "Wed, 21 Oct 2026 13:04:13 GMT",
-      "summary": "One cohort can bear harm while the average says “pass.” Problem Cover language, age, geography, disability, device, context—and intersections. Solution Pre-design cohorts; weight real use; set floors; inspect errors; retest after changes. Three-Yes Test: Safe? Compliant? Pro-Huma",
+      "title": "Decide AI incident severity before the incident—not during the scramble. Problem: Without a written Sev-1/2/3 rubric, debate can o...",
+      "link": "https://www.linkedin.com/posts/bobrapp_aigovops-foundation-grow-ai-governance-activity-7520832480703135744-5mv-",
+      "date": "Tue, 27 Oct 2026 13:03:14 GMT",
+      "summary": "Decide AI incident severity before the incident—not during the scramble. Problem: Without a written Sev-1/2/3 rubric, debate can outpace harm. Score harm to people, scope, reversibility, and regulatory exposure. Name a 24/7 triage owner and backup; keep a standing channel; log ev",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "Can another team rerun your AI evaluation, and explain any changed result? PROBLEM | A score without fixtures, versions, or rerun...",
-      "link": "https://www.linkedin.com/posts/bobrapp_can-another-team-rerun-your-ai-evaluation-activity-7518431529556164608-EVWm",
-      "date": "Tue, 20 Oct 2026 22:02:42 GMT",
-      "summary": "Can another team rerun your AI evaluation, and explain any changed result? PROBLEM | A score without fixtures, versions, or rerun evidence is only a claim. SOLUTION | Freeze fixtures. Pin model, prompt, code, data, dependencies, threshold, seed, runtime, and environment. Keep raw",
+      "title": "Risk appetite is not “low, medium, or high.” It is a deployment boundary. Problem If teams cannot answer when to stop, who decides...",
+      "link": "https://www.linkedin.com/posts/bobrapp_risk-appetite-is-not-low-medium-or-high-activity-7520605658526830593-cng8",
+      "date": "Mon, 26 Oct 2026 22:01:55 GMT",
+      "summary": "Risk appetite is not “low, medium, or high.” It is a deployment boundary. Problem If teams cannot answer when to stop, who decides, or how fast to escalate, tolerance is a slogan. Solution Set rules: • Permit: require override, monitoring, evidence, and rollback. • Escalate: paus",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "Before choosing a model, screen the objective. PROBLEM A capable model can still scale an unacceptable goal. Wrong objective + bet...",
-      "link": "https://www.linkedin.com/posts/bobrapp_before-choosing-a-model-screen-the-objective-activity-7518296030736592896-ldZu",
-      "date": "Tue, 20 Oct 2026 13:04:17 GMT",
-      "summary": "Before choosing a model, screen the objective. PROBLEM A capable model can still scale an unacceptable goal. Wrong objective + better accuracy = faster harm. SOLUTION — GATE 0 1) State the outcome, affected people, and decision authority. 2) Apply the Three-Yes Test: Safe? Compli",
+      "title": "Scope is the first impact decision. / दायरा पहला प्रभाव-निर्णय है। PROBLEM / समस्या Unnamed people, rights, risks, or evidence leave “comple...",
+      "link": "https://www.linkedin.com/posts/bobrapp_scope-is-the-first-impact-decision-%E0%A4%A6%E0%A4%AF%E0%A4%B0-activity-7520470481284669440-Du6o",
+      "date": "Mon, 26 Oct 2026 13:04:46 GMT",
+      "summary": "Scope is the first impact decision. / दायरा पहला प्रभाव-निर्णय है। PROBLEM / समस्या Unnamed people, rights, risks, or evidence leave “complete” reviews blind. / नाम न हों तो “पूर्ण” समीक्षा अंधी रहती है। SOLUTION / समाधान Ask: PEOPLE—who is affected? RIGHTS—what is at stake? RISK",
       "image": null,
       "author": "Bob Rapp"
     },
     {
-      "title": "Generic AI training is not governance. Different roles face different decisions, tools and risks. Problem → Solution → Summary One...",
-      "link": "https://www.linkedin.com/posts/bobrapp_generic-ai-training-is-not-governance-different-activity-7518069151769198592-FbCR",
-      "date": "Mon, 19 Oct 2026 22:02:45 GMT",
-      "summary": "Generic AI training is not governance. Different roles face different decisions, tools and risks. Problem → Solution → Summary One course proves attendance, not capability. Profile each role: decisions, tools/data, risks and escalation. Practise scenarios, assess behavior, refres",
+      "title": "A one-time control test is a snapshot—not assurance. Problem | 課題 Without recurring tests, approvals, access boundaries, notices,...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-one-time-control-test-is-a-snapshotnot-activity-7520243168295157760-pbJM",
+      "date": "Sun, 25 Oct 2026 22:01:31 GMT",
+      "summary": "A one-time control test is a snapshot—not assurance. Problem | 課題 Without recurring tests, approvals, access boundaries, notices, records, and recovery procedures drift. Who owns the result, exception, and fix? 一度きりのテストは保証ではなく、スナップショットです。定期テストがなければ、承認、アクセス境界、通知、記録、復旧手順は形骸化します。結果・",
+      "image": null,
+      "author": "Bob Rapp"
+    },
+    {
+      "title": "A vendor changes an AI service. Your contract must preserve your ability to know, test, and act. PROBLEM A model, data-use, retent...",
+      "link": "https://www.linkedin.com/posts/bobrapp_a-vendor-changes-an-ai-service-your-contract-activity-7520107873461403648-CrSn",
+      "date": "Sun, 25 Oct 2026 13:03:54 GMT",
+      "summary": "A vendor changes an AI service. Your contract must preserve your ability to know, test, and act. PROBLEM A model, data-use, retention, or subprocessor change can invalidate controls before notice. This is a contract-rights issue, not an acceptance gate, dependency inventory, or v",
       "image": null,
       "author": "Bob Rapp"
     }

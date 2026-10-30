@@ -1,0 +1,285 @@
+import assert from "node:assert/strict";
+import test from "node:test";
+
+import {
+  appendTicketReceipt,
+  buildTicketRecord,
+  combinedCheckConclusion,
+  collectPullRequests,
+  extractTicketFields,
+  hashRecord,
+  selectMergedClosingPr,
+  verifyChain,
+} from "../scripts/ticket-receipt.mjs";
+
+const issue = {
+  number: 42,
+  closed_at: "2026-10-29T12:00:00Z",
+  state_reason: "completed",
+  labels: [{ name: "queue" }, { name: "discovered" }],
+};
+const timeline = [
+  { event: "labeled", created_at: "2026-10-29T08:00:00Z", label: { name: "ready:lite" } },
+  { event: "labeled", created_at: "2026-10-29T09:00:00Z", label: { name: "ready" } },
+  { event: "labeled", created_at: "2026-10-29T10:00:00Z", label: { name: "ready:ultra" } },
+  { event: "labeled", created_at: "2026-10-29T11:00:00Z", label: { name: "blocked" } },
+];
+
+function closingPr(number = 91) {
+  return {
+    number,
+    body: "Fixes aigovops-foundation/aigovops#42",
+    created_at: "2026-10-29T08:30:00Z",
+    merged_at: "2026-10-29T11:59:00Z",
+    head: { sha: "a".repeat(40) },
+  };
+}
+
+test("extracts receipt fields from issue and timeline API data", () => {
+  const fields = extractTicketFields({
+    owner: "aigovops-foundation",
+    repo: "aigovops",
+    issue,
+    timeline,
+    pullRequests: [closingPr()],
+    ciConclusion: "success",
+  });
+  assert.deepEqual(fields, {
+    repo: "aigovops-foundation/aigovops",
+    issue: 42,
+    closedAt: issue.closed_at,
+    stateReason: "completed",
+    startLabel: "ready:lite",
+    finalRung: "ready:ultra",
+    escalations: 2,
+    blocked: true,
+    discovered: true,
+    pr: 91,
+    merged: true,
+    hoursToPr: 0.5,
+    ciConclusion: "success",
+    acu: null,
+  });
+});
+
+test("counts lite to ready to ultra as two escalations", () => {
+  const fields = extractTicketFields({
+    owner: "aigovops-foundation",
+    repo: "aigovops",
+    issue,
+    timeline,
+    pullRequests: [closingPr()],
+    ciConclusion: "success",
+  });
+  assert.equal(fields.escalations, 2);
+});
+
+test("does not credit a PR merged before the latest reopening", () => {
+  const fields = extractTicketFields({
+    owner: "aigovops-foundation",
+    repo: "aigovops",
+    issue,
+    timeline: [
+      { event: "closed", created_at: "2026-10-29T10:00:00Z" },
+      { event: "reopened", created_at: "2026-10-29T10:30:00Z" },
+      { event: "closed", created_at: "2026-10-29T12:00:00Z" },
+    ],
+    pullRequests: [{ ...closingPr(), merged_at: "2026-10-29T09:30:00Z" }],
+  });
+  assert.equal(fields.merged, false);
+});
+
+test("re-adding the same rung does not count as an escalation", () => {
+  const fields = extractTicketFields({
+    owner: "aigovops-foundation",
+    repo: "aigovops",
+    issue,
+    timeline: [
+      { event: "labeled", created_at: "2026-10-29T08:00:00Z", label: { name: "ready:lite" } },
+      { event: "labeled", created_at: "2026-10-29T09:00:00Z", label: { name: "ready:lite" } },
+      { event: "labeled", created_at: "2026-10-29T10:00:00Z", label: { name: "ready" } },
+    ],
+  });
+  assert.equal(fields.escalations, 1);
+  assert.equal(fields.finalRung, "ready");
+});
+
+test("selects a qualified closing reference from a PR in another repository", async () => {
+  const timeline = [{
+    event: "cross-referenced",
+    source: {
+      issue: {
+        number: 77,
+        pull_request: { url: "https://api.github.com/repos/other-org/other-repo/pulls/77" },
+        repository: { full_name: "other-org/other-repo" },
+      },
+    },
+  }];
+  const fetched = [];
+  const pullRequests = await collectPullRequests(timeline, "aigovops-foundation", "aigovops", issue, {
+    fetchPullRequest: async (candidate) => {
+      fetched.push(candidate);
+      return { ...closingPr(77), body: "Fixes aigovops-foundation/aigovops#42" };
+    },
+    logger: () => {},
+  });
+  assert.deepEqual(fetched, [{ owner: "other-org", repo: "other-repo", number: 77 }]);
+  assert.equal(selectMergedClosingPr(pullRequests, "aigovops-foundation", "aigovops", issue).number, 77);
+});
+
+test("resolves a candidate PR repository from repository_url", async () => {
+  const timeline = [{
+    event: "cross-referenced",
+    source: {
+      issue: {
+        number: 77,
+        pull_request: { url: "https://api.github.com/repos/other-org/other-repo/pulls/77" },
+        repository_url: "https://api.github.com/repos/other-org/other-repo",
+      },
+    },
+  }];
+  const fetched = [];
+  const pullRequests = await collectPullRequests(timeline, "aigovops-foundation", "aigovops", issue, {
+    fetchPullRequest: async (candidate) => {
+      fetched.push(candidate);
+      return { ...closingPr(77), body: "Fixes aigovops-foundation/aigovops#42" };
+    },
+    logger: () => {},
+  });
+  assert.deepEqual(fetched, [{ owner: "other-org", repo: "other-repo", number: 77 }]);
+  assert.equal(selectMergedClosingPr(pullRequests, "aigovops-foundation", "aigovops", issue).number, 77);
+});
+
+test("a bare issue reference in another repository does not close this issue", async () => {
+  const timeline = [{
+    event: "cross-referenced",
+    source: {
+      issue: {
+        number: 77,
+        pull_request: { url: "https://api.github.com/repos/other-org/other-repo/pulls/77" },
+        repository: { full_name: "other-org/other-repo" },
+      },
+    },
+  }];
+  const pullRequests = await collectPullRequests(timeline, "aigovops-foundation", "aigovops", issue, {
+    fetchPullRequest: async () => ({ ...closingPr(77), body: "Fixes #42" }),
+    logger: () => {},
+  });
+  assert.equal(selectMergedClosingPr(pullRequests, "aigovops-foundation", "aigovops", issue), null);
+});
+
+test("a candidate PR fetch returning 404 is skipped and logged by status", async () => {
+  const timeline = [{
+    event: "cross-referenced",
+    source: {
+      issue: {
+        number: 77,
+        pull_request: { url: "https://api.github.com/repos/private-org/private-repo/pulls/77" },
+        repository: { full_name: "private-org/private-repo" },
+      },
+    },
+  }];
+  const statuses = [];
+  const pullRequests = await collectPullRequests(timeline, "aigovops-foundation", "aigovops", issue, {
+    fetchPullRequest: async () => {
+      const error = new Error("private repo detail");
+      error.status = 404;
+      throw error;
+    },
+    logger: (status) => statuses.push(status),
+  });
+  assert.deepEqual(pullRequests, []);
+  assert.deepEqual(statuses, [404]);
+});
+
+test("a candidate PR fetch returning 500 is rethrown", async () => {
+  const timeline = [{
+    event: "cross-referenced",
+    source: {
+      issue: {
+        number: 77,
+        pull_request: { url: "https://api.github.com/repos/other-org/other-repo/pulls/77" },
+        repository: { full_name: "other-org/other-repo" },
+      },
+    },
+  }];
+  const failure = Object.assign(new Error("GitHub API returned 500"), { status: 500 });
+  await assert.rejects(
+    collectPullRequests(timeline, "aigovops-foundation", "aigovops", issue, {
+      fetchPullRequest: async () => {
+        throw failure;
+      },
+      logger: () => {},
+    }),
+    (error) => error === failure,
+  );
+});
+
+test("the fixed field allowlist rejects extra data", () => {
+  const fields = extractTicketFields({
+    owner: "aigovops-foundation",
+    repo: "aigovops",
+    issue,
+    timeline,
+  });
+  assert.throws(() => buildTicketRecord({ ...fields, comment: "not allowed" }), /allowlist/);
+});
+
+test("a valid chain verifies and a tampered row fails", () => {
+  const fields = extractTicketFields({
+    owner: "aigovops-foundation",
+    repo: "aigovops",
+    issue,
+    timeline,
+    pullRequests: [closingPr()],
+    ciConclusion: "success",
+  });
+  const firstRecord = buildTicketRecord(fields);
+  const first = { record: firstRecord, hash: hashRecord(firstRecord), state: "unsigned" };
+  const secondRecord = buildTicketRecord({ ...fields, issue: 43 }, first.hash);
+  const second = { record: secondRecord, hash: hashRecord(secondRecord), state: "unsigned" };
+  assert.equal(verifyChain([first, second]).valid, true);
+  const tampered = structuredClone(second);
+  tampered.record.issue = 99;
+  assert.equal(verifyChain([first, tampered]).valid, false);
+});
+
+test("an issue without a ready label records a null startLabel", () => {
+  const fields = extractTicketFields({
+    owner: "aigovops-foundation",
+    repo: "aigovops",
+    issue,
+    timeline: [{ event: "labeled", label: { name: "blocked" } }],
+  });
+  assert.equal(fields.startLabel, null);
+  assert.equal(fields.finalRung, null);
+  assert.equal(fields.escalations, 0);
+});
+
+test("check runs combine into a single conclusion", () => {
+  assert.equal(combinedCheckConclusion([]), null);
+  assert.equal(combinedCheckConclusion([{ status: "in_progress" }]), "pending");
+  assert.equal(combinedCheckConclusion([{ status: "completed", conclusion: "success" }]), "success");
+  assert.equal(combinedCheckConclusion([{ status: "completed", conclusion: "failure" }]), "failure");
+});
+
+test("append verifies the previous chain before adding a receipt", async (t) => {
+  const { mkdtempSync, readFileSync, rmSync } = await import("node:fs");
+  const { tmpdir } = await import("node:os");
+  const { join } = await import("node:path");
+  const dir = mkdtempSync(join(tmpdir(), "ticket-receipt-"));
+  t.after(() => rmSync(dir, { recursive: true, force: true }));
+  const file = join(dir, "tickets.ndjson");
+  const fields = extractTicketFields({
+    owner: "aigovops-foundation",
+    repo: "aigovops",
+    issue,
+    timeline,
+    pullRequests: [closingPr()],
+    ciConclusion: "success",
+  });
+  const entry = appendTicketReceipt(fields, file);
+  const rows = readFileSync(file, "utf8").trim().split("\n").map((line) => JSON.parse(line));
+  assert.equal(rows[0].hash, entry.hash);
+  assert.equal(verifyChain(rows).valid, true);
+});

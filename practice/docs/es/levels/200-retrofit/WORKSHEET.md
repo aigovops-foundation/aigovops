@@ -63,9 +63,12 @@ vía de código que teclee tus frases. Que los recibos sean idénticos byte a by
 ```bash
 pipx install git+https://github.com/aigovops-foundation/umbrella-govops   # o: pip install .
 umbrella-conformance check .            # la puerta de política: la regla es válida o no se ejecuta
-umbrella-conformance bundle --out ./out # un paquete de evidencia firmable
-umbrella-conformance verify ./out/bundle.tar.gz
+umbrella-conformance keygen --out ./keys # una sola vez: tu clave; mantén keys/signing.pem en privado
+umbrella-conformance bundle --out ./out --sign-key ./keys/signing.pem
+umbrella-conformance verify ./out/bundle.tar.gz --public-key ./keys/signing.pub.pem # rechaza paquetes sin firmar o alterados
 ```
+
+Verify solo pasa con un paquete firmado cuyos digests se recalculan correctamente — un paquete sin firmar o editado falla; ese es el objetivo.
 
 Anota: check ☐ pasó ☐ falló (qué dijo: ______________). Ruta del paquete: ______________
 
@@ -76,7 +79,7 @@ restricciones, condiciones de parada) validado por nombre; el catálogo de polí
 
 ```bash
 pip install git+https://github.com/aigovops-foundation/aigovops-lantern.git
-lantern read -f markdown -r compliance ./out/<receipts>.ndjson
+lantern read -f markdown -r compliance ./out/receipts.ndjson
 ```
 
 Ahora debilita una regla — convierte el `C3 hold` en `C1 allow` —, reconstruye y:
@@ -142,7 +145,7 @@ dijo la puerta, qué cambió. Jueves: empareja con un 100 y acompáñale a su pr
 
 **Puerta de política**
 - [ ] `umbrella-conformance check .` pasó.
-- [ ] `umbrella-conformance bundle` produjo un paquete; `verify` pasó sobre él.
+- [ ] `umbrella-conformance bundle --sign-key` produjo un paquete firmado; `verify --public-key` lo validó.
 
 **Leer · diff**
 - [ ] `lantern read -r compliance` renderizó el paquete.

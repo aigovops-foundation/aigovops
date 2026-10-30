@@ -1,0 +1,57 @@
+name: Task
+description: Work for the estate — a change, a fix, a page, a lane. One ticket, one outcome.
+title: "task: "
+labels: ["queue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is the Foundation's single work queue. A ticket is picked up by automation only when
+        a human adds the `ready` label; it stops at a pull request, and a human merges.
+  - type: input
+    id: outcome
+    attributes:
+      label: Outcome
+      description: One sentence. What is true when this is done?
+      placeholder: "www.aigovops-foundation.com/academy.html lists the November classes."
+    validations:
+      required: true
+  - type: dropdown
+    id: repo
+    attributes:
+      label: Where
+      description: The repository the change lands in.
+      options:
+        - aigovops (trunk)
+        - aigovops-foundation-site-redesign-June2026-ken-and-bob (www)
+        - aigovops-library-june-ken-bob (Library)
+        - practice
+        - aigovops-ncw-ai-camp
+        - aigovops-beacon
+        - Omni-Rapp-June-2026
+        - umbrella-govops
+        - aigovops-lantern
+        - aigovops-vendor-rfi
+        - other / not sure
+    validations:
+      required: true
+  - type: textarea
+    id: proof
+    attributes:
+      label: Proof
+      description: How a reviewer checks it — a URL, a command, a test name.
+      placeholder: "node --test test/front-door.test.mjs passes; the live page shows the three classes."
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Links, context, constraints. Optional.
+  - type: checkboxes
+    id: gate
+    attributes:
+      label: Human gate
+      options:
+        - label: Nothing here is irreversible without a human click (merge, DNS, secrets, deletes, payments).
+          required: true

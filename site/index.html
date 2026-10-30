@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="css/porch.css?v=20261011b" />
   <link rel="stylesheet" href="css/wren-cafe.css?v=20261011b" />
   <style>
-    /* ── simple front door (Oct 2026): four tasks, then the Academy ── */
+    /* ── simple front door (Oct 2026): the Gate Check, four tasks, then the Academy ── */
     .home-hero { padding: 16px 0 28px; text-align: left; }
     .home-hero h1 { font-size: clamp(1.8rem, 3vw, 2.3rem); margin: 2px 0 4px; line-height: 1.1; }
     .home-hero .home-lede { margin: 0 0 12px; max-width: 60ch; font-size: 1rem; }
@@ -34,6 +34,14 @@
     .task-card { background: #fff; border: 1px solid rgba(43,43,40,.12); border-radius: 16px; padding: 12px 16px 12px; display: flex; flex-direction: column; gap: 5px; box-shadow: var(--garden-shadow-sm, 0 1px 2px rgba(0,0,0,.05)); }
     .task-card h2 { font-family: var(--garden-serif, Fraunces, Georgia, serif); font-size: 1.2rem; margin: 0; color: var(--garden-charcoal, #2b2b28); }
     .task-card p { margin: 0; color: var(--garden-ink-soft, #55524a); font-size: .92rem; line-height: 1.4; }
+    /* the Gate Check leads the door: one full-width row above the four tasks (22 Oct estate review) */
+    .task-card--gate { grid-column: 1 / -1; padding: 10px 16px; flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; border-color: var(--garden-green, #2E7D4F); background: var(--garden-cream, #FAF7F0); }
+    .task-card--gate .task-gate-copy { display: grid; gap: 2px; }
+    /* the estate creed (#187) rides in the Gate Check card: it already ends on the proof */
+    .task-card--gate .home-creed { margin: 0; max-width: none; opacity: 1; color: var(--garden-ink-soft, #55524a); font-style: italic; font-size: .92rem; }
+    .home-hero .hero-eyebrow { margin-bottom: 6px; }
+    .task-card--gate .task-btn { margin-top: 0; align-self: center; white-space: nowrap; }
+    @media (max-width: 700px) { .task-card--gate { flex-direction: column; align-items: flex-start; } .task-card--gate .task-btn { align-self: flex-start; } }
     .task-card .task-when { color: var(--garden-green-ink, #1F5E3A); font-weight: 600; }
     .task-card .task-btn { align-self: flex-start; margin-top: auto; padding: 8px 16px; }
     .task-card .btn-primary { background: var(--garden-green, #2E7D4F); color: #fff; }
@@ -238,14 +246,20 @@
   </div>
 </header>
 
-<!-- HOME — the simple front door (Oct 2026): four tasks, then one link to the Academy -->
+<!-- HOME — the simple front door (Oct 2026): the Gate Check first, four tasks, then one link to the Academy -->
 <section class="hero home-hero" id="main-content">
   <div class="container">
     <p class="hero-eyebrow">AiGovOps Foundation · Open-source AI governance</p>
     <h1>Grow AI governance together.</h1>
     <p class="hero-sub home-lede">A nonprofit community building open-source AI governance. Pick what you came to do.</p>
-    <p class="home-creed">Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes. Prove it in ten minutes.</p>
     <ul class="task-grid" aria-label="Top tasks">
+      <li class="task-card task-card--gate" id="gate-check">
+        <div class="task-gate-copy">
+          <h2>Run the ten-minute Gate Check</h2>
+          <p class="home-creed">Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes. Prove it in ten minutes, no account needed.</p>
+        </div>
+        <a class="btn btn-primary task-btn" href="https://community.aigovops-foundation.com/gate-check.html?src=home-hero" target="_blank" rel="noopener" onclick="if(window.plausible)plausible('Gate Check: home')">Run the Gate Check</a>
+      </li>
       <li class="task-card" id="meeting">
         <h2>Join the next meeting</h2>
         <p class="task-when" id="nextMeeting">See the next date on Luma</p>
@@ -254,7 +268,7 @@
       </li>
       <li class="task-card" id="subscribe">
         <h2>Subscribe on Substack</h2>
-        <p>Monthly field notes from Bob, Ken and volunteers.</p>
+        <p>The Tuesday Letter: one story from the practice every week, from Bob, Ken and volunteers.</p>
         <form id="newsletterForm" class="task-form" onsubmit="handleNewsletterSubmit(event)">
           <label for="newsletterEmail" class="sr-only">Email address</label>
           <input type="email" id="newsletterEmail" placeholder="you@example.com" required autocomplete="email" />

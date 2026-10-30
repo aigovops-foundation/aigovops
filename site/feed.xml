@@ -5,13 +5,21 @@
     <link>https://www.aigovops-foundation.com</link>
     <description>The latest posts from Ken Johnston and Bob Rapp on AI governance, policy-as-code, and open-source compliance tooling.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Oct 2026 16:23:05 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 06:07:30 +0000</lastBuildDate>
     <atom:link href="https://www.aigovops-foundation.com/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://www.aigovops-foundation.com/images/logo.png</url>
       <title>AiGovOps Foundation</title>
       <link>https://www.aigovops-foundation.com</link>
     </image>
+    <item><!-- content -->
+      <title>A face is not a signature — Arup, and the transfer that needed a second channel</title>
+      <link>https://www.aigovops-foundation.com/blog/a-face-is-not-a-signature.html</link>
+      <guid isPermaLink="true">https://www.aigovops-foundation.com/blog/a-face-is-not-a-signature.html</guid>
+      <pubDate>Tue, 27 Oct 2026 09:00:00 +0000</pubDate>
+      <dc:creator>Bob Rapp</dc:creator>
+      <description>In 2024 a finance employee at Arup&#x27;s Hong Kong office joined a video call where the CFO and every colleague were AI deepfakes, then made fifteen transfers totalling HK$200 million. The gate is that a face on a call is not identity, and a high-value transfer waits for a confirmation the caller cannot fake. Level 300, the hold.</description>
+    </item>
     <item><!-- content -->
       <title>Not evidence on its own — Horizon, and the receipt a stranger can check</title>
       <link>https://www.aigovops-foundation.com/blog/not-evidence-on-its-own.html</link>

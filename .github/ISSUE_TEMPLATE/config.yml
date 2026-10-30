@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security report
+    url: https://github.com/aigovops-foundation/aigovops/security/advisories/new
+    about: Private report for anything that could expose data or keys. Not an issue.
+  - name: Ask the community
+    url: https://community.aigovops-foundation.com/
+    about: Questions and discussion go to the Community, not the work queue.

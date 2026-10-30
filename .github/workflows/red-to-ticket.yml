@@ -1,0 +1,15 @@
+name: red-to-ticket
+
+on:
+  workflow_run:
+    workflows: [dependency-triage, estate-links, repo-sync-check]
+    types: [completed]
+
+permissions:
+  issues: write
+  actions: read
+  checks: read
+
+jobs:
+  ticket:
+    uses: aigovops-foundation/aigovops-library-june-ken-bob/.github/workflows/reusable-red-to-ticket.yml@8ae41eafaa846cb8b7e749c1ef4baf3ffec886b8 # main 2026-10-29
