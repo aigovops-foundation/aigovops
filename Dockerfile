@@ -1,5 +1,5 @@
 # AiGovOps Gate service — zero runtime dependencies, so no install step.
-FROM node:22-alpine
+FROM node:25-alpine
 WORKDIR /app
 COPY . .
 # No ENV PORT — the host (Render/Fly) injects $PORT and the server binds process.env.PORT
