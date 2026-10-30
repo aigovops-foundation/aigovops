@@ -7,6 +7,7 @@ The front door offers six actions: become a member, give, join a meeting, read t
 ## Start here
 - [AiGovOps Foundation — Grow AI governance together](https://www.aigovops-foundation.com/): A nonprofit community building open-source AI governance. Join the monthly meeting at AI House, subscribe on Substack, become a member, or write with us. Everything else is in the AiGovOps Foundation Academy.
   - H1: Grow AI governance together.
+  - H2: Run the ten-minute Gate Check
   - H2: Join the next meeting
   - H2: Subscribe on Substack
   - H2: Become a member

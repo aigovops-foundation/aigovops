@@ -39,7 +39,7 @@ async function run() {
   const browser = await chromium.launch({ headless: true });
   const api = await request.newContext({ timeout: 15_000, ignoreHTTPSErrors: true, extraHTTPHeaders: { 'user-agent': 'Mozilla/5.0 aigovops-front-door-test' } });
   try {
-    // 1. Home: four tasks and the Academy bar fit. English only since 2026-10-19 (no language toggle).
+    // 1. Home: the Gate Check, four tasks and the Academy bar fit. English only since 2026-10-19 (no language toggle).
     for (const lang of ['en']) {
       for (const [w, h] of [[1280, 800], [390, 844]]) {
         const { ctx, page } = await withLang(browser, lang, { width: w, height: h });
@@ -49,12 +49,15 @@ async function run() {
         await page.waitForFunction((l) => document.documentElement.lang === l, lang, { timeout: 10_000 });
         await page.evaluate(() => document.fonts.ready);
         const cards = await page.locator('.task-card').count();
-        record(cards === 4, `${lang} ${w}: home has exactly four task cards (${cards})`);
+        record(cards === 5, `${lang} ${w}: home has the Gate Check plus four task cards (${cards})`);
+        // The Gate Check leads the door (22 Oct estate review): the first card, src-tagged.
+        const gateHref = await page.locator('.task-card').first().locator('a').first().getAttribute('href');
+        record(/^https:\/\/community\.aigovops-foundation\.com\/gate-check\.html\?src=home/.test(gateHref || ''), `${lang} ${w}: first home card runs the Gate Check (${gateHref})`);
         const h1 = (await page.locator('h1').innerText()).trim();
         record(h1.length > 0 && !h1.includes('[object'), `${lang} ${w}: h1 renders (${h1})`);
         if (w === 1280) {
           const bar = await page.locator('a.academy-bar').evaluate((b) => b.getBoundingClientRect().bottom);
-          record(bar <= 800, `${lang} 1280×800: four tasks and the Academy bar fit above the fold (${Math.round(bar)}px)`);
+          record(bar <= 800, `${lang} 1280×800: the Gate Check, four tasks and the Academy bar fit above the fold (${Math.round(bar)}px)`);
         } else {
           const first = await page.locator('.task-card').first().evaluate((c) => c.getBoundingClientRect().bottom);
           record(first <= 844, `${lang} 390×844: first task card fits (${Math.round(first)}px)`);

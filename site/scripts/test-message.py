@@ -5,8 +5,8 @@ One public vocabulary — promise · path · proof — and it must not drift bac
 (tags, scripts, styles and comments stripped), so a CSS class named `porch` is fine and a sentence
 saying "the porch" is not.
 
-  1. Every public page carries the promise line ("Ship safe AI — never unsafe AI").
-  2. Every public page with a site footer links the ten-minute Gate Check (the one CTA, src-tagged).
+  1. The home page carries the promise line ("Ship safe AI — never unsafe AI").
+  2. The home page's first hero action is the ten-minute Gate Check (the one CTA, src-tagged).
   3. No public page's visible text contains a retired phrase (tests/message-lint.txt) — except pages
      listed in tests/message-allow.txt, which shrink as the fold lands. An allowlisted page that no
      longer needs it is ALSO a failure, so the list can only shrink.
@@ -54,7 +54,18 @@ def main():
         allow[page.strip()] = why.strip()
     print("\n🗣️  Message lint — promise · path · proof\n")
     # The promise and the Gate Check CTA lived in the site footer, retired 2026-10-19 (English-only,
-    # nothing below the page). The home page keeps its four actions by design, so neither is linted.
+    # nothing below the page), so they are no longer linted on every page. The HOME page is: it carries
+    # the promise, and the ten-minute Gate Check is its first action (restored 22 Oct estate review —
+    # this check went missing with the footer on 20 Oct and the home page lost the Gate Check unnoticed).
+    print("  [Home page: the promise, and the Gate Check first]")
+    home = open(os.path.join(ROOT, "index.html"), encoding="utf-8", errors="ignore").read()
+    check("index.html carries the promise", bool(PROMISE.search(visible(home))),
+          "no 'Ship safe AI — never unsafe AI' in visible text")
+    check("index.html links the Gate Check (src-tagged)", bool(GATE.search(home)), "no gate-check.html?src= link")
+    grid = re.search(r'<ul class="task-grid".*?</ul>', home, re.S)
+    first = re.search(r'href="([^"]+)"', grid.group(0)) if grid else None
+    check("index.html: the first hero action is the Gate Check", bool(first and GATE.search(first.group(1))),
+          f"first hero link is {first.group(1) if first else 'missing'}")
     print("\n  [Retired vocabulary stays out of visible copy]")
     stale_allow = set(allow)
     for f in PUBLIC:
