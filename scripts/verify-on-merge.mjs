@@ -10,6 +10,7 @@ const DEFAULTS = Object.freeze({
 });
 const MAX_PROOF_URLS = 5;
 const MAX_REDIRECTS = 5;
+const REDIRECT_STATUSES = new Set([301, 302, 303, 307, 308]);
 const URL_PATTERN = /https:\/\/[^\s<>"'`]+/gi;
 const ISSUE_REFERENCE = /\b(?:fixes|closes|resolves)\s+(?:(?<owner>[A-Za-z0-9_.-]+)\/(?<repo>[A-Za-z0-9_.-]+))?#(?<number>\d+)\b/gi;
 
@@ -109,7 +110,7 @@ async function checkUrl(url, { fetchImpl, sleep, retryGapMs, timeoutMs }) {
         });
         const location = response.headers?.get?.("location") ||
           response.headers?.location || response.headers?.Location;
-        if (response.status < 300 || response.status >= 400 || !location || redirects >= MAX_REDIRECTS) {
+        if (!REDIRECT_STATUSES.has(response.status) || !location || redirects >= MAX_REDIRECTS) {
           break;
         }
         const target = new URL(location, currentUrl);

@@ -242,6 +242,32 @@ test("follows allowed redirects before judging the final status", async () => {
     call.comment === "Verify on merge: 1/1 Proof URLs answer 2xx"), true);
 });
 
+test("does not follow Location on a 304 response", async () => {
+  const github = fakeGithub("### Proof\nhttps://aigovops.org/start\n");
+  const requested = [];
+  const result = await verifyOnMerge({
+    payload: { pull_request: { merged: true, body: "Fixes #12" } },
+    owner,
+    repo,
+    github,
+    fetchImpl: async (url) => {
+      requested.push(url);
+      return {
+        status: 304,
+        headers: new Headers({ location: "https://status.aigovops.org/final" }),
+      };
+    },
+    sleep: async () => {},
+    logger: () => {},
+    initialWaitMs: 0,
+    retryGapMs: 0,
+    timeoutMs: 100,
+  });
+  assert.deepEqual(result, { issues: 1, urls: 1 });
+  assert.deepEqual(requested, Array(3).fill("https://aigovops.org/start"));
+  assert.match(github.calls.find((call) => call.type === "comment").comment, /HTTP 304/);
+});
+
 test("rejects a redirect to a disallowed host without fetching it", async () => {
   const github = fakeGithub("### Proof\nhttps://aigovops.org/start\n");
   const requested = [];
