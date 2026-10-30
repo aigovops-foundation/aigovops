@@ -102,6 +102,12 @@ test("extracts URLs wrapped in Markdown code and angle brackets", () => {
   ]);
 });
 
+test("strips repeated trailing punctuation from Proof URLs", () => {
+  assert.deepEqual(extractProofUrls("### Proof\n(see https://x.github.io/a.)"), [
+    "https://x.github.io/a",
+  ]);
+});
+
 test("caps Proof URL fetches at five across all linked issues", async () => {
   const github = fakeGithub((reference) => [
     "### Proof",

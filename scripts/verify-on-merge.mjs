@@ -83,7 +83,7 @@ export function extractProofUrls(issueBody) {
   const seen = new Set();
   for (const match of section.matchAll(URL_PATTERN)) {
     let candidate = match[0];
-    if (/[.,;:)\]]$/.test(candidate)) candidate = candidate.slice(0, -1);
+    while (/[.,;:!?)\]]$/.test(candidate)) candidate = candidate.slice(0, -1);
     if (!candidate || !isAllowedProofUrl(candidate)) continue;
     const normalized = new URL(candidate).href;
     if (seen.has(normalized)) continue;
