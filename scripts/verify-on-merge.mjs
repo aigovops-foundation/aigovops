@@ -155,7 +155,7 @@ export async function verifyOnMerge({
   const references = parseIssueReferences(payload.pull_request.body, owner, repo);
   let waited = false;
   let checkedIssues = 0;
-  let checkedUrls = 0;
+  const issuesWithProof = [];
 
   for (const reference of references) {
     const issue = await github.getIssue(reference);
@@ -164,10 +164,27 @@ export async function verifyOnMerge({
       logger(`no allowed Proof URLs on ${reference.owner}/${reference.repo}#${reference.number}`);
       continue;
     }
-    const remaining = Math.max(0, MAX_PROOF_URLS - checkedUrls);
-    const urlsToCheck = urls.slice(0, remaining);
-    for (const url of urls.slice(urlsToCheck.length)) {
-      logger(`${url} not checked (cap)`);
+    issuesWithProof.push({ reference, urls, urlsToCheck: [] });
+  }
+
+  let checkedUrls = 0;
+  for (let urlIndex = 0; checkedUrls < MAX_PROOF_URLS; urlIndex++) {
+    let allocated = false;
+    for (const issue of issuesWithProof) {
+      const url = issue.urls[urlIndex];
+      if (url === undefined) continue;
+      issue.urlsToCheck.push(url);
+      checkedUrls++;
+      allocated = true;
+      if (checkedUrls === MAX_PROOF_URLS) break;
+    }
+    if (!allocated) break;
+  }
+
+  for (const { reference, urls, urlsToCheck } of issuesWithProof) {
+    const checked = new Set(urlsToCheck);
+    for (const url of urls) {
+      if (!checked.has(url)) logger(`${url} not checked (cap)`);
     }
     if (urlsToCheck.length === 0) continue;
     if (!waited) {
@@ -178,7 +195,6 @@ export async function verifyOnMerge({
       }
     }
     checkedIssues++;
-    checkedUrls += urlsToCheck.length;
     const results = [];
     for (const url of urlsToCheck) {
       results.push(await checkUrl(url, { fetchImpl, sleep, retryGapMs, timeoutMs }));

@@ -24,7 +24,11 @@ function fakeGithub(body) {
     calls,
     async getIssue(reference) {
       calls.push({ type: "get", reference });
-      return { number: reference.number, body, state: "closed" };
+      return {
+        number: reference.number,
+        body: typeof body === "function" ? body(reference) : body,
+        state: "closed",
+      };
     },
     async createComment(reference, comment) {
       calls.push({ type: "comment", reference, comment });
@@ -99,14 +103,11 @@ test("extracts URLs wrapped in Markdown code and angle brackets", () => {
 });
 
 test("caps Proof URL fetches at five across all linked issues", async () => {
-  const body = [
+  const github = fakeGithub((reference) => [
     "### Proof",
-    "https://proof-0.aigovops-foundation.com/check",
-    "https://proof-1.aigovops-foundation.com/check",
-    "https://proof-2.aigovops-foundation.com/check",
-    "https://proof-3.aigovops-foundation.com/check",
-  ].join("\n");
-  const github = fakeGithub(body);
+    ...Array.from({ length: 4 }, (_, index) =>
+      `https://proof-${reference.number}-${index + 1}.aigovops-foundation.com/check`),
+  ].join("\n"));
   const requested = [];
   const logs = [];
   const result = await verifyOnMerge({
@@ -125,8 +126,45 @@ test("caps Proof URL fetches at five across all linked issues", async () => {
     timeoutMs: 100,
   });
   assert.deepEqual(result, { issues: 2, urls: 5 });
-  assert.equal(requested.length, 5);
+  assert.deepEqual(requested, [
+    "https://proof-12-1.aigovops-foundation.com/check",
+    "https://proof-13-1.aigovops-foundation.com/check",
+    "https://proof-12-2.aigovops-foundation.com/check",
+    "https://proof-13-2.aigovops-foundation.com/check",
+    "https://proof-12-3.aigovops-foundation.com/check",
+  ]);
   assert.equal(logs.filter((message) => message.endsWith("not checked (cap)")).length, 3);
+});
+
+test("comments on an issue with no URLs allocated under the PR cap", async () => {
+  const github = fakeGithub((reference) =>
+    `### Proof\nhttps://proof-${reference.number}.aigovops-foundation.com/check`);
+  const requested = [];
+  const references = Array.from({ length: 6 }, (_, index) =>
+    `${index === 0 ? "Fixes" : "closes"} #${index + 1}`).join(" ");
+  await verifyOnMerge({
+    payload: { pull_request: { merged: true, body: references } },
+    owner,
+    repo,
+    github,
+    fetchImpl: async (url) => {
+      requested.push(url);
+      return { status: 200 };
+    },
+    sleep: async () => {},
+    logger: () => {},
+    initialWaitMs: 0,
+    retryGapMs: 0,
+    timeoutMs: 100,
+  });
+  assert.deepEqual(requested, Array.from({ length: 5 }, (_, index) =>
+    `https://proof-${index + 1}.aigovops-foundation.com/check`));
+  const skippedIssueComments = github.calls.filter((call) =>
+    call.type === "comment" && call.reference.number === 6);
+  assert.deepEqual(skippedIssueComments.map((call) => call.comment), [
+    "Proof not checked after merge: the 5-URL limit for this PR was reached. Check it by hand.",
+  ]);
+  assert.equal(github.calls.some((call) => call.type === "reopen"), false);
 });
 
 test("all 2xx Proof URLs get the success comment without reopening", async () => {
