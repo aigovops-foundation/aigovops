@@ -112,6 +112,29 @@ test("selects a qualified closing reference from a PR in another repository", as
   assert.equal(selectMergedClosingPr(pullRequests, "aigovops-foundation", "aigovops", issue).number, 77);
 });
 
+test("resolves a candidate PR repository from repository_url", async () => {
+  const timeline = [{
+    event: "cross-referenced",
+    source: {
+      issue: {
+        number: 77,
+        pull_request: { url: "https://api.github.com/repos/other-org/other-repo/pulls/77" },
+        repository_url: "https://api.github.com/repos/other-org/other-repo",
+      },
+    },
+  }];
+  const fetched = [];
+  const pullRequests = await collectPullRequests(timeline, "aigovops-foundation", "aigovops", issue, {
+    fetchPullRequest: async (candidate) => {
+      fetched.push(candidate);
+      return { ...closingPr(77), body: "Fixes aigovops-foundation/aigovops#42" };
+    },
+    logger: () => {},
+  });
+  assert.deepEqual(fetched, [{ owner: "other-org", repo: "other-repo", number: 77 }]);
+  assert.equal(selectMergedClosingPr(pullRequests, "aigovops-foundation", "aigovops", issue).number, 77);
+});
+
 test("a bare issue reference in another repository does not close this issue", async () => {
   const timeline = [{
     event: "cross-referenced",

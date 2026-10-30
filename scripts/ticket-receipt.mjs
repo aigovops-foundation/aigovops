@@ -167,9 +167,18 @@ function timestamp(value) {
   return Number.isFinite(parsed) ? parsed : null;
 }
 
-function repositoryCoordinates(fullName, owner, repo) {
+function repositoryCoordinates(fullName, repositoryUrl, owner, repo) {
   const parts = typeof fullName === "string" ? fullName.split("/") : [];
   if (parts.length === 2 && parts.every(Boolean)) return { owner: parts[0], repo: parts[1] };
+  try {
+    const url = new URL(repositoryUrl);
+    const path = url.pathname.match(/^\/repos\/([^/]+)\/([^/]+)\/?$/);
+    if (url.protocol === "https:" && url.hostname === "api.github.com" && path) {
+      return { owner: decodeURIComponent(path[1]), repo: decodeURIComponent(path[2]) };
+    }
+  } catch {
+    return { owner, repo };
+  }
   return { owner, repo };
 }
 
@@ -182,6 +191,7 @@ export function referencedPullRequestCandidates(timeline, owner, repo) {
       if (source?.pull_request && Number.isInteger(source.number) && source.number > 0) {
         const coordinates = repositoryCoordinates(
           event.source?.issue?.repository?.full_name || source.repository?.full_name,
+          event.source?.issue?.repository_url || source.repository_url,
           owner,
           repo,
         );
@@ -212,7 +222,7 @@ export function closesIssue(body, owner, repo, issueNumber, prOwner = owner, prR
 }
 
 function pullRequestRepository(pull, owner, repo) {
-  return repositoryCoordinates(pull._receiptRepository, owner, repo);
+  return repositoryCoordinates(pull._receiptRepository, null, owner, repo);
 }
 
 export function selectMergedClosingPr(pullRequests, owner, repo, issue) {
