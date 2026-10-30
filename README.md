@@ -245,7 +245,7 @@ runConformance();   // → { conformant: true, passed: 6, total: 6 } — the con
 ## Quick start
 
 ```bash
-git clone https://github.com/bobrapp/Aigovops-Foundation-Open-Source-V4-10k.git
+git clone https://github.com/aigovops-foundation/aigovops.git
 cd Aigovops-Foundation-Open-Source-V4-10k
 node --test                       # run all gate tests (Node 20+, zero dependencies)
 
