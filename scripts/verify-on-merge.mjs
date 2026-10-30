@@ -9,6 +9,7 @@ const DEFAULTS = Object.freeze({
   timeoutMs: 15 * 1000,
 });
 const MAX_PROOF_URLS = 5;
+const MAX_REDIRECTS = 5;
 const URL_PATTERN = /https:\/\/[^\s<>"'`]+/gi;
 const ISSUE_REFERENCE = /\b(?:fixes|closes|resolves)\s+(?:(?<owner>[A-Za-z0-9_.-]+)\/(?<repo>[A-Za-z0-9_.-]+))?#(?<number>\d+)\b/gi;
 
@@ -96,10 +97,29 @@ async function checkUrl(url, { fetchImpl, sleep, retryGapMs, timeoutMs }) {
   let status = "network error";
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
-      const response = await fetchImpl(url, {
-        method: "GET",
-        signal: AbortSignal.timeout(timeoutMs),
-      });
+      let currentUrl = url;
+      let redirects = 0;
+      const signal = AbortSignal.timeout(timeoutMs);
+      let response;
+      while (true) {
+        response = await fetchImpl(currentUrl, {
+          method: "GET",
+          redirect: "manual",
+          signal,
+        });
+        const location = response.headers?.get?.("location") ||
+          response.headers?.location || response.headers?.Location;
+        if (response.status < 300 || response.status >= 400 || !location || redirects >= MAX_REDIRECTS) {
+          break;
+        }
+        const target = new URL(location, currentUrl);
+        if (!isAllowedProofUrl(target)) {
+          const hostname = target.hostname || target.host || target.protocol.replace(/:$/, "");
+          return { url, ok: false, status: `redirect to disallowed host ${hostname}` };
+        }
+        currentUrl = target.href;
+        redirects++;
+      }
       status = response.status >= 200 && response.status < 300
         ? String(response.status)
         : `HTTP ${response.status}`;

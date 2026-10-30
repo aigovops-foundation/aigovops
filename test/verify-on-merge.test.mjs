@@ -144,7 +144,7 @@ test("all 2xx Proof URLs get the success comment without reopening", async () =>
     repo,
     github,
     fetchImpl: async (url, options) => {
-      assert.notEqual(options.redirect, "manual");
+      assert.equal(options.redirect, "manual");
       requested.push(url);
       return { status: 204 };
     },
@@ -167,6 +167,65 @@ test("all 2xx Proof URLs get the success comment without reopening", async () =>
   assert.ok(comments.every((call) => call.comment === "Verify on merge: 2/2 Proof URLs answer 2xx"));
   assert.equal(github.calls.some((call) => call.type === "reopen"), false);
   assert.equal(github.calls.some((call) => call.type === "label"), false);
+});
+
+test("follows allowed redirects before judging the final status", async () => {
+  const github = fakeGithub("### Proof\nhttps://aigovops.org/start\n");
+  const requested = [];
+  const result = await verifyOnMerge({
+    payload: { pull_request: { merged: true, body: "Fixes #12" } },
+    owner,
+    repo,
+    github,
+    fetchImpl: async (url, options) => {
+      assert.equal(options.redirect, "manual");
+      requested.push(url);
+      if (url === "https://aigovops.org/start") {
+        return { status: 302, headers: new Headers({ location: "//status.aigovops.org/final" }) };
+      }
+      return { status: 200 };
+    },
+    sleep: async () => {},
+    logger: () => {},
+    initialWaitMs: 0,
+    retryGapMs: 0,
+    timeoutMs: 100,
+  });
+  assert.deepEqual(result, { issues: 1, urls: 1 });
+  assert.deepEqual(requested, ["https://aigovops.org/start", "https://status.aigovops.org/final"]);
+  assert.equal(github.calls.some((call) => call.type === "reopen"), false);
+  assert.equal(github.calls.some((call) => call.type === "comment" &&
+    call.comment === "Verify on merge: 1/1 Proof URLs answer 2xx"), true);
+});
+
+test("rejects a redirect to a disallowed host without fetching it", async () => {
+  const github = fakeGithub("### Proof\nhttps://aigovops.org/start\n");
+  const requested = [];
+  const result = await verifyOnMerge({
+    payload: { pull_request: { merged: true, body: "Fixes #12" } },
+    owner,
+    repo,
+    github,
+    fetchImpl: async (url, options) => {
+      assert.equal(options.redirect, "manual");
+      requested.push(url);
+      return {
+        status: 302,
+        headers: new Headers({ location: "https://169.254.169.254/latest/meta-data" }),
+      };
+    },
+    sleep: async () => {},
+    logger: () => {},
+    initialWaitMs: 0,
+    retryGapMs: 0,
+    timeoutMs: 100,
+  });
+  assert.deepEqual(result, { issues: 1, urls: 1 });
+  assert.deepEqual(requested, ["https://aigovops.org/start"]);
+  assert.deepEqual(github.calls.filter((call) => ["reopen", "label"].includes(call.type))
+    .map((call) => call.type), ["reopen", "label"]);
+  assert.match(github.calls.find((call) => call.type === "comment").comment,
+    /redirect to disallowed host 169\.254\.169\.254/);
 });
 
 test("failed URLs are retried, reopened, blocked, and commented without page content", async () => {
