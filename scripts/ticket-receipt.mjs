@@ -329,7 +329,11 @@ export async function collectPullRequests(timeline, owner, repo, issue, {
       const pull = await fetchPullRequest(candidate);
       candidates.push({ ...pull, _receiptRepository: `${candidate.owner}/${candidate.repo}` });
     } catch (error) {
-      logger(Number.isInteger(error?.status) ? error.status : "unavailable");
+      if (error?.status === 403 || error?.status === 404) {
+        logger(error.status);
+        continue;
+      }
+      throw error;
     }
   }
   return candidates.filter((pull) => {

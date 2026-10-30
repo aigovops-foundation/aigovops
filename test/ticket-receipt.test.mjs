@@ -154,6 +154,29 @@ test("a candidate PR fetch returning 404 is skipped and logged by status", async
   assert.deepEqual(statuses, [404]);
 });
 
+test("a candidate PR fetch returning 500 is rethrown", async () => {
+  const timeline = [{
+    event: "cross-referenced",
+    source: {
+      issue: {
+        number: 77,
+        pull_request: { url: "https://api.github.com/repos/other-org/other-repo/pulls/77" },
+        repository: { full_name: "other-org/other-repo" },
+      },
+    },
+  }];
+  const failure = Object.assign(new Error("GitHub API returned 500"), { status: 500 });
+  await assert.rejects(
+    collectPullRequests(timeline, "aigovops-foundation", "aigovops", issue, {
+      fetchPullRequest: async () => {
+        throw failure;
+      },
+      logger: () => {},
+    }),
+    (error) => error === failure,
+  );
+});
+
 test("the fixed field allowlist rejects extra data", () => {
   const fields = extractTicketFields({
     owner: "aigovops-foundation",
