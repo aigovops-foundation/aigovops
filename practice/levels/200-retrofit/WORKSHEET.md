@@ -63,9 +63,12 @@ the code path type your sentences in. Byte-identical receipts later depend on th
 ```bash
 pipx install git+https://github.com/aigovops-foundation/umbrella-govops   # or: pip install .
 umbrella-conformance check .            # the policy gate: the rule is valid or it does not run
-umbrella-conformance bundle --out ./out # a signable evidence bundle
-umbrella-conformance verify ./out/bundle.tar.gz
+umbrella-conformance keygen --out ./keys # one-time: your signing key — keep keys/signing.pem private
+umbrella-conformance bundle --out ./out --sign-key ./keys/signing.pem
+umbrella-conformance verify ./out/bundle.tar.gz --public-key ./keys/signing.pub.pem # refuses an unsigned or altered bundle
 ```
+
+Verify passes only on a signed bundle whose digests all recompute — an unsigned or edited bundle fails, which is the point.
 
 Record: check ☐ passed ☐ failed (what it said: ______________). Bundle path: ______________
 
@@ -76,7 +79,7 @@ constraints, stop conditions) validated by name; the policy catalog accepts your
 
 ```bash
 pip install git+https://github.com/aigovops-foundation/aigovops-lantern.git
-lantern read -f markdown -r compliance ./out/<receipts>.ndjson
+lantern read -f markdown -r compliance ./out/receipts.ndjson
 ```
 
 Now weaken one rule — turn the `C3 hold` into `C1 allow` — rebuild, and:
@@ -141,7 +144,7 @@ the gate said, what changed. Thursday: pair with a 100 and watch them get their 
 
 **Policy gate**
 - [ ] `umbrella-conformance check .` passed.
-- [ ] `umbrella-conformance bundle` produced a bundle; `verify` passed on it.
+- [ ] `umbrella-conformance bundle --sign-key` produced a signed bundle; `verify --public-key` passed on it.
 
 **Read · diff**
 - [ ] `lantern read -r compliance` rendered the bundle.
