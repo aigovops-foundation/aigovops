@@ -1,0 +1,74 @@
+name: ticket-receipt
+
+on:
+  issues:
+    types: [closed]
+
+permissions:
+  contents: write
+  issues: read
+  pull-requests: read
+  checks: read
+
+concurrency:
+  group: ticket-receipt
+  cancel-in-progress: false
+
+jobs:
+  receipt:
+    if: ${{ !github.event.issue.pull_request && contains(github.event.issue.labels.*.name, 'queue') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 20
+
+      - name: Append the metadata-only ticket receipt
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_EVENT_PATH: ${{ github.event_path }}
+        run: node scripts/ticket-receipt.mjs
+
+      - name: Verify the receipt chain
+        run: node scripts/ticket-receipt.mjs --verify
+
+      - name: Commit the receipt
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_EVENT_PATH: ${{ github.event_path }}
+        run: |
+          git config user.name "aigovops-estate-bot"
+          git config user.email "noreply@aigovops-foundation.com"
+          git add ops/receipts/tickets.ndjson
+          if ! git diff --cached --quiet -- ops/receipts/tickets.ndjson; then
+            for attempt in 1 2 3; do
+              node scripts/ticket-receipt.mjs --verify || {
+                echo "::error::ticket receipt chain did not verify — not committing"
+                exit 1
+              }
+              git commit -m "chore(receipts): closed-ticket receipt [automated]"
+              git push && exit 0
+              if [ "$attempt" -eq 3 ]; then
+                break
+              fi
+              echo "push rejected (attempt $attempt) — refreshing receipt from origin/main"
+              git fetch origin main || exit 1
+              git reset --hard origin/main || exit 1
+              node scripts/ticket-receipt.mjs || exit 1
+              node scripts/ticket-receipt.mjs --verify || {
+                echo "::error::ticket receipt chain did not verify — not committing"
+                exit 1
+              }
+              git add ops/receipts/tickets.ndjson
+              sleep $((attempt * 5))
+            done
+            echo "::error::could not push ticket receipt after three attempts"
+            exit 1
+          fi
