@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://plausible.io https://www.aigovops-foundation.com https://community.aigovops-foundation.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; frame-src https://aigovops-foundation.github.io https://buy.stripe.com; connect-src 'self' https://plausible.io https://community.aigovops-foundation.com https://raw.githubusercontent.com; object-src 'none'; base-uri 'self'">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seconds each — the hold that Cigna&#x27;s PXDX never had | AiGovOps Foundation</title>
+  <meta name="description" content="ProPublica reported that Cigna&#x27;s PXDX process let medical directors deny large batches of claims in seconds each, often without opening the patient&#x27;s file. The gate is a human who actually reviews before a denial — and the arithmetic of what &quot;actually&quot; means when the batch is a thousand deep. Level 300." />
+  <link rel="canonical" href="https://www.aigovops-foundation.com/blog/seconds-each.html" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Seconds each — the hold that Cigna&#x27;s PXDX never had" />
+  <meta property="og:description" content="ProPublica reported that Cigna&#x27;s PXDX process let medical directors deny large batches of claims in seconds each, often without opening the patient&#x27;s file. The gate is a human who actually reviews before a denial — and the arithmetic of what &quot;actually&quot; means when the batch is a thousand deep. Level 300." />
+  <meta property="og:image" content="https://www.aigovops-foundation.com/images/story-default.png" />
+  <meta property="og:url" content="https://www.aigovops-foundation.com/blog/seconds-each.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="author" content="Bob Rapp" />
+  <link rel="stylesheet" href="../css/style.css?v=20261011b" />
+  <!-- M6b garden-warm skin (shared system) -->
+  <link rel="stylesheet" href="/fonts/fonts.css?v=20261011b" />
+  <link rel="stylesheet" href="../css/garden.css?v=20261011b" />
+  <link rel="stylesheet" href="../css/wren-cafe.css?v=20261011b" />
+  <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Seconds each — the hold that Cigna&#x27;s PXDX never had",
+    "datePublished": "2026-10-06",
+    "author": { "@type": "Person", "name": "Bob Rapp" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AiGovOps Foundation",
+      "logo": { "@type": "ImageObject", "url": "https://www.aigovops-foundation.com/images/logo.png" }
+    },
+    "image": "/images/blog/what-is-aigovops.webp",
+    "mainEntityOfPage": "https://www.aigovops-foundation.com/blog/seconds-each.html",
+    "url": "https://www.aigovops-foundation.com/blog/seconds-each.html"
+  }
+  </script>
+  <style>
+    /* ── Blog post — garden-warm skin (M6b) ── */
+    /* re-point the vars the inline article styles consume */
+    :root {
+      --teal-accessible: #1F5E3A;         /* eyebrow + back-links go garden green-ink */
+      --text: var(--garden-charcoal);     /* long-form body copy: charcoal on cream */
+      --muted: var(--garden-ink-soft);
+      --light: var(--garden-deep-cream);  /* "read the full article" panel ground */
+      --border: var(--garden-line);
+    }
+    /* footer-brand's mission paragraph is not the motto — keep it readable */
+    .footer-brand p:nth-of-type(2) { font-size: .85rem; font-weight: 400; letter-spacing: normal; text-transform: none; color: var(--garden-on-dark-dim); }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="../index.html" class="logo-link">
+      <span class="logo-text">AiGovOps Foundation</span>
+    </a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../library.html">Library</a>
+      <a href="../open-source.html">Open source</a>
+      <a href="../blog.html" class="active">Blog</a>
+      <a href="https://community.aigovops-foundation.com/signin.html" class="nav-join">Become a member</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </div>
+</header>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<main id="main-content">
+<article class="post-article" style="max-width:760px;margin:0 auto;padding:0 24px 64px">
+
+  <nav style="padding:24px 0 8px"><a href="../blog.html" style="color:var(--teal-accessible);font-size:.85rem;text-decoration:none">&larr; All posts</a></nav>
+
+  <header style="padding:16px 0 8px">
+    <p style="font-size:.72rem;font-weight:700;font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:.12em;color:var(--teal-accessible);margin-bottom:14px">AiGovOps Foundation &middot; Blog</p>
+    <h1 style="font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.15;margin-bottom:18px">Seconds each — the hold that Cigna&#x27;s PXDX never had</h1>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:.9rem">
+      <span style="font-weight:600;color:var(--text)">Bob Rapp</span>
+      <span>&middot;</span><span>October 2026</span>
+      <span>&middot;</span><span>3 min read</span>
+    </div>
+  </header>
+
+  <img src="https://www.aigovops-foundation.com/images/story-default.png" alt="Seconds each — the hold that Cigna&#x27;s PXDX never had" loading="lazy" style="width:100%;border-radius:14px;margin:24px 0 32px;aspect-ratio:16/9;object-fit:cover" />
+
+  <div class="post-body" style="font-size:1.05rem;line-height:1.75;color:var(--text)">
+<p style="margin-bottom:20px">In 2023 ProPublica reported that Cigna used an automated review process called PXDX that let
+medical directors deny large batches of claims in seconds each, often without opening the patient
+file. Class actions followed in California. Cigna denies that the algorithm decided anything. And
+California passed SB 1120, which restricts utilization-management denials made by an algorithm
+alone. This is VH-035 in the Foundation&rsquo;s hundred verified AI harms.</p>
+<p style="margin-bottom:20px">Notice what the law had to say out loud: <em>a person must actually review.</em> Not &ldquo;a person is in the
+loop.&rdquo; A signature on a batch is a person in the loop. The question level 300 asks is the one the
+regulators ended up asking — out of how many?</p>
+<h2>The gate that would have caught it</h2>
+<p style="margin-bottom:20px">The corpus writes it: <em>a human medical reviewer actually reviews before any claim is denied; batch
+denials without records review are off the table.</em></p>
+<p style="margin-bottom:20px">That is a hold. Every denial is a consequential action against a person, tier C3, and the gate&rsquo;s
+answer is not yes or no but <em>held</em> — for a named human, through a named channel, with an expiry.
+The reviewer opens the file and releases the hold, or does not, and either way there is a receipt
+with their name on it. If nobody acts before the expiry, the hold decays to no: the claim is not
+denied by default, it is not decided by default.</p>
+<p style="margin-bottom:20px">Then the arithmetic. If one reviewer is releasing holds at the rate of seconds each, a hundred an
+hour, a thousand a day, the gate should notice — because &ldquo;actually reviews&rdquo; has a floor, and a
+person who is releasing faster than a file can be opened is not reviewing. Aggregation is the level
+300 word for this: a count over a window, with a line beyond which the gate escalates instead of
+releasing. Cigna&rsquo;s number, whatever it was, would have tripped it in the first hour.</p>
+<h2>What you write at level 300</h2>
+<p style="margin-bottom:20px">Three things, on paper first. The hold: which action, which human by role, which channel, how long
+before it decays. The aggregation: how many releases per reviewer per hour before the gate stops
+releasing and escalates. The identity: which agent is proposing these actions, under whose
+authority, so that a hold is never released by the thing that asked for it.</p>
+<p style="margin-bottom:20px">Then the honest number. Level 300 ends with a coverage statement: of the consequential actions your
+system takes, how many pass through a gate? Nine in ten is a number. &ldquo;Cannot count yet&rdquo; is also a
+number, and it is the one most people bring on their first Thursday. Both are marked; a guess is
+not.</p>
+<h2>The hour</h2>
+<p style="margin-bottom:20px">This is the third door in the café — <em>it&rsquo;s already running, and nobody can say who&rsquo;s watching it or
+how to stop it.</em> Sixty minutes today, pen and paper, and a week of traffic later. Read Arup, Cigna
+and nH Predict; name the human, the channel and the expiry; do Cigna&rsquo;s arithmetic; write your stop
+conditions; then bring it on Thursday at 15:00 Pacific, where a host marks it.</p>
+<p style="margin-bottom:20px">Seconds each was never a review. Sit down. What brought you in?</p>
+<p style="margin-bottom:20px">— <a href="https://www.aigovops-foundation.com/academy.html?src=letter#problem">The café</a> · <a href="https://practice.aigovops-foundation.com/levels/300-hold/WORKSHEET.html">Level 300 worksheet</a> · <a href="https://www.aigovops-foundation.com/f-ai-friday.html?id=VH-035">VH-035 in the cases</a></p>
+  </div>
+
+  <div style="margin-top:40px;padding:28px;background:var(--light);border:1px solid var(--border);border-radius:14px">
+    <p style="font-size:.78rem;font-weight:700;font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:.1em;color:var(--teal-accessible);margin-bottom:10px">Read the full article</p>
+    <p style="margin-bottom:18px;color:var(--muted)">This is an editorial summary. The complete article is published on the AiGovOps Foundation blog.</p>
+    
+  </div>
+
+  <nav style="margin-top:40px;padding-top:24px;border-top:1px solid var(--border)">
+    <a href="../blog.html" style="color:var(--teal-accessible);text-decoration:none">&larr; Back to all posts</a>
+  </nav>
+
+</article>
+</main>
+
+<footer class="site-footer site-footer--line">
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 AiGovOps Foundation. All rights reserved. · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a> · <a href="mailto:bob.rapp@aigovops.community">Contact</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js?v=20261011b"></script>
+</body>
+</html>
