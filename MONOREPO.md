@@ -32,6 +32,8 @@ scripts/monorepo/import-repo.sh <git-url> <branch> <dest-path> \
 
 The import script refuses dirty trees and existing destinations. It rewrites the
 source history into the destination path, fetches it, and merges it without pushing.
+Its test in `scripts/monorepo/monorepo.test.mjs` skips when `git-filter-repo` is not on
+PATH (CI installs it, so the test always runs there).
 
 ## Migration phases
 
