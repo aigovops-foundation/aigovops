@@ -1,0 +1,31 @@
+{
+  "name": "aigovops-ncw-ai-camp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Test harness for the NCW AI Camp landing site (static GitHub Pages).",
+  "license": "Apache-2.0",
+  "scripts": {
+    "serve": "http-server docs -p 4173 -s -c-1",
+    "capture:auth": "node capture/auth-capture.mjs",
+    "capture": "node capture/capture-demos.mjs",
+    "capture:check": "node capture/capture-demos.mjs --check",
+    "test:api": "node --test tests/api/pledge-anonymity.test.mjs",
+    "test:e2e": "playwright test --config=tests/playwright.config.mjs",
+    "test:a11y": "playwright test --config=tests/playwright.config.mjs tests/e2e/a11y.spec.mjs",
+    "test:html": "htmlhint \"docs/**/*.html\" --config tests/.htmlhintrc",
+    "test:links": "linkinator docs --recurse --silent --skip \"https?://(?!localhost|127\\.0\\.0\\.1)\" --config tests/linkinator.config.json",
+    "test": "npm run test:html && npm run test:css && npm run test:api && npm run test:e2e && npm run test:a11y",
+    "build:css": "npx --yes tailwindcss@3.4.17 -c tailwind.config.js -i tools/css/tailwind.src.css -o docs/assets/css/tailwind.css --minify",
+    "test:css": "node tests/css-no-cdn.test.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "@playwright/test": "^1.47.0",
+    "htmlhint": "^1.1.4",
+    "http-server": "^14.1.1",
+    "linkinator": "^7.6.1"
+  },
+  "overrides": {
+    "uuid": "^11.1.1"
+  }
+}

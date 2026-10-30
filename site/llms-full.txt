@@ -1,0 +1,229 @@
+# AiGovOps Foundation
+
+> AiGovOps Foundation is a 501(c)(3) nonprofit that builds open-source AI governance operations — policy as code, signed evidence receipts (Beacon), and tools that conform to OVERT, the open standard for runtime trust, which the Foundation co-stewards with CHAI (Coalition for Health AI). Everything is Apache-2.0.
+
+The front door offers six actions: become a member, give, join a meeting, read the newsletter, get an audit plan, or book the founders. The Library is free for members; meetings are Thursdays at 15:00 Pacific.
+
+## Start here
+- [AiGovOps Foundation — Grow AI governance together](https://www.aigovops-foundation.com/): A nonprofit community building open-source AI governance. Join the monthly meeting at AI House, subscribe on Substack, become a member, or write with us. Everything else is in the AiGovOps Foundation Academy.
+  - H1: Grow AI governance together.
+  - H2: Run the ten-minute Gate Check
+  - H2: Join the next meeting
+  - H2: Subscribe on Substack
+  - H2: Become a member
+  - H2: Write with us
+- [What Is AiGovOps? And Why We Built the AiGovOps Foundation to Advance It | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/what-is-aigovops.html): Every AI system deployed without automated governance creates technical debt that compounds. Every compliance framework that exists only as a PDF is a...
+  - H1: What Is AiGovOps? And Why We Built the AiGovOps Foundation to Advance It
+- [AI Governance Frameworks Explorer | AiGovOps Foundation](https://www.aigovops-foundation.com/frameworks.html): Find which AI governance frameworks apply to your organization — EU AI Act, NIST AI RMF, ISO/IEC 42001, GDPR, HIPAA, and 35+ more. Filter by region, industry, and risk level.
+  - H1: Find your frameworks.
+  - H2: Turn frameworks into executable controls
+- [Open source | AiGovOps Foundation](https://www.aigovops-foundation.com/open-source.html): The open source — one practice (four levels, one hour each) and three engines: Beacon signs, Umbrella declares, Lantern reads. Apache-2.0, conforming to OVERT. Ship safe AI — never unsafe AI.
+  - H1: Open source.
+  - H2: One path, three steps
+- [The Library | AiGovOps Foundation](https://www.aigovops-foundation.com/library.html): The Library — one hundred verified AI harms, each with the gate that would have caught it; the practitioner test; the gates, live; forty frameworks. Free to read: join with an email, nothing more. Ship safe AI — never unsafe AI.
+  - H1: The Library.
+  - H2: One path, three steps
+- [Support | AiGovOps Foundation](https://www.aigovops-foundation.com/support.html): Fund the open-source AI governance standard. Every contribution keeps policy-as-code free, verifiable, and global.
+  - H1: Give.
+  - H2: Choose your level of support
+  - H2: Where your support goes — and how to check
+- [Founders | AiGovOps Foundation](https://www.aigovops-foundation.com/founders.html): Ken Johnston and Bob Rapp — co-founders of the AiGovOps Foundation. AI and data leadership from Microsoft, Ford, Autonomic.ai, Vodafone, IBM Watson, GE Healthcare, and General Motors.
+  - H1: Meet the founders.
+  - H2: Ken Johnston
+  - H2: Bob Rapp
+  - H2: In their words
+- [Thursday | AiGovOps Foundation](https://www.aigovops-foundation.com/community.html): Thursday at 15:00 Pacific is where receipts are shown and marks are made. Join free, come on Thursday, give an hour. Ship safe AI — never unsafe AI.
+  - H1: Thursday.
+  - H2: One path, three steps
+- [AI governance for startup founders | AiGovOps Foundation](https://www.aigovops-foundation.com/for-founders.html): A practical starting path for startup founders exploring AI risk, the AiGovOps practice, and a 10-minute Gate Check.
+  - H1: AI governance for startup founders
+  - H2: Two steps to get started
+  - H2: Frequently asked questions
+  - H2: Related answer pages
+  - H2: One next step
+- [AI governance for enterprise governance leads | AiGovOps Foundation](https://www.aigovops-foundation.com/for-enterprise.html): Map AI governance standards, explore the Vendor RFI, and book a conversation with the AiGovOps Foundation founders.
+  - H1: AI governance for enterprise governance leads
+  - H2: Three steps to get started
+  - H2: Frequently asked questions
+  - H2: Related answer pages
+  - H2: One next step
+- [AI governance for students | AiGovOps Foundation](https://www.aigovops-foundation.com/for-students.html): Start learning AI governance with the Foundation’s guide, Practice Level 100, and the Thursday community meeting.
+  - H1: AI governance for students
+  - H2: Two steps to get started
+  - H2: Frequently asked questions
+  - H2: Related answer pages
+  - H2: One next step
+- [AI governance for researchers | AiGovOps Foundation](https://www.aigovops-foundation.com/for-researchers.html): Explore OVERT, Beacon source, and the Library’s 100 verified AI-harm cases, with clear routes to the underlying materials.
+  - H1: AI governance for researchers
+  - H2: Two steps to get started
+  - H2: Frequently asked questions
+  - H2: Related answer pages
+  - H2: One next step
+- [AI governance for regulators and policy staff | AiGovOps Foundation](https://www.aigovops-foundation.com/for-regulators.html): Explore OVERT runtime evidence, verify a Beacon receipt in the browser demo, and talk with the Foundation’s founders.
+  - H1: AI governance for regulators and policy staff
+  - H2: Two steps to get started
+  - H2: Frequently asked questions
+  - H2: Related answer pages
+  - H2: One next step
+- [AI governance for open-source contributors | AiGovOps Foundation](https://www.aigovops-foundation.com/for-contributors.html): Find contribution guides for Beacon, Umbrella, and Vendor RFI, then join the Foundation’s Thursday community meeting.
+  - H1: AI governance for open-source contributors
+  - H2: Three steps to get started
+  - H2: Frequently asked questions
+  - H2: Related answer pages
+  - H2: One next step
+
+## Topics
+- [What Is AI Governance? | AiGovOps Foundation](https://www.aigovops-foundation.com/ai-governance.html): See how AI governance becomes operational through policy as code, evidence that ships, and receipts an auditor can verify.
+  - H1: What is AI governance?
+  - H2: Key facts
+  - H2: Related resources
+  - H2: Related topics
+  - H2: Frequently asked questions
+  - H2: Take the next step
+- [What Is AiGovOps? | AiGovOps Foundation](https://www.aigovops-foundation.com/aigovops.html): AiGovOps treats AI governance like code: versioned, tested, and verifiable before deployment.
+  - H1: What is AiGovOps?
+  - H2: Key facts
+  - H2: Related resources
+  - H2: Related topics
+  - H2: Frequently asked questions
+  - H2: Take the next step
+- [Is AiGovOps Foundation a Nonprofit? | AiGovOps Foundation](https://www.aigovops-foundation.com/nonprofit.html): Learn what the AiGovOps Foundation builds, how support is used, and how its public finances are reported.
+  - H1: Is the AiGovOps Foundation a nonprofit?
+  - H2: Key facts
+  - H2: Related resources
+  - H2: Related topics
+  - H2: Frequently asked questions
+  - H2: Take the next step
+- [What Is OVERT? | AiGovOps Foundation](https://www.aigovops-foundation.com/overt.html): OVERT is an open runtime-trust standard for independently verifiable evidence; the Foundation is co-steward with CHAI.
+  - H1: What is OVERT?
+  - H2: Key facts
+  - H2: Related resources
+  - H2: Related topics
+  - H2: Frequently asked questions
+  - H2: Take the next step
+- [Glossary | AiGovOps Foundation](https://www.aigovops-foundation.com/glossary.html): Plain-language definitions for AiGovOps Foundation tools, evidence, and practice.
+  - H1: Glossary
+- [What Is Beacon? | AiGovOps Foundation](https://www.aigovops-foundation.com/beacon.html): Beacon is an OVERT 1.0-conformant runtime that produces signed, verifiable receipts of AI decisions.
+  - H1: What is Beacon?
+  - H2: Key facts
+  - H2: Related resources
+  - H2: Related topics
+  - H2: Frequently asked questions
+  - H2: Take the next step
+- [How Do I Create an AI Audit Plan? | AiGovOps Foundation](https://www.aigovops-foundation.com/audit.html): Use the 10-minute Gate Check, Vendor RFI, and mapped Library cases to begin an AI audit plan.
+  - H1: How do I create an AI audit plan?
+  - H2: Key facts
+  - H2: Audit tips from the blog
+  - H2: Related resources
+  - H2: Related topics
+  - H2: Frequently asked questions
+  - H2: Take the next step
+- [Which AI Governance Starter Kits Can I Use? | AiGovOps Foundation](https://www.aigovops-foundation.com/starter-kits.html): Explore Practice levels 100–400, English and Spanish worksheets, NCW AI Camp, Vendor RFI, Beacon, and Gate Check.
+  - H1: Which AI governance starter kits can I use?
+  - H2: Key facts
+  - H2: Related resources
+  - H2: Related topics
+  - H2: Frequently asked questions
+  - H2: Take the next step
+
+## Standards and tools
+- OVERT (external standard): https://overt.is/
+- Beacon: https://aigovops-foundation.github.io/aigovops-beacon/
+- Umbrella: https://aigovops-foundation.github.io/umbrella-govops/
+- Lantern: https://aigovops-foundation.github.io/aigovops-lantern/
+- Vendor RFI: https://github.com/aigovops-foundation/aigovops-vendor-rfi
+- NCW AI Camp: https://www.aigovops-foundation.com/camps/ncw/
+
+## Practice and community
+- Practice site: https://www.aigovops-foundation.com/practice/
+- Thursday page: https://www.aigovops-foundation.com/practice/docs/THURSDAY.html
+- Gate check: https://community.aigovops-foundation.com/gate-check.html
+- Community Library (members, free): https://community.aigovops-foundation.com/library/
+
+## Writing
+- [What Is AiGovOps? And Why We Built the AiGovOps Foundation to Advance It | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/what-is-aigovops.html): Every AI system deployed without automated governance creates technical debt that compounds. Every compliance framework that exists only as a PDF is a...
+  - H1: What Is AiGovOps? And Why We Built the AiGovOps Foundation to Advance It
+- [NIST AI RMF vs. The Real World: Turning Standards Into Executable Code | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/nist-ai-rmf-vs-real-world.html): Here's the uncomfortable truth most board presentations won't show: 88% of organizations are now using AI, but only 39% have any board-level oversight in...
+  - H1: NIST AI RMF vs. The Real World: Turning Standards Into Executable Code
+- [EU AI Act Ready by August 2026? Here's Your 90-Day Compliance Roadmap | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/eu-ai-act-90-day-roadmap.html): The clock is ticking. August 2, 2026 marks the applicability date for key EU AI Act obligations covering high-risk AI systems under Annex III. If your...
+  - H1: EU AI Act Ready by August 2026? Here's Your 90-Day Compliance Roadmap
+- [Healthcare AI Governance: Spring 2026 — Crossing the Inflection Point | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/healthcare-ai-governance-spring-2026.html): This is the inaugural edition of the AiGovOps Foundation's semi-annual Healthcare AI Governance report. Every six months, we publish a practitioner-facing...
+  - H1: Healthcare AI Governance: Spring 2026 — Crossing the Inflection Point
+- [Agentic Frontiers: A Two-Month Retrospective on Global AI Governance (Jan–Mar 2026) | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/agentic-frontiers-retrospective.html): The first quarter of 2026 marked a definitive turning point in the evolution of artificial intelligence. We have officially moved beyond the era of "AI as...
+  - H1: Agentic Frontiers: A Two-Month Retrospective on Global AI Governance (Jan–Mar 2026)
+- [Agentic Hell: Why We're Repeating the Worst Mistakes in AI | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/agentic-hell.html): "Those who cannot remember the past are condemned to build recursive agent loops with no observability." — probably not George...
+  - H1: Agentic Hell: Why We're Repeating the Worst Mistakes in AI
+- [The Flow-to-Trust Loop: How 10 Ops Disciplines Converge to Ship Trusted AI | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/flow-to-trust-loop.html): A practitioner's guide to the modern AI Ops stack. Shipping trusted AI isn't the job of a single team or a single tool — it's the convergence of ten...
+  - H1: The Flow-to-Trust Loop: How 10 Ops Disciplines Converge to Ship Trusted AI
+- [Stop Writing for Humans. They Stopped Reading (AIFM or GTFO) | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/stop-writing-for-humans.html): Write for the LLM that's actually reading you. Here's the part nobody wants to admit: your CEO is not reading your 60-page strategy doc. Their LLM might....
+  - H1: Stop Writing for Humans. They Stopped Reading (AIFM or GTFO)
+- [No More Anonymous Ghosts: NIST's Push for AI Agent Accountability | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/no-more-anonymous-ghosts.html): It is Sunday, March 15, 2026, and the landscape of artificial intelligence has shifted dramatically from the experimental "chatbot" era of a few years...
+  - H1: No More Anonymous Ghosts: NIST's Push for AI Agent Accountability
+- [ISO 42001 as controls you can run, not a binder you file | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/iso-42001-controls-you-can-run.html): ISO 42001 is the AI management system standard. Treat its controls as checks you run in CI, each leaving a receipt an auditor can read, not a document you file.
+  - H1: ISO 42001 as controls you can run, not a binder you file
+  - H2: Start with the controls that already map to an action
+  - H2: The test that tells you it is real
+- [A face is not a signature — Arup, and the transfer that needed a second channel | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/a-face-is-not-a-signature.html): In 2024 a finance employee at Arup's Hong Kong office joined a video call where the CFO and every colleague were AI deepfakes, then made fifteen transfers totalling HK$200 million. The gate is that a face on a call is not identity, and a high-value transfer waits for a confirmation the caller cannot fake. Level 300, the hold.
+  - H1: A face is not a signature — Arup, and the transfer that needed a second channel
+  - H2: The gate that would have caught it
+  - H2: Identity, under whose authority
+  - H2: The hour
+- [Not evidence on its own — Horizon, and the receipt a stranger can check | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/not-evidence-on-its-own.html): For twenty-five years the UK Post Office prosecuted more than 700 subpostmasters on the say-so of its Horizon accounting system. Not AI — included for the lesson. The gate is that a system's output accusing a person is independently verifiable, and is not legal evidence by itself. Level 400, the audit gate.
+  - H1: Not evidence on its own — Horizon, and the receipt a stranger can check
+  - H2: The gate that would have caught it
+  - H2: What level 400 asks of you
+  - H2: The hour
+- [The premise — Robodebt and the gate before the first notice | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/the-premise.html): Australia's automated debt scheme averaged annual income into fortnights, fabricated debts for anyone with irregular earnings, and reversed the burden of proof onto about 440,000 people. The gate is not on the notice. It is on the arithmetic, before a single notice goes out. Level 400.
+  - H1: The premise — Robodebt and the gate before the first notice
+  - H2: The gate that would have caught it
+  - H2: What &ldquo;prove it&rdquo; means
+  - H2: The hour
+- [Seconds each — the hold that Cigna's PXDX never had | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/seconds-each.html): ProPublica reported that Cigna's PXDX process let medical directors deny large batches of claims in seconds each, often without opening the patient's file. The gate is a human who actually reviews before a denial — and the arithmetic of what "actually" means when the batch is a thousand deep. Level 300.
+  - H1: Seconds each — the hold that Cigna's PXDX never had
+  - H2: The gate that would have caught it
+  - H2: What you write at level 300
+  - H2: The hour
+- [Forty-five minutes at Knight Capital — the deploy is the decision | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/forty-five-minutes-at-knight.html): In 2012 a faulty deploy sent $7 billion of unintended orders in 45 minutes and cost Knight Capital $440 million and the firm. No LLM anywhere. The gate it needed is the one your agent needs today: the deploy is a consequential action, and it gets a rule, a kill switch and a rehearsed way back.
+  - H1: Forty-five minutes at Knight Capital — the deploy is the decision
+  - H2: The gate that would have caught it
+  - H2: What it looks like in CI
+  - H2: The hour
+- [The one-dollar Tahoe — why a system prompt is not a rule | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/the-one-dollar-tahoe.html): In 2023 a dealer's chatbot agreed to sell a 2024 Chevy Tahoe for $1 and called it a legally binding offer. Nobody lost a truck. Everybody learned that a polite instruction to an LLM is not a gate. Level 200 starts here.
+  - H1: The one-dollar Tahoe — why a system prompt is not a rule
+  - H2: The gate that would have caught it
+  - H2: What it looks like as three lines
+  - H2: If you have a bot already
+- [The café is open — say what brought you in, leave with a receipt | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/the-cafe-is-open.html): The Foundation's home page is a café now. Wren keeps the table by the door and asks one question. Five doors, each a real case; ten minutes to start; an hour to a rule in your own words, a signed receipt, and a Thursday.
+  - H1: The café is open — say what brought you in, leave with a receipt
+  - H2: Five doors, each a real case
+  - H2: Ten minutes to get started
+  - H2: What we took away
+  - H2: Thursday
+- [The Fall 2026 Release — one hour to your first receipt, at whatever level you start | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/the-fall-2026-release.html): The Foundation's open-source projects become one practice with four levels, each an hour or less, each on a real case from the 100 verified harms — built on OVERT, the open standard from Glacis, which is the hero of this story.
+  - H1: The Fall 2026 Release — one hour to your first receipt, at whatever level you start
+  - H2: One practice, four levels, one hour each
+  - H2: The cases are real
+  - H2: The marks are the credential
+  - H2: Where it lives
+- [The ten-minute Gate Check — is this AI agent ready to run? | AiGovOps Foundation](https://www.aigovops-foundation.com/blog/the-ten-minute-gate-check.html): Ten yes/no questions a manager can answer about an AI agent this week, each with the evidence to point at, ending in a card you keep. No account, no maybe.
+  - H1: The ten-minute Gate Check — is this AI agent ready to run?
+  - H2: What it is
+  - H2: Who it is for
+  - H2: What comes next
+- AiGovOps Substack: https://aigovops.substack.com/
+
+## Optional
+- [Privacy | AiGovOps Foundation](https://www.aigovops-foundation.com/privacy.html): How the AiGovOps Foundation website handles your data — in plain language. What we collect, why, and the control you keep.
+  - H1: Your privacy
+  - H2: What we collect
+  - H2: What we never do
+  - H2: Links out, and things we load
+  - H2: Your information is yours
+  - H2: Questions
+- [Terms of Use | AiGovOps Foundation](https://www.aigovops-foundation.com/terms.html): Plain-language terms of use for the AiGovOps Foundation website.
+  - H1: Terms of Use
+  - H2: Using the site well
+  - H2: Open source and content
+  - H2: Donations
+  - H2: The honest disclaimers
+  - H2: Changes and contact

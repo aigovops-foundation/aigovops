@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AiGovOps Foundation — Get to Yes. Stay at Yes. Recover to Yes.</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 3l6 5v3H10V8l6-5z' fill='%232B2B28'/%3E%3Crect x='9' y='11' width='14' height='14' rx='3' fill='%23E07A2A'/%3E%3Cellipse cx='16' cy='18' rx='3.4' ry='4.6' fill='%23FFF3D6'/%3E%3Crect x='12' y='25' width='8' height='3' rx='1.5' fill='%232B2B28'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/fonts/fonts.css?v=20261011b" />
+<style>
+:root{
+  --cream:#FAF7F0;
+  --deep-cream:#F1EAD8;
+  --deeper-cream:#E9DFC6;
+  --charcoal:#2B2B28;
+  --ink-soft:#4C4A42;
+  --green:#2E7D4F;
+  --green-ink:#1F5E3A;
+  --green-deep:#0F4A2C;
+  --orange:#E07A2A;
+  --orange-ink:#9C4E12;
+  --gold:#E8B54A;
+  --line:rgba(43,43,40,.14);
+  --shadow:0 18px 40px -18px rgba(78,60,32,.35);
+  --shadow-sm:0 10px 26px -14px rgba(78,60,32,.3);
+  --r-2xl:1.4rem;
+  --serif:"Fraunces",Georgia,serif;
+  --sans:"Source Sans 3",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  font-size:1.0625rem;
+  line-height:1.65;
+  color:var(--charcoal);
+  background:var(--cream);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+/* paper grain over everything */
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:40;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.17 0 0 0 0 0.16 0 0 0 0 0.13 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--green-ink)}
+a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visible{
+  outline:3px solid var(--orange);outline-offset:3px;border-radius:4px;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem)}
+.visually-hidden{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- header ---------- */
+header.site{
+  position:sticky;top:0;z-index:50;
+  background:rgba(250,247,240,.97);
+  border-bottom:1px solid var(--line);
+}
+.site-bar{display:flex;align-items:center;gap:1.5rem;padding:.85rem 0}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--charcoal)}
+.brand svg{flex:none}
+.brand .flame{animation:flicker 3.4s ease-in-out infinite}
+@keyframes flicker{0%,100%{opacity:1}42%{opacity:.72}58%{opacity:.95}74%{opacity:.8}}
+.brand-name{font-family:var(--serif);font-weight:600;font-size:1.2rem;letter-spacing:.01em;line-height:1.1}
+.brand-name small{display:block;font-family:var(--sans);font-weight:600;font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--green-ink)}
+nav.main{margin-left:auto}
+nav.main ul{display:flex;gap:.25rem;list-style:none;align-items:center}
+nav.main a{
+  text-decoration:none;color:var(--ink-soft);font-weight:600;font-size:.95rem;
+  padding:.45rem .8rem;border-radius:999px;transition:background .2s,color .2s;
+}
+nav.main a:hover{background:var(--deep-cream);color:var(--green-deep)}
+nav.main a[aria-current="page"]{color:var(--green-deep);background:var(--deep-cream)}
+.lang{
+  display:flex;border:1.5px solid var(--line);border-radius:999px;overflow:hidden;
+  font-size:.78rem;font-weight:700;letter-spacing:.06em;
+}
+.lang button{
+  border:0;background:transparent;padding:.32rem .7rem;cursor:pointer;
+  font:inherit;color:var(--ink-soft);
+}
+.lang button[aria-pressed="true"]{background:var(--green);color:var(--cream)}
+.nav-toggle{display:none}
+
+/* ---------- hero ---------- */
+.hero{position:relative;text-align:center;padding:clamp(3rem,7vw,5.5rem) 0 0}
+.eyebrow{
+  display:inline-flex;flex-wrap:wrap;justify-content:center;gap:.6em;
+  font-weight:700;font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--green-ink);
+}
+.eyebrow .dot{color:var(--orange);letter-spacing:0}
+.hero h1{
+  font-family:var(--serif);font-optical-sizing:auto;
+  font-size:clamp(2.5rem,6.4vw,4.9rem);
+  font-weight:560;line-height:1.06;letter-spacing:-.015em;
+  margin:1.1rem auto .2rem;max-width:17ch;
+}
+.hero h1 .yes{font-style:italic;color:var(--green)}
+.hero p.sub{
+  max-width:44rem;margin:1.4rem auto 0;font-size:clamp(1.05rem,1.6vw,1.22rem);
+  color:var(--ink-soft);
+}
+.hero p.sub em{font-family:var(--serif);font-style:italic;color:var(--charcoal)}
+.hero .come{
+  font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,1.9vw,1.4rem);
+  color:var(--green-deep);margin-top:.9rem;display:block;
+}
+/* staggered reveal */
+.rise{opacity:0;transform:translateY(18px);animation:rise .8s cubic-bezier(.2,.7,.3,1) forwards}
+.rise.d1{animation-delay:.08s}.rise.d2{animation-delay:.2s}.rise.d3{animation-delay:.34s}.rise.d4{animation-delay:.48s}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* hero painted band */
+.hero-band{margin-top:clamp(2rem,4.5vw,3.4rem);position:relative}
+.hero-band img{
+  width:100%;height:clamp(240px,38vw,470px);object-fit:cover;object-position:center 62%;
+}
+.hero-band::before{ /* soft blend into cream above */
+  content:"";position:absolute;inset:0 0 auto 0;height:70px;
+  background:linear-gradient(var(--cream),rgba(250,247,240,0));z-index:1;
+}
+.hero-band::after{
+  content:"";position:absolute;inset:auto 0 0 0;height:56px;
+  background:linear-gradient(rgba(241,234,216,0),var(--deep-cream));z-index:1;
+}
+
+/* ---------- three movements ---------- */
+.movements{background:var(--deep-cream);padding:0 0 clamp(3rem,5vw,4.5rem)}
+.movement-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2.4vw,2rem);
+  margin-top:calc(clamp(60px,8vw,90px) * -1);position:relative;z-index:2;
+}
+.movement{
+  background:var(--cream);border-radius:var(--r-2xl);
+  border:1px solid rgba(43,43,40,.08);
+  box-shadow:var(--shadow-sm);
+  padding:1.6rem 1.5rem 1.7rem;text-align:center;
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.movement:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.movement img{width:118px;height:118px;margin:0 auto .6rem;transition:transform .3s ease}
+.movement:hover img{transform:rotate(-3deg) scale(1.05)}
+.movement h3{font-family:var(--serif);font-weight:600;font-size:1.42rem;letter-spacing:-.01em}
+.movement .gloss{
+  display:inline-block;margin-top:.35rem;font-family:var(--serif);font-style:italic;
+  font-size:1.02rem;color:var(--orange-ink);
+}
+.movement::after{
+  content:"";display:block;width:44px;height:3px;border-radius:2px;
+  background:var(--gold);margin:.9rem auto 0;
+}
+.movement:nth-child(1)::after{background:var(--green)}
+.movement:nth-child(3)::after{background:var(--orange)}
+
+/* ---------- action cards ---------- */
+.doors{padding:clamp(3.5rem,6vw,5.5rem) 0 0}
+.doors-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(1rem,2vw,1.5rem)}
+.door{
+  border-radius:var(--r-2xl);padding:1.9rem 1.8rem;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;gap:.5rem;justify-content:flex-end;min-height:230px;
+  text-decoration:none;box-shadow:var(--shadow-sm);
+  transition:transform .25s ease,box-shadow .25s ease;
+  border:1px solid rgba(43,43,40,.08);
+}
+.door:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.door h3{font-family:var(--serif);font-weight:600;font-size:1.65rem;letter-spacing:-.01em}
+.door p{font-weight:600;font-size:1.02rem}
+.door .go{
+  display:inline-flex;align-items:center;gap:.45em;font-weight:700;
+}
+.door .go .arr{transition:transform .25s ease;display:inline-block}
+.door:hover .go .arr{transform:translateX(6px)}
+.door-join{grid-column:span 7;background:var(--green);color:var(--cream)}
+.door-join h3,.door-join p{color:var(--cream)}
+.door-join .leafbg{position:absolute;right:-30px;top:-34px;opacity:.2}
+.door-join .go{color:#FFFFFF}
+.door-see{grid-column:span 5;background:var(--charcoal);color:var(--cream)}
+.door-see h3,.door-see p{color:var(--cream)}
+.door-see .go{color:var(--gold)}
+.door-see .shelves{width:96px;height:78px;margin-bottom:.35rem;opacity:.95}
+.door-see .support{font-weight:400;color:#D8D4C6;font-size:.98rem}
+.door-news,.door-event{grid-column:span 6;background:var(--cream);min-height:170px}
+.door-news h3,.door-event h3{color:var(--charcoal)}
+.door-news p,.door-event p{color:var(--ink-soft)}
+.door-news .go,.door-event .go{color:var(--orange-ink)}
+.door .badge{
+  position:absolute;top:1.3rem;left:1.8rem;
+  font-size:.7rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;
+}
+.door-join .badge{color:#FFFFFF}.door-see .badge{color:#D8D4C6}
+.door-news .badge,.door-event .badge{color:var(--green-ink)}
+
+/* quiet links */
+.quiet{
+  text-align:center;margin-top:1.8rem;color:var(--ink-soft);font-size:.98rem;
+}
+.quiet a{color:var(--green-ink);font-weight:600;text-underline-offset:3px}
+.quiet a:hover{color:var(--orange-ink)}
+
+/* ---------- garden rails ---------- */
+.rails{padding:clamp(2.6rem,4.5vw,3.6rem) 0}
+.rails-inner{
+  position:relative;text-align:center;
+  background:var(--deep-cream);
+  border:1.5px dashed rgba(46,125,79,.5);
+  border-radius:var(--r-2xl);
+  padding:1.7rem 1.5rem 1.9rem;
+  max-width:820px;margin:0 auto;
+}
+.rails-inner .sprig{position:absolute;top:-16px}
+.rails-inner .sprig.l{left:clamp(.6rem,4vw,2.2rem);transform:rotate(-8deg)}
+.rails-inner .sprig.r{right:clamp(.6rem,4vw,2.2rem);transform:scaleX(-1) rotate(-8deg)}
+.rails-inner p.lead{
+  font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,2.4vw,1.7rem);
+  color:var(--charcoal);
+}
+.rails-actions{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;margin-top:1rem}
+.pill{
+  display:inline-flex;align-items:center;gap:.5em;
+  font-weight:700;font-size:1rem;text-decoration:none;
+  padding:.6rem 1.35rem;border-radius:999px;transition:transform .2s,box-shadow .2s,background .2s;
+}
+.pill.time{background:var(--cream);color:var(--green-deep);border:2px solid var(--green)}
+.pill.time:hover{background:#E4F0E4}
+.pill.money{background:var(--orange);color:var(--charcoal);border:2px solid var(--orange)}
+.pill.money:hover{background:#E98A40;border-color:#E98A40}
+.pill:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.rails-inner .mid-dot{color:var(--orange);font-weight:700;align-self:center}
+
+/* ---------- pillars ---------- */
+.pillars{background:var(--deep-cream);padding:clamp(3.5rem,6vw,5.5rem) 0}
+.pillars-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.4rem,3vw,2.6rem) clamp(1.8rem,4vw,3.5rem)}
+.pillar{display:flex;gap:1.2rem;align-items:flex-start}
+.pillar .num{
+  font-family:var(--serif);font-weight:300;font-style:italic;
+  font-size:clamp(2.6rem,4.5vw,3.6rem);line-height:1;color:var(--green);
+  flex:none;width:2ch;text-align:right;
+  border-right:3px solid var(--gold);padding-right:.9rem;
+}
+.pillar:nth-child(2) .num{border-color:var(--orange)}
+.pillar:nth-child(3) .num{border-color:var(--green)}
+.pillar:nth-child(4) .num{border-color:var(--gold)}
+.pillar h3{font-family:var(--serif);font-weight:600;font-size:1.35rem;letter-spacing:-.01em;margin-bottom:.3rem}
+.pillar p{color:var(--ink-soft);max-width:34ch}
+
+/* ---------- founders ---------- */
+.founders{padding:clamp(3.5rem,6vw,5.5rem) 0}
+.founders-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.8rem,4vw,3.5rem);align-items:center}
+.founders-photo{position:relative}
+.founders-photo img{border-radius:var(--r-2xl);box-shadow:var(--shadow)}
+.founders-photo::after{
+  content:"the founders, in the garden";
+  position:absolute;left:1.2rem;bottom:1rem;
+  font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--cream);
+  background:rgba(43,43,40,.55);padding:.25rem .8rem;border-radius:999px;
+}
+.founders h2{
+  font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,3.4vw,2.7rem);
+  letter-spacing:-.015em;line-height:1.15;
+}
+.founders h2 .amp{font-style:italic;color:var(--orange)}
+.founders .roles{margin-top:.5rem;color:var(--green-ink);font-weight:700;letter-spacing:.12em;font-size:.8rem;text-transform:uppercase}
+.founders blockquote{
+  margin-top:1.3rem;font-family:var(--serif);font-style:italic;
+  font-size:clamp(1.15rem,1.9vw,1.4rem);line-height:1.5;color:var(--charcoal);
+  border-left:3px solid var(--green);padding-left:1.2rem;
+}
+
+/* ---------- toolkit ---------- */
+.toolkit{background:var(--deep-cream);padding:clamp(3.5rem,6vw,5.5rem) 0}
+.toolkit h2{
+  font-family:var(--serif);font-weight:600;text-align:center;
+  font-size:clamp(1.8rem,3.2vw,2.5rem);letter-spacing:-.015em;
+}
+.toolkit h2 em{font-style:italic;color:var(--green)}
+.chain{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2.4vw,2rem);
+  margin-top:2.4rem;position:relative;
+}
+.chain::before{ /* the evidence chain: dotted line linking the three */
+  content:"";position:absolute;left:8%;right:8%;top:64px;
+  border-top:3px dotted rgba(46,125,79,.45);z-index:0;
+}
+.tool{
+  background:var(--cream);border-radius:var(--r-2xl);border:1px solid rgba(43,43,40,.08);
+  box-shadow:var(--shadow-sm);padding:1.7rem 1.5rem;text-align:center;position:relative;z-index:1;
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.tool:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.tool .ic{
+  width:76px;height:76px;margin:0 auto .9rem;border-radius:50%;
+  display:grid;place-items:center;background:var(--deep-cream);
+  border:2px solid rgba(46,125,79,.35);
+}
+.tool h3{font-family:var(--serif);font-weight:600;font-size:1.5rem}
+.tool .tag{
+  display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--orange-ink);margin:.2rem 0 .5rem;
+}
+.tool p{color:var(--ink-soft);font-size:.99rem;max-width:30ch;margin:0 auto}
+
+/* ---------- newsletter ---------- */
+.news{background:var(--green);color:var(--cream);padding:clamp(3rem,5.5vw,4.5rem) 0;position:relative;overflow:hidden}
+.news::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(420px 200px at 12% 110%, rgba(232,181,74,.22), transparent 70%),
+    radial-gradient(420px 220px at 92% -10%, rgba(15,74,44,.55), transparent 70%);
+  pointer-events:none;
+}
+.news .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
+.news h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.8rem,3.2vw,2.6rem);letter-spacing:-.015em;line-height:1.15}
+.news p{color:#DFF0E3;margin-top:.5rem;max-width:38rem}
+.news form{display:flex;gap:.7rem;flex-wrap:wrap}
+.news input[type=email]{
+  flex:1 1 240px;font:inherit;padding:.85rem 1.1rem;border-radius:999px;
+  border:2px solid rgba(250,247,240,.4);background:rgba(250,247,240,.12);color:var(--cream);
+}
+.news input[type=email]::placeholder{color:#C9E2CF}
+.news input[type=email]:focus{border-color:var(--gold);outline:none;background:rgba(250,247,240,.18)}
+.news button{
+  font:inherit;font-weight:800;cursor:pointer;border:0;border-radius:999px;
+  background:var(--orange);color:var(--charcoal);padding:.85rem 1.7rem;
+  transition:transform .2s,background .2s;
+}
+.news button:hover{transform:translateY(-2px);background:#E98A40}
+
+/* ---------- footer ---------- */
+footer.site{background:var(--charcoal);color:#EDE8DA;padding:clamp(3rem,5.5vw,4.5rem) 0 2rem}
+.creed{
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:clamp(1.3rem,2.6vw,1.9rem);line-height:1.45;max-width:34ch;
+  color:#F5EFDF;
+}
+.creed .grow{color:var(--gold)}
+.foot-sub{
+  margin-top:1rem;font-size:.8rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:#B9B3A2;
+}
+.foot-grid{
+  display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2rem;
+  margin-top:2.6rem;padding-top:2.2rem;border-top:1px solid rgba(237,232,218,.18);
+}
+.foot-grid h3{
+  font-size:.72rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:.8rem;
+}
+.foot-grid ul{list-style:none}
+.foot-grid li{margin:.35rem 0}
+.foot-grid a{color:#EDE8DA;text-decoration:none;font-weight:600;font-size:.98rem}
+.foot-grid a:hover{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.foot-brand{display:flex;align-items:flex-start;gap:.8rem}
+.foot-brand p{color:#B9B3A2;font-size:.95rem;max-width:30ch;margin-top:.3rem}
+.legal{
+  margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid rgba(237,232,218,.14);
+  display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+  color:#B9B3A2;font-size:.9rem;
+}
+.legal .lantern-line{font-family:var(--serif);font-style:italic}
+
+/* scroll reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rise,.reveal{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:940px){
+  .pillars-grid{grid-template-columns:1fr}
+  .founders-grid{grid-template-columns:1fr}
+  .news .wrap{grid-template-columns:1fr}
+  .door-join{grid-column:span 12}.door-see{grid-column:span 12}
+  .door-news,.door-event{grid-column:span 6}
+}
+@media (max-width:760px){
+  nav.main{display:none;position:absolute;top:100%;left:0;right:0;background:var(--cream);
+    border-bottom:1px solid var(--line);padding:.6rem 1.2rem 1rem}
+  nav.main.open{display:block}
+  nav.main ul{flex-direction:column;align-items:stretch;gap:.15rem}
+  nav.main a{display:block;padding:.6rem .8rem}
+  .nav-toggle{
+    display:inline-grid;place-items:center;margin-left:auto;
+    background:none;border:1.5px solid var(--line);border-radius:.6rem;
+    width:42px;height:38px;cursor:pointer;color:var(--charcoal);
+  }
+  .lang{margin-left:0}
+  .movement-grid{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto}
+  .movement{
+    display:grid;grid-template-columns:86px 1fr;grid-template-rows:auto auto;
+    align-items:center;column-gap:1.1rem;row-gap:0;text-align:left;padding:1.1rem 1.2rem;
+  }
+  .movement img{width:86px;height:86px;margin:0;grid-row:1/3}
+  .movement h3{align-self:end}
+  .movement .gloss{align-self:start;margin-top:.1rem}
+  .movement::after{display:none}
+  .door-news,.door-event{grid-column:span 12;min-height:150px}
+  .door-see{min-height:auto}
+  .chain{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto}
+  .chain::before{left:50%;right:auto;top:6%;bottom:6%;border-top:0;border-left:3px dotted rgba(46,125,79,.45)}
+  .foot-grid{grid-template-columns:1fr}
+  .pillar p{max-width:none}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap site-bar">
+    <a class="brand" href="#" aria-label="AiGovOps Foundation — home">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <path d="M20 4l8 6.5V14H12v-3.5L20 4z" fill="#2B2B28"/>
+        <rect x="11" y="14" width="18" height="17" rx="3.5" fill="#E07A2A"/>
+        <ellipse class="flame" cx="20" cy="22.5" rx="4.2" ry="5.6" fill="#FFF3D6"/>
+        <ellipse cx="20" cy="24" rx="2" ry="3" fill="#E8B54A"/>
+        <rect x="14.5" y="31" width="11" height="3.6" rx="1.8" fill="#2B2B28"/>
+      </svg>
+      <span class="brand-name">AiGovOps<br><small>Foundation</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="mainnav" aria-label="Menu">
+      <svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><path d="M1 1h18M1 7h18M1 13h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <nav class="main" id="mainnav" aria-label="Primary">
+      <ul>
+        <li><a href="#" aria-current="page">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Frameworks</a></li>
+        <li><a href="#">Ecosystem</a></li>
+        <li><a href="#">Support</a></li>
+        <li>
+          <span class="lang" role="group" aria-label="Language">
+            <button type="button" aria-pressed="true">EN</button>
+            <button type="button" aria-pressed="false">ES</button>
+          </span>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap">
+      <p class="eyebrow rise d1">Ship Safe AI <span class="dot" aria-hidden="true">·</span> Never Unsafe AI <span class="dot" aria-hidden="true">·</span> Policy as Code</p>
+      <h1 id="hero-h" class="rise d2">Get to <span class="yes">Yes</span>. Stay at <span class="yes">Yes</span>. Recover to <span class="yes">Yes</span>.</h1>
+      <p class="sub rise d3">Before you ship, while it runs, when it breaks — governance as code that makes
+      AI safe to say yes to, built in the open by a community keeping
+      <em>the garden of humanity</em> growing.
+      <span class="come rise d4">Come see. Come join.</span></p>
+    </div>
+    <div class="hero-band rise d4">
+      <img src="assets/hero-garden.jpg" width="2400" height="780"
+        alt="A hand-painted garden at morning: rows of green beds with orange and gold flowers, a path leading to a glowing lantern on a wooden post.">
+    </div>
+  </section>
+
+  <!-- ============ THREE MOVEMENTS ============ -->
+  <section class="movements" aria-labelledby="mov-h">
+    <h2 id="mov-h" class="visually-hidden">The three movements</h2>
+    <div class="wrap">
+      <div class="movement-grid">
+        <article class="movement reveal">
+          <img src="assets/marker-seedling.png" width="118" height="118" alt="Garden marker: a seedling sprouting from a mound of soil.">
+          <h3>Get to Yes</h3>
+          <span class="gloss">before you ship</span>
+        </article>
+        <article class="movement reveal">
+          <img src="assets/marker-watering-can.png" width="118" height="118" alt="Garden marker: a green watering can tending a small sprout.">
+          <h3>Stay at Yes</h3>
+          <span class="gloss">while it runs</span>
+        </article>
+        <article class="movement reveal">
+          <img src="assets/marker-new-shoot.png" width="118" height="118" alt="Garden marker: a new shoot rising after rain, sun breaking through.">
+          <h3>Recover to Yes</h3>
+          <span class="gloss">when it breaks</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACTION CARDS ============ -->
+  <section class="doors" aria-labelledby="doors-h">
+    <h2 id="doors-h" class="visually-hidden">Ways in</h2>
+    <div class="wrap">
+      <div class="doors-grid">
+        <a class="door door-join reveal" href="#">
+          <svg class="leafbg" width="190" height="190" viewBox="0 0 100 100" aria-hidden="true">
+            <path d="M50 92C22 74 14 46 24 18c26 4 48 24 46 56-6 8-12 14-20 18z" fill="#FAF7F0"/>
+            <path d="M35 78C42 58 48 44 60 30" stroke="#FAF7F0" stroke-width="3" fill="none"/>
+          </svg>
+          <span class="badge">Come Join</span>
+          <h3>The governed community</h3>
+          <p class="go">Enter the governed community <span class="arr" aria-hidden="true">→</span></p>
+        </a>
+        <a class="door door-see reveal" href="#">
+          <span class="badge">Come See</span>
+          <svg class="shelves" width="96" height="78" viewBox="0 0 64 52" aria-hidden="true">
+            <rect x="2" y="2" width="60" height="4" rx="2" fill="#E8B54A"/>
+            <rect x="2" y="24" width="60" height="4" rx="2" fill="#E8B54A"/>
+            <rect x="2" y="46" width="60" height="4" rx="2" fill="#E8B54A"/>
+            <rect x="8" y="8" width="7" height="14" fill="#FAF7F0" opacity=".85"/><rect x="18" y="8" width="7" height="14" fill="#2E7D4F"/><rect x="28" y="8" width="7" height="14" fill="#E07A2A"/>
+            <rect x="12" y="30" width="7" height="14" fill="#E07A2A"/><rect x="22" y="30" width="7" height="14" fill="#FAF7F0" opacity=".85"/><rect x="34" y="30" width="7" height="14" fill="#2E7D4F"/>
+          </svg>
+          <h3>The Library</h3>
+          <p class="support">Field notes, patterns, and playbooks — open on every shelf.</p>
+          <p class="go">Read the Library — three shelves <span class="arr" aria-hidden="true">→</span></p>
+        </a>
+        <a class="door door-news reveal" href="#">
+          <span class="badge">Newsletter</span>
+          <h3>Letters from the garden</h3>
+          <p class="go">Weekly on Substack <span class="arr" aria-hidden="true">→</span></p>
+        </a>
+        <a class="door door-event reveal" href="#">
+          <span class="badge">Next Event</span>
+          <h3>Pull up a chair</h3>
+          <p class="go">View &amp; Register on Luma <span class="arr" aria-hidden="true">→</span></p>
+        </a>
+      </div>
+      <p class="quiet reveal">Or <a href="#">schedule a call with a community leader</a> · <a href="#">explore Beacon &amp; Umbrella in the open</a></p>
+    </div>
+  </section>
+
+  <!-- ============ GARDEN RAILS ============ -->
+  <section class="rails" aria-labelledby="rails-h">
+    <h2 id="rails-h" class="visually-hidden">Tend the garden</h2>
+    <div class="wrap">
+      <div class="rails-inner reveal">
+        <svg class="sprig l" width="46" height="40" viewBox="0 0 46 40" aria-hidden="true">
+          <path d="M23 38C20 24 22 12 30 4" stroke="#2E7D4F" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M26 16c-7-1-11-5-12-11 7 0 12 4 12 11zM27 26c7-1 11-5 12-11-7 0-12 4-12 11z" fill="#2E7D4F"/>
+        </svg>
+        <svg class="sprig r" width="46" height="40" viewBox="0 0 46 40" aria-hidden="true">
+          <path d="M23 38C20 24 22 12 30 4" stroke="#E07A2A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M26 16c-7-1-11-5-12-11 7 0 12 4 12 11zM27 26c7-1 11-5 12-11-7 0-12 4-12 11z" fill="#E07A2A"/>
+        </svg>
+        <p class="lead">Tend the garden:</p>
+        <div class="rails-actions">
+          <a class="pill time" href="#">
+            <svg width="17" height="17" viewBox="0 0 17 17" aria-hidden="true"><circle cx="8.5" cy="8.5" r="7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8.5 4.5v4l3 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            give time</a>
+          <span class="mid-dot" aria-hidden="true">·</span>
+          <a class="pill money" href="#">
+            <svg width="17" height="17" viewBox="0 0 17 17" aria-hidden="true"><path d="M8.5 15S2 10.8 2 6.4C2 3.9 3.9 2 6.2 2c1 0 1.8.4 2.3 1 .5-.6 1.3-1 2.3-1C13.1 2 15 3.9 15 6.4c0 4.4-6.5 8.6-6.5 8.6z" fill="currentColor"/></svg>
+            give money</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PILLARS ============ -->
+  <section class="pillars" aria-labelledby="pillars-h">
+    <h2 id="pillars-h" class="visually-hidden">Four pillars</h2>
+    <div class="wrap">
+      <div class="pillars-grid">
+        <article class="pillar reveal">
+          <span class="num" aria-hidden="true">01</span>
+          <div>
+            <h3>Governance as Code</h3>
+            <p>Compliance checks embedded in production pipelines as testable, versioned code.</p>
+          </div>
+        </article>
+        <article class="pillar reveal">
+          <span class="num" aria-hidden="true">02</span>
+          <div>
+            <h3>AI Technical Debt Elimination</h3>
+            <p>Closing the gap between governance policy on paper and reality in production.</p>
+          </div>
+        </article>
+        <article class="pillar reveal">
+          <span class="num" aria-hidden="true">03</span>
+          <div>
+            <h3>Operational Compliance</h3>
+            <p>Regulatory alignment that scales with deployment — not against it.</p>
+          </div>
+        </article>
+        <article class="pillar reveal">
+          <span class="num" aria-hidden="true">04</span>
+          <div>
+            <h3>Community-Driven Standards</h3>
+            <p>Practitioner-led tools and open standards built by people who ship to production.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOUNDERS ============ -->
+  <section class="founders" aria-labelledby="founders-h">
+    <div class="wrap founders-grid">
+      <div class="founders-photo reveal">
+        <img src="assets/founders-garden.jpg" width="1400" height="1000"
+          alt="A warm painted illustration of two founders tending a raised garden bed together, a small lantern between them, a garden shed behind.">
+      </div>
+      <div class="reveal">
+        <h2 id="founders-h">Ken Johnston <span class="amp">&amp;</span> Bob Rapp</h2>
+        <p class="roles">Co-founders</p>
+        <blockquote>
+          <p>Together, advancing responsible AI governance for organizations navigating the evolving AI landscape.</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TOOLKIT ============ -->
+  <section class="toolkit" aria-labelledby="toolkit-h">
+    <div class="wrap">
+      <h2 id="toolkit-h" class="reveal">Three tools. <em>One verifiable evidence chain.</em></h2>
+      <div class="chain">
+        <article class="tool reveal">
+          <div class="ic">
+            <svg width="38" height="38" viewBox="0 0 38 38" aria-hidden="true">
+              <circle cx="19" cy="19" r="9" fill="none" stroke="#2E7D4F" stroke-width="2.5"/>
+              <path d="M19 10V4M19 34v-6M10 19H4m30 0h-6" stroke="#2E7D4F" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="19" cy="19" r="3.4" fill="#E07A2A"/>
+            </svg>
+          </div>
+          <h3>Beacon</h3>
+          <span class="tag">Scanner + evidence signer</span>
+          <p>Sweeps what actually shipped and signs the evidence, so the record is checkable — not vibes.</p>
+        </article>
+        <article class="tool reveal">
+          <div class="ic">
+            <svg width="38" height="38" viewBox="0 0 38 38" aria-hidden="true">
+              <path d="M19 3l7 5.5V12H12V8.5L19 3z" fill="#2B2B28"/>
+              <rect x="11.5" y="12" width="15" height="15" rx="3" fill="none" stroke="#2B2B28" stroke-width="2.5"/>
+              <ellipse cx="19" cy="19.5" rx="3.2" ry="4.4" fill="#E8B54A"/>
+              <path d="M15 32h8" stroke="#2B2B28" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Lantern</h3>
+          <span class="tag">Human-carried CLI companion</span>
+          <p>The light a person carries through the loop — the human hand on every irreversible step.</p>
+        </article>
+        <article class="tool reveal">
+          <div class="ic">
+            <svg width="38" height="38" viewBox="0 0 38 38" aria-hidden="true">
+              <path d="M4 18a15 15 0 0130 0z" fill="none" stroke="#2E7D4F" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M4 18c2.5-3 5-3 7.5 0C14 15 16.5 15 19 18c2.5-3 5-3 7.5 0 2.5-3 5-3 7.5 0" fill="none" stroke="#2E7D4F" stroke-width="2"/>
+              <path d="M19 18v12a3 3 0 006 0" fill="none" stroke="#E07A2A" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Umbrella</h3>
+          <span class="tag">Governance compiler · 40+ frameworks</span>
+          <p>Compiles 40+ regulatory frameworks into policy-as-code your pipeline can actually run.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section class="news" aria-labelledby="news-h">
+    <div class="wrap">
+      <div class="reveal">
+        <h2 id="news-h">Stay ahead of AI governance.</h2>
+        <p>One letter a week from the garden — what shipped, what broke, what the frameworks now ask of you.</p>
+      </div>
+      <form class="reveal" action="#" method="post">
+        <label class="visually-hidden" for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="you@yourteam.com" autocomplete="email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site">
+  <div class="wrap">
+    <p class="creed">“Ship safe AI — never unsafe AI: get to yes, stay at yes, recover to yes,
+    and <span class="grow">keep the garden of humanity growing</span>.”</p>
+    <p class="foot-sub">Governance Versioned Like Code. Tested Before Deployment.</p>
+
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <svg width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <path d="M20 4l8 6.5V14H12v-3.5L20 4z" fill="#EDE8DA"/>
+          <rect x="11" y="14" width="18" height="17" rx="3.5" fill="#E07A2A"/>
+          <ellipse cx="20" cy="22.5" rx="4.2" ry="5.6" fill="#FFF3D6"/>
+          <rect x="14.5" y="31" width="11" height="3.6" rx="1.8" fill="#EDE8DA"/>
+        </svg>
+        <p>The porch of the AiGovOps estate — one front door to the community, the Library, and the tools.</p>
+      </div>
+      <nav aria-label="Estate">
+        <h3>Estate</h3>
+        <ul>
+          <li><a href="#">Foundation</a></li>
+          <li><a href="#">Community platform</a></li>
+          <li><a href="#">Library</a></li>
+          <li><a href="#">Beacon</a></li>
+          <li><a href="#">Umbrella</a></li>
+          <li><a href="#">NCW AI Camp</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Connect">
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="legal">
+      <p>© 2026 AiGovOps Foundation — a 501(c)(3) nonprofit.</p>
+      <p class="lantern-line">The lantern stays lit.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// mobile nav
+const tgl=document.querySelector('.nav-toggle'),nav=document.getElementById('mainnav');
+tgl.addEventListener('click',()=>{
+  const open=nav.classList.toggle('open');
+  tgl.setAttribute('aria-expanded',open?'true':'false');
+});
+// visual-only language toggle
+document.querySelectorAll('.lang button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('.lang button').forEach(x=>x.setAttribute('aria-pressed','false'));
+    b.setAttribute('aria-pressed','true');
+  });
+});
+// scroll reveal
+const io=new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach((el,i)=>{
+  el.style.transitionDelay=(i%4)*0.07+'s';
+  io.observe(el);
+});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches){
+  document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+}
+</script>
+</body>
+</html>

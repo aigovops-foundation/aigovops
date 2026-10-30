@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://plausible.io https://www.aigovops-foundation.com https://community.aigovops-foundation.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; frame-src https://aigovops-foundation.github.io https://buy.stripe.com; connect-src 'self' https://plausible.io https://community.aigovops-foundation.com https://raw.githubusercontent.com; object-src 'none'; base-uri 'self'">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ISO 42001 as controls you can run, not a binder you file | AiGovOps Foundation</title>
+  <meta name="description" content="ISO 42001 is the AI management system standard. Treat its controls as checks you run in CI, each leaving a receipt an auditor can read, not a document you file." />
+  <link rel="canonical" href="https://www.aigovops-foundation.com/blog/iso-42001-controls-you-can-run.html" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="ISO 42001 as controls you can run, not a binder you file" />
+  <meta property="og:description" content="ISO 42001 is the AI management system standard. Treat its controls as checks you run in CI, each leaving a receipt an auditor can read, not a document you file." />
+  <meta property="og:image" content="https://www.aigovops-foundation.com/images/logo.png" />
+  <meta property="og:url" content="https://www.aigovops-foundation.com/blog/iso-42001-controls-you-can-run.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="author" content="Bob Rapp" />
+  <link rel="stylesheet" href="../css/style.css?v=20261011b" />
+  <!-- M6b garden-warm skin (shared system) -->
+  <link rel="stylesheet" href="/fonts/fonts.css?v=20261011b" />
+  <link rel="stylesheet" href="../css/garden.css?v=20261011b" />
+  <link rel="stylesheet" href="../css/wren-cafe.css?v=20261011b" />
+  <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "ISO 42001 as controls you can run, not a binder you file",
+    "datePublished": "2026-10-06",
+    "author": { "@type": "Person", "name": "Bob Rapp" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AiGovOps Foundation",
+      "logo": { "@type": "ImageObject", "url": "https://www.aigovops-foundation.com/images/logo.png" }
+    },
+    "image": "https://www.aigovops-foundation.com/images/logo.png",
+    "mainEntityOfPage": "https://www.aigovops-foundation.com/blog/iso-42001-controls-you-can-run.html",
+    "url": "https://www.aigovops-foundation.com/blog/iso-42001-controls-you-can-run.html"
+  }
+  </script>
+  <style>
+    /* ── Blog post — garden-warm skin (M6b) ── */
+    /* re-point the vars the inline article styles consume */
+    :root {
+      --teal-accessible: #1F5E3A;         /* eyebrow + back-links go garden green-ink */
+      --text: var(--garden-charcoal);     /* long-form body copy: charcoal on cream */
+      --muted: var(--garden-ink-soft);
+      --light: var(--garden-deep-cream);  /* "read the full article" panel ground */
+      --border: var(--garden-line);
+    }
+    /* footer-brand's mission paragraph is not the motto — keep it readable */
+    .footer-brand p:nth-of-type(2) { font-size: .85rem; font-weight: 400; letter-spacing: normal; text-transform: none; color: var(--garden-on-dark-dim); }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="../index.html" class="logo-link">
+      <span class="logo-text">AiGovOps Foundation</span>
+    </a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../library.html">Library</a>
+      <a href="../open-source.html">Open source</a>
+      <a href="../blog.html" class="active">Blog</a>
+      <a href="https://community.aigovops-foundation.com/signin.html" class="nav-join">Become a member</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </div>
+</header>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<main id="main-content">
+<article class="post-article" style="max-width:760px;margin:0 auto;padding:0 24px 64px">
+
+  <nav style="padding:24px 0 8px"><a href="../blog.html" style="color:var(--teal-accessible);font-size:.85rem;text-decoration:none">&larr; All posts</a></nav>
+
+  <header style="padding:16px 0 8px">
+    <p style="font-size:.72rem;font-weight:700;font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:.12em;color:var(--teal-accessible);margin-bottom:14px">AiGovOps Foundation &middot; Blog</p>
+    <h1 style="font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.15;margin-bottom:18px">ISO 42001 as controls you can run, not a binder you file</h1>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:.9rem">
+      <span style="font-weight:600;color:var(--text)">Bob Rapp</span>
+      <span>&middot;</span><span>October 2026</span>
+      <span>&middot;</span><span>4 min read</span>
+    </div>
+  </header>
+
+  <img src="https://www.aigovops-foundation.com/images/logo.png" alt="ISO 42001 Controls You Can Run in CI" loading="lazy" style="width:100%;border-radius:14px;margin:24px 0 32px;aspect-ratio:16/9;object-fit:cover" />
+
+  <div class="post-body" style="font-size:1.05rem;line-height:1.75;color:var(--text)">
+<p style="margin-bottom:20px">Most teams meet ISO 42001 the same way. Someone is handed the standard, reads that it asks for an AI management system, and starts a document. A policy here, a procedure there, a register of risks in a spreadsheet. Months later there is a binder. The binder is not wrong. It just cannot refuse anything.</p>
+<p style="margin-bottom:20px">ISO 42001 is the international standard for an AI management system, and it asks you to govern AI across its whole lifecycle: how you set policy, how you assess impact, how you manage data, how you watch a system in production, and how you record and learn from incidents. Read that list again and notice what it is really asking. It is asking you to prove, again and again, that a specific thing happened before a specific action ran. That is not a document. That is a control.</p>
+<p style="margin-bottom:20px">A control you can run looks different from a control you can file. The filed version says we review high risk changes. The runnable version is a check in your pipeline that sees the change, decides whether it is high risk, and refuses to merge until the review exists, leaving a line that says which rule fired, who approved it, and what the diff was. The first is a sentence. The second is a receipt.</p>
+<p style="margin-bottom:20px">This is the whole idea behind governance as code. Every action is a proposal, and a gate answers in one of three ways. Yes, earned, with evidence. No, refused, and written down. Or held for a human, which becomes a no if nobody approves it in time. Write the rule once in plain words a colleague can enforce, and once as a check a pipeline can enforce, and both produce the same receipt. Now your ISO 42001 evidence is not a story you tell an auditor. It is a trail a stranger can verify.</p>
+<h2>Start with the controls that already map to an action</h2>
+<p style="margin-bottom:20px">You do not have to render the entire standard on day one. Start where a control already points at a moment in your delivery. Change management maps to a merge. Impact assessment maps to the review that gates a new use case. Data quality maps to the step that admits a dataset. Incident recording maps to the alert that fires when a system behaves outside its bounds. Each of those is a place where a check can sit and leave a receipt, and each receipt is evidence for a clause you would otherwise be writing prose about.</p>
+<p style="margin-bottom:20px">It helps to <a href="https://airc.nist.gov/docs/NIST_AI_RMF_to_ISO_IEC_42001_Crosswalk.pdf">line ISO 42001 up next to the frameworks you may already be using</a>. The <a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI Risk Management Framework</a> organizes the work into four functions, <a href="/blog/nist-ai-rmf-vs-real-world.html">Govern, Map, Measure, and Manage</a>, and it is explicit that it exists to build trustworthiness into how AI is designed, built, and used. The <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai">EU AI Act</a> turns similar expectations into <a href="/blog/eu-ai-act-90-day-roadmap.html">obligations with dates attached</a>. The three are not three projects. They are three views of the same question: can you show, with evidence, that this AI did only what it was allowed to do. A control that runs answers that question once for all three.</p>
+<h2>The test that tells you it is real</h2>
+<p style="margin-bottom:20px">Here is a quick way to know whether a control is runnable or only written. Try to weaken it. Open a change that turns a deny into an allow, and watch what happens. If the pipeline refuses the merge and leaves a record of the attempt, the control is real and your evidence is accumulating on its own. If nothing happens, you have a sentence in a binder, and the next audit will be another month of screenshots.</p>
+<p style="margin-bottom:20px">You can see what one of these checks feels like without installing anything. <a href="/blog/the-ten-minute-gate-check.html">The Gate Check</a> is ten questions about whether an AI agent is ready to run, each answered yes or no with a piece of evidence you can point at, and it ends with a Gate Card you keep. It runs entirely in your browser and nothing you answer is sent anywhere. It is the smallest possible version of the same move: a control that asks for evidence, not for good intentions.</p>
+<p style="margin-bottom:20px">ISO 42001 does not have to be the year you wrote a binder nobody opens. It can be the year your pipeline started producing the evidence for you. If you want to see this way of working applied to real cases, <a href="https://aigovops.substack.com/">the Tuesday Letter</a> brings one story from the practice each week and sends nothing else.</p>
+<p style="margin-bottom:20px">The AiGovOps Foundation is a nonprofit publishing open source governance as code for AI safety. Ship safe AI. Never unsafe AI.</p>
+  </div>
+
+  <div style="margin-top:40px;padding:28px;background:var(--light);border:1px solid var(--border);border-radius:14px">
+    <p style="font-size:.78rem;font-weight:700;font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:.1em;color:var(--teal-accessible);margin-bottom:10px">Read the full article</p>
+    <p style="margin-bottom:18px;color:var(--muted)">This is an editorial summary. The complete article is published on the AiGovOps Foundation blog.</p>
+    
+  </div>
+
+  <nav style="margin-top:40px;padding-top:24px;border-top:1px solid var(--border)">
+    <a href="../blog.html" style="color:var(--teal-accessible);text-decoration:none">&larr; Back to all posts</a>
+  </nav>
+
+</article>
+</main>
+
+<footer class="site-footer site-footer--line">
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 AiGovOps Foundation. All rights reserved. · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a> · <a href="mailto:bob.rapp@aigovops.community">Contact</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js?v=20261011b"></script>
+</body>
+</html>

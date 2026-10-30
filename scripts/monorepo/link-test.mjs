@@ -5,7 +5,6 @@ import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { mapUrl } from "./redirect-stub.mjs";
 
-const URL_LIST = new URL("./estate-urls.json", import.meta.url);
 const TIMEOUT_MS = 20_000;
 const RETRIES = 2;
 const CONCURRENCY = 6;
@@ -29,6 +28,7 @@ function hasAnchor(html, anchor) {
 }
 
 function redirectBases(html) {
+  const values = new Map();
   for (const meta of html.matchAll(/<meta\b[^>]*>/gi)) {
     const attributes = new Map();
     for (const attribute of meta[0].matchAll(
@@ -39,7 +39,8 @@ function redirectBases(html) {
         attribute[2] ?? attribute[3] ?? attribute[4],
       );
     }
-    if (attributes.get("name")?.toLowerCase() !== "aigovops-redirect") continue;
+    const name = attributes.get("name")?.toLowerCase();
+    if (!["aigovops-redirect-from", "aigovops-redirect-to"].includes(name)) continue;
     const content = (attributes.get("content") ?? "").replace(
       /&(amp|quot|#39|lt|gt);/g,
       (entity) => ({
@@ -50,20 +51,18 @@ function redirectBases(html) {
         "&gt;": ">",
       })[entity],
     );
-    const separator = content.indexOf("|");
-    if (separator <= 0 || separator === content.length - 1) return null;
-    return {
-      from: content.slice(0, separator),
-      to: content.slice(separator + 1),
-    };
+    values.set(name, content);
   }
-  return null;
+  const from = values.get("aigovops-redirect-from");
+  const to = values.get("aigovops-redirect-to");
+  return from && to ? { from, to } : null;
 }
 
 async function check(entry) {
   let result;
   for (let attempt = 0; attempt <= RETRIES; attempt += 1) {
     let viaStub = false;
+    let mappedUrl = null;
     try {
       let response = await fetch(entry.url, {
         redirect: "follow",
@@ -74,8 +73,11 @@ async function check(entry) {
         const bases = redirectBases(html);
         const mapped = bases && mapUrl(bases.from, bases.to, response.url);
         if (mapped) {
+          const destination = new URL(mapped);
+          destination.hash = new URL(entry.url).hash;
+          mappedUrl = destination.href;
           viaStub = true;
-          response = await fetch(mapped, {
+          response = await fetch(mappedUrl, {
             redirect: "follow",
             signal: AbortSignal.timeout(TIMEOUT_MS),
           });
@@ -83,12 +85,13 @@ async function check(entry) {
         }
       }
       const anchorFound = !entry.anchor || hasAnchor(html, entry.anchor);
-      const prefixMatches = !entry.expectFinalPrefix || response.url.startsWith(entry.expectFinalPrefix);
+      const finalUrl = mappedUrl ?? response.url;
+      const prefixMatches = !entry.expectFinalPrefix || finalUrl.startsWith(entry.expectFinalPrefix);
       const passed = response.status === 200 && anchorFound && prefixMatches;
       result = {
         entry,
         status: response.status,
-        finalUrl: response.url,
+        finalUrl,
         anchorFound,
         prefixMatches,
         passed,
@@ -149,14 +152,27 @@ function printTable(results) {
 
 export { check, hasAnchor, printTable, runChecks };
 
+export function parseArgs(args) {
+  if (args.length === 0) return false;
+  if (args.length === 1 && args[0] === "--cutover") return true;
+  throw new Error("usage: node scripts/monorepo/link-test.mjs [--cutover]");
+}
+
+export async function loadEntries(cutover = false) {
+  const name = cutover ? "estate-urls.cutover.json" : "estate-urls.json";
+  const entries = JSON.parse(await readFile(new URL(`./${name}`, import.meta.url), "utf8"));
+  if (!Array.isArray(entries)) throw new Error(`${name} must be an array`);
+  return entries;
+}
+
 if (
   !process.env.NODE_TEST_CONTEXT &&
   process.argv[1] &&
   fileURLToPath(import.meta.url) === resolve(process.argv[1])
 ) {
   try {
-    const entries = JSON.parse(await readFile(URL_LIST, "utf8"));
-    if (!Array.isArray(entries)) throw new Error("estate-urls.json must be an array");
+    const cutover = parseArgs(process.argv.slice(2));
+    const entries = await loadEntries(cutover);
     const failed = printTable(await runChecks(entries));
     if (failed) process.exitCode = 1;
   } catch (error) {

@@ -1,0 +1,49 @@
+{
+  "slug": "bolt",
+  "tool": "Bolt",
+  "voice": "narrator",
+  "slides": [
+    {
+      "kind": "title",
+      "title": "Bolt",
+      "sub": "A 90-second guide · AiGovOps Foundation",
+      "narration": "A ninety-second guide to Bolt, from the AiGovOps Foundation and the NCW AI Camp."
+    },
+    {
+      "kind": "tool",
+      "title": "What it is",
+      "lines": [
+        "Bolt (bolt.new) is a browser-based AI developer that writes, runs, and deploys full-stack apps in a live environment.",
+        "You describe what you want and it scaffolds the whole thing, letting you preview instantly.",
+        "It offers free daily credits, with paid tiers for heavier use (and it's in Lenny's bundle)."
+      ],
+      "narration": "Bolt (bolt.new) is a browser-based AI developer that writes, runs, and deploys full-stack apps in a live environment. You describe what you want and it scaffolds the whole thing, letting you preview instantly. There's a free tier to start."
+    },
+    {
+      "kind": "cool",
+      "title": "What's cool for NCW",
+      "lines": [
+        "Educators: prototype an interactive lesson activity or a small quiz app to try with a class",
+        "SMB owners: build a landing page or a simple internal tool and deploy it the same afternoon",
+        "Community leaders: mock up a program microsite to show stakeholders before committing budget"
+      ],
+      "narration": "Here's what's cool for our valley. Educators can prototype an interactive lesson activity or a small quiz app to try with a class; SMB owners can build a landing page or a simple internal tool and deploy it the same afternoon; Community leaders can mock up a program microsite to show stakeholders before committing budget."
+    },
+    {
+      "kind": "rules",
+      "title": "The rules — the AiGovOps way",
+      "lines": [
+        "A human on the trigger — you read it before it goes out",
+        "Keep the receipts — save your prompt and the answer",
+        "Mind the data cost of “free” — no student records, IEPs, or private details in a free tool"
+      ],
+      "narration": "Now the rules, the AiGovOps way. Keep a human on the trigger: you read it before it goes out. Keep the receipts: save your prompt and the answer. And mind the data cost of free — never paste student records, an I-E-P, or a customer's private details into a free tool, because free tools learn from what you type."
+    },
+    {
+      "kind": "outro",
+      "title": "Good AI, the NCW way.",
+      "sub": "NCW AI Camp · Aug 11, 2026 · AiGovOps Foundation",
+      "narration": "Good A-I, the NCW way. That's Bolt. Learn more at the NCW AI Camp. AiGovOps Foundation."
+    }
+  ]
+}
