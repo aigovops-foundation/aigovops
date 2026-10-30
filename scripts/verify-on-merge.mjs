@@ -61,7 +61,9 @@ export function isAllowedProofUrl(value) {
   const hostname = url.hostname.toLowerCase();
   return hostname === "aigovops-foundation.com" ||
     hostname.endsWith(".aigovops-foundation.com") ||
-    hostname.endsWith(".github.io");
+    hostname.endsWith(".github.io") ||
+    hostname === "aigovops.org" ||
+    hostname.endsWith(".aigovops.org");
 }
 
 export function extractProofUrls(issueBody, limit = MAX_PROOF_URLS) {
@@ -97,7 +99,6 @@ async function checkUrl(url, { fetchImpl, sleep, retryGapMs, timeoutMs }) {
     try {
       const response = await fetchImpl(url, {
         method: "GET",
-        redirect: "manual",
         signal: AbortSignal.timeout(timeoutMs),
       });
       status = response.status >= 200 && response.status < 300

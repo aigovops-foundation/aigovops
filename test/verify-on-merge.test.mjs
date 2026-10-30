@@ -54,6 +54,8 @@ test("allows only HTTPS URLs on approved hosts", () => {
     "https://aigovops-foundation.com",
     "https://status.aigovops-foundation.com/ready",
     "https://aigovops.github.io/path",
+    "https://aigovops.org",
+    "https://status.aigovops.org/ready",
   ]) assert.equal(isAllowedProofUrl(url), true, url);
   for (const url of [
     "http://aigovops-foundation.com",
@@ -96,7 +98,8 @@ test("all 2xx Proof URLs get the success comment without reopening", async () =>
     owner,
     repo,
     github,
-    fetchImpl: async (url) => {
+    fetchImpl: async (url, options) => {
+      assert.notEqual(options.redirect, "manual");
       requested.push(url);
       return { status: 204 };
     },
