@@ -66,7 +66,7 @@ test("allows only HTTPS URLs on approved hosts", () => {
   ]) assert.equal(isAllowedProofUrl(url), false, url);
 });
 
-test("reads the actual Proof heading, ignores other sections, and caps URLs at five", () => {
+test("reads the actual Proof heading and ignores other sections", () => {
   const proof = [
     "### Outcome",
     "https://ignored.aigovops-foundation.com/",
@@ -81,7 +81,39 @@ test("reads the actual Proof heading, ignores other sections, and caps URLs at f
     "https://proof-2.aigovops-foundation.com/check",
     "https://proof-3.aigovops-foundation.com/check",
     "https://proof-4.aigovops-foundation.com/check",
+    "https://proof-5.aigovops-foundation.com/check",
   ]);
+});
+
+test("caps Proof URL fetches at five across all linked issues", async () => {
+  const body = [
+    "### Proof",
+    "https://proof-0.aigovops-foundation.com/check",
+    "https://proof-1.aigovops-foundation.com/check",
+    "https://proof-2.aigovops-foundation.com/check",
+    "https://proof-3.aigovops-foundation.com/check",
+  ].join("\n");
+  const github = fakeGithub(body);
+  const requested = [];
+  const logs = [];
+  const result = await verifyOnMerge({
+    payload: { pull_request: { merged: true, body: "Fixes #12 and closes #13" } },
+    owner,
+    repo,
+    github,
+    fetchImpl: async (url) => {
+      requested.push(url);
+      return { status: 200 };
+    },
+    sleep: async () => {},
+    logger: (message) => logs.push(message),
+    initialWaitMs: 0,
+    retryGapMs: 0,
+    timeoutMs: 100,
+  });
+  assert.deepEqual(result, { issues: 2, urls: 5 });
+  assert.equal(requested.length, 5);
+  assert.equal(logs.filter((message) => message.endsWith("not checked (cap)")).length, 3);
 });
 
 test("all 2xx Proof URLs get the success comment without reopening", async () => {

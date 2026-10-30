@@ -66,7 +66,7 @@ export function isAllowedProofUrl(value) {
     hostname.endsWith(".aigovops.org");
 }
 
-export function extractProofUrls(issueBody, limit = MAX_PROOF_URLS) {
+export function extractProofUrls(issueBody) {
   const lines = String(issueBody || "").split(/\r?\n/);
   const heading = lines.findIndex((line) => /^###\s+Proof\s*$/i.test(line.trim()));
   if (heading < 0) return [];
@@ -88,7 +88,6 @@ export function extractProofUrls(issueBody, limit = MAX_PROOF_URLS) {
     if (seen.has(normalized)) continue;
     seen.add(normalized);
     urls.push(normalized);
-    if (urls.length >= limit) break;
   }
   return urls;
 }
@@ -145,6 +144,12 @@ export async function verifyOnMerge({
       logger(`no allowed Proof URLs on ${reference.owner}/${reference.repo}#${reference.number}`);
       continue;
     }
+    const remaining = Math.max(0, MAX_PROOF_URLS - checkedUrls);
+    const urlsToCheck = urls.slice(0, remaining);
+    for (const url of urls.slice(urlsToCheck.length)) {
+      logger(`${url} not checked (cap)`);
+    }
+    if (urlsToCheck.length === 0) continue;
     if (!waited) {
       waited = true;
       if (initialWaitMs > 0) {
@@ -153,16 +158,16 @@ export async function verifyOnMerge({
       }
     }
     checkedIssues++;
-    checkedUrls += urls.length;
+    checkedUrls += urlsToCheck.length;
     const results = [];
-    for (const url of urls) {
+    for (const url of urlsToCheck) {
       results.push(await checkUrl(url, { fetchImpl, sleep, retryGapMs, timeoutMs }));
     }
     const failed = results.filter((result) => !result.ok);
     if (failed.length === 0) {
       await github.createComment(
         reference,
-        `Verify on merge: ${urls.length}/${urls.length} Proof URLs answer 2xx`,
+        `Verify on merge: ${urlsToCheck.length}/${urlsToCheck.length} Proof URLs answer 2xx`,
       );
       continue;
     }
