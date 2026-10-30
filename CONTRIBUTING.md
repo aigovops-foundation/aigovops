@@ -22,6 +22,13 @@ never as a side channel.
   ticket, and stops there. A human merges.
 - `blocked` — waiting on a decision, a secret, or a person. Say which in a comment.
 - `estate-health`, `estate-uptime` — tickets filed by the Library's monitors.
+- `ready:lite` — starts a LITE automation run, for small, clear changes.
+- `ready:ultra` — starts an ULTRA automation run, for hard or escalated tickets.
+- `in-progress` — an automation run owns the ticket; it is removed when the run ends.
+- `discovered` — a side problem filed by automation instead of fixed inline.
+- `triaged` — the nightly triage has suggested a start label.
+
+A run that cannot finish escalates one step: lite → `ready` → `ready:ultra` → `blocked`.
 
 A ticket is done when its pull request merges and its **Proof** holds on the live
 estate. Close it from the PR body with the fully qualified form,
