@@ -28,4 +28,6 @@ copies comments or issue/PR body text into a receipt.
 | `acu` | Always `null` until a reliable source exists. |
 | `prev` | Previous row's hash, or `null` for the first row. |
 
+Reopened-then-reclosed issues get another row; the latest row for an issue wins.
+
 Run `node scripts/ticket-receipt.mjs --verify` to verify the chain.

@@ -167,39 +167,62 @@ function timestamp(value) {
   return Number.isFinite(parsed) ? parsed : null;
 }
 
-export function referencedPullRequestNumbers(timeline) {
-  const numbers = new Set();
+function repositoryCoordinates(fullName, owner, repo) {
+  const parts = typeof fullName === "string" ? fullName.split("/") : [];
+  if (parts.length === 2 && parts.every(Boolean)) return { owner: parts[0], repo: parts[1] };
+  return { owner, repo };
+}
+
+export function referencedPullRequestCandidates(timeline, owner, repo) {
+  const candidates = new Map();
   for (const event of timeline) {
     if (!["cross-referenced", "referenced"].includes(event.event)) continue;
     const sources = [event.source?.issue, event.source?.pull_request, event.source];
     for (const source of sources) {
       if (source?.pull_request && Number.isInteger(source.number) && source.number > 0) {
-        numbers.add(source.number);
+        const coordinates = repositoryCoordinates(
+          event.source?.issue?.repository?.full_name || source.repository?.full_name,
+          owner,
+          repo,
+        );
+        const candidate = { ...coordinates, number: source.number };
+        candidates.set(`${candidate.owner}/${candidate.repo}#${candidate.number}`, candidate);
       }
     }
   }
-  return [...numbers];
+  return [...candidates.values()];
 }
 
-export function closesIssue(body, owner, repo, issueNumber) {
+export function referencedPullRequestNumbers(timeline) {
+  return [...new Set(referencedPullRequestCandidates(timeline, "", "").map(({ number }) => number))];
+}
+
+export function closesIssue(body, owner, repo, issueNumber, prOwner = owner, prRepo = repo) {
   const pattern = /\b(?:fixes|closes|resolves)\s+(?:(?<owner>[A-Za-z0-9_.-]+)\/(?<repo>[A-Za-z0-9_.-]+))?#(?<issue>\d+)\b/gi;
   for (const match of String(body || "").matchAll(pattern)) {
     if (Number(match.groups.issue) !== issueNumber) continue;
-    if (match.groups.owner && (
-      match.groups.owner.toLowerCase() !== owner.toLowerCase() ||
-      match.groups.repo.toLowerCase() !== repo.toLowerCase()
-    )) continue;
+    if (match.groups.owner) {
+      if (match.groups.owner.toLowerCase() !== owner.toLowerCase() ||
+        match.groups.repo.toLowerCase() !== repo.toLowerCase()) continue;
+    } else if (prOwner.toLowerCase() !== owner.toLowerCase() ||
+      prRepo.toLowerCase() !== repo.toLowerCase()) continue;
     return true;
   }
   return false;
 }
 
+function pullRequestRepository(pull, owner, repo) {
+  return repositoryCoordinates(pull._receiptRepository, owner, repo);
+}
+
 export function selectMergedClosingPr(pullRequests, owner, repo, issue) {
   const closedAt = timestamp(issue.closed_at);
-  return pullRequests
-    .filter((pr) => pr.merged_at && timestamp(pr.merged_at) !== null &&
+  return pullRequests.filter((pr) => {
+    const prRepository = pullRequestRepository(pr, owner, repo);
+    return pr.merged_at && timestamp(pr.merged_at) !== null &&
       (!closedAt || timestamp(pr.merged_at) <= closedAt) &&
-      closesIssue(pr.body, owner, repo, issue.number))
+      closesIssue(pr.body, owner, repo, issue.number, prRepository.owner, prRepository.repo);
+  })
     .sort((a, b) => timestamp(b.merged_at) - timestamp(a.merged_at))[0] || null;
 }
 
@@ -235,7 +258,10 @@ export function extractTicketFields({ owner, repo, issue, timeline, pullRequests
     stateReason: issue.state_reason || null,
     startLabel: first?.name || null,
     finalRung: final?.name || null,
-    escalations: Math.max(0, rungEvents.length - 1),
+    escalations: rungEvents.slice(1).reduce(
+      (count, current, index) => count + Number(current.name !== rungEvents[index].name),
+      0,
+    ),
     blocked: timeline.some((event) => event.event === "labeled" && labelName(event.label) === "blocked"),
     discovered: labels.includes("discovered"),
     pr: pr?.number ?? null,
@@ -260,7 +286,11 @@ async function apiGet(path) {
       "x-github-api-version": "2022-11-28",
     },
   });
-  if (!response.ok) throw new TicketReceiptError(`GitHub API returned ${response.status} for ${path}`);
+  if (!response.ok) {
+    const error = new TicketReceiptError(`GitHub API returned ${response.status}`);
+    error.status = response.status;
+    throw error;
+  }
   return response.json();
 }
 
@@ -277,10 +307,10 @@ async function apiList(path, field = null) {
   throw new TicketReceiptError(`GitHub API pagination limit reached for ${path}`);
 }
 
-async function readCheckRuns(sha) {
+async function readCheckRuns(sha, repository) {
   const runs = [];
   for (let page = 1; page <= 100; page++) {
-    const data = await apiGet(`/repos/${process.env.GITHUB_REPOSITORY}/commits/${sha}/check-runs?per_page=${PAGE_SIZE}&page=${page}`);
+    const data = await apiGet(`/repos/${repository}/commits/${sha}/check-runs?per_page=${PAGE_SIZE}&page=${page}`);
     if (!Array.isArray(data.check_runs)) throw new TicketReceiptError("GitHub checks API did not return check runs");
     runs.push(...data.check_runs);
     if (data.check_runs.length < PAGE_SIZE) return runs;
@@ -288,13 +318,31 @@ async function readCheckRuns(sha) {
   throw new TicketReceiptError("GitHub checks API pagination limit reached");
 }
 
-async function collectPullRequests(timeline, owner, repo, issue) {
+export async function collectPullRequests(timeline, owner, repo, issue, {
+  fetchPullRequest = ({ owner: prOwner, repo: prRepo, number }) =>
+    apiGet(`/repos/${prOwner}/${prRepo}/pulls/${number}`),
+  logger = (status) => console.log(`skipping candidate PR (HTTP ${status})`),
+} = {}) {
   const candidates = [];
-  for (const number of referencedPullRequestNumbers(timeline)) {
-    const pull = await apiGet(`/repos/${owner}/${repo}/pulls/${number}`);
-    candidates.push(pull);
+  for (const candidate of referencedPullRequestCandidates(timeline, owner, repo)) {
+    try {
+      const pull = await fetchPullRequest(candidate);
+      candidates.push({ ...pull, _receiptRepository: `${candidate.owner}/${candidate.repo}` });
+    } catch (error) {
+      logger(Number.isInteger(error?.status) ? error.status : "unavailable");
+    }
   }
-  return candidates.filter((pull) => pull.merged_at && closesIssue(pull.body, owner, repo, issue.number));
+  return candidates.filter((pull) => {
+    const prRepository = pullRequestRepository(pull, owner, repo);
+    return pull.merged_at && closesIssue(
+      pull.body,
+      owner,
+      repo,
+      issue.number,
+      prRepository.owner,
+      prRepository.repo,
+    );
+  });
 }
 
 async function main(argv) {
@@ -331,7 +379,9 @@ async function main(argv) {
   const pullRequests = await collectPullRequests(timeline, owner, repo, issue);
   const pr = selectMergedClosingPr(pullRequests, owner, repo, issue);
   const ciConclusion = pr?.head?.sha
-    ? combinedCheckConclusion(await readCheckRuns(pr.head.sha))
+    ? await readCheckRuns(pr.head.sha, pr._receiptRepository)
+      .then(combinedCheckConclusion)
+      .catch(() => null)
     : null;
   const fields = extractTicketFields({ owner, repo, issue, timeline, pullRequests, ciConclusion });
   const entry = appendTicketReceipt(fields);
