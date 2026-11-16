@@ -25,6 +25,16 @@ Do, in order:
 5. Open one pull request against main whose body starts with "Fixes aigovops-foundation/<issue repository>#<number>" (always the fully qualified form; a bare #N would point at the PR repository), states the Outcome, shows the Proof (test output, URL, screenshot), and lists any `discovered` tickets you filed. Watch CI; fix red checks; answer review comments.
 6. Comment on the issue, remove `in-progress` (keep your start label so triage skips the ticket; a human retries by removing and re-adding it), then STOP:
    "Receipt — mode: <rung> · attempts: <n> · PR: <link> · result: <PR open, CI green | blocked: reason> · discovered: <links or none>"
+
+   Before posting that receipt, if the ticket's footer starts with "Filed from a Fo text"
+   and a PR exists, also text its link to Bob through the Wajo Fo MCP tool `ask_fo`:
+   `{"message":"Text me exactly this message: PR for <issue#>: <url>"}`.
+   Replace `<issue#>` with the fully qualified queue issue (for example,
+   `aigovops-foundation/aigovops#123`) and `<url>` with the actual PR URL. If `ask_fo` is
+   unavailable, say "Fo: Wajo Fo MCP ask_fo unavailable; PR link not texted" in the receipt
+   comment. If delivery fails or remains unconfirmed, report that instead of claiming it
+   was sent. If no PR exists, say so in the receipt; do not send a made-up link.
+
    Never merge, never push to main, never change repository settings, secrets, DNS, hosting, payments or data. A human merges.
 
 Bounded effort: if after three attempts CI is still red or the Proof cannot be met, follow your rung's "on failure" row in the table above.
