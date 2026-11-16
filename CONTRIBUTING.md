@@ -17,7 +17,8 @@ estate repository, not just this one. Work enters as a ticket (use the templates
 never as a side channel.
 
 - `queue` — every ticket carries it (set by the templates).
-- `ready` — a human adds it when the ticket is clear enough to start. Automation
+- `ready` — normally a human adds it when the ticket is clear enough to start; the narrow
+  Fo text intake exception is defined in [queue/TRIAGE.md](queue/TRIAGE.md). Automation
   picks up `ready` tickets, works on a branch, opens a pull request that links the
   ticket, and stops there. A human merges.
 - `blocked` — waiting on a decision, a secret, or a person. Say which in a comment.

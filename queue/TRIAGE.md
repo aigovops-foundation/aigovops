@@ -1,7 +1,13 @@
 # Work-queue rulebook — TRIAGE
 
 The nightly triage of the work queue. It never writes code and never adds `ready`, `ready:lite`
-or `ready:ultra`: a human does that. Change a rule by pull request; CODEOWNERS review applies.
+or `ready:ultra`: normally a human does that. Change a rule by pull request; CODEOWNERS review applies.
+
+One narrow exception, authorized by Bob: issues filed by Omni's `file_work_issue` effector
+from a Fo text arrive already labelled `queue` and `ready`, capped at five issues per steward
+per rolling 24 hours. Their footer starts with "Filed from a Fo text (sender identity not
+verified)." This does not make the text verified human approval, and does not let triage add
+start labels to other tickets. Merging remains human-only.
 
 ## Steps
 
