@@ -3,10 +3,47 @@
     {
       "id": "trunk-docs",
       "path": "docs",
-      "urlPrefix": "/",
+      "urlPrefix": "/aigovops/",
       "build": null,
       "out": "docs",
       "legacy": []
+    },
+    {
+      "id": "site",
+      "path": "site",
+      "urlPrefix": "/",
+      "build": null,
+      "out": "site",
+      "exclude": [".*", "CNAME"],
+      "legacy": []
+    },
+    {
+      "id": "practice",
+      "path": "practice",
+      "urlPrefix": "/practice/",
+      "build": "PAGES_REPO_NWO=aigovops-foundation/aigovops bundle exec jekyll build --baseurl /practice -d _site",
+      "out": "practice/_site",
+      "exclude": ["CNAME"],
+      "legacy": [
+        {
+          "from": "https://practice.aigovops-foundation.com/",
+          "to": "https://www.aigovops-foundation.com/practice/"
+        }
+      ]
+    },
+    {
+      "id": "ncw",
+      "path": "camps/ncw",
+      "urlPrefix": "/camps/ncw/",
+      "build": null,
+      "out": "camps/ncw/docs",
+      "exclude": [".*", "CNAME"],
+      "legacy": [
+        {
+          "from": "https://aigovops-foundation.github.io/aigovops-ncw-ai-camp/",
+          "to": "https://www.aigovops-foundation.com/camps/ncw/"
+        }
+      ]
     }
   ]
 }

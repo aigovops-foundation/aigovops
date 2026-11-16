@@ -1,0 +1,48 @@
+{
+  "slug": "khanmigo",
+  "tool": "Khanmigo",
+  "voice": "narrator",
+  "slides": [
+    {
+      "kind": "title",
+      "title": "Khanmigo",
+      "sub": "A 90-second guide · AiGovOps Foundation",
+      "narration": "A ninety-second guide to Khanmigo, from the AiGovOps Foundation and the NCW AI Camp."
+    },
+    {
+      "kind": "tool",
+      "title": "What it is",
+      "lines": [
+        "Khanmigo is Khan Academy's education-focused AI, designed as a Socratic tutor for students and a planning assistant for teachers.",
+        "Rather than just handing over answers, it coaches students through problems.",
+        "U.S."
+      ],
+      "narration": "Khanmigo is Khan Academy's education-focused AI, designed as a Socratic tutor for students and a planning assistant for teachers. Rather than just handing over answers, it coaches students through problems. There's a free tier to start."
+    },
+    {
+      "kind": "cool",
+      "title": "What's cool for NCW",
+      "lines": [
+        "Educators: generate lesson plans, exit tickets, and rubrics aligned to standards — free for U",
+        "Educators: give students a tutor that nudges instead of spoon-feeds, keeping the thinking with the learner"
+      ],
+      "narration": "Here's what's cool for our valley. Educators can generate lesson plans, exit tickets, and rubrics aligned to standards — free for U; Educators can give students a tutor that nudges instead of spoon-feeds, keeping the thinking with the learner."
+    },
+    {
+      "kind": "rules",
+      "title": "The rules — the AiGovOps way",
+      "lines": [
+        "A human on the trigger — you read it before it goes out",
+        "Keep the receipts — save your prompt and the answer",
+        "Mind the data cost of “free” — no student records, IEPs, or private details in a free tool"
+      ],
+      "narration": "Now the rules, the AiGovOps way. Keep a human on the trigger: you read it before it goes out. Keep the receipts: save your prompt and the answer. And mind the data cost of free — never paste student records, an I-E-P, or a customer's private details into a free tool, because free tools learn from what you type."
+    },
+    {
+      "kind": "outro",
+      "title": "Good AI, the NCW way.",
+      "sub": "NCW AI Camp · Aug 11, 2026 · AiGovOps Foundation",
+      "narration": "Good A-I, the NCW way. That's Khanmigo. Learn more at the NCW AI Camp. AiGovOps Foundation."
+    }
+  ]
+}

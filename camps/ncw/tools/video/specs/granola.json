@@ -1,0 +1,49 @@
+{
+  "slug": "granola",
+  "tool": "Granola",
+  "voice": "narrator",
+  "slides": [
+    {
+      "kind": "title",
+      "title": "Granola",
+      "sub": "A 90-second guide · AiGovOps Foundation",
+      "narration": "A ninety-second guide to Granola, from the AiGovOps Foundation and the NCW AI Camp."
+    },
+    {
+      "kind": "tool",
+      "title": "What it is",
+      "lines": [
+        "Granola is a Mac-first meeting notetaker that transcribes your calls and combines the transcript with your own typed notes into a polished…",
+        "It works across video platforms without a clunky meeting bot.",
+        "There's a limited free trial, after which it becomes a paid subscription."
+      ],
+      "narration": "Granola is a Mac-first meeting notetaker that transcribes your calls and combines the transcript with your own typed notes into a polished summary. It works across video platforms without a clunky meeting bot. There's a free tier to start."
+    },
+    {
+      "kind": "cool",
+      "title": "What's cool for NCW",
+      "lines": [
+        "Educators: capture IEP-team or parent meetings, then review and edit the AI summary before sharing (two-eyes rule)",
+        "SMB owners: turn a client call into an action list and a follow-up email draft",
+        "Community leaders: keep clean, searchable minutes from board and committee meetings"
+      ],
+      "narration": "Here's what's cool for our valley. Educators can capture IEP-team or parent meetings, then review and edit the AI summary before sharing (two-eyes rule); SMB owners can turn a client call into an action list and a follow-up email draft; Community leaders can keep clean, searchable minutes from board and committee meetings."
+    },
+    {
+      "kind": "rules",
+      "title": "The rules — the AiGovOps way",
+      "lines": [
+        "A human on the trigger — you read it before it goes out",
+        "Keep the receipts — save your prompt and the answer",
+        "Mind the data cost of “free” — no student records, IEPs, or private details in a free tool"
+      ],
+      "narration": "Now the rules, the AiGovOps way. Keep a human on the trigger: you read it before it goes out. Keep the receipts: save your prompt and the answer. And mind the data cost of free — never paste student records, an I-E-P, or a customer's private details into a free tool, because free tools learn from what you type."
+    },
+    {
+      "kind": "outro",
+      "title": "Good AI, the NCW way.",
+      "sub": "NCW AI Camp · Aug 11, 2026 · AiGovOps Foundation",
+      "narration": "Good A-I, the NCW way. That's Granola. Learn more at the NCW AI Camp. AiGovOps Foundation."
+    }
+  ]
+}

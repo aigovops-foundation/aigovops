@@ -1,0 +1,49 @@
+{
+  "slug": "chatgpt",
+  "tool": "ChatGPT",
+  "voice": "narrator",
+  "slides": [
+    {
+      "kind": "title",
+      "title": "ChatGPT",
+      "sub": "A 90-second guide · AiGovOps Foundation",
+      "narration": "A ninety-second guide to ChatGPT, from the AiGovOps Foundation and the NCW AI Camp."
+    },
+    {
+      "kind": "tool",
+      "title": "What it is",
+      "lines": [
+        "ChatGPT is OpenAI's flagship assistant for chat, writing, coding, data analysis, and image generation.",
+        "The free tier now includes capable models, web browsing, and limited image generation.",
+        "Plus and Pro unlock the most advanced reasoning models, higher limits, and features like advanced voice and deep research."
+      ],
+      "narration": "ChatGPT is OpenAI's flagship assistant for chat, writing, coding, data analysis, and image generation. The free tier now includes capable models, web browsing, and limited image generation. There's a free tier to start."
+    },
+    {
+      "kind": "cool",
+      "title": "What's cool for NCW",
+      "lines": [
+        "Educators: generate differentiated reading passages, draft IEP goal language (then review every line), or build a quiz with an answer key",
+        "SMB owners: write job descriptions, analyze a CSV of expenses, or generate product photos for a listing",
+        "Community leaders: draft a grant narrative, turn a survey into talking points, or brainstorm event names"
+      ],
+      "narration": "Here's what's cool for our valley. Educators can generate differentiated reading passages, draft IEP goal language (then review every line), or build a quiz with an answer key; SMB owners can write job descriptions, analyze a CSV of expenses, or generate product photos for a listing; Community leaders can draft a grant narrative, turn a survey into talking points, or brainstorm event names."
+    },
+    {
+      "kind": "rules",
+      "title": "The rules — the AiGovOps way",
+      "lines": [
+        "A human on the trigger — you read it before it goes out",
+        "Keep the receipts — save your prompt and the answer",
+        "Mind the data cost of “free” — no student records, IEPs, or private details in a free tool"
+      ],
+      "narration": "Now the rules, the AiGovOps way. Keep a human on the trigger: you read it before it goes out. Keep the receipts: save your prompt and the answer. And mind the data cost of free — never paste student records, an I-E-P, or a customer's private details into a free tool, because free tools learn from what you type."
+    },
+    {
+      "kind": "outro",
+      "title": "Good AI, the NCW way.",
+      "sub": "NCW AI Camp · Aug 11, 2026 · AiGovOps Foundation",
+      "narration": "Good A-I, the NCW way. That's ChatGPT. Learn more at the NCW AI Camp. AiGovOps Foundation."
+    }
+  ]
+}

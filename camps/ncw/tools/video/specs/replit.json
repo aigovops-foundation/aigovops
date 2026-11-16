@@ -1,0 +1,49 @@
+{
+  "slug": "replit",
+  "tool": "Replit",
+  "voice": "narrator",
+  "slides": [
+    {
+      "kind": "title",
+      "title": "Replit",
+      "sub": "A 90-second guide · AiGovOps Foundation",
+      "narration": "A ninety-second guide to Replit, from the AiGovOps Foundation and the NCW AI Camp."
+    },
+    {
+      "kind": "tool",
+      "title": "What it is",
+      "lines": [
+        "Replit is a browser-based coding platform where you can write, run, and host software without installing anything.",
+        "Its AI Agent can build entire apps from a description, while still letting you (or a developer) edit the code.",
+        "There's a free tier to learn and experiment, with paid plans (and Lenny's bundle) for more Agent power and hosting."
+      ],
+      "narration": "Replit is a browser-based coding platform where you can write, run, and host software without installing anything. Its AI Agent can build entire apps from a description, while still letting you (or a developer) edit the code. There's a free tier to start."
+    },
+    {
+      "kind": "cool",
+      "title": "What's cool for NCW",
+      "lines": [
+        "Educators: teach coding in the browser with nothing to install on school Chromebooks",
+        "SMB owners: build and host a small internal app, with the option to bring in a developer later",
+        "Community leaders: prototype a data dashboard for your program's metrics"
+      ],
+      "narration": "Here's what's cool for our valley. Educators can teach coding in the browser with nothing to install on school Chromebooks; SMB owners can build and host a small internal app, with the option to bring in a developer later; Community leaders can prototype a data dashboard for your program's metrics."
+    },
+    {
+      "kind": "rules",
+      "title": "The rules — the AiGovOps way",
+      "lines": [
+        "A human on the trigger — you read it before it goes out",
+        "Keep the receipts — save your prompt and the answer",
+        "Mind the data cost of “free” — no student records, IEPs, or private details in a free tool"
+      ],
+      "narration": "Now the rules, the AiGovOps way. Keep a human on the trigger: you read it before it goes out. Keep the receipts: save your prompt and the answer. And mind the data cost of free — never paste student records, an I-E-P, or a customer's private details into a free tool, because free tools learn from what you type."
+    },
+    {
+      "kind": "outro",
+      "title": "Good AI, the NCW way.",
+      "sub": "NCW AI Camp · Aug 11, 2026 · AiGovOps Foundation",
+      "narration": "Good A-I, the NCW way. That's Replit. Learn more at the NCW AI Camp. AiGovOps Foundation."
+    }
+  ]
+}

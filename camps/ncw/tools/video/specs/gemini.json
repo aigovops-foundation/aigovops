@@ -1,0 +1,49 @@
+{
+  "slug": "gemini",
+  "tool": "Gemini",
+  "voice": "narrator",
+  "slides": [
+    {
+      "kind": "title",
+      "title": "Gemini",
+      "sub": "A 90-second guide · AiGovOps Foundation",
+      "narration": "A ninety-second guide to Gemini, from the AiGovOps Foundation and the NCW AI Camp."
+    },
+    {
+      "kind": "tool",
+      "title": "What it is",
+      "lines": [
+        "Gemini is Google's general-purpose AI model, available as a free web chat and inside Workspace (Docs, Gmail, Sheets).",
+        "It handles long documents, images, and live web grounding, and connects to your Google Drive.",
+        "The free tier covers most everyday tasks; paid unlocks the most capable models, larger context, and Workspace integration."
+      ],
+      "narration": "Gemini is Google's general-purpose AI model, available as a free web chat and inside Workspace (Docs, Gmail, Sheets). It handles long documents, images, and live web grounding, and connects to your Google Drive. There's a free tier to start."
+    },
+    {
+      "kind": "cool",
+      "title": "What's cool for NCW",
+      "lines": [
+        "Educators: draft a rubric inside Google Docs, summarize a 30-page district policy, or turn lesson notes into a parent newsletter",
+        "SMB owners: pull insights from a Sheet of monthly sales, draft vendor emails in Gmail, or analyze a scanned invoice",
+        "Community leaders: summarize a long meeting transcript, translate a flyer into Spanish, or fact-check a claim with live web grounding"
+      ],
+      "narration": "Here's what's cool for our valley. Educators can draft a rubric inside Google Docs, summarize a 30-page district policy, or turn lesson notes into a parent newsletter; SMB owners can pull insights from a Sheet of monthly sales, draft vendor emails in Gmail, or analyze a scanned invoice; Community leaders can summarize a long meeting transcript, translate a flyer into Spanish, or fact-check a claim with live web grounding."
+    },
+    {
+      "kind": "rules",
+      "title": "The rules — the AiGovOps way",
+      "lines": [
+        "A human on the trigger — you read it before it goes out",
+        "Keep the receipts — save your prompt and the answer",
+        "Mind the data cost of “free” — no student records, IEPs, or private details in a free tool"
+      ],
+      "narration": "Now the rules, the AiGovOps way. Keep a human on the trigger: you read it before it goes out. Keep the receipts: save your prompt and the answer. And mind the data cost of free — never paste student records, an I-E-P, or a customer's private details into a free tool, because free tools learn from what you type."
+    },
+    {
+      "kind": "outro",
+      "title": "Good AI, the NCW way.",
+      "sub": "NCW AI Camp · Aug 11, 2026 · AiGovOps Foundation",
+      "narration": "Good A-I, the NCW way. That's Gemini. Learn more at the NCW AI Camp. AiGovOps Foundation."
+    }
+  ]
+}

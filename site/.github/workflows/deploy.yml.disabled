@@ -1,0 +1,39 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# DISABLED 2026-06-03 (PR #9).
+# This workflow rsync-deployed the site to Hostinger over SSH. It was failing
+# intermittently and, after the production health check, we found the Hostinger
+# apex (aigovops-foundation.com) was serving an unrelated WordPress placeholder
+# rather than this deploy target.
+#
+# Migration plan (Route A): GitHub Pages will serve BOTH apex and www. Hostinger
+# is retained only as the domain registrar. This Hostinger deploy is therefore
+# retired. To re-enable, rename back to `deploy.yml` and confirm SSH_REMOTE_PATH
+# points at the correct, intended web root.
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy via rsync over SSH
+        uses: burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -avzr --delete --exclude='.git' --exclude='.github' --exclude='README.md' --exclude='COPY.md' --exclude='WIX-MAPPING.md' --exclude='wix-changelog'
+          path: ./
+          remote_path: ${{ secrets.SSH_REMOTE_PATH }}
+          remote_host: ${{ secrets.SSH_HOST }}
+          remote_port: ${{ secrets.SSH_PORT }}
+          remote_user: ${{ secrets.SSH_USER }}
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}

@@ -1,0 +1,106 @@
+name: publish-content
+
+# Drop a story in content/stories/ and it publishes. This renders Markdown into the blog, the
+# blog index and the RSS feed, and commits the result to main — GitHub Pages serves main, so the
+# post is live within a minute. A story dated in the future waits until its Tuesday. Same shape as fetch-linkedin-posts.yml (an automated commit of
+# generated files). Hand-made posts are never touched.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/content/**"
+      - "site/scripts/build_content.py"
+      - ".github/workflows/site-publish-content.yml"
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * 2"    # Tuesdays 06:00 UTC — a story dated today publishes itself; drafts for next week are written
+
+defaults:
+  run:
+    working-directory: site
+
+concurrency:
+  group: publish-content
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet markdown
+      - name: Self-test the pipeline (throwaway copy; nothing real is touched)
+        run: python3 scripts/test_build_content.py
+      - name: Render stories + newsletter and LinkedIn drafts (Spanish pages translate once, then cache)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 scripts/build_content.py
+      - name: Refresh AI answer-engine files
+        run: node scripts/build-llms-txt.mjs
+      - name: Commit what changed
+        env:
+          # So the self-test's import of build_content.py stops writing
+          # scripts/__pycache__/*.pyc into the tree on every run (review council,
+          # 2026-09-30). The .pyc was TRACKED, so .gitignore never applied to it, and
+          # `git add -A` re-committed a byte-different copy every run — a fresh
+          # checkout restamps the source mtime, so the bytecode header changed each
+          # time. That made "No changes to commit." dead code and pushed an
+          # unreviewable binary to the branch Pages serves.
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # THE OUTPUT CONTRACT. These are build_content.py's write targets, and this
+          # list is the only place in the repo that records them — which is why #154
+          # deleting it in favour of a bare `git add -A` was the wrong fix for #153.
+          # #153's bug was that this list had drifted (founders.html was missing); the
+          # answer is to keep the list and fail loudly when reality leaves it, not to
+          # stage the whole runner workspace onto a public web root.
+          #
+          # Keep in step with the constants in scripts/build_content.py:
+          #   BLOG_INDEX=blog.html  FEED=feed.xml  SITEMAP=sitemap.xml  DRAFTS=content/drafts
+          #   TRANSLATIONS=content/translations  FOUNDERS_HTML=founders.html  blog/
+          #   AEO indexes=llms.txt llms-full.txt
+          # scripts/test-publish-contract.py asserts this list still covers them.
+          OUTPUTS="blog blog.html feed.xml sitemap.xml founders.html content/drafts content/translations llms.txt llms-full.txt"
+          # -A over the pathspec, not bare: -A still handles deletes and renames inside
+          # those paths, which a plain `git add` does not, and that was the other half of
+          # what #154 was reaching for.
+          git add -A -- $OUTPUTS
+          # Anything dirty OUTSIDE the contract is the signal #153 never got. Fail on it
+          # rather than committing it: a new write target is a one-line change here, and
+          # a surprise file in the tree is exactly what must not reach a public URL.
+          if [ -n "$(git status --porcelain --untracked-files=all -- . ':(exclude)blog' ':(exclude)blog.html' ':(exclude)feed.xml' ':(exclude)sitemap.xml' ':(exclude)founders.html' ':(exclude)content/drafts' ':(exclude)content/translations' ':(exclude)llms.txt' ':(exclude)llms-full.txt')" ]; then
+            echo "::error::publish-content: the build left files outside its declared outputs — add them to OUTPUTS here if they are intended, or stop writing them:"
+            git status --porcelain --untracked-files=all -- . ':(exclude)blog' ':(exclude)blog.html' ':(exclude)feed.xml' ':(exclude)sitemap.xml' ':(exclude)founders.html' ':(exclude)content/drafts' ':(exclude)content/translations' ':(exclude)llms.txt' ':(exclude)llms-full.txt'
+            exit 1
+          fi
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Publish stories from content/ [automated $(date -u +%Y-%m-%d)]"
+            # Two merges a minute apart once made this push non-fast-forward (2026-09-13); rebase and retry.
+            pushed=0
+            for i in 1 2 3; do
+              if git pull --rebase origin main && git push; then
+                pushed=1
+                break
+              fi
+              echo "push attempt $i failed; retrying"; sleep 15
+            done
+            # A silent failure here is what let this drift for two weeks — fail the job loudly instead,
+            # so a stuck push shows up as red CI rather than as a commit that never arrives.
+            if [ "$pushed" != "1" ]; then
+              echo "::error::publish-content: commit made locally but never reached origin/main after 3 push attempts"
+              exit 1
+            fi
+          fi

@@ -1,0 +1,27 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+
+# Local builds
+node_modules/
+dist/
+
+# Capture rig — browser sessions NEVER get committed (1Password is the home)
+.capture-sessions/
+
+# Playwright / test artifacts
+playwright-report/
+test-results/
+.playwright/
+*.log
+
+tools/video/stage/

@@ -1,0 +1,49 @@
+{
+  "slug": "gamma",
+  "tool": "Gamma",
+  "voice": "narrator",
+  "slides": [
+    {
+      "kind": "title",
+      "title": "Gamma",
+      "sub": "A 90-second guide · AiGovOps Foundation",
+      "narration": "A ninety-second guide to Gamma, from the AiGovOps Foundation and the NCW AI Camp."
+    },
+    {
+      "kind": "tool",
+      "title": "What it is",
+      "lines": [
+        "Gamma turns a prompt or an outline into a finished presentation, webpage, or document in seconds.",
+        "It handles layout, images, and styling so you don't fight with slide formatting.",
+        "The free tier gives you starter credits; paid plans remove the Gamma badge, add unlimited generations, and unlock custom branding."
+      ],
+      "narration": "Gamma turns a prompt or an outline into a finished presentation, webpage, or document in seconds. It handles layout, images, and styling so you don't fight with slide formatting. There's a free tier to start."
+    },
+    {
+      "kind": "cool",
+      "title": "What's cool for NCW",
+      "lines": [
+        "Educators: turn lesson notes into a clean slide deck or a parent-night presentation in minutes",
+        "SMB owners: build a pitch deck, a one-page service menu, or an investor update without a designer",
+        "Community leaders: produce a board presentation or a grant summary that looks professional fast"
+      ],
+      "narration": "Here's what's cool for our valley. Educators can turn lesson notes into a clean slide deck or a parent-night presentation in minutes; SMB owners can build a pitch deck, a one-page service menu, or an investor update without a designer; Community leaders can produce a board presentation or a grant summary that looks professional fast."
+    },
+    {
+      "kind": "rules",
+      "title": "The rules — the AiGovOps way",
+      "lines": [
+        "A human on the trigger — you read it before it goes out",
+        "Keep the receipts — save your prompt and the answer",
+        "Mind the data cost of “free” — no student records, IEPs, or private details in a free tool"
+      ],
+      "narration": "Now the rules, the AiGovOps way. Keep a human on the trigger: you read it before it goes out. Keep the receipts: save your prompt and the answer. And mind the data cost of free — never paste student records, an I-E-P, or a customer's private details into a free tool, because free tools learn from what you type."
+    },
+    {
+      "kind": "outro",
+      "title": "Good AI, the NCW way.",
+      "sub": "NCW AI Camp · Aug 11, 2026 · AiGovOps Foundation",
+      "narration": "Good A-I, the NCW way. That's Gamma. Learn more at the NCW AI Camp. AiGovOps Foundation."
+    }
+  ]
+}

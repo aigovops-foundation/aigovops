@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://plausible.io https://www.aigovops-foundation.com https://community.aigovops-foundation.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; frame-src https://aigovops-foundation.github.io https://buy.stripe.com; connect-src 'self' https://plausible.io https://community.aigovops-foundation.com https://raw.githubusercontent.com; object-src 'none'; base-uri 'self'">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Is AiGovOps? And Why We Built the AiGovOps Foundation to Advance It | AiGovOps Foundation</title>
+  <meta name="description" content="Every AI system deployed without automated governance creates technical debt that compounds. Every compliance framework that exists only as a PDF is a..." />
+  <link rel="canonical" href="https://www.aigovops-foundation.com/blog/what-is-aigovops.html" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="What Is AiGovOps? And Why We Built the AiGovOps Foundation to Advance It" />
+  <meta property="og:description" content="Every AI system deployed without automated governance creates technical debt that compounds. Every compliance framework that exists only as a PDF is a..." />
+  <meta property="og:image" content="https://www.aigovops-foundation.com/images/blog/what-is-aigovops.webp" />
+  <meta property="og:url" content="https://www.aigovops-foundation.com/blog/what-is-aigovops.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="author" content="Ken Johnston" />
+  <link rel="stylesheet" href="../css/style.css?v=20261011b" />
+  <!-- M6b garden-warm skin (shared system) -->
+  <link rel="stylesheet" href="/fonts/fonts.css?v=20261011b" />
+  <link rel="stylesheet" href="../css/garden.css?v=20261011b" />
+  <link rel="stylesheet" href="../css/wren-cafe.css?v=20261011b" />
+  <script defer data-domain="aigovops-foundation.com" src="https://plausible.io/js/script.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "What Is AiGovOps? And Why We Built the AiGovOps Foundation to Advance It",
+    "datePublished": "2026-02-15",
+    "author": { "@type": "Person", "name": "Ken Johnston" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AiGovOps Foundation",
+      "logo": { "@type": "ImageObject", "url": "https://www.aigovops-foundation.com/images/logo.png" }
+    },
+    "image": "/images/blog/what-is-aigovops.webp",
+    "mainEntityOfPage": "https://www.aigovops-foundation.com/blog/what-is-aigovops.html",
+    "url": "https://www.aigovops-foundation.com/blog/what-is-aigovops.html"
+  }
+  </script>
+  <style>
+    /* ── Blog post — garden-warm skin (M6b) ── */
+    /* re-point the vars the inline article styles consume */
+    :root {
+      --teal-accessible: #1F5E3A;         /* eyebrow + back-links go garden green-ink */
+      --text: var(--garden-charcoal);     /* long-form body copy: charcoal on cream */
+      --muted: var(--garden-ink-soft);
+      --light: var(--garden-deep-cream);  /* "read the full article" panel ground */
+      --border: var(--garden-line);
+    }
+    /* footer-brand's mission paragraph is not the motto — keep it readable */
+    .footer-brand p:nth-of-type(2) { font-size: .85rem; font-weight: 400; letter-spacing: normal; text-transform: none; color: var(--garden-on-dark-dim); }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="../index.html" class="logo-link">
+      <span class="logo-text">AiGovOps Foundation</span>
+    </a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../library.html">Library</a>
+      <a href="../open-source.html">Open source</a>
+      <a href="../blog.html" class="active">Blog</a>
+      <a href="https://community.aigovops-foundation.com/signin.html" class="nav-join">Become a member</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </div>
+</header>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<main id="main-content">
+<article class="post-article" style="max-width:760px;margin:0 auto;padding:0 24px 64px">
+
+  <nav style="padding:24px 0 8px"><a href="../blog.html" style="color:var(--teal-accessible);font-size:.85rem;text-decoration:none">&larr; All posts</a></nav>
+
+  <header style="padding:16px 0 8px">
+    <p style="font-size:.72rem;font-weight:700;font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:.12em;color:var(--teal-accessible);margin-bottom:14px">AiGovOps Foundation &middot; Blog</p>
+    <h1 style="font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.15;margin-bottom:18px">What Is AiGovOps? And Why We Built the AiGovOps Foundation to Advance It</h1>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:.9rem">
+      <span style="font-weight:600;color:var(--text)">Ken Johnston</span>
+      <span>&middot;</span><span>February 2026</span>
+      <span>&middot;</span><span>6 min read</span>
+    </div>
+  </header>
+
+  <img src="/images/blog/what-is-aigovops.webp" alt="What Is AiGovOps? And Why We Built the AiGovOps Foundation to Advance It" loading="lazy" style="width:100%;border-radius:14px;margin:24px 0 32px;aspect-ratio:16/9;object-fit:cover" />
+
+  <div class="post-body" style="font-size:1.05rem;line-height:1.75;color:var(--text)">
+    <p style="margin-bottom:20px">Every AI system deployed without automated governance creates technical debt that compounds. Every compliance framework that exists only as a PDF is a liability waiting to surface.</p>
+    <p style="margin-bottom:20px">Most organizations today have responsible AI frameworks, ethics boards, and published commitments to fairness and transparency. The intentions are real. But governance lives in slide decks, not in pipelines — reviews happen late, evidence is scattered, and ownership is vague.</p>
+    <p style="margin-bottom:20px">AiGovOps is the practice of treating AI governance the way mature engineering teams treat code: versioned, tested, and verifiable before deployment. The AiGovOps Foundation exists to build the open tooling and standards that make this practical for any organization, not just those with six-figure compliance budgets.</p>
+  </div>
+
+  <div style="margin-top:40px;padding:28px;background:var(--light);border:1px solid var(--border);border-radius:14px">
+    <p style="font-size:.78rem;font-weight:700;font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:.1em;color:var(--teal-accessible);margin-bottom:10px">Read the full article</p>
+    <p style="margin-bottom:18px;color:var(--muted)">This is an editorial summary. The complete article is published on the AiGovOps Foundation blog.</p>
+    
+  </div>
+
+  <nav style="margin-top:40px;padding-top:24px;border-top:1px solid var(--border)">
+    <a href="../blog.html" style="color:var(--teal-accessible);text-decoration:none">&larr; Back to all posts</a>
+  </nav>
+
+</article>
+</main>
+
+<footer class="site-footer site-footer--line">
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 AiGovOps Foundation. All rights reserved. · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a> · <a href="mailto:bob.rapp@aigovops.community">Contact</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js?v=20261011b"></script>
+</body>
+</html>

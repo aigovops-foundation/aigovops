@@ -1,0 +1,173 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+ * Wren Café — the AiGovOps Foundation design system, as a layer.
+ * 11 September 2026. Loads AFTER css/garden.css (and porch.css on the home page).
+ * Source of truth: design/wren-cafe/DESIGN-SYSTEM.md + design/wren-cafe/tokens.css.
+ *
+ * What it does, in order:
+ *   1. Names the system's tokens (cream ground · charcoal ink · orchard green · one warm
+ *      accent · the chalkboard as the one dark surface) as --wc-* aliases.
+ *   2. Folds the legacy semantic tokens from style.css into the system, so anything
+ *      still reading --purple / --radius / --shadow renders in the café's terms.
+ *   3. One type stack: Fraunces speaks, Source Sans 3 explains, IBM Plex Mono labels.
+ *      'Courier New' retires everywhere.
+ *   4. Three radii, one focus ring, one label floor (12px), one icon style.
+ * ──────────────────────────────────────────────────────────────────────────── */
+:root {
+  /* the café's names for the garden tokens */
+  --wc-cream: var(--garden-cream);           --wc-deep-cream: var(--garden-deep-cream);
+  --wc-charcoal: var(--garden-charcoal);     --wc-ink-soft: var(--garden-ink-soft);
+  --wc-green: var(--garden-green);           --wc-green-ink: var(--garden-green-ink);
+  --wc-green-deep: var(--garden-green-deep); --wc-orange: var(--garden-orange);
+  --wc-orange-ink: var(--garden-orange-ink); --wc-gold: var(--garden-gold);
+  --wc-line: var(--garden-line);             --wc-card-line: var(--garden-card-line);
+  /* the chalkboard — the one dark surface beside charcoal (the practice pages, the demo) */
+  --wc-board: #22302F;   --wc-board-2: #1A2626;
+  --wc-chalk: #EFE9D8;   --wc-chalk-dim: #B3AD9D;   --wc-chalk-line: rgba(239,233,216,.18);
+  --wc-amber: #E0AC48;   --wc-coffee: #6B4A35;
+  /* type */
+  --wc-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --wc-sans: "Source Sans 3", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --wc-mono: "IBM Plex Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+  /* shape */
+  --wc-r-pill: 999px;  --wc-r-card: 14px;  --wc-r-door: 1.4rem;
+  --wc-shadow: var(--garden-shadow);  --wc-shadow-sm: var(--garden-shadow-sm);
+  --wc-focus: 2px solid var(--garden-gold);  --wc-focus-offset: 3px;
+  --wc-label-floor: .75rem; /* 12px */
+
+  /* 2. legacy semantic tokens, folded (style.css reads these) */
+  --purple: var(--garden-green);        --purple-dark: var(--garden-green-deep);
+  --purple-light: var(--garden-deep-cream);
+  --dark: var(--garden-charcoal);       --mid: var(--wc-board);
+  --light: var(--garden-cream);         --text: var(--garden-charcoal);
+  --muted: var(--garden-ink-soft);      --border: var(--garden-line);
+  --radius: var(--wc-r-card);           --shadow: var(--garden-shadow-sm);
+}
+
+/* 3. one type stack */
+body { font-family: var(--wc-sans); }
+h1, h2, h3, h4, .section-title, .action-label, .hero-movements, .stub-main h1 { font-family: var(--wc-serif); font-optical-sizing: auto; }
+.hero-eyebrow, .badge-pill, .toolkit-tag, .stub-eyebrow, .tool .tag, .cafe-lv, .pillar-num,
+#postsUpdated, .eyebrow, code, pre, kbd, samp, .mono { font-family: var(--wc-mono) !important; }
+
+/* the 12px floor for mono labels */
+.badge-pill { font-size: var(--wc-label-floor); }
+.toolkit-tag, .tool .tag, .cafe-lv, .stub-eyebrow { font-size: var(--wc-label-floor) !important; }
+.hero-eyebrow { font-size: var(--wc-label-floor); }
+
+/* 4. three radii */
+.btn, .btn-primary, .btn-outline, .btn-large, .main-nav a.nav-join, .stub-pill, .lang-toggle { border-radius: var(--wc-r-pill) !important; }
+.way, .tool, .cafe-door, .blog-card, .rec-asset, .asset, .asset-primary, .corpus-card, .toolkit-card, .gate-link, .founder-card, .support-tier, .watch { border-radius: var(--wc-r-card) !important; }
+.hero .action-card, .pillar-card { border-radius: var(--wc-r-door) !important; }
+
+/* one focus ring, every control */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible,
+[tabindex]:focus-visible, .cafe-door:focus-visible, .action-card:focus-visible, .btn:focus-visible {
+  outline: var(--wc-focus) !important; outline-offset: var(--wc-focus-offset); box-shadow: none;
+}
+
+/* one icon style — 24px grid, 1.8 stroke, currentColor; emoji retire */
+.wc-icon { width: 1.25em; height: 1.25em; display: inline-block; vertical-align: -.28em; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.action-icon .wc-icon { width: 26px; height: 26px; vertical-align: middle; }
+.hero .action-card:first-child .action-icon { color: #fff; }
+.hero .action-card.action-beacon .action-icon { color: var(--garden-gold); }
+.hero .action-card.action-gate .action-icon { color: var(--garden-green-ink); }
+.way-icon .wc-icon { width: 22px; height: 22px; color: var(--garden-green-ink); }
+.way-icon { line-height: 1; }
+.tool .tag .wc-icon, h3 .wc-icon, li .wc-icon, .go .wc-icon { margin-right: .35em; }
+
+/* the board — the chalkboard surface, for any page that needs the practice's dark */
+.wc-board { background: var(--wc-board); color: var(--wc-chalk); }
+.wc-board h1, .wc-board h2, .wc-board h3 { color: var(--wc-chalk); }
+.wc-board .muted, .wc-board p { color: var(--wc-chalk-dim); }
+.wc-board a { color: var(--wc-amber); }
+.wc-board .eyebrow { color: var(--wc-amber); }
+.wc-wren { font-family: var(--wc-serif); font-style: italic; font-weight: 500; color: var(--wc-coffee); }
+.wc-board .wc-wren { color: var(--wc-chalk); border-left: 3px solid var(--wc-amber); padding-left: .8em; }
+
+/* reduced motion: the system never depends on movement */
+@media (prefers-reduced-motion: reduce) {
+  .hero .action-card, .cafe-door, .pillar-card, .way, .tool, .btn { transition: none !important; transform: none !important; }
+}
+
+/* the licence and the standard, said once */
+.site-footer .footer-marks { font-family: var(--wc-mono); font-size: var(--wc-label-floor); letter-spacing: .08em; text-transform: uppercase; color: var(--garden-on-dark-dim); margin: 6px 0 10px; }
+
+/* the one path — three steps, one action each */
+.wc-path { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.wc-step { background: #fff; border: 1px solid var(--wc-card-line); border-radius: var(--wc-r-card); box-shadow: var(--wc-shadow-sm); padding: 24px 22px 22px; display: flex; flex-direction: column; gap: 8px; position: relative; }
+.wc-step-n { position: absolute; top: 18px; right: 20px; font-family: var(--wc-serif); font-size: 1.6rem; font-weight: 500; color: var(--wc-orange-ink); line-height: 1; }
+.wc-eyebrow { font-family: var(--wc-mono); font-size: var(--wc-label-floor); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--wc-green-ink); }
+.wc-step h3 { font-family: var(--wc-serif); font-size: 1.25rem; font-weight: 600; margin: 0; color: var(--wc-charcoal); padding-right: 2rem; }
+.wc-step p { margin: 0 0 8px; color: var(--wc-ink-soft); font-size: .95rem; line-height: 1.55; flex: 1; }
+.wc-step .btn { align-self: flex-start; }
+.wc-more { text-align: center; color: var(--wc-ink-soft); font-size: .95rem; margin: 26px auto 0; max-width: 70ch; line-height: 1.6; }
+.wc-more a { font-weight: 600; color: var(--wc-green-ink); }
+.wc-resources h2 { font-family: var(--wc-serif); font-size: 1.5rem; margin: 2.2rem 0 .6rem; padding-bottom: .3rem; border-bottom: 1px solid var(--wc-line); }
+.wc-resources h2:first-child { margin-top: 0; }
+.wc-resources h2 a { color: var(--wc-charcoal); text-decoration: none; }
+.wc-resources h2 a:hover { color: var(--wc-green-deep); }
+.wc-resources ul { list-style: none; margin: 0; padding: 0; }
+.wc-resources li { padding: 8px 0; border-bottom: 1px solid var(--wc-card-line); color: var(--wc-ink-soft); line-height: 1.55; }
+.wc-resources li a { font-weight: 600; color: var(--wc-green-ink); }
+.wc-resources .wc-note { color: var(--wc-ink-soft); font-size: .95rem; line-height: 1.6; margin: 10px 0 6px; }
+.wc-quotes li { font-family: var(--wc-serif); font-style: italic; color: var(--wc-coffee); }
+@media (max-width: 720px) { .wc-path { grid-template-columns: 1fr; } }
+
+/* M15 six actions — Wren Café tokens; offer-card anatomy (white, 14px, eyebrow, serif title, go-link pinned) */
+.six-section { padding: .25rem 0 2.2rem; }
+.six-title { font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: clamp(1.4rem, 2.5vw, 2rem); line-height: 1.2; margin: 0 0 .5rem; color: var(--wc-charcoal, #2B2B28); }
+.six-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+@media (max-width: 900px) { .six-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .six-grid { grid-template-columns: 1fr; } }
+.six-card { position: relative; display: flex; flex-direction: column; gap: .2rem; min-height: 9.5rem; padding: 10px 20px 22px; background: #fff; border: 1px solid rgba(43,43,40,.08); border-radius: 14px; color: var(--wc-ink-soft, #4C4A42); text-decoration: none; box-shadow: 0 1px 2px rgba(60,40,20,.06); transition: transform .15s, box-shadow .15s; }
+.six-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(60,40,20,.12); }
+.six-card:focus-visible { outline: 2px solid var(--wc-gold, #E8B54A); outline-offset: 3px; }
+.six-card b { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 1.15rem; line-height: 1.2; color: var(--wc-charcoal, #2B2B28); }
+.six-eyebrow { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-weight: 600; font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--wc-green-ink, #1F5E3A); }
+.six-d { font-size: .9rem; line-height: 1.3; }
+.six-go { position: absolute; left: 20px; bottom: 10px; font-weight: 700; color: var(--wc-green-ink, #1F5E3A); }
+.six-find { margin: 1.1rem 0 0; }
+.six-find a { color: var(--wc-green-ink, #1F5E3A); font-weight: 600; }
+@media (prefers-reduced-motion: reduce) { .six-card { transition: none; } .six-card:hover { transform: none; } }
+.six-find a { display: inline-flex; align-items: center; min-height: 44px; }
+.persona-chips { display: flex; flex-wrap: wrap; align-items: center; gap: .55rem; margin: 1.25rem 0 0; min-width: 0; }
+.persona-chips-prompt { flex-basis: 100%; color: var(--wc-charcoal, #2B2B28); font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 1.1rem; }
+.persona-chip { display: inline-flex; align-items: center; min-height: 44px; max-width: 100%; padding: .55rem .85rem; border: 1px solid rgba(43,43,40,.2); border-radius: 999px; background: #fff; color: var(--wc-green-ink, #1F5E3A); font-weight: 600; line-height: 1.25; overflow-wrap: anywhere; text-decoration: none; }
+.persona-chip:hover { text-decoration: underline; text-underline-offset: .18em; }
+.persona-chip:focus-visible { outline: 2px solid var(--wc-gold, #E8B54A); outline-offset: 3px; }
+.persona-container { width: min(100% - 2rem, 820px); margin-inline: auto; text-align: left; }
+.persona-hero { padding: 2rem 0 1rem; }
+.persona-hero h1 { margin: 0 0 .8rem; }
+.persona-hero .answer { max-width: 68ch; line-height: 1.7; }
+.persona-page section h2 { margin: 0 0 1rem; }
+.persona-journey, .persona-faq, .persona-related, .persona-next { padding: 2rem 0; }
+.persona-steps { display: grid; gap: .85rem; list-style: none; margin: 0; padding: 0; }
+.persona-step { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); gap: .5rem 1rem; min-width: 0; padding: 1.2rem; border: 1px solid var(--wc-card-line, rgba(43,43,40,.12)); border-radius: 14px; background: #fff; box-shadow: 0 1px 2px rgba(60,40,20,.06); }
+.persona-step-number { grid-column: 1; grid-row: 1 / span 4; display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: 50%; background: var(--wc-green-ink, #1F5E3A); color: #fff; font-weight: 700; }
+.persona-step h3, .persona-step p, .persona-step .btn, .persona-project-links { grid-column: 2; min-width: 0; margin: 0; }
+.persona-step h3 { color: var(--wc-charcoal, #2B2B28); font-family: 'Fraunces', Georgia, serif; }
+.persona-step p { line-height: 1.55; }
+.persona-step .btn { justify-self: start; max-width: 100%; min-height: 44px; white-space: normal; overflow-wrap: anywhere; text-align: center; }
+.persona-trust { padding: 1.25rem 0; background: var(--wc-deep-cream, #F1EBDD); }
+.persona-trust ul { display: flex; flex-wrap: wrap; gap: .6rem; list-style: none; margin: 0; padding: 0; }
+.persona-trust li { padding: .5rem .85rem; border: 1px solid rgba(43,43,40,.15); border-radius: 999px; background: #fff; color: var(--wc-charcoal, #2B2B28); font-weight: 600; line-height: 1.35; }
+.persona-faq details { border-bottom: 1px solid var(--wc-card-line, rgba(43,43,40,.12)); padding: 1rem 0; }
+.persona-faq summary { color: var(--wc-green-ink, #1F5E3A); cursor: pointer; font-weight: 700; }
+.persona-faq details p { margin: .7rem 0 0; line-height: 1.6; }
+.persona-related ul { display: grid; gap: .5rem; margin: 0; padding-left: 1.25rem; }
+.persona-related a { color: var(--wc-green-ink, #1F5E3A); text-underline-offset: .18em; }
+.persona-related a:hover, .persona-related a:focus-visible { text-decoration: underline; }
+.persona-project-links { display: grid; gap: .25rem; }
+.persona-project-links a { color: var(--wc-green-ink, #1F5E3A); line-height: 1.5; overflow-wrap: anywhere; }
+.persona-next { background: var(--wc-deep-cream, #F1EBDD); }
+.persona-next p { max-width: 60ch; margin: 0 0 1rem; }
+.persona-next .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; max-width: 100%; white-space: normal; overflow-wrap: anywhere; text-align: center; }
+.main-nav a { min-width: 44px; justify-content: center; text-align: center; }
+.footer-label {
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--garden-on-dark-dim);
+  margin-top: 10px;
+}

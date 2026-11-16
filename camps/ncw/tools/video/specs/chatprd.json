@@ -1,0 +1,49 @@
+{
+  "slug": "chatprd",
+  "tool": "ChatPRD",
+  "voice": "narrator",
+  "slides": [
+    {
+      "kind": "title",
+      "title": "ChatPRD",
+      "sub": "A 90-second guide · AiGovOps Foundation",
+      "narration": "A ninety-second guide to ChatPRD, from the AiGovOps Foundation and the NCW AI Camp."
+    },
+    {
+      "kind": "tool",
+      "title": "What it is",
+      "lines": [
+        "ChatPRD is an AI assistant specialized in product management: it drafts product requirement documents, user stories, and roadmaps, and…",
+        "It's a paid tool included in Lenny's bundle, built by and for people who write specs.",
+        "It's handy for anyone who needs to translate a fuzzy idea into a structured, build-ready document."
+      ],
+      "narration": "ChatPRD is an AI assistant specialized in product management: it drafts product requirement documents, user stories, and roadmaps, and coaches you on product thinking. It's a paid tool included in Lenny's bundle, built by and for people It's worth a look."
+    },
+    {
+      "kind": "cool",
+      "title": "What's cool for NCW",
+      "lines": [
+        "Educators: structure a proposal for a new program into a clear, fundable document",
+        "SMB owners: turn a 'we should build an app' idea into a real spec to hand a developer",
+        "Community leaders: write a crisp project brief that a partner or vendor can act on"
+      ],
+      "narration": "Here's what's cool for our valley. Educators can structure a proposal for a new program into a clear, fundable document; SMB owners can turn a 'we should build an app' idea into a real spec to hand a developer; Community leaders can write a crisp project brief that a partner or vendor can act on."
+    },
+    {
+      "kind": "rules",
+      "title": "The rules — the AiGovOps way",
+      "lines": [
+        "A human on the trigger — you read it before it goes out",
+        "Keep the receipts — save your prompt and the answer",
+        "Mind the data cost of “free” — no student records, IEPs, or private details in a free tool"
+      ],
+      "narration": "Now the rules, the AiGovOps way. Keep a human on the trigger: you read it before it goes out. Keep the receipts: save your prompt and the answer. And mind the data cost of free — never paste student records, an I-E-P, or a customer's private details into a free tool, because free tools learn from what you type."
+    },
+    {
+      "kind": "outro",
+      "title": "Good AI, the NCW way.",
+      "sub": "NCW AI Camp · Aug 11, 2026 · AiGovOps Foundation",
+      "narration": "Good A-I, the NCW way. That's ChatPRD. Learn more at the NCW AI Camp. AiGovOps Foundation."
+    }
+  ]
+}

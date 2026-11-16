@@ -68,7 +68,8 @@ export function renderStub(fromBase, toBase) {
 <head>
   <meta charset="utf-8">
   <meta name="robots" content="noindex">
-  <meta name="aigovops-redirect" content="${htmlEscape(`${from}|${to}`)}">
+  <meta name="aigovops-redirect-from" content="${htmlEscape(from)}">
+  <meta name="aigovops-redirect-to" content="${htmlEscape(to)}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="canonical" href="${htmlEscape(to)}">
   <title>Page moved</title>

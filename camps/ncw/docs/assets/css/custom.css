@@ -1,0 +1,277 @@
+/* ============================================================
+   NCW AI Expo 2026 — shared custom styles (beyond Tailwind CDN)
+   Palette: orchard #2E7D4F · signal #E07A2A · cream #FAF7F0 · charcoal #1F1F1F
+   Type: Lora (serif headlines) · Inter (body)
+   ============================================================ */
+
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+body { background-color: #FAF7F0; color: #1F1F1F; }
+/* Note: deliberately NOT setting -webkit-font-smoothing: antialiased.
+   That property thins glyphs on WebKit/macOS/iOS and causes axe-core
+   to read a lighter computed color, failing 4.5:1 contrast checks. */
+
+/* Scroll fade-in — progressive enhancement only.
+   Content is NEVER persistently hidden. There is no opacity:0 resting
+   state: no-JS visitors, search crawlers, axe-core, and headless
+   full-page captures (which never scroll, so an IntersectionObserver
+   below the fold never fires) all see the fully revealed page at every
+   instant. When JS runs, shared.js adds .js-fade to <html> and the
+   observer adds .shown as an element enters the viewport — the entrance
+   then plays as a one-shot keyframe animation that starts from the
+   faded pose. A user scrolling to the element sees the same fade-up as
+   before; anyone (or anything) that doesn't scroll sees full content. */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.js-fade .fade-in.shown { animation: fade-up .7s cubic-bezier(.16,1,.3,1) both; }
+@media (prefers-reduced-motion: reduce) {
+  .js-fade .fade-in.shown { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* Hover lift for cards */
+.lift { transition: transform .25s cubic-bezier(.16,1,.3,1), box-shadow .25s cubic-bezier(.16,1,.3,1); }
+.lift:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -12px rgba(31,31,31,.18); }
+
+/* <details> chevron */
+details > summary { list-style: none; cursor: pointer; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] .ev-chevron { transform: rotate(90deg); }
+.ev-chevron { transition: transform .2s ease; }
+
+/* count pop */
+@keyframes pop { 0%{transform:scale(1)} 40%{transform:scale(1.18)} 100%{transform:scale(1)} }
+.count-pop { animation: pop .5s ease; }
+
+/* editorial prose helpers */
+.prose-ncw p { max-width: 68ch; }
+.prose-ncw h3 { font-family: 'Lora', Georgia, serif; }
+
+/* scenario color tokens (mini-camps) */
+.sc-green  { --sc: #2E7D4F; --sc-soft: #E7F0EA; }
+.sc-blue   { --sc: #2E6FA3; --sc-soft: #E4EEF6; }
+.sc-yellow { --sc: #C99700; --sc-soft: #F6EECF; }
+.sc-orange { --sc: #E07A2A; --sc-soft: #F8E9DA; }
+.sc-purple { --sc: #7A4FB0; --sc-soft: #ECE4F4; }
+.sc-teal   { --sc: #146C72; --sc-soft: #DDEEEF; }
+.sc-clay   { --sc: #8A3A2E; --sc-soft: #F6E3DF; }
+
+/* Fill-in-the-blank rule for the printable First-30-Days checklist */
+.cl-fill { display: inline-block; min-width: 8rem; max-width: 100%; border-bottom: 1.5px solid rgba(31,31,31,.4); }
+
+/* gentle grain-free divider */
+.rule-soft { height: 1px; background: linear-gradient(90deg, transparent, rgba(31,31,31,.12), transparent); }
+
+/* ===== Print styles — for "Print this camp" ===== */
+@media print {
+  #site-header, #site-footer, .no-print { display: none !important; }
+  body { background: #fff !important; }
+  .print-only { display: block !important; }
+  .camp-card { break-inside: avoid; box-shadow: none !important; border: 1px solid #ccc !important; }
+  a[href]:after { content: ""; }
+}
+.print-only { display: none; }
+
+/* focus ring */
+:focus-visible { outline: 2px solid #2E7D4F; outline-offset: 3px; border-radius: 6px; }
+
+/* ===== Tools / Hint-Logs sections ===== */
+/* Tool pages use the bare URL as its own link text, so a single "word" can run
+   80+ characters. These carried Tailwind's `break-words`, but break-word lets a
+   long word wrap without shrinking its min-content contribution, so in WebKit
+   the enclosing grid track never narrowed past the URL and the page scrolled
+   sideways at 390px. `anywhere` does shrink it. It lives here rather than as a
+   utility because the Tailwind CDN sheet loads after this file, so `break-words`
+   would win on source order -- the class was removed from the markup instead. */
+.alink { color:#2E7D4F; font-weight:600; text-decoration:underline; text-decoration-color:rgba(46,125,79,.35); text-underline-offset:2px; transition:color .15s ease; overflow-wrap:anywhere; }
+.alink:hover { color:#23613D; text-decoration-color:#23613D; }
+.hl-table th, .hl-table td { vertical-align: top; }
+
+/* ============================================================
+   WCAG 2.1 AA color-contrast overrides (4.5:1 minimum for normal
+   text, 3:1 for large text >= 18pt or >= 14pt bold).
+
+   These overrides are scoped via attribute selectors so they only
+   affect the Tailwind utility classes that failed axe-core in CI.
+   The brand palette (signal #E07A2A · orchard #2E7D4F · cream
+   #FAF7F0 · charcoal #1F1F1F) is preserved everywhere it already
+   meets 4.5:1 — these rules only patch the specific failing
+   combinations.
+
+   References:
+   - https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html
+   - axe color-contrast: https://dequeuniversity.com/rules/axe/4.11/color-contrast
+   ============================================================ */
+
+/* 1. Signal-on-white buttons / pills hit only 3:1 with #E07A2A.
+      Use exact-token match ([class~]) so we don't accidentally
+      catch bg-signal/12, bg-signal-dark, etc. #8C4717 on white
+      gives 7.0:1 — clears AA on both Chromium AND WebKit (which
+      computes contrast slightly differently due to subpixel rules).  */
+html [class~="bg-signal"] {
+  background-color: #8C4717 !important;
+}
+html [class~="bg-signal"]:hover,
+html [class~="hover:bg-signal-dark"]:hover {
+  background-color: #6F3812 !important;
+}
+
+/* 2. text-signal on cream/white. WebKit/Safari font-smoothing pushes
+      computed contrast down further than we'd expect; we saw 4.13–4.27:1
+      with #8C4717 on cream/white tints. Drop to #6B340F (8.5:1 cream,
+      9.1:1 white) which clears AA on every engine.                     */
+html [class~="text-signal"],
+html [class~="text-signal-dark"] {
+  color: #6B340F !important;
+}
+/* In dark contexts (footer / dark sections) use a brighter tint
+   that gives 5.2:1 on #1F1F1F. */
+html [class*="bg-charcoal"] [class~="text-signal"],
+footer [class~="text-signal"],
+html [class*="bg-charcoal"] [class~="hover:text-signal"]:hover,
+footer [class~="hover:text-signal"]:hover {
+  color: #F0A368 !important;
+}
+
+/* 3. Charcoal alpha utilities below /70 fail on cream/white. WebKit
+      reads ~0.3:1 lower than Chromium, so bump alpha to 0.85 — gives
+      6.3:1 on cream and 7.0:1 on white, clears AA everywhere.       */
+html [class~="text-charcoal/40"],
+html [class~="text-charcoal/45"],
+html [class~="text-charcoal/50"],
+html [class~="text-charcoal/55"],
+html [class~="text-charcoal/60"],
+html [class~="text-charcoal/65"] {
+  color: rgba(31, 31, 31, 0.85) !important;
+}
+
+/* 4. text-cream/45 on dark charcoal footer = 4.18:1. Bump to /65. */
+html [class~="text-cream/45"],
+html [class~="text-cream/50"] {
+  color: rgba(250, 247, 240, 0.65) !important;
+}
+
+/* 5. Orchard text — force the brand hex so any computed alpha
+      blend (e.g. from bg-orchard/10 pills) recovers the real
+      foreground. Use orchard-dark for tinted backgrounds. */
+html [class~="text-orchard"] {
+  color: #23613D !important;
+}
+html [class~="text-orchard"]:hover,
+html [class~="hover:text-orchard"]:hover {
+  color: #1B4A2E !important;
+}
+
+/* 6. Scenario color tokens — darken further to clear WebKit subpixel
+      contrast computation (which can read ~0.3:1 lower than Chromium).
+        sc-green   #1F5839  (6.5:1 on #E7F0EA)
+        sc-blue    #1A4A75  (6.8:1 on #E4EEF6)
+        sc-yellow  #5A4400  (7.6:1 on #F6EECF)
+        sc-orange  #6B340F  (7.4:1 on #F8E9DA)
+        sc-purple  #432765  (7.4:1 on #ECE4F4)                          */
+.sc-green  { --sc: #1F5839; }
+.sc-blue   { --sc: #1A4A75; }
+.sc-yellow { --sc: #5A4400; }
+.sc-orange { --sc: #6B340F; }
+.sc-purple { --sc: #432765; }
+.sc-teal   { --sc: #0E4A4F; }
+.sc-clay   { --sc: #6E2A20; }
+
+/* 7. fade-in elements are visible at rest (see the fade-up keyframe
+      near the top of this file — the entrance is a one-shot animation,
+      never a persistent opacity:0 state). Under reduced motion, pin
+      the revealed pose so no keyframe can ever dim the foreground and
+      trip axe's contrast check. */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { opacity: 1 !important; transform: none !important; animation: none !important; }
+}
+
+/* 8. text-cream alphas (/70, /75, /80, /85, /90) on the green orchard
+      background hit 3.0–3.9:1 — below 4.5:1. Force pure white only
+      inside dark contexts so we don't accidentally bleach text that
+      lives on a cream-tinted card.                                   */
+section[class~="bg-orchard"] [class~="text-cream/70"],
+section[class~="bg-orchard"] [class~="text-cream/75"],
+section[class~="bg-orchard"] [class~="text-cream/80"],
+section[class~="bg-orchard"] [class~="text-cream/85"],
+section[class~="bg-orchard"] [class~="text-cream/90"],
+section[class~="bg-charcoal"] [class~="text-cream/70"],
+section[class~="bg-charcoal"] [class~="text-cream/75"],
+section[class~="bg-charcoal"] [class~="text-cream/80"],
+section[class~="bg-charcoal"] [class~="text-cream/85"],
+section[class~="bg-charcoal"] [class~="text-cream/90"],
+html [class~="bg-orchard"] [class~="text-cream/70"],
+html [class~="bg-orchard"] [class~="text-cream/75"],
+html [class~="bg-orchard"] [class~="text-cream/80"],
+html [class~="bg-orchard"] [class~="text-cream/85"],
+html [class~="bg-orchard"] [class~="text-cream/90"],
+footer [class~="text-cream/70"],
+footer [class~="text-cream/75"],
+footer [class~="text-cream/80"] {
+  color: #FFFFFF !important;
+}
+
+/* 9. text-orchard/70 and text-signal-dark/70 utilities applied as
+      labels on white backgrounds hit only 2.5–2.9:1. Promote to a
+      darker tone that clears 4.5:1 on WebKit too.                   */
+html [class~="text-orchard/70"] {
+  color: #133A21 !important;
+}
+html [class~="text-signal-dark/70"] {
+  color: #6B340F !important;
+}
+
+/* 10. text-charcoal/30 is used for decorative ordinal numbers and a
+       "vs" glyph between cards. They're visual punctuation, but axe
+       treats them as content. Bump to /60 = 5.0:1 on cream / white. */
+html [class~="text-charcoal/25"],
+html [class~="text-charcoal/30"],
+html [class~="text-charcoal/35"] {
+  color: rgba(31, 31, 31, 0.65) !important;
+}
+
+/* 11. text-cream on bg-orchard (#2E7D4F) computed at 4.43:1 in
+       Chromium and 4.24:1 in WebKit — below 4.5:1 either way.
+       Force pure white ONLY in known dark contexts. The global
+       html [class~="text-cream"] was too broad and made some elements
+       light-on-light when text-cream appeared inside a card or
+       cream-tinted section by mistake. Scope to known dark hosts. */
+section[class~="bg-orchard"] [class~="text-cream"],
+section[class~="bg-charcoal"] [class~="text-cream"],
+footer [class~="text-cream"],
+table [class~="bg-orchard"] [class~="text-cream"],
+table [class~="bg-signal"] [class~="text-white"],
+figure[class~="bg-charcoal"] [class~="text-cream"],
+html [class~="bg-orchard"] [class~="text-cream"],
+html [class~="bg-charcoal"] [class~="text-cream"],
+html [class~="bg-signal"] [class~="text-cream"] {
+  color: #FFFFFF !important;
+}
+/* Darken bg-orchard a touch for any element actually using the solid
+   bg-orchard token. Use [class~=] (exact whitespace token) so we don't
+   match bg-orchard/8, bg-orchard/10, etc. #266143 keeps the brand
+   green visible while giving 6.3:1 with white on WebKit.            */
+html [class~="bg-orchard"] {
+  background-color: #266143 !important;
+}
+html [class~="bg-orchard"]:hover,
+html [class~="hover:bg-orchard-dark"]:hover {
+  background-color: #17492F !important;
+}
+/* Restore the muted alpha utilities (rule 4) on dark contexts — their
+   explicit selectors above override this when needed. */
+
+/* 12. text-white utilities. On WebKit / mobile Safari, axe sometimes
+       reads .text-white elements as the inherited body color (#1f1f1f)
+       instead of white — a specificity quirk with the Tailwind CDN.
+       Pin all text-white variants explicitly to defeat that. */
+html [class~="text-white"],
+html [class~="text-white/70"],
+html [class~="text-white/75"],
+html [class~="text-white/80"],
+html [class~="text-white/85"],
+html [class~="text-white/90"] {
+  color: #FFFFFF !important;
+}
+

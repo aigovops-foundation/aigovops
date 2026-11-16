@@ -1,0 +1,49 @@
+{
+  "slug": "perplexity",
+  "tool": "Perplexity",
+  "voice": "narrator",
+  "slides": [
+    {
+      "kind": "title",
+      "title": "Perplexity",
+      "sub": "A 90-second guide · AiGovOps Foundation",
+      "narration": "A ninety-second guide to Perplexity, from the AiGovOps Foundation and the NCW AI Camp."
+    },
+    {
+      "kind": "tool",
+      "title": "What it is",
+      "lines": [
+        "Perplexity is a search-and-answer tool that reads the live web and returns a cited summary instead of a list of blue links.",
+        "Every claim links to its source, which makes it ideal for 'keep the receipts' work.",
+        "The free tier gives unlimited quick searches; Pro adds deeper research runs, file uploads, and a choice of underlying models."
+      ],
+      "narration": "Perplexity is a search-and-answer tool that reads the live web and returns a cited summary instead of a list of blue links. Every claim links to its source, which makes it ideal for 'keep the receipts' work. There's a free tier to start."
+    },
+    {
+      "kind": "cool",
+      "title": "What's cool for NCW",
+      "lines": [
+        "Educators: research a current-events topic and hand students the citation list to evaluate source quality",
+        "SMB owners: compare three POS systems or scan local regulations with sources you can forward to your accountant",
+        "Community leaders: verify a statistic before it goes in a newsletter — and keep the link as your receipt"
+      ],
+      "narration": "Here's what's cool for our valley. Educators can research a current-events topic and hand students the citation list to evaluate source quality; SMB owners can compare three POS systems or scan local regulations with sources you can forward to your accountant; Community leaders can verify a statistic before it goes in a newsletter — and keep the link as your receipt."
+    },
+    {
+      "kind": "rules",
+      "title": "The rules — the AiGovOps way",
+      "lines": [
+        "A human on the trigger — you read it before it goes out",
+        "Keep the receipts — save your prompt and the answer",
+        "Mind the data cost of “free” — no student records, IEPs, or private details in a free tool"
+      ],
+      "narration": "Now the rules, the AiGovOps way. Keep a human on the trigger: you read it before it goes out. Keep the receipts: save your prompt and the answer. And mind the data cost of free — never paste student records, an I-E-P, or a customer's private details into a free tool, because free tools learn from what you type."
+    },
+    {
+      "kind": "outro",
+      "title": "Good AI, the NCW way.",
+      "sub": "NCW AI Camp · Aug 11, 2026 · AiGovOps Foundation",
+      "narration": "Good A-I, the NCW way. That's Perplexity. Learn more at the NCW AI Camp. AiGovOps Foundation."
+    }
+  ]
+}
