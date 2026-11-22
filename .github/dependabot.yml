@@ -13,18 +13,30 @@ updates:
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 5
+    groups:
+      npm:
+        patterns: ["*"]
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 5
+    groups:
+      docker:
+        patterns: ["*"]
   - package-ecosystem: "cargo"
     directory: "/desktop/src-tauri"
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 5
+    groups:
+      cargo:
+        patterns: ["*"]
   - package-ecosystem: "pip"
     directory: "/sdk/python"
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 5
+    groups:
+      pip:
+        patterns: ["*"]
