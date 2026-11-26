@@ -29,5 +29,5 @@ swappable Apache-2.0 adapter.**
   Python SDK + cross-language conformance · GHCR image + release automation.
 
 ### Install
-`curl -fsSL get.aigovops.org | sh` · `aigovops up` · `docker run … ghcr.io/<owner>/aigovops` · `helm install`
+`git clone https://github.com/aigovops-foundation/aigovops.git && sh install.sh` (hosted `curl -fsSL get.aigovops.org | sh` is planned — not yet live) · `aigovops up` · `docker run … ghcr.io/<owner>/aigovops` · `helm install`
 · the Tauri desktop app · or the hosted SaaS. Self-host is unlimited and free, forever.

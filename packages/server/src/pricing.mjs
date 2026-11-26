@@ -49,12 +49,12 @@ export function pricingHTML() {
   .self .badges{margin-top:14px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.badge{background:rgba(57,208,195,.16);color:#7ef0d8;border-radius:99px;padding:5px 13px;font-size:13px}
   footer{text-align:center;color:var(--muted);font-size:13px;padding:0 0 40px}
 </style></head><body><div class="wrap">
-<header><span class="dot"></span><span class="brand">AiGovOps</span><nav><a href="/setup">Wizard</a><a href="/studio">Console</a><a href="https://github.com/bobrapp/Aigovops-Foundation-Open-Source-V4-10k">GitHub ↗</a></nav></header>
+<header><span class="dot"></span><span class="brand">AiGovOps</span><nav><a href="/setup">Wizard</a><a href="/studio">Console</a><a href="https://github.com/aigovops-foundation/aigovops">GitHub ↗</a></nav></header>
 <h1>Govern your AI.<br/>Hosted, or your own infra.</h1>
 <p class="lede">Try it on our hosted demo in minutes — or run the identical open-source stack on-prem, in a lab, or on a laptop. Same product. No lock-in, ever.</p>
-<div class="onprem"><span class="ic">🔒</span><div><b>Always self-hostable, forever free.</b> The whole platform is MIT-licensed and zero-dependency. The hosted tiers below simply fund the Foundation and offer a zero-ops path. Run it yourself: <code>curl -fsSL get.aigovops.org | sh</code></div></div>
+<div class="onprem"><span class="ic">🔒</span><div><b>Always self-hostable, forever free.</b> The whole platform is MIT-licensed and zero-dependency. The hosted tiers below simply fund the Foundation and offer a zero-ops path. Run it yourself: <code>git clone https://github.com/aigovops-foundation/aigovops.git &amp;&amp; cd aigovops &amp;&amp; sh install.sh</code> (hosted <code>curl -fsSL get.aigovops.org | sh</code> is planned — not yet live)</div></div>
 <div class="plans">${cards}</div>
-<div class="self"><h2>Self-hosted · ${money(PLANS.selfhost.price)}</h2><p>Your infrastructure, your keys, unlimited everything — on-prem, in your VPC/enclave, on a single VPS, or on a device. The exact code that runs our SaaS.</p><code>curl -fsSL get.aigovops.org | sh</code><div class="badges"><span class="badge">MIT licensed</span><span class="badge">zero dependencies</span><span class="badge">~20 Apache-2.0 backends</span><span class="badge">offline-capable</span></div></div>
+<div class="self"><h2>Self-hosted · ${money(PLANS.selfhost.price)}</h2><p>Your infrastructure, your keys, unlimited everything — on-prem, in your VPC/enclave, on a single VPS, or on a device. The exact code that runs our SaaS.</p><code>git clone https://github.com/aigovops-foundation/aigovops.git &amp;&amp; cd aigovops &amp;&amp; sh install.sh</code><p>Hosted one-liner <code>curl -fsSL get.aigovops.org | sh</code> — planned, not yet live.</p><div class="badges"><span class="badge">MIT licensed</span><span class="badge">zero dependencies</span><span class="badge">~20 Apache-2.0 backends</span><span class="badge">offline-capable</span></div></div>
 <footer>Hosted revenue funds the AiGovOps Foundation. Agents do the bureaucracy; humans hold the keys.</footer>
 </div></body></html>`;
 }
