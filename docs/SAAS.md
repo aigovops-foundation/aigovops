@@ -35,7 +35,9 @@ and route `tenant.aigovops.org` → the gate. Usage meters feed Stripe; the pric
 ## Run it yourself (the default, forever free)
 
 ```bash
-curl -fsSL https://get.aigovops.org | sh   # or: aigovops up · docker run · helm install · the Tauri app
+git clone https://github.com/aigovops-foundation/aigovops.git && sh aigovops/install.sh   # or: aigovops up · docker run · helm install · the Tauri app
+# planned — not yet live (get.aigovops.org is not provisioned):
+curl -fsSL https://get.aigovops.org | sh
 ```
 No `AIGOVOPS_HOSTED`, no billing, no tenancy, no quotas — the full product, unlimited.
 

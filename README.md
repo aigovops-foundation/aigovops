@@ -246,7 +246,7 @@ runConformance();   // → { conformant: true, passed: 6, total: 6 } — the con
 
 ```bash
 git clone https://github.com/aigovops-foundation/aigovops.git
-cd Aigovops-Foundation-Open-Source-V4-10k
+cd aigovops
 node --test                       # run all gate tests (Node 20+, zero dependencies)
 
 node jeeves/src/index.mjs         # full pipeline → a signed, verified receipt

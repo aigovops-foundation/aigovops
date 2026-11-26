@@ -22,7 +22,7 @@ cloud, already in `@aigovops/install`) and wires the right backends.
 
 | Surface | Command / action | Best for | Built on (Apache-2.0 / 10k★) |
 |---|---|---|---|
-| **One-liner** | `curl -fsSL get.aigovops.org \| sh` | tech folks, servers | Docker · k3s · Caddy |
+| **One-liner** | `git clone https://github.com/aigovops-foundation/aigovops.git && sh aigovops/install.sh` today; `curl -fsSL get.aigovops.org \| sh` (planned — not yet live) | tech folks, servers | Docker · k3s · Caddy |
 | **npx** | `npx @aigovops/create` | Node devs, quick local | — |
 | **Single container** | `docker run -p 8930:8930 aigovops/studio` | try it now | **Docker/moby** (72k) |
 | **Full stack** | `docker compose up` | self-host, all features | Docker Compose |
@@ -67,6 +67,8 @@ governed — without ever seeing a gate rule.
 
 ### 2b. Single script — for tech folks
 ```bash
+git clone https://github.com/aigovops-foundation/aigovops.git && sh aigovops/install.sh   # works today
+# planned — not yet live (get.aigovops.org is not provisioned):
 curl -fsSL https://get.aigovops.org | sh        # detect tier, install runtime, bring up the stack, print URLs
 # or, explicit:
 aigovops up --tier 4 --with prometheus,opensearch,keycloak --profile "EU AI Act"

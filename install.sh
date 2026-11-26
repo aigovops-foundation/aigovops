@@ -1,5 +1,6 @@
 #!/bin/sh
-# AiGovOps — one-line installer.   curl -fsSL https://get.aigovops.org | sh
+# AiGovOps — one-line installer.   sh install.sh  (from a clone)
+# Hosted form, planned — not yet live (get.aigovops.org is not provisioned): curl -fsSL https://get.aigovops.org | sh
 # Brings up a running, TLS-secured gate. Full stack if Docker is present, else the gate alone.
 set -eu
 
@@ -9,7 +10,7 @@ err() { printf '\033[31m✗\033[0m %s\n' "$1" >&2; exit 1; }
 command -v git  >/dev/null 2>&1 || err "git is required."
 command -v node >/dev/null 2>&1 || err "Node.js 20+ is required — https://nodejs.org"
 
-REPO="${AIGOVOPS_REPO:-https://github.com/bobrapp/Aigovops-Foundation-Open-Source-V4-10k.git}"
+REPO="${AIGOVOPS_REPO:-https://github.com/aigovops-foundation/aigovops.git}"
 DIR="${AIGOVOPS_DIR:-$HOME/.aigovops/app}"
 PORT="${PORT:-8930}"
 
