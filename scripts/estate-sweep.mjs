@@ -6,12 +6,16 @@
 // (evaluateAutomerge): the PR is open, not a draft, targets the default branch, GitHub reports it
 // `clean`, every check on its head commit finished green, nobody's latest review requests
 // changes, no hold label or "HOLD" title, and the `automerge` label was added by a person with
-// write access AFTER the head commit's checks started — so a push after labelling needs a new
-// label. The merge pins that head SHA, so a race loses rather than merging unseen code.
+// write access AFTER GitHub first saw the head commit (its earliest check suite; reruns keep that
+// time) and no force-push followed the label — so a push after labelling needs a new label. The
+// merge pins that head SHA, so a race loses rather than merging unseen code. Anything the token
+// cannot read (checks, reviews, timeline) blocks the merge: unknown is not green.
+//
+// Private repositories appear in the digest and --json as counts only: no titles, links or names.
 //
 // Unknown is not green: a repository the token cannot read is reported as "no access".
 //
-// Usage: node scripts/estate-sweep.mjs [--markdown <file|->] [--json <file>] [--post] [--merge]
+// Usage: node scripts/estate-sweep.mjs [--markdown <file|->] [--json <file> [--full]] [--post] [--merge]
 // Tokens: ESTATE_TOKEN_<OWNER> (e.g. ESTATE_TOKEN_BOBRAPP), else ESTATE_SWEEP_TOKEN, else GITHUB_TOKEN.
 
 import { readFileSync, writeFileSync } from "node:fs";
@@ -62,7 +66,7 @@ const labelNames = (pr) => (pr.labels || []).map((l) => (typeof l === "string" ?
 
 // Decide whether one PR may be merged. Pure: every input is already fetched.
 export function evaluateAutomerge({ pr, defaultBranch, checkRuns = [], statuses = [], reviews = [],
-  labelEvents = [], permissions = {}, config }) {
+  labelEvents = [], suites = [], permissions = {}, unreadable = [], config }) {
   const reasons = [];
   const label = config.automergeLabel;
   const labels = labelNames(pr);
@@ -70,6 +74,7 @@ export function evaluateAutomerge({ pr, defaultBranch, checkRuns = [], statuses 
   if (pr.state !== "open") reasons.push("not open");
   if (pr.draft) reasons.push("draft");
   if (pr.base?.ref !== defaultBranch) reasons.push(`targets ${pr.base?.ref}, not ${defaultBranch}`);
+  for (const what of unreadable) reasons.push(`cannot read ${what} with this token`);
   const hold = labels.filter((l) => config.holdLabels.includes(l));
   if (hold.length) reasons.push(`hold label: ${hold.join(", ")}`);
   if (/^\s*\[?HOLD\b/i.test(pr.title || "")) reasons.push("title says HOLD");
@@ -105,9 +110,11 @@ export function evaluateAutomerge({ pr, defaultBranch, checkRuns = [], statuses 
     const who = labelled.actor?.login;
     if (labelled.actor?.type === "Bot") reasons.push(`label added by a bot (${who})`);
     else if (!WRITE_PERMISSIONS.has(permissions[who])) reasons.push(`label added by ${who}, who lacks write access`);
-    const starts = [...checkRuns.map((c) => c.started_at || c.created_at), ...statuses.map((s) => s.created_at)]
-      .filter(Boolean).sort();
-    if (starts.length && labelled.created_at < starts[0]) {
+    const firstSeen = (suites.length ? suites.map((x) => x.created_at)
+      : [...checkRuns.map((c) => c.started_at || c.created_at), ...statuses.map((x) => x.created_at)])
+      .filter(Boolean).sort()[0];
+    const forcePushed = labelEvents.some((e) => e.event === "head_ref_force_pushed" && e.created_at > labelled.created_at);
+    if ((firstSeen && labelled.created_at < firstSeen) || forcePushed) {
       reasons.push("new commits since the label was added: re-add it");
     }
   }
@@ -123,6 +130,7 @@ async function sweepRepo(gh, full, config, now, { merge, mergeBudget }) {
     merged: [], skipped: [], errors: [] };
   const meta = await gh("GET", `/repos/${full}`);
   if (meta.status !== 200) return { ...out, access: false, errors: [`repo: HTTP ${meta.status}`] };
+  out.private = Boolean(meta.data.private);
   if (meta.data.archived) return { ...out, archived: true };
   const defaultBranch = meta.data.default_branch;
 
@@ -156,13 +164,17 @@ async function sweepRepo(gh, full, config, now, { merge, mergeBudget }) {
     out.prs.push(entry);
     if (!entry.labels.includes(config.automergeLabel)) continue;
 
-    const [pr, checks, status, reviews, events] = await Promise.all([
+    const [pr, checks, suites, status, reviews, events] = await Promise.all([
       gh("GET", `/repos/${full}/pulls/${p.number}`),
       gh("GET", `/repos/${full}/commits/${p.head.sha}/check-runs?per_page=100`),
+      gh("GET", `/repos/${full}/commits/${p.head.sha}/check-suites?per_page=100`),
       gh("GET", `/repos/${full}/commits/${p.head.sha}/statuses?per_page=100`),
       gh("GET", `/repos/${full}/pulls/${p.number}/reviews?per_page=100`),
-      gh("GET", `/repos/${full}/issues/${p.number}/events?per_page=100`),
+      gh("GET", `/repos/${full}/issues/${p.number}/timeline?per_page=100`),
     ]);
+    const unreadable = [[pr, "the pull request"], [checks, "check runs"], [suites, "check suites"],
+      [status, "commit statuses"], [reviews, "reviews"], [events, "the timeline"]]
+      .filter(([r]) => r.status !== 200).map(([r, what]) => `${what} (HTTP ${r.status})`);
     const labelEvents = events.status === 200 ? events.data : [];
     const who = labelEvents.filter((e) => e.event === "labeled" && e.label?.name === config.automergeLabel).at(-1)?.actor?.login;
     const permissions = {};
@@ -172,7 +184,7 @@ async function sweepRepo(gh, full, config, now, { merge, mergeBudget }) {
     }
     const verdict = evaluateAutomerge({ pr: pr.data || {}, defaultBranch, checkRuns: checks.data?.check_runs || [],
       statuses: status.status === 200 ? status.data : [], reviews: reviews.status === 200 ? reviews.data : [],
-      labelEvents, permissions, config });
+      labelEvents, suites: suites.status === 200 ? suites.data.check_suites || [] : [], permissions, unreadable, config });
     if (!verdict.eligible) { out.skipped.push({ ...entry, reasons: verdict.reasons }); continue; }
     if (!merge) { out.skipped.push({ ...entry, reasons: ["eligible; merge not enabled on this run"] }); continue; }
     if (mergeBudget.left <= 0) { out.skipped.push({ ...entry, reasons: ["eligible; merge cap for this run reached"] }); continue; }
@@ -202,25 +214,36 @@ export async function runSweep({ gh, config, now = Date.now(), merge = false }) 
   return { generatedAt: new Date(now).toISOString(), merge, repos };
 }
 
-const short = (full) => full.split("/")[1];
-const link = (r, p) => `[${short(r)}#${p.number}](${p.url})`;
+// What may leave the machine: private repositories keep only counts and merge outcomes by number.
+export function publicView(result) {
+  const strip = (p) => ({ number: p.number, draft: p.draft, labels: [], ageDays: p.ageDays, idleDays: p.idleDays,
+    title: "(private)", url: "", ...(p.reasons ? { reasons: p.reasons } : {}), ...(p.method ? { method: p.method, by: "(private)" } : {}) });
+  return { ...result, repos: result.repos.map((r) => (r.private
+    ? { ...r, ci: r.ci.map((c) => ({ ...c, name: "(private workflow)", url: "" })), prs: r.prs.map(strip),
+      merged: r.merged.map(strip), skipped: r.skipped.map(strip) }
+    : r)) };
+}
 
-export function renderDigest(result, config) {
+const short = (full) => full.split("/")[1];
+const link = (r, p) => (p.url ? `[${short(r)}#${p.number}](${p.url})` : `${short(r)} (private) PR`);
+
+export function renderDigest(fullResult, config) {
+  const result = publicView(fullResult);
   const day = result.generatedAt.slice(0, 10);
   const lines = [`## Estate sweep — ${day}`, ""];
   const reachable = result.repos.filter((r) => r.access && !r.archived);
   const redCi = reachable.flatMap((r) => r.ci.filter((c) => RED_CI.has(c.conclusion)).map((c) => ({ r, c })));
   const merged = reachable.flatMap((r) => r.merged.map((p) => ({ r, p })));
   const skipped = reachable.flatMap((r) => r.skipped.map((p) => ({ r, p })));
-  const waiting = reachable.flatMap((r) => r.prs.filter((p) => !p.draft && !p.labels.includes(config.automergeLabel))
+  const waiting = reachable.filter((r) => !r.private).flatMap((r) => r.prs.filter((p) => !p.draft && !p.labels.includes(config.automergeLabel))
     .map((p) => ({ r, p })));
-  const stale = reachable.flatMap((r) => r.prs.filter((p) => p.idleDays > (config.staleDays ?? 30)).map((p) => ({ r, p })));
+  const stale = reachable.filter((r) => !r.private).flatMap((r) => r.prs.filter((p) => p.idleDays > (config.staleDays ?? 30)).map((p) => ({ r, p })));
 
   lines.push(`${reachable.length} repos read · ${redCi.length} red workflows on main · `
     + `${reachable.reduce((n, r) => n + r.prs.length, 0)} open PRs · ${merged.length} merged by \`${config.automergeLabel}\``, "");
   if (redCi.length) {
     lines.push("**Red on main**");
-    for (const { r, c } of redCi) lines.push(`- ${short(r.repo)}: [${c.name}](${c.url}) — ${c.conclusion}`);
+    for (const { r, c } of redCi) lines.push(`- ${short(r.repo)}: ${c.url ? `[${c.name}](${c.url})` : c.name} — ${c.conclusion}`);
     lines.push("");
   }
   if (merged.length) {
@@ -284,13 +307,14 @@ async function main(argv) {
   const result = await runSweep({ gh, config, merge: argv.includes("--merge") });
   const markdown = renderDigest(result, config);
   const jsonOut = arg(argv, "--json");
-  if (jsonOut) writeFileSync(jsonOut, JSON.stringify(result, null, 1) + "\n");
+  if (jsonOut) writeFileSync(jsonOut, JSON.stringify(argv.includes("--full") ? result : publicView(result), null, 1) + "\n");
   const mdOut = arg(argv, "--markdown");
   if (mdOut && mdOut !== "-") writeFileSync(mdOut, markdown);
   if (!mdOut || mdOut === "-") process.stdout.write(markdown);
   if (argv.includes("--post")) {
     const posted = await postDigest(gh, config, markdown);
     console.error(`digest posted: ${posted.comment}`);
+    if (process.env.GITHUB_OUTPUT) writeFileSync(process.env.GITHUB_OUTPUT, `digest_issue=${posted.issue}\n`, { flag: "a" });
   }
 }
 

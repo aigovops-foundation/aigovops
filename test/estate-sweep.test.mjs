@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { evaluateAutomerge, renderDigest, runSweep, tokenFor } from "../scripts/estate-sweep.mjs";
+import { evaluateAutomerge, publicView, renderDigest, runSweep, tokenFor } from "../scripts/estate-sweep.mjs";
 
 const config = { automergeLabel: "automerge", holdLabels: ["hold", "do-not-merge", "blocked"], maxMergesPerRun: 10,
   staleDays: 30, mergeMethod: { default: "squash" }, repos: ["acme/site"] };
@@ -53,6 +53,28 @@ for (const [name, overrides, reason] of [
   });
 }
 
+test("a CI rerun after the label does not invalidate it; the check suite keeps the push time", () => {
+  const r = evaluateAutomerge(ready({
+    suites: [{ created_at: "2026-11-26T10:00:00Z" }],
+    checkRuns: [{ name: "ci", status: "completed", conclusion: "success", started_at: "2026-11-26T12:00:00Z" }],
+  }));
+  assert.deepEqual(r, { eligible: true, reasons: [] });
+});
+
+test("a force-push after the label invalidates it, even onto an older green commit", () => {
+  const r = evaluateAutomerge(ready({
+    suites: [{ created_at: "2026-11-26T08:00:00Z" }],
+    labelEvents: [...ready().labelEvents, { event: "head_ref_force_pushed", created_at: "2026-11-26T11:30:00Z" }],
+  }));
+  assert.match(r.reasons.join("; "), /re-add it/);
+});
+
+test("anything the token cannot read blocks the merge", () => {
+  const r = evaluateAutomerge(ready({ unreadable: ["reviews (HTTP 403)"] }));
+  assert.equal(r.eligible, false);
+  assert.match(r.reasons.join("; "), /cannot read reviews/);
+});
+
 test("a later approval clears an earlier change request; a stale status is superseded", () => {
   const r = evaluateAutomerge(ready({
     reviews: [{ user: { login: "ken" }, state: "CHANGES_REQUESTED" }, { user: { login: "ken" }, state: "APPROVED" }],
@@ -95,7 +117,8 @@ const base = {
   "GET /repos/acme/site/commits/abc/check-runs": { status: 200, data: { check_runs: ready().checkRuns } },
   "GET /repos/acme/site/commits/abc/statuses": { status: 200, data: [] },
   "GET /repos/acme/site/pulls/7/reviews": { status: 200, data: [] },
-  "GET /repos/acme/site/issues/7/events": { status: 200, data: ready().labelEvents },
+  "GET /repos/acme/site/issues/7/timeline": { status: 200, data: ready().labelEvents },
+  "GET /repos/acme/site/commits/abc/check-suites": { status: 200, data: { check_suites: [{ created_at: "2026-11-26T10:00:00Z" }] } },
   "GET /repos/acme/site/collaborators/bob/permission": { status: 200, data: { permission: "admin" } },
   "PUT /repos/acme/site/pulls/7/merge": { status: 200, data: { merged: true, sha: "m1" } },
 };
@@ -128,4 +151,19 @@ test("an unreadable repository is reported as no access, not green", async () =>
   const result = await runSweep({ gh, config, now: NOW });
   assert.equal(result.repos[0].access, false);
   assert.match(renderDigest(result, config), /\| site \| no access \|/);
+});
+
+test("a 403 on check runs (fine-grained token, private repo) is a refusal, not 'no checks'", async () => {
+  const { gh, calls } = fakeGitHub({ ...base, "GET /repos/acme/site/commits/abc/check-runs": { status: 403, data: {} } });
+  const result = await runSweep({ gh, config, now: NOW, merge: true });
+  assert.equal(calls.some((c) => c.method === "PUT"), false);
+  assert.match(result.repos[0].skipped[0].reasons.join("; "), /cannot read check runs \(HTTP 403\)/);
+});
+
+test("private repositories leave only counts: no titles, links or names in the digest or JSON", async () => {
+  const { gh } = fakeGitHub({ ...base, "GET /repos/acme/site": { status: 200, data: { default_branch: "main", private: true } } });
+  const result = await runSweep({ gh, config, now: NOW, merge: true });
+  const out = JSON.stringify(publicView(result)) + renderDigest(result, config);
+  assert.doesNotMatch(out, /docs: fix|pull\/7|devin|"bob"|@bob/);
+  assert.match(renderDigest(result, config), /\| site \| green \| 1 \(0\) \|/);
 });

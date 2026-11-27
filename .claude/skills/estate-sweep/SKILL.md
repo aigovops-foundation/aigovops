@@ -16,7 +16,7 @@ Never merge, label, close or push by any other route.
 ## Run it (on demand)
 
 ```bash
-export ESTATE_SWEEP_TOKEN="$(gh auth token)"   # or a fine-grained token; ESTATE_TOKEN_BOBRAPP for bobrapp/*
+export ESTATE_SWEEP_TOKEN="$(gh auth token)"   # or a token; ESTATE_TOKEN_BOBRAPP for bobrapp/*
 node scripts/estate-sweep.mjs --json sweep.json --markdown -     # report only
 node scripts/estate-sweep.mjs --json sweep.json --markdown - --post   # also comment on "Estate sweep digest"
 ```
@@ -27,6 +27,10 @@ push, not draft, `clean`, all checks green, no changes requested, no hold label 
 pinned to the head SHA, at most `maxMergesPerRun` per run.
 
 ## Read it
+
+`--json` output is redacted (private repos: counts only); add `--full` for a local-only copy and
+never post or commit it. Fine-grained tokens cannot read check runs on private repos, so those PRs
+show "cannot read check runs" — say so rather than calling them red.
 
 `sweep.json` has, per repo: `access`, `ci` (latest run per workflow on the default branch),
 `prs`, `issues` counts, `merged`, `skipped` (with reasons). `access: false` means **unknown**,
@@ -55,6 +59,6 @@ Then write the plan, most urgent first, at most one screen:
 
 The workflow has already run the sweep and posted the factual digest. Read `sweep.json` and
 `sweep.md`, then post ONE comment on the open "Estate sweep digest" issue titled
-`### Next steps — <date>` with items 1–5 above. Use `gh issue list --label estate-digest` to find the
-issue and `gh issue comment <n> --body-file <file>` to post. If nothing changed since the last comment,
+`### Next steps — <date>` with items 1–5 above: write it to `next-steps.md`, then run exactly
+`gh issue comment <digest issue from the prompt> --body-file next-steps.md`. If nothing needs doing,
 post "No new next steps." Do nothing else.
