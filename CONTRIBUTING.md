@@ -28,6 +28,9 @@ never as a side channel.
 - `in-progress` — an automation run owns the ticket; it is removed when the run ends.
 - `discovered` — a side problem filed by automation instead of fixed inline.
 - `triaged` — the nightly triage has suggested a start label.
+- `automerge` — on a pull request in any estate repository: a person with write access lets the
+  nightly estate sweep merge it once it is green and clean. Push again and you must re-add it. Rules:
+  [scripts/estate-sweep.mjs](scripts/estate-sweep.mjs); skill: `.claude/skills/estate-sweep/`.
 
 A run that cannot finish escalates one step: lite → `ready` → `ready:ultra` → `blocked`.
 

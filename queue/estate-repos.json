@@ -1,0 +1,30 @@
+{
+  "digestRepo": "aigovops-foundation/aigovops",
+  "digestTitle": "Estate sweep digest",
+  "digestLabel": "estate-digest",
+  "automergeLabel": "automerge",
+  "holdLabels": ["hold", "do-not-merge", "blocked"],
+  "maxMergesPerRun": 10,
+  "staleDays": 30,
+  "mergeMethod": { "default": "squash", "aigovops-foundation/aigovops-library-june-ken-bob": "merge" },
+  "repos": [
+    "aigovops-foundation/aigovops",
+    "aigovops-foundation/aigovops-foundation-site-redesign-June2026-ken-and-bob",
+    "aigovops-foundation/aigovops-library-june-ken-bob",
+    "aigovops-foundation/practice",
+    "aigovops-foundation/aigovops-ncw-ai-camp",
+    "aigovops-foundation/aigovops-beacon",
+    "aigovops-foundation/Omni-Rapp-June-2026",
+    "aigovops-foundation/umbrella-govops",
+    "aigovops-foundation/aigovops-lantern",
+    "aigovops-foundation/aigovops-vendor-rfi",
+    "aigovops-foundation/how-ai-works",
+    "aigovops-foundation/community-ai-guide-app",
+    "aigovops-foundation/rotary-ai-guide-mobile",
+    "aigovops-foundation/aigovops-policy-foundry",
+    "bobrapp/review-builder",
+    "bobrapp/foundation-studio",
+    "bobrapp/OpenConvention-rapp-v1",
+    "bobrapp/niall-search-os"
+  ]
+}
