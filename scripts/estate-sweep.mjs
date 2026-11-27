@@ -214,10 +214,17 @@ export async function runSweep({ gh, config, now = Date.now(), merge = false }) 
   return { generatedAt: new Date(now).toISOString(), merge, repos };
 }
 
+// A refusal reason without names, check names or API messages.
+export function redactReason(r) {
+  if (/who lacks write access$/.test(r)) return "label added by someone without write access";
+  if (/^label added by a bot/.test(r)) return "label added by a bot";
+  return r.replace(/\s*\((?!HTTP \d+\))[^)]*\)/g, "").replace(/:.*$/, "").replace(/ by .*$/, "");
+}
+
 // What may leave the machine: private repositories keep only counts and merge outcomes by number.
 export function publicView(result) {
   const strip = (p) => ({ number: p.number, draft: p.draft, labels: [], ageDays: p.ageDays, idleDays: p.idleDays,
-    title: "(private)", url: "", ...(p.reasons ? { reasons: p.reasons } : {}), ...(p.method ? { method: p.method, by: "(private)" } : {}) });
+    title: "(private)", url: "", ...(p.reasons ? { reasons: p.reasons.map(redactReason) } : {}), ...(p.method ? { method: p.method, by: "(private)" } : {}) });
   return { ...result, repos: result.repos.map((r) => (r.private
     ? { ...r, ci: r.ci.map((c) => ({ ...c, name: "(private workflow)", url: "" })), prs: r.prs.map(strip),
       merged: r.merged.map(strip), skipped: r.skipped.map(strip) }

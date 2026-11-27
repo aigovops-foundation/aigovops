@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { evaluateAutomerge, publicView, renderDigest, runSweep, tokenFor } from "../scripts/estate-sweep.mjs";
+import { evaluateAutomerge, publicView, redactReason, renderDigest, runSweep, tokenFor } from "../scripts/estate-sweep.mjs";
 
 const config = { automergeLabel: "automerge", holdLabels: ["hold", "do-not-merge", "blocked"], maxMergesPerRun: 10,
   staleDays: 30, mergeMethod: { default: "squash" }, repos: ["acme/site"] };
@@ -166,4 +166,15 @@ test("private repositories leave only counts: no titles, links or names in the d
   const out = JSON.stringify(publicView(result)) + renderDigest(result, config);
   assert.doesNotMatch(out, /docs: fix|pull\/7|devin|"bob"|@bob/);
   assert.match(renderDigest(result, config), /\| site \| green \| 1 \(0\) \|/);
+});
+
+test("private refusal reasons keep the rule but drop names, check names and API messages", () => {
+  const result = { repos: [{ repo: "acme/secret", private: true, access: true, ci: [], prs: [], merged: [], issues: {},
+    skipped: [{ number: 3, title: "t", url: "u", reasons: ["checks not green: deploy-prod", "changes requested by alice",
+      "label added by eve, who lacks write access", "label added by a bot (x[bot])",
+      "cannot read reviews (HTTP 403) with this token", "merge refused: HTTP 405 Base branch was modified"] }] }] };
+  assert.deepEqual(publicView(result).repos[0].skipped[0].reasons, ["checks not green", "changes requested",
+    "label added by someone without write access", "label added by a bot",
+    "cannot read reviews (HTTP 403) with this token", "merge refused"]);
+  assert.equal(redactReason("draft"), "draft");
 });
