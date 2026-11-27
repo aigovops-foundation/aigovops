@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { evaluateAutomerge, publicView, redactReason, renderDigest, runSweep, tokenFor } from "../scripts/estate-sweep.mjs";
+import { evaluateAutomerge, getAll, publicView, redactReason, renderDigest, runSweep, tokenFor } from "../scripts/estate-sweep.mjs";
 
 const config = { automergeLabel: "automerge", holdLabels: ["hold", "do-not-merge", "blocked"], maxMergesPerRun: 10,
   staleDays: 30, mergeMethod: { default: "squash" }, repos: ["acme/site"] };
@@ -177,4 +177,15 @@ test("private refusal reasons keep the rule but drop names, check names and API 
     "label added by someone without write access", "label added by a bot",
     "cannot read reviews (HTTP 403) with this token", "merge refused"]);
   assert.equal(redactReason("draft"), "draft");
+});
+
+test("the timeline is read past its first 100 entries, so a late label still counts", async () => {
+  const pages = { 1: Array(100).fill({ event: "commented" }), 2: [{ event: "labeled", label: { name: "automerge" } }] };
+  const gh = async (_m, path) => ({ status: 200, data: pages[new URL(path, "https://x").searchParams.get("page")] || [] });
+  const res = await getAll(gh, "/repos/a/b/issues/1/timeline");
+  assert.equal(res.status, 200);
+  assert.equal(res.data.length, 101);
+  assert.equal(res.data.at(-1).event, "labeled");
+  const capped = await getAll(async () => ({ status: 200, data: Array(100).fill({}) }), "/x", 2);
+  assert.equal(capped.status, 206);
 });

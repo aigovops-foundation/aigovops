@@ -62,6 +62,18 @@ export function client({ env = process.env, fetchImpl = globalThis.fetch } = {})
   };
 }
 
+// Follow page=N until a short page; a refused page fails the whole read.
+export async function getAll(gh, path, maxPages = 20) {
+  const data = [];
+  for (let page = 1; page <= maxPages; page++) {
+    const res = await gh("GET", `${path}${path.includes("?") ? "&" : "?"}per_page=100&page=${page}`);
+    if (res.status !== 200) return res;
+    data.push(...res.data);
+    if (res.data.length < 100) return { status: 200, data };
+  }
+  return { status: 206, data };
+}
+
 const labelNames = (pr) => (pr.labels || []).map((l) => (typeof l === "string" ? l : l.name));
 
 // Decide whether one PR may be merged. Pure: every input is already fetched.
@@ -170,7 +182,7 @@ async function sweepRepo(gh, full, config, now, { merge, mergeBudget }) {
       gh("GET", `/repos/${full}/commits/${p.head.sha}/check-suites?per_page=100`),
       gh("GET", `/repos/${full}/commits/${p.head.sha}/statuses?per_page=100`),
       gh("GET", `/repos/${full}/pulls/${p.number}/reviews?per_page=100`),
-      gh("GET", `/repos/${full}/issues/${p.number}/timeline?per_page=100`),
+      getAll(gh, `/repos/${full}/issues/${p.number}/timeline`),
     ]);
     const unreadable = [[pr, "the pull request"], [checks, "check runs"], [suites, "check suites"],
       [status, "commit statuses"], [reviews, "reviews"], [events, "the timeline"]]
