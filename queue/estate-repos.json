@@ -6,7 +6,7 @@
   "holdLabels": ["hold", "do-not-merge", "blocked"],
   "maxMergesPerRun": 10,
   "staleDays": 30,
-  "mergeMethod": { "default": "squash", "aigovops-foundation/aigovops-library-june-ken-bob": "merge" },
+  "mergeMethod": { "default": "squash" },
   "repos": [
     "aigovops-foundation/aigovops",
     "aigovops-foundation/aigovops-foundation-site-redesign-June2026-ken-and-bob",
