@@ -26,9 +26,11 @@ is Devin's. Wherever this file says `<worker>`, use your own name.
 
 - The nightly triage sets the worker label ([TRIAGE.md](TRIAGE.md), step 4). A human may change it
   before adding the start label. A worker never changes it, except in the hand-off below.
-- Ultra runs are Devin's. When Claude's normal run has to escalate, it first replaces
-  `worker:claude` with `worker:devin` and only then adds `ready:ultra`, so the label that starts the
-  ultra run finds the ticket already Devin's.
+- Ultra runs are Devin's, whatever the worker label says. A ticket started with `ready:ultra` that
+  still carries `worker:claude` is Devin's: Devin replaces that label with `worker:devin` as it
+  locks, and Claude leaves the ticket alone. When Claude's normal run has to escalate, it first
+  replaces `worker:claude` with `worker:devin` and only then adds `ready:ultra`, so the label that
+  starts the ultra run finds the ticket already Devin's.
 - Claude acts through Bob's GitHub account, so its comments, branches and pull requests show
   `bobrapp` as their author. "Picked up by Claude" in the comment is what marks them as automation.
   They are never a human's approval of anything.
@@ -41,7 +43,7 @@ is Devin's. Wherever this file says `<worker>`, use your own name.
 ## Steps
 
 Do, in order:
-0. Lock. Re-read the issue's current labels with your git tools. If it carries a worker label that is not yours, it is not your ticket: do nothing and stop, with no comment and no label change. If it already carries `in-progress` or `blocked`, or is closed, another run owns it: do nothing and stop. Otherwise add the label `in-progress`.
+0. Lock. Re-read the issue's current labels with your git tools. If it carries a worker label that is not yours, it is not your ticket: do nothing and stop, with no comment and no label change. The one exception is a ticket started with `ready:ultra`, which is Devin's whatever its worker label says (see Workers). If it is closed or carries `blocked`, do nothing and stop. If it carries `in-progress`, another run owns it: do nothing and stop, unless you are Claude and the ticket meets the stale-lock rule in Workers; then keep `in-progress` and say in your first comment that you are taking over. Otherwise add the label `in-progress`.
 1. Read the issue. The repository the change lands in is the Task template's "Where" field or the Bug template's "Repository" field (a Bug's "Where" is the page, run or command that shows the problem); if it says "other / not sure", infer it from the Outcome (Task) or from Where, Expected and Actual (Bug), and say which you chose in your first issue comment. Read that repository's CLAUDE.md / AGENTS.md / CONTRIBUTING.md and follow them.
 2. Comment once on the issue: "Picked up by <worker> (<rung>) — plan: <two or three lines>". If the ticket is not clear enough to finish without a decision from a human, do not guess: comment with the one question (options with the reason for each), remove your start label and `in-progress`, add `blocked`, and stop.
 3. Work on a branch named <worker>/<unix-time>-issue-<number>, in lower case (devin/... or claude/...). Make the smallest change that makes the Outcome true. Add or update the test the "Proof" field names; run the repository's test battery and keep it green. You may open the live estate pages (aigovops-foundation.com, aigovops.org and their subdomains) read-only to check a Proof; never submit forms there.
