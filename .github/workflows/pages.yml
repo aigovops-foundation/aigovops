@@ -6,7 +6,7 @@ permissions: { contents: read, pages: write, id-token: write }
 concurrency: { group: pages, cancel-in-progress: true }
 jobs:
   deploy:
-    environment: { name: github-pages, url: "${{ steps.deploy.outputs.page_url }}" }
+    environment: { name: github-pages, url: "${{ steps.deploy.outputs.page_url || steps.deploy-retry.outputs.page_url }}" }
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -15,7 +15,21 @@ jobs:
       - run: npm test   # hard gate: all gate tests must pass before the docs deploy
       - run: node scripts/monorepo/assemble.mjs
       - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      # RE-RUN SAFE (aigovops#56, the Library's fix from aigovops#53). Artifacts persist across
+      # attempts of the same run, so a fixed name makes "Re-run failed jobs" find two `github-pages`
+      # artifacts and fail. Each attempt uploads and deploys its own `github-pages-<attempt>`. The
+      # artifact listing can also lag the upload by a moment ("Found 0 artifact(s)", run
+      # 46093623542), so a failed deploy is retried once after a short wait; a second failure fails
+      # the job. test/pages-rerun.test.mjs pins all of this.
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
-        with: { path: _site }   # assembled static sites; no Jekyll build
+        with: { path: _site, name: "github-pages-${{ github.run_attempt }}" }   # assembled static sites; no Jekyll build
       - id: deploy
+        continue-on-error: true
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
+        with: { artifact_name: "github-pages-${{ github.run_attempt }}" }
+      - if: steps.deploy.outcome == 'failure'
+        run: sleep 20
+      - id: deploy-retry
+        if: steps.deploy.outcome == 'failure'
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
+        with: { artifact_name: "github-pages-${{ github.run_attempt }}" }
