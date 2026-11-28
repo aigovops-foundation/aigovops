@@ -15,6 +15,7 @@ Thanks for helping govern AI responsibly.
 GitHub Issues on this repository are the Foundation's one work queue — for every
 estate repository, not just this one. Work enters as a ticket (use the templates),
 never as a side channel.
+Who taps what, as a diagram: [queue/FLOW.md](queue/FLOW.md).
 
 - `queue` — every ticket carries it (set by the templates).
 - `ready` — normally a human adds it when the ticket is clear enough to start; the narrow
