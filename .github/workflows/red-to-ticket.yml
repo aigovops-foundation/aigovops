@@ -12,4 +12,4 @@ permissions:
 
 jobs:
   ticket:
-    uses: aigovops-foundation/aigovops-library-june-ken-bob/.github/workflows/reusable-red-to-ticket.yml@7862a2c97d14b4ee907566301a14b87a11638b2b # library PR #128 head 2026-11-23 (failures only, once a day)
+    uses: aigovops-foundation/aigovops-library-june-ken-bob/.github/workflows/reusable-red-to-ticket.yml@366874fb0ffcaf0325ef97a38c738245a9d69208 # library main 2026-11-27 (#128: failures only, once a day)
