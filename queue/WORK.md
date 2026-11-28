@@ -39,6 +39,11 @@ is Devin's. Wherever this file says `<worker>`, use your own name.
   re-adds that label. If a `worker:claude` ticket has carried `in-progress` for more than six hours
   with no Receipt since, the run that held it has died: the next Claude run takes it over and says
   so in its first comment. No other run may take over a lock.
+- A person pauses Claude by opening an issue labelled `claude-paused` in any estate repository, and
+  resumes it by closing that issue. Claude reads the switch at the start of every check and never
+  opens, closes or edits it. The switch can only stop Claude; it starts nothing and does not touch Devin.
+- Every Claude check that reaches GitHub adds one line to the run log in the text of
+  aigovops-foundation/aigovops#58 (label `worker-log`): what it picked up, or why it did nothing.
 
 ## Steps
 
@@ -64,3 +69,43 @@ Do, in order:
    Never merge, never push to main, never change repository settings, secrets, DNS, hosting, payments or data. A human merges.
 
 Bounded effort: if after three attempts CI is still red or the Proof cannot be met, follow your rung's "on failure" row in the table above.
+
+## Merging
+
+A worker run never merges (step 6). A pull request is merged in one of three ways, and no other:
+
+1. A person taps Merge.
+2. The nightly estate sweep merges a pull request a person labelled `automerge`. Its rules are in the
+   header of [scripts/estate-sweep.mjs](../scripts/estate-sweep.mjs).
+3. A person tells an agent, in that agent's own session, to merge: one pull request, several, or
+   "all". The rest of this section binds that agent, whichever agent it is. The instruction is the
+   person's decision; the agent's part is to refuse what the instruction should not cover.
+
+Before each merge ALL of these hold, read fresh from GitHub and not from memory:
+
+- The pull request is open, targets the default branch, and is not a draft. A draft is merged only
+  when the person named it, and then the agent first marks it ready and lets its checks run.
+- Its title does not start with "HOLD" and does not say "merge at cutover", and it carries no hold
+  label. "All" never covers these: a hold is lifted by a person naming that pull request.
+- It has at least one check on its head commit, and every check finished green (success, skipped or
+  neutral). No checks is not green, and unknown is not green.
+- GitHub reports it mergeable and `clean`. If it is behind, update the branch, wait for the checks
+  and test again. If it conflicts, or is blocked because it needs a review, say so and move on.
+- Nobody's latest review requests changes.
+
+Then:
+
+- Merge with the head commit pinned, so a push after the check loses the race instead of merging
+  unseen code. Never use an administrator override, and never turn off a branch rule.
+- "All" means the open, non-draft pull requests that pass every line above, in the repositories
+  listed in [estate-repos.json](estate-repos.json), at the moment of asking. If that is more than
+  five, list them and wait for the person to say go.
+- One agent merges at a time. Before a run of more than one merge, look for an open issue labelled
+  `merge-lock` in aigovops-foundation/aigovops. If one is less than 30 minutes old, another agent is
+  merging: stop and tell the person. Otherwise open one titled "Merge run: <agent>", merge, and close
+  it when the run ends. A lock older than 30 minutes is stale: close it, say so, and carry on.
+- Afterwards report what merged, what did not and why, and look once at the default branch of each
+  repository you merged into: a red main goes in the same report.
+
+An agent that cannot meet a line above does not merge that pull request. It never works around the
+line, and it never asks a second agent to.

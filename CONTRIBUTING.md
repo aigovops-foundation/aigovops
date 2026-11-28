@@ -34,6 +34,11 @@ never as a side channel.
 - `automerge` — on a pull request in any estate repository: a person with write access lets the
   nightly estate sweep merge it once it is green and clean. Push again and you must re-add it. Rules:
   [scripts/estate-sweep.mjs](scripts/estate-sweep.mjs); skill: `.claude/skills/estate-sweep/`.
+- `merge-lock` — an open issue with this label means an agent is partway through a merge run a
+  person asked for. One agent merges at a time. Rules: [queue/WORK.md](queue/WORK.md), Merging.
+- `claude-paused` — an open issue with this label pauses the Claude worker; closing it resumes. It
+  stops nothing else and starts nothing.
+- `worker-log` — a worker's run log (aigovops-foundation/aigovops#58). Not a ticket.
 
 A run that cannot finish escalates one step: lite → `ready` → `ready:ultra` → `blocked`.
 
