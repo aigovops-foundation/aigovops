@@ -4,6 +4,8 @@ The one set of rules every agent follows when it works a ticket from the AiGovOp
 queue (GitHub Issues labelled `queue`). The Devin Automations and the Claude worker point here;
 Codex and humans follow the same rules. Change a rule by pull request; CODEOWNERS review applies.
 
+The flow as a picture, who taps what: [FLOW.md](FLOW.md). Where it and this file disagree, this file wins.
+
 ## Your rung
 
 The label that started you is your rung. Use its name wherever this file says `<rung>`.
