@@ -25,6 +25,9 @@ never as a side channel.
 - `estate-health`, `estate-uptime` — tickets filed by the Library's monitors.
 - `ready:lite` — starts a LITE automation run, for small, clear changes.
 - `ready:ultra` — starts an ULTRA automation run, for hard or escalated tickets.
+- `worker:devin`, `worker:claude` — which agent works the ticket. The nightly triage sets it to
+  keep the two level; a human may change it before adding the start label. No worker label means
+  Devin, and `ready:ultra` tickets are always Devin's. It starts nothing by itself. Rules: [queue/WORK.md](queue/WORK.md).
 - `in-progress` — an automation run owns the ticket; it is removed when the run ends.
 - `discovered` — a side problem filed by automation instead of fixed inline.
 - `triaged` — the nightly triage has suggested a start label.
